@@ -1,0 +1,27 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"Maintenance":	{
+		"maintEnable":	false,
+		"maintEnable_Property":	{
+			"type":	"bool",
+			"mode":	"rw",
+			"def":	false
+		},
+		"maintWeekday":	"0",
+		"maintWeekday_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	"0"
+		},
+		"maintTime":	"02:00:00",
+		"maintTime_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	"02:00:00"
+		}
+	}
+}

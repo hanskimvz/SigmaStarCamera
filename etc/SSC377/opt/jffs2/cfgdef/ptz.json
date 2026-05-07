@@ -1,0 +1,726 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"ptzProtoNum":	1,
+	"ptzProtoNum_Property":	{
+		"type":	"integer",
+		"mode":	"ro",
+		"opt":	[1],
+		"def":	1
+	},
+	"ptzProtoName":	"PELCO-D",
+	"ptzProtoName_Property":	{
+		"type":	"string",
+		"mode":	"rw",
+		"opt":	["PELCO-D", "PELCO-P"],
+		"def":	"PELCO-D"
+	},
+	"ptzProtoAddr":	1,
+	"ptzProtoAddr_Property":	{
+		"type":	"integer",
+		"mode":	"rw",
+		"def":	1
+	},
+	"ptzProtoSpeed":	2400,
+	"ptzProtoSpeed_Property":	{
+		"type":	"integer",
+		"mode":	"rw",
+		"opt":	[2400, 9600],
+		"def":	9600
+	},
+	"ptzRs232":	[{
+			"rs232Id":	1,
+			"rs232Id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"rs232Enable":	true,
+			"rs232Enable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"rs232Name":	"/dev/ttyS2",
+			"rs232Name_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["/dev/ttyS2"],
+				"def":	"/dev/ttyS2"
+			},
+			"rs232Baudrate":	115200,
+			"rs232Baudrate_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[2400, 9600, 57600, 115200],
+				"def":	115200
+			},
+			"rs232Databits":	8,
+			"rs232Databits_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[5, 6, 7, 8],
+				"def":	8
+			},
+			"rs232Stopbits":	1,
+			"rs232Stopbits_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[1, 2],
+				"def":	1
+			},
+			"rs232Parity":	0,
+			"rs232Parity_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2],
+				"def":	1
+			},
+			"rs232Flowctrl":	0,
+			"rs232Flowctrl_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2],
+				"def":	1
+			},
+			"rs232ProtType":	0,
+			"rs232ProtType_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2],
+				"def":	0
+			},
+			"rs232TcpHost":	"47.14.63.120",
+			"rs232TcpHost_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"47.14.63.120"
+			},
+			"rs232TcpPort":	12345,
+			"rs232TcpPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1000,
+				"max":	65535,
+				"def":	12345
+			},
+			"rs232TcpHeartbeat":	60,
+			"rs232TcpHeartbeat_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	5,
+				"max":	600,
+				"def":	60
+			},
+			"rs232UdpHost":	"47.14.63.121",
+			"rs232UdpHost_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"47.14.63.121"
+			},
+			"rs232UdpServerPort":	10086,
+			"rs232UdpServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1000,
+				"max":	65535,
+				"def":	10086
+			},
+			"rs232UdpLocalPort":	10010,
+			"rs232UdpLocalPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1000,
+				"max":	65535,
+				"def":	10010
+			}
+		}, {
+			"rs232Id":	2,
+			"rs232Id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"rs232Enable":	false,
+			"rs232Enable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"rs232Name":	"rs485",
+			"rs232Name_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["ptz", "rs485"],
+				"def":	"ptz"
+			},
+			"rs232Baudrate":	9600,
+			"rs232Baudrate_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[2400, 9600, 57600, 115200],
+				"def":	9600
+			},
+			"rs232Databits":	8,
+			"rs232Databits_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[5, 6, 7, 8],
+				"def":	8
+			},
+			"rs232Stopbits":	1,
+			"rs232Stopbits_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[1, 2],
+				"def":	1
+			},
+			"rs232Parity":	1,
+			"rs232Parity_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2],
+				"def":	1
+			},
+			"rs232Flowctrl":	0,
+			"rs232Flowctrl_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2],
+				"def":	1
+			},
+			"rs232ProtType":	0,
+			"rs232ProtType_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2],
+				"def":	0
+			},
+			"rs232TcpHost":	"47.14.63.120",
+			"rs232TcpHost_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"47.14.63.120"
+			},
+			"rs232TcpPort":	12345,
+			"rs232TcpPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1000,
+				"max":	65535,
+				"def":	12345
+			},
+			"rs232TcpHeartbeat":	60,
+			"rs232TcpHeartbeat_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	5,
+				"max":	600,
+				"def":	60
+			},
+			"rs232UdpHost":	"47.14.63.121",
+			"rs232UdpHost_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"47.14.63.121"
+			},
+			"rs232UdpServerPort":	10086,
+			"rs232UdpServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1000,
+				"max":	65535,
+				"def":	10086
+			},
+			"rs232UdpLocalPort":	10010,
+			"rs232UdpLocalPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1000,
+				"max":	65535,
+				"def":	10010
+			}
+		}],
+	"ptzPreset":	[{
+			"id":	1,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	2,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	3,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	4,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	5,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	6,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	7,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	8,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	9,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	10,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	11,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	12,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	13,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	14,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	15,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}, {
+			"id":	16,
+			"id_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"index":	0,
+			"index_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	0
+			},
+			"xpost":	0,
+			"xpost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			},
+			"ypost":	0,
+			"ypost_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	0
+			}
+		}]
+}

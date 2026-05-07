@@ -1,0 +1,339 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"lightType":	"single",
+	"lightType_Property":	{
+		"type":	"string",
+		"mode":	"rw",
+		"opt":	["single", "double"],
+		"def":	"single"
+	},
+	"lightMode":	"auto",
+	"lightMode_Property":	{
+		"type":	"string",
+		"mode":	"rw",
+		"opt":	["auto", "day", "night", "time"],
+		"def":	"auto"
+	},
+	"lightDevice":	"softldr|pwm|lampwhite|audioao",
+	"lightDevice_Property":	{
+		"type":	"string",
+		"mode":	"rw",
+		"opt":	["hardldr", "softldr", "ircut", "pwm", "gpioled", "audioao", "record", "lampred", "lampwhite"],
+		"def":	"softldr|pwm|lampwhite|audioao"
+	},
+	"lightIrautoLevel":	"middle",
+	"lightIrautoLevel_Property":	{
+		"type":	"string",
+		"mode":	"rw",
+		"opt":	["early", "middle", "late"],
+		"def":	"middle"
+	},
+	"lightIoPwmLevel":	"middle",
+	"lightIoPwmLevel_Property":	{
+		"type":	"string",
+		"mode":	"rw",
+		"opt":	["fast", "middle", "slow"],
+		"def":	"middle"
+	},
+	"lightIrcutReverse":	false,
+	"lightIrcutReverse_Property":	{
+		"type": "bool",
+		"mode": "rw"
+	},
+	"LightSchedule":	{
+		"lightEnable":	false,
+		"lightEnable_Property":	{
+			"type":	"bool",
+			"mode":	"rw"
+		},
+		"lightSchedule":	[{
+				"schedId":	1,
+				"schedId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"bool",
+					"mode":	"rw"
+				},
+				"schedWeekday":	"",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedStarttime":	"18:00:00",
+				"schedStarttime_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedEndtime":	"06:00:00",
+				"schedEndtime_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}, {
+				"schedId":	1,
+				"schedId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"bool",
+					"mode":	"rw"
+				},
+				"schedWeekday":	"",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedStarttime":	"18:00:00",
+				"schedStarttime_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedEndtime":	"06:00:00",
+				"schedEndtime_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}]
+	},
+	"LightAlarm":	{
+		"alarmEnable":	false,
+		"alarmEnable_Property":	{
+			"type":	"bool",
+			"mode":	"rw"
+		},
+		"alarmTime":	60,
+		"alarmTime_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"AlarmSchedule":	[{
+				"schedId":	1,
+				"schedId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"bool",
+					"mode":	"rw"
+				},
+				"schedWeekday":	"",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedStarttime":	"01:11:58",
+				"schedStarttime_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedEndtime":	"02:11:58",
+				"schedEndtime_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}, {
+				"schedId":	2,
+				"schedId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"bool",
+					"mode":	"rw"
+				},
+				"schedWeekday":	"",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedStarttime":	"01:11:58",
+				"schedStarttime_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedEndtime":	"02:11:58",
+				"schedEndtime_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}]
+	},
+	"LightIrauto":	{
+		"irautoEnable":	true,
+		"irautoEnable_Property":	{
+			"type":	"bool",
+			"mode":	"rw"
+		},
+		"irautoNor2iriso":	2400,
+		"irautoNor2iriso_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"irautoIr2noriso":	280,
+		"irautoIr2noriso_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"irautoRgmax":	300,
+		"irautoRgmax_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"irautoRgmin":	220,
+		"irautoRgmin_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"irautoBgmax":	300,
+		"irautoBgmax_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"irautoBgmin":	220,
+		"irautoBgmin_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"irautoStatus":	"status_normal",
+		"irautoStatus_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["status_ir", "status_normal", "status_butt"],
+			"def":	"status_normal"
+		}
+	},
+	"LightIoPwm":	[{
+			"pwmId":	1,
+			"pwmId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"pwmCtrlType":	"lampred",
+			"pwmCtrlType_Property":	{
+				"type":	"string",
+				"opt":	["lampred", "lampwhite"],
+				"def":	"lampred",
+				"mode":	"ro"
+			},
+			"pwmMode":	"auto",
+			"pwmMode_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["auto", "manual"],
+				"def":	"auto"
+			},
+			"pwmNumber":	0,
+			"pwmNumber_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"pwmDutyRatio":	100,
+			"pwmDutyRatio_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"def":	100
+			},
+			"pwmSpeed":	10,
+			"pwmSpeed_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"def":	10
+			},
+			"pwmLumThd":	50,
+			"pwmLumThd_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	50
+			},
+			"pwmIsoThd":	400,
+			"pwmIsoThd_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"def":	400
+			}
+		}, {
+			"pwmId":	2,
+			"pwmId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"pwmCtrlType":	"lampwhite",
+			"pwmCtrlType_Property":	{
+				"type":	"string",
+				"opt":	["lampred", "lampwhite"],
+				"def":	"lampred",
+				"mode":	"ro"
+			},
+			"pwmMode":	"auto",
+			"pwmMode_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["auto", "manual"],
+				"def":	"auto"
+			},
+			"pwmNumber":	1,
+			"pwmNumber_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"pwmDutyRatio":	100,
+			"pwmDutyRatio_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"def":	100
+			},
+			"pwmSpeed":	10,
+			"pwmSpeed_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"def":	10
+			},
+			"pwmLumThd":	50,
+			"pwmLumThd_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	50
+			},
+			"pwmIsoThd":	400,
+			"pwmIsoThd_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"def":	400
+			}
+		}]
+}

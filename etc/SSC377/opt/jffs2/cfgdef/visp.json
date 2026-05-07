@@ -1,0 +1,465 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property": {
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"VispFlip": {
+		"flipMirror": false,
+		"flipMirror_Property": {
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"flipVertical":	false,
+		"flipVertical_Property": {
+			"type":	"boolean",
+			"mode":	"rw"
+		}
+	},
+	"VispAeexp": {
+		"aeexpMode":	"auto",
+		"aeexpMode_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"aeexpAuto": {
+			"autoSpeed": 128,
+			"autoSpeed_Property": {
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	128
+			},
+			"autoExptime": 128,
+			"autoExptime_Property": {
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	128
+			},
+			"autoToernace": 128,
+			"autoToernace_Property": {
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	128
+			},
+			"autoCompensation": 128,
+			"autoCompensation_Property": {
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	128
+			},
+			"autoStrategMode": "highlight",
+			"autoStrategMode_Property": {
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["highlight", "lowight", "auto"],
+				"def":	"highlight"
+			},
+			"autoAeMode": "slow_shutter",
+			"autoAeMode_Property": {
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["slow_shutter", "fix_frame", "auto"],
+				"def":	"slow_shutter"
+			}
+		},
+		"aeexpManual": {
+			"manuExptime": 128,
+			"manuExptime_Property": {
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	128
+			},
+			"manuExpstrength": 128,
+			"manuExpstrength_Property": {
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	128
+			}
+		}		
+	},
+	"VispAwb": {
+		"awbEnable": true,
+		"awbEnable_Property": {
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"awbMode":	"auto",
+		"awbMode_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"awbManual": {
+			"manuRgain": 128,
+			"manuRgain_Property": {
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	128
+			},
+			"manuBgain": 128,
+			"manuBgain_Property": {
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	255,
+				"def":	128
+			}
+		}		
+	},
+	"VispWdr": {
+		"wdrEnable":	true,
+		"wdrEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"wdrMode":	"auto",
+		"wdrMode_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"autoStrength": 128,
+		"autoStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		},
+		"manuStrength": 128,
+		"manuStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		}			
+	},
+	"VispDrc": {
+		"drcEnable":	true,
+		"drcEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"drcMode":	"auto",
+		"drcMode_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"autoStrength": 128,
+		"autoStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		},
+		"manuStrength": 128,
+		"manuStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		}	
+	},
+	"VispAntiflicker": {
+		"flickerEnable":	true,
+		"flickerEnable_Property": {
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"flickerFrequency":	"50",
+		"flickerFrequency_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["50", "60"],
+			"def":	"50"
+		},
+		"flickerNormal":	false,
+		"flickerNormal_Property": {
+			"type":	"boolean",
+			"mode":	"rw"
+		}
+	},
+	"Visp2Dnr": {
+		"2dnrEnable":	true,
+		"2dnrEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"2dnrMode":	"auto",
+		"2dnrMode_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"autoStrength": 128,
+		"autoStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		},
+		"manuStrength": 128,
+		"manuStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		}	
+	},
+	"Visp3Dnr": {
+		"3dnrEnable":	true,
+		"3dnrEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"3dnrMode":	"auto",
+		"3dnrMode_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"autoStrength": 128,
+		"autoStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		},
+		"manuStrength": 128,
+		"manuStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		}	
+	},
+	"VispDehaze": {
+		"dehazeEnable":	true,
+		"dehazeEnable_Property": {
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"dehazeMode":	"auto",
+		"dehazeMode_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"autoStrength": 128,
+		"autoStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		},
+		"manuStrength": 128,
+		"manuStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		}	
+	},
+	"VispSharpen": {
+		"sharpenEnable":	true,
+		"sharpenEnable_Property": {
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"sharpenMode":	"auto",
+		"sharpenMode_Property": {
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"autoStrength": 128,
+		"autoStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		},
+		"manuStrength": 128,
+		"manuStrength_Property": {
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	255,
+			"def":	128
+		}	
+	},
+	"VispImageAttr":	{
+		"imgBrightnessType":	"auto",
+		"imgBrightnessType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"imgBrightness":	50,
+		"imgBrightness_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	50
+		},
+		"imgContrastType":	"auto",
+		"imgContrastType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"imgContrast":	50,
+		"imgContrast_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	50
+		},
+		"imgTonalityType":	"auto",
+		"imgTonalityType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"imgTonality":	50,
+		"imgTonality_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	50
+		},
+		"imgSaturationType":	"auto",
+		"imgSaturationType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"imgSaturation":	50,
+		"imgSaturation_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	50
+		},
+	 	"imgSharpnessType":	"auto",
+		"imgSharpnessType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"imgSharpness":	50,
+		"imgSharpness_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	50
+		}
+	},
+	"VispSceneMode":	{
+		"SceneModeType":	"auto",
+		"SceneModeType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["auto", "manual"],
+			"def":	"auto"
+		},
+		"SceneMode":	0,
+		"SceneMode_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	2,
+			"def":	0
+		}
+	},
+	"ispIvp":	{
+		"ivpChn":	1,
+		"ivpChn_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"def":	1
+		},
+		"ivpEnable":	true,
+		"ivpEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	false
+		},
+		"ivpAlarmInteral":	30,
+		"ivpAlarmInteral_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	30
+		},
+		"ivpAoAlarmOut":	true,
+		"ivpAoAlarmOut_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"ivpSensitivity":	"0.30",
+		"ivpSensitivity_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"ivpLowbitStream":	true,
+		"ivpLowbitStream_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"ivpFaceOverexp":	true,
+		"ivpFaceOverexp_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		}
+	}
+}
+

@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>WASM TEST</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+</head>
+<style type="text/css">
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  canvas {
+    display: block;
+    background: black;
+    width: 100%;
+    height: 100%;
+  }
+
+  #canvasDiv {
+    width: 100%;
+    height: 100%
+  }
+
+  .sideBar {
+    width: 852px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    /* outline: 1px solid rgba(0, 0, 0, 0.9); */
+    /* background-color: rgba(243, 244, 246, 0.9);    */
+  }
+
+  #videoPlayer {
+    width: 852px;
+    /* height: 536px; */
+    height: 520px;
+    background-color: white;
+    border: 3px solid rgba(0, 0, 0, 0.9);
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+</style>
+
+<body>
+
+  <div id="canvasDiv">
+    <canvas id="playCanvas" width="1600" height="900" ondblclick="fullscreen()"></canvas>
+  </div>
+  <div class="container" id="videoPlayer" style="display: none">
+    <div class="sideBar">
+      <div id="input">
+        <select id="protocol" onchange="onSelectProto()">
+          <option value="main">Main Stream</option>
+          <option value="sub">Sub Stream</option>
+        </select>
+        <input type="text" id="inputUrl" style="width:400px"></input>
+        <button id="playBtn" onclick="playVideo()">Play</button>
+        <button id="muteBtn" onclick="mute()">Intercom</button>
+        <button id="snapshotsBtn" onclick="snapshot()">Snapshot</button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="canvas-toBlob.js"></script>
+  <script type="text/javascript" src="FileSaver.min.js"></script>
+  <script type="text/javascript" src="pcm-player.js"></script>
+  <script type="text/javascript" src="webgl.js"></script>
+  <script type="text/javascript" src="player.js"></script>
+
+  <script type="text/javascript">
+    // 为了截图 preserveDrawingBuffer: true, 但是应该有更好的方式
+    HTMLCanvasElement.prototype.getContext = function (origFn) {
+      return function (type, attributes) {
+        if (type === 'webgl') {
+          attributes = Object.assign({}, attributes, {
+            preserveDrawingBuffer: true
+          })
+        }
+        return origFn.call(this, type, attributes)
+      }
+    }(HTMLCanvasElement.prototype.getContext)
+    window.addEventListener('message', (evt) => {
+      if (evt.source !== window.parent) return
+      const $ = document.getElementById.bind(document)
+      const data = evt.data
+      window.console.log('vue传递的数据为： %o', data)
+      switch (data.id) {
+        case 0x10: // 告诉播放器视频编码
+          const url = 'ws://' + window.location.hostname + ':8899/live?stream=' + data.stream
+          $('inputUrl').value = url
+          $('playBtn').click()
+          break
+        case 0x11: // todo: 监听 打开音量
+          const muted = data.mute
+          self.player.mute(muted)
+          break
+        case 0x12: // todo: 截屏，调用canvas的另存为的功能
+          $('snapshotsBtn').click()
+          break
+        default:
+          window.console.log('vue没有传递正确的事件id')
+          break
+      }
+    })
+    const defaultProtos = {
+      main: {
+        url: 'ws://192.168.13.22:8899/live?stream=0'
+      },
+      sub: {
+        url: 'ws://192.168.13.22:8899/live?stream=1'
+      }
+    }
+    let inputUrl = document.getElementById('inputUrl')
+    inputUrl.value = defaultProtos['main']['url']
+    //Player object.
+    self.player = new Player()
+
+    //Formated logger.
+    const logger = new Logger('Page')
+
+    function playVideo() {
+      const inputUrl = document.getElementById('inputUrl')
+      const url = inputUrl.value
+      const canvas = document.getElementById('playCanvas')
+      if (!canvas) {
+        logger.logError('No Canvas with id playCanvas!')
+        return false
+      }
+      if (self.player.isPlaying()) {
+        self.player.stop()
+      }
+      self.player.play(url, canvas, function (e) {
+        console.log('play error ' + e.error + ' status ' + e.status + '.')
+        if (e.error === 1) {
+          logger.logInfo('Finished.')
+        }
+      })
+      return true
+    }
+
+    function fullscreen() {
+      self.player.fullscreen()
+    }
+
+    function mute() {
+      self.player.mute(false)
+    }
+
+    function snapshot() {
+      const canvas = document.getElementById('playCanvas')
+      canvas.toBlob(function (blob) {
+        const d = new Date()
+        const t = d.toLocaleString()
+        saveAs(blob, t + '.jpeg')
+      })
+    }
+
+    function onSelectProto() {
+      const protoList = document.getElementById('protocol')
+      const proto = protoList.options[protoList.selectedIndex].value
+      const protoObj = defaultProtos[proto]
+      const inputUrl = document.getElementById('inputUrl')
+      inputUrl.value = protoObj['url']
+    }
+
+  // playVideo()
+  </script>
+</body>
+
+</html>

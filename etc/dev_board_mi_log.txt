@@ -1,0 +1,102 @@
+/ # # mi ?? ?? ??
+a/ # cat /sys/module/mi/version 2>/dev/null || modinfo /config/modules/5.10/mi_al
+l.ko 2>/dev/null
+# 센서 드라이버 파일 md5 해시
+md5sum /config/modules/5.10/sc465sl_MIPI.ko
+md5sum /config/modules/5.1/ # 
+/ # # ?? ???? ?? md5 ??
+/ # md5sum /config/modules/5.10/sc465sl_MIPI.ko
+0/mi_all.ko
+
+# mi 모듈 파라미터
+ls /sys/module/mi/parameters/ 2d9252f259ddf00959b832ddd315092cb  /config/modules/5.10/sc465sl_MIPI.ko
+>/d/ # md5sum /config/modules/5.10/mi_all.ko
+ev/null175d52dca0df07c523254bfecb142893  /config/modules/5.10/mi_all.ko
+/ # 
+/ # # mi ?? ????
+/ # ls /sys/module/mi/parameters/ 2>/dev/null
+VdeMiuPChn
+VenMiuPChn
+ai_ioctl.ai_debug_file
+ai_ioctl.ai_debug_func
+ai_ioctl.ai_debug_level
+ao_ioctl.ao_debug_file
+ao_ioctl.ao_debug_func
+ao_ioctl.ao_debug_level
+disp_ioctl.disp_debug_file
+disp_ioctl.disp_debug_func
+disp_ioctl.disp_debug_level
+drv_codec40_common.fw_load_path
+drv_ldc_module.g_s32PreSetLdcClkIdx
+drv_ldc_module.g_u32LdcMaskTblEn
+drv_ldc_module.g_u32PreSetLdcClkRate
+drv_venc_wrapper.AVBR_MD_DOWN_SPEED_RATIO
+drv_venc_wrapper.AVBR_MOTION_RESPONSE_LEVEL
+drv_venc_wrapper.AVBR_SAD_THD
+drv_venc_wrapper.AVBR_STILL_BITRATE_COMPENSATE
+drv_venc_wrapper.CHANGE_RC_MODEL_FORCE_I
+drv_venc_wrapper.CUST_AVC_SPS
+drv_venc_wrapper.DRAM_SIZE_REFINE
+drv_venc_wrapper.GRADIENT_MODEL_LEVEL
+drv_venc_wrapper.MORE_CLIP_QP_RANGE
+drv_venc_wrapper.RC_BITRATE_TOLERANCE
+drv_venc_wrapper.RC_SCENE_RECOVER_PATCH
+drv_venc_wrapper.SCDN_MODE
+drv_venc_wrapper.VPS_TIME_INFO
+fb_ioctl.fb_debug_file
+fb_ioctl.fb_debug_func
+fb_ioctl.fb_debug_level
+interface.perfMonitor
+ipu_ioctl.ipu_debug_file
+ipu_ioctl.ipu_debug_func
+ipu_ioctl.ipu_debug_level
+isp_ioctl.isp_debug_file
+isp_ioctl.isp_debug_func
+isp_ioctl.isp_debug_level
+ldc_ioctl.ldc_debug_file
+ldc_ioctl.ldc_debug_func
+ldc_ioctl.ldc_debug_level
+libcamera_module.ispsclttl
+mhal_jpe.g_s32HandshakeEnable
+mhal_jpe.g_s32HwFrameCycleEnable
+mhal_jpe.g_s32PerCtxFireNum
+mhal_jpe.g_s32PerDevFireNum
+mhal_jpe.g_s32TimeOutIrqEnable
+mhal_jpe.g_u16ParallelChnInq
+mi_ai_impl.AIDmaBufferSize
+mi_ai_impl.ThreadPriority
+mi_ao_impl.AODmaBufferSize
+mi_common_cjson.config_json_path
+mi_common_cjson.gp_jsonPath
+mi_common_modparam.g_ModParamPath
+mi_isp_impl.g_bMultiCamMode
+mi_isp_impl.s32BufLayout
+mi_sensor_impl.g_pSntExternalConfig
+mi_vif_impl.g_b5MCaseOccupy
+mi_vif_impl.g_bDualSnrRealMode
+mi_vif_impl.g_bUserCurrentWrite
+panel_ioctl.panel_debug_file
+panel_ioctl.panel_debug_func
+panel_ioctl.panel_debug_level
+rgn_ioctl.rgn_debug_file
+rgn_ioctl.rgn_debug_func
+rgn_ioctl.rgn_debug_level
+scl_ioctl.scl_debug_file
+scl_ioctl.scl_debug_func
+scl_ioctl.scl_debug_level
+sensor_ioctl.sensor_debug_file
+sensor_ioctl.sensor_debug_func
+sensor_ioctl.sensor_debug_level
+shadow_ioctl.shadow_debug_file
+shadow_ioctl.shadow_debug_func
+shadow_ioctl.shadow_debug_level
+sys_ioctl.sys_debug_file
+sys_ioctl.sys_debug_func
+sys_ioctl.sys_debug_level
+venc_ioctl.venc_debug_file
+venc_ioctl.venc_debug_func
+venc_ioctl.venc_debug_level
+vif_ioctl.vif_debug_file
+vif_ioctl.vif_debug_func
+vif_ioctl.vif_debug_level
+/ # 

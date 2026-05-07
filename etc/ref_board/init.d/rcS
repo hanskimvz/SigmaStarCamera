@@ -1,0 +1,24 @@
+#!/bin/sh
+
+mkdir -p /dev/shm
+mkdir -p /dev/pts
+mount -a
+
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+
+/sbin/mdev -s
+
+/sbin/sysctl -p
+
+mkdir -p /var/lock
+mount -t tmpfs mdev /dev
+mdev -s
+mount -t squashfs /dev/mtdblock4 /config
+ mount -t jffs2 /dev/mtdblock5 /customer
+
+mkdir -p /dev/pts
+mount -t devpts devpts /dev/pts
+if [ -e /customer/demo.sh ]; then
+    /customer/demo.sh
+fi;
+telnetd &

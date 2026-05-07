@@ -1,0 +1,893 @@
+{
+	"Version":	"1.1.1",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"xsdkEnable":	true,
+	"xsdkEnable_Property":	{
+		"type":	"boolean",
+		"mode":	"ro"
+	},
+	"XsdkList":	[{
+			"xsdkId":	1,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8193,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	true,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	19128,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	true,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"YS_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	9980,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Ys.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	2,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8194,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	3001,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"ANJ_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	8091,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Anj.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	3,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8195,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	true,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	3702,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	true,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"ONVIF_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	8889,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Onvif.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	4,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8196,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	true,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	0,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	true,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"RTSP_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	554,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Rtsp.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	5,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8197,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	8000,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"HK_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	8000,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Hik.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	6,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8199,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	3001,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"TOPSEE_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	8091,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Topsee.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	7,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8200,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	0,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"ZW_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	9101,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Zw.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	8,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8202,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	60001,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"P2P_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	60002,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_P2P.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	9,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8203,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	8002,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"N1_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	80,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_N1.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	10,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8204,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	0,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"CORSEE_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	12306,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Corsee.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	11,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8205,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	5060,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	true,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"GB28181_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	5060,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Gb28181.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	12,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8211,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	5060,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	true,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"Http_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	80,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Http.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		},{
+			"xsdkId":	14,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8208,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"tcp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkSearchPort":	20000,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"CC_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	25000,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Cc.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	15,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8209,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"tcp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkSearchPort":	6608,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	false,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"JT808_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	12000,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Jt808.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	16,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8212,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	1935,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	true,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"Rtmp_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	1935,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Rtmp.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}, {
+			"xsdkId":	17,
+			"xsdkId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkKey":	8213,
+			"xsdkKey_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkSearchEnable":	false,
+			"xsdkSearchEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkSearchType":	"udp",
+			"xsdkSearchType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"udp"
+			},
+			"xsdkSearchPort":	21,
+			"xsdkSearchPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerEnable":	true,
+			"xsdkServerEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"ro"
+			},
+			"xsdkServerName":	"Ftp_Server",
+			"xsdkServerName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"xsdkServerType":	"tcp",
+			"xsdkServerType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["tcp", "udp"],
+				"def":	"tcp"
+			},
+			"xsdkServerPort":	21,
+			"xsdkServerPort_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"xsdkServerLibPath":	"/opt/app/lib/libXSDK_Ftp.so",
+			"xsdkServerLibPath_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			}
+		}]
+}

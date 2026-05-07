@@ -1,0 +1,708 @@
+{
+	"Version":	"1.1.1",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"selfCheckEnable":	false,
+	"selfCheckEnable_Property":	{
+		"type":	"bool",
+		"mode":	"rw"
+	},
+	"hourEnable":	false,
+	"hourEnable_Property":	{
+		"type":	"bool",
+		"mode":	"rw"
+	},
+	"systemEnable":	false,
+	"systemEnable_Property":	{
+		"type":	"bool",
+		"mode":	"rw"
+	},
+	"AudioAi":	[{
+			"audioId":	1,
+			"audioId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"audioEnable":	true,
+			"audioEnable_Property":	{
+				"type":	"bool",
+				"mode":	"rw",
+				"def":	true
+			},
+			"audioMode":	"mic",
+			"audioMode_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["auto", "mic", "linein"],
+				"def":	"mic"
+			},
+			"audioEncType":	"g711u",
+			"audioEncType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["g711a", "g711u", "aac"],
+				"def":	"g711u"
+			},
+			"audioSampleSize":	16,
+			"audioSampleSize_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[8, 16],
+				"def":	16
+			},
+			"audioSampleSpeed":	8000,
+			"audioSampleSpeed_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[4000, 8000, 16000],
+				"def":	8000
+			},
+			"audioChannelNum":	"mono",
+			"audioChannelNum_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["mono", "stereo"],
+				"def":	"mono"
+			},
+			"audioVolume":	80,
+			"audioVolume_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	80
+			}
+		}, {
+			"audioId":	2,
+			"audioId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"audioEnable":	false,
+			"audioEnable_Property":	{
+				"type":	"bool",
+				"mode":	"rw",
+				"def":	false
+			},
+			"audioMode":	"mic",
+			"audioMode_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["mic", "linein"],
+				"def":	"mic"
+			},
+			"audioEncType":	"g711u",
+			"audioEncType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["g711a", "g711u", "aac"],
+				"def":	"g711u"
+			},
+			"audioSampleSize":	16,
+			"audioSampleSize_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[8, 16],
+				"def":	16
+			},
+			"audioSampleSpeed":	8000,
+			"audioSampleSpeed_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[4000, 8000, 16000],
+				"def":	8000
+			},
+			"audioChannelNum":	"mono",
+			"audioChannelNum_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["mono", "stereo"],
+				"def":	"mono"
+			},
+			"audioVolume":	80,
+			"audioVolume_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	80
+			}
+		}],
+	"AudioAo":	{
+		"audioEnable":	true,
+		"audioEnable_Property":	{
+			"type":	"bool",
+			"mode":	"rw",
+			"def":	true
+		},
+		"audioMode":	"mic",
+		"audioMode_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["mic", "linein"],
+			"def":	"mic"
+		},
+		"audioEncType":	"pcm",
+		"audioEncType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["g711a", "aac", "pcm"],
+			"def":	"pcm"
+		},
+		"audioSampleSize":	16,
+		"audioSampleSize_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"opt":	[8, 16],
+			"def":	16
+		},
+		"audioSampleSpeed":	8000,
+		"audioSampleSpeed_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"opt":	[4000, 8000, 16000],
+			"def":	8000
+		},
+		"audioChannelNum":	"mono",
+		"audioChannelNum_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["mono", "stereo"],
+			"def":	"mono"
+		},
+		"audioVolume":	80,
+		"audioVolume_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	80
+		}
+	},
+	"PromptSound":	{
+		"prompEnable":	true,
+		"prompEnable_Property":	{
+			"type":	"bool",
+			"mode":	"rw"
+		},
+		"prompType":	"chinese",
+		"prompType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["chinese", "english", "german", "russian", "korean", "spanish", "portuguese"],
+			"def":	"chinese"
+		}
+	},
+	"AlarmTone":	[{
+			"alarmId":	1,
+			"alarmId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"alarmDisplay":	true,
+			"alarmDisplay_Property":	{
+				"type":	"bool",
+				"mode":	"rw",
+				"def":	true
+			},
+			"alarmRepeatTimes":	1,
+			"alarmRepeatTimes_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	3,
+				"def":	1
+			},
+			"alarmRoiIndex":	0,
+			"alarmRoiIndex_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	3,
+				"def":	0
+			},
+			"alarmToneType":	"type12",
+			"alarmToneType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["type1", "type2", "type3", "type4", "type5", "type6", "type7", "type8", "type9", "type10", "type11", "type12"],
+				"def":	"type12"
+			},
+			"AlarmSchedule":	{
+				"schedEnable":	true,
+				"schedEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	true
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	1
+				},
+				"schedStart":	"00:00:00",
+				"schedStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"schedStop":	"23:59:59",
+				"schedStop_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"23:59:59"
+				},
+				"schedWeekday":	"0,1,2,3,4,5,6",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"0,1,2,3,4,5,6"
+				}
+			}
+		}, {
+			"alarmId":	2,
+			"alarmId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"alarmDisplay":	false,
+			"alarmDisplay_Property":	{
+				"type":	"bool",
+				"mode":	"rw",
+				"def":	false
+			},
+			"alarmRepeatTimes":	1,
+			"alarmRepeatTimes_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	3,
+				"def":	1
+			},
+			"alarmRoiIndex":	0,
+			"alarmRoiIndex_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	3,
+				"def":	0
+			},
+			"alarmToneType":	"type1",
+			"alarmToneType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["type1", "type2", "type3", "type4", "type5", "type6", "type7", "type8", "type9", "type10", "type11", "type12"],
+				"def":	"type12"
+			},
+			"AlarmSchedule":	{
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	1
+				},
+				"schedStart":	"00:00:00",
+				"schedStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"schedStop":	"00:00:00",
+				"schedStop_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"schedWeekday":	"1,2,3,4,5",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"1,2,3,4,5"
+				}
+			}
+		}, {
+			"alarmId":	3,
+			"alarmId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"alarmDisplay":	false,
+			"alarmDisplay_Property":	{
+				"type":	"bool",
+				"mode":	"rw",
+				"def":	false
+			},
+			"alarmRepeatTimes":	1,
+			"alarmRepeatTimes_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	3,
+				"def":	1
+			},
+			"alarmRoiIndex":	0,
+			"alarmRoiIndex_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	3,
+				"def":	0
+			},
+			"alarmToneType":	"type1",
+			"alarmToneType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["type1", "type2", "type3", "type4", "type5", "type6", "type7", "type8", "type9", "type10", "type11", "type12"],
+				"def":	"type12"
+			},
+			"AlarmSchedule":	{
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	1
+				},
+				"schedStart":	"00:00:00",
+				"schedStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"schedStop":	"00:00:00",
+				"schedStop_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"schedWeekday":	"1,2,3,4,5",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"1,2,3,4,5"
+				}
+			}
+		}, {
+			"alarmId":	4,
+			"alarmId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"alarmDisplay":	false,
+			"alarmDisplay_Property":	{
+				"type":	"bool",
+				"mode":	"rw",
+				"def":	false
+			},
+			"alarmRepeatTimes":	1,
+			"alarmRepeatTimes_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	3,
+				"def":	1
+			},
+			"alarmRoiIndex":	0,
+			"alarmRoiIndex_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	3,
+				"def":	0
+			},
+			"alarmToneType":	"type1",
+			"alarmToneType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["type1", "type2", "type3", "type4", "type5", "type6", "type7", "type8", "type9", "type10", "type11", "type12"],
+				"def":	"type12"
+			},
+			"AlarmSchedule":	{
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	1
+				},
+				"schedStart":	"00:00:00",
+				"schedStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"schedStop":	"00:00:00",
+				"schedStop_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"schedWeekday":	"1,2,3,4,5",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"1,2,3,4,5"
+				}
+			}
+		}],
+	"AdvertTone":	[{
+			"advertId":	1,
+			"advertId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"advertDisplay":	false,
+			"advertDisplay_Property":	{
+				"type":	"bool",
+				"mode":	"rw"
+			},
+			"advertRepeatTimes":	1,
+			"advertRepeatTimes_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	3,
+				"def":	1
+			},
+			"advertCycleInterval":	15,
+			"advertCycleInterval_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	15,
+				"max":	60,
+				"def":	15
+			},
+			"advertToneType":	"custom01",
+			"advertToneType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["custom01", "custom02", "custom03", "custom04"]
+			},
+			"AdvertSchedule":	{
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw"
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"schedStart":	"00:00:00",
+				"schedStart_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedStop":	"00:00:00",
+				"schedStop_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedWeekday":	"1,2,3,4,5",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}
+		}, {
+			"advertId":	2,
+			"advertId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"advertDisplay":	false,
+			"advertDisplay_Property":	{
+				"type":	"bool",
+				"mode":	"rw"
+			},
+			"advertRepeatTimes":	1,
+			"advertRepeatTimes_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	3,
+				"def":	1
+			},
+			"advertCycleInterval":	15,
+			"advertCycleInterval_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	15,
+				"max":	60,
+				"def":	15
+			},
+			"advertToneType":	"custom01",
+			"advertToneType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["custom01", "custom02", "custom03", "custom04"]
+			},
+			"AdvertSchedule":	{
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw"
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"schedStart":	"00:00:00",
+				"schedStart_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedStop":	"00:00:00",
+				"schedStop_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedWeekday":	"1,2,3,4,5",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}
+		}, {
+			"advertId":	3,
+			"advertId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"advertDisplay":	false,
+			"advertDisplay_Property":	{
+				"type":	"bool",
+				"mode":	"rw"
+			},
+			"advertRepeatTimes":	1,
+			"advertRepeatTimes_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	3,
+				"def":	1
+			},
+			"advertCycleInterval":	15,
+			"advertCycleInterval_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	15,
+				"max":	60,
+				"def":	15
+			},
+			"advertToneType":	"custom01",
+			"advertToneType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["custom01", "custom02", "custom03", "custom04"]
+			},
+			"AdvertSchedule":	{
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw"
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"schedStart":	"00:00:00",
+				"schedStart_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedStop":	"00:00:00",
+				"schedStop_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedWeekday":	"1,2,3,4,5",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}
+		}, {
+			"advertId":	4,
+			"advertId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"advertDisplay":	false,
+			"advertDisplay_Property":	{
+				"type":	"bool",
+				"mode":	"rw"
+			},
+			"advertRepeatTimes":	1,
+			"advertRepeatTimes_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	3,
+				"def":	1
+			},
+			"advertCycleInterval":	15,
+			"advertCycleInterval_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	15,
+				"max":	60,
+				"def":	15
+			},
+			"advertToneType":	"custom01",
+			"advertToneType_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["custom01", "custom02", "custom03", "custom04"]
+			},
+			"AdvertSchedule":	{
+				"schedEnable":	false,
+				"schedEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw"
+				},
+				"schedType":	1,
+				"schedType_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"schedStart":	"00:00:00",
+				"schedStart_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedStop":	"00:00:00",
+				"schedStop_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"schedWeekday":	"1,2,3,4,5",
+				"schedWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}
+		}]
+}

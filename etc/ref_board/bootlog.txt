@@ -1,0 +1,543 @@
+>> reset 
+resetting ...
+E:CD
+
+IPL gfe26698
+D-0a
+SW Reset
+miupll_266MHz
+256MB
+BIST0_0001-OK
+RDQS cali
+WDQS cali
+SPI 86M
+
+IPL_CUST gfe26698
+
+
+U-Boot 2015.01-svn2033 (Apr 11 2025 - 14:36:24)
+
+Version: I6C#g#######
+I2C:   Error, wrong i2c adapter 0 max 0 possible
+ready
+DRAM:  
+WARNING: Caches not enabled
+Flash: [FLASH] find u32_sni_address = 0x6000
+[FLASH] Device id is 0xc2 0x20 0x18
+[FLASH] SNI match flash.
+[SPINOR] ReadData = 0x6b
+[SPINOR] Dummy = 0x8
+[SPINOR] pageProgram = 0x2
+[FLASH] BDMA mode
+[SPINOR] blocks = 0x0
+[SPINOR] SRP0 = 0x0
+[FLASH] End flash init.
+flash init successful
+[PARTS] Load parts tbl from 0x7000
+[PARTS] Got PNI @ 0x239ff040
+mtd .name = nor0, .size = 0x01000000 (16MiB) .erasesize = 0x00001000 .numeraseregions = 0
+SF: add mtd device successfully
+SF: Detected nor0 with total size 16 MiB
+16 MiB
+MMC:   MStar SD/MMC: 0, MStar SD/MMC: 1
+ENV: offset = 0x4f000 size = 0x1000
+Error, wrong i2c adapter 0 max 0 possible
+Error, wrong i2c adapter 0 max 0 possible
+In:    serial
+Out:   serial
+Err:   serial
+Net:   MAC Address 00:30:1B:BA:02:DB
+Auto-Negotiation...
+Link Status Speed:100 Full-duplex:1
+sstar_emac
+device 0 offset 0x50000, size 0x2c0000
+SF: 2883584 bytes @ 0x50000 Read: OK (cost 74 ms)
+##  Booting kernel from Legacy Image at 23000000 ...
+   Image Name:   MVX4##I6C#g#######KL_LX510##[BR:
+   Image Type:   ARM Linux Kernel Image (lzma compressed)
+   Data Size:    1669100 Bytes = 1.6 MiB
+   Load Address: 20008000
+   Entry Point:  20008000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... 
+[XZ] !!!reserved 0x22000000 length=0x 1000000 for xz!!
+   XZ: uncompressed size=0x35ab80, ret=7
+OK
+atags:0x20000000
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 5.10.61 (smc@s08606) (arm-sigmastar-linux-uclibcgnueabihf-9.1.0-gcc (crosstool-NG 1.24.0) 9.1.0, GNU ld (crosstool-NG 1.24.0) 2.32) #284 PREEMPT Fri Apr 11 14:37:42 CST 2025
+CPU: ARMv7 Processor [411fd040] revision 0 (ARMv7), cr=50c5383d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+early_atags_to_fdt() success
+OF: fdt: Machine model: INFINITY6C SSC027D-S01A
+LXmem is 0x10000000 PHYS_OFFSET is 0x20000000
+Add mem start 0x20000000 size 0x10000000!!!!
+
+LX_MEM  = 0x20000000, 0x10000000
+LX_MEM2 = 0x0, 0x0
+LX_MEM3 = 0x0, 0x0
+MMU_MEM = 0x0, 0x0
+EMAC_LEN= 0x0
+DRAM_LEN= 0x0
+Memory policy: Data cache writeback
+Reserved memory: bypass cma0 node, using cmdline CMA params instead
+OF: reserved mem: node cma0 compatible matching fail
+no any mmap reserved
+deal_with_reserve_mma_heap memblock_reserve success mma_config[0].reserved_start=
+0x2ba00000 size:4600000
+
+deal_with_reserve_mma_heap memblock_reserve success mma_config[1].reserved_start=
+0x299c0000 size:2040000
+
+cma: Reserved 2 MiB at 0x29600000
+Zone ranges:
+  Normal   [mem 0x0000000020000000-0x00000000299bffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000020000000-0x00000000299bffff]
+Initmem setup node 0 [mem 0x0000000020000000-0x00000000299bffff]
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 39052
+Kernel command line: root=/dev/mtdblock3 rootfstype=squashfs rc init=/linuxrc LX_MEM=0x10000000 mma_heap=mma_heap_name0,miu=0,sz=0x4600000 mma_heap=mma_heap_fb,miu=0,sz=0x2040000 mma_memblock_remove=1 cma=2M mtdparts=nor0:0x4F000(BOOT),0x1000(ENV),0x2C0000(KERNEL),0x2F0000(rootfs),0x350000(miservice),0x650000(customer)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 150216K/157440K available (1949K kernel code, 330K rwdata, 900K rodata, 112K init, 109K bss, 5176K reserved, 2048K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+rcu: Preemptible hierarchical RCU implementation.
+	Trampoline variant of Tasks RCU enabled.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+GICv3: 192 SPIs implemented
+GICv3: 0 Extended SPIs implemented
+GICv3: Distributor has no Range Selector support
+GICv3: 16 PPIs implemented
+GICv3: CPU0: found redistributor 0 region 0:0x16040000
+ms_init_main_intc: np->name=ms_main_intc, parent=gic
+ms_init_pm_intc: np->name=ms_pm_intc, parent=ms_main_intc
+ss_init_gpi_intc: np->name=ms_gpi_intc, parent=ms_main_intc
+irq: no irq domain found for <no-node> !
+Get irq err from DTS
+random: get_random_bytes called from start_kernel+0x1b1/0x2ec with crng_init=0
+Find CLK_cpupll_clk, hook ms_cpuclk_ops
+arch_timer: cp15 timer(s) running at 6.00MHz (virt).
+clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1623fa770, max_idle_ns: 440795202238 ns
+sched_clock: 56 bits at 6MHz, resolution 166ns, wraps every 4398046511055ns
+Switching to timer-based delay loop, resolution 166ns
+printk: console [ttyS0] enabled
+Calibrating delay loop (skipped), value calculated using timer frequency.. 12.00 BogoMIPS (lpj=60000)
+pid_max: default: 4096 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x200081c0 - 0x200081f8
+rcu: Hierarchical SRCU implementation.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 40 variant 4 rev 3
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 16 (order: -4, 448 bytes, linear)
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+
+
+Version : MVX4##I6C#g#######KL_LX510##[BR:g]#XVM
+
+GPIO: probe end
+[Padmux]reset PAD9(reg 0x103c00:60; mask0x180) t0 SPI0_MODE_1 (org: EJ_MODE_2)
+[Padmux]reset PAD33(reg 0xe00:35; mask0x8) t0 TTL16_MODE_1 (org: SPICSZ2_GPIO_1)
+clocksource: Switched to clocksource arch_sys_counter
+NET: Registered protocol family 2
+IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 256 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+TCP bind hash table entries: 2048 (order: 3, 40960 bytes, linear)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 128 (order: 0, 6144 bytes, linear)
+UDP-Lite hash table entries: 128 (order: 0, 6144 bytes, linear)
+NET: Registered protocol family 1
+Initialise system trusted keyrings
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. ⓒ 2001-2006 Red Hat, Inc.
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+io scheduler mq-deadline registered
+libphy: Fixed MDIO Bus: probed
+i2c /dev entries driver
+MSYS: DMEM request: [Sstar URDMA 0 TX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 0 TX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 0 TX]:0x00002000 success, CPU phy:@0x0000000029640000, virt:@(ptrval)
+MSYS: DMEM request: [Sstar URDMA 0 RX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 0 RX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 0 RX]:0x00002000 success, CPU phy:@0x0000000029642000, virt:@(ptrval)
+1f221000.uart0: ttyS0 at MMIO 0x0 (irq = 36, base_baud = 10750000) is a unknown
+MSYS: DMEM request: [Sstar URDMA 1 TX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 1 TX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 1 TX]:0x00002000 success, CPU phy:@0x0000000029644000, virt:@(ptrval)
+MSYS: DMEM request: [Sstar URDMA 1 RX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 1 RX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 1 RX]:0x00002000 success, CPU phy:@0x0000000029646000, virt:@(ptrval)
+1f221200.uart1: ttyS1 at MMIO 0x0 (irq = 39, base_baud = 10750000) is a unknown
+MSYS: DMEM request: [Sstar URDMA 2 TX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 2 TX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 2 TX]:0x00002000 success, CPU phy:@0x0000000029648000, virt:@(ptrval)
+MSYS: DMEM request: [Sstar URDMA 2 RX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 2 RX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 2 RX]:0x00002000 success, CPU phy:@0x000000002964A000, virt:@(ptrval)
+1f220400.fuart: ttyS2 at MMIO 0x0 (irq = 42, base_baud = 10750000) is a unknown
+[ss_gpi_intc_domain_alloc] hw:32 -> v:79
+irq: IRQ79: trimming hierarchy from :soc:ms_main_intc
+[ss_gpi_intc_domain_alloc] hw:33 -> v:80
+irq: IRQ80: trimming hierarchy from :soc:ms_main_intc
+MSYS: DMEM request: [emac0_buff]:0x00000812
+MSYS: DMEM request alignment: [emac0_buff]:0x00002000
+MSYS: DMEM request: [emac0_buff]:0x00002000 success, CPU phy:@0x000000002964C000, virt:@(ptrval)
+libphy: mdio: probed
+mdio_bus mdio-bus@emac0: ethernet-phy@0 has invalid PHY address
+mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 0
+[emac_phy_connect][3692] connected mac emac0 to PHY at mdio-bus@emac0:00 [uid=11112222, driver=SStar 10/100 Ethernet Phy]
+sstar,rtcpwc 1f006800.rtcpwc: registered as rtc0
+sstar,rtcpwc 1f006800.rtcpwc: setting system clock to 1970-01-01T00:55:44 UTC (3344)
+MSYS: DMEM request: [AESDMA_ENG]:0x00001000
+MSYS: DMEM request alignment: [AESDMA_ENG]:0x00002000
+MSYS: DMEM request: [AESDMA_ENG]:0x00002000 success, CPU phy:@0x000000002964E000, virt:@(ptrval)
+MSYS: DMEM request: [AESDMA_ENG1]:0x00001000
+MSYS: DMEM request alignment: [AESDMA_ENG1]:0x00002000
+MSYS: DMEM request: [AESDMA_ENG1]:0x00002000 success, CPU phy:@0x0000000029650000, virt:@(ptrval)
+ms_cpufreq_init 433 SIDD: 0xe1 OSC:0xe2 
+ms_cpufreq_init 434 SIDD Thres: 0x113 OSC Thres:0xf0 
+[ms_cpufreq_init] Current clk=801358688
+read pad-ctrl failed
+[NOTICE]pwm-isr(70) success. If not i6e or i6b0, pls confirm it on .dtsi
+[MSPI] mspi 0 use dma mode
+[MSPI] mspi 1 use dma mode
+[FLASH] find u32_sni_address = 0x6000
+[FLASH] Device id is 0xc2 0x20 0x18
+[FLASH] SNI match flash.
+[SPINOR] ReadData = 0x6b
+[SPINOR] Dummy = 0x8
+[SPINOR] pageProgram = 0x2
+[FLASH] BDMA mode
+[SPINOR] blocks = 0x0
+[SPINOR] SRP0 = 0x0
+[FLASH] End flash init.
+MSYS: DMEM request: [BDMA]:0x00010000
+MSYS: DMEM request: [BDMA]:0x00010000 success, CPU phy:@0x0000000029660000, virt:@(ptrval)
+_serflash_alloc_bdma_buffer _BDMA_ALLOC_DMEM.bdma_vir_addr 0xc9660000
+serflash_probe: 7mtd .name = nor0, .size = 0x01000000 (16MiB)
+ .erasesize = 0x00001000 .numeraseregions = 0
+
+6 cmdlinepart partitions found on MTD device nor0
+Creating 6 MTD partitions on "nor0":
+0x000000000000-0x00000004f000 : "BOOT"
+0x00000004f000-0x000000050000 : "ENV"
+0x000000050000-0x000000310000 : "KERNEL"
+0x000000310000-0x000000600000 : "rootfs"
+0x000000600000-0x000000950000 : "miservice"
+0x000000950000-0x000000fa0000 : "customer"
+NET: Registered protocol family 17
+Loading compiled-in X.509 certificates
+OF: fdt: not creating '/sys/firmVFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+devtmpfs: mounted
+Kernel memory protection not selected by kernel config.
+Run /linuxrc as init process
+process '/bin/busybox' started with executable stack
+random: linuxrc: uninitialized uranrandom: rcS: uninitialized urandom read (4 bytes read)
+random: mkdir: uninitialized urandom read (4 bytes read)
+net.core.rmem_default = 163840
+net.core.rmem_max = 163840
+net.core.wmem_default = 524288
+net.core.wmem_max = 1048576
+net.ipv4.tcp_mem = 924  1232  1848
+net.ipv4.tcp_rmem = 4096  87380  325120
+net.ipv4.tcp_wmem = 4096  131072  393216
+Sstar_ehc_init version:20180309
+[USB] config miu select [70] [e8] [ef] [ef]
+[USB] enable miu lower bound address subtraction
+Fail to get pad(131075) form padmux !
+Fail to get pad(131331) form padmux !
+>> [sdmmc] Warn: Could not get SD pad group from Padmux dts!
+>> [sdmmc] Err: Failed to use DTS function!
+
+CAM_FS_OK != s32Ret, open[/misc/config.json] fail.
+cjson: /misc/config.json get file size error.
+ mi_common_CjsonLoad(/misc/config.json) NULL!
+Load Customer json[/config/config.json].
+
+mhal module [vcodec] init
+[ven-m][sys] DrvVencProbe:228 vcodec prob sucess.
+[ven-m][jpeg] jpe driver probed
+mhal module [aio] init
+module [sys] init Dec  7 2023 10:57:53
+start:0x20000000,end:0x30000000,block_id:0,flag:1
+HAL_MIU_Protect 790 start=20000000, 30000000 u8Blockx=0
+start:0x20000000,end:0x30000000,block_id:0,flag:0
+HAL_MIU_Protect 790 start=20000000, 30000000 u8Blockx=0
+start:0x20000000,end:0x2ba00000,block_id:0,flag:1
+HAL_MIU_Protect 790 start=20000000, 2BA00000 u8Blockx=0
+start:0x20000000,end:0x2ba00000,block_id:0,flag:0
+HAL_MIU_Protect 790 start=20000000, 2BA00000 u8Blockx=0
+start:0x20000000,end:0x299c0000,block_id:0,flag:1
+HAL_MIU_Protect 790 start=20000000, 299C0000 u8Blockx=0
+mi_sys_mma_allocator_create success, heap_base_addr=20000000 length=3a800 
+mhal module [vif] init
+g_stSelSpinLock init.
+module [vif] init
+mhal module [sensor] init
+module [sensor] init
+mhal module [panel] init
+module [panel] init
+mhal module [rgn] init
+module [rgn] init
+mhal module [disp] init
+module [disp] init
+module [fb] init
+module [ao] init
+module [ai] init
+mhal module [isp] init
+IspSysGetRegBase = 0xFD000000
+isp0_cfg base = 0xFD260400
+dma_fbd0_cfg base = 0xFD26CB00
+ ~~~~~~~~~~~ Mload Inside init module ~~~~~~~~~~~~~~~
+module [isp] init
+module [ipu] init
+module [shadow] init
+mhal module [vpe] init
+module [scl] init
+module [venc] init Dec  7 2023 10:57:52
+mhal module [ldc] init
+module [ldc] init
+[emac_phy_link_adjust] EMAC Link Up 
+/ # [DBG]:ST_LoadIni[2371]: inipath ./sc465sl_param_snr0.ini 
+iniparser: syntax error in ./sc465sl_param_snr0.ini (220):
+-> ; # 640 800
+iniparser: syntax error in ./sc465sl_param_snr0.ini (222):
+-> ; # 352 480
+sensor info: 
+ eHDRType: 0
+ bMirror: 0
+ bFlip: 0
+ eRot: 0
+ bOpenIqserver: 1
+
+
+sensor info: 
+ ePADId: 0
+ u8ResIdx: 0
+ u32Fps: 30
+
+
+vif info: 
+ GroupId: 0
+ DevId: 0
+ PortId: 0
+ stCapRect.u16X: 0
+ stCapRect.u16Y: 0
+ stCapRect.u16Width: 0
+ stDestSize.u16Width: 0
+ stDestSize.u16Height: 0
+
+
+isp dev info: 
+ ePADId: 0
+ u32MaxChnNum: 1
+ stSrcChnPort.eModId: 6
+ stSrcChnPort.u32DevId: 0
+ stSrcChnPort.u32ChnId: 0
+ stSrcChnPort.u32PortId: 0
+ eBindType: 4
+
+ isp:chn0_ChnId:0
+ isp:chn0_stInputCrop.u16X:0
+ isp:chn0_stInputCrop.u16Y:0
+ isp:chn0_stInputCrop.u16Width:0
+ isp:chn0_stInputCrop.u16Height:0
+ isp:chn0_stChnParam.e3DNRLevel:2
+
+ isp:chn0_port0_PortId: 0
+ isp:chn0_port0_bEnable: 1
+ isp:chn0_port0_stOutPortParam.stCropRect.u16X: 0
+ isp:chn0_port0_stOutPortParam.stCropRect.u16Y: 0
+ isp:chn0_port0_stOutPortParam.stCropRect.u16Width: 0
+ isp:chn0_port0_stOutPortParam.stCropRect.u16Height: 0
+ isp:chn0_port0_stOutPortParam.ePixelFormat: 0
+
+ isp:chn0_port1_PortId: 1
+ isp:chn0_port1_bEnable: 0
+ isp:chn0_port1_stOutPortParam.stCropRect.u16X: 0
+ isp:chn0_port1_stOutPortParam.stCropRect.u16Y: 0
+ isp:chn0_port1_stOutPortParam.stCropRect.u16Width: 0
+ isp:chn0_port1_stOutPortParam.stCropRect.u16Height: 0
+ isp:chn0_port1_stOutPortParam.ePixelFormat: 0
+
+ isp:chn0_port2_PortId: 2
+ isp:chn0_port2_bEnable: 0
+ isp:chn0_port2_stOutPortParam.stCropRect.u16X: 0
+ isp:chn0_port2_stOutPortParam.stCropRect.u16Y: 0
+ isp:chn0_port2_stOutPortParam.stCropRect.u16Width: 0
+ isp:chn0_port2_stOutPortParam.stCropRect.u16Height: 0
+ isp:chn0_port2_stOutPortParam.ePixelFormat: 0
+
+
+scl module info: 
+ ePADId: 0
+ u32Maxtice! Init IQ here......
+[0]===== [DrvIspResume] =====
+(ST_VifModuleInit 844)exec function pass
+setchnportattr (0,0,2560,1440) 
+(ST_VifModuleInit 861)exec function pass
+(ST_VifModuleInit 862)exec function pass
+sensor bayerid 2, bit mode 2 
+(ST_VifModuleInit 899)exec function pass
+(ST_VifModuleInit 900)exec function pass
+(ST_BaseModuleInit 2214)exec function pass
+[ST_IspModuleinit 968]exec function pass
+chn0, sub channel num 0 
+isp chn0, multi channel num 1 
+[MI_ISP_CUS3A_Enable] AE = 1, AWB = 1, AF = 1
+[MI_ISP_CUS3A_Enable] AE = 1, AWB = 1, AF = 1
+[MI_ISP_CUS3A_Enable] AE = 1, AWB = 1, AF = 1
+[ST_IspModuleinit 982]exec function pass
+[ST_IspModuleinit 990]exec function pass
+[ST_IspModuleinit 991]exec function pass
+[ST_IspModuleinit 1016]exec function pass
+[ST_IspModuleinit 1017]exec function pass
+[ST_Sys_Bind 57]exec function pass
+
+src(6-0-0-0)  dst(33-0-0-0)  4...
+
+(ST_IspModuleinit 1049)exec function pass
+(ST_BaseModuleInit 2219)exec function pass
+chipidx 9, revision 1 
+CmdqProcInit 1281
+CMDQ - IRQ Request 0 
+[MI WRN] [178]: output port0,set size(0,0,0,0), no support crop, adjust rect(0,0,2560,1440)
+
+[RT:1,1]
+
+===== [MhalCameraOpen][0] begin ===== VifMask : fff, AckTie : 1
+DevId = 0, Ch= 0, SNR ID: 0x0, VifCh = 0x0, WdmaID = 0x0, PreOpen = 0
+3DNR = 2, Rotation = 0
+(W, H): (2560, 1440)
+PixelFmt: 2, BayerID: 2, YuvOrder: 0, RdmaY2b: 0
+Mode: 0, HdrType: 0
+[ValidStatsFrame] snr=0, w=0, f=3
+[0]===== [DrvIspPowerOn] =====
+CMDQ - IRQ Request 1 
+[Dev 0]CmdQ Free ID = 1, IspLocalCmdQHnd = 0x(ptrval)
+Fifo=0  Connect DevID=0 
+Fifo=1  Connect DevID=4 
+Fifo=2  Connect DevID=8 
+Fifo=3  Connect DevID=12 
+nVifDev=0, AFifo_ID=0 
+[ValidStatsFrame] snr=0, w=0, f=3
+[    AeInit] FPS (Init, Input, Output, Cur, Deband) = (   30,   30,   30,   30,   30)
+[    AeInit] HW Sensor Gain = (1024,1745920,1024,1745920)
+[    AeInit] HW     Shutter = (  20, 333333,  20, 333333)
+[    AeInit] Use AE Short Histogram = Valid
+[    AeInit]      Sensor delay frame cnt =  3
+[AeInit  ] --> Calculation mode = FLOAT
+[    AeInit] --> Change  :      1,    CurYx10 :      0, CurY1x10 :      0   , Targetx10 :    470, BVx16384 :  43611, FNx10 :  18, IspGain :   1024, SensorGain :   1024, Shutter  :  16000 us, Step      :  20834 ns
+
+(ST_SclModuleInit 1256)exec function pass
+(ST_SclModuleInit 1280)exec function pass
+(ST_SclCreateChn 1107)exec function pass
+(ST_SclCreateChn 1117)exec function pass
+(ST_SclCreateChn 1123)exec function pass
+(ST_SclCreateChn 1125)exec function pass
+[DBG]:ST_SclCreateChn[1135]: SclPortId : 0
+[DBG]:ST_SclCreateChn[1170]: devId:0, chnId:0, portId:0
+(ST_SclCreateChn 1171)exec function pass
+(ST_SclCreateChn 1172)exec function pass
+[ST_OSD_Create 913]exec function pass
+[ST_SclCreateChn 1193]exec function pass
+stSCLOutputSize.u16Width = 2560
+stSCLOutputSize.u32Height = 1440
+[ST_SclCreateChn 1204]exec function pass
+(ST_SclCreateChn 1234)exec function pass
+[DBG]:ST_SclCreateChn[1135]: SclPortId : 1
+[DBG]:ST_SclCreateChn[1170]: devId:0, chnId:0, portId:1
+(ST_SclCreateChn 1171)exec function pass
+(ST_SclCreateChn 1172)exec function pass
+(ST_SclCreateChn 1234)exec function pass
+[DBG]:ST_SclCreateChn[1135]: SclPortId : 2
+[DBG]:ST_SclCreateChn[1170]: devId:0, chnId:0, portId:2
+(ST_SclCreateChn 1171)exec function pass
+(ST_SclCreateChn 1172)exec function pass
+(ST_SclCreateChn 1234)exec function pass
+(ST_SclModuleInit 1283)exec function pass
+[ST_Sys_Bind 57]exec function pass
+
+src(33-0-0-0)  dst(34-0-0-0)  4...
+
+(ST_SclModuleInit 1303)exec function pass
+(ST_BaseModuleInit 2224)exec function pass
+[DBG]:ST_BaseModuleInit[2227]: pass venc
+Create mi dev0 dev_type0
+Create mi dev0 dev_type1
+Create mhal dev0 dev_type0
+dev0 dev_type0 config memory base address:0x40000000
+[ven-m][vcodec] vcodec miu protect channel:venc:4 vdec:0
+heap_name mma_heap_codec  bEnable=1 
+au16SetProId[0]:0xc
+au16SetProId[1]:0x70
+miu_number:0,start:0x60c0c000,end:0x60d08000,block_id:16,flag:1
+HAL_MIU_Protect 790 start=60C0C000, 60D08000 u8Blockx=10
+CMDQ - IRQ Request 2 
+dev0 dev_type0 bAllowPreemptionSram:0 bNeedSram:1 bUsePreDevBuf:0 u32SramSize:18400
+Create mhal dev0 dev_type1
+dev0 dev_type1 bAllowPreemptionSram:0 bNeedSram:1 bUsePreDevBuf:0 u32SramSize:18400
+(ST_VencModuleInit 1499)exec function pass
+(ST_VencModuleInit 1536)exec function pass
+(ST_VencModuleInit 1574)exec function pass
+(ST_VencModuleInit 1577)exec function pass
+[DBG]:ST_VencModuleInit[1610]: src(34-0-0-0)  dst(2-0-0-0)  16...
+[ST_Sys_Bind 57]exec function pass
+
+src(34-0-0-0)  dst(2-0-0-0)  16...
+
+(ST_VencModuleInit 1615)exec function pass
+(ST_VencModuleInit 1623)exec function pass
+(ST_BaseModuleInit 2229)exec function pass
+[DBG]:ST_BaseModuleInit[2231]: pass rtsp
+=================URL===================
+rtsp://192.168.102.220/video0
+=================URL===================
+[iqsvr info]:MI_IQSERVER_Open[762]: create network listen thread ret is 0
+(ST_BaseModuleInit 2244)exec function pass
+loading api bin...path:/customer/mi_demo/imx485_api.bin
+[iqserver_net_fun.c][mst_Sock_Listen] ListenSock=17
+[MAJOR]: ispversion(1) in sdk, ispversion(1) in binfile.
+[MINOR]: ispversion(4) in sdk, ispversion(2) in binfile.
+warning warning!!!SDK & iqbinfile minor version is not match.
+******************** Load api bin Success - /customer/mi_demo/imx485_api.bin ********************
+(ST_DoSetIqBin 946)exec function pass
+(ST_DoSetIqBin 951)exec function pass
+MI_ISP_AE_SetFlicker!
+(main 3392)exec function pass
+libsstar_algo_detection.a release version: V1.0_20220704
+(main 3412)exec function pass
+[      DoAe] FPS (Input, Output, Cur, Deband) = (   30,   30,30000,   30)
+[AF_InitParameters-1932] Error!! Initial motor parameters got from motor driver are unreasonable. 
+[AF_InitParameters-1933] InitPos = 0, MinMotorPos = 0, MaxMotorPos = 0, MinMotorStep = 1, MaxMotorStep = 0 
+[MI WRN] [1290]: Not frame mode, eBindTypeMask = 16, set user depth 0.
+
+client [546] connected, module:ipu
+(main 3414)exec function pass
+select 0: exit,1: enable af 
+detect thread start
+[DBG]:DetectThread[3072]: MI_SYS_SetChnOutputPortDepth success
+[DBG]:DetectThread[3077]: MI_SYS_GetFd success
+[DBG]:ST_dumps_image[1946]: pstBufInfo->eBufType:1
+[DBG]:ST_dumps_image[1954]: size is 576000
+
+
+
+
+/proc # cat cmdline 
+root=/dev/mtdblock3 rootfstype=squashfs rc init=/linuxrc LX_MEM=0x10000000 mma_heap=mma_heap_name0,miu=0,sz=0x4600000 mma_heap=mma_heap_fb,miu=0,sz=0x2040000 mma_memblock_remove=1 cma=2M mtdparts=nor0:0x4F000(BOOT),0x1000(ENV),0x2C0000(KERNEL),0x2F0000(rootfs),0x350000(miservice),0x650000(customer)
+/proc # 

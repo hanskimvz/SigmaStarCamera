@@ -1,0 +1,15 @@
+{
+	"enable":	true,
+	"enable_Property":	{
+		"type":	"boolean",
+		"mode":	"rw",
+		"def":	true
+	},
+	"hdmi_IntfSync": "1080_30P",
+	"hdmi_IntfSync_Property":	{
+		"type":	"string",
+		"mode":	"rw",
+		"opt":	["720_50P", "720_60P", "1080_50P", "1080_60P", "1080_30P", "1080_25P", "1080_24P", "4K_30P", "4K_25P", "1920x1080_5994P", "1920x1080_2997P", "1280x720_5994P", "1280X720_2997P", "3840x2160_2997P"],
+		"def":	"4K_30"
+	}
+}

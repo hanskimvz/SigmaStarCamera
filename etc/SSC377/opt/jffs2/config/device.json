@@ -1,0 +1,57 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"devModel":	"IPCAM",
+	"devModel_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"devMagic":	"JUAN AK3918EV300 RESTRUCTURE FIRMWARE COPYRIGHT BY LAW",
+	"devMagic_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"devName":	"HD IPCAM",
+	"devName_Property":	{
+		"type":	"string",
+		"mode":	"rw"
+	},
+	"devHardver":	"57502233",
+	"devHardver_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"devSoftVer":	"2.2.1.0",
+	"devSoftVer_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"devSerialNumber":	"S4891961123021",
+	"devSerialNumber_Property":	{
+		"type":	"string",
+		"mode":	"rw"
+	},
+	"devCloudNumber":	"",
+	"devCloudNumber_Property":	{
+		"type":	"string",
+		"mode":	"rw"
+	},
+	"devOemName":	"",
+	"devOemName_Property":	{
+		"type":	"string",
+		"mode":	"rw"
+	},
+	"devOemKey":	"",
+	"devOemKey_Property":	{
+		"type":	"string",
+		"mode":	"rw"
+	},
+	"devOemNumber":	"575022",
+	"devOemNumber_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	}
+}

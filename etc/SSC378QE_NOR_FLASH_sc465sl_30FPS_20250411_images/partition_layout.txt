@@ -1,0 +1,17 @@
+BOOT0: 0x6000(IPL),0x6000(CIS),0x4000(IPL_CUST),0x19000(UBOOT),0x1000@0x4F000(ENV)
+BOOT MERGE: IPL CIS IPL_CUST UBOOT
+SYS: 0x2C0000(KERNEL),0x2F0000(rootfs),0x350000(miservice),0x650000(customer)
+FLASH HAS USED 0xfa0000KB
+ChkSum       : 6237
+Magic        : SSTARSEMICIS0001
+Checksum ok!!
+IDX:         StartBlk:           BlkCnt:     Trunk/BkTrunk:     Group:     Active:     BBM:      Name:
+  0:    0,(0000000000)    0,(0X00006000)                0/0          1           1      OFF        IPL
+  1:    0,(0X00006000)    0,(0X00006000)                0/0          1           1      OFF        CIS
+  2:    0,(0X0000C000)    0,(0X00004000)                0/0          1           1      OFF   IPL_CUST
+  3:    1,(0X00010000)    1,(0X00019000)                0/0          1           1      OFF      UBOOT
+  4:    4,(0X0004F000)    0,(0X00001000)                0/0          0           1      OFF        ENV
+  5:    5,(0X00050000)   44,(0X002C0000)                0/0          0           1      OFF     KERNEL
+  6:   49,(0X00310000)   47,(0X002F0000)                0/0          0           1      OFF     rootfs
+  7:   96,(0X00600000)   53,(0X00350000)                0/0          0           1      OFF  miservice
+  8:  149,(0X00950000)  101,(0X00650000)                0/0          0           1      OFF   customer

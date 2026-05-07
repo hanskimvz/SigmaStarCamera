@@ -1,0 +1,6 @@
+# <- this is for comment / total file size must be less than 4KB
+setenv bootargs root=/dev/mtdblock3 rootfstype=squashfs rc init=/linuxrc LX_MEM=0x10000000 mma_heap=mma_heap_name0,miu=0,sz=0x4600000 mma_heap=mma_heap_fb,miu=0,sz=0x2040000 mma_memblock_remove=1 cma=2M $(mtdparts)
+setenv bootcmd ' dcache on ; sf probe 0;sf read 0x23000000 KERNEL 0x2C0000; bootm 0x23000000; dcache on ; bootm 0x23000000'
+saveenv
+reset
+% <- this is end of file symbol

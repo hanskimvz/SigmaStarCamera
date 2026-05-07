@@ -1,0 +1,749 @@
+SigmaStar # estar
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'auto_update.txt'.
+Load address: 0x23a002a8
+Loading: #
+	 4.9 KiB/s
+done
+Bytes transferred = 311 (137 hex)
+
+>> estar scripts/[[set_partition.es 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/[[set_partition.es'.
+Load address: 0x23a04ec8
+Loading: #
+	 2.9 KiB/s
+done
+Bytes transferred = 317 (13d hex)
+
+>> tftp 0x21000000 boot/flash_list.nri 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'boot/flash_list.nri'.
+Load address: 0x21000000
+Loading: #
+	 122.1 KiB/s
+done
+Bytes transferred = 13440 (3480 hex)
+
+>> sf probe 0x21000000 
+[FLASH] Device id is 0xef 0x40 0x15
+[FLASH] Device id is 0xef 0x40 0x15
+[FLASH] Device id is 0xef 0x40 0x16
+[FLASH] Device id is 0xef 0x40 0x17
+[FLASH] Device id is 0xef 0x40 0x18
+[FLASH] Device id is 0xef 0x30 0x10
+[FLASH] Device id is 0x0b 0x40 0x14
+[FLASH] Device id is 0x0b 0x40 0x15
+[FLASH] Device id is 0x0b 0x40 0x17
+[FLASH] Device id is 0x0b 0x40 0x18
+[FLASH] Device id is 0xc8 0x40 0x18
+[FLASH] Device id is 0xc8 0x40 0x16
+[FLASH] Device id is 0xc8 0x40 0x19
+[FLASH] Device id is 0xc8 0x40 0x13
+[FLASH] Device id is 0x20 0x40 0x16
+[FLASH] Device id is 0x20 0x60 0x17
+[FLASH] Device id is 0x20 0x40 0x17
+[FLASH] Device id is 0x20 0x70 0x18
+[FLASH] Device id is 0x20 0x40 0x18
+[FLASH] Device id is 0x20 0x60 0x19
+[FLASH] Device id is 0xc2 0x20 0x16
+[FLASH] Device id is 0xc2 0x20 0x18
+spi_flash_probe_driver
+[SPINOR] ReadData = 0x6b
+[SPINOR] Dummy = 0x8
+[SPINOR] pageProgram = 0x2
+[FLASH] BDMA mode
+[SPINOR] blocks = 0x0
+[SPINOR] SRP0 = 0x0
+[FLASH] End flash init.
+mtd .name = nor0, .size = 0x01000000 (16MiB) .erasesize = 0x00001000 .numeraseregions = 0
+SF: add mtd device successfully
+SF: Detected nor0 with total size 16 MiB
+
+>> setenv mtdids nor0=nor0 
+
+>> setenv mtdparts ' mtdparts=nor0:0x4F000(BOOT),0x1000(ENV),0x2C0000(KERNEL),0x2F0000(rootfs),0x350000(miservice),0x65D0000(customer) 
+
+>> saveenv 
+Saving Environment to SPI Flash...
+nor0: partitioning exceeds flash size
+Erasing SPI flash..._spi_flash_erase: addr 0x4f000, len 0x1000 
+Erasing at 0x50000 -- 100% complete.(cost 24 ms)
+Writing to SPI flash..._spi_flash_write to 0x4f000, len 0x1000 from 0x239fbe40 
+Writing at 0x50000 -- 100% complete.(cost 61 ms)
+done
+
+>> estar scripts/[[boot.es 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/[[boot.es'.
+Load address: 0x23a04ec8
+Loading: #
+	 2 KiB/s
+done
+Bytes transferred = 184 (b8 hex)
+
+>> tftp 0x21000000 boot.bin 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'boot.bin'.
+Load address: 0x21000000
+Loading: ############
+	 759.8 KiB/s
+done
+Bytes transferred = 172032 (2a000 hex)
+
+>> sf probe 0 
+
+>> sf erase BOOT 
+nor0: partitioning exceeds flash size
+sf - SPI flash sub-system
+
+Usage:
+sf probe [[bus:]cs] [hz] [mode]	- init flash device on given SPI bus
+				  and chip select
+sf read addr offset len	- read `len' bytes starting at
+				  `offset' to memory at `addr'
+sf write addr offset len	- write `len' bytes from memory
+				  at `addr' to flash at `offset'
+sf erase offset [+]len		- erase `len' bytes from `offset'
+				  `+len' round up `len' to block size
+sf update addr offset len	- erase and write `len' bytes from memory
+				  at `addr' to flash at `offset'
+estar - script via network
+
+Usage:
+estar 
+estar - script via network
+
+Usage:
+estar 
+SigmaStar # 
+SigmaStar # 
+SigmaStar # 
+SigmaStar # 
+SigmaStar # estar
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'auto_update.txt'.
+Load address: 0x23a002a8
+Loading: #
+	 3.9 KiB/s
+done
+Bytes transferred = 311 (137 hex)
+
+>> estar scripts/[[set_partition.es 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/[[set_partition.es'.
+Load address: 0x23a04ec8
+Loading: #
+	 2.9 KiB/s
+done
+Bytes transferred = 316 (13c hex)
+
+>> tftp 0x21000000 boot/flash_list.nri 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'boot/flash_list.nri'.
+Load address: 0x21000000
+Loading: #
+	 119.1 KiB/s
+done
+Bytes transferred = 13440 (3480 hex)
+
+>> sf probe 0x21000000 
+[FLASH] Device id is 0xef 0x40 0x15
+[FLASH] Device id is 0xef 0x40 0x15
+[FLASH] Device id is 0xef 0x40 0x16
+[FLASH] Device id is 0xef 0x40 0x17
+[FLASH] Device id is 0xef 0x40 0x18
+[FLASH] Device id is 0xef 0x30 0x10
+[FLASH] Device id is 0x0b 0x40 0x14
+[FLASH] Device id is 0x0b 0x40 0x15
+[FLASH] Device id is 0x0b 0x40 0x17
+[FLASH] Device id is 0x0b 0x40 0x18
+[FLASH] Device id is 0xc8 0x40 0x18
+[FLASH] Device id is 0xc8 0x40 0x16
+[FLASH] Device id is 0xc8 0x40 0x19
+[FLASH] Device id is 0xc8 0x40 0x13
+[FLASH] Device id is 0x20 0x40 0x16
+[FLASH] Device id is 0x20 0x60 0x17
+[FLASH] Device id is 0x20 0x40 0x17
+[FLASH] Device id is 0x20 0x70 0x18
+[FLASH] Device id is 0x20 0x40 0x18
+[FLASH] Device id is 0x20 0x60 0x19
+[FLASH] Device id is 0xc2 0x20 0x16
+[FLASH] Device id is 0xc2 0x20 0x18
+spi_flash_probe_driver
+[SPINOR] ReadData = 0x6b
+[SPINOR] Dummy = 0x8
+[SPINOR] pageProgram = 0x2
+[FLASH] BDMA mode
+[SPINOR] blocks = 0x0
+[SPINOR] SRP0 = 0x0
+[FLASH] End flash init.
+mtd .name = nor0, .size = 0x01000000 (16MiB) .erasesize = 0x00001000 .numeraseregions = 0
+SF: add mtd device successfully
+SF: Detected nor0 with total size 16 MiB
+
+>> setenv mtdids nor0=nor0 
+
+>> setenv mtdparts ' mtdparts=nor0:0x4F000(BOOT),0x1000(ENV),0x2C0000(KERNEL),0x2F0000(rootfs),0x350000(miservice),0x650000(customer) 
+
+>> saveenv 
+Saving Environment to SPI Flash...
+saveenv: get env from mtdpart successful!
+Erasing SPI flash..._spi_flash_erase: addr 0x4f000, len 0x1000 
+Erasing at 0x50000 -- 100% complete.(cost 24 ms)
+Writing to SPI flash..._spi_flash_write to 0x4f000, len 0x1000 from 0x239fbe40 
+Writing at 0x50000 -- 100% complete.(cost 60 ms)
+done
+
+>> estar scripts/[[boot.es 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/[[boot.es'.
+Load address: 0x23a04ec8
+Loading: #
+	 2 KiB/s
+done
+Bytes transferred = 184 (b8 hex)
+
+>> tftp 0x21000000 boot.bin 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'boot.bin'.
+Load address: 0x21000000
+Loading: ############
+	 739.3 KiB/s
+done
+Bytes transferred = 172032 (2a000 hex)
+
+>> sf probe 0 
+
+>> sf erase BOOT 
+device 0 offset 0x0, size 0x4f000
+_spi_flash_erase: addr 0x0, len 0x4f000 
+Erasing at 0x4f000 -- 100% complete.(cost 1434 ms)
+SF: 323584 bytes @ 0x0 Erased: OK
+
+>> sf write 0x21000000 BOOT ${filesize} 
+device 0 offset 0x0, size 0x2a000
+_spi_flash_write to 0x0, len 0x2a000 from 0x21000000 
+Writing at 0x2a000 -- 100% complete.(cost 360 ms)
+SF: 172032 bytes @ 0x0 Written: OK
+
+>> estar scripts/[[kernel.es 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/[[kernel.es'.
+Load address: 0x23a04ec8
+Loading: #
+	 2 KiB/s
+done
+Bytes transferred = 186 (ba hex)
+
+>> tftp 0x21000000 kernel 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'kernel'.
+Load address: 0x21000000
+Loading: #################################################################
+	 ##################################################
+	 1.2 MiB/s
+done
+Bytes transferred = 1675752 (1991e8 hex)
+
+>> sf probe 0 
+
+>> sf erase KERNEL 
+device 0 offset 0x50000, size 0x2c0000
+_spi_flash_erase: addr 0x50000, len 0x2c0000 
+Erasing at 0x310000 -- 100% complete.(cost 11648 ms)
+SF: 2883584 bytes @ 0x50000 Erased: OK
+
+>> sf write 0x21000000 KERNEL ${filesize} 
+device 0 offset 0x50000, size 0x1991e8
+_spi_flash_write to 0x50000, len 0x1991e8 from 0x21000000 
+Writing at 0x1e91e8 -- 100% complete.(cost 2942 ms)
+SF: 1675752 bytes @ 0x50000 Written: OK
+
+>> estar scripts/[[rootfs.es 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/[[rootfs.es'.
+Load address: 0x23a04ec8
+Loading: #
+	 2.9 KiB/s
+done
+Bytes transferred = 191 (bf hex)
+
+>> sf probe 0 
+
+>> sf erase rootfs 
+device 0 offset 0x310000, size 0x2f0000
+_spi_flash_erase: addr 0x310000, len 0x2f0000 
+Erasing at 0x600000 -- 100% complete.(cost 12725 ms)
+SF: 3080192 bytes @ 0x310000 Erased: OK
+
+>> tftp 0x21000000 rootfs.sqfs 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'rootfs.sqfs'.
+Load address: 0x21000000
+Loading: #################################################################
+	 #################
+	 1.2 MiB/s
+done
+Bytes transferred = 1191936 (123000 hex)
+
+>> sf write 0x21000000 rootfs ${filesize} 
+device 0 offset 0x310000, size 0x123000
+_spi_flash_write to 0x310000, len 0x123000 from 0x21000000 
+Writing at 0x433000 -- 100% complete.(cost 2113 ms)
+SF: 1191936 bytes @ 0x310000 Written: OK
+
+>> estar scripts/[[miservice.es 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/[[miservice.es'.
+Load address: 0x23a04ec8
+Loading: #
+	 2 KiB/s
+done
+Bytes transferred = 200 (c8 hex)
+
+>> sf probe 0 
+
+>> sf erase miservice 
+device 0 offset 0x600000, size 0x350000
+_spi_flash_erase: addr 0x600000, len 0x350000 
+Erasing at 0x950000 -- 100% complete.(cost 13366 ms)
+SF: 3473408 bytes @ 0x600000 Erased: OK
+
+>> tftp 0x21000000 miservice.sqfs 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'miservice.sqfs'.
+Load address: 0x21000000
+Loading: #################################################################
+	 #################################################################
+	 #################################################################
+	 ###############
+	 1.3 MiB/s
+done
+Bytes transferred = 3076096 (2ef000 hex)
+
+>> sf write 0x21000000 miservice ${filesize} 
+device 0 offset 0x600000, size 0x2ef000
+_spi_flash_write to 0x600000, len 0x2ef000 from 0x21000000 
+Writing at 0x8ef000 -- 100% complete.(cost 5355 ms)
+SF: 3076096 bytes @ 0x600000 Written: OK
+
+>> estar scripts/[[customer.es 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/[[customer.es'.
+Load address: 0x23a04ec8
+Loading: #
+	 2.9 KiB/s
+done
+Bytes transferred = 198 (c6 hex)
+
+>> sf probe 0 
+
+>> sf erase customer 
+device 0 offset 0x950000, size 0x650000
+_spi_flash_erase: addr 0x950000, len 0x650000 
+Erasing at 0xfa0000 -- 100% complete.(cost 27130 ms)
+SF: 6619136 bytes @ 0x950000 Erased: OK
+
+>> tftp 0x21000000 customer.jffs2 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'customer.jffs2'.
+Load address: 0x21000000
+Loading: #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #################################################################
+	 #############################################################
+	 1.3 MiB/s
+done
+Bytes transferred = 6619136 (650000 hex)
+
+>> sf write 0x21000000 customer ${filesize} 
+device 0 offset 0x950000, size 0x650000
+_spi_flash_write to 0x950000, len 0x650000 from 0x21000000 
+Writing at 0xfa0000 -- 100% complete.(cost 5601 ms)
+SF: 6619136 bytes @ 0x950000 Written: OK
+
+>> estar scripts/set_config 
+Using sstar_emac device
+TFTP from server 192.168.1.3; our IP address is 192.168.101.220
+Filename 'scripts/set_config'.
+Load address: 0x23a04ec8
+Loading: #
+	 5.9 KiB/s
+done
+Bytes transferred = 450 (1c2 hex)
+
+>> setenv bootargs root=/dev/mtdblock3 rootfstype=squashfs ro init=/linuxrc LX_MEM=0x10000000 mma_heap=mma_heap_name0,miu=0,sz=0x4600000 mma_heap=mma_heap_fb,miu=0,sz=0x2040000 mma_memblock_remove=1 cma=2M $(mtdparts) 
+
+>> setenv bootcmd ' dcache on ; sf probe 0;sf read 0x23000000 KERNEL 0x2C0000; bootm 0x23000000; dcache on ; bootm 0x23000000' 
+
+>> saveenv 
+Saving Environment to SPI Flash...
+saveenv: get env from mtdpart successful!
+Erasing SPI flash..._spi_flash_erase: addr 0x4f000, len 0x1000 
+Erasing at 0x50000 -- 100% complete.(cost 26 ms)
+Writing to SPI flash..._spi_flash_write to 0x4f000, len 0x1000 from 0x239fbe40 
+Writing at 0x50000 -- 100% complete.(cost 60 ms)
+done
+
+>> reset 
+resetting ...
+E:CD
+
+IPL gbcdacba
+D-0a
+SW Reset
+miupll_266MHz
+256MB
+BIST0_0001-OK
+RDQS cali
+WDQS cali
+SPI 86M
+
+IPL_CUST gbcdacba
+
+
+U-Boot 2015.01 (Apr 27 2026 - 23:01:21)
+
+Version: I6C#g#######
+I2C:   Error, wrong i2c adapter 0 max 0 possible
+ready
+DRAM:  
+WARNING: Caches not enabled
+Flash: [FLASH] find u32_sni_address = 0x7000
+[FLASH] Device id is 0xc2 0x20 0x18
+[FLASH] SNI match flash.
+[SPINOR] ReadData = 0x6b
+[SPINOR] Dummy = 0x8
+[SPINOR] pageProgram = 0x2
+[FLASH] BDMA mode
+[SPINOR] blocks = 0x0
+[SPINOR] SRP0 = 0x0
+[FLASH] End flash init.
+flash init successful
+[PARTS] Load parts tbl from 0x8000
+[PARTS] Got PNI @ 0x239ff040
+mtd .name = nor0, .size = 0x01000000 (16MiB) .erasesize = 0x00001000 .numeraseregions = 0
+SF: add mtd device successfully
+SF: Detected nor0 with total size 16 MiB
+16 MiB
+MMC:   MStar SD/MMC: 0, MStar SD/MMC: 1
+ENV: offset = 0x4f000 size = 0x1000
+Error, wrong i2c adapter 0 max 0 possible
+Error, wrong i2c adapter 0 max 0 possible
+In:    serial
+Out:   serial
+Err:   serial
+Net:   MAC Address 00:30:1B:BA:02:DB
+Auto-Negotiation...
+Link Status Speed:100 Full-duplex:1
+sstar_emac
+device 0 offset 0x50000, size 0x2c0000
+SF: 2883584 bytes @ 0x50000 Read: OK (cost 74 ms)
+##  Booting kernel from Legacy Image at 23000000 ...
+   Image Name:   MVX4##I6C#g#######KL_LX510##[BR:
+   Image Type:   ARM Linux Kernel Image (lzma compressed)
+   Data Size:    1675688 Bytes = 1.6 MiB
+   Load Address: 20008000
+   Entry Point:  20008000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... 
+[XZ] !!!reserved 0x22000000 length=0x 1000000 for xz!!
+   XZ: uncompressed size=0x35cdc0, ret=7
+OK
+atags:0x20000000
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 5.10.61 (hanskim@hansdev) (arm-sigmastar-linux-uclibcgnueabihf-9.1.0-gcc (crosstool-NG 1.24.0) 9.1.0, GNU ld (crosstool-NG 1.24.0) 2.32) #28 PREEMPT Mon Apr 27 23:05:27 KST 2026
+CPU: ARMv7 Processor [411fd040] revision 0 (ARMv7), cr=50c5383d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+early_atags_to_fdt() success
+OF: fdt: Machine model: INFINITY6C SSC027A-S01A
+LXmem is 0x10000000 PHYS_OFFSET is 0x20000000
+Add mem start 0x20000000 size 0x10000000!!!!
+
+LX_MEM  = 0x20000000, 0x10000000
+LX_MEM2 = 0x0, 0x0
+LX_MEM3 = 0x0, 0x0
+MMU_MEM = 0x0, 0x0
+EMAC_LEN= 0x0
+DRAM_LEN= 0x0
+Memory policy: Data cache writeback
+Reserved memory: bypass cma0 node, using cmdline CMA params instead
+OF: reserved mem: node cma0 compatible matching fail
+no any mmap reserved
+deal_with_reserve_mma_heap memblock_reserve success mma_config[0].reserved_start=
+0x2ba00000 size:4600000
+
+deal_with_reserve_mma_heap memblock_reserve success mma_config[1].reserved_start=
+0x299c0000 size:2040000
+
+cma: Reserved 2 MiB at 0x29600000
+Zone ranges:
+  Normal   [mem 0x0000000020000000-0x00000000299bffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000020000000-0x00000000299bffff]
+Initmem setup node 0 [mem 0x0000000020000000-0x00000000299bffff]
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 39052
+Kernel command line: root=/dev/mtdblock3 rootfstype=squashfs ro init=/linuxrc LX_MEM=0x10000000 mma_heap=mma_heap_name0,miu=0,sz=0x4600000 mma_heap=mma_heap_fb,miu=0,sz=0x2040000 mma_memblock_remove=1 cma=2M mtdparts=nor0:0x4F000(BOOT),0x1000(ENV),0x2C0000(KERNEL),0x2F0000(rootfs),0x350000(miservice),0x650000(customer)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 150208K/157440K available (1960K kernel code, 331K rwdata, 900K rodata, 108K init, 109K bss, 5184K reserved, 2048K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+rcu: Preemptible hierarchical RCU implementation.
+	Trampoline variant of Tasks RCU enabled.
+rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+GICv3: 192 SPIs implemented
+GICv3: 0 Extended SPIs implemented
+GICv3: Distributor has no Range Selector support
+GICv3: 16 PPIs implemented
+GICv3: CPU0: found redistributor 0 region 0:0x16040000
+ms_init_main_intc: np->name=ms_main_intc, parent=gic
+ms_init_pm_intc: np->name=ms_pm_intc, parent=ms_main_intc
+ss_init_gpi_intc: np->name=ms_gpi_intc, parent=ms_main_intc
+random: get_random_bytes called from start_kernel+0x1b1/0x2ec with crng_init=0
+Find CLK_cpupll_clk, hook ms_cpuclk_ops
+arch_timer: cp15 timer(s) running at 6.00MHz (virt).
+clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1623fa770, max_idle_ns: 440795202238 ns
+sched_clock: 56 bits at 6MHz, resolution 166ns, wraps every 4398046511055ns
+Switching to timer-based delay loop, resolution 166ns
+printk: console [ttyS0] enabled
+Calibrating delay loop (skipped), value calculated using timer frequency.. 12.00 BogoMIPS (lpj=60000)
+pid_max: default: 4096 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x200081c0 - 0x200081f8
+rcu: Hierarchical SRCU implementation.
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 3 part 40 variant 4 rev 3
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 16 (order: -4, 448 bytes, linear)
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+
+
+Version : MVX4##I6C#g#######KL_LX510##[BR:g]#XVM
+
+GPIO: probe end
+clocksource: Switched to clocksource arch_sys_counter
+NET: Registered protocol family 2
+IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 256 (order: 0, 6144 bytes, linear)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+TCP bind hash table entries: 2048 (order: 3, 40960 bytes, linear)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 128 (order: 0, 6144 bytes, linear)
+UDP-Lite hash table entries: 128 (order: 0, 6144 bytes, linear)
+NET: Registered protocol family 1
+Initialise system trusted keyrings
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+jffs2: version 2.2. © 2001-2006 Red Hat, Inc.
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+io scheduler mq-deadline registered
+libphy: Fixed MDIO Bus: probed
+i2c /dev entries driver
+MSYS: DMEM request: [Sstar URDMA 0 TX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 0 TX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 0 TX]:0x00002000 success, CPU phy:@0x0000000029640000, virt:@(ptrval)
+MSYS: DMEM request: [Sstar URDMA 0 RX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 0 RX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 0 RX]:0x00002000 success, CPU phy:@0x0000000029642000, virt:@(ptrval)
+1f221000.uart0: ttyS0 at MMIO 0x0 (irq = 36, base_baud = 10750000) is a unknown
+MSYS: DMEM request: [Sstar URDMA 1 TX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 1 TX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 1 TX]:0x00002000 success, CPU phy:@0x0000000029644000, virt:@(ptrval)
+MSYS: DMEM request: [Sstar URDMA 1 RX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 1 RX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 1 RX]:0x00002000 success, CPU phy:@0x0000000029646000, virt:@(ptrval)
+1f221200.uart1: ttyS1 at MMIO 0x0 (irq = 39, base_baud = 10750000) is a unknown
+MSYS: DMEM request: [Sstar URDMA 2 TX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 2 TX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 2 TX]:0x00002000 success, CPU phy:@0x0000000029648000, virt:@(ptrval)
+MSYS: DMEM request: [Sstar URDMA 2 RX]:0x00001000
+MSYS: DMEM request alignment: [Sstar URDMA 2 RX]:0x00002000
+MSYS: DMEM request: [Sstar URDMA 2 RX]:0x00002000 success, CPU phy:@0x000000002964A000, virt:@(ptrval)
+1f220400.fuart: ttyS2 at MMIO 0x0 (irq = 42, base_baud = 10750000) is a unknown
+[ss_gpi_intc_domain_alloc] hw:31 -> v:79
+irq: IRQ79: trimming hierarchy from :soc:ms_main_intc
+MSYS: DMEM request: [emac0_buff]:0x00000212
+MSYS: DMEM request alignment: [emac0_buff]:0x00002000
+MSYS: DMEM request: [emac0_buff]:0x00002000 success, CPU phy:@0x000000002964C000, virt:@(ptrval)
+libphy: mdio: probed
+mdio_bus mdio-bus@emac0: ethernet-phy@0 has invalid PHY address
+mdio_bus mdio-bus@emac0: scan phy ethernet-phy at address 0
+[emac_phy_connect][3755] connected mac emac0 to PHY at mdio-bus@emac0:00 [uid=11112222, driver=SStar 10/100 Ethernet Phy]
+sstar,rtcpwc 1f006800.rtcpwc: registered as rtc0
+sstar,rtcpwc 1f006800.rtcpwc: setting system clock to 1970-01-01T02:56:44 UTC (10604)
+MSYS: DMEM request: [AESDMA_ENG]:0x00001000
+MSYS: DMEM request alignment: [AESDMA_ENG]:0x00002000
+MSYS: DMEM request: [AESDMA_ENG]:0x00002000 success, CPU phy:@0x000000002964E000, virt:@(ptrval)
+MSYS: DMEM request: [AESDMA_ENG1]:0x00001000
+MSYS: DMEM request alignment: [AESDMA_ENG1]:0x00002000
+MSYS: DMEM request: [AESDMA_ENG1]:0x00002000 success, CPU phy:@0x0000000029650000, virt:@(ptrval)
+ms_cpufreq_init 484 SIDD: 0xe1 OSC:0xe2 
+ms_cpufreq_init 485 SIDD Thres: 0x113 OSC Thres:0xf0 
+[ms_cpufreq_init] Current clk=801358688
+read pad-ctrl failed
+[NOTICE]pwm-isr(70) success. If not i6e or i6b0, pls confirm it on .dtsi
+[MSPI] mspi 0 use dma mode
+[MSPI] mspi 1 use dma mode
+[FLASH] find u32_sni_address = 0x7000
+[FLASH] Device id is 0xc2 0x20 0x18
+[FLASH] SNI match flash.
+[SPINOR] ReadData = 0x6b
+[SPINOR] Dummy = 0x8
+[SPINOR] pageProgram = 0x2
+[FLASH] BDMA mode
+[SPINOR] blocks = 0x0
+[SPINOR] SRP0 = 0x0
+[FLASH] End flash init.
+MSYS: DMEM request: [BDMA]:0x00010000
+MSYS: DMEM request: [BDMA]:0x00010000 success, CPU phy:@0x0000000029660000, virt:@(ptrval)
+_serflash_alloc_bdma_buffer _BDMA_ALLOC_DMEM.bdma_vir_addr 0xc9660000
+serflash_probe: 7mtd .name = nor0, .size = 0x01000000 (16MiB)
+ .erasesize = 0x00001000 .numeraseregions = 0
+
+6 cmdlinepart partitions found on MTD device nor0
+Creating 6 MTD partitions on "nor0":
+0x000000000000-0x00000004f000 : "BOOT"
+0x00000004f000-0x000000050000 : "ENV"
+0x000000050000-0x000000310000 : "KERNEL"
+0x000000310000-0x000000600000 : "rootfs"
+0x000000600000-0x000000950000 : "miservice"
+0x000000950000-0x000000fa0000 : "customer"
+NET: Registered protocol family 17
+Loading compiled-in X.509 certificates
+OF: fdt: not creating '/sys/firmVFS: Mounted root (squashfs filesystem) readonly on device 31:3.
+devtmpfs: mounted
+Kernel memory protection not selected by kernel config.
+Run /linuxrc as init process
+process '/bin/busybox' started with executable stack
+random: linuxrc: uninitialized uranrandom: rcS: uninitialized urandom read (4 bytes read)
+random: mkdir: uninitialized urandom read (4 bytes read)
+net.core.rmem_default = 163840
+net.core.rmem_max = 163840
+net.core.wmem_default = 524288
+net.core.wmem_max = 1048576
+net.ipv4.tcp_mem = 924  1232  1848
+net.ipv4.tcp_rmem = 4096  87380  325120
+net.ipv4.tcp_wmem = 4096  131072  393216
+Sstar_ehc_init version:20180309
+[USB] config miu select [70] [e8] [ef] [ef]
+[USB] enable miu lower bound address subtraction
+Fail to get pad(131075) form padmux !
+mhal module [vcodec] init
+[ven-m][sys] DrvVencProbe:228 vcodec prob sucess.
+[ven-m][jpeg] jpe driver probed
+mhal module [aio] init
+module [sys] init Dec 30 2024 15:25:43
+start:0x20000000,end:0x30000000,block_id:0,flag:1
+start:0x20000000,end:0x30000000,block_id:0,flag:0
+start:0x20000000,end:0x2ba00000,block_id:0,flag:1
+start:0x20000000,end:0x2ba00000,block_id:0,flag:0
+start:0x20000000,end:0x299c0000,block_id:0,flag:1
+mi_sys_mma_allocator_create success, heap_base_addr=20000000 length=3a800 
+mhal module [vif] init
+g_stSelSpinLock init.
+module [vif] init
+mhal module [sensor] init
+module [sensor] init
+mhal module [rgn] init
+module [rgn] init
+module [ao] init
+module [ai] init
+mhal module [isp] init
+IspSysGetRegBase = 0xFD000000
+isp0_cfg base = 0xFD260400
+dma_fbd0_cfg base = 0xFD26CB00
+ ~~~~~~~~~~~ Mload Inside init module ~~~~~~~~~~~~~~~
+module [isp] init
+module [ipu] init
+module [shadow] init
+mhal module [vpe] init
+module [scl] init
+module [venc] init Dec 30 2024 15:25:41
+mhal module [ldc] init
+module [ldc] init
+8<--- cut here ---
+Unable to handle kernel NULL pointer dereference at virtual address 00000009
+pgd = (ptrval)
+[00000009] *pgd=20c22835, *pte=00000000, *ppte=00000000
+Internal error: Oops: 817 [#1] PREEMPT THUMB2
+Modules linked in: drv_ms_cus_sc465sl_MIPI(PO+) mi(PO) sd_mod ntfs vfat msdos fat kdrv_sdmmc mmc_block mmc_core nfsv3 nfsv2 nfs lockd sunrpc grace nls_utf8 cifs libdes seqiv md4 usb_storage scsi_mod ehci_hcd phy_sstar_u2phy usbcore usb_common libarc4 nfs_ssc
+CPU: 0 PID: 449 Comm: insmod Tainted: P           O      5.10.61 #28
+Hardware name: SStar Soc (Flattened Device Tree)
+PC is at DrvSensorSPIAttach+0x2/0x28 [mi]
+LR is at DrvRegisterSensorDriverEx+0xcf/0x150 [mi]
+pc : [<bfa38e86>]    lr : [<bfa380bb>]    psr: 60000033
+sp : c0c73db0  ip : bfba8964  fp : bfcbe040
+r10: 00000000  r9 : c128a300  r8 : bfcbb9f5
+r7 : bfba8348  r6 : bfba9228  r5 : bfba8348  r4 : 00000000
+r3 : bfa38e61  r2 : bfba92e7  r1 : 00000001  r0 : 00000000
+Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA Thumb  Segment none
+Control: 50c5383d  Table: 20c64059  DAC: 00000051
+Process insmod (pid: 449, stack limit = 0x(ptrval))
+Stack: (0xc0c73db0 to 0xc0c74000)
+3da0:                                     00000000 c128a300 bfcbb9f5 bfcbdc48
+3dc0: bfcbe240 00000528 c0c73f34 bfcc1057 c0365000 bfcc1001 ffffe000 00000000
+3de0: 00000010 c00097ab 00000001 0040003e c0c72000 c0401f00 c0c62ec0 00002a9c
+3e00: 60000013 0040003e c989bc40 c0079a07 00000001 c989bc40 c0401f00 c0c72000
+3e20: 00000cc0 00002a9d 00000010 c007a27f c0401f00 c0318248 00000000 bfcbe040
+3e40: c1526ac0 c1526b80 c1526b00 c004c8e9 bfcbe040 0040003e 00000002 c1526ac0
+3e60: 00000002 c004ddc3 bfcbe04c 00007fff bfcbe040 c004bf6d 00000000 c1526ac8
+3e80: c01f4f6c bfcc4089 bfcc3000 ca55f478 000da9e8 ca55d000 00000000 00000000
+3ea0: 00000000 00000000 00000000 00000000 00000005 ffffffff c0c72000 00000000
+3ec0: 000b014f c0073d13 6e72656b 00006c65 00000000 00000000 00000000 00000000
+3ee0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+3f00: 00000000 c0318248 c004df83 0000432c 000ded24 ca56132c 000da9e8 00000000
+3f20: c0c72000 00000051 000b014f c004e01d c0008404 ca55f239 ca55f340 ca55d000
+3f40: 0000432c ca560ddc ca560c80 ca55ffd8 00004000 00004600 00002fe8 00004a9a
+3f60: 00000000 00000000 00000000 00002fd8 0000001f 00000020 00000019 00000000
+3f80: 00000014 00000000 00000000 bee18e84 bee18a98 00000080 c0008404 c0c72000
+3fa0: 00000000 c0008201 00000000 bee18e84 000da9f8 0000432c 000da9e8 00000006
+3fc0: 00000000 bee18e84 bee18a98 00000080 00000001 bee18e90 000da9e8 000b014f
+3fe0: 000d8790 bee18a98 00023e7d 0007dc18 20000030 000da9f8 00000000 00000000
+[<bfa38e86>] (DrvSensorSPIAttach [mi]) from [<bfa380bb>] (DrvRegisterSensorDriverEx+0xcf/0x150 [mi])
+[<bfa380bb>] (DrvRegisterSensorDriverEx [mi]) from [<bfcc1057>] (init_module+0x57/0x1000 [drv_ms_cus_sc465sl_MIPI])
+[<bfcc1057>] (init_module [drv_ms_cus_sc465sl_MIPI]) from [<c00097ab>] (do_one_initcall+0x43/0x110)
+[<c00097ab>] (do_one_initcall) from [<c004c8e9>] (do_init_module+0x3d/0x148)
+[<c004c8e9>] (do_init_module) from [<c004ddc3>] (load_module+0x1337/0x14c8)
+[<c004ddc3>] (load_module) from [<c004e01d>] (sys_init_module+0xc9/0xca)
+[<c004e01d>] (sys_init_module) from [<c0008201>] (ret_fast_syscall+0x1/0x64)
+Exception stack(0xc0c73fa8 to 0xc0c73ff0)
+3fa0:                   00000000 bee18e84 000da9f8 0000432c 000da9e8 00000006
+3fc0: 00000000 bee18e84 bee18a98 00000080 00000001 bee18e90 000da9e8 000b014f
+3fe0: 000d8790 bee18a98 00023e7d 0007dc18
+Code: 2000 f000 bc24 4b05 (6088) 2000 
+---[ end trace 23dfdee9e3b0ad82 ]---
+Segmentation fault

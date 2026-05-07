@@ -1,0 +1,12 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"alarmName":	"HDIPC",
+	"alarmName_Property":	{
+		"type":	"string",
+		"mode":	"rw"
+	}
+}

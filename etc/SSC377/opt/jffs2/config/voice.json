@@ -1,0 +1,288 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"voice":	{
+		"num":	1,
+		"num_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	1,
+			"max":	10,
+			"def":	1
+		},
+		"list":	[{
+				"index":	1,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"123456789",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"custom",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	1,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	true,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	true
+				}
+			}, {
+				"index":	2,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}, {
+				"index":	3,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}, {
+				"index":	4,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}, {
+				"index":	5,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}, {
+				"index":	6,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}, {
+				"index":	7,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}, {
+				"index":	8,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}, {
+				"index":	9,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}, {
+				"index":	10,
+				"index_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"id":	"",
+				"id_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"name":	"",
+				"name_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"type":	2,
+				"type_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"inuse":	false,
+				"inuse_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				}
+			}]
+	}
+}

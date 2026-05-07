@@ -1,0 +1,12 @@
+{
+	"supVideo":	17,
+	"supAudio":	17,
+	"supMaxChannel":	17,
+	"supEncode":	17,
+	"supNetXsdk":	17,
+	"supNetP2P":	17,
+	"supNetRJ45":	17,
+	"supNetWiFiStation":	17,
+	"supNetWiFiAP":	17,
+	"supNetWiFiRepeater":	17
+}

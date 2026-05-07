@@ -1,0 +1,618 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"Ipadaptive":	"static",
+	"Ipadaptive_Property":	{
+		"type":	"string",
+		"mode":	"rw",
+		"opt":	["static", "dynamic"]
+	},
+	"IpaddrType":	"IPV4",
+	"IpaddrType_Property":	{
+		"type":	"string",
+		"mode":	"ro",
+		"opt":	["IPV4", "IPV6"],
+		"def":	"IPV4"
+	},
+	"DateTime":	{
+		"enableUtc":	true,
+		"enableUtc_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"enableDst":	false,
+		"enableDst_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"timeSec":	"1773805522",
+		"TimeSec_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"timeZone":	800,
+		"timeZone_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"def":	800
+		}
+	},
+	"WiredEthernet":	[{
+			"wiredId":	1,
+			"wiredId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"wiredEnable":	true,
+			"wiredEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"wiredDhcp":	false,
+			"wiredDhcp_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"wiredIpadapt":	false,
+			"wiredIpadapt_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"wiredAllNetConnect":	false,
+			"wiredAllNetConnect_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"wiredDevice":	"eth0",
+			"wiredDevice_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"wiredMtu":	1500,
+			"wiredMtu_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[1024, 1500, 2500],
+				"def":	1500
+			},
+			"wiredIpaddr":	"192.168.3.33",
+			"wiredIpaddr_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"192.168.1.188"
+			},
+			"wiredIpmask":	"255.255.0.0",
+			"wiredIpmask_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"255.255.255.0"
+			},
+			"wiredIpgatway":	"192.168.1.1",
+			"wiredIpgatway_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"192.168.1.1"
+			}
+		}, {
+			"wiredId":	2,
+			"wiredId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"wiredEnable":	true,
+			"wiredEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"wiredDhcp":	true,
+			"wiredDhcp_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"wiredIpadapt":	false,
+			"wiredIpadapt_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"wiredDevice":	"eth1",
+			"wiredDevice_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"wiredMtu":	1500,
+			"wiredMtu_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[1024, 1500, 2500],
+				"def":	1500
+			},
+			"wiredIpaddr":	"192.168.18.107",
+			"wiredIpaddr_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"wiredIpmask":	"255.255.255.0",
+			"wiredIpmask_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"wiredIpgatway":	"192.168.18.1",
+			"wiredIpgatway_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			}
+		}],
+	"WifiEthernet":	[{
+			"wifiId":	1,
+			"wifiId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"wifiEnable":	false,
+			"wifiEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"wifiMode":	"accessPoint",
+			"wifiMode_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["none", "accessPoint", "stationMode"],
+				"def":	"accessPoint"
+			},
+			"stationMode":	{
+				"wifiDevice":	"wlan0",
+				"wifiDevice_Property":	{
+					"type":	"string",
+					"mode":	"ro",
+					"def":	"wlan0"
+				},
+				"wifiStaBssId":	"28:2c:b2:19:e5:8e",
+				"wifiStaBssId_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"28:2c:b2:19:e5:8e"
+				},
+				"wifiStaEssId":	"WiFi-2.4G",
+				"wifiStaEssId_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"WiFi-2.4G"
+				},
+				"wifiStaPsk":	"88888888",
+				"wifiStaPsk_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"88888888"
+				},
+				"wifiStaMode":	"802.11bgn mixed",
+				"wifiStaMode_Property":	{
+					"type":	"string",
+					"mode":	"ro",
+					"def":	"802.11bgn mixed"
+				},
+				"wifiStaDhcp":	true,
+				"wifiStaDhcp_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	true
+				},
+				"wifiStaIpaddr":	"192.168.18.107",
+				"wifiStaIpaddr_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"192.168.18.107"
+				},
+				"wifiStaIpmask":	"255.255.255.0",
+				"wifiStaIpmask_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"255.255.255.0"
+				},
+				"wifiStaIpgateway":	"192.168.18.1",
+				"wifiStaIpgateway_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"192.168.18.1"
+				}
+			},
+			"accessPointMode":	{
+				"wifiDevice":	"wlan1",
+				"wifiDevice_Property":	{
+					"type":	"string",
+					"mode":	"ro",
+					"def":	"wlan1"
+				},
+				"wifiApBssId":	"Smart_IP_Camera",
+				"wifiApBssId_Property":	{
+					"type":	"string",
+					"mode":	"ro",
+					"def":	"Smart_IP_Camera"
+				},
+				"wifiApEssId":	"Smart_IP_Camera",
+				"wifiApEssId_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"Smart_IP_Camera"
+				},
+				"wifiApPsk":	"88888888",
+				"wifiApPsk_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"88888888"
+				},
+				"wifiApMode":	"802.11bgn",
+				"wifiApMode_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"opt":	["802.11b", "802.11g", "802.11n", "802.11bg", "802.11bgn"],
+					"def":	"802.11bgn"
+				},
+				"wifiApMode80211nChn":	"Auto",
+				"wifiApMode80211nChn_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"opt":	["Auto", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
+					"def":	"Auto"
+				},
+				"wifiWpaMode":	"WPA2_PSK",
+				"wifiWpaMode_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"opt":	["WPA_PSK", "WPA2_PSK"],
+					"def":	"WPA2_PSK"
+				},
+				"wifiApDhcp":	true,
+				"wifiApDhcp_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	true
+				},
+				"wifiApIpaddr":	"192.168.5.188",
+				"wifiApIpaddr_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"192.168.5.188"
+				},
+				"wifiApIpmask":	"255.255.255.0",
+				"wifiApIpmask_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"255.255.255.0"
+				},
+				"wifiApIpgateway":	"192.168.5.1",
+				"wifiApIpgateway_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"192.168.5.1"
+				}
+			},
+			"wifiDns":	"4.2.2.2",
+			"wifiDns_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"4.2.2.2"
+			}
+		}],
+	"Ntp":	{
+		"ntpEnable":	false,
+		"ntpEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"ntpServer":	"time.windows.com",
+		"ntpServer_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"ntpPort":	123,
+		"ntpPort_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"ntpInterval":	2,
+		"ntpInterval_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		}
+	},
+	"Dns":	{
+		"dnsEnable":	true,
+		"dnsEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"dnsServerip1":	"8.8.8.8",
+		"dnsServerip1_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"dnsServerip2":	"223.5.5.5",
+		"dnsServerip2_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		}
+	},
+	"Ddns":	{
+		"ddnsEnable":	false,
+		"ddnsEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"ro"
+		},
+		"ddnsHost":	"",
+		"ddnsHost_Property":	{
+			"type":	"string",
+			"mode":	"ro"
+		}
+	},
+	"Email":	{
+		"emailAccount":	"",
+		"emailAccount_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"emailpassword":	"",
+		"emailpassword_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"emailSenderName":	"",
+		"emailSenderName_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"emailSenderAddr":	"",
+		"emailSenderAddr_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"smtpServer":	"",
+		"smtpServer_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"smtpAttachment":	false,
+		"smtpAttachment_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"smtpServerVerify":	false,
+		"smtpServerVerify_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"smtpSslServerVerify":	false,
+		"smtpSslServerVerify_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"smtpServerPort":	0,
+		"smtpServerPort_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"smtpReceipter":	[{
+				"receId":	1,
+				"receipter_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"receName":	"",
+				"receName_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"receAddress":	"",
+				"receAddress_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}, {
+				"receId":	2,
+				"receipter_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"receName":	"",
+				"receName_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				},
+				"receAddress":	"",
+				"receAddress_Property":	{
+					"type":	"string",
+					"mode":	"rw"
+				}
+			}]
+	},
+	"Pppoe":	{
+		"pppoeEnable":	false,
+		"pppoeEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"pppoeUsername":	"",
+		"pppoeUsername_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"pppoePassword":	"",
+		"pppoePassword_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		}
+	},
+	"Gb28181":	{
+		"gb28181Enable":	false,
+		"gb28181Enable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"gb28181ServerHost":	"192.168.1.245",
+		"gb28181ServerHost_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"gb28181ServerPort":	5060,
+		"gb28181ServerPort_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"gb28181ServerID":	"34020000002000000001",
+		"gb28181ServerID_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"gb28181ServerName":	"3402000000",
+		"gb28181ServerName_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"gb28181Expires":	86400,
+		"gb28181Expires_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"gb28181KeepAlive":	60,
+		"gb28181KeepAlive_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"gb28181KeepAliveNum":	5,
+		"gb28181KeepAliveNum_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"gb28181DevName":	"34020000001310000001",
+		"gb28181DevName_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"gb28181DevID":	"34020000001310000001",
+		"gb28181DevID_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"gb28181Passwd":	"12345678",
+		"gb28181Passwd_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"gb28181DevPort":	5060,
+		"gb28181DevPort_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"gb28181StreamIdx":	0,
+		"gb28181StreamIdx_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"gb28181VideoID":	"34020000001320000001",
+		"gb28181VideoID_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"gb28181AudioID":	"",
+		"gb28181AudioID_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"gb28181AlarmID":	"",
+		"gb28181AlarmID_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		}
+	},
+	"Rtmp":	{
+		"Enable":	false,
+		"Enable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	false
+		},
+		"StreamType":	1,
+		"StreamType_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"def":	0
+		},
+		"ServerHost":	"47.56.150.14",
+		"ServerHost_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	""
+		},
+		"ServerPort":	1935,
+		"ServerPort_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"def":	1935
+		},
+		"AppName":	"live",
+		"AppName_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	"live"
+		},
+		"StreamID":	"test",
+		"StreamID_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	"test"
+		}
+	},
+	"Ftp":	{
+		"Enable":	false,
+		"Enable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	false
+		},
+		"ServerPort":	21,
+		"ServerPort_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"def":	21
+		},
+		"ServerHost":	"",
+		"ServerHost_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	""
+		},
+		"ServerPath":	"",
+		"ServerPath_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	""
+		},
+		"Username":	"",
+		"Username_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	""
+		},
+		"Password":	"",
+		"Password_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	""
+		}
+	},
+	"4gEthernet":	{
+		"4gEnable":	true,
+		"4gEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		}
+	}
+}

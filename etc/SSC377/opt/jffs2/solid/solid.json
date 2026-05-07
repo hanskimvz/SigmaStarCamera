@@ -1,0 +1,486 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"Solid":	{
+		"solidLightMode":	1,
+		"solidLightMode_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"solidMirrorHorEnable":	false,
+		"solidMirrorHorEnable_Property":	{
+			"type":	"bool",
+			"mode":	"rw"
+		},
+		"solidMirrorVerEnable":	false,
+		"solidMirrorVerEnable_Property":	{
+			"type":	"bool",
+			"mode":	"rw"
+		}
+	},
+	"Jt808":	{
+		"Enable":	false,
+		"Enable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"ServerHost":	"192.168.1.234",
+		"ServerHost_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"ServerPort":	6608,
+		"ServerPort_Property":	{
+			"type":	"integer",
+			"mode":	"rw"
+		},
+		"ManufacturerID":	"12345",
+		"ManufacturerID_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"ModelID":	"013524555245",
+		"ModelID_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"TerminalID":	"013524555245",
+		"TerminalID_Property":	{
+			"type":	"string",
+			"mode":	"rw"
+		},
+		"Param":	{
+			"ID0001":	5,
+			"ID0001_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0002":	5,
+			"ID0002_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0003":	3,
+			"ID0003_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0004":	3,
+			"ID0004_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0005":	5,
+			"ID0005_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0006":	3,
+			"ID0006_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0007":	5,
+			"ID0007_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0010":	"CMNET",
+			"ID0010_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0011":	"",
+			"ID0011_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0012":	"",
+			"ID0012_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0013":	"60.28.50.210",
+			"ID0013_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0014":	"CMNET",
+			"ID0014_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0015":	"",
+			"ID0015_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0016":	"",
+			"ID0016_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0017":	"www.google.com",
+			"ID0017_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0018":	9131,
+			"ID0018_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0019":	5678,
+			"ID0019_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID001A":	"www.google.com",
+			"ID001A_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID001B":	9901,
+			"ID001B_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID001C":	8875,
+			"ID001C_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID001D":	"www.google.com",
+			"ID001D_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0020":	0,
+			"ID0020_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0021":	1,
+			"ID0021_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0022":	30,
+			"ID0022_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0027":	120,
+			"ID0027_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0028":	5,
+			"ID0028_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0029":	30,
+			"ID0029_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID002C":	500,
+			"ID002C_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID002D":	1000,
+			"ID002D_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID002E":	1000,
+			"ID002E_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID002F":	100,
+			"ID002F_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0030":	270,
+			"ID0030_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0031":	500,
+			"ID0031_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0040":	"1008611",
+			"ID0040_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0041":	"",
+			"ID0041_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0042":	"",
+			"ID0042_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0043":	"",
+			"ID0043_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0044":	"",
+			"ID0044_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0045":	5,
+			"ID0045_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0046":	3,
+			"ID0046_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0047":	3,
+			"ID0047_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0048":	"",
+			"ID0048_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0049":	"",
+			"ID0049_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0050":	5,
+			"ID0050_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0051":	3,
+			"ID0051_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0052":	5,
+			"ID0052_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0053":	3,
+			"ID0053_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0054":	5,
+			"ID0054_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0055":	3,
+			"ID0055_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0056":	5,
+			"ID0056_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0057":	3,
+			"ID0057_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0058":	5,
+			"ID0058_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0059":	3,
+			"ID0059_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID005A":	5,
+			"ID005A_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID005B":	900,
+			"ID005B_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID005C":	90,
+			"ID005C_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID005D":	8202,
+			"ID005D_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID005E":	30,
+			"ID005E_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0064":	0,
+			"ID0064_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0065":	0,
+			"ID0065_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0070":	3,
+			"ID0070_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0071":	5,
+			"ID0071_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0072":	3,
+			"ID0072_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0073":	5,
+			"ID0073_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0074":	3,
+			"ID0074_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0080":	5,
+			"ID0080_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0081":	3,
+			"ID0081_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0082":	5,
+			"ID0082_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0083":	"O-00001",
+			"ID0083_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"ID0084":	1,
+			"ID0084_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0090":	15,
+			"ID0090_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0091":	1,
+			"ID0091_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0092":	1,
+			"ID0092_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0093":	1,
+			"ID0093_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0094":	1,
+			"ID0094_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0095":	1,
+			"ID0095_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0100":	0,
+			"ID0100_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0101":	0,
+			"ID0101_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0102":	0,
+			"ID0102_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0103":	0,
+			"ID0103_Property":	{
+				"type":	"integer",
+				"mode":	"rw"
+			},
+			"ID0110":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0111":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0112":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0113":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0114":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0115":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0116":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0117":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0118":	[0, 0, 0, 0, 0, 0, 0, 0],
+			"ID0119":	[0, 0, 0, 0, 0, 0, 0, 0]
+		}
+	},
+	"Gb28181":	{
+		"Enable":	false,
+		"ServerHost":	"192.168.1.245",
+		"ServerPort":	5060,
+		"ServerID":	"34020000002000000001",
+		"ServerName":	"3402000000",
+		"Expires":	86400,
+		"KeepAlive":	60,
+		"KeepAliveNum":	5,
+		"DevName":	"34020000001310000001",
+		"DevID":	"34020000001310000001",
+		"Passwd":	"12345678",
+		"DevPort":	5060,
+		"StreamIdx":	0,
+		"VideoID":	"34020000001320000001",
+		"AudioID":	"",
+		"AlarmID":	""
+	}
+}

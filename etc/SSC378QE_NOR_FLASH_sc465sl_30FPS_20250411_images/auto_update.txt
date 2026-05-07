@@ -1,0 +1,12 @@
+# <- this is for comment / total file size must be less than 4KB
+estar scripts/[[set_partition.es
+estar scripts/[[boot.es
+estar scripts/[[kernel.es
+estar scripts/[[rootfs.es
+estar scripts/[[miservice.es
+estar scripts/[[customer.es
+estar scripts/set_config
+saveenv
+printenv
+reset
+% <- this is end of file symbol

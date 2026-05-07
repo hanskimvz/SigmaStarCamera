@@ -1,0 +1,31 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"deviceName":	"juan",
+	"deviceName_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"deviceKey":	"juan",
+	"deviceKey_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"PromptSound":	{
+		"prompEnable":	true,
+		"prompEnable_Property":	{
+			"type":	"bool",
+			"mode":	"ro"
+		},
+		"prompType":	"chinese",
+		"prompType_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"opt":	["chinese", "english", "german", "russian", "korean", "spanish", "portuguese"],
+			"def":	"chinese"
+		}
+	}
+}

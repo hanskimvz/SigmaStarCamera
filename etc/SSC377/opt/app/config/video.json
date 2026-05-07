@@ -1,0 +1,1800 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"debug":	false,
+	"debug_Property":	{
+		"type":	"boolean",
+		"mode":	"rw"
+	},
+	"VideoEncode":	[{
+			"encodeId":	1,
+			"encodeId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"encodeEnable":	true,
+			"encodeEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"encodeStreamType":	"main",
+			"encodeStreamType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["sub", "main"],
+				"def":	"main"
+			},
+			"encodeProfile":	"main",
+			"encodeProfile_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["base", "main", "high"],
+				"def":	"high"
+			},
+			"encodetype":	"H265",
+			"encodetype_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["H264", "H264+", "H265", "H265+"],
+				"def":	"H265"
+			},
+			"encodeCtrlmode":	"vbr",
+			"encodeCtrlmode_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["cbr", "vbr", "cvbr", "avbr"],
+				"def":	"vbr"
+			},
+			"encodeWidth":	2688,
+			"encodeWidth_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[1280, 1280, 1920, 2304, 2560, 2688, 2880],
+				"def":	2688
+			},
+			"encodeHeight":	1520,
+			"encodeHeight_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[720, 960, 1080, 1296, 1440, 1520, 1620],
+				"def":	1520
+			},
+			"encodeBitrate":	3072,
+			"encodeBitrate_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	512,
+				"max":	8192,
+				"def":	3072
+			},
+			"encodeQuality":	2,
+			"encodeQuality_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	4,
+				"def":	2
+			},
+			"encodeFramerate":	25,
+			"encodeFramerate_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	5,
+				"max":	30,
+				"def":	25
+			},
+			"encodeFramegop":	50,
+			"encodeFramegop_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	10,
+				"max":	120,
+				"def":	50
+			}
+		}, {
+			"encodeId":	2,
+			"encodeId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"encodeEnable":	true,
+			"encodeEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"encodeStreamType":	"sub",
+			"encodeStreamType_Property":	{
+				"type":	"string",
+				"mode":	"ro",
+				"opt":	["sub", "main"],
+				"def":	"sub"
+			},
+			"encodeProfile":	"main",
+			"encodeProfile_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["base", "main", "high"],
+				"def":	"high"
+			},
+			"encodetype":	"H265",
+			"encodetype_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["H264", "H264+", "H265", "H265+"],
+				"def":	"H265"
+			},
+			"encodeCtrlmode":	"vbr",
+			"encodeCtrlmode_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["cbr", "vbr", "cvbr", "avbr"],
+				"def":	"vbr"
+			},
+			"encodeWidth":	640,
+			"encodeWidth_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[320, 352, 640, 640, 720],
+				"def":	640
+			},
+			"encodeHeight":	480,
+			"encodeHeight_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[240, 288, 360, 480, 576],
+				"def":	480
+			},
+			"encodeBitrate":	512,
+			"encodeBitrate_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	128,
+				"max":	1024,
+				"def":	512
+			},
+			"encodeQuality":	2,
+			"encodeQuality_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	4,
+				"def":	2
+			},
+			"encodeFramerate":	25,
+			"encodeFramerate_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	5,
+				"max":	30,
+				"def":	25
+			},
+			"encodeFramegop":	50,
+			"encodeFramegop_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	10,
+				"max":	120,
+				"def":	50
+			}
+		}],
+	"VideoMaskdet":	{
+		"maskEnable":	true,
+		"maskEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"maskAlarm":	false,
+		"maskAlarm_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	false
+		},
+		"maskAlarmlevel":	3,
+		"maskAlarmlevel_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	1,
+			"max":	5,
+			"def":	3
+		},
+		"maskSensitivity":	60,
+		"maskSensitivity_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	60
+		},
+		"MaskAlarmTime":	[{
+				"timeId":	1,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}, {
+				"timeId":	2,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}, {
+				"timeId":	3,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}, {
+				"timeId":	4,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}],
+		"HandleType":	{
+			"handleMode":	1,
+			"handleMode_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"def":	1
+			},
+			"handleSendeMail":	false,
+			"handleSendeMail_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleAlarmOut":	false,
+			"handleAlarmOut_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleAudioOut":	false,
+			"handleAudioOut_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleLightAlarm":	false,
+			"handleLightAlarm_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleSanpshot":	false,
+			"handleSanpshot_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleRecord":	false,
+			"handleRecord_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"IoOutput":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"Pin":	13,
+				"Pin_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[13],
+					"def":	13
+				}
+			},
+			"Snapshot":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"Nums":	1,
+				"Nums_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[1, 2, 3, 4, 5, 6, 7, 8],
+					"def":	1
+				}
+			},
+			"Record":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"StreamType":	0,
+				"StreamType_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[0, 1],
+					"def":	0
+				},
+				"PreDuration":	0,
+				"PreDuration_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[0, 1, 2, 3, 4, 5, 6],
+					"def":	0
+				},
+				"Duration":	10,
+				"Duration_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[10, 30, 60, 120, 240, 360],
+					"def":	10
+				}
+			}
+		},
+		"maskXpost":	"00.00",
+		"maskXpost_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	"00.00"
+		},
+		"maskYpost":	"00.00",
+		"maskYpost_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	"00.00"
+		},
+		"maskWidth":	"100.00",
+		"maskWidth_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	"100.00"
+		},
+		"maskHeight":	"100.00",
+		"maskHeight_Property":	{
+			"type":	"string",
+			"mode":	"rw",
+			"def":	"100.00"
+		},
+		"maskColor":	0,
+		"maskColor_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	65535,
+			"def":	0
+		}
+	},
+	"VideoMotdet":	{
+		"motdetEnable":	true,
+		"motdetEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"motdetAlarm":	false,
+		"motdetAlarm_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	false
+		},
+		"motdetAlarmlevel":	100,
+		"motdetAlarmlevel_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	100
+		},
+		"motdetRecord":	true,
+		"motdetRecord_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"MotdetAlarmTime":	[{
+				"timeId":	1,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}, {
+				"timeId":	2,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}, {
+				"timeId":	3,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}, {
+				"timeId":	4,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}],
+		"HandleType":	{
+			"handleEnable":	true,
+			"handleEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"handleSendeMail":	false,
+			"handleSendeMail_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleAlarmOut":	false,
+			"handleAlarmOut_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleAudioOut":	false,
+			"handleAudioOut_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleLightAlarm":	false,
+			"handleLightAlarm_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleSanpshot":	false,
+			"handleSanpshot_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleRecord":	false,
+			"handleRecord_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"IoOutput":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"Pin":	13,
+				"Pin_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[13],
+					"def":	13
+				}
+			},
+			"Snapshot":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"Nums":	1,
+				"Nums_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[1, 2, 3, 4, 5, 6, 7, 8],
+					"def":	1
+				}
+			},
+			"Record":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"StreamType":	0,
+				"StreamType_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[0, 1],
+					"def":	0
+				},
+				"PreDuration":	0,
+				"PreDuration_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[0, 1, 2, 3, 4, 5, 6],
+					"def":	0
+				},
+				"Duration":	10,
+				"Duration_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[10, 30, 60, 120, 240, 360],
+					"def":	10
+				}
+			}
+		},
+		"DayConfig":	{
+			"dayEnable":	false,
+			"dayEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"daySensitivity":	50,
+			"daySensitivity_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	50
+			},
+			"dayThreshold":	50,
+			"dayThreshold_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	50
+			}
+		},
+		"NightConfig":	{
+			"nightEnable":	false,
+			"nightEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"nightSensitivity":	60,
+			"nightSensitivity_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	60
+			},
+			"nightThreshold":	60,
+			"nightThreshold_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	0,
+				"max":	100,
+				"def":	60
+			},
+			"nightValidRange":	{
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}
+		},
+		"MaskArea":	{
+			"areaWidth":	22,
+			"areaWidth_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	32,
+				"def":	22
+			},
+			"areaHeight":	18,
+			"areaHeight_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"min":	1,
+				"max":	24,
+				"def":	18
+			},
+			"areaMb":	"0P8A8A==",
+			"areaMb_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"0P8A8A=="
+			}
+		}
+	},
+	"VideoLost":	{
+		"lostVideo":	false,
+		"lostVideo_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"lostNetwork":	false,
+		"lostNetwork_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"lostAudio":	false,
+		"lostAudio_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"lostAlarm":	false,
+		"lostAlarm_Property":	{
+			"type":	"boolean",
+			"mode":	"rw"
+		},
+		"HandleType":	{
+			"handleEnable":	true,
+			"handleEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"handleSendeMail":	false,
+			"handleSendeMail_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"handleAlarmOut":	false,
+			"handleAlarmOut_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"handleAudioOut":	false,
+			"handleAudioOut_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"handleSanpshot":	false,
+			"handleSanpshot_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"handleRecord":	false,
+			"handleRecord_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			}
+		}
+	},
+	"VideoOsd":	{
+		"OsdDateTime":	{
+			"dateDisp":	true,
+			"dateDisp_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"dateHourMode":	24,
+			"dateHourMode_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[12, 24],
+				"def":	24
+			},
+			"dateLanguage":	"chinese",
+			"dateLanguage_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["spanish", "english", "chinese"],
+				"def":	"chinese"
+			},
+			"dateDispTime":	true,
+			"dateDispTime_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"dateDispWeek":	true,
+			"dateDispWeek_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"dateDispDateFormat":	"YYYY/MM/DD",
+			"dateDispDateFormat_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["YYYY/MM/DD", "MM/DD/YYYY", "DD/MM/YYYY", "YYYY-MM-DD", "MM-DD-YYYY", "DD-MM-YYYY"],
+				"def":	"YYYY/MM/DD"
+			},
+			"dateDispHourFormat":	"HH:MM:SS",
+			"dateDispHourFormat_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"opt":	["HH-MM-SS", "HH/MM/SS", "HH:MM:SS"],
+				"def":	"HH:MM:SS"
+			},
+			"DateOsdAttr":	{
+				"osdAttributes":	"",
+				"osdAttributes_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"opt":	["transparent"],
+					"def":	"transparent"
+				},
+				"osdFontcolor":	65535,
+				"osdFontcolor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	65535
+				},
+				"osdBackcolor":	0,
+				"osdBackcolor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	0
+				},
+				"osdXpost":	"2.00",
+				"osdXpost_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"2.00"
+				},
+				"osdYpost":	"2.00",
+				"osdYpost_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"2.00"
+				}
+			}
+		},
+		"OsdChnName":	{
+			"textDisp":	true,
+			"textDisp_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	true
+			},
+			"textText":	"Custom Smart IPCAM",
+			"textText_Property":	{
+				"type":	"string",
+				"mode":	"rw",
+				"def":	"Custom Smart IPCAM"
+			},
+			"TextOsdAttr":	{
+				"osdAttributes":	"",
+				"osdAttributes_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"opt":	["transparent"],
+					"def":	"transparent"
+				},
+				"osdFontcolor":	65535,
+				"osdFontcolor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	65535
+				},
+				"osdBackcolor":	0,
+				"osdBackcolor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	0
+				},
+				"osdXpost":	"65.00",
+				"osdXpost_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"65.00"
+				},
+				"osdYpost":	"92.00",
+				"osdYpost_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"92.00"
+				}
+			}
+		},
+		"OsdText":	[{
+				"textId":	1,
+				"textId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"textDisp":	false,
+				"textDisp_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"textText":	"IPCAM",
+				"textText_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"IPCAM"
+				},
+				"TextOsdAttr":	{
+					"osdAttributes":	"",
+					"osdAttributes_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"opt":	["transparent"],
+						"def":	"transparent"
+					},
+					"osdFontcolor":	1,
+					"osdFontcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw",
+						"def":	1
+					},
+					"osdBackcolor":	0,
+					"osdBackcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw",
+						"def":	0
+					},
+					"osdXpost":	"65.00",
+					"osdXpost_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"def":	"65.00"
+					},
+					"osdYpost":	"2.00",
+					"osdYpost_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"def":	"2.00"
+					}
+				}
+			}, {
+				"textId":	2,
+				"textId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"textDisp":	false,
+				"textDisp_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"textText":	"IPCAM",
+				"textText_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"IPCAM"
+				},
+				"TextOsdAttr":	{
+					"osdAttributes":	"",
+					"osdAttributes_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"opt":	["transparent"],
+						"def":	"transparent"
+					},
+					"osdFontcolor":	1,
+					"osdFontcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw",
+						"def":	1
+					},
+					"osdBackcolor":	0,
+					"osdBackcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw",
+						"def":	0
+					},
+					"osdXpost":	"0.00",
+					"osdXpost_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"def":	"60.00"
+					},
+					"osdYpost":	"92.00",
+					"osdYpost_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"def":	"92.00"
+					}
+				}
+			}],
+		"OsdCover":	[{
+				"coverId":	1,
+				"coverId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"coverDisp":	false,
+				"coverDisp_Property":	{
+					"type":	"boolean",
+					"mode":	"rw"
+				},
+				"coverColor":	0,
+				"coverColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"coverOsdAttr":	{
+					"osdAttributes":	"",
+					"osdAttributes_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"opt":	["transparent"],
+						"def":	"transparent"
+					},
+					"osdFontcolor":	0,
+					"osdFontcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw"
+					},
+					"osdBackcolor":	0,
+					"osdBackcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw"
+					},
+					"osdXpost":	"0.00",
+					"osdXpost_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdYpost":	"0.00",
+					"osdYpost_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdWidth":	"0.00",
+					"osdWidth_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdHeight":	"0.00",
+					"osdHeight_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					}
+				}
+			}, {
+				"coverId":	2,
+				"coverId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"coverDisp":	false,
+				"coverDisp_Property":	{
+					"type":	"boolean",
+					"mode":	"rw"
+				},
+				"coverColor":	0,
+				"coverColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"coverOsdAttr":	{
+					"osdAttributes":	"",
+					"osdAttributes_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"opt":	["transparent"],
+						"def":	"transparent"
+					},
+					"osdFontcolor":	0,
+					"osdFontcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw"
+					},
+					"osdBackcolor":	0,
+					"osdBackcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw"
+					},
+					"osdXpost":	"0.00",
+					"osdXpost_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdYpost":	"0.00",
+					"osdYpost_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdWidth":	"0.00",
+					"osdWidth_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdHeight":	"0.00",
+					"osdHeight_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					}
+				}
+			}, {
+				"coverId":	3,
+				"coverId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"coverDisp":	false,
+				"coverDisp_Property":	{
+					"type":	"boolean",
+					"mode":	"rw"
+				},
+				"coverColor":	0,
+				"coverColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"coverOsdAttr":	{
+					"osdAttributes":	"",
+					"osdAttributes_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"opt":	["transparent"],
+						"def":	"transparent"
+					},
+					"osdFontcolor":	0,
+					"osdFontcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw"
+					},
+					"osdBackcolor":	0,
+					"osdBackcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw"
+					},
+					"osdXpost":	"0.00",
+					"osdXpost_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdYpost":	"0.00",
+					"osdYpost_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdWidth":	"0.00",
+					"osdWidth_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdHeight":	"0.00",
+					"osdHeight_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					}
+				}
+			}, {
+				"coverId":	4,
+				"coverId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"coverDisp":	false,
+				"coverDisp_Property":	{
+					"type":	"boolean",
+					"mode":	"rw"
+				},
+				"coverColor":	0,
+				"coverColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw"
+				},
+				"coverOsdAttr":	{
+					"osdAttributes":	"",
+					"osdAttributes_Property":	{
+						"type":	"string",
+						"mode":	"rw",
+						"opt":	["transparent"],
+						"def":	"transparent"
+					},
+					"osdFontcolor":	0,
+					"osdFontcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw"
+					},
+					"osdBackcolor":	0,
+					"osdBackcolor_Property":	{
+						"type":	"integer",
+						"mode":	"rw"
+					},
+					"osdXpost":	"0.00",
+					"osdXpost_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdYpost":	"0.00",
+					"osdYpost_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdWidth":	"0.00",
+					"osdWidth_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					},
+					"osdHeight":	"0.00",
+					"osdHeight_Property":	{
+						"type":	"string",
+						"mode":	"rw"
+					}
+				}
+			}],
+		"OsdAlarmRoi":	[{
+				"almroiId":	1,
+				"almroiId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"almroiEnable":	true,
+				"almroiEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	true
+				},
+				"almroiNumber":	0,
+				"almroiNumber_Property":	{
+					"type":	"integer",
+					"mode":	"ro",
+					"def":	0
+				},
+				"almroiDefColor":	65280,
+				"almroiDefColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	65280
+				},
+				"almroiAlmColor":	16711680,
+				"almroiAlmColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	16711680
+				},
+				"almroiDotNum":	4,
+				"almroiDotNum_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	4
+				},
+				"almroiCoordinate":	"(0.00,0.00),(100.00,0.00),(100.00,100.00),(0.00,100.00)",
+				"almroiCoordinate_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"(0.00,0.00),(100.00,0.00),(100.00,100.00),(0.00,100.00)"
+				}
+			}, {
+				"almroiId":	2,
+				"almroiId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"almroiEnable":	false,
+				"almroiEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"almroiNumber":	1,
+				"almroiNumber_Property":	{
+					"type":	"integer",
+					"mode":	"ro",
+					"def":	1
+				},
+				"almroiDefColor":	65280,
+				"almroiDefColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	65280
+				},
+				"almroiAlmColor":	16711680,
+				"almroiAlmColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	16711680
+				},
+				"almroiDotNum":	0,
+				"almroiDotNum_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	0
+				},
+				"almroiCoordinate":	"",
+				"almroiCoordinate_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				}
+			}, {
+				"almroiId":	3,
+				"almroiId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"almroiEnable":	false,
+				"almroiEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"almroiNumber":	2,
+				"almroiNumber_Property":	{
+					"type":	"integer",
+					"mode":	"ro",
+					"def":	2
+				},
+				"almroiDefColor":	65280,
+				"almroiDefColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	65280
+				},
+				"almroiAlmColor":	16711680,
+				"almroiAlmColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	16711680
+				},
+				"almroiDotNum":	0,
+				"almroiDotNum_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	0
+				},
+				"almroiCoordinate":	"",
+				"almroiCoordinate_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				}
+			}, {
+				"almroiId":	4,
+				"almroiId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"almroiEnable":	false,
+				"almroiEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"almroiNumber":	3,
+				"almroiNumber_Property":	{
+					"type":	"integer",
+					"mode":	"ro",
+					"def":	3
+				},
+				"almroiDefColor":	65280,
+				"almroiDefColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	65280
+				},
+				"almroiAlmColor":	16711680,
+				"almroiAlmColor_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	16711680
+				},
+				"almroiDotNum":	0,
+				"almroiDotNum_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"def":	0
+				},
+				"almroiCoordinate":	"",
+				"almroiCoordinate_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				}
+			}]
+	},
+	"Videoivp":	{
+		"ivpChn":	1,
+		"ivpChn_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"def":	1
+		},
+		"ivpEnable":	true,
+		"ivpEnable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"ivpAlarmInteral":	30,
+		"ivpAlarmInteral_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"min":	0,
+			"max":	100,
+			"def":	30
+		},
+		"ivpAoAlarmOut":	true,
+		"ivpAoAlarmOut_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"ivpDaySensitivity":	50,
+		"ivpDaySensitivity_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"def":	50
+		},
+		"ivpNightSensitivity":	30,
+		"ivpNightSensitivity_Property":	{
+			"type":	"integer",
+			"mode":	"rw",
+			"def":	30
+		},
+		"ivpLowbitStream":	true,
+		"ivpLowbitStream_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"ivpFaceOverexp":	true,
+		"ivpFaceOverexp_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	true
+		},
+		"Exception":	{
+			"IoOutput":	{
+				"Enable":	true,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	true
+				},
+				"Pin":	13,
+				"Pin_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[13],
+					"def":	13
+				}
+			},
+			"Snapshot":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"Nums":	1,
+				"Nums_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[1, 2, 3, 4, 5, 6, 7, 8],
+					"def":	1
+				}
+			},
+			"Record":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"StreamType":	0,
+				"StreamType_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[0, 1],
+					"def":	0
+				},
+				"PreDuration":	0,
+				"PreDuration_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[0, 1, 2, 3, 4, 5, 6],
+					"def":	0
+				},
+				"Duration":	10,
+				"Duration_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[10, 30, 60, 120, 240, 360],
+					"def":	10
+				}
+			}
+		}
+	},
+	"AlarmIn":	{
+		"Enable":	false,
+		"Enable_Property":	{
+			"type":	"boolean",
+			"mode":	"rw",
+			"def":	false
+		},
+		"AlarmTime":	[{
+				"timeId":	1,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	true,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	true
+				},
+				"timeWeekday":	"0,1,2,3,4,5,6",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"0,1,2,3,4,5,6"
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"23:59:59",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"23:59:59"
+				}
+			}, {
+				"timeId":	2,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}, {
+				"timeId":	3,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}, {
+				"timeId":	4,
+				"timeId_Property":	{
+					"type":	"integer",
+					"mode":	"ro"
+				},
+				"timeEnable":	false,
+				"timeEnable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"timeWeekday":	"",
+				"timeWeekday_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	""
+				},
+				"timeStart":	"00:00:00",
+				"timeStart_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				},
+				"timeEnd":	"00:00:00",
+				"timeEnd_Property":	{
+					"type":	"string",
+					"mode":	"rw",
+					"def":	"00:00:00"
+				}
+			}],
+		"Exception":	{
+			"handleAudioOut":	false,
+			"handleAudioOut_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"handleLightAlarm":	false,
+			"handleLightAlarm_Property":	{
+				"type":	"boolean",
+				"mode":	"rw",
+				"def":	false
+			},
+			"IoOutput":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"Pin":	13,
+				"Pin_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[13],
+					"def":	13
+				}
+			},
+			"Snapshot":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"Nums":	1,
+				"Nums_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[1, 2, 3, 4, 5, 6, 7, 8],
+					"def":	1
+				}
+			},
+			"Record":	{
+				"Enable":	false,
+				"Enable_Property":	{
+					"type":	"boolean",
+					"mode":	"rw",
+					"def":	false
+				},
+				"StreamType":	0,
+				"StreamType_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[0, 1],
+					"def":	0
+				},
+				"PreDuration":	0,
+				"PreDuration_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[0, 1, 2, 3, 4, 5, 6],
+					"def":	0
+				},
+				"Duration":	10,
+				"Duration_Property":	{
+					"type":	"integer",
+					"mode":	"rw",
+					"opt":	[10, 30, 60, 120, 240, 360],
+					"def":	10
+				}
+			}
+		}
+	}
+}

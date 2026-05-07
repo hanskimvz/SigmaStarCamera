@@ -1,0 +1,328 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"UserList":	[{
+			"userId":	1,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	true,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	true,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"admin",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"ro"
+			},
+			"userPassword":	"admin",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	2,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	2,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	3,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	4,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	5,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	6,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	7,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	8,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	9,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}, {
+			"userId":	10,
+			"userId_Property":	{
+				"type":	"integer",
+				"mode":	"ro"
+			},
+			"userEnable":	false,
+			"userEnable_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userActivity":	false,
+			"userActivity_Property":	{
+				"type":	"boolean",
+				"mode":	"rw"
+			},
+			"userName":	"",
+			"userName_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPassword":	"",
+			"userPassword_Property":	{
+				"type":	"string",
+				"mode":	"rw"
+			},
+			"userPriority":	0,
+			"userPriority_Property":	{
+				"type":	"integer",
+				"mode":	"rw",
+				"opt":	[0, 1, 2]
+			}
+		}]
+}

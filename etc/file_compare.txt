@@ -1,0 +1,113 @@
+### Reference board
+
+/ # ls -la /config/lib/libmi_iqserver.so /config/lib/libmi_isp.so
+-rwxrwxr-x    1 root     root         51796 Apr 11  2025 /config/lib/libmi_iqserver.so
+-rwxrwxr-x    1 root     root         82032 Apr 11  2025 /config/lib/libmi_isp.so
+/ # md5sum /config/lib/libmi_iqserver.so /config/lib/libmi_isp.so
+75a861e2b44fe5b9603340c3b2427cc9  /config/lib/libmi_iqserver.so
+d3744808bbbf580e682c644bf9c57485  /config/lib/libmi_isp.so
+/ # ls -la /config/iqfile/isp_api.xml
+-rwxrwxr-x    1 root     root        200058 Apr 11  2025 /config/iqfile/isp_api.xml
+/ # md5sum /config/iqfile/isp_api.xml
+ec6825cd0160489fc150d8319afecd76  /config/iqfile/isp_api.xml
+# 
+
+
+### Development board
+/ # ls -la /config/lib/libmi_iqserver.so /config/lib/libmi_isp.so
+-rw-r--r--    1 root     root         51796 Apr 27  2026 /config/lib/libmi_iqserver.so
+-rw-r--r--    1 root     root         94496 Apr 27  2026 /config/lib/libmi_isp.so
+/ # md5sum /config/lib/libmi_iqserver.so /config/lib/libmi_isp.so
+59b1a87ab50249bd2df3283390319b32  /config/lib/libmi_iqserver.so
+9bc3bf6d5e89ae1421a8ae637cd1487a  /config/lib/libmi_isp.so
+/ # ls -la /config/iqfile/isp_api.xml
+-rw-r--r--    1 root     root        209514 Apr 27  2026 /config/iqfile/isp_api.xml
+/ # md5sum /config/iqfile/isp_api.xml
+ab3de24d4e44062765db4136cbf10e95  /config/iqfile/isp_api.xml
+/ # 
+
+
+/customer/mi_demo # md5sum imx485_api.bin 
+fc59166627303e7779ba721b117307a0  imx485_api.bin
+/customer/mi_demo # 
+
+
+
+hanskim@HPC:~/SigmaStarCamera/test$ cd 5.10_dev/
+hanskim@HPC:~/SigmaStarCamera/test/5.10_dev$ for f in *.ko; do md5sum "$f"; done | sort
+039398a9568cf4a95fb436f946de54a2  ehci-hcd.ko
+072b21592e880deb50e0df6a7e4dad51  nfs_ssc.ko
+0818c63c2bf689c0e587c1d14d959fed  kdrv_sdmmc.ko
+0b7386c629b3606e7a0ae3fe5028353f  seqiv.ko
+0e768393fd76aa57c7dbc3a543adf6db  usbcore.ko
+175d52dca0df07c523254bfecb142893  mi_all.ko
+1a4faa33758df23895981724ce3d7223  mmc_block.ko
+43b3c620c2b6cd16195223d948804663  grace.ko
+498a85beae85db6cf02887c63ad34194  imx415_MIPI.ko
+530bc2d1f3e67a2c4fc374c89cccb6bf  msdos.ko
+55ec859636fed0d074a0d1a13ddcaf8a  nfsv3.ko
+66ea5ba02559b5a6eddb68f9508d4934  usb-common.ko
+66f3e30567b0ffbea4a76153b5086608  sc230ai_MIPI.ko
+6e21da3f00c9d570fe8fe2f53d2f4907  nfs.ko
+7171612812e85834d18143bcd468f6d9  nls_utf8.ko
+7d61e290e9e68f4e1920648bfd46f695  sd_mod.ko
+90e3ebd9ff08938679e09d6dee46b877  vfat.ko
+9b96fbe9f1ddd898b3d526aa15fab5df  fat.ko
+9d2df9f94f3f613f6a750f9d908f040d  mmc_core.ko
+9f39099983b7068cb461a57215144e9a  phy-sstar-u2phy.ko
+9f7600b3206724dfef7c7eb87977c877  cifs.ko
+a319428b4f5d6cbc41088d2a251af359  libarc4.ko
+b0ef6f5f4a2d8127903c9d2d67a4fb74  nfsv2.ko
+c9321e0da0e26025c568a0e22de5afc2  scsi_mod.ko
+caef997e7503621f963549036e68951f  sunrpc.ko
+cca4b5739d7aacccf4543856f9f2a51b  libdes.ko
+cff27e3d4338a0a56950b3efd14f24cd  md4.ko
+d2217709af9bf92b91d4053ddd47b2f1  usb-storage.ko
+d9252f259ddf00959b832ddd315092cb  sc465sl_MIPI.ko
+e72a2701505fdb2ad035bbab6f8fe53a  ntfs.ko
+ea01169a744c0df5a7951e218d78a8df  lockd.ko
+ef0da32a0983fd349f2bf266a4c57ecf  imx307_MIPI.ko
+hanskim@HPC:~/SigmaStarCamera/test/5.10_dev$ 
+hanskim@HPC:~/SigmaStarCamera/test/5.10_dev$ cd ../5.10_ref/
+hanskim@HPC:~/SigmaStarCamera/test/5.10_ref$ for f in *.ko; do md5sum "$f"; done | sort
+01171c31709ba4eb642cafdc911db681  scsi_mod.ko
+04a561aebd8f0d013e58d1834c6a1cbe  sc500ai_MIPI.ko
+1676585f3eba25a5962a8770248007be  usbcore.ko
+175d52dca0df07c523254bfecb142893  mi_all.ko
+1fce2bfd17ffbd7b1f860da2e9f80fe0  imx485_MIPI.ko
+24b230c289c9e28dc26a866c14dc0cdb  usb-storage.ko
+2bcfa97aa10ec56e6629507280cc6853  imx664_MIPI.ko
+35b17858ff7afe950f8acda7e9ca5456  mmc_core.ko
+360ec33a6d6b77b981503d2347ac3332  seqiv.ko
+5074bc3bca1372481339d779b9ddf5be  lockd.ko
+5c8155ba87aee143f54df06e15bc4677  sc835hai_MIPI.ko
+6189ca8498a26c0d1962453e395b0f85  imx307_MIPI_36M.ko
+62cd984bc900f7093935c49ede5977fc  imx678_MIPI.ko
+6b0fbdc11ec792c363069049385901c1  phy-sstar-u2phy.ko
+74791f266fd82de0b06cfd665e10133a  sc233HGS_MIPI.ko
+7616f8495486f69a198b0b24c5110d9c  ntfs.ko
+78403f4c057cc4c1ee7057be9af5b2cc  imx415_MIPI.ko
+7a27b97944fd9dfb31d9928b2c91b738  grace.ko
+84facf1c01214bfb786b303404ceb1b9  ehci-hcd.ko
+8774e61536d8e059e1179d572bce334c  nls_utf8.ko
+878a9d4cdd356521032d0ac56dccaa9d  sd_mod.ko
+94fd0c3681a397a664bea7daf24963cd  md4.ko
+9535c67b39b82fcb4e8ffe9cad411b80  libarc4.ko
+95514269ad83209e879932a40717d13a  firmware_class.ko
+97c491820ed38385a5cd3ef118b297a8  libdes.ko
+9d0e7dca1a4a646a57cffc03432f5861  nfs_ssc.ko
+b39ca32f4990ef366245aae35dec9cbc  mmc_block.ko
+b5ad057e3314776c885b2a49155031e0  usb-common.ko
+b7bbd7f8266deb65c5e31876202a222e  fat.ko
+c4cf40e68f6aaadce77078cc3dd35eaa  cifs.ko
+d1b9dc5a2cb05bbf8a1a727f76b776de  nfs.ko
+d3bcdc24c42981e7b92adce78c767af8  kdrv_sdmmc.ko
+d40ea6669501f53fc44d982dc0ca7c66  nfsv2.ko
+d9252f259ddf00959b832ddd315092cb  sc465sl_MIPI.ko
+da6306314c103513e08d55a81db91a07  imx307_MIPI_36M_60FPS.ko
+dd91c152d219b370cf304c88d58cbb0b  cfg80211.ko
+e0b31af81a9497b9ad46e8b18d961c45  vfat.ko
+e93cbcc7be063c7fe9cc15fe91830065  msdos.ko
+ee8211eb46259d08e130501151c3f99c  sunrpc.ko
+ef4be03242672e4b4f1928d4e61eb284  nfsv3.ko
+hanskim@HPC:~/SigmaStarCamera/test/5.10_ref$ 

@@ -1,0 +1,10 @@
+{
+	"PromptSound":	{
+		"Enable":	true,
+		"enType":	0
+	},
+	"ConvenientSetting":	{
+		"Enable":	false,
+		"enType":	0
+	}
+}

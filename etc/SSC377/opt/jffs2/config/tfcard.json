@@ -1,0 +1,83 @@
+{
+	"Version":	"1.1.0",
+	"Version_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"tfDebugMode":	"release",
+	"tfDebugMode_Property":	{
+		"type":	"string",
+		"mode":	"ro",
+		"opt":	["debug", "release"],
+		"def":	"release"
+	},
+	"tfRecCoverage":	true,
+	"tfRecCoverage_Property":	{
+		"type":	"bool",
+		"mode":	"rw"
+	},
+	"tfDevpath":	"/dev/mmcblk0p1",
+	"tfDevpath_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"tfMountPath":	"/media/sdcard",
+	"tfMountPath_Property":	{
+		"type":	"string",
+		"mode":	"ro"
+	},
+	"tfTotalspace":	4096,
+	"tfTotalspace_Property":	{
+		"type":	"integer",
+		"mode":	"rw"
+	},
+	"tfLeavespace":	4096,
+	"tfLeavespace_Property":	{
+		"type":	"integer",
+		"mode":	"rw"
+	},
+	"tfTimeRecord":	false,
+	"tfTimeRecord_Property":	{
+		"type":	"bool",
+		"mode":	"rw"
+	},
+	"tfScheduleRecord":	false,
+	"tfScheduleRecord_Property":	{
+		"type":	"bool",
+		"mode":	"rw"
+	},
+	"tfRecordMode":	3,
+	"tfRecordMode_Property":	{
+		"type":	"integer",
+		"mode":	"rw",
+		"opt":	[1, 2, 3],
+		"def":	3
+	},
+	"tfRecordQuality":	1,
+	"tfRecordQuality_Property":	{
+		"type":	"integer",
+		"mode":	"rw",
+		"opt":	[0, 1],
+		"def":	1
+	},
+	"tfMaxRecordTime":	5,
+	"tfMaxRecordTime_Property":	{
+		"type":	"integer",
+		"mode":	"rw",
+		"min":	1,
+		"max":	30
+	},
+	"tfRecordFormat":	0,
+	"tfRecordFormat_Property":	{
+		"type":	"integer",
+		"mode":	"rw",
+		"opt":	[0, 1],
+		"def":	0
+	},
+	"tfRecordAudio":	true,
+	"tfRecordAudio_Property":	{
+		"type":	"bool",
+		"mode":	"rw"
+	},
+	"ScheduleRecord":	[[[0, 86399], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]], [[0, 86399], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]], [[0, 86399], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]], [[0, 86399], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]], [[0, 86399], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]], [[0, 86399], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]], [[0, 86399], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]]
+}
