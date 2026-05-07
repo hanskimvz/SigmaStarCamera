@@ -1,0 +1,5199 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>SENSOR - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#revision-history" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                SENSOR
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="aec_en.html" class="md-tabs__link md-tabs__link--active">
+          Development
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../customer/IPC/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      SDK Module API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        SDK Module API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_en.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_en.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_en.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_en.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_en.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_en.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_en.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_en.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_en.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_en.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_en.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_en.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_en.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_en.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_en.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_en.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_en.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        SENSOR
+      </label>
+    
+    <a href="sensor_en.html" title="SENSOR" class="md-nav__link md-nav__link--active">
+      SENSOR
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. OVERVIEW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-keyword" class="md-nav__link">
+    1.3. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-reference" class="md-nav__link">
+    2. API REFERENCE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_snr_enable" class="md-nav__link">
+    2.1. MI_SNR_Enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_snr_disable" class="md-nav__link">
+    2.2. MI_SNR_Disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_snr_getpadinfo" class="md-nav__link">
+    2.3. MI_SNR_GetPadInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_snr_getplaneinfo" class="md-nav__link">
+    2.4. MI_SNR_GetPlaneInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_snr_getfps" class="md-nav__link">
+    2.5. MI_SNR_GetFps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_snr_setfps" class="md-nav__link">
+    2.6. MI_SNR_SetFps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_snr_getanadecsrcattr" class="md-nav__link">
+    2.7. MI_SNR_GetAnadecSrcAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_snr_setanadecsrcattr" class="md-nav__link">
+    2.8. MI_SNR_SetAnadecSrcAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_snr_queryrescount" class="md-nav__link">
+    2.9. MI_SNR_QueryResCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_snr_getres" class="md-nav__link">
+    2.10. MI_SNR_GetRes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_snr_getcurres" class="md-nav__link">
+    2.11. MI_SNR_GetCurRes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_snr_setres" class="md-nav__link">
+    2.12. MI_SNR_SetRes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_snr_setorien" class="md-nav__link">
+    2.13. MI_SNR_SetOrien
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_snr_getorien" class="md-nav__link">
+    2.14. MI_SNR_GetOrien
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_snr_setplanemode" class="md-nav__link">
+    2.15. MI_SNR_SetPlaneMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_snr_getplanemode" class="md-nav__link">
+    2.16. MI_SNR_GetPlaneMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_snr_custfunction" class="md-nav__link">
+    2.17. MI_SNR_CustFunction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-mi_snr_initdev" class="md-nav__link">
+    2.18. MI_SNR_InitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-mi_snr_deinitdev" class="md-nav__link">
+    2.19. MI_SNR_DeInitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220-mi_snr_getsupportedhdrtypes" class="md-nav__link">
+    2.20. MI_SNR_GetSupportedHdrTypes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-mi_snr_sethdrtype" class="md-nav__link">
+    2.21. MI_SNR_SetHdrType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sensor-data-type" class="md-nav__link">
+    3. SENSOR DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_snr_padid" class="md-nav__link">
+    3.1. MI_SNR_PADID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_snr_hdrsrc_e" class="md-nav__link">
+    3.2. MI_SNR_HDRSrc_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_snr_hdrhwmode_e" class="md-nav__link">
+    3.3. MI_SNR_HDRHWMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_snr_res_t" class="md-nav__link">
+    3.4. MI_SNR_Res_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_snr_attrparallel_t" class="md-nav__link">
+    3.5. MI_SNR_AttrParallel_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_snr_mipiattr_t" class="md-nav__link">
+    3.6. MI_SNR_MipiAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_snr_attrbt656_t" class="md-nav__link">
+    3.7. MI_SNR_AttrBt656_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_snr_intfattr_u" class="md-nav__link">
+    3.8. MI_SNR_IntfAttr_u
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_snr_padinfo_t" class="md-nav__link">
+    3.9. MI_SNR_PADInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_snr_planeinfo_t" class="md-nav__link">
+    3.10. MI_SNR_PlaneInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_snr_cust_dir_e" class="md-nav__link">
+    3.11. MI_SNR_CUST_DIR_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_snr_initparam_t" class="md-nav__link">
+    3.12. MI_SNR_InitParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_snr_anadec_srcattr_t" class="md-nav__link">
+    3.13. MI_SNR_Anadec_SrcAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_snr_anadec_status_e" class="md-nav__link">
+    3.14. MI_SNR_Anadec_Status_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mi_snr_anadec_transfermode_e" class="md-nav__link">
+    3.15. MI_SNR_Anadec_TransferMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-mi_snr_anadec_format_e" class="md-nav__link">
+    3.16. MI_SNR_Anadec_Format_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-mi_snr_polar_e" class="md-nav__link">
+    3.17. MI_SNR_Polar_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-mi_snr_syncattr_t" class="md-nav__link">
+    3.18. MI_SNR_SyncAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319-mi_snr_bitorder_e" class="md-nav__link">
+    3.19. MI_SNR_BitOrder_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320-mi_snr_clkedge_e" class="md-nav__link">
+    3.20. MI_SNR_ClkEdge_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-mi_snr_intfmode_e" class="md-nav__link">
+    3.21. MI_SNR_IntfMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-mi_snr_hdrtype_e" class="md-nav__link">
+    3.22. MI_SNR_HDRType_e
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sensor-error-code" class="md-nav__link">
+    4. SENSOR ERROR CODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_en.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_en.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_en.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_en.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_en.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_en.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdisp_en.html" title="VDISP" class="md-nav__link">
+      VDISP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-nav__link">
+      ABBR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. OVERVIEW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-keyword" class="md-nav__link">
+    1.3. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-reference" class="md-nav__link">
+    2. API REFERENCE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_snr_enable" class="md-nav__link">
+    2.1. MI_SNR_Enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_snr_disable" class="md-nav__link">
+    2.2. MI_SNR_Disable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_snr_getpadinfo" class="md-nav__link">
+    2.3. MI_SNR_GetPadInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_snr_getplaneinfo" class="md-nav__link">
+    2.4. MI_SNR_GetPlaneInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_snr_getfps" class="md-nav__link">
+    2.5. MI_SNR_GetFps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_snr_setfps" class="md-nav__link">
+    2.6. MI_SNR_SetFps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_snr_getanadecsrcattr" class="md-nav__link">
+    2.7. MI_SNR_GetAnadecSrcAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_snr_setanadecsrcattr" class="md-nav__link">
+    2.8. MI_SNR_SetAnadecSrcAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_snr_queryrescount" class="md-nav__link">
+    2.9. MI_SNR_QueryResCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_snr_getres" class="md-nav__link">
+    2.10. MI_SNR_GetRes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_snr_getcurres" class="md-nav__link">
+    2.11. MI_SNR_GetCurRes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_snr_setres" class="md-nav__link">
+    2.12. MI_SNR_SetRes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_snr_setorien" class="md-nav__link">
+    2.13. MI_SNR_SetOrien
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_snr_getorien" class="md-nav__link">
+    2.14. MI_SNR_GetOrien
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_snr_setplanemode" class="md-nav__link">
+    2.15. MI_SNR_SetPlaneMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_snr_getplanemode" class="md-nav__link">
+    2.16. MI_SNR_GetPlaneMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_snr_custfunction" class="md-nav__link">
+    2.17. MI_SNR_CustFunction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-mi_snr_initdev" class="md-nav__link">
+    2.18. MI_SNR_InitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-mi_snr_deinitdev" class="md-nav__link">
+    2.19. MI_SNR_DeInitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220-mi_snr_getsupportedhdrtypes" class="md-nav__link">
+    2.20. MI_SNR_GetSupportedHdrTypes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-mi_snr_sethdrtype" class="md-nav__link">
+    2.21. MI_SNR_SetHdrType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sensor-data-type" class="md-nav__link">
+    3. SENSOR DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_snr_padid" class="md-nav__link">
+    3.1. MI_SNR_PADID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_snr_hdrsrc_e" class="md-nav__link">
+    3.2. MI_SNR_HDRSrc_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_snr_hdrhwmode_e" class="md-nav__link">
+    3.3. MI_SNR_HDRHWMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_snr_res_t" class="md-nav__link">
+    3.4. MI_SNR_Res_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_snr_attrparallel_t" class="md-nav__link">
+    3.5. MI_SNR_AttrParallel_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_snr_mipiattr_t" class="md-nav__link">
+    3.6. MI_SNR_MipiAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_snr_attrbt656_t" class="md-nav__link">
+    3.7. MI_SNR_AttrBt656_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_snr_intfattr_u" class="md-nav__link">
+    3.8. MI_SNR_IntfAttr_u
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_snr_padinfo_t" class="md-nav__link">
+    3.9. MI_SNR_PADInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_snr_planeinfo_t" class="md-nav__link">
+    3.10. MI_SNR_PlaneInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_snr_cust_dir_e" class="md-nav__link">
+    3.11. MI_SNR_CUST_DIR_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_snr_initparam_t" class="md-nav__link">
+    3.12. MI_SNR_InitParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_snr_anadec_srcattr_t" class="md-nav__link">
+    3.13. MI_SNR_Anadec_SrcAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_snr_anadec_status_e" class="md-nav__link">
+    3.14. MI_SNR_Anadec_Status_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mi_snr_anadec_transfermode_e" class="md-nav__link">
+    3.15. MI_SNR_Anadec_TransferMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-mi_snr_anadec_format_e" class="md-nav__link">
+    3.16. MI_SNR_Anadec_Format_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-mi_snr_polar_e" class="md-nav__link">
+    3.17. MI_SNR_Polar_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-mi_snr_syncattr_t" class="md-nav__link">
+    3.18. MI_SNR_SyncAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319-mi_snr_bitorder_e" class="md-nav__link">
+    3.19. MI_SNR_BitOrder_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320-mi_snr_clkedge_e" class="md-nav__link">
+    3.20. MI_SNR_ClkEdge_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-mi_snr_intfmode_e" class="md-nav__link">
+    3.21. MI_SNR_IntfMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-mi_snr_hdrtype_e" class="md-nav__link">
+    3.22. MI_SNR_HDRType_e
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sensor-error-code" class="md-nav__link">
+    4. SENSOR ERROR CODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI SENSOR API</h1>
+<hr />
+<h2 id="revision-history">REVISION HISTORY<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision No.</th>
+<th><div style="width:335pt">Description</div></th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.0</td>
+<td><li> Initial release</td>
+<td>12/04/2020</td>
+</tr>
+<tr>
+<td>3.1</td>
+<td><li> Added  MI_SNR_SetAnadecSrcAttr  <li> Deleted MI_SNR_MAX_PADNUM and  MI_SNR_MAX_PLANENUM</td>
+<td>03/30/2021</td>
+</tr>
+<tr>
+<td></td>
+<td><li> Added  PROCFS introduction</td>
+<td>08/25/2021</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td><li> Update  MI_SNR_IntfMode_e Add LVDS</td>
+<td>12/22/2021</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td><li> Added MI_SNR_GetSupportedHdrTypes  <li> Added MI_SNR_SetHdrType  <li> modify MI_SNR_HDRType_e enum value</td>
+<td>08/01/2024</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-overview">1. OVERVIEW<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="11-module-description">1.1. Module Description<a class="headerlink" href="#11-module-description" title="Permanent link">&para;</a></h3>
+<p>The SNR (sensor) module can obtain the camera interface information and adjust
+the resolution and frame rate.</p>
+<hr />
+<h3 id="12-flow-chart">1.2. Flow Chart<a class="headerlink" href="#12-flow-chart" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="mymedia/sensor/sensor-1_en.svg" /></p>
+<hr />
+<h3 id="13-keyword">1.3. Keyword<a class="headerlink" href="#13-keyword" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Pad</p>
+<p>Sensor hardware Jack location.</p>
+</li>
+<li>
+<p>Plane</p>
+<p>The name of the channel under the pad.</p>
+</li>
+<li>
+<p>Res</p>
+<p>Abbreviation for resolution.</p>
+</li>
+<li>
+<p>Orien</p>
+<p>Determine the direction, and set the sensor to mirror horizontally and
+vertically.</p>
+</li>
+<li>
+<p>VC</p>
+<p>Virtual Channel.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-api-reference">2. API REFERENCE<a class="headerlink" href="#2-api-reference" title="Permanent link">&para;</a></h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>API Name</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_snr_enable">MI_SNR_Enable</a></td>
+<td>Sensor Enable</td>
+</tr>
+<tr>
+<td><a href="#22-mi_snr_disable">MI_SNR_Disable</a></td>
+<td>Sensor Disable</td>
+</tr>
+<tr>
+<td><a href="#23-mi_snr_getpadinfo">MI_SNR_GetPadInfo</a></td>
+<td>Get Sensor pad information</td>
+</tr>
+<tr>
+<td><a href="#24-mi_snr_getplaneinfo">MI_SNR_GetPlaneInfo</a></td>
+<td>Get Sensor channel information</td>
+</tr>
+<tr>
+<td><a href="#25-mi_snr_getfps">MI_SNR_GetFps</a></td>
+<td>Get Sensor current frame rate</td>
+</tr>
+<tr>
+<td><a href="#26-mi_snr_setfps">MI_SNR_SetFps</a></td>
+<td>Set Sensor frame rate</td>
+</tr>
+<tr>
+<td><a href="#27-mi_snr_getanadecsrcattr">MI_SNR_GetAnadecSrcAttr</a></td>
+<td>Get analog decode input param</td>
+</tr>
+<tr>
+<td><a href="#28-mi_snr_setanadecsrcattr">MI_SNR_SetAnadecSrcAttr</a></td>
+<td>Set the signal channel parameter</td>
+</tr>
+<tr>
+<td><a href="#29-mi_snr_queryrescount">MI_SNR_QueryResCount</a></td>
+<td>Get Sensor supported resolution count</td>
+</tr>
+<tr>
+<td><a href="#210-mi_snr_getres">MI_SNR_GetRes</a></td>
+<td>Get sensor resolution by corresponding index</td>
+</tr>
+<tr>
+<td><a href="#211-mi_snr_getcurres">MI_SNR_GetCurRes</a></td>
+<td>Get Sensor current resolution</td>
+</tr>
+<tr>
+<td><a href="#212-mi_snr_setres">MI_SNR_SetRes</a></td>
+<td>Set Sensor resolution</td>
+</tr>
+<tr>
+<td><a href="#213-mi_snr_setorien">MI_SNR_SetOrien</a></td>
+<td>Set Sensor orientation</td>
+</tr>
+<tr>
+<td><a href="#214-mi_snr_getorien">MI_SNR_GetOrien</a></td>
+<td>Get Sensor orientation attribute</td>
+</tr>
+<tr>
+<td><a href="#215-mi_snr_setplanemode">MI_SNR_SetPlaneMode</a></td>
+<td>Set Sensor plane mode</td>
+</tr>
+<tr>
+<td><a href="#216-mi_snr_getplanemode">MI_SNR_GetPlaneMode</a></td>
+<td>Get Sensor plane mode</td>
+</tr>
+<tr>
+<td><a href="#217-mi_snr_custfunction">MI_SNR_CustFunction</a></td>
+<td>Set sensor customization function</td>
+</tr>
+<tr>
+<td><a href="#218-mi_snr_initdev">MI_SNR_InitDev</a></td>
+<td>Initialize Sensor device</td>
+</tr>
+<tr>
+<td><a href="#219-mi_snr_deinitdev">MI_SNR_DeInitDev</a></td>
+<td>De-initialize Sensor device</td>
+</tr>
+<tr>
+<td><a href="#220-mi_snr_getsupportedhdrtypes">MI_SNR_GetSupportedHdrTypes</a></td>
+<td>Get sensor supported Hdr type</td>
+</tr>
+<tr>
+<td><a href="#221-mi_snr_sethdrtype">MI_SNR_SetHdrType</a></td>
+<td>Set sensor Hdr Type</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="21-mi_snr_enable">2.1. MI_SNR_Enable<a class="headerlink" href="#21-mi_snr_enable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set sensor corresponding pad enable</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_Enable(MI_SNR_PADID  ePADId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM].</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Before calling this function, ensure sensor pad is not initialized. If the
+    sensor pad has been enabled already, use <a href="#22-mi_snr_disable">MI_SNR_Disable</a>
+    to deinitialize the pad.</p>
+</li>
+<li>
+<p>Before enabling this API, <a href="#215-mi_snr_setplanemode">MI_SNR_SetPlaneMode</a> and
+    <a href="#212-mi_snr_setres">MI_SNR_SetRes</a> must be set.</p>
+</li>
+<li>
+<p>Because the MI SNR module does not interact with the DRAM, there is no need
+    to bind it with the backend module; the data flow will automatically go to
+    the MI Vif.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Examples of initialization and exit are as follows:</p>
+<p><img alt="" src="mymedia/sensor/sensor-2_en.svg" /></p>
+<div class="codehilite"><pre><span></span>MI_U32 u32ResCount =0;
+MI_U8 u8ResIndex =0;
+MI_U8 u8ChocieRes =0;
+MI_SNR_PADID  eSnrPad= E_MI_SNR_PAD_ID_0;
+MI_SNR_QueryResCount(eSnrPad, &amp;u32ResCount);
+for(u8ResIndex=0; u8ResIndex &lt; u32ResCount; u8ResIndex++)
+{
+    MI_SNR_GetRes(E_MI_SNR_PAD_ID_0, u8ResIndex, &amp;stRes);
+    printf(&quot;index %d, Crop(%d,%d,%d,%d), outputsize(%d,%d), maxfps %d, minfps %d,               ResDesc %s\n&quot;,u8ResIndex, stRes.stCropRect.u16X, stRes.stCropRect.u16Y,     stRes.stCropRect.u16Width,stRes.stCropRect.u16Height,stRes.stOutputSize.u16Width,   stRes.stOutputSize.u16Height, stRes.u32MaxFps,stRes.u32MinFps, stRes.strResDesc);
+}
+
+printf(&quot;select res\n&quot;);
+scanf(&quot;%c&quot;, &amp;select);
+
+if(E_MI_SNR_HDR_TYPE_OFF== eHdrType)
+{
+    MI_SNR_SetPlaneMode(eSnrPad, FALSE);
+}
+else
+{
+    MI_SNR_SetPlaneMode(eSnrPad, TRUE);
+}
+
+MI_SNR_SetRes(eSnrPad,u8ResIdx);
+MI_SNR_Enable(eSnrPad);
+
+/*****************************/
+/*  Exit call interface */
+/*****************************/
+MI_SNR_Disable(eSnrPad);
+</pre></div>
+
+
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#22-mi_snr_disable">MI_SNR_Disable</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="22-mi_snr_disable">2.2. MI_SNR_Disable<a class="headerlink" href="#22-mi_snr_disable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set sensor corresponding pad disable</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_Disable(MI_SNR_PADID  ePADId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_snr_enable">MI_SNR_Enable</a> .</p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#21-mi_snr_enable">MI_SNR_Enable</a> </p>
+</li>
+</ul>
+<hr />
+<h3 id="23-mi_snr_getpadinfo">2.3. MI_SNR_GetPadInfo<a class="headerlink" href="#23-mi_snr_getpadinfo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get sensor pad information</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetPadInfo(MI_SNR_PADID  ePADId, MI_SNR_PADInfo_t *pstPadInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstPadInfo</td>
+<td>SENSOR pad attribute pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="24-mi_snr_getplaneinfo">2.4. MI_SNR_GetPlaneInfo<a class="headerlink" href="#24-mi_snr_getplaneinfo" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get sensor plane information</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetPlaneInfo(MI_SNR_PADID ePADId, MI_U32  u32PlaneID, MI_SNR_PlaneInfo_t *pstPlaneInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u32PlaneID</td>
+<td>SENSOR plane ID<br> Range: [0, MI_SNR_MAX_PLANE_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstPlaneInfo</td>
+<td>SENSOR plane information</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="25-mi_snr_getfps">2.5. MI_SNR_GetFps<a class="headerlink" href="#25-mi_snr_getfps" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get sensor frame rate</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetFps(MI_SNR_PADID  ePADId, MI_U32 *pFps);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pFps</td>
+<td>Frame rate pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>The obtained FPS range is:</p>
+<p>Min * 1000 &lt; FPS &lt; Max * 1000: accurate to 3 decimal places.</p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#26-mi_snr_setfps">MI_SNR_SetFps</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="26-mi_snr_setfps">2.6. MI_SNR_SetFps<a class="headerlink" href="#26-mi_snr_setfps" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set sensor frame rate</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_SetFps(MI_SNR_PADID ePADId, MI_U32 u32Fps);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u32Fps</td>
+<td>Frame rate</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>FPS has two value ranges:</p>
+<ul>
+<li>
+<p>Min &lt; fps &lt; max: Accurate to one digit</p>
+</li>
+<li>
+<p>min*1000 &lt; fps &lt; max*1000: Accurate to 3 decimal places</p>
+</li>
+</ul>
+<p>The maximum/minimum value of FPS is the max/min FPS corresponding to the
+resolution index when <a href="#212-mi_snr_setres">MI_SNR_SetRes</a> is set.</p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#25-mi_snr_getfps">MI_SNR_GetFps</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="27-mi_snr_getanadecsrcattr">2.7. MI_SNR_GetAnadecSrcAttr<a class="headerlink" href="#27-mi_snr_getanadecsrcattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get analog decode input parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetAnadecSrcAttr(MI_SNR_PADID  ePADId, 
+MI_U32 u32PlaneID, MI_SNR_Anadec_SrcAttr_t *pstSrcAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u32PlaneID</td>
+<td>SENSOR Plane ID<br> Range: [0, MI_SNR_MAX_PLANE_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstSrcAttr</td>
+<td>Signal source parameterparam</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>This function is applicable to analog decode sensor only. </p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#313-mi_snr_anadec_srcattr_t">MI_SNR_Anadec_SrcAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="28-mi_snr_setanadecsrcattr">2.8. MI_SNR_SetAnadecSrcAttr<a class="headerlink" href="#28-mi_snr_setanadecsrcattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set the signal channel parameter. </p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_SetAnadecSrcAttr(MI_SNR_PADID   ePADId, 
+MI_U32 u32PlaneID, MI_SNR_Anadec_SrcAttr_t *pstSrcAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR  Pad ID  Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u32PlaneID</td>
+<td>SENSOR  Plane ID   Range: [0, MI_SNR_MAX_PLANE_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstSrcAttr</td>
+<td>Signal source  parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>This interface is suitable for where there are multiple signal settings on one sensor pad; For example, set the resolution of the 4 AHD sensors of a BT656 respectively. </p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#313-mi_snr_anadec_srcattr_t">MI_SNR_Anadec_SrcAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="29-mi_snr_queryrescount">2.9. MI_SNR_QueryResCount<a class="headerlink" href="#29-mi_snr_queryrescount" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get sensor supported resolution count</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_QueryResCount(MI_SNR_PADID ePADId,
+MI_U32 *pu32ResCount);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>*pu32ResCount</td>
+<td>SENSOR pad supported resolution count</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Please refer to the example given in <a href="#210-mi_snr_getres">MI_SNR_GetRes</a></p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#210-mi_snr_getres">MI_SNR_GetRes</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="210-mi_snr_getres">2.10. MI_SNR_GetRes<a class="headerlink" href="#210-mi_snr_getres" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get the corresponding resolution from the index in resolution mapping table</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetRes(MI_SNR_PADID ePADId, MI_U8 u8ResIdx,
+MI_SNR_Res_t *pstRes);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ResIdx</td>
+<td>Index in resolution mapping table</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>*pstRes</td>
+<td>Resolution corresponding to the serial number</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Below is an example of obtaining resolution list and selecting corresponding
+resolution setting:</p>
+<div class="codehilite"><pre><span></span>MI_U32 u32ResCount =0;
+MI_U8 u8ResIndex =0;
+MI_U8 u8ChocieRes =0;
+MI_SNR_QueryResCount(E_MI_SNR_PAD_ID_0, &amp;u32ResCount);
+for(u8ResIndex=0; u8ResIndex &lt; u32ResCount; u8ResIndex++)
+{
+    MI_SNR_GetRes(E_MI_SNR_PAD_ID_0, u8ResIndex, &amp;stRes);
+    printf(&quot;index %d, Crop(%d,%d,%d,%d), outputsize(%d,%d), maxfps %d, minfps %d,               ResDesc %s\n&quot;,u8ResIndex, stRes.stCropRect.u16X, stRes.stCropRect.u16Y,     stRes.stCropRect.u16Width,stRes.stCropRect.u16Height,stRes.stOutputSize.u16Width, stRes.stOutputSize.u16Height,stRes.u32MaxFps,stRes.u32MinFps,stRes.strResDesc);
+}
+
+printf(&quot;select res\n&quot;);
+scanf(&quot;%c&quot;, &amp;select);
+MI_SNR_SetRes(E_MI_SNR_PAD_ID_0,u8ResIdx);
+MI_SNR_GetCurRes(E_MI_SNR_PAD_ID_0, &amp;u8ResIndex, &amp;stRes);
+</pre></div>
+
+
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#29-mi_snr_queryrescount">MI_SNR_QueryResCount</a></p>
+<p><a href="#210-mi_snr_getres">MI_SNR_GetRes</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="211-mi_snr_getcurres">2.11. MI_SNR_GetCurRes<a class="headerlink" href="#211-mi_snr_getcurres" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get sensor current resolution and its position in the resolution mapping
+table</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetCurRes(MI_SNR_PADID   ePADId, MI_U8 *pu8CurResIdx,                     MI_SNR_Res_t  *pstCurRes);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>*pu8CurResIdx</td>
+<td>Current resolution index</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>*pstCurRes</td>
+<td>Current resolution information</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Please refer to the example given in <a href="#210-mi_snr_getres">MI_SNR_GetRes</a></p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#34-mi_snr_res_t">MI_SNR_Res_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="212-mi_snr_setres">2.12. MI_SNR_SetRes<a class="headerlink" href="#212-mi_snr_setres" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set sensor pad output resolution</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_SetRes(MI_SNR_PADID ePADId, MI_U8 u8ResIdx);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR  Pad ID  <br>Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ResIdx</td>
+<td>Index in  resolution mapping table</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor_datatype.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>In default case, the relation between vif Dev and SensorPad is: vif Dev0 ->
+SensorPad0, vif Dev1 -> SensorPad1.</p>
+</li>
+<li>
+<p>Example</p>
+<p>Please refer to the example given in <a href="#210-mi_snr_getres">MI_SNR_GetRes</a></p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#210-mi_snr_getres">MI_SNR_GetRes</a></p>
+<p><a href="#34-mi_snr_res_t">MI_SNR_Res_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="213-mi_snr_setorien">2.13. MI_SNR_SetOrien<a class="headerlink" href="#213-mi_snr_setorien" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set sensor image orientation attribute</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_SetOrien(MI_SNR_PADID ePADId, MI_BOOL
+bMirror, MI_BOOL bFlip);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>bMirror</td>
+<td>Mirror orientation enable</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>bFlip</td>
+<td>Flip orientation enable</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>The API can be used alone.</p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#214-mi_snr_getorien">MI_SNR_GetOrien</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="214-mi_snr_getorien">2.14. MI_SNR_GetOrien<a class="headerlink" href="#214-mi_snr_getorien" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get sensor image orientation attribute</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetOrien(MI_SNR_PADID  ePADId, MI_BOOL *pbMirror,                 MI_BOOL *pbFlip);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>*pbMirror</td>
+<td>Mirror orientation enable</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>*pbFlip</td>
+<td>Flip orientation enable</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#213-mi_snr_setorien">MI_SNR_SetOrien</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="215-mi_snr_setplanemode">2.15. MI_SNR_SetPlaneMode<a class="headerlink" href="#215-mi_snr_setplanemode" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set sensor plane mode</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_SetPlaneMode(MI_SNR_PADID ePADId, MI_BOOL
+bEnable);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>bEnable</td>
+<td>Must be set to TRUE if HDR is in use, and FALSE otherwise</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>There are two relationships between sensorpad and plane. When planemode is
+false, the relationship between sensorpad and plane is one-to-one; when
+planemode is true, one sensorpad corresponds to multiple planes. Since two
+planes are required to receive long exposure and short exposure in HDR mode,
+the plane mode should be set to true.</p>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>if(E_MI_VIF_HDR_TYPE_OFF== eHdrType)
+{
+    MI_SNR_SetPlaneMode(eSnrPad, FALSE);
+}
+else
+{
+    MI_SNR_SetPlaneMode(eSnrPad, TRUE);
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#216-mi_snr_getplanemode">MI_SNR_GetPlaneMode</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="216-mi_snr_getplanemode">2.16. MI_SNR_GetPlaneMode<a class="headerlink" href="#216-mi_snr_getplanemode" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get upper layer sensor plane mode</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetPlaneMode(MI_SNR_PADID  ePADId, MI_BOOL  *pbEnable);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>*pbEnable</td>
+<td>Must be set to TRUE if HDR is in use, and FALSE otherwise</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#215-mi_snr_setplanemode">MI_SNR_SetPlaneMode</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="217-mi_snr_custfunction">2.17. MI_SNR_CustFunction<a class="headerlink" href="#217-mi_snr_custfunction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set sensor customization function. For example, enable sensor register
+read/write access, or allow some special sensors to have sensor functions to
+obtain data through the API.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_CustFunction(MI_SNR_PADID ePADId, MI_U32 u32CmdId, MI_U32 u32DataSize, void *pCustData, MI_SNR_CUST_DIR_e eDir);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u32CmdId</td>
+<td>Customized function ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u32DataSize</td>
+<td>Customized function data buffer size</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pCustData</td>
+<td>Customized function data buffer</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>eDir</td>
+<td>Customized data type</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>This API corresponds to the pCus_sensor_CustDefineFunction API interface
+in the sensor driver.</p>
+</li>
+<li>
+<p>Example</p>
+<p>An example of sensor register read/write is given below.</p>
+<p>The implementation of app is as follows:</p>
+<div class="codehilite"><pre><span></span>#define I2C_READ  (0x01)
+#define I2C_WRITE  (0x02)
+
+typedef struct stI2CRegData_s
+{
+    MI_U16 u16Reg;
+    MI_U16 u16Data;
+}stI2CRegData_t;
+
+stI2CRegData_t stReadReg;
+stI2CRegData_t stWriteReg;
+MI_U16 u16DataSize=sizeof(stI2CRegData_t);
+memset(&amp;stReadReg, 0x0, sizeof(stI2CRegData_t));
+memset(&amp;stWriteReg, 0x0, sizeof(stI2CRegData_t));
+
+stReadReg.u16Reg = 0x3007;
+MI_SNR_CustFunction(E_MI_SNR_PAD_ID_0, I2C_READ, u16DataSize, &amp;stReadReg, E_MI_SNR_CUSTDATA_TO_USER);
+
+stWriteReg.u16Reg = 0x3007;
+stWriteReg.u16Data = 0x03;
+MI_SNR_CustFunction(E_MI_SNR_PAD_ID_0, I2C_WRITE, u16DataSize, &amp;stWriteReg, E_MI_SNR_CUSTDATA_TO_DRIVER);
+</pre></div>
+
+
+<p>The following functions are implemented in the sensor driver: </p>
+<div class="codehilite"><pre><span></span>#define I2C_READ  (0x01)
+#define I2C_WRITE  (0x02)
+
+typedef struct stI2CRegData_s
+{
+    MI_U16 u16Reg;
+    MI_U16 u16Data;
+}stI2CRegData_t;
+
+static int pCus_sensor_CustDefineFunction(ms_cus_sensor *handle, u32 cmd_id, void *param)
+{
+    switch(cmd_id)
+    {
+        case I2C_READ:
+            {
+                stI2CRegData_t *pRegData = (stI2CRegData_t *)param;
+                SensorReg_Read(pRegData-&gt;u16Reg, pRegData-&gt;u16Data);
+            }
+            break;
+        case I2C_WRITE:
+            {
+                stI2CRegData_t *pRegData = (stI2CRegData_t *)param;
+                SensorReg_Write(pRegData-&gt;u16Reg, pRegData-&gt;u16Data);
+            }
+            break;
+        default:
+            printk(&quot;cmdid %d, unknow \n&quot;);
+            break
+    }
+
+    return SUCCESS;
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#311-mi_snr_cust_dir_e">MI_SNR_CUST_DIR_e</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="218-mi_snr_initdev">2.18. MI_SNR_InitDev<a class="headerlink" href="#218-mi_snr_initdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Initialize sensor device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_InitDev(MI_SNR_InitParam_t *pstInitParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pstInitParam</td>
+<td>Initialization Parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Not MI_OK: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header file: mi_common.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library file: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="219-mi_snr_deinitdev">2.19. MI_SNR_DeInitDev<a class="headerlink" href="#219-mi_snr_deinitdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>De-initialize sensor device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_DeInitDev(void);
+</pre></div>
+
+
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Not MI_OK: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header file: mi_common.h, mi_sensor.h</p>
+</li>
+<li>
+<p>Library file: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="220-mi_snr_getsupportedhdrtypes">2.20. MI_SNR_GetSupportedHdrTypes<a class="headerlink" href="#220-mi_snr_getsupportedhdrtypes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get sensor supported Hdr type</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_GetSupportedHdrTypes(MI_SNR_PADID ePADId, MI_U32 *pu32HdrTypeMask);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pu32HdrTypeMask</td>
+<td>Supported Hdr Type bitmask</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>pu32HdrTypeMask is composed of members of MI_SNR_HDRType_e.</p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#221-mi_snr_sethdrtype">MI_SNR_SetHdrType</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="221-mi_snr_sethdrtype">2.21. MI_SNR_SetHdrType<a class="headerlink" href="#221-mi_snr_sethdrtype" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set sensor Hdr type</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_SNR_SetHdrType(MI_SNR_PADID ePADId, MI_SNR_HDRType_e eHdrType);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePADId</td>
+<td>SENSOR Pad ID<br> Range: [0, MI_SNR_MAX_PAD_NUM).</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>eHdrType</td>
+<td>Hdr Type</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_OK: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see error code for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_sensor.h</p>
+</li>
+<li>
+<p>Library: libmi_sensor.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>When the sensor supports multiple HDR types, HDR type can be set through this interface; If only one HDR type is supported, the sensor driver will use the HDR type internally by default and does not need to set.</p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#220-mi_snr_GetSupportedhdrtypes">MI_SNR_GetSupportedHdrTypes</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="3-sensor-data-type">3. SENSOR DATA TYPE<a class="headerlink" href="#3-sensor-data-type" title="Permanent link">&para;</a></h2>
+<hr />
+<p>The sensor related data types are shown in the table below.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Data type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#31-mi_snr_padid">MI_SNR_PADID</a></td>
+<td>Define Sensor Pad Id type</td>
+</tr>
+<tr>
+<td><a href="#32-mi_snr_hdrsrc_e">MI_SNR_HDRSrc_e</a></td>
+<td>Define virtual channel corresponding to plane channel in HdrMode.</td>
+</tr>
+<tr>
+<td><a href="#33-mi_snr_hdrhwmode_e">MI_SNR_HDRHWMode_e</a></td>
+<td>Define HDR hardware configuration mode</td>
+</tr>
+<tr>
+<td><a href="#34-mi_snr_res_t">MI_SNR_Res_t</a></td>
+<td>Define Sensor resolution attribute</td>
+</tr>
+<tr>
+<td><a href="#35-mi_snr_attrparallel_t">MI_SNR_AttrParallel_t</a></td>
+<td>Define Parallel Sensor attribute</td>
+</tr>
+<tr>
+<td><a href="#36-mi_snr_mipiattr_t">MI_SNR_MipiAttr_t</a></td>
+<td>Define MIPI Sensor attribute</td>
+</tr>
+<tr>
+<td><a href="#37-mi_snr_attrbt656_t">MI_SNR_AttrBt656_t</a></td>
+<td>Define BT656 Sensor attribute</td>
+</tr>
+<tr>
+<td><a href="#38-mi_snr_intfattr_u">MI_SNR_IntfAttr_u</a></td>
+<td>Define Sensor interface mux</td>
+</tr>
+<tr>
+<td><a href="#39-mi_snr_padinfo_t">MI_SNR_PADInfo_t</a></td>
+<td>Define Sensor Pad information</td>
+</tr>
+<tr>
+<td><a href="#310-mi_snr_planeinfo_t">MI_SNR_PlaneInfo_t</a></td>
+<td>Define Sensor plane information</td>
+</tr>
+<tr>
+<td><a href="#311-mi_snr_cust_dir_e">MI_SNR_CUST_DIR_e</a></td>
+<td>Define sensor customization function data type</td>
+</tr>
+<tr>
+<td><a href="#312-mi_snr_initparam_t">MI_SNR_InitParam_t</a></td>
+<td>Define the initialized parameter of Sensor device</td>
+</tr>
+<tr>
+<td><a href="#313-mi_snr_anadec_srcattr_t">MI_SNR_Anadec_SrcAttr_t</a></td>
+<td>Define analog decode input param</td>
+</tr>
+<tr>
+<td><a href="#314-mi_snr_anadec_status_e">MI_SNR_Anadec_Status_e</a></td>
+<td>Define sensor status param</td>
+</tr>
+<tr>
+<td><a href="#315-mi_snr_anadec_transfermode_e">MI_SNR_Anadec_TransferMode_e</a></td>
+<td>Define sensor transfer mode</td>
+</tr>
+<tr>
+<td><a href="#316-mi_snr_anadec_format_e">MI_SNR_Anadec_Format_e</a></td>
+<td>Define sensor format</td>
+</tr>
+<tr>
+<td><a href="#317-mi_snr_polar_e">MI_SNR_Polar_e</a></td>
+<td>Define sensor polarity</td>
+</tr>
+<tr>
+<td><a href="#318-mi_snr_syncattr_t">MI_SNR_SyncAttr_t</a></td>
+<td>Define sync attributes</td>
+</tr>
+<tr>
+<td><a href="#319-mi_snr_bitorder_e">MI_SNR_BitOrder_e</a></td>
+<td>Define data bit  reverse order</td>
+</tr>
+<tr>
+<td><a href="#320-mi_snr_clkedge_e">MI_SNR_ClkEdge_e</a></td>
+<td>Define received clk  type</td>
+</tr>
+<tr>
+<td><a href="#321-mi_snr_intfmode_e">MI_SNR_IntfMode_e</a></td>
+<td>Define input interface  mode</td>
+</tr>
+<tr>
+<td><a href="#322-mi_snr_hdrtype_e">MI_SNR_HDRType_e</a></td>
+<td>Define HDR type</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="31-mi_snr_padid">3.1. MI_SNR_PADID<a class="headerlink" href="#31-mi_snr_padid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define Sensor Pad Id type</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32  MI_SNR_PADID;
+</pre></div>
+
+
+</li>
+<li>
+<p>Note</p>
+<p>This API corresponds to the sensor pad interface on the hardware.</p>
+</li>
+</ul>
+<hr />
+<h3 id="32-mi_snr_hdrsrc_e">3.2. MI_SNR_HDRSrc_e<a class="headerlink" href="#32-mi_snr_hdrsrc_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define virtual channel corresponding to plane channel in HdrMode.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_HDR_SOURCE_VC0,
+
+    E_MI_SNR_HDR_SOURCE_VC1,
+
+    E_MI_SNR_HDR_SOURCE_VC2,
+
+    E_MI_SNR_HDR_SOURCE_VC3,
+
+    E_MI_SNR_HDR_SOURCE_MAX
+
+} MI_SNR_HDRSrc_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#310-mi_snr_planeinfo_t">MI_SNR_PlaneInfo_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="33-mi_snr_hdrhwmode_e">3.3. MI_SNR_HDRHWMode_e<a class="headerlink" href="#33-mi_snr_hdrhwmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define HDR hardware configuration mode</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_HDR_HW_MODE_NONE = 0,
+
+    E_MI_SNR_HDR_HW_MODE_SONY_DOL = 1,
+
+    E_MI_SNR_HDR_HW_MODE_DCG = 2,
+
+    E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW8 = 3,
+
+    E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW10 = 4,
+
+    E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW12 = 5,
+
+    E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW14 = 6,
+
+    E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW16 = 7,
+
+} MI_SNR_HDRHWMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_HDR_HW_MODE_NONE</td>
+<td>HDR mode not enabled</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_HW_MODE_SONY_DOL</td>
+<td>Digital Overlap High Dynamic Range</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_HW_MODE_DCG</td>
+<td>Double conversion gain</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW8</td>
+<td>8-bit Compressed Mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW10</td>
+<td>10-bit Compressed Mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW12</td>
+<td>12-bit Compressed Mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW14</td>
+<td>14-bit Compressed Mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_HW_MODE_EMBEDDED_RAW16</td>
+<td>16-bit Compressed Mode</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#36-mi_snr_mipiattr_t">MI_SNR_MipiAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="34-mi_snr_res_t">3.4. MI_SNR_Res_t<a class="headerlink" href="#34-mi_snr_res_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define Sensor resolution attribute</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_SNR_Res_s
+
+{
+
+    MI_SYS_WindowRect_t  stCropRect;
+
+    MI_SYS_WindowSize_t  stOutputSize;  /**&lt; Sensor actual output size */
+
+    MI_U32 u32MaxFps;    /**&lt; Max fps in this resolution */
+
+    MI_U32 u32MinFps;    /**&lt; Min fps in this resolution*/
+
+    MI_S8 strResDesc[32];   // Need to put “HDR” here if the resolution is for HDR
+
+} __attribute__((packed, aligned(4))) MI_SNR_Res_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stCropRect</td>
+<td>Crop rectangle on the output size</td>
+</tr>
+<tr>
+<td>stOutputSize</td>
+<td>Sensor output size</td>
+</tr>
+<tr>
+<td>u32MaxFps</td>
+<td>Maximum frame rate under current resolution</td>
+</tr>
+<tr>
+<td>u32MinFps</td>
+<td>Minimum frame rate under current resolution</td>
+</tr>
+<tr>
+<td>strResDesc</td>
+<td>Resolution string</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>Stoutputsize is the original width and height of sensor and stcroprect is
+the size cropped on the original image, so stcroprect is the actual output
+area of sensor.</p>
+<p><img alt="" src="mymedia/sensor/sensor-3.svg" />   </p>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#210-mi_snr_getres">MI_SNR_GetRes</a></p>
+<p><a href="#211-mi_snr_getcurres">MI_SNR_GetCurRes</a></p>
+<p><a href="#212-mi_snr_setres">MI_SNR_SetRes</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="35-mi_snr_attrparallel_t">3.5. MI_SNR_AttrParallel_t<a class="headerlink" href="#35-mi_snr_attrparallel_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define Parallel Sensor attribute</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_SNR_AttrParallel_s
+
+{
+
+    MI_VIF_SyncAttr_t stSyncAttr;
+
+} MI_SNR_AttrParallel_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stSyncAttr</td>
+<td>Parallel signal attribute</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#38-mi_snr_intfattr_u">MI_SNR_IntfAttr_u</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="36-mi_snr_mipiattr_t">3.6. MI_SNR_MipiAttr_t<a class="headerlink" href="#36-mi_snr_mipiattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define MIPI Sensor attribute</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef  struct MI_SNR_MipiAttr_s
+
+{
+
+    MI_U32  u32LaneNum; // multiple signals sent simultaneously
+
+    MI_U32  u32DataFormat;      //0: YUV 422 format. 1: RGB pattern.
+
+    MI_U32  u32HsyncMode; //hsync for previous or next line
+
+    MI_U32  u32Sampling_delay;
+
+    /** &lt; MIPI start sampling delay */ /*bit 0~7: clk_skip_ns. bit 8~15: 
+    data_skip_ns*/
+
+    MI_SNR_HDRHWMode_e  eHdrHWmode;
+
+    MI_U32  u32Hdr_Virchn_num;
+
+    MI_U32  u32Long_packet_type[2];
+
+    // [0]Null [1]blinking [2]embedded [14]yuv422_8b [26]RAW8 [27]RAW10 [28]RAW12 [32]UD1   [33]UD2 [34]UD3 [35]UD4 [36]UD5 [37]UD6 [38]UD7 [39]UD8
+
+}MI_SNR_MipiAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32LaneNum</td>
+<td>Number of lanes with support for simultaneous data transmission</td>
+</tr>
+<tr>
+<td>u32DataFormat</td>
+<td>0: YUV 422 format, 1: RGB pattern</td>
+</tr>
+<tr>
+<td>eDataYUVOrder</td>
+<td>YUV order</td>
+</tr>
+<tr>
+<td>u32HsyncMode</td>
+<td>Previous or next line hsync</td>
+</tr>
+<tr>
+<td>u32Sampling_delay</td>
+<td>Delay and skip header part</td>
+</tr>
+<tr>
+<td>eHdrHWmode</td>
+<td>Sensor supported HDR mode</td>
+</tr>
+<tr>
+<td>u32Hdr_Virchn_num</td>
+<td>Sensor supported HDR virtual channel number</td>
+</tr>
+<tr>
+<td>u32Long_packet_type[2]</td>
+<td>Sensor supported packet type</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#38-mi_snr_intfattr_u">MI_SNR_IntfAttr_u</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="37-mi_snr_attrbt656_t">3.7. MI_SNR_AttrBt656_t<a class="headerlink" href="#37-mi_snr_attrbt656_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define BT656 sensor attribute</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct  MI_SNR_AttrBt656_s
+
+{
+
+    MI_U32  u32Multiplex_num;
+
+    MI_SNR_SyncAttr_t stSyncAttr;
+
+    MI_SNR_ClkEdge_e    eClkEdge;
+
+    MI_SNR_BitOrder_e   eBitSwap;
+
+} MI_SNR_AttrBt656_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Multiplex_num</td>
+<td>Number of lanes in Multiplex mode</td>
+</tr>
+<tr>
+<td>stSyncAttr</td>
+<td>Sync signal attribute</td>
+</tr>
+<tr>
+<td>eClkEdge</td>
+<td>Sampling clock mode</td>
+</tr>
+<tr>
+<td>eBitSwap</td>
+<td>Data orientation</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#38-mi_snr_intfattr_u">MI_SNR_IntfAttr_u</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="38-mi_snr_intfattr_u">3.8. MI_SNR_IntfAttr_u<a class="headerlink" href="#38-mi_snr_intfattr_u" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define sensor interface type mux</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef union
+
+{
+
+    MI_SNR_AttrParallel_t stParallelAttr;
+
+    MI_SNR_MipiAttr_t stMipiAttr;
+
+    MI_SNR_AttrBt656_t stBt656Attr;
+
+} MI_SNR_IntfAttr_u;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stParallelAttr</td>
+<td>Parallel sensor attribute</td>
+</tr>
+<tr>
+<td>stMipiAttr</td>
+<td>MIPI sensor attribute</td>
+</tr>
+<tr>
+<td>stBt656Attr</td>
+<td>BT656 sensor attribute</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#39-mi_snr_padinfo_t">MI_SNR_PADInfo_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="39-mi_snr_padinfo_t">3.9. MI_SNR_PADInfo_t<a class="headerlink" href="#39-mi_snr_padinfo_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define sensor pad information attribute</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_SNR_PADInfo_s
+
+{
+
+    MI_U32 u32PlaneCount;
+
+    MI_SNR_IntfMode_e eIntfMode;
+
+    MI_SNR_HDRType_e eHDRMode;
+
+    MI_SNR_IntfAttr_u unIntfAttr;
+
+    MI_BOOL bEarlyInit;
+
+} MI_SNR_PADInfo_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32PlaneCount</td>
+<td>Maximum mux plane count for BT656 sensor, and amount of long/short exposure for MIPI sensor</td>
+</tr>
+<tr>
+<td>eIntfMode</td>
+<td>Sensor interface enumeration</td>
+</tr>
+<tr>
+<td>eHDRMode</td>
+<td>HDR mode</td>
+</tr>
+<tr>
+<td>unIntfAttr</td>
+<td>Sensor interface attribute union</td>
+</tr>
+<tr>
+<td>bEarlyInit</td>
+<td>Whether the sensor has been initialized in advance</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>In dual OS system, baearlyinit is true, and pure Linux is false.</p>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#23-mi_snr_getpadinfo">MI_SNR_GetPadInfo</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="310-mi_snr_planeinfo_t">3.10. MI_SNR_PlaneInfo_t<a class="headerlink" href="#310-mi_snr_planeinfo_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define sensor plane information attribute</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_SNR_PlaneInfo_s
+{
+    MI_U32                  u32PlaneID;// For HDR long/short exposure or BT656 channel 0~3
+    MI_S8                   s8SensorName[32];
+    MI_SYS_WindowRect_t     stCapRect;
+    MI_SYS_BayerId_e        eBayerId;
+    MI_SYS_DataPrecision_e  ePixPrecision;
+    MI_SNR_HDRSrc_e         eHdrSrc;
+    MI_U32                  u32ShutterUs;
+    MI_U32                  u32SensorGainX1024;
+    MI_U32                  u32CompGain;
+    MI_SYS_PixelFormat_e     ePixel;
+} MI_SNR_PlaneInfo_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32PlaneID</td>
+<td>Indicates whether the current plane applies long exposure or short exposure when HDR is turned on, and the current plane ID in mux plane when BT656 is turned on.</td>
+</tr>
+<tr>
+<td>s8SensorName</td>
+<td>Sensor name string</td>
+</tr>
+<tr>
+<td>stCapRect</td>
+<td>Crop position of sensor data</td>
+</tr>
+<tr>
+<td>eBayerId</td>
+<td>RGB order</td>
+</tr>
+<tr>
+<td>ePixPrecision</td>
+<td>RGB Compressed Mode</td>
+</tr>
+<tr>
+<td>eHdrSrc</td>
+<td>HDR channel number</td>
+</tr>
+<tr>
+<td>u32ShutterUs</td>
+<td>Sensor Shutter</td>
+</tr>
+<tr>
+<td>u32SensorGainX1024</td>
+<td>Sensor Gain</td>
+</tr>
+<tr>
+<td>u32CompGain</td>
+<td>Sensor Compensate Gain</td>
+</tr>
+<tr>
+<td>ePixel</td>
+<td>Sensor data format</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>When the MIPI interface is not enabled, u32planeid = 0xff. When HDR is
+    enabled, u32planeid = 0 represents long exposure, and u32planeid = 1
+    represents short exposure.</p>
+</li>
+<li>
+<p>When the BT656 interface is used, it represents the channel ID of the
+    current plane in the composite path.</p>
+</li>
+<li>
+<p>#define RGB_BAYER_PIXEL(BitMode, PixelID)
+    (E_MI_SYS_PIXEL_FRAME_RGB_BAYER_BASE+
+    BitMode*E_MI_SYS_PIXEL_BAYERID_MAX+ PixelID).</p>
+</li>
+<li>
+<p>Through the sys interface, the ebayerid and epixpecision of the sensor are
+    converted into the pixel format of sys, which is set to the backend mi_vif
+    output and mi_isp input. MI_SYS_PixelFormat_e ePixel =
+    RGB_BAYER_PIXEL(ePixPrecision, eBayerId)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#23-mi_snr_getpadinfo">MI_SNR_GetPadInfo</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="311-mi_snr_cust_dir_e">3.11. MI_SNR_CUST_DIR_e<a class="headerlink" href="#311-mi_snr_cust_dir_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define sensor customization function data type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_CUSTDATA_TO_DRIVER,
+
+    E_MI_SNR_CUSTDATA_TO_USER,
+
+    E_MI_SNR_CUSTDATA_MAX = E_MI_SNR_CUSTDATA_TO_USER,
+
+} MI_SNR_CUST_DIR_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_CUSTDATA_TO_DRIVER</td>
+<td>Customized buffer data set to sensor driver</td>
+</tr>
+<tr>
+<td>E_MI_SNR_CUSTDATA_TO_USER</td>
+<td>Get customized buffer data from sensor</td>
+</tr>
+<tr>
+<td>E_MI_SNR_CUSTDATA_MAX</td>
+<td>Data type Max option</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#217-mi_snr_custfunction">MI_SNR_CustFunction</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="312-mi_snr_initparam_t">3.12. MI_SNR_InitParam_t<a class="headerlink" href="#312-mi_snr_initparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Sensor device initialization parameter.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_SNR_InitParam_s
+
+{
+
+    MI_U32 u32DevId;
+
+    MI_U8 *u8Data;
+
+} MI_SNR_InitParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32DevId</td>
+<td>Device ID</td>
+</tr>
+<tr>
+<td>u8Data</td>
+<td>Data pointer buffer</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data types and interfaces</p>
+<p><a href="#218-mi_snr_initdev">MI_SNR_InitDev</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="313-mi_snr_anadec_srcattr_t">3.13. MI_SNR_Anadec_SrcAttr_t<a class="headerlink" href="#313-mi_snr_anadec_srcattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define analog decode input param</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_SNR_Anadec_SrcAttr_s
+
+{
+
+    MI_SNR_Anadec_Status_e eStatus;
+
+    MI_SNR_Anadec_TransferMode_e eTransferMode;
+
+    MI_SNR_Anadec_Format_e eFormat;
+
+    MI_SYS_WindowSize_t stRes;
+
+    MI_U32 u32Fps;
+
+}MI_SNR_Anadec_SrcAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eStatus</td>
+<td>Input source status enum</td>
+</tr>
+<tr>
+<td>eTransferMode</td>
+<td>Input source transfer mode enum</td>
+</tr>
+<tr>
+<td>eFormat</td>
+<td>Input source format enum</td>
+</tr>
+<tr>
+<td>stRes</td>
+<td>Input source reselution</td>
+</tr>
+<tr>
+<td>u32Fps</td>
+<td>Input source FPS</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#27-mi_snr_getanadecsrcattr">MI_SNR_GetAnadecSrcAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="314-mi_snr_anadec_status_e">3.14. MI_SNR_Anadec_Status_e<a class="headerlink" href="#314-mi_snr_anadec_status_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define analog decode input source status</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_ANADEC_STATUS_NO_READY = 0,
+
+    E_MI_SNR_ANADEC_STATUS_DISCNT,
+
+    E_MI_SNR_ANADEC_STATUS_CONNECT,
+
+    E_MI_SNR_ANADEC_STATUS_NUM
+
+}MI_SNR_Anadec_Status_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_ANADEC_STATUS_NO_READY</td>
+<td>Input source not ready</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_STATUS_DISCNT</td>
+<td>Input source disconnect</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_STATUS_CONNECT</td>
+<td>Input source connect</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_STATUS_NUM</td>
+<td>Input source NUM option</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#313-mi_snr_anadec_srcattr_t">MI_SNR_Anadec_SrcAttr_t</a></p>
+<p><a href="#27-mi_snr_getanadecsrcattr">MI_SNR_GetAnadecSrcAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="315-mi_snr_anadec_transfermode_e">3.15. MI_SNR_Anadec_TransferMode_e<a class="headerlink" href="#315-mi_snr_anadec_transfermode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define analog decode input source transfer mode</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_ANADEC_TRANSFERMODE_CVBS = 0,
+
+    E_MI_SNR_ANADEC_TRANSFERMODE_CVI,
+
+    E_MI_SNR_ANADEC_TRANSFERMODE_TVI,
+
+    E_MI_SNR_ANADEC_TRANSFERMODE_AHD,
+
+    E_MI_SNR_ANADEC_TRANSFERMODE_NUM,
+
+}MI_SNR_Anadec_TransferMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_ANADEC_TRANSFERMODE_CVBS</td>
+<td>CVBS transfer mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_TRANSFERMODE_CVI</td>
+<td>CVI transfer mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_TRANSFERMODE_TVI</td>
+<td>TVI transfer mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_TRANSFERMODE_AHD</td>
+<td>AHD transfer mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_TRANSFERMODE_NUM</td>
+<td>transfer mode NUM option</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#313-mi_snr_anadec_srcattr_t">MI_SNR_Anadec_SrcAttr_t</a></p>
+<p><a href="#27-mi_snr_getanadecsrcattr">MI_SNR_GetAnadecSrcAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="316-mi_snr_anadec_format_e">3.16. MI_SNR_Anadec_Format_e<a class="headerlink" href="#316-mi_snr_anadec_format_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define analog decode input source format</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_ANADEC_FORMAT_NTSC = 0,
+
+    E_MI_SNR_ANADEC_FORMAT_PAL,
+
+    E_MI_SNR_ANADEC_FORMAT_NUM,
+
+}MI_SNR_Anadec_Format_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_ANADEC_FORMAT_NTSC</td>
+<td>NTSC format</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_FORMAT_PAL</td>
+<td>PAL format</td>
+</tr>
+<tr>
+<td>E_MI_SNR_ANADEC_FORMAT_NUM</td>
+<td>Format NUM option</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#313-mi_snr_anadec_srcattr_t">MI_SNR_Anadec_SrcAttr_t</a></p>
+<p><a href="#27-mi_snr_getanadecsrcattr">MI_SNR_GetAnadecSrcAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="317-mi_snr_polar_e">3.17. MI_SNR_Polar_e<a class="headerlink" href="#317-mi_snr_polar_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define video input signal is valid.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_PIN_POLAR_POS,
+
+    E_MI_SNR_PIN_POLAR_NEG
+
+} MI_SNR_Polar_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_PIN_POLAR_POS</td>
+<td>Valid at positive</td>
+</tr>
+<tr>
+<td>E_MI_SNR_PIN_POLAR_NEG</td>
+<td>Valid at negative</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>Only can be set in the parallel sensor interface.</p>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#318-mi_snr_syncattr_t">MI_SNR_SyncAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="318-mi_snr_syncattr_t">3.18. MI_SNR_SyncAttr_t<a class="headerlink" href="#318-mi_snr_syncattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Sync signal attributes setting.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_SNR_SyncAttr_s
+
+{
+
+    MI_SNR_Polar_e   eVsyncPolarity;
+
+    MI_SNR_Polar_e   eHsyncPolarity;
+
+    MI_SNR_Polar_e   ePclkPolarity;
+
+    MI_U32   VsyncDelay;
+
+    MI_U32   HsyncDelay;
+
+    MI_U32   PclkDelay;
+
+} MI_SNR_SyncAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eVsyncPolarity</td>
+<td>Vertical sync signal  effective polarity</td>
+</tr>
+<tr>
+<td>eHsyncPolarity</td>
+<td>Horizontal sync signal  effective polarity</td>
+</tr>
+<tr>
+<td>ePclkPolarity</td>
+<td>Pixel Clock effective  polarity</td>
+</tr>
+<tr>
+<td>VsyncDelay</td>
+<td>Vertical sync signal  delay time</td>
+</tr>
+<tr>
+<td>HsyncDelay</td>
+<td>Horizontal sync signal  delay time</td>
+</tr>
+<tr>
+<td>PclkDelay</td>
+<td>Pixel Clock delay time</td>
+</tr>
+</tbody>
+</table>
+<p>1920x1080 resolution, Pclk/Hsync/Vsync are all valid at positive, the waveform is as follows:</p>
+<p><img alt="" src="mymedia/sensor/sensor-4.svg" /></p>
+<p>Pclk: pixel clock, a pixel is received, a clock is generated.</p>
+<p>Hsync: horizontal sync, when valid, the received signal belongs to the same horizon. </p>
+<p>Vsync: vertical sync, when valid, the received signal belongs to the same frame.</p>
+</li>
+<li>
+<p>Note</p>
+<p>Only can be set in the parallel sensor interface.</p>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#35-mi_snr_attrparallel_t">MI_SNR_AttrParallel_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="319-mi_snr_bitorder_e">3.19. MI_SNR_BitOrder_e<a class="headerlink" href="#319-mi_snr_bitorder_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Device data bit reverse order setting.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_BITORDER_NORMAL = 0,
+
+    E_MI_SNR_BITORDER_REVERSED
+
+} MI_SNR_BitOrder_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_BITORDER_NORMAL</td>
+<td>Normal data bit ordering</td>
+</tr>
+<tr>
+<td>E_MI_SNR_BITORDER_REVERSED</td>
+<td>Reverse data bit ordering</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#37-mi_snr_attrbt656_t">MI_SNR_AttrBt656_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="320-mi_snr_clkedge_e">3.20. MI_SNR_ClkEdge_e<a class="headerlink" href="#320-mi_snr_clkedge_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define clock type received by the video device.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_CLK_EDGE_SINGLE_UP,
+
+    E_MI_SNR_CLK_EDGE_SINGLE_DOWN,
+
+    E_MI_SNR_CLK_EDGE_DOUBLE,
+
+    E_MI_SNR_CLK_EDGE_MAX
+
+} MI_SNR_ClkEdge_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_CLK_EDGE_SINGLE_UP</td>
+<td>Clock single edge  mode, VIF is sampled on the rising edge.</td>
+</tr>
+<tr>
+<td>E_MI_SNR_CLK_EDGE_SINGLE_DOWN</td>
+<td>Clock single edge  mode, VIF is sampled on the falling edge.</td>
+</tr>
+<tr>
+<td>E_MI_SNR_CLK_EDGE_DOUBLE</td>
+<td>Double-edge data from  foreground, VIF is sampled at double-edge.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#37-mi_snr_attrbt656_t">MI_SNR_AttrBt656_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="321-mi_snr_intfmode_e">3.21. MI_SNR_IntfMode_e<a class="headerlink" href="#321-mi_snr_intfmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define interface mode of video input device.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_MODE_BT656,
+
+    E_MI_SNR_MODE_DIGITAL_CAMERA,
+
+    E_MI_SNR_MODE_BT1120_STANDARD,
+
+    E_MI_SNR_MODE_BT1120_INTERLEAVED,
+
+    E_MI_SNR_MODE_MIPI,
+
+    E_MI_SNR_MODE_LVDS,
+
+    E_MI_SNR_MODE_MAX
+
+} MI_SNR_IntfMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_MODE_BT656</td>
+<td>The input data  conforms to the standard BT.656 protocol, the port data input mode is  luminance and chrominance composite mode, and the component mode is single.</td>
+</tr>
+<tr>
+<td>E_MI_SNR_MODE_DIGITAL_CAMERA</td>
+<td>The input data  conforms to digital camera protocol, the port data input mode is luminance  and chrominance composite mode, and the component mode is single.</td>
+</tr>
+<tr>
+<td>E_MI_SNR_MODE_BT1120_STANDARD</td>
+<td>The input data  conforms to the standard BT.1120 protocol (BT.656+dual  component), the port data input mode is luminance and chrominance separation  mode, and the component mode is double.</td>
+</tr>
+<tr>
+<td>E_MI_SNR_MODE_BT1120_INTERLEAVED</td>
+<td>The input data  protocol conforms to BT.1120 interleave mode, the port data input mode is luminance and  chrominance separation mode, and the component mode is double.</td>
+</tr>
+<tr>
+<td>E_MI_SNR_MODE_MIPI</td>
+<td>The input data  conforms to MIPI protocol.</td>
+</tr>
+<tr>
+<td>E_MI_SNR_MODE_LVDS</td>
+<td>The input data conforms to LVDS protocol.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>Get the current interface mode through the eIntfMode in MI_SNR_GetPadInfo.</p>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#39-mi_snr_padinfo_t">MI_SNR_PADInfo_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="322-mi_snr_hdrtype_e">3.22. MI_SNR_HDRType_e<a class="headerlink" href="#322-mi_snr_hdrtype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define HDR type of video device.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_SNR_HDR_TYPE_OFF,
+
+    E_MI_SNR_HDR_TYPE_VC = 0x1,       //virtual channel mode HDR,vc0-&gt;long, vc1-&gt;short
+
+    E_MI_SNR_HDR_TYPE_DOL = 0x2,
+
+    E_MI_SNR_HDR_TYPE_EMBEDDED = 0x4,  //compressed HDR mode
+
+    E_MI_SNR_HDR_TYPE_LI = 0x8,                //Line interlace HDR
+
+    E_MI_SNR_HDR_TYPE_MAX
+
+} MI_SNR_HDRType_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_SNR_HDR_TYPE_OFF</td>
+<td>Close HDR</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_TYPE_VC</td>
+<td>virtual channel mode  HDR,vc0-&gt;long, vc1-&gt;short</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_TYPE_DOL</td>
+<td>Digital Overlap High  Dynamic Range</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_TYPE_EMBEDDED</td>
+<td>compressed HDR mode</td>
+</tr>
+<tr>
+<td>E_MI_SNR_HDR_TYPE_LI</td>
+<td>Line interlace HDR</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>HDR type is related to sensor, which can be obtained by eHDRMode in MI_SNR_GetPadInfo.</p>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#39-mi_snr_padinfo_t">MI_SNR_PADInfo_t</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="4-sensor-error-code">4. SENSOR ERROR CODE<a class="headerlink" href="#4-sensor-error-code" title="Permanent link">&para;</a></h2>
+<hr />
+<p>The Sensor API error codes are listed in the table below:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Error Code</strong></th>
+<th><strong>Macro Definition</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xA01B2001</td>
+<td>MI_ERR_SNR_INVALID_DEVID</td>
+<td>Invalid Device ID</td>
+</tr>
+<tr>
+<td>0xA01B2002</td>
+<td>MI_ERR_SNR_INVALID_CHNID</td>
+<td>Invalid channel number</td>
+</tr>
+<tr>
+<td>0xA01B2003</td>
+<td>MI_ERR_SNR_INVALID_PARA</td>
+<td>Invalid parameter setting</td>
+</tr>
+<tr>
+<td>0xA01B2006</td>
+<td>MI_ERR_SNR_INVALID_NULL_PTR</td>
+<td>Null pointer in input parameter</td>
+</tr>
+<tr>
+<td>0xA01B2007</td>
+<td>MI_ERR_SNR_FAILED_NOTCONFIG</td>
+<td>Pad or plane attribute not configured</td>
+</tr>
+<tr>
+<td>0xA01B2008</td>
+<td>MI_ERR_SNR_NOT_SUPPORT</td>
+<td>Unsupported operation</td>
+</tr>
+<tr>
+<td>0xA01B2009</td>
+<td>MI_ERR_SNR_NOT_PERM</td>
+<td>Operation not permitted</td>
+</tr>
+<tr>
+<td>0xA01B200C</td>
+<td>MI_ERR_SNR_NOMEM</td>
+<td>Memory allocation failed</td>
+</tr>
+<tr>
+<td>0xA01B200E</td>
+<td>MI_ERR_SNR_BUF_EMPTY</td>
+<td>Buffer Empty</td>
+</tr>
+<tr>
+<td>0xA01B200F</td>
+<td>MI_ERR_SNR_BUF_FULL</td>
+<td>Buffer Full</td>
+</tr>
+<tr>
+<td>0xA01B2010</td>
+<td>MI_ERR_SNR_SYS_NOTREADY</td>
+<td>System not initialized</td>
+</tr>
+<tr>
+<td>0xA01B2012</td>
+<td>MI_ERR_SNR_BUSY</td>
+<td>System busy</td>
+</tr>
+<tr>
+<td>0xA01B201F</td>
+<td>MI_ERR_SNR_FAIL</td>
+<td>Interface failed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-procfs-introduction">5. PROCFS INTRODUCTION<a class="headerlink" href="#5-procfs-introduction" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="51-cat">5.1. cat<a class="headerlink" href="#51-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Debug info</p>
+<div class="codehilite"><pre><span></span># cat /proc/mi_modules/mi_sensor/mi_sensor0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/sensor/sensor-5.png" /></p>
+</li>
+<li>
+<p>Debug info analysis</p>
+<p>Record the current sensor usage status and related attributes, and can dynamically obtain information, which is convenient for debugging and testing.</p>
+</li>
+<li>
+<p>Parameter Description</p>
+<p><table>
+    <tr>
+        <th colspan="2">Parameter</th>
+        <th width=415 colspan="2">Description</th>
+    </tr>
+    <tr>
+        <td width=100 rowspan="47">Pad info</td>
+        <td>Padid  </td>
+        <td colspan="2">Sensor pad id </td>
+    </tr>
+    <tr>
+        <td>Planemode  </td>
+        <td colspan="2">Planemode switch</td>
+    </tr>
+    <tr>
+        <td>bEnable  </td>
+        <td colspan="2">Sensor enable</td>
+    </tr>
+    <tr>
+        <td>bmirror</td>
+        <td colspan="2">Mirror</td>
+    </tr>
+    <tr>
+        <td>bflip</td>
+        <td colspan="2">Flip</td>
+    </tr>
+    <tr>
+        <td>fps</td>
+        <td colspan="2">Frame rate</td>
+    </tr>
+    <tr>
+        <td>ResCnt</td>
+        <td colspan="2">Resolution count supported by Sensor</td>
+    </tr>
+    <tr>
+        <td>Intfmode</td>
+        <td colspan="2">Interface mode</td>
+    </tr>
+    <tr>
+        <td>Hdrmode</td>
+        <td colspan="2">Hdr hw mode</td>
+    </tr>
+    <tr>
+        <td>Planecnt</td>
+        <td colspan="2">Plane channel count</td>
+    </tr>
+    <tr>
+        <td rowspan="9"> Mipiattr</td>
+        <td>Yuvorder</td>
+        <td>Yuv order</td>
+    </tr>
+    <tr>
+        <td>Hdrhwmode</td>
+        <td>Hdr hw mode</td>
+    </tr>
+    <tr>
+        <td>Datafmt</td>
+        <td>Data format, yuv/rgb</td>
+    </tr>
+    <tr>
+        <td>HdrVchNum</td>
+        <td>HDR virtual channels number supported by Sensor </td>
+    </tr>
+    <tr>
+        <td>HsyncMode</td>
+        <td>0: Synchronize last item <br>1: Synchronize hsync signal of next line</td>
+    </tr>
+    <tr>
+        <td>LaneNum</td>
+        <td>The number of signal lines that support simultaneous data transmission</td>
+    </tr>
+    <tr>
+        <td>LPackType0</td>
+        <td>Data package format 0</td>
+    </tr>
+    <tr>
+        <td>LPackType1</td>
+        <td>Data package format 1</td>
+    </tr>
+    <tr>
+        <td>samDelay</td>
+        <td>Delay skipping the data header part</td>
+    </tr>
+    <tr>
+        <td rowspan="9">BT656Attr</td>
+        <td>BitSwap</td>
+        <td>Data arrangement direction</td>
+    </tr>
+    <tr>
+        <td>ClkEdge</td>
+        <td>Sample clock mode</td>
+    </tr>
+    <tr>
+        <td>Multinum</td>
+        <td>Multimode number</td>
+    </tr>
+    <tr>
+        <td>HPol</td>
+        <td>H sync polarity</td>
+    </tr>
+    <tr>
+        <td>PcPol</td>
+        <td>Pclk polarity</td>
+    </tr>
+    <tr>
+        <td>VPol</td>
+        <td>V sync polarity</td>
+    </tr>
+    <tr>
+        <td>HDelay</td>
+        <td>H sync delay</td>
+    </tr>
+    <tr>
+        <td>VDelay</td>
+        <td>V sync delay</td>
+    </tr>
+    <tr>
+        <td>PcDelay</td>
+        <td>Pclk delay</td>
+    </tr>
+    <tr>
+        <td rowspan="6">ParallelAttr</td>
+        <td>HPol</td>
+        <td>H sync  polarity</td>
+    </tr>
+    <tr>
+        <td>PcPol</td>
+        <td>Pclk polarity</td>
+    </tr>
+    <tr>
+        <td>VPol</td>
+        <td>V sync polarity</td>
+    </tr>
+    <tr>
+        <td>HDelay</td>
+        <td>H sync delay</td>
+    </tr>
+    <tr>
+        <td>VDelay</td>
+        <td>V sync delay</td>
+    </tr>
+    <tr>
+        <td>PcDelay</td>
+        <td>Pclk delay</td>
+    </tr>
+    <tr>
+        <td rowspan="5">Res</td>
+        <td colspan="2">Resolution info supported by Sensor</td>
+    </tr>
+    <tr>
+        <td>strResDesc</td>
+        <td>Resolution</td>
+    </tr>
+    <tr>
+        <td>CropX/CropY/CropW/CropH    </td>
+        <td>Crop parameter</td>
+    </tr>
+    <tr>
+        <td>OutW/OutH</td>
+        <td>Output width/height</td>
+    </tr>
+    <tr>
+        <td>MaxFps/MinFps</td>
+        <td>MaxFps/MinFps</td>
+    </tr>
+    <tr>
+        <td>Cur</td>
+        <td colspan="2">Current used resolution info</td>
+    </tr>
+    <tr>
+        <td>Padid  </td>
+        <td colspan="2">pad id </td>
+    </tr>
+    <tr>
+        <td>Planeid  </td>
+        <td colspan="2">Plane id</td>
+    </tr>
+    <tr>
+        <td>SnrName</td>
+        <td colspan="2">Sensor name</td>
+    </tr>
+    <tr>
+        <td>BayerId</td>
+        <td colspan="2">Bayer id</td>
+    </tr>
+    <tr>
+        <td>ePixPrec</td>
+        <td colspan="2">Pixel  precision  (12bpp,10bpp ….)</td>
+    </tr>
+    <tr>
+        <td>eHdrSrc   </td>
+        <td colspan="2">HDR  channel id </td>
+    </tr>
+    <tr>
+        <td>CropX/CropY/CropW/CropH</td>
+        <td colspan="2">Crop  parameter</td>
+    </tr>
+</table></p>
+</li>
+</ul>
+<hr />
+<h3 id="52-echo">5.2. echo<a class="headerlink" href="#52-echo" title="Permanent link">&para;</a></h3>
+<p>Echo help can view available commands:</p>
+<div class="codehilite"><pre><span></span># echo help &gt; /proc/mi_modules/mi_sensor/mi_sensor0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/sensor/sensor-6.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set sensor mirrot/flip.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo setmirrorflip [PadId, bMirror, bFlip] > /proc/mi_modules/mi_sensor/mi_sensor0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>PadId: pad id  <br>bMirror: Mirror <br>bFlip: Mirror</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo setmirrorflip 0 1 0 > /proc/mi_modules/mi_sensor/mi_sensor0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set sensor frame rate.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo setfps [Padid, fps] > /proc/mi_modules/mi_sensor/mi_sensor0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>PadId: pad id    <br>fps: frame rate</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo setfps 0 15 > /proc/mi_modules/mi_sensor/mi_sensor0</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="sed_en.html" title="SED" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                SED
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="src_en.html" title="SRC" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SRC
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/search_index.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

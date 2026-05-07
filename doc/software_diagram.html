@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SSC378QE + SC465SL Software Stack</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: 'Segoe UI', 'Malgun Gothic', sans-serif; 
+    background: #f0f2f5; 
+    padding: 40px;
+  }
+  h1 { text-align: center; color: #1a1a2e; margin-bottom: 8px; font-size: 22px; }
+  .subtitle { text-align: center; color: #666; font-size: 13px; margin-bottom: 32px; }
+
+  .stack-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* ── 레이어 공통 ── */
+  .layer {
+    border-radius: 12px;
+    margin-bottom: 4px;
+    padding: 18px 24px;
+    position: relative;
+  }
+  .layer-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .layer-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .layer-title {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .layer-modules {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .module {
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+    min-width: 100px;
+    flex: 1;
+  }
+  .module .name {
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  .module .detail {
+    font-size: 10px;
+    opacity: 0.8;
+  }
+
+  /* ── 화살표 (레이어 간) ── */
+  .arrow-down {
+    text-align: center;
+    color: #bbb;
+    font-size: 18px;
+    line-height: 1;
+    padding: 2px 0;
+    letter-spacing: 16px;
+  }
+
+  /* ── Layer 5: Application ── */
+  .l-app { background: #e8f5e9; border: 2px solid #66bb6a; }
+  .l-app .layer-number { background: #43a047; }
+  .l-app .layer-title { color: #2e7d32; }
+  .l-app .module { background: #fff; border: 1.5px solid #a5d6a7; color: #2e7d32; }
+
+  /* ── Layer 4: AI ── */
+  .l-ai { background: #fce4ec; border: 2px solid #ef5350; }
+  .l-ai .layer-number { background: #e53935; }
+  .l-ai .layer-title { color: #c62828; }
+  .l-ai .module { background: #fff; border: 1.5px solid #ef9a9a; color: #c62828; }
+
+  /* ── Layer 3: Media ── */
+  .l-media { background: #e3f2fd; border: 2px solid #42a5f5; }
+  .l-media .layer-number { background: #1e88e5; }
+  .l-media .layer-title { color: #1565c0; }
+  .l-media .module { background: #fff; border: 1.5px solid #90caf9; color: #1565c0; }
+  .l-media .module.highlight { background: #e3f2fd; border-color: #1e88e5; }
+
+  /* ── Media Pipeline ── */
+  .pipeline {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .pipe-block {
+    background: #1565c0;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    text-align: center;
+    min-width: 70px;
+  }
+  .pipe-block .name { font-weight: 700; font-size: 12px; }
+  .pipe-block .detail { font-size: 9px; opacity: 0.8; }
+  .pipe-arrow {
+    color: #1565c0;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 4px;
+  }
+
+  /* ── Layer 2: OS/BSP ── */
+  .l-os { background: #fff3e0; border: 2px solid #ffa726; }
+  .l-os .layer-number { background: #fb8c00; }
+  .l-os .layer-title { color: #e65100; }
+  .l-os .module { background: #fff; border: 1.5px solid #ffcc80; color: #e65100; }
+
+  /* ── Layer 1: Boot ── */
+  .l-boot { background: #f3e5f5; border: 2px solid #ab47bc; }
+  .l-boot .layer-number { background: #8e24aa; }
+  .l-boot .layer-title { color: #6a1b9a; }
+  .l-boot .module { background: #fff; border: 1.5px solid #ce93d8; color: #6a1b9a; }
+
+  /* ── Layer 0: Hardware ── */
+  .l-hw { background: #263238; border: 2px solid #546e7a; color: #fff; }
+  .l-hw .layer-number { background: #e94560; }
+  .l-hw .layer-title { color: #ffd700; }
+  .l-hw .module { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2); color: #eceff1; }
+  .l-hw .module .name { color: #ffd700; }
+</style>
+</head>
+<body>
+
+<h1>Software Stack Architecture</h1>
+<p class="subtitle">SC465SL + SSC378QE AI Starlight IP Camera — StarVision AI-4M</p>
+
+<div class="stack-container">
+
+  <!-- Layer 5: Application -->
+  <div class="layer l-app">
+    <div class="layer-header">
+      <div class="layer-number">5</div>
+      <div class="layer-title">Application Layer</div>
+    </div>
+    <div class="layer-modules">
+      <div class="module">
+        <div class="name">ONVIF Server</div>
+        <div class="detail">Profile S / G / T<br>디바이스 검색·설정</div>
+      </div>
+      <div class="module">
+        <div class="name">RTSP Server</div>
+        <div class="detail">라이브 스트리밍<br>멀티 스트림 지원</div>
+      </div>
+      <div class="module">
+        <div class="name">P2P Agent</div>
+        <div class="detail">클라우드 P2P<br>ICsee / XMEYE</div>
+      </div>
+      <div class="module">
+        <div class="name">Web UI</div>
+        <div class="detail">설정 / 라이브뷰<br>HTTP/HTTPS</div>
+      </div>
+      <div class="module">
+        <div class="name">Event Manager</div>
+        <div class="detail">알림 (Push/Email)<br>SD카드 녹화<br>FTP 업로드</div>
+      </div>
+      <div class="module">
+        <div class="name">OTA Update</div>
+        <div class="detail">펌웨어 원격 업데이트<br>이중 파티션</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-down">▼ ▼ ▼ ▼ ▼</div>
+
+  <!-- Layer 4: AI / Analytics -->
+  <div class="layer l-ai">
+    <div class="layer-header">
+      <div class="layer-number">4</div>
+      <div class="layer-title">AI / Analytics Layer</div>
+    </div>
+    <div class="layer-modules">
+      <div class="module">
+        <div class="name">NPU Runtime</div>
+        <div class="detail">SigmaStar NPU SDK<br>모델 로딩·추론 관리</div>
+      </div>
+      <div class="module">
+        <div class="name">Model: Person</div>
+        <div class="detail">인체 감지<br>≥ 32×32px</div>
+      </div>
+      <div class="module">
+        <div class="name">Model: Vehicle</div>
+        <div class="detail">차량 감지<br>자동차/오토바이/자전거</div>
+      </div>
+      <div class="module">
+        <div class="name">Model: Intrusion</div>
+        <div class="detail">침입 감지<br>영역 진입/이탈</div>
+      </div>
+      <div class="module">
+        <div class="name">Model: LineCross</div>
+        <div class="detail">라인 크로싱<br>방향 판별</div>
+      </div>
+      <div class="module">
+        <div class="name">Smart Dual-Light</div>
+        <div class="detail">AI 감지 연동<br>IR ↔ White LED 전환</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-down">▼ ▼ ▼ ▼ ▼</div>
+
+  <!-- Layer 3: Media -->
+  <div class="layer l-media">
+    <div class="layer-header">
+      <div class="layer-number">3</div>
+      <div class="layer-title">Media Layer — SigmaStar MI (Media Interface)</div>
+    </div>
+    <div style="font-size:12px; color:#1565c0; font-weight:600; margin-bottom: 8px;">
+      Video Pipeline (Main Stream)
+    </div>
+    <div class="pipeline">
+      <div class="pipe-block">
+        <div class="name">VIF</div>
+        <div class="detail">MIPI RX<br>RAW Input</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-block">
+        <div class="name">ISP</div>
+        <div class="detail">8MP Starlight<br>3D-DNR·WDR<br>CNV·De-fog</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-block">
+        <div class="name">SCL</div>
+        <div class="detail">Scale / Crop<br>멀티 스트림</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-block">
+        <div class="name">VENC</div>
+        <div class="detail">H.265+ / H.264<br>4MP@30fps<br>ROI Encoding</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-block">
+        <div class="name">MUX/RTP</div>
+        <div class="detail">스트림 패킷화<br>RTSP 전달</div>
+      </div>
+    </div>
+    <div style="margin-top: 12px;">
+      <div class="layer-modules">
+        <div class="module highlight">
+          <div class="name">AI Channel</div>
+          <div class="detail">SCL → NPU 전달<br>QVGA@15fps</div>
+        </div>
+        <div class="module highlight">
+          <div class="name">AUDIO</div>
+          <div class="detail">MEMS MIC → Codec<br>양방향 음성<br>G.711 / AAC</div>
+        </div>
+        <div class="module highlight">
+          <div class="name">SD Recording</div>
+          <div class="detail">VENC → MP4 Mux<br>Micro SD 로컬 녹화</div>
+        </div>
+        <div class="module highlight">
+          <div class="name">JPEG Capture</div>
+          <div class="detail">ISP → JPEG Enc<br>스냅샷 / 이벤트</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-down">▼ ▼ ▼ ▼ ▼</div>
+
+  <!-- Layer 2: OS / BSP -->
+  <div class="layer l-os">
+    <div class="layer-header">
+      <div class="layer-number">2</div>
+      <div class="layer-title">OS / BSP Layer</div>
+    </div>
+    <div class="layer-modules">
+      <div class="module">
+        <div class="name">Linux Kernel</div>
+        <div class="detail">SigmaStar BSP 패치<br>ARM aarch32/64</div>
+      </div>
+      <div class="module">
+        <div class="name">SC465SL Driver</div>
+        <div class="detail">센서 드라이버<br>I2C 레지스터 제어<br>AE/AGC/HDR</div>
+      </div>
+      <div class="module">
+        <div class="name">ISP Driver</div>
+        <div class="detail">MI ISP 하드웨어<br>IQ 파라미터 로드</div>
+      </div>
+      <div class="module">
+        <div class="name">VENC Driver</div>
+        <div class="detail">H.265+/H.264<br>하드웨어 인코더</div>
+      </div>
+      <div class="module">
+        <div class="name">NPU Driver</div>
+        <div class="detail">CEVA NPU<br>모델 실행 관리</div>
+      </div>
+      <div class="module">
+        <div class="name">ETH / USB</div>
+        <div class="detail">내장 EMAC+EPHY<br>USB Host/OTG</div>
+      </div>
+      <div class="module">
+        <div class="name">GPIO / PWM</div>
+        <div class="detail">LED 제어<br>IR-CUT 구동</div>
+      </div>
+      <div class="module">
+        <div class="name">Rootfs</div>
+        <div class="detail">BusyBox / Buildroot<br>경량 사용자 공간</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-down">▼ ▼ ▼ ▼ ▼</div>
+
+  <!-- Layer 1: Boot -->
+  <div class="layer l-boot">
+    <div class="layer-header">
+      <div class="layer-number">1</div>
+      <div class="layer-title">Boot Layer</div>
+    </div>
+    <div class="layer-modules">
+      <div class="module">
+        <div class="name">IPL (Initial Program Loader)</div>
+        <div class="detail">SoC 내장 ROM → SPI NOR 읽기<br>DDR 초기화 (256MB 내장)</div>
+      </div>
+      <div class="module">
+        <div class="name">U-Boot</div>
+        <div class="detail">2nd Bootloader<br>커널 로드 · 환경 변수<br>OTA 파티션 관리</div>
+      </div>
+      <div class="module">
+        <div class="name">SPI NOR Flash</div>
+        <div class="detail">16~32MB<br>IPL + U-Boot + Kernel<br>+ Rootfs + IQ Bin</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-down">▼ ▼ ▼ ▼ ▼</div>
+
+  <!-- Layer 0: Hardware -->
+  <div class="layer l-hw">
+    <div class="layer-header">
+      <div class="layer-number">0</div>
+      <div class="layer-title">Hardware Layer</div>
+    </div>
+    <div class="layer-modules">
+      <div class="module">
+        <div class="name">SSC378QE</div>
+        <div class="detail">Cortex-A35 · 256MB DDR<br>8MP ISP · NPU · VENC<br>EMAC+EPHY · QFN128</div>
+      </div>
+      <div class="module">
+        <div class="name">SC465SL</div>
+        <div class="detail">4MP BSI · 1/1.88"<br>SL Series · MIPI CSI-2<br>QE 90% · SFCPixel®</div>
+      </div>
+      <div class="module">
+        <div class="name">Peripherals</div>
+        <div class="detail">SPI NOR · Micro SD<br>RJ45/PoE · MEMS MIC<br>IR/WH LED · IR-CUT</div>
+      </div>
+      <div class="module">
+        <div class="name">Power</div>
+        <div class="detail">DC 12V / PoE 802.3af<br>DC-DC · LDO<br>전원 시퀀싱 제어</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,4762 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Security Boot Flow SOP - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1-security-boot" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Security Boot Flow SOP
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Security Boot Flow SOP
+      </label>
+    
+    <a href="OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link md-nav__link--active">
+      Security Boot Flow SOP
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-security-boot" class="md-nav__link">
+    1. SECURITY BOOT介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-otp-key" class="md-nav__link">
+    1.2. OTP Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-cust-key" class="md-nav__link">
+    1.3. CUST Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-boot-flow" class="md-nav__link">
+    1.4. Boot Flow结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-otpsecurity-boot" class="md-nav__link">
+    1.5. OTP开启Security Boot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-security-boot" class="md-nav__link">
+    1.6. 普通Security Boot流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-security-boot" class="md-nav__link">
+    1.7. 加密Security Boot流程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-otp-key" class="md-nav__link">
+    2. OTP Key读写操作说明
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-rsa-key" class="md-nav__link">
+    2.1. 生成 RSA Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-u-boototp" class="md-nav__link">
+    2.2. 使用U-BOOT烧录OTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-otp-command-format" class="md-nav__link">
+    2.3. OTP Command Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-otp-command-support-list-for-ic-pudding" class="md-nav__link">
+    2.4. OTP Command Support List for IC Pudding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-otp-command-support-list-for-ic-tiramisu" class="md-nav__link">
+    2.5. OTP Command Support List for IC Tiramisu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-otp-command-support-list-for-ic-muffin" class="md-nav__link">
+    2.6. OTP Command Support List for IC Muffin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-otp-command-support-list-for-ic-mochi" class="md-nav__link">
+    2.7. OTP Command Support List for IC Mochi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#271-otp_rsa_n-0x0" class="md-nav__link">
+    2.7.1. OTP_RSA_N (0x0)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#272-otp_rsa_e-0x1" class="md-nav__link">
+    2.7.2. OTP_RSA_E (0x1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#273-otp_secure_boot-0x2" class="md-nav__link">
+    2.7.3. OTP_SECURE_BOOT (0x2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#274-otp_rsa_key_lock-0x3" class="md-nav__link">
+    2.7.4. OTP_RSA_KEY_LOCK (0x3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#275-otp_rsa_key_block-0x4" class="md-nav__link">
+    2.7.5. OTP_RSA_KEY_BLOCK (0x4)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#276-otp_aes128_key-0x50xc" class="md-nav__link">
+    2.7.6. OTP_AES128_KEY (0x5~0xC)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#277-otp_aes128_key_lock-0xd0xf0x110x130x150x170x190x1b" class="md-nav__link">
+    2.7.7. OTP_AES128_KEY_LOCK (0xD,0xF,0x11,0x13,0x15,0x17,0x19,0x1B)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#278-otp_aes128_key1_block-0xe0x100x120x140x160x180x1a0x1c" class="md-nav__link">
+    2.7.8. OTP_AES128_KEY1_BLOCK (0xE,0x10,0x12,0x14,0x16,0x18,0x1A,0x1C)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#279-otp_rom_sel_aeskey-0x24" class="md-nav__link">
+    2.7.9. OTP_ROM_SEL_AESKEY (0x24)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2710-otp_rom_sel_aeskey_lock-0x25" class="md-nav__link">
+    2.7.10. OTP_ROM_SEL_AESKEY_LOCK (0x25)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2711-otp_customer_area-0xa0" class="md-nav__link">
+    2.7.11. OTP_CUSTOMER_AREA (0xA0)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2712-error-code" class="md-nav__link">
+    2.7.12. ERROR CODE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-otp-command-support-list-for-ic-maruko" class="md-nav__link">
+    2.8. OTP Command Support List for IC Maruko
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 安全镜像生成
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1. 概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-rsa-key" class="md-nav__link">
+    3.2. 制作RSA Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-aes-128-key" class="md-nav__link">
+    3.3. 制作AES-128 Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-usb" class="md-nav__link">
+    3.4. USB签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-iplx-separation" class="md-nav__link">
+    3.5. IPLX Separation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-iplbin" class="md-nav__link">
+    3.6. IPL.bin 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-ipl_custbin" class="md-nav__link">
+    3.7. IPL_CUST.bin 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-u-boot" class="md-nav__link">
+    3.8. U-Boot 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-boot_partbin-pack" class="md-nav__link">
+    3.9. BOOT_PART.bin Pack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-linux-kernel" class="md-nav__link">
+    3.10. Linux Kernel 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-linux-rootfs" class="md-nav__link">
+    3.11. Linux Rootfs 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    3.12. 签章验证
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 注意事项
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ipl" class="md-nav__link">
+    4.1. IPL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tool" class="md-nav__link">
+    4.2. 自编tool签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-emmc-boot95partbin" class="md-nav__link">
+    4.3. EMMC BOOT_PART.bin签章
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-securityboot" class="md-nav__link">
+    5. SECURITYBOOT部署流程
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-securityboot" class="md-nav__link">
+    5.1. SecurityBoot调试流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-securitybootonly-rsa" class="md-nav__link">
+    5.2. SecurityBoot正式流程（普通流程，Only RSA）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-securitybootrsaaes" class="md-nav__link">
+    5.3. SecurityBoot正式流程（加密流程，RSA+AES）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-anti_rollback" class="md-nav__link">
+    6. ANti_rollback
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1. 概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-enable-antirollback" class="md-nav__link">
+    6.2. Enable AntiRollback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-ipl" class="md-nav__link">
+    6.3. IPL进版次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-ipl_cust" class="md-nav__link">
+    6.4. IPL_CUST进版次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-uboot" class="md-nav__link">
+    6.5. UBOOT进版次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-kernel" class="md-nav__link">
+    6.6. KERNEL进版次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67-rtos" class="md-nav__link">
+    6.7. RTOS进版次数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-security-boot" class="md-nav__link">
+    1. SECURITY BOOT介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-otp-key" class="md-nav__link">
+    1.2. OTP Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-cust-key" class="md-nav__link">
+    1.3. CUST Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-boot-flow" class="md-nav__link">
+    1.4. Boot Flow结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-otpsecurity-boot" class="md-nav__link">
+    1.5. OTP开启Security Boot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-security-boot" class="md-nav__link">
+    1.6. 普通Security Boot流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-security-boot" class="md-nav__link">
+    1.7. 加密Security Boot流程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-otp-key" class="md-nav__link">
+    2. OTP Key读写操作说明
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-rsa-key" class="md-nav__link">
+    2.1. 生成 RSA Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-u-boototp" class="md-nav__link">
+    2.2. 使用U-BOOT烧录OTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-otp-command-format" class="md-nav__link">
+    2.3. OTP Command Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-otp-command-support-list-for-ic-pudding" class="md-nav__link">
+    2.4. OTP Command Support List for IC Pudding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-otp-command-support-list-for-ic-tiramisu" class="md-nav__link">
+    2.5. OTP Command Support List for IC Tiramisu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-otp-command-support-list-for-ic-muffin" class="md-nav__link">
+    2.6. OTP Command Support List for IC Muffin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-otp-command-support-list-for-ic-mochi" class="md-nav__link">
+    2.7. OTP Command Support List for IC Mochi
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#271-otp_rsa_n-0x0" class="md-nav__link">
+    2.7.1. OTP_RSA_N (0x0)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#272-otp_rsa_e-0x1" class="md-nav__link">
+    2.7.2. OTP_RSA_E (0x1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#273-otp_secure_boot-0x2" class="md-nav__link">
+    2.7.3. OTP_SECURE_BOOT (0x2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#274-otp_rsa_key_lock-0x3" class="md-nav__link">
+    2.7.4. OTP_RSA_KEY_LOCK (0x3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#275-otp_rsa_key_block-0x4" class="md-nav__link">
+    2.7.5. OTP_RSA_KEY_BLOCK (0x4)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#276-otp_aes128_key-0x50xc" class="md-nav__link">
+    2.7.6. OTP_AES128_KEY (0x5~0xC)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#277-otp_aes128_key_lock-0xd0xf0x110x130x150x170x190x1b" class="md-nav__link">
+    2.7.7. OTP_AES128_KEY_LOCK (0xD,0xF,0x11,0x13,0x15,0x17,0x19,0x1B)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#278-otp_aes128_key1_block-0xe0x100x120x140x160x180x1a0x1c" class="md-nav__link">
+    2.7.8. OTP_AES128_KEY1_BLOCK (0xE,0x10,0x12,0x14,0x16,0x18,0x1A,0x1C)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#279-otp_rom_sel_aeskey-0x24" class="md-nav__link">
+    2.7.9. OTP_ROM_SEL_AESKEY (0x24)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2710-otp_rom_sel_aeskey_lock-0x25" class="md-nav__link">
+    2.7.10. OTP_ROM_SEL_AESKEY_LOCK (0x25)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2711-otp_customer_area-0xa0" class="md-nav__link">
+    2.7.11. OTP_CUSTOMER_AREA (0xA0)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2712-error-code" class="md-nav__link">
+    2.7.12. ERROR CODE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-otp-command-support-list-for-ic-maruko" class="md-nav__link">
+    2.8. OTP Command Support List for IC Maruko
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 安全镜像生成
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1. 概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-rsa-key" class="md-nav__link">
+    3.2. 制作RSA Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-aes-128-key" class="md-nav__link">
+    3.3. 制作AES-128 Key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-usb" class="md-nav__link">
+    3.4. USB签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-iplx-separation" class="md-nav__link">
+    3.5. IPLX Separation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-iplbin" class="md-nav__link">
+    3.6. IPL.bin 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-ipl_custbin" class="md-nav__link">
+    3.7. IPL_CUST.bin 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-u-boot" class="md-nav__link">
+    3.8. U-Boot 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-boot_partbin-pack" class="md-nav__link">
+    3.9. BOOT_PART.bin Pack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-linux-kernel" class="md-nav__link">
+    3.10. Linux Kernel 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-linux-rootfs" class="md-nav__link">
+    3.11. Linux Rootfs 签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    3.12. 签章验证
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 注意事项
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ipl" class="md-nav__link">
+    4.1. IPL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tool" class="md-nav__link">
+    4.2. 自编tool签章
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-emmc-boot95partbin" class="md-nav__link">
+    4.3. EMMC BOOT_PART.bin签章
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-securityboot" class="md-nav__link">
+    5. SECURITYBOOT部署流程
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-securityboot" class="md-nav__link">
+    5.1. SecurityBoot调试流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-securitybootonly-rsa" class="md-nav__link">
+    5.2. SecurityBoot正式流程（普通流程，Only RSA）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-securitybootrsaaes" class="md-nav__link">
+    5.3. SecurityBoot正式流程（加密流程，RSA+AES）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-anti_rollback" class="md-nav__link">
+    6. ANti_rollback
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1. 概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-enable-antirollback" class="md-nav__link">
+    6.2. Enable AntiRollback
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-ipl" class="md-nav__link">
+    6.3. IPL进版次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-ipl_cust" class="md-nav__link">
+    6.4. IPL_CUST进版次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-uboot" class="md-nav__link">
+    6.5. UBOOT进版次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-kernel" class="md-nav__link">
+    6.6. KERNEL进版次数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67-rtos" class="md-nav__link">
+    6.7. RTOS进版次数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>Pure Linux OTP-Key Security Boot Flow SOP</h1>
+<!-- 
+| Revision No. | Description                     | Date                                      |
+|--------------|---------------------------------|-------------------------------------------|
+| 1.00         | - Initial release                           | 04/15/2020 |
+| 2.00         | - Change SW AES Key to OTP AES Key design <br>- Add authenticate rootfs command | 09/07/2020         |
+| 2.10         | - Add Pudding IC                            | 10/18/2020 |
+| 2.11         | - Update signature method of IPL & IPL_CUST | 01/20/2021 |
+| 2.20         | - Add support for eMMC and SD flow          | 01/26/2021 |
+| 2.30         | - Add deployment process                    | 03/18/2021 |
+| 2.31         | - Add support for USB flow                  | 04/14/2021 |
+| 2.32         | - Add AntiRollback                          | 10/13/2021 |
+| 2.40         | - Add Tiramisu IC                           | 12/07/2021 |
+| 2.41         | - Add Muffin IC                             | 12/16/2021 |
+| 2.50         | - Add Mochi IC                              | 02/14/2022 |
+| 2.60         | - Add Maruko IC                             | 05/12/2022 |
+| 2.61         | - Fix AESKey Position Error                 | 05/17/2022 |
+| 2.62         | - Optimized signature instructions          | 08/05/2022 |
+| 2.63         | - Rename Chip                               | 09/01/2022 | 
+-->
+
+<hr />
+<h2 id="1-security-boot">1. SECURITY BOOT介绍<a class="headerlink" href="#1-security-boot" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="11">1.1. 概述<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>Security Boot需要做的工作总体上包括签章（或加密+签章）和验签（或验签+解密）两大部分，验签即签章的验证，其中加密和解密为可选，用户可根据自身需求取舍。</p>
+<p>一般情况下加密是为了防止信息被泄露，而验签是为了防止信息被篡改。加密(详见<a href="#jump1">加密Security Boot流程</a>章节)和签章(详见<a href="#jump2">签章介绍</a>部分)的工作将使用脚本完成，而验签和解密的工作将由固件中Software完成。Security Boot的验签和解密总体流程如下。  </p>
+<p><span id="jump"></span><img alt="" src="mymedia/OTP-Key/image001.png" /></p>
+<p>图1-1 验签和解密总体流程</p>
+<h4>1.1.1. 秘钥介绍</h4>
+<p>从秘钥使用的角度看，签章和验签分别使用了<code>RSA Private Key</code>和<code>RSA Public Key</code>，加密和解密使用同一把<code>AES Key</code>。</p>
+<ol>
+<li>
+<p>验签流程中所用的<code>RSA Public Key</code>有两把。</p>
+<p>第一把为 <code>OTP Key</code>，该把Key会在系统Power On后，Hardware会自动从OTP中载入，用来做签章验证的动作，这边Software是无法介入的。而OTP   Key的内容，可以通过Linux Tool或U-Boot的Command
+Line烧录至OTP的指定地址中。</p>
+<p>第二把为<code>CUST Key</code>，该Key会嵌在IPL和IPL_CUST的bin文件中，通过Software在整个boot flow中用来做签章验证的动作。</p>
+</li>
+<li>
+<p>验签流程中所用的<code>AES Key</code>为 <code>OTP Key</code>，该把Key使用之前需要烧录到OTP存储单元中，在使用的时候，由Hardware载入到crypto engine进行使用，可以在整个boot flow中用来做AES解密的动作。<code>OTP AES Key</code>的内容由用户自定义，所以由用户维护。</p>
+</li>
+</ol>
+<h4>1.1.2. 流程介绍</h4>
+<ol>
+<li>
+<p>Authenticate IPL by OTP Key-RSA</p>
+<p>该流程为ROM code从OTP中读取RSA Public
+Key后，对IPL进行签章的验证，如<a href="#jump">图1-1</a>的步骤1。由于OTP的RSA Public
+Key可以进行Write Lock动作（后面章节会详细提及），阻止再次被写，所以OTP的RSA
+Public Key可以做到不被替换，从而保证了IPL不会被篡改。</p>
+</li>
+<li>
+<p>Authenticate IPL_CUST by IPL's CUST Key-RSA</p>
+<p>该流程为IPL读取事先嵌在IPL的CUST RSA Public
+Key后，对IPL_CUST进行签章的验证，如<a href="#jump">图1-1</a>的步骤2。由于IPL不会被篡改，所以保证了嵌在IPL的CUST
+RSA Public Key不会被篡改，从而保证了IPL_CUST也不会被篡改。</p>
+</li>
+<li>
+<p>Authenticate U-Boot/kernel by IPL_CUST's CUST Key-RSA</p>
+<p>该流程为IPL_CUST读取事先嵌在IPL_CUST的CUST RSA Public    Key后，对U-Boot进行签章的验证，如<a href="#jump">图1-1</a>的步骤3。同样U-Boot也读取这把Key对下一阶段的Linux    Kernel进行签章验证，如<a href="#jump">图1-1</a>的步骤5。</p>
+</li>
+<li>
+<p>Decrypt U-Boot/kernel by OTP Key–AES</p>
+<p>如果开启加密机制，U-Boot及Linux
+Kernel会通过AES128(ECB)来做加密动作，在Boot流程中，IPL_CUST使用OTP中事先烧录好的AES
+Key对U-Boot执行解密动作，同样U-Boot也对Linux
+Kernel执行解密动作，如<a href="#jump">图1-1</a>的步骤4、6。</p>
+</li>
+</ol>
+<hr />
+<h3 id="12-otp-key">1.2. OTP Key<a class="headerlink" href="#12-otp-key" title="Permanent link">&para;</a></h3>
+<h4>1.2.1. OTP RSA Key</h4>
+<p><code>OTP Key</code>为<code>ROM code</code>用来验证IPL的签章所使用的<code>RSA Public Key</code>，由<code>N-key</code> 及E-key组成，需通过Linux Tool或在Uboot下预先烧录到OTP中。在开机时，则会由Hardware自动载入。</p>
+<p><code>OTP Key</code>相应的地址空间只能烧写一次，此外，<code>OTP Key</code>带有<code>Read Lock</code>和<code>Write Lock</code>功能，来防止<code>OTP Key</code>被非法读取和篡改（烧写<code>OTP RSA Key</code>及其Lock相关内容后面章节会提及）。</p>
+<h4>1.2.2. OTP AES Key</h4>
+<p><code>OTP AES Key</code>长度为128bit，若使用"签章+加密"则会用到<code>OTP AES Key</code>，需要在使用之前就将Key烧录于OTP存储单元中（烧写<code>OTP AES Key</code>相关内容后面章节会提及）。</p>
+<hr />
+<h3 id="13-cust-key">1.3. CUST Key<a class="headerlink" href="#13-cust-key" title="Permanent link">&para;</a></h3>
+<p><code>CUST Key</code>可由<code>RSA Public Key</code>（RSA-2048，长度为2048 bit)及<code>AES Key</code>(ECB-128，长度为128 bit)所组成，在签章过程中，IPL的bin文件和IPL_CUST的bin文件都会嵌入<code>RSA Public Key</code>，bin文件组成结构变化情况分别如下图。</p>
+<h4>1.3.1. IPL结构</h4>
+<p><img alt="" src="mymedia/OTP-Key/image003.png" /></p>
+<p>图1-2 IPL结构</p>
+<h4>1.3.2. IPL_CUST结构</h4>
+<p><img alt="" src="mymedia/OTP-Key/image005.png" /></p>
+<p>图1-3 IPL_CUST结构</p>
+<hr />
+<h3 id="14-boot-flow">1.4. Boot Flow结构<a class="headerlink" href="#14-boot-flow" title="Permanent link">&para;</a></h3>
+<p>Boot Flow请参考下图，该图为从ROM到Linux Kernel的Boot Flow结构，其中Signature为签章数据部分，每个Flow的Signature均会嵌入到相应bin文件的最后，每个Flow均包含Get Key和Authenticate的动作直到Linux Kernel，部分Flow支持解密（是否开启解密取决于需求）。Get Key有三种，OTP RSA Key和OTP AES Key均由Hardware获取，CUST RSA Key由Software获取。需要注意的是IPL_CUST是Insert CUST RSA Key后才进行签章的，所以其Signature嵌入在CUST RSA Key后面。  </p>
+<p><img alt="" src="mymedia/OTP-Key/image007.png" /></p>
+<p>图1-4 Boot Flow结构</p>
+<hr />
+<h3 id="15-otpsecurity-boot">1.5. OTP开启Security Boot<a class="headerlink" href="#15-otpsecurity-boot" title="Permanent link">&para;</a></h3>
+<p>当烧录完OTP Key后，真正启动Security Boot必须要烧录OTP_Secure_Boot相应的Register栏位（OTP烧录方法后面章节会详细提及），将该栏位烧录为0xFF，则会启动OTP的Security
+Boot（注：开启后无法关闭，每次启动都将会强制走Security Boot flow）。</p>
+<hr />
+<h3 id="16-security-boot">1.6. 普通Security Boot流程<a class="headerlink" href="#16-security-boot" title="Permanent link">&para;</a></h3>
+<p>如下所示，Generate Signature是在local端执行，这部分目前方案是使用Python脚本完成（后面章节会详细提及），先对Image file进行SHA-256的计算，生成Digest，再通过RSA-2048做加密动作，最后生成256Bytes的signature，再将signature嵌入至Image后端。  </p>
+<p>Verify Signature是在boot flow中执行，各阶段的boot code会对下一段的Image进行SHA-256计算，生成Digest，并取出signature来做RSA-2048的解密生成Digest'，然后对比Digest和Digest'，若对比一致，则Verify success，否则Verify fail。  </p>
+<p><img alt="" src="mymedia/OTP-Key/image009.png" /></p>
+<p>图1-5 普通Security Boot流程</p>
+<hr />
+<h3 id="17-security-boot">1.7. <span id="jump1">加密Security Boot流程</span><a class="headerlink" href="#17-security-boot" title="Permanent link">&para;</a></h3>
+<p>如下所示，Generate Signature是在local端执行，这部分目前方案是使用Python脚本完成（后面章节会详细提及），一开始会先将Image file通过AES-128(ECB)加密成Cipher file，再对Cipher file进行SHA-256计算，生成Digest，再通过RSA-2048做加密动作，最后生成256Bytes的signature，再将signature嵌入至Image后端。</p>
+<p>Verify Signature是在boot flow中，各阶段的boot
+code会对下一段的Imag进行SHA-256计算，生成Digest，并取出Signature来做RSA-2048的解密后，生成Digest'，最后对比Digest和Digest'。如对比成功，则对Cipher file进行AES-128(ECB) 解密的动作，最后解密为能开机的image。  </p>
+<p><img alt="" src="mymedia/OTP-Key/image010.png" /></p>
+<p>图1-6 加密Security Boot流程</p>
+<hr />
+<h2 id="2-otp-key">2. <span id="jump3">OTP Key读写操作说明</span><a class="headerlink" href="#2-otp-key" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="21-rsa-key">2.1. 生成 RSA Key<a class="headerlink" href="#21-rsa-key" title="Permanent link">&para;</a></h3>
+<p>通过openssl来生成RSA Key。相关的命令操作，请参考如下:</p>
+<ul>
+<li>
+<p>Generate Private Key</p>
+</li>
+<li>
+<p>openssl genrsa -out private.pem 2048</p>
+</li>
+<li>
+<p>Generate Public Key</p>
+</li>
+<li>
+<p>openssl rsa -in private.pem -out public.pem -outform PEM -pubout</p>
+</li>
+</ul>
+<hr />
+<h3 id="22-u-boototp">2.2. 使用U-BOOT烧录OTP<a class="headerlink" href="#22-u-boototp" title="Permanent link">&para;</a></h3>
+<p>注：OTP只能烧写一次，一旦烧写则无法清除和重烧，请在确认需要的场合下执行烧写动作！</p>
+<hr />
+<h4>2.2.1. 生成U-Boot Command Scripts</h4>
+<p>通过Tool (<code>key_proc.py</code>) 可产生<code>U-Boot command scripts</code>来方便通过U-Boot来将RSA-Public Key烧录至OTP指定位置上。</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --exportkey --rsa=public.pem
+</pre></div>
+
+
+<p><strong>exportkey:</strong> 将public.pem 转换成rsaKey.bin的binary file</p>
+<p><strong>rsa:</strong> 输入openssl所生成的public key (public.pem)</p>
+<p>执行该command后会生成的文件如下：</p>
+<ul>
+<li>
+<p><strong>rsaKey.bin</strong>——RSA Public N-Key binary file </p>
+</li>
+<li>
+<p><strong>rsaKey.txt</strong>——Otp Command List for write RSA Public N-Key rsaKey.txt，会列出烧录Key的Uboot command list，可以直接使用该command list来进行烧录。</p>
+</li>
+</ul>
+<p>注：RSA N-Key有4行command，要分四次执行，不可一次执行4行。</p>
+<p><strong>rsaKey.bin:</strong></p>
+<p><img alt="" src="mymedia/OTP-Key/image012.png" /> </p>
+<p><strong>rsaKey.txt:</strong></p>
+<p><img alt="" src="mymedia/OTP-Key/image014.png" /> </p>
+<hr />
+<h4>2.2.2. 启动Secure Boot</h4>
+<p>通过烧录OTP中的Secure Boot的栏位来启动Secure boot功能，一旦启动Secue Boot后，在ROM阶段就会开始进行IPL的签章验证。启动方式可通过烧录OTP_SECURE_BOOT (0x2)。  </p>
+<p>这边需确认是否有正确开启Secure Boot，在未开启前，其Boot行为如下:</p>
+<ul>
+<li>
+<p>[普通安全boot流程] Boot flow不会对签章进行验证，所以是可以完成整个Boot流程。</p>
+</li>
+<li>
+<p>[加密安全boot流程] Boot
+    flow不会对签章进行验证，也不会对Image进行解密，所以会无法正常开机。</p>
+</li>
+</ul>
+<hr />
+<h3 id="23-otp-command-format">2.3. OTP Command Format<a class="headerlink" href="#23-otp-command-format" title="Permanent link">&para;</a></h3>
+<p>如下图，列出在UBOOT下执行OTP烧录的两个COMMAND，分别能对OTP进行读写的动作。</p>
+<p>WRITE COMMAND:</p>
+<p><img alt="" src="mymedia/OTP-Key/image016.png" />   </p>
+<p>READ COMMAND:</p>
+<p><img alt="" src="mymedia/OTP-Key/image018.png" /> </p>
+<hr />
+<h3 id="24-otp-command-support-list-for-ic-pudding">2.4. OTP Command Support List for IC Pudding<a class="headerlink" href="#24-otp-command-support-list-for-ic-pudding" title="Permanent link">&para;</a></h3>
+<h4>2.4.1. OTP_RSA_N (0x0)</h4>
+<p>该Command被使用来存取OTP中的<code>RSA Public N-Key</code>，总共包含256-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otp -w 0x0 offset writedata
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/image020.png" /> </p>
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/image022.png" />    </p>
+<h4>2.4.2. OTP_RSA_E (0x1)</h4>
+<p>该Command被使用来存取OTP中的RSA Public E-Key，总共包含4-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x1 0x0 0x01000100
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x1
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/image024.png" /> </p>
+<h4>2.4.3. OTP_SECURE_BOOT (0x2)</h4>
+<p>该Command被使用来启动secure boot，设置为0xFF表示启动secure boot。在设置完该Command后，须于下次启动才会生效。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x2 0x0 0xFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x2
+</pre></div>
+
+
+<h4>2.4.4. OTP_RSA_KEY_LOCK_AND_BLOCK (0x3)</h4>
+<p>该Command被使用来对OTP内的<code>RSA Public Key</code>栏位进行LOCK跟BLOCK的动作。LOCK表示无法更改<code>RSA Public Key</code>的内容值，而BLOCK则表示SW无法读出位于OTP内的<code>Public Key</code>。在设置完该Command后，须于下次启动才会生效。</p>
+<ul>
+<li>
+<p>LOCK</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x3 0x0 0x04
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x3
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x3 0x0 0x10
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x3
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.4.5. OTP_AES_KEY (0x4)</h4>
+<p>该Command被使用来存取OTP中的AES Key，总共包含16-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x0 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x4
+</pre></div>
+
+
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo &#39;000102030405060708090A0B0C0D0E0F&#39; |  xxd -r -ps &gt; aesKey.bin
+
+otpctrl -w 0x4 0x0 0x03020100
+otpctrl -w 0x4 0x4 0x07060504
+otpctrl -w 0x4 0x8 0x0B0A0908
+otpctrl -w 0x4 0xC 0x0F0E0D0C
+</pre></div>
+
+
+<h4>2.4.6. OTP_AES_KEY_LOCK_AND_BLOCK (0x6)</h4>
+<p>该Command被使用来对OTP内的AES Key栏位进行LOCK跟BLOCK的动作。LOCK表示无法更改OTP内的AES Key，而BLOCK则表示SW无法读出OTP内的AES Key。在设置完该Command后，须于下次启动才会生效。</p>
+<ul>
+<li>
+<p>LOCK   </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x6 0x0 0x01
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x6
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x6 0x0 0x04
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x6
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h4>2.4.7. ERROR CODE</h4>
+<p>FF01: 无效的COMMAND</p>
+<p>FF02: 无效的OTP地址</p>
+<p>FF03: 无效的OTP执行许可证</p>
+<hr />
+<h3 id="25-otp-command-support-list-for-ic-tiramisu">2.5. OTP Command Support List for IC Tiramisu<a class="headerlink" href="#25-otp-command-support-list-for-ic-tiramisu" title="Permanent link">&para;</a></h3>
+<h4>2.5.1. OTP_RSA_N (0x0)</h4>
+<p>该Command被使用来存取OTP中的RSA Public N-Key，总共包含256-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otp -w 0x0 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/image13.png" />     </p>
+<h4>2.5.2. OTP_RSA_E (0x1)</h4>
+<p>该Command被使用来存取OTP中的RSA Public E-Key，总共包含4-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x1 0x0 0x01000100
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x1
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/image14.png" /></p>
+<h4>2.5.3. OTP_SECURE_BOOT (0x2)</h4>
+<p>该Command被使用来启动secure boot，设置为0xFF表示启动secure boot。在设置完该Command后，须于下次启动才会生效。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x2 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x2
+</pre></div>
+
+
+<h4>2.5.4. OTP_RSA_KEY_LOCK (0x3)</h4>
+<p>该Command被使用来对OTP内的RSA Public Key栏位进行LOCK的动作。LOCK表示无法更改OTP内的RSA Public Key。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x3 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x3
+</pre></div>
+
+
+<h4>2.5.5. OTP_RSA_KEY_BLOCK (0x4)</h4>
+<p>该Command被使用来对OTP内的RSA Public Key栏位进行BLOCK的动作。BLOCK则表示SW无法读出OTP内的RSA Public Key。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x4 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x4
+</pre></div>
+
+
+<h4>2.5.6. OTP_AES_KEY (0x5)</h4>
+<p>该Command被使用来存取OTP中的AES Key，总共包含16-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x5 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x5
+</pre></div>
+
+
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo &#39;000102030405060708090A0B0C0D0E0F&#39; | xxd -r -ps &gt; aesKey.bin
+
+otpctrl -w 0x5 0x0 0x03020100 
+otpctrl -w 0x5 0x4 0x07060504 
+otpctrl -w 0x5 0x8 0x0B0A0908 
+otpctrl -w 0x5 0xC 0x0F0E0D0C
+</pre></div>
+
+
+<h4>2.5.7. OTP_AES_KEY_LOCK (0x9)</h4>
+<p>该Command被使用来对OTP内的AES Key栏位进行LOCK的动作。LOCK表示无法更改OTP内的AES Key。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x9 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x9
+</pre></div>
+
+
+<h4>2.5.8. OTP_AES_KEY_BLOCK (0xA)</h4>
+<p>该Command被使用来对OTP内的AES Key栏位进行BLOCK的动作。BLOCK则表示SW无法读出OTP内的AES Key。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xA 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0xA
+</pre></div>
+
+
+<h4>2.5.9. ERROR CODE</h4>
+<p>FF01: 无效的COMMAND</p>
+<p>FF02: 无效的OTP地址</p>
+<p>FF03: 无效的OTP执行许可证</p>
+<hr />
+<h3 id="26-otp-command-support-list-for-ic-muffin">2.6. OTP Command Support List for IC Muffin<a class="headerlink" href="#26-otp-command-support-list-for-ic-muffin" title="Permanent link">&para;</a></h3>
+<h4>2.6.1. OTP_RSA_N (0x0)</h4>
+<p>该Command被使用来存取OTP中的RSA Public N-Key，总共包含256-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otp -w 0x0 offset writedata
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/otp-1.png" /> </p>
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/otp-2.png" /> </p>
+<h4>2.6.2. OTP_RSA_E (0x1)</h4>
+<p>该Command被使用来存取OTP中的RSA Public E-Key，总共包含4-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x1 0x0 0x01000100
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x1
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/otp-3.png" /> </p>
+<h4>2.6.3. OTP_SECURE_BOOT (0x2)</h4>
+<p>该Command被使用来启动secure boot，设置为0xFF表示启动secure boot。在设置完该Command后，须于下次启动才会生效。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x2 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x2
+</pre></div>
+
+
+<h4>2.6.4. OTP_RSA_KEY_LOCK (0x3)</h4>
+<p>该Command被使用来对OTP内的RSA Public Key栏位进行LOCK的动作。LOCK表示无法更改OTP内的RSA Public Key。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x3 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x3
+</pre></div>
+
+
+<h4>2.6.5. OTP_RSA_KEY_BLOCK (0x4)</h4>
+<p>该Command被使用来对OTP内的RSA Public Key栏位进行BLOCK的动作。BLOCK则表示SW无法读出OTP内的RSA Public Key。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x4 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x4
+</pre></div>
+
+
+<h4>2.6.6. OTP_AES128_KEY (0x5~0xC)</h4>
+<p>该Command被使用来存取OTP中的AES Key，Muffin共有8把AES128 KEY，一把key占有16-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>ALL AESKEY WRITE COMMAND:                                </p>
+<ul>
+<li>
+<p>KEY1 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x5 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x5
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;000102030405060708090A0B0C0D0E0F&#39; | xxd -r -ps &gt; aesKey1.bin
+
+otpctrl -w 0x5 0x0  0x03020100
+otpctrl -w 0x5 0x4  0x07060504
+otpctrl -w 0x5 0x8  0x0B0A0908 
+otpctrl -w 0x5 0xC  0x0F0E0D0C
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY2 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x6 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x6
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;00112233445566778899AABBCCDDEEFF&#39; | xxd -r -ps &gt; aesKey2.bin
+
+otpctrl -w 0x6 0x0 0x33221100 
+otpctrl -w 0x6 0x4 0x77665544 
+otpctrl -w 0x6 0x8 0xBBAA9988 
+otpctrl -w 0x6 0xC 0xFFEEDDCC
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY3 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x7 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x7
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;030102030405060708090A0B0C0D0E0F&#39; | xxd -r -ps &gt; aesKey3.bin
+
+otpctrl -w 0x7 0x0 0x03020103
+otpctrl -w 0x7 0x4 0x07060504
+otpctrl -w 0x7 0x8 0x0B0A0908
+otpctrl -w 0x7 0xC 0x0F0E0D0C
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY4 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x8 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x8
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;04112233445566778899AABBCCDDEEFF&#39; | xxd -r -ps &gt; aesKey4.bin
+
+otpctrl -w 0x8 0x0 0x33221104
+otpctrl -w 0x8 0x4 0x77665544
+otpctrl -w 0x8 0x8 0xBBAA9988
+otpctrl -w 0x8 0xC 0xFFEEDDCC
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY5 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x9 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x9
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;050102030405060708090A0B0C0D0E0F&#39; | xxd -r -ps &gt; aesKey5.bin
+
+otpctrl -w 0x9 0x0 0x03020105
+otpctrl -w 0x9 0x4 0x07060504
+otpctrl -w 0x9 0x8 0x0B0A0908
+otpctrl -w 0x9 0xC 0x0F0E0D0C
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY6 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xA offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0xA
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;06112233445566778899AABBCCDDEEFF&#39; | xxd -r -ps &gt; aesKey6.bin
+
+otpctrl -w 0xA 0x0 0x33221106
+otpctrl -w 0xA 0x4 0x77665544
+otpctrl -w 0xA 0x8 0xBBAA9988
+otpctrl -w 0xA 0xC 0xFFEEDDCC
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY7 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xB offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0xB
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;070102030405060708090A0B0C0D0E0F&#39; | xxd -r -ps &gt; aesKey7.bin
+
+otpctrl -w 0xB 0x0 0x03020107
+otpctrl -w 0xB 0x4 0x07060504
+otpctrl -w 0xB 0x8 0x0B0A0908
+otpctrl -w 0xB 0xC 0x0F0E0D0C
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY8 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xC offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0xC
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;08112233445566778899AABBCCDDEEFF&#39; | xxd -r -ps &gt; aesKey8.bin
+
+otpctrl -w 0xC 0x0 0x33221108
+otpctrl -w 0xC 0x4 0x77665544
+otpctrl -w 0xC 0x8 0xBBAA9988
+otpctrl -w 0xC 0xC 0xFFEEDDCC
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.6.7. OTP_AES128_KEY_LOCK (0xD,0xF,0x11,0x13,0x15,0x17,0x19,0x1B)</h4>
+<p>该Command被使用来对OTP内的AES Key栏位进行LOCK的动作。LOCK表示无法更改OTP内的AES Key。在设置完该Command后，须于下次启动才会生效。</p>
+<ul>
+<li>
+<p>LOCK AESkey1</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xD 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xD
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey2</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0xF 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xF
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey3</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x11 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x11
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey4</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x13 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x13
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey5</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x15 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x15
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey6</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x17 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x17
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey7</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x19 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x19
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey8</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x1B 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x1B
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.6.8. OTP_AES128_KEY1_BLOCK (0xE,0x10,0x12,0x14,0x16,0x18,0x1A,0x1C)</h4>
+<p>该Command被使用来对OTP内的AES Key栏位进行BLOCK的动作。BLOCK则表示SW无法读出OTP内的AES Key。在设置完该Command后，须于下次启动才会生效。</p>
+<ul>
+<li>
+<p>BLOCK AESKEY1</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xE 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xE
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY2</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x10 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x10
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY3</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x12 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x12
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY4</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x14 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x14
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY5</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x16 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x16
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY6</p>
+<p>WRITE COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x18 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x18
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY7</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x1A 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x1A
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY8</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x1C 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x1C
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.6.9. OTP_ROM_SEL_AESKEY (0x24)</h4>
+<p>该Command用来选择OTP中哪一把AESKey对IPL进行解密，该OTP的值不为0时，使能ROM code对IPL的解密。在设置完该Command后，须于下次启动才会生效。注：一旦写入此OTP，IPL必须使用CBC加密。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x24  offset writedata
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x24
+</pre></div>
+
+
+<p><strong>Example:</strong></p>
+<ul>
+<li>
+<p>SEL AESKEY128_1</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0xFF000000
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_2</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0xFF0000FF
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_3</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0xFF00FF00
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_4</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0xFF00FFFF
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_5</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0xFFFF0000
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_6</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0xFFFF00FF
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_7</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0xFFFFFF00
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_8</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0xFFFFFFFF
+</pre></div>
+
+
+</li>
+</ul>
+<p>另外IPL可以使用AES256解密，OTP中AESKEY256实际上是由OTP中两把AES128组合而成，组合和设置方式举例如下：</p>
+<ul>
+<li>
+<p>SEL AESKEY256_1</p>
+<p>Composition mode: AES128key1 + AES128key2</p>
+<p>WRITE COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0x00FF0000
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY256_2</p>
+<p>Composition mode: AES128key3 + AES128key4</p>
+<p>WRITE COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0x00FF00FF
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY256_3</p>
+<p>Composition mode: AES128key5 + AES128key6</p>
+<p>WRITE COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0x00FFFF00
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY256_4</p>
+<p>Composition mode: AES128key7 + AES128key8</p>
+<p>WRITE COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x24 0x0 0x00FFFFFF
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.6.10. OTP_ROM_SEL_AESKEY_LOCK (0x25)</h4>
+<p>该Command被使用来对OTP内的OTP_ROM_SEL_AESKEY栏位进行LOCK的动作。LOCK表示无法更改OTP内的OTP_ROM_SEL_AESKEY。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x25 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x25
+</pre></div>
+
+
+<h4>2.6.11. OTP_CUSTOMER_AREA (0xA0)</h4>
+<p>该区域一共有8K,开放给客户使用，以下是写OTP_CUSTOMER_AREA的cmd，需注意每次写4byte.offset最大为0x3fc。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xA0 offset  writedata
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xA0
+</pre></div>
+
+
+<p><strong>Example:</strong>   </p>
+<div class="codehilite"><pre><span></span>WRITE COMMAND: otpctrl -w 0xA0 0x0 0x12345678
+WRITE COMMAND: otpctrl  -w 0xA0 0x4 0x09ABCDEF
+WRITE COMMAND: otpctrl  -w 0xA0 0x8 0x33445566
+
+最后4byte WRITE COMMAND:
+
+WRITE COMMAND: otpctrl  -w 0xA0 0x3fC 0xAA778899
+</pre></div>
+
+
+<p>Uboot下可通过otpread cmd 读取customer area data，客户可模拟otpread process在uboot/kernel下读到customer area data。</p>
+<h4>2.6.12. OTP_CUSTOMER_AREA_LOCK(0xA1~0xA8)</h4>
+<p>该Command被使用来对OTP内的OTP_CUSTOMER_AREA栏位进行LOCK的动作。LOCK表示无法更改OTP内的OTP_CUSTOMER_AREA。在设置完该Command后，须于下次启动才会生效。</p>
+<ul>
+<li>
+<p>LOCK 0k~1K   </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xA1 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xA1
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK 1k ~2K  </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0xA2 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xA2
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK 2k~3K   </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0xA3 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xA3
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK 3k~4K </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0xA4 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xA4
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK 4k~5K  </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0xA5 0x0 0xFFFFFFFF
+
+READ COMMAND:
+
+otpctrl  -r 0xA5
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK 5k~6K   </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0xA6 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xA6
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK 6k~7K  </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0xA7 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xA7
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK 7k~8K   </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0xA8 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0xA8
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.6.13. ERROR CODE</h4>
+<p>FF01: 无效的COMMAND</p>
+<p>FF02: 无效的OTP地址</p>
+<p>FF03: 无效的OTP执行许可证</p>
+<hr />
+<h2 id="27-otp-command-support-list-for-ic-mochi">2.7. OTP Command Support List for IC Mochi<a class="headerlink" href="#27-otp-command-support-list-for-ic-mochi" title="Permanent link">&para;</a></h2>
+<p><em>注：Mochi IC 默认支持RSA4096签章验签</em></p>
+<h3 id="271-otp_rsa_n-0x0">2.7.1. OTP_RSA_N (0x0)<a class="headerlink" href="#271-otp_rsa_n-0x0" title="Permanent link">&para;</a></h3>
+<p>该Command被使用来存取OTP中的RSA Public N-Key，总共包含512-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otp -w 0x0 offset writedata
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/otp-4.png" /> </p>
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/otp-5.png" /> </p>
+<h3 id="272-otp_rsa_e-0x1">2.7.2. OTP_RSA_E (0x1)<a class="headerlink" href="#272-otp_rsa_e-0x1" title="Permanent link">&para;</a></h3>
+<p>该Command被使用来存取OTP中的RSA Public E-Key，总共包含4-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效（此处与其他 IC 不一致）。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x1 0x0 0x00010001
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x1
+</pre></div>
+
+
+<p><img alt="" src="mymedia/OTP-Key/otp-6.png" />  </p>
+<h3 id="273-otp_secure_boot-0x2">2.7.3. OTP_SECURE_BOOT (0x2)<a class="headerlink" href="#273-otp_secure_boot-0x2" title="Permanent link">&para;</a></h3>
+<p>该Command被使用来启动secure boot，设置为0xFF表示启动secure boot。在设置完该Command后，须于下次启动才会生效。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x2 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x2
+</pre></div>
+
+
+<h3 id="274-otp_rsa_key_lock-0x3">2.7.4. OTP_RSA_KEY_LOCK (0x3)<a class="headerlink" href="#274-otp_rsa_key_lock-0x3" title="Permanent link">&para;</a></h3>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h3 id="275-otp_rsa_key_block-0x4">2.7.5. OTP_RSA_KEY_BLOCK (0x4)<a class="headerlink" href="#275-otp_rsa_key_block-0x4" title="Permanent link">&para;</a></h3>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h3 id="276-otp_aes128_key-0x50xc">2.7.6. OTP_AES128_KEY (0x5~0xC)<a class="headerlink" href="#276-otp_aes128_key-0x50xc" title="Permanent link">&para;</a></h3>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h3 id="277-otp_aes128_key_lock-0xd0xf0x110x130x150x170x190x1b">2.7.7. OTP_AES128_KEY_LOCK (0xD,0xF,0x11,0x13,0x15,0x17,0x19,0x1B)<a class="headerlink" href="#277-otp_aes128_key_lock-0xd0xf0x110x130x150x170x190x1b" title="Permanent link">&para;</a></h3>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h3 id="278-otp_aes128_key1_block-0xe0x100x120x140x160x180x1a0x1c">2.7.8. OTP_AES128_KEY1_BLOCK (0xE,0x10,0x12,0x14,0x16,0x18,0x1A,0x1C)<a class="headerlink" href="#278-otp_aes128_key1_block-0xe0x100x120x140x160x180x1a0x1c" title="Permanent link">&para;</a></h3>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h3 id="279-otp_rom_sel_aeskey-0x24">2.7.9. OTP_ROM_SEL_AESKEY (0x24)<a class="headerlink" href="#279-otp_rom_sel_aeskey-0x24" title="Permanent link">&para;</a></h3>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h3 id="2710-otp_rom_sel_aeskey_lock-0x25">2.7.10. OTP_ROM_SEL_AESKEY_LOCK (0x25)<a class="headerlink" href="#2710-otp_rom_sel_aeskey_lock-0x25" title="Permanent link">&para;</a></h3>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h3 id="2711-otp_customer_area-0xa0">2.7.11. OTP_CUSTOMER_AREA (0xA0)<a class="headerlink" href="#2711-otp_customer_area-0xa0" title="Permanent link">&para;</a></h3>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h3 id="2712-error-code">2.7.12. ERROR CODE<a class="headerlink" href="#2712-error-code" title="Permanent link">&para;</a></h3>
+<p>FF01: 无效的COMMAND</p>
+<p>FF02: 无效的OTP地址</p>
+<p>FF03: 无效的OTP执行许可证</p>
+<h3 id="28-otp-command-support-list-for-ic-maruko">2.8. OTP Command Support List for IC Maruko<a class="headerlink" href="#28-otp-command-support-list-for-ic-maruko" title="Permanent link">&para;</a></h3>
+<p><em>注：Maruko IC 支持 RSA2048 签章验签</em></p>
+<h4>2.8.1. OTP_RSA_N (0x0)</h4>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h4>2.8.2. OTP_RSA_E (0x1)</h4>
+<p>与 Muffin 一致，请参看 IC Muffin。</p>
+<h4>2.8.3. OTP_SECURE_BOOT (0x2)</h4>
+<p>该Command被使用来启动secure boot，设置为0xFF表示启动secure boot。在设置完该Command后，须于下次启动才会生效。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x2 0x0 0xFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x2
+</pre></div>
+
+
+<h4>2.8.4. OTP_RSA_KEY_LOCK (0x3)</h4>
+<p>该Command被使用来对OTP内的RSA Public Key栏位进行LOCK的动作。LOCK表示无法更改OTP内的RSA Public Key。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x3 0x0 0xFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x3
+</pre></div>
+
+
+<h4>2.8.5. OTP_RSA_KEY_BLOCK (0x4)</h4>
+<p>该Command被使用来对OTP内的RSA Public Key栏位进行BLOCK的动作。BLOCK则表示SW无法读出OTP内的RSA Public Key。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x4 0x0 0xFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x4
+</pre></div>
+
+
+<h4>2.8.6. OTP_AES128_KEY (0x5~0xC)</h4>
+<p>该Command被使用来存取OTP中的AES Key，Maruko共有4把AES128 KEY,一把key占有16-Bytes的OTP位置。在设置完该Command后，须于下次启动才会生效。</p>
+<p>ALL AESKEY WRITE COMMAND:                                </p>
+<ul>
+<li>
+<p>KEY1 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x5 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x5
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;000102030405060708090A0B0C0D0E0F&#39; | xxd -r -ps &gt; aesKey1.bin
+
+otpctrl -w 0x5 0x0  0x03020100
+otpctrl -w 0x5 0x4  0x07060504
+otpctrl -w 0x5 0x8  0x0B0A0908 
+otpctrl -w 0x5 0xC  0x0F0E0D0C
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY2 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x6 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x6
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;00112233445566778899AABBCCDDEEFF&#39; | xxd -r -ps &gt; aesKey2.bin
+
+otpctrl -w 0x6 0x0 0x33221100 
+otpctrl -w 0x6 0x4 0x77665544 
+otpctrl -w 0x6 0x8 0xBBAA9988 
+otpctrl -w 0x6 0xC 0xFFEEDDCC
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY3 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x7 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x7
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;030102030405060708090A0B0C0D0E0F&#39; | xxd -r -ps &gt; aesKey3.bin
+
+otpctrl -w 0x7 0x0 0x03020103
+otpctrl -w 0x7 0x4 0x07060504
+otpctrl -w 0x7 0x8 0x0B0A0908
+otpctrl -w 0x7 0xC 0x0F0E0D0C
+</pre></div>
+
+
+</li>
+<li>
+<p>KEY4 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x8 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x8
+</pre></div>
+
+
+<p><strong>Eample:</strong></p>
+<div class="codehilite"><pre><span></span>制作AES KEY: echo  &#39;04112233445566778899AABBCCDDEEFF&#39; | xxd -r -ps &gt; aesKey4.bin
+
+otpctrl -w 0x8 0x0 0x33221104
+otpctrl -w 0x8 0x4 0x77665544
+otpctrl -w 0x8 0x8 0xBBAA9988
+otpctrl -w 0x8 0xC 0xFFEEDDCC
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.8.7. OTP_AES128_KEY_LOCK (0xD,0xF,0x11,0x13,0x15,0x17,0x19,0x1B)</h4>
+<p>该Command被使用来对OTP内的AES Key栏位进行LOCK的动作。LOCK表示无法更改OTP内的AES Key。在设置完该Command后，须于下次启动才会生效。</p>
+<ul>
+<li>
+<p>LOCK AESkey1</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xD 0x0 0x01
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0xD
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey2</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xF 0x0 0x04
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0xF
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey3</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x11 0x0 0x10
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x11
+</pre></div>
+
+
+</li>
+<li>
+<p>LOCK AESkey4</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x13 0x0 0x40
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x13
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.8.8. OTP_AES128_KEY1_BLOCK (0xE,0x10,0x12,0x14,0x16,0x18,0x1A,0x1C)</h4>
+<p>该Command被使用来对OTP内的AES Key栏位进行BLOCK的动作。BLOCK则表示SW无法读出OTP内的AES Key。在设置完该Command后，须于下次启动才会生效。</p>
+<ul>
+<li>
+<p>BLOCK AESKEY1</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0xE 0x0 0x02
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0xE
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY2</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x10 0x0 0x08
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x10
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY3</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x12 0x0 0x20
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x12
+</pre></div>
+
+
+</li>
+<li>
+<p>BLOCK AESKEY4</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x14 0x0 0x80
+</pre></div>
+
+
+<p>READ COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x14
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.8.9. OTP_ROM_SEL_AESKEY (0x24)</h4>
+<p>该Command用来选择OTP中哪一把AESKey对IPL进行解密，该OTP的值不为0时，使能ROM code对IPL的解密。在设置完该Command后，须于下次启动才会生效。注：一旦写入此OTP，IPL必须使用CBC加密。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x24 offset writedata
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x24
+</pre></div>
+
+
+<p><strong>Example:</strong> </p>
+<ul>
+<li>
+<p>SEL AESKEY128_1</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x24 0x0 0x80
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_2</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x24 0x0 0x90
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_3</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x24 0x0 0xA0
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY128_4</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x24 0x0 0xB0
+</pre></div>
+
+
+</li>
+</ul>
+<p>另外IPL可以使用AES256解密，OTP中AESKEY256实际上是由OTP中两把AES128组合而成，组合和设置方式如下：</p>
+<ul>
+<li>
+<p>SEL AESKEY256_1</p>
+<p>Composition mode:  </p>
+<div class="codehilite"><pre><span></span>AES128key1 + AES128key2
+</pre></div>
+
+
+<p>WRITE COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x24 0x0 0x40
+</pre></div>
+
+
+</li>
+<li>
+<p>SEL AESKEY256_2</p>
+<p>Composition mode:  </p>
+<div class="codehilite"><pre><span></span>AES128key3 + AES128key4
+</pre></div>
+
+
+<p>WRITE COMMAND:  </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x24 0x0 0x50
+</pre></div>
+
+
+</li>
+</ul>
+<h4>2.8.10. OTP_ROM_SEL_AESKEY_LOCK (0x25)</h4>
+<p>该Command被使用来对OTP内的OTP_ROM_SEL_AESKEY栏位进行LOCK的动作。LOCK表示无法更改OTP内的OTP_ROM_SEL_AESKEY。在设置完该Command后，须于下次启动才会生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x25 0x0 0x08
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -r 0x25
+</pre></div>
+
+
+<h4>2.8.11. OTP_CUSTOMER_AREA (0xA0)</h4>
+<p>Maruko 无 Customer Area</p>
+<h4>2.8.12. ERROR CODE</h4>
+<p>FF01: 无效的COMMAND</p>
+<p>FF02: 无效的OTP地址</p>
+<p>FF03: 无效的OTP执行许可证</p>
+<hr />
+<h2 id="3">3. 安全镜像生成<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="31">3.1. 概述<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>此功能依据用户需求可分成是否进行明文内容的加密，如下两种制作流程，此流程能一路支持到Linux Kernel，如下章节会逐步介绍如何通过tool生成Images。</p>
+<p>注意事项:</p>
+<ul>
+<li>
+<p>without AES</p>
+<ol>
+<li>
+<p>IPL.bin需先Insert CUST Key (Public Key)，然后签章必须是由OTP KEY所生成</p>
+</li>
+<li>
+<p>IPL_CUST.bin需先Insert CUST Key (Public Key)，然后在通过CUST Key (Private Key) 生成签章，这边Insert的Key为用来验证IPL_CUST、U-Boot和Linux Kernel的签章</p>
+</li>
+</ol>
+</li>
+<li>
+<p>with AES</p>
+<ol>
+<li>
+<p>IPL.bin需先Insert CUST Key (Public Key)，然后签章必须是由OTP KEY所生成</p>
+</li>
+<li>
+<p>IPL_CUST.bin需先Insert CUST Key (Public Key)，然后再通过CUST Key (Private Key) 生成签章，但不需要进行AES加密。这边Insert的CUST Key (Public Key)为用来验证U-Boot和Linux Kernel的签章。</p>
+</li>
+<li>
+<p>U-Boot和Linux Kernel都需要先进行AES加密，然后再通过CUST Key (Private Key) 生成签章。</p>
+<p><img alt="" src="mymedia/OTP-Key/image026.png" /> </p>
+<p>图3-1 签章流程</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="32-rsa-key">3.2. 制作RSA Key<a class="headerlink" href="#32-rsa-key" title="Permanent link">&para;</a></h3>
+<p>这边的制作方式同样适用于OTP Key及CUST Key中的RSA Key，可依据客户需求使用同一把Key或制作出两把不同的RSA Key。出于安全性考虑，建议使用两把不同的RSA key。</p>
+<p>请使用以下命令来生成Private.bin和Public.bin。</p>
+<p><em>通过以下命令生成的E key值默认为0x10001，请勿自定义E key值。</em></p>
+<h4>3.2.1. RSA2048</h4>
+<ol>
+<li>
+<p>生成RSA私钥</p>
+<div class="codehilite"><pre><span></span>openssl genrsa -out private.pem 2048
+</pre></div>
+
+
+</li>
+<li>
+<p>生成RSA公钥</p>
+<div class="codehilite"><pre><span></span>openssl rsa -in private.pem -out public.pem -outform PEM -pubout
+</pre></div>
+
+
+</li>
+</ol>
+<h4>3.2.2. RSA4096</h4>
+<ol>
+<li>
+<p>生成RSA私钥</p>
+<div class="codehilite"><pre><span></span>openssl genrsa -out private.pem 4096
+</pre></div>
+
+
+</li>
+<li>
+<p>生成RSA公钥</p>
+<div class="codehilite"><pre><span></span>openssl rsa -in private.pem -out public.pem -outform PEM -pubout
+</pre></div>
+
+
+</li>
+</ol>
+<hr />
+<h3 id="33-aes-128-key">3.3. 制作AES-128 Key<a class="headerlink" href="#33-aes-128-key" title="Permanent link">&para;</a></h3>
+<p>这边通过xxd tool来生成<code>AES-128 key binary file</code>，请指定32bytes的key，通过如下command来生成。</p>
+<div class="codehilite"><pre><span></span>echo &#39;000102030405060708090A0B0C0D0E0F&#39; | xxd -r -ps &gt; aesKey.bin
+</pre></div>
+
+
+<hr />
+<h3 id="34-usb">3.4. USB签章<a class="headerlink" href="#34-usb" title="Permanent link">&para;</a></h3>
+<p>该操作仅在USB boot flow中需要使用</p>
+<p>USB boot将会在USB upgrade场景下使用到，在该场景下，由ROM直接引导<code>usb_updater.bin</code>启动，而<code>usb_updater.bin</code>实则为<code>IPL.bin append</code>至64K bytes得来。所以若此时开启securityboot，只需要对<code>usb_updater.bin</code>中的<code>IPL.bin</code>部分签章，再重新append至64K bytes即可，这边只需要一条command就可实现以上操作。</p>
+<p>通过<code>key_proc.py</code>执行：</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --signusb --rsa=./private-otp.pem -f usb_updater.bin
+</pre></div>
+
+
+<p>执行后会生成<code>usb_updater.bin_append.sig.bin</code>，可用于烧录。</p>
+<hr />
+<h3 id="35-iplx-separation">3.5. IPLX Separation<a class="headerlink" href="#35-iplx-separation" title="Permanent link">&para;</a></h3>
+<p>该操作仅在EMMC boot flow中需要使用</p>
+<p>由于EMMC采用BOOT_PART.bin方案，所以只有IPL-&gt;U-Boot的storage方式是EMMC的时候才需要执行该步骤，SPI NOR、SPI NAND、SD等方式均不需要。BOOT_PART.bin包含IPLX和U-Boot，而IPLX又包含IPL和IPL_CUST， Sigmastar将release IPLX和U-Boot给customer，customer需自行使用如下命令从IPLX中分离出IPL和IPL_CUST，再分别进行签章。</p>
+<p>通过key_proc.py执行：</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --split -f ./IPLX.bin
+</pre></div>
+
+
+<p>执行后会生成IPL.bin和IPL_CUST.bin</p>
+<hr />
+<h3 id="36-iplbin">3.6. <span id="jump2">IPL.bin 签章</span><a class="headerlink" href="#36-iplbin" title="Permanent link">&para;</a></h3>
+<p>先将IPL Binary <strong>重命名</strong> 为IPL.bin，IPL需要先Insert Key后再做签章。</p>
+<p>IPL可进行AES加密，分为IPL加密和IPL不加密两种方案，IPL签章整个步骤如下：</p>
+<p><strong>IPL不加密:</strong> </p>
+<ol>
+<li>
+<p>Insert Key，通过key_proc.py执行：</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --insert --rsa=./public.pem  -f ./IPL.bin
+</pre></div>
+
+
+<p>执行后会生成IPL.cipher.bin。</p>
+<div class="codehilite"><pre><span></span>./add_ipl_header.py ./IPL.cipher.bin ./IPL.cipher2.bin 0 1（调试模式）
+
+./add_ipl_header.py ./IPL.cipher.bin ./IPL.cipher2.bin 0 0（正式模式）
+</pre></div>
+
+
+<p>执行后会生成IPL.cipher2.bin。</p>
+</li>
+<li>
+<p>制作签章，通过key_proc.py执行（注：必须用OTP的RSA Private Key签章）</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --sign --rsa=./private-otp.pem -f ./IPL.cipher2.bin
+</pre></div>
+
+
+<p>执行后会生成IPL.cipher2.sig.bin。</p>
+</li>
+</ol>
+<p><strong>IPL加密(此方案 Pudding/Tiramisu 不支持):</strong></p>
+<ol>
+<li>
+<p>Insert Key，通过key_proc.py执行：</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --insert --rsa=./public.pem  --IV=IV.bin -f ./IPL.bin
+</pre></div>
+
+
+<p>执行后会生成IPL.cipher.bin。</p>
+<div class="codehilite"><pre><span></span>./add_ipl_header.py ./IPL.cipher.bin ./IPL.cipher2.bin 0 1（调试模式）
+
+./add_ipl_header.py ./IPL.cipher.bin ./IPL.cipher2.bin 0 0（正式模式）
+</pre></div>
+
+
+<p>执行后会生成IPL.cipher2.bin。</p>
+<p>由于IPL使用CBC对Plain Text进行加密，故将使用到IV值。此功能需要烧写OTP_ROM_SEL_AESKEY(烧录方法见第二章)，IV值可客户自定义，生成方式如下：</p>
+<div class="codehilite"><pre><span></span>echo &#39;00112233445566778899AABBCCDDEEFF&#39; | xxd -r -ps &gt; IV.bin
+</pre></div>
+
+
+</li>
+<li>
+<p>加密IPL，加密支持AESkey256，若使用AESkey256，需注意使用的aeskey.bin需是256bit：</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --encrypt --aes=./aeskey.bin -f ./IPL.cipher2.bin
+</pre></div>
+
+
+<p>执行后会生成IPL.cipher2.aes.bin。</p>
+</li>
+<li>
+<p>制作签章，通过key_proc.py执行（注：必须用OTP的RSA Private Key签章）</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --sign --rsa=./private-otp.pem -f ./IPL.cipher2.aes.bin
+</pre></div>
+
+
+<p>执行后会生成IPL.cipher2.aes.sig.bin。</p>
+</li>
+</ol>
+<hr />
+<h3 id="37-ipl_custbin">3.7. <span id="jump4">IPL_CUST.bin 签章</span><a class="headerlink" href="#37-ipl_custbin" title="Permanent link">&para;</a></h3>
+<p>先将IPL_CUST Binary <strong>重命名</strong> 为IPL_CUST.bin，IPL_CUST仅有一种方案，步骤如下:</p>
+<p><strong>IPL_CUST不加密:</strong> </p>
+<ol>
+<li>
+<p>Insert Key，通过key_proc.py执行：</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --insert --rsa=./public.pem -f ./IPL_CUST.bin
+</pre></div>
+
+
+<p>执行后会生成IPL_CUST.cipher.bin。</p>
+<div class="codehilite"><pre><span></span>./add_ipl_header.py ./IPL_CUST.cipher.bin ./IPL_CUST.cipher2.bin 0 1（调试模式）
+
+./add_ipl_header.py ./IPL_CUST.cipher.bin ./IPL_CUST.cipher2.bin 0 0（正式模式）
+</pre></div>
+
+
+<p>执行后会生成IPL_CUST.cipher2.bin。</p>
+</li>
+<li>
+<p>制作签章，通过key_proc.py执行</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --sign --rsa=./private.pem -f ./IPL_CUST.cipher2.bin
+</pre></div>
+
+
+<p>执行后会生成IPL_CUST.cipher2.sig.bin。</p>
+</li>
+</ol>
+<hr />
+<h3 id="38-u-boot">3.8. U-Boot 签章<a class="headerlink" href="#38-u-boot" title="Permanent link">&para;</a></h3>
+<p>如下设定针对SPI NOR的U-Boot版本，其档名为<code>u-boot.xz.img.bin</code>，如为SPI-NAND版本，请改<code>u-boot_spinand.xz.img.bin</code>。Uboot有两种方案，分为UBOOT不加密和UBOOT加密。  </p>
+<ul>
+<li>
+<p>UBOOT不加密</p>
+<p>不需做Image的加密动作，执行后会产生u-boot.xz.img.sig.bin。</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --sign --rsa=./private.pem -f u-boot.xz.img.bin
+</pre></div>
+
+
+</li>
+<li>
+<p>UBOOT加密</p>
+<p>需要先对Image做AES加密，执行后会产生u-boot.xz.img.aes.bin，之后再对加密后的Image进行签章，最后产生u-boot.xz.img.aes.sig.bin。</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --encrypt --aes=./aesKey.bin -f ./u-boot.xz.img.bin
+
+./key_proc.py --sign --rsa=./private.pem -f ./u-boot.xz.img.aes.bin
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="39-boot_partbin-pack">3.9. BOOT_PART.bin Pack<a class="headerlink" href="#39-boot_partbin-pack" title="Permanent link">&para;</a></h3>
+<p><em>该操作仅在EMMC boot flow中需要使用。</em></p>
+<p>如 <strong>3.4. USB签章</strong> 介绍，<code>BOOT_PART.bin</code>需要拆分为IPL、IPL_CUST和U-Boot单独签章，所以签章后需要再将三个image打包为新的<code>BOOT_PART.bin</code>。且同样地，只有IPL &rarr; U-Boot的storage方式是EMMC的时候才需要执行该步骤，SPI NOR、SPI NAND、SD等方式均不需要。</p>
+<p>通过cat执行即可：</p>
+<div class="codehilite"><pre><span></span>cat IPL.cipher2.sig.bin IPL_CUST.cipher2.sig.bin &gt; IPLX.bin
+
+cat IPLX.bin u-boot.xz.img.sig.bin &gt; BOOT_PART.bin
+</pre></div>
+
+
+<hr />
+<h3 id="310-linux-kernel">3.10. Linux Kernel 签章<a class="headerlink" href="#310-linux-kernel" title="Permanent link">&para;</a></h3>
+<p>KERNEL有两种方案，分为KERNEL不加密和KERNEL加密。</p>
+<ul>
+<li>
+<p>Kernel不加密方案</p>
+<p>不需做Image的加密动作，执行后会生成kernel.sig.bin。</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --sign --rsa=./private.pem -f kernel.bin
+</pre></div>
+
+
+</li>
+<li>
+<p>Kernel加密方案</p>
+<p>需要先对Image做AES加密，执行后会生成kernel.aes.bin，之后再对加密后的Image进行签章，最后生成kernel.aes.sig.bin。</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --encrypt --aes=./aesKey.bin -f ./kernel.bin
+
+./key_proc.py --sign --rsa=./private.pem -f ./kernel.aes.bin
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="311-linux-rootfs">3.11. Linux Rootfs 签章<a class="headerlink" href="#311-linux-rootfs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Rootfs不加密</p>
+<p>不需做Image的加密动作，执行后会生成rootfs.sig.sqfs</p>
+<div class="codehilite"><pre><span></span>./key_proc.py --sign --rsa=./private.pem -f rootfs.sqfs
+</pre></div>
+
+
+</li>
+<li>
+<p>Rootfs加密</p>
+<p>非ramdisk属性的rootfs无法支持加解密机制</p>
+</li>
+</ul>
+<h3 id="312">3.12. <span id=jump5>签章验证</span><a class="headerlink" href="#312" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>将完成签章的Images刻录至flash中，刻录后如能正常进入U-Boot，表示从IPL至U-Boot的签章是没有问题的。</p>
+</li>
+<li>
+<p>在Uboot阶段需要设定环境变量来对Linux Kernel进行验证，其原理是通过sigauth命令来对Binary进行验签和解密，如下：</p>
+<ul>
+<li>
+<p>验签</p>
+<div class="codehilite"><pre><span></span>sigauth &lt;Binary_Addr&gt; &lt;KEY_Addr&gt;
+</pre></div>
+
+
+</li>
+<li>
+<p>验签+解密</p>
+<div class="codehilite"><pre><span></span>sigauth &lt;Binary_Addr&gt; &lt;KEY_Addr&gt; --aes
+</pre></div>
+
+
+</li>
+</ul>
+<p>请参考如下command进行设定:</p>
+<ul>
+<li>
+<p>非onebin方案</p>
+<ul>
+<li>
+<p>不包含AES加密的Kernel验签</p>
+<p>SPI-NOR:</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39;sf probe 0;sf read 0x22000000 ${sf_kernel_start} 
+${sf_kernel_size}; mxp r.info IPL_CUST; sf read 0x23C00000 
+${sf_part_start} ${sf_part_size}; dcache off; sigauth 0x22000000 
+0x23C00000; dcache on; bootm 0x22000000&#39;; saveenv;
+</pre></div>
+
+
+<p>SPI-NAND:</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39;nand read.e 0x23C00000 IPL_CUST0 0x20000; 
+nand read.e 0x22000000 KERNEL 0x500000; dcache off; 
+sigauth 0x22000000 0x23C00000; dcache on; bootm 0x22000000&#39;; saveenv;
+</pre></div>
+
+
+<p>EMMC:</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39;emmc read.p 0x22000000 kernela 0x300000; mmc dev 0 1; 
+mmc read 0x21000000 0 0x200; emmc_get_cust 0x21000000; 
+mmc partconf 0 1 1 0; dcache off; sigauth 0x22000000 $(cust_address); 
+dcache on; bootm 0x22000000&#39;; saveenv;
+</pre></div>
+
+
+<p>注意：以上command默认从EMMC0启动，若从EMMC1启动，则<code>mmc dev 0 1</code>需改为<code>mmc dev 1 1</code>。</p>
+<p>SD + SPI-NOR:</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39;fatload mmc 0:1 0x21000000 IPL_CUST 0; sf probe 0; 
+mxp r.info KERNEL; sf read 0x22000000 ${sf_part_start} ${sf_part_size}; 
+dcache off; sigauth 0x22000000 0x23C00000; dcache on; bootm 0x22000000&#39;; 
+saveenv;
+</pre></div>
+
+
+<p>注意：以上command默认从SD0启动，若从SD1启动，则<code>fatload mmc 0:1</code>需改为<code>fatload mmc 1:1</code>。</p>
+<p>SD + SPI-NAND:</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39;fatload mmc 0:1 0x23C00000 IPL_CUST 0; nand read.e 0x22000000 KERNEL; dcache off; sigauth 0x22000000 0x23C00000; dcache on; bootm 0x22000000&#39;; saveenv;
+</pre></div>
+
+
+<p>注意：以上command默认从SD0启动，若从SD1启动，则<code>fatload mmc 0:1</code>需改为<code>fatload mmc 1:1</code>。</p>
+</li>
+<li>
+<p>包含AES加密</p>
+<p>请在对应的启动方式上的sigauth命令的尾部加上 --aes。如：</p>
+<div class="codehilite"><pre><span></span>dcache off; sigauth 0x22000000 0x23C00000 --aes; dcache on;
+</pre></div>
+
+
+</li>
+</ul>
+</li>
+<li>
+<p>onebin方案</p>
+<ul>
+<li>
+<p>不包含AES加密的Kernel验签</p>
+<p>SPI-NOR:</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39;sf probe 0; sf read 0x22000000 KERNEL ${kernel_file_size}; 
+dcache off; sigauth 0x22000000 0x23C00000; dcache on; bootm 0x22000000&#39;; saveenv;
+</pre></div>
+
+
+<p>SPI-NAND:</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39;nand read.e 0x22000000 KERNEL 0x500000; dcache off; 
+sigauth 0x22000000 0x23C00000; dcache on; bootm 0x22000000&#39;; saveenv;
+       ​
+</pre></div>
+
+
+<p>EMMC:</p>
+<ul>
+<li>
+<p>Kernel验签 (For Uboot2021 Support)</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39; dcache off; sigauth 0x22000000 0x21000000; dcache on; bootm 0x22000000&#39;; saveenv;
+</pre></div>
+
+
+</li>
+<li>
+<p>Kernel验签 (For Uboot2015 Support)</p>
+<div class="codehilite"><pre><span></span>setenv bootcmd &#39;emmc read.p 0x22000000 kernel 0x300000; mmc dev 0 1; mmc read 0x21000000 0 0x200; emmc_get_cust 0x21000000; mmc partconf 0 1 1 0; dcache off; sigauth 0x22000000 $(cust_address); dcache on; bootm 0x22000000&#39;; saveenv;
+</pre></div>
+
+
+</li>
+</ul>
+<p><strong>注意：</strong> 以上command默认从EMMC0启动，若从EMMC1启动，则<code>mmc dev 0 1</code>需改为<code>mmc dev 1 1</code>。</p>
+</li>
+<li>
+<p>包含AES加密</p>
+<p>请在对应的启动方式上的sigauth命令的尾部加上 --aes。如：</p>
+<div class="codehilite"><pre><span></span>dcache off; sigauth 0x22000000 0x23C00000 --aes; dcache on;
+</pre></div>
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>若customer有验签rootfs的需求，在Uboot阶段需要设定环境变量来对Linux Rootfs进行验证，请参考如下command进行设定:</p>
+<ul>
+<li>
+<p>非onebin方案</p>
+<ul>
+<li>
+<p>不包含AES加密</p>
+<p><strong>SPI-NOR:</strong></p>
+<table>
+<thead>
+<tr>
+<th>setenv rootfs_size [size]</th>
+<th>结合kernel验签的bootcmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如实际烧录的rootfs size为0x1af100，则<code>setenv rootfs_size 1af100; saveenv;</code></td>
+<td>Kernel验签+ rootfs验签：  <code>setenv bootcmd 'dcache off; sf probe 0; mxp r.info rootfs; sf read  0x22000000 ${sf_part_start} ${sf_part_size}; mxp r.info IPL_CUST; sf read  0x23C00000 ${sf_part_start} ${sf_part_size}; sigauth 0x22000000 0x23C00000;  sf read 0x22000000 ${sf_kernel_start} ${sf_kernel_size}; sigauth 0x22000000  0x23C00000; dcache on; bootm 0x22000000'; saveenv;</code></td>
+</tr>
+<tr>
+<td>rootfs验签命令为：  <code>sf probe 0; mxp r.info rootfs; sf read  0x22000000 ${sf_part_start} ${sf_part_size}; mxp r.info IPL_CUST; sf read  0x23C00000 ${sf_part_start} ${sf_part_size}; dcache off; sigauth 0x22000000  0x23C00000; dcache on;</code></td>
+<td>Kernel（验签+解密）+ rootfs验签：  <code>setenv bootcmd 'dcache off; sf probe 0;  mxp r.info rootfs; sf read 0x22000000 ${sf_part_start} ${sf_part_size}; mxp  r.info IPL_CUST; sf read 0x23C00000 ${sf_part_start} ${sf_part_size}; sigauth  0x22000000 0x23C00000; sf read 0x22000000 ${sf_kernel_start}  ${sf_kernel_size}; sigauth 0x22000000 0x23C00000 --aes; dcache on; bootm  0x22000000'; saveenv;</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>SPI-NAND:</strong></p>
+<table>
+<thead>
+<tr>
+<th>setenv rootfs_size [size]</th>
+<th>结合kernel验签的bootcmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如实际烧录的rootfs size为0x1af100，则<code>setenv rootfs_size 1af100; saveenv;</code></td>
+<td>Kernel验签+ rootfs验签：  <code>setenv bootcmd 'dcache off; nand read.e 0x23C00000 IPL_CUST0  0x20000; nand read.e 0x22000000 rootfs 0x600000; sigauth 0x22000000  0x23C00000; nand read.e 0x22000000 KERNEL 0x500000; sigauth 0x22000000  0x23C00000; dcache on; bootm 0x22000000'; saveenv;</code></td>
+</tr>
+<tr>
+<td>rootfs验签命令为：  <code>nand read.e 0x23C00000 IPL_CUST0  0x20000;nand read.e 0x22000000 rootfs 0x600000; dcache off; sigauth  0x22000000 0x23C00000; dcache on;</code></td>
+<td>Kernel（验签+解密）+ rootfs验签：  <code>setenv bootcmd 'dcache off; nand read.e  0x23C00000 IPL_CUST0 0x20000; nand read.e 0x22000000 rootfs 0x600000; sigauth  0x22000000 0x23C00000; nand read.e 0x22000000 KERNEL 0x500000; sigauth  0x22000000 0x23C00000 --aes; dcache on; bootm 0x22000000'; saveenv;</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>SD + SPI-NOR:</strong></p>
+<table>
+<thead>
+<tr>
+<th>setenv rootfs_size [size]</th>
+<th>结合kernel验签的bootcmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如实际烧录的rootfs size为0x1af100，则<code>setenv rootfs_size 1af100; saveenv;</code></td>
+<td>Kernel验签+ rootfs验签：  <code>setenv bootcmd ' dcache off; fatload mmc 0:1 0x21000000 IPL_CUST  0; sf probe 0; mxp r.info rootfs; sf read 0x22000000 ${sf_part_start}  ${sf_part_size}; sigauth 0x22000000 0x23C00000; fatload mmc 0:1 0x21000000  IPL_CUST 0; sf probe 0; mxp r.info KERNEL; sf read 0x22000000  ${sf_part_start} ${sf_part_size}; sigauth 0x22000000 0x23C00000; dcache on;  bootm 0x22000000; saveenv;</code></td>
+</tr>
+<tr>
+<td>rootfs验签命令为：  <code>fatload mmc 0:1 0x21000000 IPL_CUST 0; sf  probe 0; mxp r.info rootfs; sf read 0x22000000 ${sf_part_start}  ${sf_part_size}; dcache off; sigauth 0x22000000 0x23C00000; dcache on;</code></td>
+<td>Kernel（验签+解密）+ rootfs验签：  <code>setenv bootcmd ' dcache off; atload mmc  0:1 0x21000000 IPL_CUST 0; sf probe 0; mxp r.info rootfs; sf read 0x22000000  ${sf_part_start} ${sf_part_size}; sigauth 0x22000000 0x23C00000; fatload mmc  0:1 0x21000000 IPL_CUST 0; sf probe 0; mxp r.info KERNEL; sf read 0x22000000  ${sf_part_start} ${sf_part_size}; sigauth 0x22000000 0x23C00000 --aes; dcache  on; bootm 0x22000000; saveenv;</code></td>
+</tr>
+</tbody>
+</table>
+<p>注意：以上command默认从SD0启动，若从SD1启动，则<code>fatload mmc 0:1</code>需改为<code>fatload mmc 1:1</code>。</p>
+<p><strong>SD + SPI-NAND:</strong> </p>
+<table>
+<thead>
+<tr>
+<th>setenv rootfs_size [size]</th>
+<th>结合kernel验签的bootcmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如实际烧录的rootfs size为0x1400100，则<code>setenv rootfs_size 1400100; saveenv;</code></td>
+<td>Kernel验签+ rootfs验签：  <code>setenv bootcmd ' dcache off; fatload mmc 0:1 0x23C00000 IPL_CUST  0; nand read.e 0x22000000 rootfs 0x600000; sigauth 0x22000000 0x23C00000;  fatload mmc 0:1 0x23C00000 IPL_CUST 0; nand read.e 0x22000000 KERNEL; sigauth  0x22000000 0x23C00000; dcache on; bootm 0x22000000'; saveenv;</code></td>
+</tr>
+<tr>
+<td>rootfs验签命令为：  <code>fatload mmc 0:1 0x23C00000 IPL_CUST 0;  nand read.e 0x22000000 rootfs 0x600000; dcache off; sigauth 0x22000000  0x23C00000; dcache on;</code></td>
+<td>Kernel（验签+解密）+ rootfs验签：  <code>setenv bootcmd ' dcache off; fatload mmc  0:1 0x23C00000 IPL_CUST 0; nand read.e 0x22000000 rootfs 0x600000; sigauth  0x22000000 0x23C00000; fatload mmc 0:1 0x23C00000 IPL_CUST 0; nand read.e  0x22000000 KERNEL; sigauth 0x22000000 0x23C00000 --aes; dcache on; bootm  0x22000000'; saveenv;</code></td>
+</tr>
+</tbody>
+</table>
+<p>注意：以上command默认从SD0启动，若从SD1启动，则<code>fatload mmc 0:1</code>需改为<code>fatload mmc 1:1</code>。</p>
+</li>
+<li>
+<p>包含AES加密: 非ramdisk属性的rootfs无法支持加解密机制。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>onebin方案</p>
+<ul>
+<li>
+<p>不包含AES加密</p>
+<p><strong>SPI-NOR:</strong></p>
+<table>
+<thead>
+<tr>
+<th>setenv rootfs_size [size]</th>
+<th>结合kernel验签的bootcmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如实际烧录的rootfs size为0x1af100，则<code>setenv rootfs_size 1af100; saveenv;</code></td>
+<td>Kernel验签+ rootfs验签：  <code>setenv bootcmd 'dcache off; sf probe 0; sf read 0x22000000 ROOFS  ${ rootfs_size }; sigauth 0x22000000 0x23C00000; sf read 0x22000000 KERNEL  ${kernel_file_size}; sigauth 0x22000000 0x23C00000; dcache on; bootm  0x22000000'; saveenv;</code></td>
+</tr>
+<tr>
+<td>rootfs验签命令为：  <code>sf probe 0; mxp r.info rootfs; sf read  0x22000000 KERNEL ${kernel_file_size};dcache off; sigauth 0x22000000  0x23C00000; dcache on;</code></td>
+<td>Kernel（验签+解密）+ rootfs验签：  <code>setenv bootcmd 'dcache off; sf probe 0;  sf read 0x22000000 ROOFS ${ rootfs_size }; sigauth 0x22000000 0x23C00000; sf  read 0x22000000 KERNEL ${kernel_file_size}; sigauth 0x22000000 0x23C00000  --aes; dcache on; bootm 0x22000000'; saveenv;</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>SPI-NAND:</strong></p>
+<table>
+<thead>
+<tr>
+<th>setenv rootfs_size [size]</th>
+<th>结合kernel验签的bootcmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>如实际烧录的rootfs size为0x1af100，则<code>setenv rootfs_size 1af100; saveenv;</code></td>
+<td>Kernel验签+ rootfs验签：  <code>setenv bootcmd 'dcache off; nand read.e 0x22000000 rootfs  0x600000; sigauth 0x22000000 0x23C00000; nand read.e 0x22000000 KERNEL  0x500000; sigauth 0x22000000 0x23C00000; dcache on; bootm 0x22000000';  saveenv;</code></td>
+</tr>
+<tr>
+<td>rootfs验签命令为：  <code>nand read.e 0x22000000 rootfs 0x600000;  dcache off; sigauth 0x22000000 0x23C00000; dcache on;</code></td>
+<td>Kernel（验签+解密）+ rootfs验签：  <code>setenv bootcmd 'dcache off;nand read.e  0x22000000 rootfs 0x600000; sigauth 0x22000000 0x23C00000; nand read.e  0x22000000 KERNEL 0x500000; sigauth 0x22000000 0x23C00000 --aes; dcache on;  bootm 0x22000000'; saveenv;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="4">4. 注意事项<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="41-ipl">4.1. IPL<a class="headerlink" href="#41-ipl" title="Permanent link">&para;</a></h3>
+<p>针对Secure Boot的功能，特定的IPL及IPL_CUST必须被使用。</p>
+<h4>4.1.1. 普通安全boot流程</h4>
+<ul>
+<li>
+<p>IPL</p>
+<p><strong>IPL.bin</strong></p>
+</li>
+<li>
+<p>IPL_CUST</p>
+<p><strong>IPL_CUST.bin</strong></p>
+</li>
+</ul>
+<h4>4.1.2. 加密安全boot流程</h4>
+<ul>
+<li>
+<p>IPL</p>
+<p><strong>IPL.AES.bin</strong>  </p>
+</li>
+<li>
+<p>IPL_CUST</p>
+<p><strong>IPL_CUST.AES.bin</strong></p>
+</li>
+</ul>
+<h3 id="42-tool">4.2. 自编tool签章<a class="headerlink" href="#42-tool" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Pudding IC &amp; Tiramisu IC</p>
+<p>针对U-Boot、Linux Kernel来生成签章文件时，仅使用其的Data部分来进行SHA计算，并通过RSA来产生256Bytes的签章，所以如客户为使用自行编制的tool来产生签章，须注意 <strong>应排除U-Boot和Linux Kernel前64Bytes的Header</strong> ，仅以Data部分来进行计算。</p>
+</li>
+<li>
+<p>Muffin IC &amp; Mochi IC &amp; Maruko IC </p>
+<p>针对U-Boot、Linux Kernel来生成签章文件时，将使用HEADER+Data部分来进行SHA计算，并通过RSA来产生256Bytes的签章，所以如客户为使用自行编制的tool来产生签章，须注意 <strong>应包含U-Boot和Linux Kernel的 Header</strong> ，以HEADER+Data部分来进行计算。</p>
+</li>
+</ol>
+<p><em>注：Muffin IC uboot header为 64byte，kernel header为 80byte</em></p>
+<ol>
+<li>
+<p>ALL Chip</p>
+<p><strong>AES加密都不包含Header，仅将Data部分来进行加密。</strong></p>
+</li>
+</ol>
+<hr />
+<h3 id="43-emmc-boot95partbin">4.3. EMMC BOOT_PART.bin签章<a class="headerlink" href="#43-emmc-boot95partbin" title="Permanent link">&para;</a></h3>
+<p>必须单独对IPL、IPL_CUST、U-Boot进行签章，签章后再重新打包为新的BOOT_PART.bin烧入（见<a href="#35-iplx-separation">3.5. IPLX Separation</a>和<a href="#39-bootpartbin-pack">3.9. BOOT_PART.bin Pack</a>）</p>
+<hr />
+<h2 id="5-securityboot">5. SECURITYBOOT部署流程<a class="headerlink" href="#5-securityboot" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="51-securityboot">5.1. SecurityBoot调试流程<a class="headerlink" href="#51-securityboot" title="Permanent link">&para;</a></h3>
+<p>若确认需要使用OTP烧录来串通SecurityBoot flow，则调试阶段务必按照以下flow，即先烧录部分OTP进行测试，否则可能由于错误的操作导致系统无法启动甚至IC作废，待调试PASS以后再考虑一次性烧录所有OTP</p>
+<h4>5.1.1. 烧录OTP（KEY）</h4>
+<p>使用U-Boot Command或Linux Tool烧录RSA Public NKey/Ekey（或AES Key）。</p>
+<p><strong>注意：</strong> U-Boot Command烧录方法详见<a href="#jump3">第2章 OTP Key读写操作说明</a>，Linux Tool烧录方式请跟FAE确认。</p>
+<h4>5.1.2. 签章image</h4>
+<p>对IPL/IPL_CUST/U-Boot进行签章（或加密）并烧入flash。</p>
+<p>其中IPL/IPL_CUST务必用调试流程的签章方法（目的是代替OTP中的SecurityBoot enable bit来开启SecurityBoot flow）。</p>
+<p><strong>注意：</strong> 调试流程的签章方法见<a href="#jump2">3.6. IPL.bin 签章</a>和<a href="#jump4">3.7. IPL_CUST.bin 签章</a></p>
+<h4>5.1.3. 检验验签（或解密）结果</h4>
+<p>首先需要确认ROM-&gt;IPL-&gt;IPL_CUST-&gt;U-Boot已进行到SecurityBoot的flow。</p>
+<ol>
+<li>
+<p>ROM-&gt;IPL确认是否走SecurityBoot的方式</p>
+<p>ROM验签IPL成功不会有任何log，但验签失败则会打印AUTH ERR（波特率可能需要调为38400或57600，否则乱码），所以可以烧入未签章的IPL到flash，若ROM-&gt;IPL已进行到SecurityBoot的flow，则会报AUTH
+ERR。</p>
+</li>
+<li>
+<p>IPL-&gt;IPL_CUST-&gt;U-Boot确认是否走SecurityBoot的方式</p>
+<p>查看log即可，一般带有KEYN_ADDRESS或secure boot关键字，若开启解密流程则还会有KEYAES_ADDRESS关键字。</p>
+<p>举例如下：</p>
+<p><img alt="" src="mymedia/OTP-Key/image027.png" /></p>
+</li>
+</ol>
+<p>确认后，需确保能启动到U-Boot才能继续下一步烧录。</p>
+<h4>5.1.4. 烧录OTP（ENABLE）</h4>
+<p>使用U-Boot Command或Linux Tool烧录SecurityBoot enable bit。</p>
+<p><strong>注意：</strong> U-Boot Command烧录方法详见<a href="#jump3">第2章 OTP Key读写操作说明</a>，Linux Tool烧录方式请跟FAE确认。</p>
+<p>烧录后按照上述方法确认ROM-&gt;IPL-&gt;IPL_CUST-&gt;U-Boot有走到SecurityBoot并能启动到U-Boot，然后继续下一步烧录。</p>
+<h4>5.1.5. 烧录OTP（LOCK）</h4>
+<p>使用U-Boot Command或Linux Tool烧录RSA KEY的LOCK和BLOCK。</p>
+<p><strong>注意：</strong> U-Boot Command烧录方法详见<a href="#jump3">第2章 OTP Key读写操作说明</a>，Linux Tool烧录方式请跟FAE确认。</p>
+<p>烧录后同样按照5.1.3的方法确认ROM-&gt;IPL-&gt;IPL_CUST-&gt;U-Boot有走到SecurityBoot并能启动到U-Boot，到此ROM-&gt;IPL-&gt;IPL_CUST-&gt;U-Boot的SecurityBoot flow和OTP相关验证已经PASS。</p>
+<p>接下来根据<a href="#jump5">3.12. 签章验证</a>的方法验证U-Boot以后的SecurityBoot flow。</p>
+<hr />
+<h3 id="52-securitybootonly-rsa">5.2. SecurityBoot正式流程（普通流程，Only RSA）<a class="headerlink" href="#52-securitybootonly-rsa" title="Permanent link">&para;</a></h3>
+<p>为了防止误操作导致系统无法启动甚至IC作废，调试流程PASS以后，才能进行正式流程。</p>
+<h4>5.2.1. 签章image（ALL）</h4>
+<p>使用python script将所有需要验签的image都执行一遍签章，再烧入flash，其中IPL/IPL_CUST可以使用正式模式的签章方法（因为OTP中的SecurityBoot enable bit会被烧录，不需要用software来模拟了）</p>
+<p><strong>注意：</strong> 正式模式的签章方法见<a href="#jump2">3.6. IPL.bin 签章</a>和<a href="#jump4">3.7. IPL_CUST.bin 签章</a>。</p>
+<h4>5.2.2. 烧录OTP（ALL）</h4>
+<p>使用U-Boot Command或Linux Tool烧录所有OTP case。</p>
+<p><strong>注意：</strong> U-Boot Command烧录方法详见<a href="#jump3">第2章 OTP Key读写操作说明</a>，Linux Tool烧录方式请跟FAE确认。</p>
+<hr />
+<h3 id="53-securitybootrsaaes">5.3. SecurityBoot正式流程（加密流程，RSA+AES）<a class="headerlink" href="#53-securitybootrsaaes" title="Permanent link">&para;</a></h3>
+<h4>5.3.1. 参考理论设计方案一</h4>
+<p>为了防止误操作导致系统无法启动甚至IC作废，调试流程PASS以后，才能进行正式流程。</p>
+<ul>
+<li>
+<p>签章image（ALL）</p>
+<p>使用python script对image只执行签章（或不签章，若只进行签章则需用特定的IPL/IPL_CUST），烧入flash，再使用python script对image执行签章和加密，用于网络或USB等方式升级。</p>
+<p><strong>注意</strong>：签章方法见第3章，其中IPL/IPL_CUST可以使用 <em>正式模式</em> 的签章方法（因为OTP中的SecurityBoot enable bit会被烧录，不需要用software来模拟了）， <em>正式模式</em> 的签章方法签章方法见<a href="#jump2">3.6. IPL.bin 签章</a>和<a href="#jump4">3.7. IPL_CUST.bin 签章</a>。</p>
+</li>
+<li>
+<p>烧录OTP（ALL）</p>
+<p>使用U-Boot Command或Linux Tool烧录所有OTP case。</p>
+<p><strong>注意：</strong> U-Boot Command烧录方法详见<a href="#jump3">第2章 OTP Key读写操作说明</a>，Linux Tool烧录方式请跟FAE确认。</p>
+</li>
+<li>
+<p>Upgrade</p>
+<p>若分区中image未签章，则OTP烧录后，不能重启，应立即通过网络或USB upgrade加密image。</p>
+<p>若分区中image有签章，则OTP烧录后，可以重启，但仍需通过网络或USB upgrade加密image。</p>
+</li>
+</ul>
+<h4>5.3.2. 参考理论设计方案二</h4>
+<p>为了防止误操作导致系统无法启动甚至IC作废，调试流程PASS以后，才能进行正式流程。</p>
+<ul>
+<li>
+<p>签章和加密image（ALL）</p>
+<p>划分两套分区，使用python script对image只执行签章（或不签章，若只进行签章则需用特定的IPL/IPL_CUST），烧入第一套分区，再使用python script对image执行签章和加密，烧入第二套分区。</p>
+<p><strong>注意：</strong> 签章方法见第3章，其中IPL/IPL_CUST可以使用 <strong>正式模式</strong> 的签章方法（因为OTP中的SecurityBoot enable bit会被烧录，不需要用software来模拟了）， <strong>正式模式</strong> 的签章方法签章方法见<a href="#jump2">3.6. IPL.bin 签章</a>和<a href="#jump4">3.7. IPL_CUST.bin 签章</a>。</p>
+</li>
+<li>
+<p>烧录OTP（ALL）</p>
+<p>从第一套分区启动，使用U-Boot Command或Linux Tool烧录所有OTP case。</p>
+<p><strong>注意：</strong> U-Boot Command烧录方法详见<a href="#jump3">第2章 OTP Key读写操作说明</a>，Linux Tool烧录方式请跟FAE确认。</p>
+</li>
+<li>
+<p>Upgrade</p>
+<p>若第一套分区未签章，则OTP烧录后，不能重启，应立即将第二套分区内容upgrade到第一套分区中。</p>
+<p>若第一套分区有签章，则OTP烧录后，可以重启，但仍需将第二套分区内容upgrade到第一套分区中。</p>
+</li>
+</ul>
+<h2 id="6-anti_rollback">6. ANti_rollback<a class="headerlink" href="#6-anti_rollback" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1. 概述<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<p>防回滚机制，其目的是为了防止IPL/IPL_CUST/UBOOT/KERNEL/RTOS降级到以前的版本，通过OTP中的Version Ctrl与IPL/IPL_CUST/UBOOT/KERNEL/RTOS Header Version进行对比，如果Header Version &gt;= OTP Version 则booting，Header Version &lt; OTP Version 则halt，以此来保证IPL/IPL_CUST/UBOOT/KERNEL/RTOS的版本为最新。</p>
+<p>其中IPL的Header Version 默认为2Bit Or 1Bit操作，无法修改。IPL_CUST/UBOOT/KERNEL/RTOS 默认为2Bit Or 1Bit操作，可修改。</p>
+<p><strong>以下文档均为2Bit Or 1Bit下的说明</strong>。</p>
+<p><img alt="" src="mymedia/OTP-Key/otp-7.png" /></p>
+<p>注：Header Version为当前的版本号， OTP Version则需要数OTP栏位中有多少个1，再与Header Version进行对比。</p>
+<h3 id="62-enable-antirollback">6.2. Enable AntiRollback<a class="headerlink" href="#62-enable-antirollback" title="Permanent link">&para;</a></h3>
+<p>通过烧录OTP中的OTP_ROM_ANTI_ROLLBACK的栏位来启动整个AntiRollback功能，一旦启动AntiRollback后，在ROM阶段就会开始进行IPL的版本校验。启动方式可通过烧录OTP_ENABLE_ANTI_ROLLBACK (0x12)。重启后生效。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x12 0x0 0x80
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x12
+</pre></div>
+
+
+<h3 id="63-ipl">6.3. IPL进版次数<a class="headerlink" href="#63-ipl" title="Permanent link">&para;</a></h3>
+<h4>6.3.1. OTP Version Ctrl</h4>
+<p>IPL的OTP版本号有64次进版次数。</p>
+<p>可在UBOOT下通过以下cmd来修改读取IPL OTP Version。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x13 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x13
+</pre></div>
+
+
+<p>需要注意IPL OTP Version为 <strong>2Bit OR 1Bit</strong> 操作，若要写1，需要将两个bit同时置1，举例：</p>
+<ul>
+<li>
+<p>IPL OTP Version = 1            </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x13 0x0 0x00000003
+</pre></div>
+
+
+</li>
+<li>
+<p>IPL OTP Version = 2   </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x13 0x0 0x0000000F
+</pre></div>
+
+
+</li>
+<li>
+<p>IPL OTP Version = 8   </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x13 0x0 0x0000FFFF
+</pre></div>
+
+
+</li>
+<li>
+<p>IPL OTP Version = 64  </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x13 0x0 0xFFFFFFFF
+otpctrl  -w 0x13 0x1 0xFFFFFFFF
+otpctrl  -w 0x13 0x2 0xFFFFFFFF
+otpctrl  -w 0x13 0x3 0xFFFFFFFF
+</pre></div>
+
+
+</li>
+</ul>
+<h4>6.3.2. IPL Header Version</h4>
+<ol>
+<li>
+<p>Make</p>
+<p>编译IPL时，需要带上ANTI=XX， XX为十六进制数，并且会将XX插入在IPL Header中。IPL与IPL_CUST共用ANTI参数。</p>
+<p>例如，IPL_CUST Header Version 为12：</p>
+<div class="codehilite"><pre><span></span>make ANTI=C
+</pre></div>
+
+
+</li>
+<li>
+<p>add_ipl_header.py</p>
+<p>用法：./add_ipl_header.py [CID] [AUTH] [ANTI]</p>
+<p>通过脚本修改IPL_CUST Header Version 为12:</p>
+<div class="codehilite"><pre><span></span>./add_ipl_header.py ./IPL_CUST.bin ./IPL_CUST2.bin 0 0 C
+</pre></div>
+
+
+</li>
+</ol>
+<h3 id="64-ipl_cust">6.4. IPL_CUST进版次数<a class="headerlink" href="#64-ipl_cust" title="Permanent link">&para;</a></h3>
+<h4>6.4.1. OTP Version Ctrl</h4>
+<p>IPL_CUST的OTP版本号有16次进版次数。</p>
+<p>可在UBOOT下通过以下cmd来修改读取IPL_CUST OTP Version。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x14 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x14
+</pre></div>
+
+
+<p>需要注意IPL_CUST OTP Version为 <strong>2Bit OR 1Bit</strong> 操作，若要写1，需要将两个bit同时置1，举例：</p>
+<ul>
+<li>
+<p>IPL_CUST OTP Version = 1        </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x14 0x0 0x00000003
+</pre></div>
+
+
+</li>
+<li>
+<p>IPL_CUST OTP Version = 2     </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x14 0x0 0x0000000F
+</pre></div>
+
+
+</li>
+<li>
+<p>IPL_CUST OTP Version = 8 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x14 0x0 0x0000FFFF
+</pre></div>
+
+
+</li>
+</ul>
+<h4>6.4.2. IPL_CUST Header Version</h4>
+<ol>
+<li>
+<p>Make</p>
+<p>编译IPL时，需要带上ANTI=XX， XX为十六进制数，并且会将XX插入在IPL_CUST Header中。IPL与IPL_CUST共用ANTI参数。</p>
+<p>例如，IPL_CUST Header Version 为12：</p>
+<div class="codehilite"><pre><span></span>make ANTI=C
+</pre></div>
+
+
+</li>
+<li>
+<p>add_ipl_header.py</p>
+<p>用法：./add_ipl_header.py [CID] [AUTH] [ANTI]</p>
+<p>通过脚本修改IPL_CUST Header Version 为12:</p>
+<div class="codehilite"><pre><span></span>./add_ipl_header.py ./IPL_CUST.bin ./IPL_CUST2.bin 0 0 C
+</pre></div>
+
+
+</li>
+</ol>
+<h3 id="65-uboot">6.5. UBOOT进版次数<a class="headerlink" href="#65-uboot" title="Permanent link">&para;</a></h3>
+<h4>6.5.1. OTP Version Ctrl</h4>
+<p>UBOOT的OTP版本号有16次进版次数。</p>
+<p>可在UBOOT下通过以下cmd来修改读取UBOOT OTP Version。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x15 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x15
+</pre></div>
+
+
+<p>需要注意UBOOT OTP Version为 <strong>2Bit OR 1Bit</strong> 操作，若要写1，需要将两个bit同时置1，举例：</p>
+<ul>
+<li>
+<p>UBOOT OTP Version = 1</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x15 0x0 0x00000003
+</pre></div>
+
+
+</li>
+<li>
+<p>UBOOT OTP Version = 2</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x15 0x0 0x0000000F
+</pre></div>
+
+
+</li>
+<li>
+<p>UBOOT OTP Version = 8</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x15 0x0 0x0000FFFF
+</pre></div>
+
+
+</li>
+</ul>
+<h4>6.5.2. UBOOT Header Version</h4>
+<p>修改UBOOT的Header Version时，需要手动修改根目录下的Makefile，如下：</p>
+<p><img alt="" src="mymedia/OTP-Key/otp-8.png" /></p>
+<p>由于ANTI是通过---lib_type带入Header，所以在UBOOT Header中ANTI的值以ASCII码的十六进制格式存储。</p>
+<p>ANTI的数值在UBOOT Header中占两个byte。</p>
+<p><strong>Makefile中的ANTI必须以十进制数格式存在且不可舍弃十位数上的0</strong>，在—libtype时会将数值转成对应的字符，这样可保证其对应的十六进制在0x30-0x39间。</p>
+<p><img alt="" src="mymedia/OTP-Key/otp-9.png" /></p>
+<p>举例： </p>
+<ol>
+<li>
+<p>设定UBOOT Header Version 为5时，修改UBOOT根目录下的Makefile</p>
+<div class="codehilite"><pre><span></span>ANTI=05
+</pre></div>
+
+
+</li>
+<li>
+<p>设定UBOOT Header Version 为12时，修改UBOOT根目录下的Makefile</p>
+<div class="codehilite"><pre><span></span>ANTI=12             [(ANTI=0C)是错误的写法！！！]
+</pre></div>
+
+
+</li>
+</ol>
+<h3 id="66-kernel">6.6. KERNEL进版次数<a class="headerlink" href="#66-kernel" title="Permanent link">&para;</a></h3>
+<h4>6.6.1. OTP Version Ctrl</h4>
+<p>KERNEL的OTP版本号有40次进版次数。</p>
+<p>可在UBOOT下通过以下cmd来修改读取KERNEL OTP Version。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x16 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x16
+</pre></div>
+
+
+<p>需要注意KERNEL OTP Version为 <strong>2Bit OR 1Bit</strong> 操作，若要写1，需要将两个bit同时置1，举例：</p>
+<ul>
+<li>
+<p>KERNEL OTP Version = 1          </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x16 0x0 0x00000003
+</pre></div>
+
+
+</li>
+<li>
+<p>KERNEL OTP Version = 2          </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x16 0x0 0x0000000F
+</pre></div>
+
+
+</li>
+<li>
+<p>KERNEL OTP Version = 8          </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x16 0x0 0x0000FFFF
+</pre></div>
+
+
+</li>
+</ul>
+<h4>6.6.2. KERNEL Header Version</h4>
+<p>修改KERNEL的Header Version时，需要手动修改根目录下的Makefile，如下：</p>
+<p><img alt="" src="mymedia/OTP-Key/otp-10.png" /></p>
+<p>由于ANTI是通过---lib_type带入Header,所以在KERNEL Header中ANTI的值以ASCII码的十六进制格式存储。</p>
+<p>ANTI的数值在UBOOT Header中占两个byte。</p>
+<p><strong>Makefile中的ANTI必须以十进制数格式存在且不可舍弃十位数上的0</strong>，在—libtype时会将数值转成对应的字符，这样可保证其对应的十六进制在0x30-0x39间。</p>
+<p><img alt="" src="mymedia/OTP-Key/otp-11.png" /></p>
+<p>举例：</p>
+<ol>
+<li>
+<p>设定KERNEL Header Version 为5时，修改KERNEL根目录下的Makefile</p>
+<div class="codehilite"><pre><span></span>ANTI=05
+</pre></div>
+
+
+</li>
+<li>
+<p>设定KERNEL Header Version 为12时，修改KERNEL根目录下的Makefile</p>
+<div class="codehilite"><pre><span></span>ANTI=12             [(ANTI=0C)是错误的写法！！！]
+</pre></div>
+
+
+</li>
+</ol>
+<h3 id="67-rtos">6.7. RTOS进版次数<a class="headerlink" href="#67-rtos" title="Permanent link">&para;</a></h3>
+<h4>6.7.1. OTP Version Ctrl</h4>
+<p>RTOS的OTP版本号有24次进版次数。</p>
+<p>可在UBOOT下通过以下cmd来修改读取RTOS OTP Version。</p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl -w 0x17 0x0 0xFFFFFFFF
+</pre></div>
+
+
+<p>READ COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -r 0x17
+</pre></div>
+
+
+<p>需要注意RTOS OTP Version为 <strong>2Bit OR 1Bit</strong> 操作，若要写1，需要将两个bit同时置1，举例：</p>
+<ul>
+<li>
+<p>RTOS OTP Version = 1 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x17 0x0 0x00000003
+</pre></div>
+
+
+</li>
+<li>
+<p>RTOS OTP Version = 2 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x17 0x0 0x0000000F
+</pre></div>
+
+
+</li>
+<li>
+<p>RTOS OTP Version = 8 </p>
+<p>WRITE COMMAND: </p>
+<div class="codehilite"><pre><span></span>otpctrl  -w 0x17 0x0 0x0000FFFF
+</pre></div>
+
+
+</li>
+</ul>
+<h4>6.7.2. RTOS Header Version</h4>
+<p>修改RTOS的Header Version时，需要手动修改proj/tng/link.mak，如下：</p>
+<p><img alt="" src="mymedia/OTP-Key/otp-12.png" /></p>
+<p>ANTI是通过python写入Header，ANTI的数值在RTOS Header中占一个byte。</p>
+<p><strong>Link.mak中的ANTI必须以十进制数格式存在</strong>。</p>
+<p>举例：</p>
+<ol>
+<li>
+<p>设定RTOS Header Version 为5时，修改RTOS目录下的proj/tng/link.mak</p>
+<div class="codehilite"><pre><span></span>ANTI=05
+</pre></div>
+
+
+</li>
+<li>
+<p>设定RTOS Header Version 为12时，修改RTOS目录下的proj/tng/link.mak</p>
+<div class="codehilite"><pre><span></span>ANTI=12             [ (ANTI=0C) 是错误的写法！！！]
+</pre></div>
+
+
+</li>
+</ol>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="masterslice.html" title="母片制作" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                母片制作
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ubi.html" title="UBI文件系统使用指南" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                UBI文件系统使用指南
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../search/search_index.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

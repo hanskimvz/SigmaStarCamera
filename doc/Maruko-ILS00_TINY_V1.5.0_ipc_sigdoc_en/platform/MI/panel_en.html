@@ -1,0 +1,3801 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>PANEL - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#revision-history" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                PANEL
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="aec_en.html" class="md-tabs__link md-tabs__link--active">
+          Development
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../customer/IPC/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      SDK Module API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        SDK Module API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_en.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_en.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_en.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_en.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_en.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_en.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_en.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_en.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_en.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_en.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_en.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_en.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_en.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        PANEL
+      </label>
+    
+    <a href="panel_en.html" title="PANEL" class="md-nav__link md-nav__link--active">
+      PANEL
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-api-list" class="md-nav__link">
+    1. API LIST
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-mi_panel_init" class="md-nav__link">
+    1.1. MI_PANEL_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mi_panel_deinit" class="md-nav__link">
+    1.2. MI_PANEL_DeInit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-mi_panel_gettotalnum" class="md-nav__link">
+    1.3. MI_PANEL_GetTotalNum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-mi_panel_setpoweron" class="md-nav__link">
+    1.4. MI_PANEL_SetPowerOn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-mi_panel_getpoweron" class="md-nav__link">
+    1.5. MI_PANEL_GetPowerOn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-mi_panel_setbacklight" class="md-nav__link">
+    1.6. MI_PANEL_SetBacklight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-mi_panel_getbacklight" class="md-nav__link">
+    1.7. MI_PANEL_GetBacklight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-mi_panel_setbacklightlevel" class="md-nav__link">
+    1.8. MI_PANEL_SetBacklightLevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-mi_panel_getbacklightlevel" class="md-nav__link">
+    1.9. MI_PANEL_GetBacklightLevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-mi_panel_setsscconfig" class="md-nav__link">
+    1.10. MI_PANEL_SetSscConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-mi_panel_setmipidsiconfig" class="md-nav__link">
+    1.11. MI_PANEL_SetMipiDsiConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-mi_panel_settimingconfig" class="md-nav__link">
+    1.12. MI_PANEL_SetTimingConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-mi_panel_setdrvcurrentconfig" class="md-nav__link">
+    1.13. MI_PANEL_SetDrvCurrentConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-mi_panel_setoutputpattern" class="md-nav__link">
+    1.14. MI_PANEL_SetOutputPattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-mi_panel_setpanelparam" class="md-nav__link">
+    1.15. MI_PANEL_SetPanelParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-mi_panel_getpanelparam" class="md-nav__link">
+    1.16. MI_PANEL_GetPanelParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117-mi_panel_gettimingconfig" class="md-nav__link">
+    1.17. MI_PANEL_GetTimingConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#118-mi_panel_initdev" class="md-nav__link">
+    1.18. MI_PANEL_InitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#119-mi_panel_deinitdev" class="md-nav__link">
+    1.19. MI_PANEL_DeInitDev
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-panel-data-type" class="md-nav__link">
+    2. PANEL DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_panel_powerconfig_t" class="md-nav__link">
+    2.1. MI_PANEL_PowerConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_panel_backlightconfig_t" class="md-nav__link">
+    2.2. MI_PANEL_BackLightConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_panel_sscconfig_t" class="md-nav__link">
+    2.3. MI_PANEL_SscConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_panel_mipidsiconfig_t" class="md-nav__link">
+    2.4. MI_PANEL_MipiDsiConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_panel_mipidsilanemode_e" class="md-nav__link">
+    2.5. MI_PANEL_MipiDsiLaneMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_panel_mipidsiformat_e" class="md-nav__link">
+    2.6. MI_PANEL_MipiDsiFormat_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_panel_mipidsictrlmode_e" class="md-nav__link">
+    2.7. MI_PANEL_MipiDsiCtrlMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_panel_timingconfig_t" class="md-nav__link">
+    2.8. MI_PANEL_TimingConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_panel_drvcurrentconfig_t" class="md-nav__link">
+    2.9. MI_PANEL_DrvCurrentConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_panel_testpatternconfig_t" class="md-nav__link">
+    2.10. MI_PANEL_TestPatternConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_panel_paramconfig_t" class="md-nav__link">
+    2.11. MI_PANEL_ParamConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_panel_intftype_e" class="md-nav__link">
+    2.12. MI_PANEL_IntfType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_panel_aspectratio_e" class="md-nav__link">
+    2.13. MI_PANEL_AspectRatio_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_panel_tibitmode_e" class="md-nav__link">
+    2.14. MI_PANEL_TiBitMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_panel_outputformatbitmode_e" class="md-nav__link">
+    2.15. MI_PANEL_OutputFormatBitMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_panel_outputtimingmode_e" class="md-nav__link">
+    2.16. MI_PANEL_OutputTimingMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_panel_initparam_t" class="md-nav__link">
+    2.17. MI_PANEL_InitParam_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-panel-error-code" class="md-nav__link">
+    3. PANEL ERROR CODE
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_en.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_en.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_en.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_en.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_en.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_en.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_en.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_en.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_en.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_en.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdisp_en.html" title="VDISP" class="md-nav__link">
+      VDISP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-nav__link">
+      ABBR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-api-list" class="md-nav__link">
+    1. API LIST
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-mi_panel_init" class="md-nav__link">
+    1.1. MI_PANEL_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mi_panel_deinit" class="md-nav__link">
+    1.2. MI_PANEL_DeInit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-mi_panel_gettotalnum" class="md-nav__link">
+    1.3. MI_PANEL_GetTotalNum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-mi_panel_setpoweron" class="md-nav__link">
+    1.4. MI_PANEL_SetPowerOn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-mi_panel_getpoweron" class="md-nav__link">
+    1.5. MI_PANEL_GetPowerOn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-mi_panel_setbacklight" class="md-nav__link">
+    1.6. MI_PANEL_SetBacklight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-mi_panel_getbacklight" class="md-nav__link">
+    1.7. MI_PANEL_GetBacklight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-mi_panel_setbacklightlevel" class="md-nav__link">
+    1.8. MI_PANEL_SetBacklightLevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-mi_panel_getbacklightlevel" class="md-nav__link">
+    1.9. MI_PANEL_GetBacklightLevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#110-mi_panel_setsscconfig" class="md-nav__link">
+    1.10. MI_PANEL_SetSscConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-mi_panel_setmipidsiconfig" class="md-nav__link">
+    1.11. MI_PANEL_SetMipiDsiConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-mi_panel_settimingconfig" class="md-nav__link">
+    1.12. MI_PANEL_SetTimingConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-mi_panel_setdrvcurrentconfig" class="md-nav__link">
+    1.13. MI_PANEL_SetDrvCurrentConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-mi_panel_setoutputpattern" class="md-nav__link">
+    1.14. MI_PANEL_SetOutputPattern
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-mi_panel_setpanelparam" class="md-nav__link">
+    1.15. MI_PANEL_SetPanelParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-mi_panel_getpanelparam" class="md-nav__link">
+    1.16. MI_PANEL_GetPanelParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117-mi_panel_gettimingconfig" class="md-nav__link">
+    1.17. MI_PANEL_GetTimingConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#118-mi_panel_initdev" class="md-nav__link">
+    1.18. MI_PANEL_InitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#119-mi_panel_deinitdev" class="md-nav__link">
+    1.19. MI_PANEL_DeInitDev
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-panel-data-type" class="md-nav__link">
+    2. PANEL DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_panel_powerconfig_t" class="md-nav__link">
+    2.1. MI_PANEL_PowerConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_panel_backlightconfig_t" class="md-nav__link">
+    2.2. MI_PANEL_BackLightConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_panel_sscconfig_t" class="md-nav__link">
+    2.3. MI_PANEL_SscConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_panel_mipidsiconfig_t" class="md-nav__link">
+    2.4. MI_PANEL_MipiDsiConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_panel_mipidsilanemode_e" class="md-nav__link">
+    2.5. MI_PANEL_MipiDsiLaneMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_panel_mipidsiformat_e" class="md-nav__link">
+    2.6. MI_PANEL_MipiDsiFormat_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_panel_mipidsictrlmode_e" class="md-nav__link">
+    2.7. MI_PANEL_MipiDsiCtrlMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_panel_timingconfig_t" class="md-nav__link">
+    2.8. MI_PANEL_TimingConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_panel_drvcurrentconfig_t" class="md-nav__link">
+    2.9. MI_PANEL_DrvCurrentConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_panel_testpatternconfig_t" class="md-nav__link">
+    2.10. MI_PANEL_TestPatternConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_panel_paramconfig_t" class="md-nav__link">
+    2.11. MI_PANEL_ParamConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_panel_intftype_e" class="md-nav__link">
+    2.12. MI_PANEL_IntfType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_panel_aspectratio_e" class="md-nav__link">
+    2.13. MI_PANEL_AspectRatio_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_panel_tibitmode_e" class="md-nav__link">
+    2.14. MI_PANEL_TiBitMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_panel_outputformatbitmode_e" class="md-nav__link">
+    2.15. MI_PANEL_OutputFormatBitMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_panel_outputtimingmode_e" class="md-nav__link">
+    2.16. MI_PANEL_OutputTimingMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_panel_initparam_t" class="md-nav__link">
+    2.17. MI_PANEL_InitParam_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-panel-error-code" class="md-nav__link">
+    3. PANEL ERROR CODE
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI PANEL API</h1>
+<hr />
+<h2 id="revision-history">REVISION HISTORY<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision No.</th>
+<th><div style="width:335pt">Description</div></th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.03</td>
+<td><li> Initial release</td>
+<td>04/12/2018</td>
+</tr>
+<tr>
+<td>2.04</td>
+<td><li> Added new API: MI_PANEL_SetSscConfig</td>
+<td>06/06/2019</td>
+</tr>
+<tr>
+<td>2.05</td>
+<td><li> Added  new mipi dsi config parameters: MI_U8 u8SyncCalibrate, MI_U16 u16VirHsyncSt, MI_U16 u16VirHsyncEnd, MI_U16 u16VsyncRef, MI_U16 u16DataClkSkew</td>
+<td>08/09/2019</td>
+</tr>
+<tr>
+<td>2.06</td>
+<td><li> Added  new mipi dsi config parameters:   MI_U8 u8PolCh0, MI_U8 u8PolCh1, MI_U8 u8PolCh2, MI_U8 u8PolCh3, MI_U8 u8PolCh4</td>
+<td>10/14/2019</td>
+</tr>
+<tr>
+<td>2.07</td>
+<td><li> Added  output pixel format enum: E_MI_PNL_OUTPUT_565BIT_MODE</td>
+<td>12/09/2019</td>
+</tr>
+<tr>
+<td>2.08</td>
+<td><li> Redefined  SSC parameter: MI_PANEL_SscConfig_t</td>
+<td>03/13/2020</td>
+</tr>
+<tr>
+<td>2.09</td>
+<td><li> Added new API: MI_PANEL_InitDev, MI_PANEL_DeInitDev</td>
+<td>04/26/2020</td>
+</tr>
+<tr>
+<td>2.10</td>
+<td><li> Added  interface type to API  <li> Removed  needless API</td>
+<td>06/18/2020</td>
+</tr>
+<tr>
+<td>2.11</td>
+<td><li> Added  BT656 interface enum</td>
+<td>07/03/2020</td>
+</tr>
+<tr>
+<td>2.12</td>
+<td><li> Added  new interface type</td>
+<td>09/03/2020</td>
+</tr>
+<tr>
+<td>2.13</td>
+<td><li> Declare that these functions  are not supported: MI_PANEL_SetPowerOn, MI_PANEL_GetPowerOn,  MI_PANEL_SetBacklight, MI_PANEL_GetBacklight, MI_PANEL_SetBacklightLevel, MI_PANEL_GetBacklightLevel</td>
+<td>06/25/2021</td>
+</tr>
+<tr>
+<td>2.14</td>
+<td><li> Added  new interface type: E_MI_PNL_INTF_BT1120_DDR</td>
+<td>12/08/2021</td>
+</tr>
+<tr>
+<td>2.15</td>
+<td><li> Modify MI_PANEL_DeInit and MI_PANEL_DeinitDev input param</td>
+<td>02/28/2022</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-api-list">1. API LIST<a class="headerlink" href="#1-api-list" title="Permanent link">&para;</a></h2>
+<p>The panel module provides the following APIs:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name of API</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#11-mi_panel_init">MI_PANEL_Init</a></td>
+<td>Initialize panel module</td>
+</tr>
+<tr>
+<td><a href="#12-mi_panel_deinit">MI_PANEL_DeInit</a></td>
+<td>Deinitialize panel module</td>
+</tr>
+<tr>
+<td><a href="#13-mi_panel_gettotalnum">MI_PANEL_GetTotalNum</a></td>
+<td>Get total number of panel parameters</td>
+</tr>
+<tr>
+<td><a href="#14-mi_panel_setpoweron">MI_PANEL_SetPowerOn</a></td>
+<td>Set panel power on</td>
+</tr>
+<tr>
+<td><a href="#15-mi_panel_getpoweron">MI_PANEL_GetPowerOn</a></td>
+<td>Get panel power status</td>
+</tr>
+<tr>
+<td><a href="#16-mi_panel_setbacklight">MI_PANEL_SetBacklight</a></td>
+<td>Set backlight enable</td>
+</tr>
+<tr>
+<td><a href="#17-mi_panel_getbacklight">MI_PANEL_GetBacklight</a></td>
+<td>Get backlight enable status</td>
+</tr>
+<tr>
+<td><a href="#18-mi_panel_setbacklightlevel">MI_PANEL_SetBacklightLevel</a></td>
+<td>Set backlight brightness value</td>
+</tr>
+<tr>
+<td><a href="#19-mi_panel_getbacklightlevel">MI_PANEL_GetBacklightLevel</a></td>
+<td>Get backlight brightness value</td>
+</tr>
+<tr>
+<td><a href="#110-mi_panel_setsscconfig">MI_PANEL_SetSscConfig</a></td>
+<td>Set spread spectrum related configuration</td>
+</tr>
+<tr>
+<td><a href="#111-mi_panel_setmipidsiconfig">MI_PANEL_SetMipiDsiConfig</a></td>
+<td>Set MIPI related configuration</td>
+</tr>
+<tr>
+<td><a href="#112-mi_panel_settimingconfig">MI_PANEL_SetTimingConfig</a></td>
+<td>Set Timing related configuration</td>
+</tr>
+<tr>
+<td><a href="#113-mi_panel_setdrvcurrentconfig">MI_PANEL_SetDrvCurrentConfig</a></td>
+<td>Set driving current configuration</td>
+</tr>
+<tr>
+<td><a href="#114-mi_panel_setoutputpattern">MI_PANEL_SetOutputPattern</a></td>
+<td>Set panel output pattern</td>
+</tr>
+<tr>
+<td><a href="#115-mi_panel_setpanelparam">MI_PANEL_SetPanelParam</a></td>
+<td>Set panel information</td>
+</tr>
+<tr>
+<td><a href="#116-mi_panel_getpanelparam">MI_PANEL_GetPanelParam</a></td>
+<td>Get current panel configuration information</td>
+</tr>
+<tr>
+<td><a href="#117-mi_panel_gettimingconfig">MI_PANEL_GetTimingConfig</a></td>
+<td>Get Timing related configuration information</td>
+</tr>
+<tr>
+<td><a href="#118-mi_panel_initdev">MI_PANEL_InitDev</a></td>
+<td>Initialize panel device</td>
+</tr>
+<tr>
+<td><a href="#119-mi_panel_deinitdev">MI_PANEL_DeInitDev</a></td>
+<td>De-initialize panel device</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="11-mi_panel_init">1.1. MI_PANEL_Init<a class="headerlink" href="#11-mi_panel_init" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Initialize panel module</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_Init(MI_PANEL_IntfType_e eIntfType);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#12-mi_panel_deinit">MI_PANEL_DeInit</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="12-mi_panel_deinit">1.2. MI_PANEL_DeInit<a class="headerlink" href="#12-mi_panel_deinit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Deinitialize panel module</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_DeInit(MI_PANEL_IntfType_e eIntfType);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#11-mi_panel_init">MI_PANEL_Init</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="13-mi_panel_gettotalnum">1.3. MI_PANEL_GetTotalNum<a class="headerlink" href="#13-mi_panel_gettotalnum" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get total number of panel parameters</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_GetTotalNum(MI_U32 *pu32TotalNum);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pu32TotalNum</td>
+<td>Total number of panel parameters received by the pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Not supported yet</p>
+</li>
+</ul>
+<hr />
+<h3 id="14-mi_panel_setpoweron">1.4. MI_PANEL_SetPowerOn<a class="headerlink" href="#14-mi_panel_setpoweron" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set panel power on</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetPowerOn(MI_PANEL_IntfType_e eIntfType , MI_PANEL_PowerConfig_t *pstPowerCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstPowerCfg</td>
+<td>Panel power enable status</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Before setting the panel power enable, initialize panel first.</p>
+</li>
+<li>
+<p>Currently not supported, it is recommended that the app directly control GPIO.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#15-mi_panel_getpoweron">MI_PANEL_GetPowerOn</a> </p>
+</li>
+</ul>
+<hr />
+<h3 id="15-mi_panel_getpoweron">1.5. MI_PANEL_GetPowerOn<a class="headerlink" href="#15-mi_panel_getpoweron" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get panel power enable status</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_GetPowerOn(MI_PANEL_IntfType_e eIntfType , MI_PANEL_PowerConfig_t *pstPowerCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Syntax</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstPowerCfg</td>
+<td>Panel power enable status received by the pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>Currently not supported, it is recommended that the app directly control GPIO.</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#14-mi_panel_setpoweron">MI_PANEL_SetPowerOn</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="16-mi_panel_setbacklight">1.6. MI_PANEL_SetBacklight<a class="headerlink" href="#16-mi_panel_setbacklight" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set panel backlight enable.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetBacklight(MI_PANEL_IntfType_e eIntfType , MI_PANEL_BackLightConfig_t *pstBackLightCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstBackLightCfg</td>
+<td>Panel backlight enable status</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>Currently not supported, it is recommended that the app directly control GPIO.</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#17-mi_panel_getbacklight">MI_PANEL_GetBacklight</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="17-mi_panel_getbacklight">1.7. MI_PANEL_GetBacklight<a class="headerlink" href="#17-mi_panel_getbacklight" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get panel backlight enable status</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_GetBacklight(MI_PANEL_IntfType_e eIntfType , MI_PANEL_BackLightConfig_t *pstBackLightCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstBackLightCfg</td>
+<td>Panel backlight enable status received by the pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>Currently not supported, it is recommended that the app directly control GPIO.</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#16-mi_panel_setbacklight">MI_PANEL_SetBacklight</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="18-mi_panel_setbacklightlevel">1.8. MI_PANEL_SetBacklightLevel<a class="headerlink" href="#18-mi_panel_setbacklightlevel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set backlight brightness value</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetBacklightLevel(MI_PANEL_IntfType_e eIntfType , MI_PANEL_BackLightConfig_t *pstBackLightCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstBackLightCfg</td>
+<td>Backlight brightness value</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Before calling this function, set the panel backlight enable first</p>
+</li>
+<li>
+<p>Currently not supported, it is recommended that the app directly control PWM.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#19-mi_panel_getbacklightlevel">MI_PANEL_GetBacklightLevel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="19-mi_panel_getbacklightlevel">1.9. MI_PANEL_GetBacklightLevel<a class="headerlink" href="#19-mi_panel_getbacklightlevel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get panel backlight brightness value</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_GetBacklightLevel(MI_PANEL_IntfType_e eIntfType , MI_PANEL_BackLightConfig_t *pstBackLightCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstBackLightCfg</td>
+<td>Panel backlight brightness value received by the pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Before calling this function, set the panel backlight enable first</p>
+</li>
+<li>
+<p>Currently not supported, it is recommended that the app directly control PWM.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#18-mi_panel_setbacklightlevel">MI_PANEL_SetBacklightLevel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="110-mi_panel_setsscconfig">1.10. MI_PANEL_SetSscConfig<a class="headerlink" href="#110-mi_panel_setsscconfig" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set spread spectrum related configuration</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetSscConfig(MI_PANEL_IntfType_e eIntfType , MI_PANEL_SscConfig_t *pstSscCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstSscCfg</td>
+<td>Spread spectrum related configuration</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="111-mi_panel_setmipidsiconfig">1.11. MI_PANEL_SetMipiDsiConfig<a class="headerlink" href="#111-mi_panel_setmipidsiconfig" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set MIPI interface related configuration</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetMipiDsiConfig(MI_PANEL_IntfType_e eIntfType , MI_PANEL_MipiDsiConfig_t *pstMipiDsiCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstMipiDsiCfg</td>
+<td>MIPI interface related configuration</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>This function is for use with MIPI panel only. To use this function,
+<a href="#115-mi_panel_setpanelparam">MI_PANEL_SetPanelParam</a> must be called as well.</p>
+</li>
+</ul>
+<hr />
+<h3 id="112-mi_panel_settimingconfig">1.12. MI_PANEL_SetTimingConfig<a class="headerlink" href="#112-mi_panel_settimingconfig" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set Timing related configuration</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetTimingConfig(MI_PANEL_IntfType_e eIntfType , MI_PANEL_TimingConfig_t *pstTimingCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstTimingCfg</td>
+<td>Timing related configuration</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#117-mi_panel_gettimingconfig">MI_PANEL_GetTimingConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="113-mi_panel_setdrvcurrentconfig">1.13. MI_PANEL_SetDrvCurrentConfig<a class="headerlink" href="#113-mi_panel_setdrvcurrentconfig" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set driving capability related configuration</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetDrvCurrentConfig(MI_PANEL_IntfType_e eIntfType , MI_PANEL_DrvCurrentConfig_t *pstDrvCurrentCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstDrvCurrentCfg</td>
+<td>Driving capability related configuration</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="114-mi_panel_setoutputpattern">1.14. MI_PANEL_SetOutputPattern<a class="headerlink" href="#114-mi_panel_setoutputpattern" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set output pattern</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetOutputPattern(MI_PANEL_IntfType_e eIntfType , MI_PANEL_TestPatternConfig_t *pstTestPatternCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstTestPatternCfg</td>
+<td>Output pattern related configuration</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>For debugging (against LVDS at the present)</p>
+</li>
+</ul>
+<hr />
+<h3 id="115-mi_panel_setpanelparam">1.15. MI_PANEL_SetPanelParam<a class="headerlink" href="#115-mi_panel_setpanelparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set panel information</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_SetPanelParam(MI_PANEL_IntfType_e eIntfType , MI_PANEL_ParamConfig_t *pstParamCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstParamCfg</td>
+<td>Panel parameter information</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#116-mi_panel_getpanelparam">MI_PANEL_GetPanelParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="116-mi_panel_getpanelparam">1.16. MI_PANEL_GetPanelParam<a class="headerlink" href="#116-mi_panel_getpanelparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get panel parameter</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_GetPanelParam(MI_PANEL_IntfType_e eIntfType , MI_PANEL_ParamConfig_t *pstParamCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstParamCfg</td>
+<td>Panel parameter information</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p><a href="#115-mi_panel_setpanelparam">MI_PANEL_SetPanelParam</a> must be called first</p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#115-mi_panel_setpanelparam">MI_PANEL_SetPanelParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="117-mi_panel_gettimingconfig">1.17. MI_PANEL_GetTimingConfig<a class="headerlink" href="#117-mi_panel_gettimingconfig" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get Timing related configuration</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_GetTimingConfig(MI_PANEL_IntfType_e eIntfType , MI_PANEL_TimingConfig_t *pstTimingCfg);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eIntfType</td>
+<td>PANEL type</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstTimingCfg</td>
+<td>Timing related configuration</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#112-mi_panel_settimingconfig">MI_PANEL_SetTimingConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="118-mi_panel_initdev">1.18. MI_PANEL_InitDev<a class="headerlink" href="#118-mi_panel_initdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Initialize panel module</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_InitDev(MI_PANEL_InitParam_t *pstInitParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pstInitParam</td>
+<td>Initialization Parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>For Version 2.09 and above, we recommend using this interface to replace the original <a href="#11-mi_panel_init">MI_PANEL_Init</a> interface.</p>
+</li>
+<li>
+<p>Related API</p>
+<p>MI _PANEL_DeInitDev</p>
+</li>
+</ul>
+<hr />
+<h3 id="119-mi_panel_deinitdev">1.19. MI_PANEL_DeInitDev<a class="headerlink" href="#119-mi_panel_deinitdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Deinitialize panel module</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_PANEL_DeInitDev(MI_PANEL_InitParam_t *pstInitParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pstInitParam</td>
+<td>Deinitialization Parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#3-panel-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Requirement</p>
+<ul>
+<li>
+<p>Header: mi_panel.h, mi_panel_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_panel.a / libmi_panel.so</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>For Version 2.09 and above, we recommend using this interface to replace the
+original <a href="#12-mi_panel_deinit">MI_PANEL_DeInit</a> interface.</p>
+</li>
+<li>
+<p>Related API</p>
+<p><a href="#118-mi_panel_initdev">MI_PANEL_InitDev</a> </p>
+</li>
+</ul>
+<hr />
+<h2 id="2-panel-data-type">2. PANEL DATA TYPE<a class="headerlink" href="#2-panel-data-type" title="Permanent link">&para;</a></h2>
+<p>The table below lists the PANEL related data types:</p>
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_panel_powerconfig_t">MI_PANEL_PowerConfig_t</a></td>
+<td>Define panel power enable status structure</td>
+</tr>
+<tr>
+<td><a href="#22-mi_panel_backlightconfig_t">MI_PANEL_BackLightConfig_t</a></td>
+<td>Define panel backlight structure</td>
+</tr>
+<tr>
+<td><a href="#23-mi_panel_sscconfig_t">MI_PANEL_SscConfig_t</a></td>
+<td>Define panel spread spectrum configuration structure</td>
+</tr>
+<tr>
+<td><a href="#24-mi_panel_mipidsiconfig_t">MI_PANEL_MipiDsiConfig_t</a></td>
+<td>Define MIPI interface configuration structure</td>
+</tr>
+<tr>
+<td><a href="#25-mi_panel_mipidsilanemode_e">MI_PANEL_MipiDsiLaneMode_e</a></td>
+<td>Define MIPI interface Lane mode enumeration</td>
+</tr>
+<tr>
+<td><a href="#26-mi_panel_mipidsiformat_e">MI_PANEL_MipiDsiFormat_e</a></td>
+<td>Define MIPI interface Format enumeration</td>
+</tr>
+<tr>
+<td><a href="#27-mi_panel_mipidsictrlmode_e">MI_PANEL_MipiDsiCtrlMode_e</a></td>
+<td>Define MIPI interface Ctrl Mode enumeration</td>
+</tr>
+<tr>
+<td><a href="#28-mi_panel_timingconfig_t">MI_PANEL_TimingConfig_t</a></td>
+<td>Define panel Timing information structure</td>
+</tr>
+<tr>
+<td><a href="#29-mi_panel_drvcurrentconfig_t">MI_PANEL_DrvCurrentConfig_t</a></td>
+<td>Define driving capability configuration structure</td>
+</tr>
+<tr>
+<td><a href="#210-mi_panel_testpatternconfig_t">MI_PANEL_TestPatternConfig_t</a></td>
+<td>Define output pattern information structure</td>
+</tr>
+<tr>
+<td><a href="#211-mi_panel_paramconfig_t">MI_PANEL_ParamConfig_t</a></td>
+<td>Define panel parameter information structure</td>
+</tr>
+<tr>
+<td><a href="#212-mi_panel_intftype_e">MI_PANEL_IntfType_e</a></td>
+<td>Define Link type enumeration</td>
+</tr>
+<tr>
+<td><a href="#213-mi_panel_aspectratio_e">MI_PANEL_AspectRatio_e</a></td>
+<td>Define Aspect Ratio enumeration</td>
+</tr>
+<tr>
+<td><a href="#214-mi_panel_tibitmode_e">MI_PANEL_TiBitMode_e</a></td>
+<td>Define TiBit Mode enumeration</td>
+</tr>
+<tr>
+<td><a href="#215-mi_panel_outputformatbitmode_e">MI_PANEL_OutputFormatBitMode_e</a></td>
+<td>Define Output Format Bit Mode enumeration</td>
+</tr>
+<tr>
+<td><a href="#216-mi_panel_outputtimingmode_e">MI_PANEL_OutputTimingMode_e</a></td>
+<td>Define panel output timing change mode enumeration</td>
+</tr>
+<tr>
+<td><a href="#217-mi_panel_initparam_t">MI_PANEL_InitParam_t</a></td>
+<td>Define the initialized parameter of PANEL device</td>
+</tr>
+</tbody>
+</table>
+<p>NOTE: This section includes most of the key data types. For data types not
+listed here, please refer to mi_panel_datatype.h.</p>
+<hr />
+<h3 id="21-mi_panel_powerconfig_t">2.1. MI_PANEL_PowerConfig_t<a class="headerlink" href="#21-mi_panel_powerconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel power enable status structure</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    MI_BOOL bEn;
+
+}MI_PANEL_PowerConfig_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#14-mi_panel_setpoweron">MI_PANEL_SetPowerOn</a></p>
+<p><a href="#15-mi_panel_getpoweron">MI_PANEL_GetPowerOn</a> </p>
+</li>
+</ul>
+<hr />
+<h3 id="22-mi_panel_backlightconfig_t">2.2. MI_PANEL_BackLightConfig_t<a class="headerlink" href="#22-mi_panel_backlightconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel backlight information structure</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    MI_BOOL bEn;
+
+    MI_U16 u16Level;
+
+}MI_PANEL_BackLightConfig_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bEn</td>
+<td>Enable panel backlight or not</td>
+</tr>
+<tr>
+<td>u16Level</td>
+<td>Set backlight level if bEn = TRUE</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#16-mi_panel_setbacklight">MI_PANEL_SetBacklight</a></p>
+<p><a href="#17-mi_panel_getbacklight">MI_PANEL_GetBacklight</a></p>
+<p><a href="#18-mi_panel_setbacklightlevel">MI_PANEL_SetBacklightLevel</a></p>
+<p><a href="#19-mi_panel_getbacklightlevel">MI_PANEL_GetBacklightLevel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="23-mi_panel_sscconfig_t">2.3. MI_PANEL_SscConfig_t<a class="headerlink" href="#23-mi_panel_sscconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel spread spectrum configuration structure</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    MI_BOOL bEn;
+
+    MI_U16 u16Freq;
+
+    MI_U16 u16Ratio;
+
+}MI_PANEL_SscConfig_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bEn</td>
+<td>Panel spread spectrum function enable status</td>
+</tr>
+<tr>
+<td>u16Freq</td>
+<td>Modulation rate</td>
+</tr>
+<tr>
+<td>u16Ratio</td>
+<td>Modulation depth</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>u16Freq should be greater than 15KHz.</p>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#110-mi_panel_setsscconfig">MI_PANEL_SetSscConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="24-mi_panel_mipidsiconfig_t">2.4. MI_PANEL_MipiDsiConfig_t<a class="headerlink" href="#24-mi_panel_mipidsiconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define MIPI interface configuration structure</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    MI_U8 u8HsTrail;
+
+    MI_U8 u8HsPrpr;
+
+    MI_U8 u8HsZero;
+
+    MI_U8 u8ClkHsPrpr;
+
+    MI_U8 u8ClkHsExit;
+
+    MI_U8 u8ClkTrail;
+
+    MI_U8 u8ClkZero;
+
+    MI_U8 u8ClkHsPost;
+
+    MI_U8 u8DaHsExit;
+
+    MI_U8 u8ContDet;
+
+    MI_U8 u8Lpx;
+
+    MI_U8 u8TaGet;
+
+    MI_U8 u8TaSure;
+
+    MI_U8 u8TaGo;
+
+    MI_U16 u16Hactive;
+
+    MI_U16 u16Hpw;
+
+    MI_U16 u16Hbp;
+
+    MI_U16 u16Hfp;
+
+    MI_U16 u16Vactive;
+
+    MI_U16 u16Vpw;
+
+    MI_U16 u16Vbp;
+
+    MI_U16 u16Vfp;
+
+    MI_U16 u16Bllp;
+
+    MI_U16 u16Fps;
+
+    MI_PANEL_MipiDsiLaneMode_e enLaneNum;
+
+    MI_PANEL_MipiDsiFormat_e enformat;
+
+    MI_PANEL_MipiDsiCtrlMode_e enCtrl;
+
+    MI_U8 *pu8CmdBuf;
+
+    MI_U32 u32CmdBufSize;
+
+    MI_U8 u8SyncCalibrate;
+
+    MI_U16 u16VirHsyncSt;
+
+    MI_U16 u16VirHsyncEnd;
+
+    MI_U16 u16VsyncRef;
+
+    MI_U16 u16DataClkSkew;
+
+    MI_U8 u8PolCh0;
+
+    MI_U8 u8PolCh1;
+
+    MI_U8 u8PolCh2;
+
+    MI_U8 u8PolCh3;
+
+    MI_U8 u8PolCh4;
+
+}MI_PANEL_MipiDsiConfig_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#25-mi_panel_mipidsilanemode_e">MI_PANEL_MipiDsiLaneMode_e</a></p>
+<p><a href="#26-mi_panel_mipidsiformat_e">MI_PANEL_MipiDsiFormat_e</a> </p>
+<p><a href="#27-mi_panel_mipidsictrlmode_e">MI_PANEL_MipiDsiCtrlMode_e</a></p>
+<p><a href="#111-mi_panel_setmipidsiconfig">MI_PANEL_SetMipiDsiConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="25-mi_panel_mipidsilanemode_e">2.5. MI_PANEL_MipiDsiLaneMode_e<a class="headerlink" href="#25-mi_panel_mipidsilanemode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define MIPI interface Lane mode enumeration</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_PNL_MIPI_DSI_LANE_NONE = 0,
+
+    E_MI_PNL_MIPI_DSI_LANE_1 = 1,
+
+    E_MI_PNL_MIPI_DSI_LANE_2 = 2,
+
+    E_MI_PNL_MIPI_DSI_LANE_3 = 3,
+
+    E_MI_PNL_MIPI_DSI_LANE_4 = 4,
+
+} MI_PANEL_MipiDsiLaneMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#24-mi_panel_mipidsiconfig_t">MI_PANEL_MipiDsiConfig_t</a></p>
+<p><a href="#111-mi_panel_setmipidsiconfig">MI_PANEL_SetMipiDsiConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="26-mi_panel_mipidsiformat_e">2.6. MI_PANEL_MipiDsiFormat_e<a class="headerlink" href="#26-mi_panel_mipidsiformat_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define MIPI interface Format enumeration</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_PNL_MIPI_DSI_RGB565 = 0,
+
+    E_MI_PNL_MIPI_DSI_RGB666 = 1,
+
+    E_MI_PNL_MIPI_DSI_LOOSELY_RGB666 = 2,
+
+    E_MI_PNL_MIPI_DSI_RGB888 = 3,
+
+} MI_PANEL_MipiDsiFormat_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#24-mi_panel_mipidsiconfig_t">MI_PANEL_MipiDsiConfig_t</a></p>
+<p><a href="#111-mi_panel_setmipidsiconfig">MI_PANEL_SetMipiDsiConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="27-mi_panel_mipidsictrlmode_e">2.7. MI_PANEL_MipiDsiCtrlMode_e<a class="headerlink" href="#27-mi_panel_mipidsictrlmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define MIPI interface Ctrl Mode enumeration</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_PNL_MIPI_DSI_CTRL_CMD_MODE = 0,
+
+    E_MI_PNL_MIPI_DSI_CTRL_SYNC_PULSE = 1,
+
+    E_MI_PNL_MIPI_DSI_CTRL_SYNC_EVENT = 2,
+
+    E_MI_PNL_MIPI_DSI_BURST_MODE = 3,
+
+} MI_PANEL_MipiDsiCtrlMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#24-mi_panel_mipidsiconfig_t">MI_PANEL_MipiDsiConfig_t</a></p>
+<p><a href="#111-mi_panel_setmipidsiconfig">MI_PANEL_SetMipiDsiConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="28-mi_panel_timingconfig_t">2.8. MI_PANEL_TimingConfig_t<a class="headerlink" href="#28-mi_panel_timingconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel Timing information structure</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    MI_U16 u16HSyncWidth;
+
+    MI_U16 u16HSyncBackPorch;
+
+    MI_U16 u16HSyncFrontPorch;
+
+    MI_U16 u16VSyncWidth;
+
+    MI_U16 u16VSyncBackPorch;
+
+    MI_U16 u16VSyncFrontPorch;
+
+    MI_U16 u16HStart;
+
+    MI_U16 u16VStart;
+
+    MI_U16 u16Height;
+
+    MI_U16 u16Width;
+
+    MI_U16 u16Htotal;
+
+    MI_U16 u16Vtotal;
+
+    MI_U16 u16Dclk;
+
+}MI_PANEL_TimingConfig_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#112-mi_panel_settimingconfig">MI_PANEL_SetTimingConfig</a></p>
+<p><a href="#117-mi_panel_gettimingconfig">MI_PANEL_GetTimingConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="29-mi_panel_drvcurrentconfig_t">2.9. MI_PANEL_DrvCurrentConfig_t<a class="headerlink" href="#29-mi_panel_drvcurrentconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define driving capability configuration structure</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    MI_U16 u16DrvCurrent;
+
+}MI_PANEL_DrvCurrentConfig_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#113-mi_panel_setdrvcurrentconfig">MI_PANEL_SetDrvCurrentConfig</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="210-mi_panel_testpatternconfig_t">2.10. MI_PANEL_TestPatternConfig_t<a class="headerlink" href="#210-mi_panel_testpatternconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define output pattern structure</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    MI_BOOL bEn;
+
+    MI_U16 u16R;
+
+    MI_U16 u16G;
+
+    MI_U16 u16B;
+
+}MI_PANEL_TestPatternConfig_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#114-mi_panel_setoutputpattern">MI_PANEL_SetOutputPattern</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="211-mi_panel_paramconfig_t">2.11. MI_PANEL_ParamConfig_t<a class="headerlink" href="#211-mi_panel_paramconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel parameter structure</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    const char *pPanelName; ///&lt; PanelName
+
+    MI_U8 u8Dither; ///&lt; PANEL_DITHER, keep the setting
+
+    MI_PANEL_IntfType_e eIntfType; ///&lt; PANEL_LINK
+
+    ///////////////////////////////////////////////
+
+    // Board related setting
+
+    ///////////////////////////////////////////////
+
+    MI_U8 u8DualPort; ///&lt; VOP_21[8], MOD_4A[1], PANEL_DUAL_PORT, refer to
+    u8DoubleClk
+
+    MI_U8 u8SwapPort; ///&lt; MOD_4A[0], PANEL_SWAP_PORT, refer to &quot;LVDS
+    output app note&quot; A/B channel swap
+
+    MI_U8 u8SwapOdd_ML; ///&lt; PANEL_SWAP_ODD_ML
+
+    MI_U8 u8SwapEven_ML; ///&lt; PANEL_SWAP_EVEN_ML
+
+    MI_U8 u8SwapOdd_RB; ///&lt; PANEL_SWAP_ODD_RB
+
+    MI_U8 u8SwapEven_RB; ///&lt; PANEL_SWAP_EVEN_RB
+
+    MI_U8 u8SwapLVDS_POL; ///&lt; MOD_40[5], PANEL_SWAP_LVDS_POL, for
+    differential P/N swap
+
+    MI_U8 u8SwapLVDS_CH; ///&lt; MOD_40[6], PANEL_SWAP_LVDS_CH, for pair
+    swap
+
+    MI_U8 u8PDP10BIT; ///&lt; MOD_40[3], PANEL_PDP_10BIT,for pair swap
+
+    MI_U8 u8LVDS_TI_MODE; ///&lt; MOD_40[2], PANEL_LVDS_TI_MODE, refer to
+    &quot;LVDS output app note&quot;
+
+    ///////////////////////////////////////////////
+
+    // For TTL Only
+
+    ///////////////////////////////////////////////
+
+    MI_U8 u8DCLKDelay; ///&lt; PANEL_DCLK_DELAY
+
+    MI_U8 u8InvDCLK; ///&lt; MOD_4A[4], PANEL_INV_DCLK
+
+    MI_U8 u8InvDE; ///&lt; MOD_4A[2], PANEL_INV_DE
+
+    MI_U8 u8InvHSync; ///&lt; MOD_4A[12], PANEL_INV_HSYNC
+
+    MI_U8 u8InvVSync; ///&lt; MOD_4A[3], PANEL_INV_VSYNC
+
+    ///////////////////////////////////////////////
+
+    // Output driving current setting
+
+    ///////////////////////////////////////////////
+
+    // driving current setting (0x00=4mA, 0x01=6mA, 0x02=8mA, 0x03=12mA)
+
+    MI_U8 u8DCKLCurrent; ///&lt; define PANEL_DCLK_CURRENT
+
+    MI_U8 u8DECurrent; ///&lt; define PANEL_DE_CURRENT
+
+    MI_U8 u8ODDDataCurrent; ///&lt; define PANEL_ODD_DATA_CURRENT
+
+    MI_U8 u8EvenDataCurrent; ///&lt; define PANEL_EVEN_DATA_CURRENT
+
+    ///////////////////////////////////////////////
+
+    // panel on/off timing
+
+    ///////////////////////////////////////////////
+
+    MI_U16 u16OnTiming1; ///&lt; time between panel &amp; data while turn on power
+
+    MI_U16 u16OnTiming2; ///&lt; time between data &amp; back light while turn on
+    power
+
+    MI_U16 u16OffTiming1; ///&lt; time between back light &amp; data while turn off
+    power
+
+    MI_U16 u16OffTiming2; ///&lt; time between data &amp; panel while turn off power
+
+    ///////////////////////////////////////////////
+
+    // panel timing spec.
+
+    ///////////////////////////////////////////////
+
+    // sync related
+
+    MI_U16 u16HSyncWidth; ///&lt; VOP_01[7:0], PANEL_HSYNC_WIDTH
+
+    MI_U16 u16HSyncBackPorch; ///&lt; PANEL_HSYNC_BACK_PORCH, no register
+    setting, provide value for query only
+
+    MI_U16 u16VSyncWidth; ///&lt; define PANEL_VSYNC_WIDTH
+
+    MI_U16 u16VSyncBackPorch; ///&lt; define PANEL_VSYNC_BACK_PORCH
+
+    // DE related
+
+    MI_U16 u16HStart; ///&lt; VOP_04[11:0], PANEL_HSTART, DE H Start
+    (PANEL_HSYNC_WIDTH + PANEL_HSYNC_BACK_PORCH)
+
+    MI_U16 u16VStart; ///&lt; VOP_06[11:0], PANEL_VSTART, DE V Start
+
+    MI_U16 u16Width; ///&lt; PANEL_WIDTH, DE width (VOP_05[11:0] = HEnd =
+    HStart + Width - 1)
+
+    MI_U16 u16Height; ///&lt; PANEL_HEIGHT, DE height (VOP_07[11:0], = Vend =
+    VStart + Height - 1)
+
+    // DClk related
+
+    MI_U16 u16MaxHTotal; ///&lt; PANEL_MAX_HTOTAL. Reserved for future using.
+
+    MI_U16 u16HTotal; ///&lt; VOP_0C[11:0], PANEL_HTOTAL
+
+    MI_U16 u16MinHTotal; ///&lt; PANEL_MIN_HTOTAL. Reserved for future using.
+
+    MI_U16 u16MaxVTotal; ///&lt; PANEL_MAX_VTOTAL. Reserved for future using.
+
+    MI_U16 u16VTotal; ///&lt; VOP_0D[11:0], PANEL_VTOTAL
+
+    MI_U16 u16MinVTotal; ///&lt; PANEL_MIN_VTOTAL. Reserved for future using.
+
+    MI_U16 u16MaxDCLK; ///&lt; PANEL_MAX_DCLK. Reserved for future using.
+
+    MI_U16 u16DCLK; ///&lt; LPLL_0F[23:0], PANEL_DCLK
+
+    MI_U16 u16MinDCLK; ///&lt; PANEL_MIN_DCLK. Reserved for future using.
+
+    ///&lt; spread spectrum
+
+    MI_U16 u16SpreadSpectrumStep; ///&lt; move to board define, no use now.
+
+    MI_U16 u16SpreadSpectrumSpan; ///&lt; move to board define, no use now.
+
+    MI_U8 u8DimmingCtl; ///&lt; Initial Dimming Value
+
+    MI_U8 u8MaxPWMVal; ///&lt; Max Dimming Value
+
+    MI_U8 u8MinPWMVal; ///&lt; Min Dimming Value
+
+    MI_U8 u8DeinterMode; ///&lt; define PANEL_DEINTER_MODE, no use now
+
+    MI_PANEL_AspectRatio_e ePanelAspectRatio; ///&lt; Panel Aspect Ratio,
+    provide information to upper layer application for aspect ratio setting.
+
+    MI_U16 u16LVDSTxSwapValue;
+
+    MI_PANEL_TiBitMode_e eTiBitMode; ///&lt; MOD_4B[1:0], refer to &quot;LVDS
+    output app note&quot;
+
+    MI_PANEL_OutputFormatBitMode_e eOutputFormatBitMode;
+
+    MI_U8 u8SwapOdd_RG; ///&lt; define PANEL_SWAP_ODD_RG
+
+    MI_U8 u8SwapEven_RG; ///&lt; define PANEL_SWAP_EVEN_RG
+
+    MI_U8 u8SwapOdd_GB; ///&lt; define PANEL_SWAP_ODD_GB
+
+    MI_U8 u8SwapEven_GB; ///&lt; define PANEL_SWAP_EVEN_GB
+
+    /**
+
+    * Others
+
+    */
+
+    MI_U8 u8DoubleClk; ///&lt; LPLL_03[7], define Double Clock,LVDS dual mode
+
+    MI_U32 u32MaxSET; ///&lt; define PANEL_MAX_SET
+
+    MI_U32 u32MinSET; ///&lt; define PANEL_MIN_SET
+
+    MI_PANEL_OutputTimingMode_e eOutTimingMode; ///&lt;Define which panel
+    output timing change mode is used to change VFreq for same panel
+
+    MI_U8 u8NoiseDith; ///&lt; PAFRC mixed with noise dither disable
+
+}MI_PANEL_ParamConfig_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#212-mi_panel_intftype_e">MI_PANEL_IntfType_e</a></p>
+<p><a href="#213-mi_panel_aspectratio_e">MI_PANEL_AspectRatio_e</a></p>
+<p><a href="#214-mi_panel_tibitmode_e">MI_PANEL_TiBitMode_e</a></p>
+<p><a href="#215-mi_panel_outputformatbitmode_e">MI_PANEL_OutputFormatBitMode_e</a></p>
+<p><a href="#216-mi_panel_outputtimingmode_e">MI_PANEL_OutputTimingMode_e</a></p>
+<p><a href="#116-mi_panel_getpanelparam">MI_PANEL_GetPanelParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="212-mi_panel_intftype_e">2.12. MI_PANEL_IntfType_e<a class="headerlink" href="#212-mi_panel_intftype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel Interface Type enumeration</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_PNL_INTF_TTL,                              ///&lt; TTL  type
+    E_MI_PNL_INTF_LVDS,                             ///&lt; LVDS type
+    E_MI_PNL_INTF_RSDS,                             ///&lt; RSDS type
+    E_MI_PNL_INTF_MINILVDS,                         ///&lt; TCON
+    E_MI_PNL_INTF_ANALOG_MINILVDS,                  ///&lt; Analog TCON
+    E_MI_PNL_INTF_DIGITAL_MINILVDS,                 ///&lt; Digital TCON
+    E_MI_PNL_INTF_MFC,                              ///&lt; Ursa (TTL output to Ursa)
+    E_MI_PNL_INTF_DAC_I,                        ///&lt; DAC output
+    E_MI_PNL_INTF_DAC_P,                       ///&lt; DAC output
+    E_MI_PNL_INTF_PDPLVDS,                    ///&lt; For PDP(Vsync use Manually MODE)
+    E_MI_PNL_INTF_EXT,                              ///&lt; EXT LPLL TYPE
+    E_MI_PNL_INTF_MIPI_DSI,                         ///&lt; Mipi DSI
+    E_MI_PNL_INTF_BT656,                            //BT656 interface
+    E_MI_PNL_INTF_BT601,                            ///&lt; BT601
+    E_MI_PNL_INTF_BT1120,                           ///&lt; BT1120
+    E_MI_PNL_INTF_MCU_TYPE,                         ///&lt; MCU Type
+    E_MI_PNL_INTF_SRGB,                             ///&lt; sRGB
+    E_MI_PNL_INTF_TTL_SPI_IF,                       ///&lt; TTL with SPI init interface
+    E_MI_PNL_INTF_BT1120_DDR,
+}MI_PANEL_IntfType_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>E_MI_PNL_INTF_BT1120 is single edge sampling; E_MI_PNL_INTF_BT1120_DDR is double edge sampling.</p>
+</li>
+<li>
+<p>Panel supported interfaces: E_MI_DISP_INTF_TTL, E_MI_DISP_INTF_SRGB, E_MI_DISP_INTF_MCU.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#211-mi_panel_paramconfig_t">MI_PANEL_ParamConfig_t</a></p>
+<p><a href="#116-mi_panel_getpanelparam">MI_PANEL_GetPanelParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="213-mi_panel_aspectratio_e">2.13. MI_PANEL_AspectRatio_e<a class="headerlink" href="#213-mi_panel_aspectratio_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel Aspect Ratio enumeration</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_PNL_ASPECT_RATIO_4_3 = 0, ///&lt; set aspect ratio to 4 : 3
+
+    E_MI_PNL_ASPECT_RATIO_WIDE, ///&lt; set aspect ratio to 16 : 9
+
+    E_MI_PNL_ASPECT_RATIO_OTHER, ///&lt; resvered for other aspect ratio
+    other than 4:3/ 16:9
+
+}MI_PANEL_AspectRatio_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#211-mi_panel_paramconfig_t">MI_PANEL_ParamConfig_t</a></p>
+<p><a href="#116-mi_panel_getpanelparam">MI_PANEL_GetPanelParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="214-mi_panel_tibitmode_e">2.14. MI_PANEL_TiBitMode_e<a class="headerlink" href="#214-mi_panel_tibitmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel TiBit Mode enumeration</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_PNL_TI_10BIT_MODE = 0,
+
+    E_MI_PNL_TI_8BIT_MODE = 2,
+
+    E_MI_PNL_TI_6BIT_MODE = 3,
+
+} MI_PANEL_TiBitMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#211-mi_panel_paramconfig_t">MI_PANEL_ParamConfig_t</a></p>
+<p><a href="#116-mi_panel_getpanelparam">MI_PANEL_GetPanelParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="215-mi_panel_outputformatbitmode_e">2.15. MI_PANEL_OutputFormatBitMode_e<a class="headerlink" href="#215-mi_panel_outputformatbitmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel output format Bit Mode enumeration</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_PNL_OUTPUT_10BIT_MODE = 0, //default is 10bit, becasue 8bit panel
+    can use 10bit config and 8bit config.
+
+    E_MI_PNL_OUTPUT_6BIT_MODE = 1, //but 10bit panel(like PDP panel) can
+    only use 10bit config.
+
+    E_MI_PNL_OUTPUT_8BIT_MODE = 2, //and some PDA panel is 6bit.
+
+    E_MI_PNL_OUTPUT_565BIT_MODE = 3,
+
+} MI_PANEL_OutputFormatBitMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#211-mi_panel_paramconfig_t">MI_PANEL_ParamConfig_t</a></p>
+<p><a href="#116-mi_panel_getpanelparam">MI_PANEL_GetPanelParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="216-mi_panel_outputtimingmode_e">2.16. MI_PANEL_OutputTimingMode_e<a class="headerlink" href="#216-mi_panel_outputtimingmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel output timing change mode</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_PNL_CHG_DCLK = 0, ///&lt;change output DClk to change Vfreq.
+
+    E_MI_PNL_CHG_HTOTAL = 1, ///&lt;change H total to change Vfreq.
+
+    E_MI_PNL_CHG_VTOTAL = 2, ///&lt;change V total to change Vfreq.
+
+} MI_PANEL_OutputTimingMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#211-mi_panel_paramconfig_t">MI_PANEL_ParamConfig_t</a></p>
+<p><a href="#116-mi_panel_getpanelparam">MI_PANEL_GetPanelParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="217-mi_panel_initparam_t">2.17. MI_PANEL_InitParam_t<a class="headerlink" href="#217-mi_panel_initparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define panel device initialization parameter</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_PANEL_InitParam_s
+
+{
+
+    MI_PANEL_IntfType_e eIntfType;  ///PANEL Interface Type enumerate .
+
+} MI_PANEL_InitParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#118-mi_panel_initdev">MI_PANEL_InitDev</a> </p>
+</li>
+</ul>
+<hr />
+<h2 id="3-panel-error-code">3. PANEL ERROR CODE<a class="headerlink" href="#3-panel-error-code" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Error Code</strong></th>
+<th><strong>Macro Definition</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xA00B2011</td>
+<td>MI_ERR_PANEL_INVALID_PARAM</td>
+<td>Invalid parameter</td>
+</tr>
+<tr>
+<td>0xA00B2006</td>
+<td>MI_ERR_PANEL_NULL_PTR</td>
+<td>Null pointer</td>
+</tr>
+<tr>
+<td>0xA00B2001</td>
+<td>MI_ERR_PANEL_INVALID_DEVID</td>
+<td>Invalid device ID</td>
+</tr>
+<tr>
+<td>0xA00B2018</td>
+<td>MI_ERR_PANEL_DRV_FAILED</td>
+<td>PANEL driving failed</td>
+</tr>
+<tr>
+<td>0xA00B2015</td>
+<td>MI_ERR_PANEL_NOT_INIT</td>
+<td>PANEL not initialized</td>
+</tr>
+<tr>
+<td>0xA00B2008</td>
+<td>MI_ERR_PANEL_NOT_SUPPORT</td>
+<td>Unsupported operation</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ldc_en.html" title="LDC" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                LDC
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="rgn_en.html" title="RGN" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                RGN
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/search_index.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3800 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>LDC - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#revision-history" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                LDC
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="aec_en.html" class="md-tabs__link md-tabs__link--active">
+          Development
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../customer/IPC/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      SDK Module API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        SDK Module API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_en.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_en.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_en.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_en.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_en.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_en.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_en.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_en.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_en.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_en.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_en.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_en.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        LDC
+      </label>
+    
+    <a href="ldc_en.html" title="LDC" class="md-nav__link md-nav__link--active">
+      LDC
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. OVERVIEW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow Chart
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-tiramisu" class="md-nav__link">
+    1.2.1. Tiramisu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-maruko" class="md-nav__link">
+    1.2.2. Maruko
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-platform-features" class="md-nav__link">
+    1.3. Platform Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-keyword" class="md-nav__link">
+    1.4. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-list" class="md-nav__link">
+    2. API LIST
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_ldc_createdevice" class="md-nav__link">
+    2.1. MI_LDC_CreateDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_ldc_destroydevice" class="md-nav__link">
+    2.2. MI_LDC_DestroyDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_ldc_createchannel" class="md-nav__link">
+    2.3. MI_LDC_CreateChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_ldc_destroychannel" class="md-nav__link">
+    2.4. MI_LDC_DestroyChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_ldc_startchannel" class="md-nav__link">
+    2.5. MI_LDC_StartChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_ldc_stopchannel" class="md-nav__link">
+    2.6. MI_LDC_StopChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_ldc_getoutputportattr" class="md-nav__link">
+    2.7. MI_LDC_GetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_ldc_setchnparam" class="md-nav__link">
+    2.8. MI_LDC_SetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_ldc_dolutdirecttask" class="md-nav__link">
+    2.9. MI_LDC_DoLutDirectTask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_ldc_setoutputportattr" class="md-nav__link">
+    2.10. MI_LDC_SetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_ldc_attachtochn" class="md-nav__link">
+    2.11. MI_LDC_AttachToChn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_ldc_detachfromchn" class="md-nav__link">
+    2.12. MI_LDC_DetachFromChn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ldc-data-type" class="md-nav__link">
+    3. LDC DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_ldc_dev" class="md-nav__link">
+    3.1. MI_LDC_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_ldc_chn" class="md-nav__link">
+    3.2. MI_LDC_CHN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_ldc_devattr_t" class="md-nav__link">
+    3.3. MI_LDC_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_ldc_workmode_e" class="md-nav__link">
+    3.4. MI_LDC_WorkMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_ldc_mapinfotype_e" class="md-nav__link">
+    3.5. MI_LDC_MapInfoType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_ldc_displacementmapinfo_t" class="md-nav__link">
+    3.6. MI_LDC_DisplacementMapInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_ldc_sensorcalibinfo_t" class="md-nav__link">
+    3.7. MI_LDC_SensorCalibInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_ldc_chnattr_t" class="md-nav__link">
+    3.8. MI_LDC_ChnAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_ldc_chnparam_t" class="md-nav__link">
+    3.9. MI_LDC_ChnParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_ldc_outputportattr_t" class="md-nav__link">
+    3.10. MI_LDC_OutputPortAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_ldc_directbuf_t" class="md-nav__link">
+    3.11. MI_LDC_DirectBuf_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_ldc_luttaskattr_t" class="md-nav__link">
+    3.12. MI_LDC_LutTaskAttr_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-error-code" class="md-nav__link">
+    4. ERROR CODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_en.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_en.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_en.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_en.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_en.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_en.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_en.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_en.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_en.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_en.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_en.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdisp_en.html" title="VDISP" class="md-nav__link">
+      VDISP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-nav__link">
+      ABBR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. OVERVIEW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow Chart
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-tiramisu" class="md-nav__link">
+    1.2.1. Tiramisu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-maruko" class="md-nav__link">
+    1.2.2. Maruko
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-platform-features" class="md-nav__link">
+    1.3. Platform Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-keyword" class="md-nav__link">
+    1.4. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-list" class="md-nav__link">
+    2. API LIST
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_ldc_createdevice" class="md-nav__link">
+    2.1. MI_LDC_CreateDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_ldc_destroydevice" class="md-nav__link">
+    2.2. MI_LDC_DestroyDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_ldc_createchannel" class="md-nav__link">
+    2.3. MI_LDC_CreateChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_ldc_destroychannel" class="md-nav__link">
+    2.4. MI_LDC_DestroyChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_ldc_startchannel" class="md-nav__link">
+    2.5. MI_LDC_StartChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_ldc_stopchannel" class="md-nav__link">
+    2.6. MI_LDC_StopChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_ldc_getoutputportattr" class="md-nav__link">
+    2.7. MI_LDC_GetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_ldc_setchnparam" class="md-nav__link">
+    2.8. MI_LDC_SetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_ldc_dolutdirecttask" class="md-nav__link">
+    2.9. MI_LDC_DoLutDirectTask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_ldc_setoutputportattr" class="md-nav__link">
+    2.10. MI_LDC_SetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_ldc_attachtochn" class="md-nav__link">
+    2.11. MI_LDC_AttachToChn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_ldc_detachfromchn" class="md-nav__link">
+    2.12. MI_LDC_DetachFromChn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ldc-data-type" class="md-nav__link">
+    3. LDC DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_ldc_dev" class="md-nav__link">
+    3.1. MI_LDC_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_ldc_chn" class="md-nav__link">
+    3.2. MI_LDC_CHN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_ldc_devattr_t" class="md-nav__link">
+    3.3. MI_LDC_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_ldc_workmode_e" class="md-nav__link">
+    3.4. MI_LDC_WorkMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_ldc_mapinfotype_e" class="md-nav__link">
+    3.5. MI_LDC_MapInfoType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_ldc_displacementmapinfo_t" class="md-nav__link">
+    3.6. MI_LDC_DisplacementMapInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_ldc_sensorcalibinfo_t" class="md-nav__link">
+    3.7. MI_LDC_SensorCalibInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_ldc_chnattr_t" class="md-nav__link">
+    3.8. MI_LDC_ChnAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_ldc_chnparam_t" class="md-nav__link">
+    3.9. MI_LDC_ChnParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_ldc_outputportattr_t" class="md-nav__link">
+    3.10. MI_LDC_OutputPortAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_ldc_directbuf_t" class="md-nav__link">
+    3.11. MI_LDC_DirectBuf_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_ldc_luttaskattr_t" class="md-nav__link">
+    3.12. MI_LDC_LutTaskAttr_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-error-code" class="md-nav__link">
+    4. ERROR CODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI LDC API</h1>
+<hr />
+<h2 id="revision-history">REVISION HISTORY<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision No.</th>
+<th><div style="width:335pt">Description</div></th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.0</td>
+<td><li> Initial  release</td>
+<td>12/04/2020</td>
+</tr>
+<tr>
+<td>3.1</td>
+<td><li> Add MI_LDC_SetOutputPortAttr</td>
+<td>07/04/2021</td>
+</tr>
+<tr>
+<td></td>
+<td><li> Add procfs introduction</td>
+<td>08/25/2021</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td><li> Add Maruko info <li> Add new interface: MI_LDC_AttachToChn, MI_LDC_DetachFromChn</td>
+<td>04/01/2022</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-overview">1. OVERVIEW<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="11-module-description">1.1. Module Description<a class="headerlink" href="#11-module-description" title="Permanent link">&para;</a></h3>
+<p>LDC (Lens Distortion Correction), support Lens Distortion Correction、Image Stitch 、Blending、Digital Image Stabilization (DIS) and Lookup Table Feature (LUT).</p>
+<hr />
+<h3 id="12-flow-chart">1.2. Flow Chart<a class="headerlink" href="#12-flow-chart" title="Permanent link">&para;</a></h3>
+<h4 id="121-tiramisu">1.2.1. Tiramisu<a class="headerlink" href="#121-tiramisu" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/ldc/ldc-1.svg" /></p>
+<p>Note:</p>
+<ul>
+<li>
+<p>32X2 and 16X2 are the width and height alignment limits of the input image and the output image.</p>
+</li>
+<li>
+<p>Tiramisu, Muffin and Mochi use the same flow chart.</p>
+</li>
+</ul>
+<h4 id="122-maruko">1.2.2. Maruko<a class="headerlink" href="#122-maruko" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/ldc/ldc_inside_isp-flowChart.svg" /></p>
+<p>Note:</p>
+<ul>
+<li>
+<p>On Platform Maruko, LDC is an ISP submodule and is actually input and output by the ISP.</p>
+</li>
+<li>
+<p>On Platform Maruko, there is only one LDC device, and each device supports the same number of channels as the ISP.</p>
+</li>
+<li>
+<p>The width and height alignment of the input image is limited to 8x2, scaling is not supported, and the output width and height is the same as the input width and height.</p>
+</li>
+</ul>
+<hr />
+<h3 id="13-platform-features">1.3. Platform Features<a class="headerlink" href="#13-platform-features" title="Permanent link">&para;</a></h3>
+<p>Functions supported in different platforms:</p>
+<p>Device 0:</p>
+<table>
+<thead>
+<tr>
+<th>Feature <br>  Platform</th>
+<th>LDC</th>
+<th>Stitch and Blending</th>
+<th>DIS</th>
+<th>LUT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiramisu</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Muffin</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Mochi</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Maruko</td>
+<td>Y (Horizontal)</td>
+<td>N</td>
+<td>N</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<p>Device 1:</p>
+<table>
+<thead>
+<tr>
+<th>Feature <br>  Platform</th>
+<th>LDC</th>
+<th>Stitch and Blending</th>
+<th>DIS</th>
+<th>LUT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Muffin</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<p>Features:</p>
+<ul>
+<li>
+<p>Lens distortion correction</p>
+<p>According to lens calibration parameters, input image is subjected to distortion correction processing, and then output according to the projection mode and the region of interest configured by the user.</p>
+</li>
+<li>
+<p>Image stitching and fusion</p>
+<p>Distortion correction is performed on images come from multiple sensors, then multiple images are stitched together, and finally the overlapping areas of the images are fused.</p>
+</li>
+<li>
+<p>Digital image stabilization</p>
+<p>Currently supports anti-shake algorithm with groscope, that is, calculate the movement offset of the image of the current frame according to the data generated by the gyroscope, and then according to the motion offset condition performs translation, rotation and other transformations on the current image, so as to achieve the effect of anti-shake.</p>
+</li>
+<li>
+<p>Lookup table</p>
+<p>Provides a two-dimensional lookup table function. The data bit width of the index and table in the x and y directions are both 8bit, which can be used for fast search of the weight table of the image fusion algorithm.</p>
+</li>
+</ul>
+<hr />
+<h3 id="14-keyword">1.4. Keyword<a class="headerlink" href="#14-keyword" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>device</p>
+<p>Ldc corresponding hardware device</p>
+</li>
+<li>
+<p>channel</p>
+<p>The LDC module processes channels, and the LDC hardware of each channel is time-sharing multiplexed.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-api-list">2. API LIST<a class="headerlink" href="#2-api-list" title="Permanent link">&para;</a></h2>
+<hr />
+<p>This module provides the following APIs:</p>
+<table>
+<thead>
+<tr>
+<th><strong>API Name</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a></td>
+<td>Create an LDC device</td>
+</tr>
+<tr>
+<td><a href="#22-mi_ldc_destroydevice">MI_LDC_DestroyDevice</a></td>
+<td>Destroy an LDC  device</td>
+</tr>
+<tr>
+<td><a href="#23-mi_ldc_createchannel">MI_LDC_CreateChannel</a></td>
+<td>Create an LDC channel</td>
+</tr>
+<tr>
+<td><a href="#24-mi_ldc_destroychannel">MI_LDC_DestroyChannel</a></td>
+<td>Destroy an LDC  channel</td>
+</tr>
+<tr>
+<td><a href="#25-mi_ldc_startchannel">MI_LDC_StartChannel</a></td>
+<td>Start an LDC  channel</td>
+</tr>
+<tr>
+<td><a href="#26-mi_ldc_stopchannel">MI_LDC_StopChannel</a></td>
+<td>Stop an LDC  channel</td>
+</tr>
+<tr>
+<td><a href="#27-mi_ldc_getoutputportattr">MI_LDC_GetOutputPortAttr</a></td>
+<td>Get the LDC  output attribute</td>
+</tr>
+<tr>
+<td><a href="#28-mi_ldc_setchnparam">MI_LDC_SetChnParam</a></td>
+<td>Set the LDC channel attribute</td>
+</tr>
+<tr>
+<td><a href="#29-mi_ldc_dolutdirecttask">MI_LDC_DoLutDirectTask</a></td>
+<td>Execute table lookup tasks and send buffer directly to ldc hardware for  processing</td>
+</tr>
+<tr>
+<td><a href="#210-mi_ldc_setoutputportattr">MI_LDC_SetOutputPortAttr</a></td>
+<td>Configure LDC output attribute</td>
+</tr>
+<tr>
+<td><a href="#211-mi_ldc_attachtochn">MI_LDC_AttachToChn</a></td>
+<td>Attach Ldc Channel to corresponding module channel</td>
+</tr>
+<tr>
+<td><a href="#212-mi_ldc_detachfromchn">MI_LDC_DetachFromChn</a></td>
+<td>Detach Ldc Channel</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="21-mi_ldc_createdevice">2.1. MI_LDC_CreateDevice<a class="headerlink" href="#21-mi_ldc_createdevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Create an LDC device</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_CreateDevice(MI_LDC_DEV devId, MI_LDC_DevAttr_t *pstDevAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  ID number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstDevAttr eWorkMdoe</td>
+<td>Device  working mode attribute</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Currently only devId = 0 is supported.</p>
+</li>
+<li>
+<p>Example</p>
+<p>LDC initialization settings and exit example:</p>
+<p>Tiramisu, Muffin, Mochi Platform:</p>
+<div class="codehilite"><pre><span></span>MI_S32 s32Ret = MI_SUCCESS;
+MI_LDC_DEV LdcDevId = 0;
+MI_LDC_CHN LdcChnId = 0;
+MI_LDC_DevAttr_t stDevAttr = {0};
+MI_LDC_ChnAttr_t stChnAttr = {};
+MI_LDC_SensorCalibInfo_t * pstCalibInfo = &amp;stChnAttr.stCalibInfo;
+
+stChnAttr. eMode = MI_LDC_WORKMODE_LDC ;
+s32Ret = ReadBufFromFile(&quot;ldc.json&quot;, stChnAttr. pConfigAddr, stChnAttr.u32ConfigSize);
+if (s32Ret) 
+{
+    return s32Ret;
+}
+
+stChnAttr.eInfoType = MI_LDC_MAPINFOTYPE_SENSORCALIB;
+s32Ret = ReadBufFromFile(&quot;CalibPoly.bin&quot;, pstCalibInfo.pCalibPolyBinAddr, pstCalibInfo.u32CalibPolyBinSize);
+if (s32Ret)
+{
+    return s32Ret;
+}
+
+MI_LDC_CreateDevice(LdcDevId, &amp;stDevAttr);
+MI_LDC_CreateChannel(LdcDevId, LdcChnId, &amp;stChnAttr);
+MI_LDC_StartChannel(LdcDevId, LdcChnId);
+
+ReleaseBuf(stChnAttr. pConfigAddr);
+ReleaseBuf(pstCalibInfo.pCalibPolyBinAddr);
+
+/*Destroy channel*/
+MI_LDC_StopChannel(LdcDevId, LdcChnId);
+MI_LDC_DestroyChannel(LdcDevId, LdcChnId);
+MI_LDC_DestroyDevice(LdcDevId);
+</pre></div>
+
+
+<p>Maruko Platform:</p>
+<div class="codehilite"><pre><span></span>MI_S32 s32Ret = MI_SUCCESS;
+MI_LDC_DEV LdcDevId = 0;
+MI_LDC_CHN LdcChnId = 0;
+MI_LDC_DevAttr_t stDevAttr = {0};
+MI_LDC_ChnAttr_t stChnAttr = {};
+MI_SYS_ChnPort_t stDstChnPort = {};
+
+stChnAttr. eMode = MI_LDC_WORKMODE_LDC ;
+s32Ret = ReadBufFromFile(&quot;ldc.json&quot;, stChnAttr. pConfigAddr, stChnAttr.u32ConfigSize);
+if (s32Ret) 
+{
+    return s32Ret;
+}
+
+stDstChnPort. eModId = E_MI_MODULE_ID_ISP;
+stDstChnPort. u32DevId = 0;
+stDstChnPort. u32ChnId = 0;
+stDstChnPort. u32PortId = 0;
+
+MI_LDC_CreateDevice(LdcDevId, &amp;stDevAttr);
+MI_LDC_CreateChannel(LdcDevId, LdcChnId, &amp;stChnAttr);
+MI_LDC_AttachToChn(LdcDevId, LdcChnId, &amp;stDstChnPort);
+/*Exit and release buffer*/
+ReleaseBuf(stChnAttr. pConfigAddr);
+MI_LDC_DetachFromChn(LdcDevId, LdcChnId, &amp;stDstChnPort);
+MI_LDC_DestroyChannel(LdcDevId, LdcChnId);
+MI_LDC_DestroyDevice(LdcDevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#22-mi_ldc_destroydevice">MI_LDC_DestroyDevice</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="22-mi_ldc_destroydevice">2.2. MI_LDC_DestroyDevice<a class="headerlink" href="#22-mi_ldc_destroydevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Destroy an LDC device</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_DestroyDevice(MI_LDC_DEV devId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  ID number</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Currently only devId = 0 is supported.</p>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> example.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a>.</p>
+</li>
+</ul>
+<hr />
+<h3 id="23-mi_ldc_createchannel">2.3. MI_LDC_CreateChannel<a class="headerlink" href="#23-mi_ldc_createchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Create an LDC channel</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_CreateChannel(MI_LDC_DEV devId, MI_LDC_CHN chnId, 
+MI_LDC_ChnAttr_t *pstChnAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  ID number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>LDC  Channel number</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>This API needs to be called after MI_LDC_CreateDevice.</p>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> example.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#24-mi_ldc_destroychannel">MI_LDC_DestroyChannel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="24-mi_ldc_destroychannel">2.4. MI_LDC_DestroyChannel<a class="headerlink" href="#24-mi_ldc_destroychannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Destroy an LDC channel</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_DestroyChannel(MI_LDC_DEV devId, MI_LDC_CHN chnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  ID number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>LDC  Channel number</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> example.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#23-mi_ldc_createchannel">MI_LDC_CreateChannel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="25-mi_ldc_startchannel">2.5. MI_LDC_StartChannel<a class="headerlink" href="#25-mi_ldc_startchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Start an LDC channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_StartChannel(MI_LDC_DEV devId, MI_LDC_CHN chnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  ID number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>LDC  Channel number</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Call this API after Device and Channel have been created.</p>
+</li>
+<li>
+<p>Platform Maruko does not support this interface. Use <a href="#211-mi_ldc_attachtochn">MI_LDC_AttachToChn</a> instead.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> example.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#26-mi_ldc_stopchannel">MI_LDC_StopChannel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="26-mi_ldc_stopchannel">2.6. MI_LDC_StopChannel<a class="headerlink" href="#26-mi_ldc_stopchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Stop an LDC channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_StopChannel(MI_LDC_DEV devId, MI_LDC_CHN chnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  ID number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>LDC  Channel number</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>Platform Maruko does not support this interface. Use <a href="#211-mi_ldc_attachtochn">MI_LDC_AttachToChn</a> instead.</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> example.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#25-mi_ldc_startchannel">MI_LDC_StartChannel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="27-mi_ldc_getoutputportattr">2.7. MI_LDC_GetOutputPortAttr<a class="headerlink" href="#27-mi_ldc_getoutputportattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get the LDC output attribute.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_GetOutputPortAttr(MI_LDC_DEV devId, MI_LDC_CHN chnId,
+MI_LDC_OutputPortAttr_t *pstOutputAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  ID number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>LDC  Channel number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstOutputAttr</td>
+<td>Output  attribute</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>The output information is set in bin file. When the backend needs to
+know the input information, you can obtain the information through
+this interface.</p>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> example.</p>
+</li>
+</ul>
+<hr />
+<h3 id="28-mi_ldc_setchnparam">2.8. MI_LDC_SetChnParam<a class="headerlink" href="#28-mi_ldc_setchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set the LDC channel attribute.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_SetChnParam (MI_LDC_DEV devId, MI_LDC_CHN chnId,
+MI_LDC_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  ID number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Channel  number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>Channel  configuration parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>Need to be used after <a href="#23-mi_ldc_createchannel">MI_LDC_CreateChannel</a>.</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Used when updating channel configuration, switching algorithm mode and adjusting lens parameters.</p>
+<div class="codehilite"><pre><span></span>MI_LDC_DEV devId = 0;
+MI_LDC_CHN chnId = 0;
+MI_LDC_ChnParam_t  stChnParam = {};
+MI_LDC_SensorCalibInfo_t *pCalibInfo = &amp;stChnParam.stCalibInfo;
+
+s32Ret = ReadBufFromFile(“ldc.json”, &amp;stChnParam. pConfigAddr, &amp;stChnParam.u32ConfigSize);
+if (s32Ret) 
+{
+    return s32Ret;
+}
+s32Ret = ReadBufFromFile(“CalibPoly.bin”, &amp;pstCalibInfo.pCalibPolyBinAddr, &amp;pstCalibInfo.u32CalibPolyBinSize);
+if (s32Ret)
+{
+    return s32Ret;
+}
+
+MI_LDC_SetChnParam(devId, chnId, &amp; stChnParam)；
+
+ReleaseBuf(stChnParam. pConfigAddr);
+ReleaseBuf(pstCalibInfo.pCalibPolyBinAddr);
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="29-mi_ldc_dolutdirecttask">2.9. MI_LDC_DoLutDirectTask<a class="headerlink" href="#29-mi_ldc_dolutdirecttask" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Execute table lookup tasks and send buffer directly to ldc hardware for
+processing.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_DoLutDirectTask(MI_LDC_DEV devID, MI_LDC_CHN chnId,
+MI_LDC_LutTaskAttr_t *pstAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devID</td>
+<td>Device initialization  parameters</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstAttr</td>
+<td>Table  looking-up task configuration attribute</td>
+<td>Input/Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>MI_S32 s32Ret = MI_SUCCESS;
+MI_LDC_DEV devId = 0;
+MI_LDC_CHN chnId = 0;
+MI_LDC_LutTaskAttr_t  stLutTask = {};
+MI_LDC_DirectBuf_t stTableX = {}, stTableY = {}, stTableWeight = {};
+void *pVirTableX = NULL, *pVirTableY=NULL, *pVirTableWeight = NULL;
+
+#define LUT_TABLE_Init(path, table, ppVir, w, h, __exit_func__)
+do { \
+table.ePixelFormat = E_MI_SYS_PIXEL_FRAME_I8; \
+table.u32Width = w; \
+table.u32Height = h; \
+table.u32Stride[0] = w; \
+
+    s32Ret = MI_SYS_MMa_Alloc(0, NULL, w*h, &amp;table.phyAddr[0]); \
+    if (s32Ret)
+    {
+        printf(“failed to malloc buf\n”);
+        goto __exit_func__;
+}
+s32Ret = MI_SYS_Mmap(table.phyAddr[0], w*h, ppVir, false); \
+if (s32Ret)
+{
+    printf(“failed to Mmap buf\n”);
+    goto __exit_func__;
+}
+s32Ret = ReadBufFromFile(path, ppVir, w*h);
+if (s32Ret)
+{
+    goto __exit_func__;
+}
+} while(0)
+
+#define LUT_TABLE_Deinit(table, pVir)
+do { \
+    if (pVir)
+    {
+    MI_SYS_Munmap(pVir, table.u32Width * table.u32Height);
+}
+if (table.phyAddr[0])
+{
+    MI_SYS_MMA_Free(0, table.phyAddr[0]);
+}
+} while(0)
+
+LUT_TABLE_Init(“1080p_tableX”, stTableX, &amp; pVirTableX, 1920, 1080, __exit);
+LUT_TABLE_Init(“1080p_tableY”, stTableY, &amp; pVirTableY, 1920, 1080, __exit);
+LUT_TABLE_Init(“1080p_tableWeight”, stTableWeight, &amp;pVirTableWeight, 1920, 1080, __exit);
+
+MI_LDC_DoLutDirectTask (devId, chnId, &amp; stLutTask)；
+
+__exit:
+LUT_TABLE_Deinit(stTableX, pVirTableX);
+LUT_TABLE_Deinit(stTableY, pVirTableY);
+LUT_TABLE_Deinit(stTableWeight, pVirTableWeight);
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="210-mi_ldc_setoutputportattr">2.10. MI_LDC_SetOutputPortAttr<a class="headerlink" href="#210-mi_ldc_setoutputportattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Configure LDC output attributes.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_SetOutputPortAttr(MI_LDC_DEV devId, MI_LDC_CHN chnId,
+MI_LDC_OutputPortAttr_t *pstOutputAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device  id</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc  Channel num</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstOutputAttr</td>
+<td>Output  attribute</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Used it after the channel is created (MI_LDC_CreateChannel).</p>
+</li>
+<li>
+<p>Only support to configure the format outputted by LDC, supported
+formats: NV12, ARGB8888, BGRA8888.</p>
+</li>
+<li>
+<p>Tiramisu and Maruko do not support this interface.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>MI_LDC_DEV devId = 0;
+MI_LDC_CHN chnId = 0;
+MI_LDC_OutputPortAttr_t  stLdcPortAttr = {};
+
+MI_LDC_GetOutputPortAttr(devId, chnId, &amp;stLdcPortAttr)；
+stLdcPortAttr.ePixelFmt = E_MI_SYS_PIXEL_FRAME_ARGB8888;
+MI_LDC_SetOutputPortAttr(devId, chnId, &amp;stLdcPortAttr)；
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="211-mi_ldc_attachtochn">2.11. MI_LDC_AttachToChn<a class="headerlink" href="#211-mi_ldc_attachtochn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Attach Ldc Channel to corresponding module channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_AttachToChn(MI_LDC_DEV devId, MI_LDC_CHN chnId, MI_SYS_ChnPort_t *pstChnPort);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter   Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc channel id</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstChnPort</td>
+<td>Channel port to be bound</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Used it after the channel is created (MI_LDC_CreateChannel).</p>
+</li>
+<li>
+<p>Only binding ISP modules is supported.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> example.</p>
+</li>
+</ul>
+<hr />
+<h3 id="212-mi_ldc_detachfromchn">2.12. MI_LDC_DetachFromChn<a class="headerlink" href="#212-mi_ldc_detachfromchn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Detach Ldc Channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_DetachFromChn(MI_LDC_DEV devId, MI_LDC_CHN chnId, MI_SYS_ChnPort_t *pstChnPort);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter   Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Input/Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc channel id</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstChnPort</td>
+<td>Channel port to be bound</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">ERROR CODE</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header file: mi_ldc.h</p>
+</li>
+<li>
+<p>Lib: libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> example.</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-ldc-data-type">3. LDC DATA TYPE<a class="headerlink" href="#3-ldc-data-type" title="Permanent link">&para;</a></h2>
+<hr />
+<p>LDC module related data types are listed below:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Data  type</strong></th>
+<th><strong>Definition</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#31-mi_ldc_dev">MI_LDC_DEV</a></td>
+<td>Define LDC device type.</td>
+</tr>
+<tr>
+<td><a href="#32-mi_ldc_chn">MI_LDC_CHN</a></td>
+<td>Define LDC channel type.</td>
+</tr>
+<tr>
+<td><a href="#33-mi_ldc_devattr_t">MI_LDC_DevAttr_t</a></td>
+<td>Define LDC device attribute.</td>
+</tr>
+<tr>
+<td><a href="#34-mi_ldc_workmode_e">MI_LDC_WorkMode_e</a></td>
+<td>Define LDC work mode.</td>
+</tr>
+<tr>
+<td><a href="#35-mi_ldc_mapinfotype_e">MI_LDC_MapInfoType_e</a></td>
+<td>Define LDC mapping information type.</td>
+</tr>
+<tr>
+<td><a href="#36-mi_ldc_displacementmapinfo_t">MI_LDC_DisplacementMapInfo_t</a></td>
+<td>Define LDC displacement map information.</td>
+</tr>
+<tr>
+<td><a href="#37-mi_ldc_sensorcalibinfo_t">MI_LDC_SensorCalibInfo_t</a></td>
+<td>Define  LDC Sensor calibration information.</td>
+</tr>
+<tr>
+<td><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></td>
+<td>Define  LDC channel attribute.</td>
+</tr>
+<tr>
+<td><a href="#39-mi_ldc_chnparam_t">MI_LDC_ChnParam_t</a></td>
+<td>Define  LDC channel dynamic parameters.</td>
+</tr>
+<tr>
+<td><a href="#310-mi_ldc_outputportattr_t">MI_LDC_OutputPortAttr_t</a></td>
+<td>Define  LDC output port attribute.</td>
+</tr>
+<tr>
+<td><a href="#311-mi_ldc_directbuf_t">MI_LDC_DirectBuf_t</a></td>
+<td>Define  LDC input buffer type.</td>
+</tr>
+<tr>
+<td><a href="#312-mi_ldc_luttaskattr_t">MI_LDC_LutTaskAttr_t</a></td>
+<td>Define  LDC image lookup table task type.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="31-mi_ldc_dev">3.1. MI_LDC_DEV<a class="headerlink" href="#31-mi_ldc_dev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define LDC device type</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_LDC_DEV;
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="32-mi_ldc_chn">3.2. MI_LDC_CHN<a class="headerlink" href="#32-mi_ldc_chn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define LDC channel type</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_LDC_CHN;
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="33-mi_ldc_devattr_t">3.3. MI_LDC_DevAttr_t<a class="headerlink" href="#33-mi_ldc_devattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>LDC device initialization Parameters.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_DevAttr_s
+
+{
+
+    MI_U32 u32Reserved;
+
+} MI_LDC_DevAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Reserved</td>
+<td>Reserve</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="34-mi_ldc_workmode_e">3.4. MI_LDC_WorkMode_e<a class="headerlink" href="#34-mi_ldc_workmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>LDC working mode.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    MI_LDC_WORKMODE_LDC = 0x01,
+
+    MI_LDC_WORKMODE_LUT = 0x02,
+
+    MI_LDC_WORKMODE_DIS_GYRO = 0x04,
+
+} MI_LDC_WorkMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MI_LDC_WORKMODE_LDC</td>
+<td>LDC mode</td>
+</tr>
+<tr>
+<td>MI_LDC_WORKMODE_LUT</td>
+<td>LUT direct lookup mode</td>
+</tr>
+<tr>
+<td>MI_LDC_WORKMODE_DIS_GYRO</td>
+<td>DIS anti-shake mode based on gyroscope</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="35-mi_ldc_mapinfotype_e">3.5. MI_LDC_MapInfoType_e<a class="headerlink" href="#35-mi_ldc_mapinfotype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>LDC mapping information type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    MI_LDC_MAPINFOTYPE_DISPMAP,
+
+    MI_LDC_MAPINFOTYPE_SENSORCALIB,
+
+} MI_LDC_MapInfoType_e ;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MI_LDC_MAPINFOTYPE_DISPMAP</td>
+<td>Displacement map</td>
+</tr>
+<tr>
+<td>MI_LDC_MAPINFOTYPE_SENSORCALIB</td>
+<td>sensor calibration  information</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="36-mi_ldc_displacementmapinfo_t">3.6. MI_LDC_DisplacementMapInfo_t<a class="headerlink" href="#36-mi_ldc_displacementmapinfo_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>LDC displacement map information.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_DisplacementMapInfo_s
+
+{
+
+    void *pXmapAddr;
+
+    void *pYmapAddr;
+
+    MI_U32 u32XmapSize;
+
+    MI_U32 u32YmapSize;
+
+} MI_LDC_DisplacementMapInfo_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pXmapAddr</td>
+<td>The starting address of the X coordinate mapping table</td>
+</tr>
+<tr>
+<td>pYmapAddr</td>
+<td>The starting address of the Y coordinate mapping table</td>
+</tr>
+<tr>
+<td>u32XmapSize</td>
+<td>X coordinate mapping table size</td>
+</tr>
+<tr>
+<td>u32YmapSize</td>
+<td>Y coordinate mapping table size</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></p>
+<p><a href="#39-mi_ldc_chnparam_t">MI_LDC_ChnParam_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="37-mi_ldc_sensorcalibinfo_t">3.7. MI_LDC_SensorCalibInfo_t<a class="headerlink" href="#37-mi_ldc_sensorcalibinfo_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>LDC Sensor calibration information.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_SensorCalibInfo_s
+
+{
+
+    void *pCalibPolyBinAddr;
+
+    MI_U32 u32CalibPolyBinSize;
+
+} MI_LDC_SensorCalibInfo_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pCalibPolyBinAddr</td>
+<td>Calibration information pointer</td>
+</tr>
+<tr>
+<td>u32CalibPolyBinSize</td>
+<td>Calibration message size</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></p>
+<p><a href="#39-mi_ldc_chnparam_t">MI_LDC_ChnParam_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="38-mi_ldc_chnattr_t">3.8. MI_LDC_ChnAttr_t<a class="headerlink" href="#38-mi_ldc_chnattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Channel attribute of LDC device.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_ChnAttr_s
+{
+    MI_LDC_WorkMode_e eMode;
+
+    MI_BOOL bUseProjection3x3Matrix;
+    MI_S32 as32Projection3x3Matrix[LDC_MAXTRIX_NUM];
+    MI_U16 u16UserSliceNum;
+    MI_U16 u16FocalLength;
+
+    void *pConfigAddr;
+    MI_U32 u32ConfigSize;
+
+    MI_LDC_MapInfoType_e eInfoType;
+    union
+    {
+        MI_LDC_DisplacementMapInfo_t stDispMapInfo;
+        MI_LDC_SensorCalibInfo_t stCalibInfo;
+    };
+} MI_LDC_ChnAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th><strong>Member name</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eMode</td>
+<td>Channel working mode</td>
+</tr>
+<tr>
+<td>bUseProjection3x3Matrix</td>
+<td>Indicates whether to use as32Projection3x3Matrix</td>
+</tr>
+<tr>
+<td>as32Projection3x3Matrix</td>
+<td>3x3 Matrix information indicates the direction  and position of the gyroscope (used in DIS mode)</td>
+</tr>
+<tr>
+<td>u16UserSliceNum</td>
+<td>The number of slices in the vertical direction,  mainly used in the motion scene of the Rolling Shutter camera, each slice  will have a separate 3x3 Matrix</td>
+</tr>
+<tr>
+<td>u16CropRatio</td>
+<td>The crop ratio of DIS output image.  <br>For example, the input image is 1920x1080 and  configure the crop ratio to 80, then the output image will be cropped  (1-80%)/2 = 10%, the output image is 1536x864, which is the aligned image.</td>
+</tr>
+<tr>
+<td>u16FocalLength</td>
+<td>Focal length, unit: mm (used in DIS mode)</td>
+</tr>
+<tr>
+<td>pConfigAddr</td>
+<td>LDC configuration information address</td>
+</tr>
+<tr>
+<td>u32ConfigSize</td>
+<td>LDC configuration information size</td>
+</tr>
+<tr>
+<td>eInfoType</td>
+<td>LDC mapping information type</td>
+</tr>
+<tr>
+<td>stDispMapInfo/stCalibInfo</td>
+<td>LDC displacement table/sensor calibration  information, includes distortion parameters</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#23-mi_ldc_createchannel">MI_LDC_CreateChannel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="39-mi_ldc_chnparam_t">3.9. MI_LDC_ChnParam_t<a class="headerlink" href="#39-mi_ldc_chnparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>LDC device initialization parameters.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_ChnParam_s
+{
+    MI_BOOL bUseProjection3x3Matrix;
+    MI_S32 as32Projection3x3Matrix[LDC_MAXTRIX_NUM];
+    MI_U16 u16FocalLength;
+    void *pConfigAddr;
+    MI_U32 u32ConfigSize;
+    union
+    {
+        MI_LDC_DisplacementMapInfo_t stDispMapInfo;
+        MI_LDC_SensorCalibInfo_t stCalibInfo;
+    };
+} MI_LDC_ChnParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th><strong>Member name</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bUseProjection3x3Matrix</td>
+<td>Indicates whether to use as32Projection3x3Matrix</td>
+</tr>
+<tr>
+<td>as32Projection3x3Matrix</td>
+<td>3x3 Matrix information indicates the direction  and position of the gyroscope (used in DIS mode)</td>
+</tr>
+<tr>
+<td>u16FocalLength</td>
+<td>Focal length, unit: mm (used in DIS mode)</td>
+</tr>
+<tr>
+<td>pConfigAddr</td>
+<td>LDC configuration information address</td>
+</tr>
+<tr>
+<td>u32ConfigSize</td>
+<td>LDC configuration information size</td>
+</tr>
+<tr>
+<td>stDispMapInfo/ stCalibInfo</td>
+<td>LDC displacement table/sensor calibration  information, includes distortion parameters</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#28-mi_ldc_setchnparam">MI_LDC_SetChnParam</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="310-mi_ldc_outputportattr_t">3.10. MI_LDC_OutputPortAttr_t<a class="headerlink" href="#310-mi_ldc_outputportattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define LDC output port attribute</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_OutputPortAttr_s
+
+{
+
+    MI_U16 u16Width;
+
+    MI_U16 u16Height;
+
+    MI_SYS_PixelFormat_e ePixelFmt;
+
+} MI_LDC_OutputPortAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#27-mi_ldc_getoutputportattr">MI_LDC_GetOutputPortAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="311-mi_ldc_directbuf_t">3.11. MI_LDC_DirectBuf_t<a class="headerlink" href="#311-mi_ldc_directbuf_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>LDC input buf type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_DirectBuf_s
+
+{
+
+    MI_SYS_PixelFormat_e ePixelFormat;
+
+    MI_U32 u32Width;
+
+    MI_U32 u32Height;
+
+    MI_U32 u32Stride[2];
+
+    MI_PHY phyAddr[2];
+
+} MI_LDC_DirectBuf_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePixelFormat</td>
+<td>Image format</td>
+</tr>
+<tr>
+<td>u32Width</td>
+<td>Image width</td>
+</tr>
+<tr>
+<td>u32Height</td>
+<td>Image height</td>
+</tr>
+<tr>
+<td>u32Stride</td>
+<td>Image occupied bytes per line</td>
+</tr>
+<tr>
+<td>phyAddr</td>
+<td>Image storage physical address</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#312-mi_ldc_luttaskattr_t">MI_LDC_LutTaskAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="312-mi_ldc_luttaskattr_t">3.12. MI_LDC_LutTaskAttr_t<a class="headerlink" href="#312-mi_ldc_luttaskattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>LDC image lookup table task type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_LutTaskAttr_s
+{
+    struct MI_LDC_LutSrcBuf_s
+    {
+        MI_LDC_DirectBuf_t stTableX;
+        MI_LDC_DirectBuf_t stTableY;
+        MI_LDC_DirectBuf_t stTableWeight;
+    } stSrcBuf;
+
+MI_LDC_DirectBuf_t stDstBuf;
+} MI_LDC_LutTaskAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stSrcBuf</td>
+<td>Table data source and weight lookup</td>
+</tr>
+<tr>
+<td>stDstBuf</td>
+<td>Store the output data after looking up</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#29-mi_ldc_dolutdirecttask">MI_LDC_DoLutDirectTask</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="4-error-code">4. ERROR CODE<a class="headerlink" href="#4-error-code" title="Permanent link">&para;</a></h2>
+<hr />
+<p>LDC API error code is defined in the table below:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Error Code</strong></th>
+<th><strong>Macro Definition</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xA0172001</td>
+<td>MI_ERR_LDC_INVALID_DEVID</td>
+<td>Invalid device  id</td>
+</tr>
+<tr>
+<td>0xA0172002</td>
+<td>MI_ERR_LDC_INVALID_CHNID</td>
+<td>Invalid channel id</td>
+</tr>
+<tr>
+<td>0xA0172003</td>
+<td>MI_ERR_LDC_ILLEGAL_PARAM</td>
+<td>Illegal Input argument</td>
+</tr>
+<tr>
+<td>0xA0172006</td>
+<td>MI_ERR_LDC_NULL_PTR</td>
+<td>Illegal null pointer argument</td>
+</tr>
+<tr>
+<td>0xA0172008</td>
+<td>MI_ERR_LDC_NOT_SUPPORT</td>
+<td>No support feature</td>
+</tr>
+<tr>
+<td>0xA017200C</td>
+<td>MI_ERR_LDC_NOT_NOMEM</td>
+<td>Not enough memory</td>
+</tr>
+<tr>
+<td>0xA0172012</td>
+<td>MI_ERR_LDC_BUSY</td>
+<td>Channel  is busy</td>
+</tr>
+<tr>
+<td>0xA0172015</td>
+<td>MI_ERR_LDC_MOD_NOT_INIT</td>
+<td>Module is  not inited</td>
+</tr>
+<tr>
+<td>0xA0172016</td>
+<td>MI_ERR_LDC_MOD_INITED</td>
+<td>Module has  been inited</td>
+</tr>
+<tr>
+<td>0xA0172018</td>
+<td>MI_ERR_LDC_PORT_NOT_DISABLE</td>
+<td>Port is  not be disable</td>
+</tr>
+<tr>
+<td>0xA017201F</td>
+<td>MI_ERR_LDC_FAIL</td>
+<td>Ldc failed to exec</td>
+</tr>
+<tr>
+<td>0xA0172300</td>
+<td>MI_ERR_LDC_DEV_CREATED</td>
+<td>Device has  been created</td>
+</tr>
+<tr>
+<td>0xA0172301</td>
+<td>MI_ERR_LDC_DEV_NOT_CREATE</td>
+<td>Device has  not been created</td>
+</tr>
+<tr>
+<td>0xA0172302</td>
+<td>MI_ERR_LDC_DEV_NOT_DESTROY</td>
+<td>Device has  not been destroyed</td>
+</tr>
+<tr>
+<td>0xA0172303</td>
+<td>MI_ERR_LDC_CHN_CREATED</td>
+<td>Channel has  been created</td>
+</tr>
+<tr>
+<td>0xA0172304</td>
+<td>MI_ERR_LDC_CHN_NOT_CREATE</td>
+<td>Channel has  not been created</td>
+</tr>
+<tr>
+<td>0xA0172305</td>
+<td>MI_ERR_LDC_CHN_NOT_STOP</td>
+<td>Channel has not been stopped</td>
+</tr>
+<tr>
+<td>0xA0172306</td>
+<td>MI_ERR_LDC_CHN_NOT_DESTROY</td>
+<td>Channel has  not been destryoed</td>
+</tr>
+<tr>
+<td>0xA0172307</td>
+<td>MI_ERR_LDC_PORT_NOT_UNBIND</td>
+<td>Port has  not been unbinded</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-procfs-introduction">5. PROCFS INTRODUCTION<a class="headerlink" href="#5-procfs-introduction" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="51-cat">5.1. cat<a class="headerlink" href="#51-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Debug info</p>
+<div class="codehilite"><pre><span></span># cat /proc/mi_modules/mi_ldc/mi_ldc0
+</pre></div>
+
+
+</li>
+<li>
+<p>Debug info analysis</p>
+<p>Record LDC current usage status and relative attributes, which can be
+dynamically got for debug and test.</p>
+</li>
+<li>
+<p>Parameter Description</p>
+<p><img alt="" src="mymedia/ldc/ldc-2.png" /></p>
+<p><table>
+  <tr>
+    <th width=247 colspan=2 valign=top bgcolor="#E7E6E6">Parameter</th>
+    <th width=650 valign=top bgcolor="#E7E6E6">Description</th>
+  </tr>
+  <tr>
+    <td width=118 rowspan=12><p style='text-align:justify;text-justify:inter-ideograph'>Device Info</td>
+    <td width=128 valign=top>DevID</td>
+    <td width=650 valign=top>Device ID</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>IRQ_Enable&nbsp;&nbsp; </td>
+    <td width=650 valign=top>IRQ enable state</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>IsrCnt</td>
+    <td width=650 valign=top>Count of interrupts, cmdq mode has no
+    reference meaning</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>IsrNum</td>
+    <td width=650 valign=top>Interrupt number</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>TotBlkNum</td>
+    <td width=650 valign=top>Total number of ldc blocks that need to
+    be processed</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>FramDonCnt</td>
+    <td width=650 valign=top>Number of processed frames</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>cmdqif</td>
+    <td width=650 valign=top>cmdq interface address</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalInFrmCnt</td>
+    <td width=650 valign=top>Total number of frames input to Hal</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalDoneFrmCnt</td>
+    <td width=650 valign=top><p style='text-align:justify;text-justify:inter-ideograph'>Total number of frames processed by Hal</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalDoneBlkCnt</td>
+    <td width=650 valign=top>Total number of blocks processed by Hal</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalIsrDoneCnt</td>
+    <td width=650 valign=top>Number of Hal done interrupts</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalIsrErrCnt</td>
+    <td width=650 valign=top>Number of Hal Err interrupts</td>
+  </tr>
+</table></p>
+<p><img alt="" src="mymedia/ldc/ldc-3.png" /></p>
+<p><table>
+  <tr>
+    <th width=247 colspan=2 valign=top bgcolor="#E7E6E6">Parameter</th>
+    <th width=650 valign=top bgcolor="#E7E6E6">Description</th>
+  </tr>
+  <tr>
+    <td width=118 rowspan=16><p style='text-align:justify;text-justify:inter-ideograph'>Channel Info</td>
+    <td width=128 valign=top>ChnId&nbsp;&nbsp; </td>
+    <td width=650 valign=top>Channel ID</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>workmode&nbsp;&nbsp; </td>
+    <td width=650 valign=top>Work mode of current channel</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>status</td>
+    <td width=650 valign=top>Status of current channel:
+    0:init 1:start 2:stop 3:destroyed</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>InputWH</td>
+    <td width=650 valign=top>Input frame resolution</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>Pixel</td>
+    <td width=650 valign=top>Input frame format</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>Stride</td>
+    <td width=650 valign=top>Input frame stride[0]</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>InBufCnt</td>
+    <td width=650 valign=top>The total number of frames input to the pre-level</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>IntodoCnt</td>
+    <td width=650 valign=top>The label of the frame to be processed
+    (incremental)</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>Atom</td>
+    <td width=650 valign=top>The number of buffers held by the bottom
+    layer</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>EptzInit</td>
+    <td width=650 valign=top>Time used to initialize the algorithm</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>OneBinSz</td>
+    <td width=650 valign=top>Time used to calculate the buffer size of
+    the latest view</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>OneBin</td>
+    <td width=650 valign=top>Time used to calculate the latest view</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>TotalBin</td>
+    <td width=650 valign=top>Time used to calculate all views by LDC
+    algorithm</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>LdcDone</td>
+    <td width=650 valign=top>LDC hardware processing time</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>EnqTDeq</td>
+    <td      valign=top>Total time from getting the pre-level buf
+    to processing it</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>BlendT</td>
+    <td width=650 valign=top>Alpha blending time</td>
+  </tr>
+</table></p>
+<p><img alt="" src="mymedia/ldc/ldc-4.png" /> </p>
+<p><table>
+  <tr>
+    <th width=237 colspan=2 valign=top bgcolor="#E7E6E6">Parameter</th>
+    <th width=650 valign=top bgcolor="#E7E6E6">Description</th>
+  </tr>
+  <tr>
+    <td width=105 rowspan=7 valign=top>&nbsp;</td>
+    <td width=132 valign=top>ChnId&nbsp;&nbsp; </td>
+    <td width=650 valign=top>Channel ID</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>ViewId&nbsp;&nbsp; </td>
+    <td width=650 valign=top>Ldc corresponding Id</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>mode</td>
+    <td width=650 valign=top>Scene mode used by ldc</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>NumRuns</td>
+    <td width=650 valign=top>Total number of blocks that ldc current
+    scene need to run</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>ImgFmt</td>
+    <td width=650 valign=top>Image format processed by ldc</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>OpMode</td>
+    <td width=650 valign=top>Current bbox mode: <br>0:2048x16&nbsp; 1:1024x32&nbsp; 2:512x64 3:256x128 4: 128x256</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>flip</td>
+    <td width=650 valign=top>Ldc mirror mode</td>
+  </tr>
+  <tr>
+    <td width=105 rowspan=9 valign=top>&nbsp;</td>
+    <td width=132 valign=top>InSize</td>
+    <td width=650 valign=top>The input area of &#8203;&#8203;the current view</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>ViewSize </td>
+    <td width=650 valign=top>The output area of &#8203;&#8203;the current view</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>OutSize&nbsp;&nbsp; </td>
+    <td width=650 valign=top>The output area of &#8203;&#8203;the current scene</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>ViewTime</td>
+    <td width=650 valign=top>Processing time of the current view</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>Inblk</td>
+    <td width=650 valign=top>The input area of &#8203;&#8203;the current blk</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>OutBlk</td>
+    <td width=650 valign=top>Algorithm output area of &#8203;&#8203;current blk</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>SclBlk</td>
+    <td width=650 valign=top>The output area of &#8203;&#8203;the current blk</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>DeltaXY</td>
+    <td width=650 valign=top>The coordinates of the current blk
+    corresponding to the delta table</td>
+  </tr>
+  <tr>
+    <td width=132 valign=top>BlkTime</td>
+    <td width=650 valign=top>Corresponding to the processing time of
+    blk</td>
+  </tr>
+</table></p>
+</li>
+</ul>
+<hr />
+<h3 id="52-echo">5.2. echo<a class="headerlink" href="#52-echo" title="Permanent link">&para;</a></h3>
+<p>Echo help view available commands:</p>
+<div class="codehilite"><pre><span></span># echo help &gt; /proc/mi_modules/mi_ldc/mi_ldc0
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Dump  LDC output file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  writeoutfile [chnid cnt path]  /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>chnid:  channel Id <br>cnt: dump  count <br>path: dump path</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo  writeoutfile 0 2 /mnt/  /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Dump  LDC map file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  dumptablebin [chnid view/all path]    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>chnid:  channel id   <br>view/all(download mode), view: concrete viewed, all: all views of current scene <br>path: dump path</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo  dumptablebin 0 all /mnt/  /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Configure  output properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  setout[chnid width height pixel]    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>chnid:  channel id  <br>width:  output image width  <br>height:  output image height</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo  setout 0 1920 1080 11  /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Loop  the previous frame</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  loopbuf [chnid cnt]    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>chnid:  channel id      <br>cnt: The  number of times to loop the previous frame</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo  loopbuf 0 11  /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Configure  ldc internal debug trace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  debug [chnid str]    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>chnid:  channel id         <br>str(debug  mode): off,  ViewRes,  ViewLock, ChnRdLock, ChnWrLock, DisGyro, Eptz</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo  debug 0 ChnRdLock  /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Configure  a single ldc map</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  setbin [chnid path]    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>chnid:  channel id   <br>path: map  path</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo  setbin /mnt/ldc.bin  /proc/mi_modules/mi_ldc/mi_ldc0</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ive_en.html" title="IVE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IVE
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="panel_en.html" title="PANEL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                PANEL
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/search_index.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

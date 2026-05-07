@@ -1,0 +1,2894 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Sensor Porting Guide - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1-sensor-porting-related-hardware-information" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Sensor Porting Guide
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Sensor Porting Guide
+      </label>
+    
+    <a href="Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link md-nav__link--active">
+      Sensor Porting Guide
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-sensor-porting-related-hardware-information" class="md-nav__link">
+    1. SENSOR PORTING RELATED HARDWARE INFORMATION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-sensor-power-sequence" class="md-nav__link">
+    1.1. Sensor power sequence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-sensor-ic-slave-address-check" class="md-nav__link">
+    1.2. Sensor IC slave address check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-sensor-mclk-support" class="md-nav__link">
+    1.3. Sensor MCLK support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sensor-porting-relevant-software-control" class="md-nav__link">
+    2. Sensor porting relevant software control
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-sensor-driver-support-mode-define" class="md-nav__link">
+    2.1. Sensor driver support mode define
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-sensor-driver-handle-function" class="md-nav__link">
+    2.2. Sensor driver handle function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-software-porting-flow" class="md-nav__link">
+    3. Software porting flow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-the-sensor-driver-initial-flow-introduction" class="md-nav__link">
+    3.1. The sensor driver initial flow introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-set-support-image-resolution-information" class="md-nav__link">
+    3.2. Set support image resolution information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-implement-the-sensor-control-function" class="md-nav__link">
+    3.3. Implement the sensor control function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-ic-execution-time-control" class="md-nav__link">
+    3.4. IC execution time control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-sensor-ae-shuttergain-delay-count" class="md-nav__link">
+    3.5. Sensor AE shutter/gain delay count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-supplyment" class="md-nav__link">
+    4. Supplyment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-install-the-sensor-driver-and-parameter-introduce" class="md-nav__link">
+    4.1. Install the Sensor Driver and parameter introduce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-verify-and-debug-video-stream" class="md-nav__link">
+    4.2. Verify and debug video stream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-verify-shutter-and-gain-delay" class="md-nav__link">
+    4.3. Verify shutter and gain delay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-verify-shutter-and-gain-linearity" class="md-nav__link">
+    4.4. Verify shutter and gain linearity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-skip-frame-feature" class="md-nav__link">
+    4.5. Skip frame feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-sensor-post-initial-feature-special-case-for-smartsens" class="md-nav__link">
+    4.6. Sensor post initial feature (Special case for SmartSens)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-sensor-porting-related-hardware-information" class="md-nav__link">
+    1. SENSOR PORTING RELATED HARDWARE INFORMATION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-sensor-power-sequence" class="md-nav__link">
+    1.1. Sensor power sequence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-sensor-ic-slave-address-check" class="md-nav__link">
+    1.2. Sensor IC slave address check
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-sensor-mclk-support" class="md-nav__link">
+    1.3. Sensor MCLK support
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-sensor-porting-relevant-software-control" class="md-nav__link">
+    2. Sensor porting relevant software control
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-sensor-driver-support-mode-define" class="md-nav__link">
+    2.1. Sensor driver support mode define
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-sensor-driver-handle-function" class="md-nav__link">
+    2.2. Sensor driver handle function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-software-porting-flow" class="md-nav__link">
+    3. Software porting flow
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-the-sensor-driver-initial-flow-introduction" class="md-nav__link">
+    3.1. The sensor driver initial flow introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-set-support-image-resolution-information" class="md-nav__link">
+    3.2. Set support image resolution information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-implement-the-sensor-control-function" class="md-nav__link">
+    3.3. Implement the sensor control function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-ic-execution-time-control" class="md-nav__link">
+    3.4. IC execution time control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-sensor-ae-shuttergain-delay-count" class="md-nav__link">
+    3.5. Sensor AE shutter/gain delay count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-supplyment" class="md-nav__link">
+    4. Supplyment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-install-the-sensor-driver-and-parameter-introduce" class="md-nav__link">
+    4.1. Install the Sensor Driver and parameter introduce
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-verify-and-debug-video-stream" class="md-nav__link">
+    4.2. Verify and debug video stream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-verify-shutter-and-gain-delay" class="md-nav__link">
+    4.3. Verify shutter and gain delay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-verify-shutter-and-gain-linearity" class="md-nav__link">
+    4.4. Verify shutter and gain linearity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-skip-frame-feature" class="md-nav__link">
+    4.5. Skip frame feature
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-sensor-post-initial-feature-special-case-for-smartsens" class="md-nav__link">
+    4.6. Sensor post initial feature (Special case for SmartSens)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>Sensor Porting Guide</h1>
+<p><center>Version 0.3</center></p>
+<hr />
+<h2 id="1-sensor-porting-related-hardware-information">1. SENSOR PORTING RELATED HARDWARE INFORMATION<a class="headerlink" href="#1-sensor-porting-related-hardware-information" title="Permanent link">&para;</a></h2>
+<p>This document describes how to porting SigmaStar sensor driver including basic hardware knowledge, software control sensor API (sensor handle), sensor interface API (Sensor-IF) of SigmaStar and software porting flow. In this document, we take the sensor driver of imx415/imx335/sc2315/sc2335 as examples. You can follow the instructions in this document to complete the sensor porting step by step.</p>
+<p>First we introduce the relevant knowledge of hardware and corresponding source code to make it easier to understand for you.</p>
+<hr />
+<h3 id="11-sensor-power-sequence">1.1. Sensor power sequence<a class="headerlink" href="#11-sensor-power-sequence" title="Permanent link">&para;</a></h3>
+<p>Check the power-on sequence spec in the sensor datasheet. Please follow below
+power sequence 1.1V > 1.8V > 2.9V as the imx415 sensor datasheet required.</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting1.png" /></p>
+<p>Figure 1: the IMX415 sensor power sequence spec</p>
+<p>Table 1: the IMX415 sensor power sequence timing table</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting2.png" /></p>
+<ul>
+<li>
+<p>Corresponding source code</p>
+<p>You can control sensor power-on and reset pins through
+“handle->pCus_sensor_poweron” in the sensor driver handle initial function.
+If you need to modify sensor power sequence timing, please check the
+characteristics of sensor and hardware design.</p>
+<div class="codehilite"><pre><span></span>static int pCus_poweron(ms_cus_sensor *handle, u32 idx)  {
+    ISensorIfAPI *sensor_if = &amp;handle-&gt;sensor_if_api;
+    //Sensor power on sequence
+    sensor_if-&gt;PowerOff(idx, handle-&gt;pwdn_POLARITY);   // Powerdn Pull Low
+    sensor_if-&gt;Reset(idx, handle-&gt;reset_POLARITY);     // Rst Pull Low
+    sensor_if-&gt;SetIOPad(idx, handle-&gt;sif_bus, handle-&gt;interface_attr.attr_mipi.mipi_lane_num);
+    sensor_if-&gt;SetCSI_Clk(idx, CUS_CSI_CLK_216M);
+    sensor_if-&gt;SetCSI_Lane(idx, handle-&gt;interface_attr.attr_mipi.mipi_lane_num, ENABLE);
+    sensor_if-&gt;SetCSI_LongPacketType(idx, 0, 0x1C00, 0);
+    if (handle-&gt;interface_attr.attr_mipi.mipi_hdr_mode == CUS_HDR_MODE_SONY_DOL)
+        sensor_if-&gt;SetCSI_hdr_mode(idx, handle-&gt;interface_attr.attr_mipi.mipi_hdr_mode, 1);
+
+    sensor_if-&gt;PowerOff(idx, !handle-&gt;pwdn_POLARITY);
+    //Sensor board PWDN Enable, 1.8V &amp; 2.9V need 30ms then Pull High
+    SENSOR_MSLEEP(31);
+    sensor_if-&gt;Reset(idx, !handle-&gt;reset_POLARITY);
+    SENSOR_UDELAY(1);
+    sensor_if-&gt;MCLK(idx, 1, handle-&gt;mclk);
+    SENSOR_DMSG(&quot;Sensor Power On finished\n&quot;);
+    return SUCCESS;
+}
+</pre></div>
+
+
+</li>
+</ul>
+<p><strong>NOTE:</strong> Below is SigmaStar Sensor board schematic of power circuit. 1.1V,
+1.8V, 2.9V power will pull high after power-on enable. First 1.1V, then 1.8V and
+2.9V, you can use an oscilloscope to measure it on your sensor board.</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting3.png" /></p>
+<p>Figure 2: the IMX415 sensor power circuit</p>
+<hr />
+<h3 id="12-sensor-ic-slave-address-check">1.2. Sensor IC slave address check<a class="headerlink" href="#12-sensor-ic-slave-address-check" title="Permanent link">&para;</a></h3>
+<p>SigmaStar SoC needs to communicate with a sensor through I2C, please check the
+sensor I2C slave address first.</p>
+<p>Table 2: the IMX415 sensor slave id table</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting4.png" /></p>
+<p><strong>NOTE:</strong> Check the sensor board schematic of I2C slave mode Option</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting5.png" /></p>
+<p>Figure 3: the IMX415 sensor board I2C slave mode</p>
+<ul>
+<li>
+<p>Corresponding source code</p>
+<p>The sensor driver I2C Setting in Marco define</p>
+<div class="codehilite"><pre><span></span>////////////////////////////////////
+// I2C Info                         //
+////////////////////////////////////
+#define SENSOR_I2C_ADDR     0x34        //I2C slave address
+#define SENSOR_I2C_SPEED    300000      //I2C speed, 60000~320000
+//#define SENSOR_I2C_CHANNEL   1        //I2C Channel
+//#define SENSOR_I2C_PAD_MODE  2        //Pad/Mode Number
+#define SENSOR_I2C_LEGACY  I2C_NORMAL_MODE  //usually set CUS_I2C_NORMAL_MODE,  if use old OVT I2C protocol=&gt; set CUS_I2C_LEGACY_MODE
+#define SENSOR_I2C_FMT     I2C_FMT_A16D8 //CUS_I2C_FMT_A8D8, CUS_I2C_FMT_A8D16, CUS_I2C_FMT_A16D8, CUS_I2C_FMT_A16D16
+</pre></div>
+
+
+</li>
+</ul>
+<p><strong>NOTE:</strong> Sensor-IF of I2C control Interface in handle initial function</p>
+<div class="codehilite"><pre><span></span>handle-&gt;i2c_cfg.mode     = SENSOR_I2C_LEGACY;    //(CUS_ISP_I2C_MODE) FALSE;
+handle-&gt;i2c_cfg.fmt      = SENSOR_I2C_FMT;       //CUS_I2C_FMT_A16D16;
+handle-&gt;i2c_cfg.address  = SENSOR_I2C_ADDR;      //0x34;
+handle-&gt;i2c_cfg.speed    = SENSOR_I2C_SPEED;     //300000;
+</pre></div>
+
+
+<hr />
+<h3 id="13-sensor-mclk-support">1.3. Sensor MCLK support<a class="headerlink" href="#13-sensor-mclk-support" title="Permanent link">&para;</a></h3>
+<p>Each sensor can support in different MCLK. That the MCLK list table that we can
+provide is as follows. You can find the MCLK corresponding to the sensor from
+the initialization settings provided by the sensor vendor. The sensor MCLK
+Setting in Marco define</p>
+<ul>
+<li>
+<p>Corresponding source code</p>
+<div class="codehilite"><pre><span></span>////////////////////////////////////
+// MCLK Info                        //
+////////////////////////////////////
+/*******I5/MACARON Support MCLK List*******
+*    CUS_CMU_CLK_27MHZ   / CUS_CMU_CLK_21P6MHZ  / CUS_CMU_CLK_12MHZ,
+*    CUS_CMU_CLK_5P4MHZ  / CUS_CMU_CLK_36MHZ    / CUS_CMU_CLK_54MHZ,
+*    CUS_CMU_CLK_43P2MHZ / CUS_CMU_CLK_61P7MHZ  / CUS_CMU_CLK_72MHZ,
+*    CUS_CMU_CLK_48MHZ    / CUS_CMU_CLK_24MHZ    / CUS_CMU_CLK_37P125MHZ,
+******End of Support MCLK List*******/
+#define Preview_MCLK_SPEED           CUS_CMU_CLK_27MHZ
+#define Preview_MCLK_SPEED_HDR_DOL  CUS_CMU_CLK_37P125MHZ
+</pre></div>
+
+
+<p><strong>NOTE:</strong> The sensor MCLK control Interface in handle initial function</p>
+<div class="codehilite"><pre><span></span>////////////////////////////////////
+//    mclk                        //
+////////////////////////////////////
+handle-&gt;mclk                   = UseParaMclk(SENSOR_DRV_PARAM_MCLK());
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h2 id="2-sensor-porting-relevant-software-control">2. Sensor porting relevant software control<a class="headerlink" href="#2-sensor-porting-relevant-software-control" title="Permanent link">&para;</a></h2>
+<p>After introducing the relevant knowledge of hardware and corresponding source
+code, we will introduce software control API (sensor handle) and sensor
+interface API (Sensor-IF) of SigmaStar in this part.</p>
+<hr />
+<h3 id="21-sensor-driver-support-mode-define">2.1. Sensor driver support mode define<a class="headerlink" href="#21-sensor-driver-support-mode-define" title="Permanent link">&para;</a></h3>
+<p>Register the sensor support behavior mode. For example, the IMX415 sensor
+supports linear and HDR mode, you can refer to the IMX415 sensor driver and fill
+it in define of “<strong>SENSOR_DRV_ENTRY_IMPL_END_EX</strong>”.</p>
+<div class="codehilite"><pre><span></span>SENSOR_DRV_ENTRY_IMPL_END_EX(  IMX415_HDR,
+                            cus_camsensor_init_handle,
+                            cus_camsensor_init_handle_hdr_dol_sef,
+                            cus_camsensor_init_handle_hdr_dol_lef,
+                            imx415_params
+                            );
+</pre></div>
+
+
+<p>Table 3: the sensor driver “<strong>SENSOR_DRV_ENTRY_IMPL_END_EX</strong>” define</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Sensor Name and support mode</td>
+</tr>
+<tr>
+<td>LinearEntry</td>
+<td>Sensor Linear mode handle initial function</td>
+</tr>
+<tr>
+<td>HdrSefEntry</td>
+<td>Sensor HDR Short Exposure handle initial function</td>
+</tr>
+<tr>
+<td>HdrLefEntry</td>
+<td>Sensor HDR Long Exposure handle initial function</td>
+</tr>
+<tr>
+<td>PrivateDataType</td>
+<td>Sensor Private Data Type</td>
+</tr>
+</tbody>
+</table>
+<h4>2.1.1. Introduce “SENSOR_DRV_IMPL_END_EX”</h4>
+<p>You can check macro define “<strong>SENSOR_DRV_ENTRY_IMPL_END_EX</strong>” more detail
+in the path “driver/SensorDriver/drv/inc/drv_sensor_common.h”. LinearEntry has
+a group of private data set, HdrSefEntry and HdrLefEntry have another a group of
+private data set.</p>
+<div class="codehilite"><pre><span></span>#define SENSOR_DRV_ENTRY_IMPL_END_EX (Name,LinearEntry,HdrSefEntry,HdrLefEntry,PrivateDataType)\
+static PrivateDataType* g_pData[2][MAX_CAMID_LEN] = { {0,0,0,0}, {0,0,0,0} };\
+int Name##_init_driver(unsigned char chmap)\
+{\
+    int nCamID=0;\
+    /*To avoid compile warning*/\
+    void* p0 = LinearEntry;\
+    void* p1 = HdrSefEntry;\
+    void* p2 = HdrLefEntry;\
+    if(DrvSensorHandleVer(CUS_CAMSENSOR_HANDLE_MAJ_VER, CUS_CAMSENSOR_HANDLE_MIN_VER)==FAIL)\
+    return FAIL;\
+    if(DrvSensorIFVer(CUS_CAMSENSORIF_MAJ_VER, CUS_CAMSENSORIF_MIN_VER)==FAIL)\
+    return FAIL;\
+    if(DrvSensorI2CVer(CUS_CAMSENSOR_I2C_MAJ_VER, CUS_CAMSENSOR_I2C_MIN_VER)==FAIL)\
+    return FAIL;\
+    for(nCamID=0;nCamID&lt;MAX_CAMID_LEN;++nCamID)\
+    {\
+        if((chmap&gt;&gt;nCamID)&amp;0x1)\
+        {\
+            if(p0){\
+                void* pData = CamOsMemAlloc(sizeof(PrivateDataType));\
+                memset(pData,0,sizeof(PrivateDataType));\
+                DrvRegisterSensorDriverEx(nCamID, LinearEntry,pData);\
+                DrvRegisterSensorI2CSlaveID(nCamID, (i2c_slave_id&gt;&gt;(nCamID*8))&amp;0xFF);\
+                SENSOR_DMSG(&quot;Connect %s linear to sensor pad %d\n&quot;,__FUNCTION__, nCamID);\
+                g_pData[0][nCamID] = pData;\
+            }\
+            if(p1||p2){\
+                void* pData = CamOsMemAlloc(sizeof(PrivateDataType));\
+                memset(pData,0,sizeof(PrivateDataType));\
+                if(p1){\
+                    DrvRegisterPlaneDriverEx(nCamID, 1, HdrSefEntry,pData);\
+                    DrvRegisterPlaneI2CSlaveID(nCamID, 1, (i2c_slave_id&gt;&gt;(nCamID*8))&amp;0xFF);\
+                    SENSOR_DMSG(&quot;Connect %s SEF to vif sensor pad %d\n&quot;,__FUNCTION__, nCamID);\
+                }\
+                if(p2){\
+                    DrvRegisterPlaneDriverEx(nCamID, 0, HdrLefEntry,pData);\
+                    DrvRegisterPlaneI2CSlaveID(nCamID, 1, (i2c_slave_id&gt;&gt;(nCamID*8))&amp;0xFF);\
+                    SENSOR_DMSG(&quot;Connect %s LEF to sensor pad %d\n&quot;,__FUNCTION__, nCamID);\
+                }\
+                g_pData[1][nCamID] = pData;\
+            }\
+        }\
+    }\
+    return 0;\
+}\
+</pre></div>
+
+
+<hr />
+<h3 id="22-sensor-driver-handle-function">2.2. Sensor driver handle function<a class="headerlink" href="#22-sensor-driver-handle-function" title="Permanent link">&para;</a></h3>
+<p>Next we will introduce and explain handle API in the linear and HDR handle
+initial functions. We can control, set or read any state of the sensor through
+the handle API. Here we take the sensor driver of imx415 as an example. You can
+step through the sensor porting of linear and HDR mode according to the
+instructions in this document.</p>
+<h4>2.2.1. Handle of IC API</h4>
+<p>Set I2C hardware information</p>
+<p>Table 4: handle of I2C API define</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle->i2c_cfg.mode</td>
+<td>Register I2C Mode</td>
+<td><em>I2C_NORMAL_MODE</em> /**\&lt; Sensor driver can only use I2C_NORMAL_MODE */ <em>I2C_LEGACY_MODE</em>, /**\&lt; Do not use */</td>
+</tr>
+<tr>
+<td>handle->i2c_cfg.fmt</td>
+<td>Register set I2C format for bit of address &amp; data length.</td>
+<td>/**\&lt; I2C_FMT_A16D8 means 16 bits Address, 8 bits Data */ <em>I2C_FMT_A8D8</em>, <em>I2C_FMT_A16D8</em>, <em>I2C_FMT_A8D16</em>, <em>I2C_FMT_A16D16</em>, <em>I2C_FMT_END</em> /**\&lt; Reserved */</td>
+</tr>
+<tr>
+<td>handle->i2c_cfg.address</td>
+<td>Register set sensor I2C slave address, SigmaStar SoC supports 8bits slave address</td>
+<td>Check From Sensor Datasheet</td>
+</tr>
+<tr>
+<td>handle->i2c_cfg.speed</td>
+<td>Register set sensor max I2C speed (MACARON fixed at 300 KHz)</td>
+<td>I2C speed, 60000~320000</td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.2. Handle of MCLK API</h4>
+<p>Set the sensor MCLK information</p>
+<p>Table 5: handle of MCLK API define</p>
+<table>
+<thead>
+<tr>
+<th>handle->mclk</th>
+<th>Register set VIF module output MCLK to sensor For MI Query!!</th>
+<th>Main Chip Support MCLK List as : <em>CUS_CMU_CLK_27MHZ</em>, <em>CUS_CMU_CLK_21P6MHZ</em>, <em>CUS_CMU_CLK_12MHZ</em>, <em>CUS_CMU_CLK_5P4MHZ</em>, <em>CUS_CMU_CLK_36MHZ</em>, <em>CUS_CMU_CLK_54MHZ</em>, <em>CUS_CMU_CLK_43P2MHZ</em>, <em>CUS_CMU_CLK_61P7MHZ</em>, <em>CUS_CMU_CLK_72MHZ</em>, <em>CUS_CMU_CLK_48MHZ</em>, <em>CUS_CMU_CLK_24MHZ</em>, <em>CUS_CMU_CLK_37P125MHZ</em>, <em>CUS_CMU_CLK_LPLL_DIV1</em>, <em>CUS_CMU_CLK_LPLL_DIV2</em>, <em>CUS_CMU_CLK_LPLL_DIV4</em>, <em>CUS_CMU_CLK_LPLL_DIV8</em>,</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.3. Handle of Sensor model id API</h4>
+<p>Set sensor name and mode information</p>
+<p>Table 6: handle of model id API define</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle->model_id</td>
+<td>Register set sensor model for libcamera user by using</td>
+<td>MIPI IMX415_MIPI</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>PARALLEL IMX323_PARL</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>HDR IMX415_MIPI_HDR_SEF IMX415_MIPI_HDR_LEF</td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.4. Handle of sensor interface and output hardware information</h4>
+<p>Table 7: handle of Sensor interface and output hardware information API define</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle->pCus_sensor_poweron</td>
+<td><strong>Fill Up Sensor IF Info!!!</strong> Register set sensor power-on sequence function.</td>
+<td>Function ref : pCus_poweron</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_init</td>
+<td>Register load sensor initial setting function.</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_post_init</td>
+<td>Set and enable SoC mipi csi status.</td>
+<td>Special case is like SmartSens product SC4236/SC2315</td>
+</tr>
+<tr>
+<td>handle->isp_type</td>
+<td>Register ISP type (not used in MACARON)</td>
+<td>SENSOR_ISP_TYPE <em>ISP_SOC</em>, /**\&lt; Not support */ <em>ISP_EXT,</em> /**\&lt; sensor without built-in ISP */</td>
+</tr>
+<tr>
+<td>handle->sif_bus</td>
+<td>Register set sensor interface bus type</td>
+<td>SENSOR_IFBUS_TYPE <em>CUS_SENIF_BUS_PARL</em> = 0, /**\&lt; sensor data bus is parallel */ <em>CUS_SENIF_BUS_MIPI</em> = 1, /**\&lt; sensor data bus is mipi */ <em>CUS_SENIF_BUS_BT601</em> = 2, <em>CUS_SENIF_BUS_BT656</em> = 3, <em>CUS_SENIF_BUS_BT1120</em> = 4,</td>
+</tr>
+<tr>
+<td>handle->data_prec</td>
+<td>Register set sensor output raw data precision</td>
+<td>SENSOR_DATAPREC <em>CUS_DATAPRECISION_8</em> = 0, /**\&lt; raw data precision 8bits */ <em>CUS_DATAPRECISION_10</em> = 1, /**\&lt; raw data precision 10bits */ <em>CUS_DATAPRECISION_16</em> = 2, /**\&lt; raw data precision 16bits */ <em>CUS_DATAPRECISION_12</em> = 3, /**\&lt; raw data precision 12bits */ <em>CUS_DATAPRECISION_14</em> = 4, /**\&lt; raw data precision 14bits */</td>
+</tr>
+<tr>
+<td>handle->data_mode</td>
+<td>Register set sensor bayer raw (8/10-bits) to 12-bits mode (Not used in MACARON)</td>
+<td>SENSOR_DATAMODE <em>CUS_SEN_8TO12_7074</em>, <em>CUS_SEN_8TO12_7000</em>, <em>CUS_SEN_8TO12_114118</em>, <em>CUS_SEN_8TO12_11400</em>, <em>CUS_SEN_10TO12_9098</em>, <em>CUS_SEN_10TO12_9000</em>, <em>CUS_SEN_10TO12_1121110</em>, <em>CUS_SEN_10TO12_11200</em></td>
+</tr>
+<tr>
+<td>handle->bayer_id</td>
+<td>Register set sensor bayer raw start id</td>
+<td>SENSOR_BAYERID <em>CUS_BAYER_RG</em> = 0, <em>CUS_BAYER_GR</em>, <em>CUS_BAYER_BG</em>, <em>CUS_BAYER_GB</em>,</td>
+</tr>
+<tr>
+<td>handle->RGBIR_id</td>
+<td>Register set sensor RGB-IR start id  <br> <img alt="" src="mymedia/Sensor Porting/porting6.png" /> <br>#If <strong>NOT</strong> RGB-IR sensor, please set <em>CUS_RGBIR_NONE</em></td>
+<td>SENSOR_RGBIRID <em>CUS_RGBIR_NONE</em> = 0, <em>CUS_RGBIR_R0</em> = 1, <em>CUS_RGBIR_G0</em> = 2, <em>CUS_RGBIR_B0</em> = 3, <em>CUS_RGBIR_G1</em> = 4, <em>CUS_RGBIR_G2</em> = 5, <em>CUS_RGBIR_I0</em> = 6, <em>CUS_RGBIR_G3</em> = 7, <em>CUS_RGBIR_I1</em> = 8</td>
+</tr>
+<tr>
+<td>handle->orient</td>
+<td>Register get sensor image mirror-flip default status</td>
+<td>SENSOR_ORIT <em>CUS_ORIT_M0F0</em>, /**\&lt; mirror, flip unchanged */ <em>CUS_ORIT_M1F0</em>, /**\&lt; mirror changed */ <em>CUS_ORIT_M0F1</em>, /**\&lt; flip changed */ <em>CUS_ORIT_M1F1</em>, /**\&lt; mirror and flip changed */</td>
+</tr>
+<tr>
+<td>handle->snr_pad_group</td>
+<td>Register sensor pad group</td>
+<td><em>CUS_SENSOR_PAD_GROUP_A</em> = 0, <em>CUS_SENSOR_PAD_GROUP_B</em> = 1, <em>CUS_SENSOR_PAD_GROUP_A</em> = 0, <em>CUS_SENSOR_PAD_GROUP_B</em> = 1,</td>
+</tr>
+<tr>
+<td>handle->snr_pad_mode</td>
+<td>Register sensor master and slave mode</td>
+<td><em>CUS_SENSOR_MASTER_MODE</em> = 0, <em>CUS_SENSOR_SLAVE_MODE</em> = 1,</td>
+</tr>
+<tr>
+<td>handle->ir_only_fmt</td>
+<td>Register sensor ir format status</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>For HDR (MIPI) Interface</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>handle->interface_attr.attr_mipi.mipi_lane_num</td>
+<td>Register set MIPI lane number</td>
+<td>Default : 4</td>
+</tr>
+<tr>
+<td>handle->interface_attr.attr_mipi.mipi_data_format</td>
+<td>Register set MIPI data format</td>
+<td><em>CUS_SEN_INPUT_FORMAT_YUV422</em>, <em>CUS_SEN_INPUT_FORMAT_RGB</em>,</td>
+</tr>
+<tr>
+<td>handle->interface_attr.attr_mipi.mipi_yuv_order</td>
+<td>Register set MIPI yuv order</td>
+<td>For yuv sensor only</td>
+</tr>
+<tr>
+<td>handle->interface_attr.attr_mipi.mipi_hsync_mode</td>
+<td>Register set HDR virtual channel0 hsync mode</td>
+<td>SENSOR_MIPI_HSYNC_MODE <em>PACKET_HEADER_EDGE1</em> = 0, /**\&lt; packet header edge */ <em>PACKET_HEADER_EDGE2</em> = 1, /**\&lt; line end edge */ <em>PACKET_HEADER_EDGE3</em> = 2, /**\&lt; line start edge */ <em>PACKET_FOOTER_EDGE</em> = 3, /**\&lt; packet footer edge */</td>
+</tr>
+<tr>
+<td>handle->interface_attr.attr_mipi.mipi_hdr_mode</td>
+<td>Register set MIPI HDR mode</td>
+<td><em>CUS_HDR_MODE_NONE</em> = 0, <em>CUS_HDR_MODE_SONY_DOL</em> = 1, <em>CUS_HDR_MODE_DCG</em> = 2, <em>CUS_HDR_MODE_EMBEDDED_RAW8</em> = 3, <em>CUS_HDR_MODE_EMBEDDED_RAW10</em> = 4, <em>CUS_HDR_MODE_EMBEDDED_RAW12</em> = 5, <em>CUS_HDR_MODE_EMBEDDED_RAW16</em> = 6, //Only for OV2718? <em>CUS_HDR_MODE_LI</em> = 7,</td>
+</tr>
+<tr>
+<td>handle->interface_attr.attr_mipi. mipi_sampling_delay</td>
+<td>MIPI CLK skip time (ns) (Not used in MACARON)</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->interface_attr.attr_mipi.mipi_hdr_virtual_channel_num</td>
+<td>Register set HDR virtual channel number #Based on each sensor VC mode header define</td>
+<td>For example imx415: Long Exposure Frame : 0 Short Exposure Frame : 1</td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.5. Handle of signal polarity API</h4>
+<p>Set SoC hardware signal polarity</p>
+<p>Table 8: handle of signal polarity API define</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle->pwdn_POLARITY</td>
+<td>Register set output sensor power-down pin (GPIO) polarity</td>
+<td>SENSOR_PWDN_POL <em>CUS_CLK_POL_POS</em> = 0, /**\&lt; High active */ <em>CUS_CLK_POL_NEG</em> /**\&lt; Low active */</td>
+</tr>
+<tr>
+<td>handle->reset_POLARITY</td>
+<td>Register set output sensor reset pin (GPIO) polarity</td>
+<td>SENSOR_RST_POL <em>CUS_CLK_POL_POS</em> = 0, /**\&lt; High active */ <em>CUS_CLK_POL_NEG</em> /**\&lt; Low active */</td>
+</tr>
+<tr>
+<td><strong>For Parallel Interface</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>handle->VSYNC_POLARITY</td>
+<td>Register set receive sensor Vsync pin signal polarity</td>
+<td>SENSOR_VSYNC_POL <em>CUS_CLK_POL_POS</em> = 0, /**\&lt; High active */ <em>CUS_CLK_POL_NEG</em> /**\&lt; Low active */</td>
+</tr>
+<tr>
+<td>handle->HSYNC_POLARITY</td>
+<td>Register set receive sensor Hsync pin signal polarity</td>
+<td>SENSOR_HSYNC_POL <em>CUS_CLK_POL_POS</em> = 0, /**\&lt; High active */ <em>CUS_CLK_POL_NEG</em> /**\&lt; Low active */</td>
+</tr>
+<tr>
+<td>handle->PCLK_POLARITY</td>
+<td>Register set receive sensor pixel clk pin signal polarity</td>
+<td>SENSOR_PCLK_POL <em>CUS_CLK_POL_POS</em> = 0, /**\&lt; High active */ <em>CUS_CLK_POL_NEG</em> /**\&lt; Low active */</td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.6. Handle of sensor resolution capability API</h4>
+<p>Set sensor support and implement output image information.</p>
+<p>Table 9: handle of sensor resolution capability API define</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle->video_res_supported.num_res</td>
+<td>Register set sensor support resolution number</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.ulcur_res</td>
+<td>Register set sensor current resolution</td>
+<td>Default : 0</td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].width</td>
+<td>Register set sensor support width</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].height</td>
+<td>Register set sensor support height</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].max_fps</td>
+<td>Register set sensor support preview maximum fps</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].min_fps</td>
+<td>Register set sensor support preview minimum fps</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].crop_start_x</td>
+<td>Register set VIF crop sensor output image start of X</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].crop_start_y</td>
+<td>Register set VIF crop sensor output image start of Y</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].nOutputWidth</td>
+<td>Register set VIF output active pixel</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].nOutputHeight</td>
+<td>Register set VIF output active line</td>
+<td></td>
+</tr>
+<tr>
+<td>handle->video_res_supported.res[n].strResDesc</td>
+<td>Register set sensor resolution &amp; fps string</td>
+<td>EX: 1920x1080\@30fps</td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.7. Handle of set/get sensor control API</h4>
+<p>We can load sensor initial setting, switch sensor output resolution, sensor
+mirror or flip and fps set or get through these functions.</p>
+<p>Table 10: handle of set/get sensor control API define</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle->pCus_sensor_release</td>
+<td>Register sensor release function.</td>
+<td>Function ref : cus_camsensor_release_handle</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_init</td>
+<td>Register load sensor initial setting function.</td>
+<td>Function ref : pCus_init_mipi4lane_linear</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_poweron</td>
+<td>Register set sensor power-on sequence function.</td>
+<td>Function ref : pCus_poweron</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_poweroff</td>
+<td>Register set sensor power-off sequence function.</td>
+<td>Function ref : pCus_poweroff</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetSensorID</td>
+<td>Register get and check sensor ID</td>
+<td>Function ref : pCus_GetSensorID</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetVideoResNum</td>
+<td>Register get sensor support resolution number function, that’s video output index.</td>
+<td>Function ref : pCus_GetVideoResNum</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetVideoRes</td>
+<td>Register get sensor support preview info function (width, height, and frame rate).</td>
+<td>Function ref : pCus_GetVideoRes</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetCurVideoRes</td>
+<td>Register get sensor current preview info function (width, height, and frame rate).</td>
+<td>Function ref : pCus_GetCurVideoRes</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_SetVideoRes</td>
+<td>Register switch sensor and load initial setting function.</td>
+<td>Function ref : pCus_SetVideoRes</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetOrien</td>
+<td>Register get sensor mirror-flip status function.</td>
+<td>Function ref : pCus_GetOrien</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_SetOrien</td>
+<td>Register set Sensor mirror-flip status function.</td>
+<td>Function ref : pCus_SetOrien</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetFPS</td>
+<td>Register get sensor FPS status function.</td>
+<td>Function ref : pCus_GetFPS</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_SetFPS</td>
+<td>Register set sensor FPS status function.</td>
+<td>Function ref : pCus_SetFPS</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_SetPatternMode</td>
+<td>Set sensor test pattern (Color Bar Pattern).</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.8. Handle of set/get sensor AE control API</h4>
+<p>First we will introduce the sensor driver private data in this part, this
+purpose is to record the parameters of the sensor without any modification. Here
+is imx415 as a reference example. The naming can be customized according to each
+sensor or developer, and there is no mandatory requirement.</p>
+<p>Table 11: example for imx415 private data</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>params->tGain_reg</td>
+<td>Register set each frame sensor AE gain parameter.</td>
+<td>For imx415 Linear</td>
+</tr>
+<tr>
+<td>params->tExpo_reg</td>
+<td>Register set each frame sensor exposure line parameter.</td>
+<td>For imx415 Linear</td>
+</tr>
+<tr>
+<td>params->tVts_reg</td>
+<td>Register set each frame sensor total line parameter.</td>
+<td>For imx415 Linear, LEF</td>
+</tr>
+<tr>
+<td>params->tSHR0_reg</td>
+<td>Register set each frame long exposure frame shutter time.</td>
+<td>For imx415 LEF</td>
+</tr>
+<tr>
+<td>params->tRHS1_reg</td>
+<td>Register set each frame readout time of short exposure frame.</td>
+<td>For imx415 SEF</td>
+</tr>
+<tr>
+<td>params->tSHR1_reg</td>
+<td>Register set each frame short exposure frame shutter time.</td>
+<td>For imx415 SEF</td>
+</tr>
+<tr>
+<td>params->tGain_hdr_dol_lef_reg</td>
+<td>Register set each frame long exposure frame HDR AE Gain.</td>
+<td>For imx415 LEF</td>
+</tr>
+<tr>
+<td>params->tGain_hdr_dol_sef_reg</td>
+<td>Register set each frame short exposure frame HDR AE Gain.</td>
+<td>For imx415 SEF</td>
+</tr>
+<tr>
+<td>params->expo.vts</td>
+<td>Register set each frame total line.</td>
+<td>For imx415 Linear, LEF</td>
+</tr>
+<tr>
+<td>params->expo.expo_lines</td>
+<td>Register set each frame exposure line.</td>
+<td>For imx415 Linear, LEF</td>
+</tr>
+<tr>
+<td>params->expo.fps</td>
+<td>Register set sensor fps.</td>
+<td>For imx415 Linear, LEF</td>
+</tr>
+<tr>
+<td>OTHERS</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>We can set or get sensor AE function status through this API, including AE
+shutter time, gain, limit AE setting value and AE update timing, etc.</p>
+<p>Table 12: handle of set/get sensor AE control API define</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle->ae_gain_delay</td>
+<td>Register set sensor AE Gain effective frame after setting frame.</td>
+<td>Based On Sensor Characteristic Please check *SUPPLYMENT4.2</td>
+</tr>
+<tr>
+<td>handle->ae_shutter_delay</td>
+<td>Register set sensor AE Shutter effective frame after setting frame.</td>
+<td>Based On Sensor Characteristic Please check *SUPPLYMENT4.2</td>
+</tr>
+<tr>
+<td>handle->ae_gain_ctrl_num</td>
+<td>Register set sensor AE Gain table number.</td>
+<td>Linear mode set to 1 HDR mode set to 2</td>
+</tr>
+<tr>
+<td>handle->ae_shutter_ctrl_num</td>
+<td>Register set sensor AE Shutter table number.</td>
+<td>Linear mode set to 1 HDR mode set to 2</td>
+</tr>
+<tr>
+<td>handle->sat_mingain</td>
+<td>Register get sensor Initial minimum Gain.</td>
+<td>Minimum Gain != 1</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_AEStatusNotify</td>
+<td>Register update AE Gain, Shutter and fps status at frame start or frame end.</td>
+<td>Function Ref : pCus_AEStatusNotify Status 0 is frame end update Status 1 is frame start update</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetAEUSecs</td>
+<td>Register get sensor output image exposure time.</td>
+<td>Function Ref : pCus_GetAEUSecs</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_SetAEUSecs</td>
+<td>Register set sensor output image exposure time.</td>
+<td>Function Ref : pCus_SetAEUSecs</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetAEGain</td>
+<td>Register get sensor AE Gain.</td>
+<td>Function Ref : pCus_GetAEGain</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_SetAEGain</td>
+<td>Register set sensor AE Gain.</td>
+<td>Function Ref : pCus_SetAEGain</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetAEMinMaxGain</td>
+<td>Register get sensor minimum &amp; maximum Gain information</td>
+<td>Function Ref : pCus_GetAEMinMaxGain</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetAEMinMaxUSecs</td>
+<td>Register get sensor minimum &amp; maximum exposure time</td>
+<td>Function Ref : pCus_GetAEMinMaxUSecs</td>
+</tr>
+<tr>
+<td>handle->pCus_sensor_GetShutterInfo</td>
+<td>Register get sensor minimum &amp; maximum exposure in line, and shutter step</td>
+<td>Function:</td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.9. Sensor-IF API</h4>
+<p>SENSOR_IF API for Connect with the sensor driver and the VIF driver, this
+callback control in below handle control function.</p>
+<p>We will introduce and describe this API, more detail you can reference the
+sensor driver of IMX415.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+<th><strong>NOTE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sensor_if->PowerOff</td>
+<td>Set Sensor-IF PowerDown pull high or not.</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->Reset</td>
+<td>Set Sensor-IF SW RESET pull high or not.</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->MCLK</td>
+<td>Set VIF Output MCLK</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->SetIOPad</td>
+<td>For SENSOR-IF I/O Bus Mode</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->QueryMCLK</td>
+<td>For query sensor master clock</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->QueryLaneNum</td>
+<td>For query sensor MIPI lane number</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->SetSkipFrame</td>
+<td>Skip vif output frame</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td><strong>For MIPI Interface</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sensor_if->SetCSI_Clk</td>
+<td>Set MIPI Interface MAC CLK</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->SetCSI_Lane</td>
+<td>Set MIPI Interface Data Lane</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->SetCSI_hdr_mod</td>
+<td>Set HDR Data Format</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->SetCSI_LongPacketType</td>
+<td>Set MIPI Long Packet Type</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->SetCSI_clk_data_skip</td>
+<td>Skip hs clock when into HSRX mode</td>
+<td>Callback to VIF driver</td>
+</tr>
+<tr>
+<td>sensor_if->VCOHsmode</td>
+<td></td>
+<td>Callback to VIF driver</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-software-porting-flow">3. Software porting flow<a class="headerlink" href="#3-software-porting-flow" title="Permanent link">&para;</a></h2>
+<p>This chapter introduces the process of software porting sensor driver. First, it
+will explain how to initialize the sensor. Then describe the information
+required by the sensor driver 3A and control the functions that 3A will call.</p>
+<hr />
+<h3 id="31-the-sensor-driver-initial-flow-introduction">3.1. The sensor driver initial flow introduction<a class="headerlink" href="#31-the-sensor-driver-initial-flow-introduction" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="mymedia/Sensor Porting/porting7.png" /></p>
+<p>Figure 4: porting the sensor driver flow</p>
+<p>This document introduces the initial process of transplanting the sensor
+according to the process in the figure above.</p>
+<h4>3.1.1. Set the sensor information setting</h4>
+<p>These settings are the hardware information of the sensor, we have listed the
+necessary hardware information, you can refer to the IMX415 / IMX335 sensor
+driver,</p>
+<div class="codehilite"><pre><span></span>////////////////////////////////////
+// Sensor-If Info                 //
+////////////////////////////////////
+//MIPI config begin.
+#define SENSOR_MIPI_LANE_NUM        (lane_num)          //IMX335 Linear mode supports MIPI 2/4 Lane
+#define SENSOR_MIPI_LANE_NUM_DOL    (4) //(hdr_lane_num)//IMX335 DOL mode supports MIPI 4 Lane
+//#define SENSOR_MIPI_HDR_MODE        (0) //0: Non-HDR mode. 1:Sony DOL mode
+
+#define SENSOR_ISP_TYPE             ISP_EXT             //ISP_EXT, ISP_SOC (Non-used)
+//#define SENSOR_DATAFMT             CUS_DATAFMT_BAYER    //CUS_DATAFMT_YUV, CUS_DATAFMT_BAYER
+#define SENSOR_IFBUS_TYPE           CUS_SENIF_BUS_MIPI  //CFG //CUS_SENIF_BUS_PARL, CUS_SENIF_BUS_MIPI
+#define SENSOR_MIPI_HSYNC_MODE      PACKET_HEADER_EDGE1
+#define SENSOR_MIPI_HSYNC_MODE_HDR_DOL PACKET_FOOTER_EDGE
+#define SENSOR_DATAPREC             CUS_DATAPRECISION_10
+#define SENSOR_DATAPREC_DOL         CUS_DATAPRECISION_10
+#define SENSOR_DATAMODE             CUS_SEN_10TO12_9098  //CFG
+#define SENSOR_BAYERID              CUS_BAYER_RG         //0h: CUS_BAYER_RG, 1h: CUS_BAYER_GR, 2h: CUS_BAYER_BG, 3h: CUS_BAYER_GB
+#define SENSOR_BAYERID_HDR_DOL     CUS_BAYER_RG
+#define SENSOR_RGBIRID              CUS_RGBIR_NONE
+#define SENSOR_ORIT                 CUS_ORIT_M0F0        //CUS_ORIT_M0F0, CUS_ORIT_M1F0, CUS_ORIT_M0F1, CUS_ORIT_M1F1,
+//#define SENSOR_YCORDER              CUS_SEN_YCODR_YC     //CUS_SEN_YCODR_YC, CUS_SEN_YCODR_CY
+//#define long_packet_type_enable     0x00 //UD1~UD8 (user define)
+
+////////////////////////////////////
+// MCLK Info                        //
+////////////////////////////////////
+#define Preview_MCLK_SPEED          CUS_CMU_CLK_27MHZ//CUS_CMU_CLK_37P125MHZ//CUS_CMU_CLK_27MHZ
+#define Preview_MCLK_SPEED_HDR_DOL  CUS_CMU_CLK_27MHZ
+</pre></div>
+
+
+<h4>3.1.2. Set the sensor IC setting</h4>
+<p>SoC communicates with sensors mainly through I2C. Therefore, you need to set I2C
+before sending sensor setting value to the sensor.</p>
+<p>Please refer to this document <strong>chapter 1.2</strong>.</p>
+<h3 id="32-set-support-image-resolution-information">3.2. Set support image resolution information<a class="headerlink" href="#32-set-support-image-resolution-information" title="Permanent link">&para;</a></h3>
+<p>You need to fill in the sensor image information provided by the sensor provider
+FAE. This information includes preview size, image crop size and site etc. We
+define this information as a global variable.</p>
+<div class="codehilite"><pre><span></span>////////////////////////////////////
+// Image Info                     //
+////////////////////////////////////
+static struct {     // LINEAR
+    // Modify it based on number of support resolution
+    enum {LINEAR_RES_1 = 0, LINEAR_RES_2, LINEAR_RES_3, LINEAR_RES_4, LINEAR_RES_5, LINEAR_RES_6, LINEAR_RES_7, LINEAR_RES_8, LINEAR_RES_END}mode;
+    // Sensor Output Image info
+    struct _senout{
+        s32 width, height, min_fps, max_fps;
+    }senout;
+    // VIF Get Image Info
+    struct _sensif{
+        s32 crop_start_X, crop_start_y, preview_w, preview_h;
+    }senif;
+    // Show resolution string
+    struct _senstr{
+        const char* strResDesc;
+    }senstr;
+}imx415_mipi_linear[] = {
+    {LINEAR_RES_1, {3860, 2250, 3, 20}, {0, 0, 3840, 2160}, {&quot;3840x2160@20fps&quot;} },
+    {LINEAR_RES_2, {3096, 2190, 3, 30}, {0, 0, 3072, 2048}, {&quot;3072x2048@30fps&quot;} }, // Modify it
+    {LINEAR_RES_3, {3096, 1758, 3, 30}, {0, 0, 3072, 1728}, {&quot;3072x1728@30fps&quot;} }, // Modify it
+    {LINEAR_RES_4, {2616, 1974, 3, 30}, {0, 0, 2592, 1944}, {&quot;2592x1944@30fps&quot;} }, // Modify it
+    {LINEAR_RES_5, {2976, 1686, 3, 30}, {0, 0, 2944, 1656}, {&quot;2944x1656@30fps&quot;} }, // Modify it
+    {LINEAR_RES_6, {2592, 1470, 3, 30}, {0, 0, 2560, 1440}, {&quot;2560x1440@30fps&quot;} }, // Modify it
+    {LINEAR_RES_7, {1920, 1080, 3, 60}, {0, 0, 1920, 1080}, {&quot;1920x1080@60fps&quot;} }, // Modify it
+    {LINEAR_RES_8, {3864, 2192, 3, 30}, {0, 0, 3840, 2160}, {&quot;3840x2160@30fps&quot;} }, // Modify it
+    //{LINEAR_RES_9, {2616, 1974, 3, 25}, {0, 0, 2592, 1944}, {&quot;2592x1944@25fps&quot;} }, // Modify it
+};
+</pre></div>
+
+
+<h4>3.2.1. The sensor power on sequence function</h4>
+<p>Please refer to this document <strong>chapter 1.1.</strong></p>
+<h4>3.2.2. The sensor initial function</h4>
+<p>Here is the initial setting of the sensor through the i2c device, first read the
+product ID or sensor ID of the sensor device to ensure that the correct sensor
+is used. Please refer to the function registered by
+“<strong>handle->pCus_sensor_init</strong>”.</p>
+<h4>3.2.3. Select the sensor output resolution function</h4>
+<p>MI will get the image resolution information supported by the sensor driver and
+select one of the sensor's initial settings.</p>
+<p>Please refer to the function registered by
+“<strong>handle->pCus_sensor_SetVideoRes</strong>”.</p>
+<hr />
+<h3 id="33-implement-the-sensor-control-function">3.3. Implement the sensor control function<a class="headerlink" href="#33-implement-the-sensor-control-function" title="Permanent link">&para;</a></h3>
+<p>The functions that the sensor driver needs to support include fps adjustment, AE
+shutter adjustment, AE gain adjustment, and mirror flip function settings, which
+we will not describe more detail, because this needs to be implemented according
+to the characteristics of each sensor.</p>
+<p>The following is our control the sensor implement function flow. Relatively, we
+also need to get the sensor information, please refer to the figure below:</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting8.png" /></p>
+<p>Figure 5: control the sensor implement function flow</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting9.png" /></p>
+<p>Figure 6: get the sensor implement function information or status</p>
+<h4>3.3.1. AE shutter control and get AE shutter information</h4>
+<p>How to control AE shutter, please refer to the function registered by
+“<strong>handle->pCus_sensor_SetAEUSecs</strong>”.</p>
+<p>Also, ISP algo or MI need to get AE shutter information, please refer to the
+function registered by “<strong>handle->pCus_sensor_GetAEUSecs</strong>” and
+“<strong>handle->pCus_sensor_GetShutterInfo</strong>”.</p>
+<h4>3.3.2. AE gain control and get AE gain information</h4>
+<p>How to control AE gain, please refer to the function registered by
+“<strong>handle->pCus_sensor_SetAEGain</strong>”.</p>
+<p>Also, ISP algo or MI need to get AE gain information, please refer to the
+function registered by “<strong>handle->pCus_sensor_GetAEGain</strong>” and
+“<strong>handle->pCus_sensor_GetAEMinMaxGain</strong>”.</p>
+<h4>3.3.3. Sensor frame rate control and get sensor frame rate information</h4>
+<p>How to control the sensor output frame rate, please refer to the function
+registered by “<strong>handle->pCus_sensor_SetFPS</strong>”.</p>
+<p>Also, MI needs to get the sensor output frame rate information, please refer to
+the function registered by “<strong>handle->pCus_sensor_GetFPS</strong>”.</p>
+<h4>3.3.4. Sensor mirror-flip control and get sensor mirror-flip information</h4>
+<p>How to control the sensor image mirror-flip, please refer to the function
+registered by “<strong>handle->pCus_sensor_SetOrien</strong>”.</p>
+<p>Also, MI needs to get the sensor image mirror-flip information, please refer to
+the function registered by “<strong>handle->pCus_sensor_GetOrien</strong>”.</p>
+<h3 id="34-ic-execution-time-control">3.4. IC execution time control<a class="headerlink" href="#34-ic-execution-time-control" title="Permanent link">&para;</a></h3>
+<p>The above AE shutter, AE gain, sensor frame rate and mirror control, we hope
+everyone can send commands to the sensor through I2C at the same time</p>
+<p>So we will implement this using the function
+"<strong>handle->pCus_sensor_AEStatusNotify</strong>"</p>
+<p>Therefore, we can control the time of I2C send commands to the sensor through
+two parameters "CUS_FRAME_ACTIVE" and "CUS_FRAME_INACTIVE". Most sensors can
+be set at the frame start, so the parameter "CUS_FRAME_ACTIVE" can be
+selected.</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting10.png" /></p>
+<p>Figure 7: I2C execution time</p>
+<p><strong>NOTE:</strong></p>
+<p>If the porting sensor cannot find out what caused the image abnormality, you can
+call “return success” directly in the function.</p>
+<h4>3.4.1. Sensor AE shutter/gain delay count</h4>
+<p>How to set “<strong>handle->ae_shutter_delay</strong>” and “<strong>handle->ae_gain_delay</strong>”,
+please refer to this document <strong>chapter 4.2.</strong></p>
+<h3 id="35-sensor-ae-shuttergain-delay-count">3.5. Sensor AE shutter/gain delay count<a class="headerlink" href="#35-sensor-ae-shuttergain-delay-count" title="Permanent link">&para;</a></h3>
+<p>How to set “<strong>handle->ae_gain_ctrl_num</strong>” and
+“<strong>handle->ae_shutter_ctrl_num</strong>”, please refer to this document <strong>chapter
+2.2.8.</strong></p>
+<hr />
+<h2 id="4-supplyment">4. Supplyment<a class="headerlink" href="#4-supplyment" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="41-install-the-sensor-driver-and-parameter-introduce">4.1. Install the Sensor Driver and parameter introduce<a class="headerlink" href="#41-install-the-sensor-driver-and-parameter-introduce" title="Permanent link">&para;</a></h3>
+<p>SigmaStar sensor driver provides several installation parameters that can be
+used when installing the sensor driver. Here are the parameters and instructions
+as below:</p>
+<p>Table 13: sensor driver install parameter</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Describe</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chmap</td>
+<td>Specify SoC Channel pad for sensor</td>
+</tr>
+<tr>
+<td>lane_num</td>
+<td>Specify Sensor linear mode MIPI lane number</td>
+</tr>
+<tr>
+<td>hdr_lane_num</td>
+<td>Specify Sensor hdr mode MIPI lane number</td>
+</tr>
+<tr>
+<td>i2c_slave_id</td>
+<td>Specify Sensor i2c slave id</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<table>
+<thead>
+<tr>
+<th>insmod imx335_MIPI.ko <strong>chmap=1 lane_num=4 hdr_lane_num=4 i2c_slave_id=0x20</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>If the above parameters are not used when installing the sensor driver, the
+default values ​​in the sensor driver are used.</p>
+<hr />
+<h3 id="42-verify-and-debug-video-stream">4.2. Verify and debug video stream<a class="headerlink" href="#42-verify-and-debug-video-stream" title="Permanent link">&para;</a></h3>
+<p>The next step is to verify that the sensor driver can be used normally, so, you
+need to copy app from “/sdk/verify/mi_demo/out/demo/app” to EVB, I take
+“prog_cus3a” as an example:</p>
+<div class="codehilite"><pre><span></span>/customer # ./prog_cus3a
+use default sensor pad 0, vif dev 0
+Use HDR ?
+0 not use, 1 use DOL
+0
+You select not use HDR client [548] connected, module:sensor
+index 0, Crop(0,0,3840,2160), outputsize(3860,2250), maxfps 20, minfps 3, ResDesc 3840x2160@20fps
+index 1, Crop(0,0,3072,2048), outputsize(3096,2190), maxfps 30, minfps 3, ResDesc 3072x2048@30fps
+index 2, Crop(0,0,3072,1728), outputsize(3096,1758), maxfps 30, minfps 3, ResDesc 3072x1728@30fps
+index 3, Crop(0,0,2592,1944), outputsize(2616,1974), maxfps 30, minfps 3, ResDesc 2592x1944@30fps
+index 4, Crop(0,0,2944,1656), outputsize(2976,1686), maxfps 30, minfps 3, ResDesc 2944x1656@30fps
+index 5, Crop(0,0,2560,1440), outputsize(2592,1470), maxfps 30, minfps 3, ResDesc 2560x1440@30fps
+index 6, Crop(0,0,1920,1080), outputsize(1920,1080), maxfps 60, minfps 3, ResDesc 1920x1080@60fps
+index 7, Crop(0,0,3840,2160), outputsize(3864,2192), maxfps 30, minfps 3, ResDesc 3840x2160@30fps
+choice which resolution use, cnt 8
+</pre></div>
+
+
+<h4>4.2.1. Check frame interval</h4>
+<p>At the same time you can open telnet and enter the following cmd to confirm the
+VIF and ISP status.</p>
+<p>Usually 30fps means that a frame period is 33.3ms.</p>
+<div class="codehilite"><pre><span></span>/ # cat /sys/class/mstar/vif0/vif_ints
+== VIF CH-0 ==
+Interval(ns)                    : 33309000
+VREF_RISING                   : 6147
+VREF_FALLING                  : 6149
+LINE_CNT_0                    : 2
+LINE_CNT_1                    : 2
+</pre></div>
+
+
+<h4>4.2.2. Check the sensor output stream status</h4>
+<p>Confirm the information of the sensor signal received by VIF device</p>
+<div class="codehilite"><pre><span></span>/ # cat /sys/class/mstar/vif0/vif_info
+== VIF CH-0 ==
+INTF_MODE = 4
+CH_EN: 1
+SRC: MIPI0
+INPUT_FMT: RGB
+PIX_FMT: 12 bits
+HDR_EN: 0
+HDR_CH: VC0
+CROP_EN: 1
+CROP_START_X: 0 - 1919
+CROP_START_Y: 0 - 1079
+PIXEL_CNT: 1920
+LINE_CNT: 1080
+</pre></div>
+
+
+<h4>4.2.3. Check the ISP status</h4>
+<p>If the transmission speed of one line or pixel per frame is too fast, even if
+the VIF can receive the image data normally, there is no guarantee that the ISP
+can process it immediately, it causes isp fifo full.</p>
+<div class="codehilite"><pre><span></span>/ # cat /sys/class/mstar/isp0/isp_ints
+frame_count                     : 1089
+u32FrameIntervalNanoSec         : 33332 us
+ISP_FIFO_FULL                   : 0
+INT_PIPE1_FIFO_FULL             : 0
+ISP_BUSY                        : 1089, 06.952374
+ISP_IDLE                         : 1090, 06.950575
+RDMA0_DONE                     : 0
+RDMA1_DONE                     : 0
+WDMA0_DONE                    : 0
+WDMA1_DONE                    : 0
+WDMA6_LINE_HIT                  : 0
+WDMA6_DONE                     : 0
+ISPIF_VSYNC                       : 1089, 06.952046, 0
+AE_DONE                         : 1088, 06.950279, 1934
+AE_DONE period                  : 31565 us
+</pre></div>
+
+
+<hr />
+<h3 id="43-verify-shutter-and-gain-delay">4.3. Verify shutter and gain delay<a class="headerlink" href="#43-verify-shutter-and-gain-delay" title="Permanent link">&para;</a></h3>
+<p>If you want to verify that the sensor AE gain/shutter delay, you can use
+apitool, also follow the steps below to control the sensor AE gain/shutter
+function step by step.</p>
+<p><strong>STEP 1.</strong> You need to execute process of mixer first</p>
+<div class="codehilite"><pre><span></span>/customer # ./mixer -q -n 1          (linear mode)
+/customer # ./mixer -q -n 1 -N 3_2    (hdr mode)
+</pre></div>
+
+
+<p><strong>STEP 2.</strong> Open IQ tool in sdk path “project/tools/apitool”</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting11.png" /></p>
+<p><strong>STEP 3.</strong> Host Name is EVB’s IP address, check it then connect to EVB</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting12.png" /></p>
+<p><strong>STEP 4.</strong> Select Macaron AE option, and select “ExposureMode” menu table to
+M_Mode</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting13.png" /></p>
+<p><strong>Step 5.</strong> Adjust “DebugLev” menu and set AE Debug Level from 0 to 64, then you
+can check you console log</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting14.png" /></p>
+<p>Check the AE message shown on the console</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting15.png" /></p>
+<p><strong>Step 6.</strong> Adjust AE sensor gain or shutter manually. At the same time, you can
+observe the AE message shown on the console.</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting16.png" /></p>
+<p>Observer the value of “CurYx10” change from 308 to 1436</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting17.png" /></p>
+<p>After we set the gain of AE through ISP tool, it will take effect in the next
+frame. The CurYx10 represents the brightness information of a previous frame.
+The following figure is an example. The AE gain delay needs to set 2.</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting18.png" /></p>
+<p>Figure 8: AE Y value response time</p>
+<hr />
+<h3 id="44-verify-shutter-and-gain-linearity">4.4. Verify shutter and gain linearity<a class="headerlink" href="#44-verify-shutter-and-gain-linearity" title="Permanent link">&para;</a></h3>
+<p>If you want to verify that the sensor AE gain/shutter function is normal after
+porting the sensor AE gain/shutter function finish, you can use apitool. You can
+follow the steps below to control the sensor AE gain/shutter function step by
+step.</p>
+<p><strong>STEP 1.</strong> You need to execute process of mixer</p>
+<div class="codehilite"><pre><span></span>/customer # ./mixer -q -n 1        (linear mode)
+/customer # ./mixer -q -n 1 -N 3_2    (hdr mode)
+</pre></div>
+
+
+<p><strong>STEP 2.</strong> Open IQ tool in sdk path “project/tools/apitool”</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting19.png" /></p>
+<p><strong>STEP 3.</strong> Host Name is EVB’s IP address, check it then connect to EVB</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting20.png" /></p>
+<p><strong>STEP 4.</strong> Select Macaron AE option, and select “ExposureMode” menu table to
+M_Mode</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting21.png" /></p>
+<p><strong>Step 5.</strong> Adjust AE sensor gain and shutter manually. At the same time, you
+can observe image changes through VLC or your debug message.</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting22.png" /></p>
+<p>The IQ Tool has defined upper and lower limit for the AE settings, you can
+adjust it according to your needs. You can reference Exposure limit table.</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting23.png" /></p>
+<hr />
+<h3 id="45-skip-frame-feature">4.5. Skip frame feature<a class="headerlink" href="#45-skip-frame-feature" title="Permanent link">&para;</a></h3>
+<p>The sensor driver that has been implemented has imx307. You can refer to the
+sensor driver of imx307. Here I will briefly explain how to use skip frame
+function.</p>
+<p><strong>Step 1.</strong> Add a variable "skip _cnt" inside Params structure of sensor driver</p>
+<div class="codehilite"><pre><span></span>u32 max_rhs1;
+    u32 lef_shs2;
+    u32 skip_cnt;
+    bool dirty;
+    bool change;
+    I2C_ARRAY tVts_reg[3];
+    I2C_ARRAY tGain_reg[3];
+    I2C_ARRAY tExpo_reg[3]; 
+    I2C_ARRAY tShs2_reg[3];
+    I2C_ARRAY tRhs1_reg[3];
+    I2C_ARRAY tGain_hdr_dol_lef_reg[1];
+    I2C_ARRAY tGain_hdr_dol_sef_reg[1];
+    bool orien_dirty;
+} imx307_params;
+</pre></div>
+
+
+<p><strong>Step 2.</strong> Set the number of skip frames in the function that needs to skip
+frames.</p>
+<p>For an example of imx307, in HDR mode, it may flicker when changing fps (from 10
+fps to 30 fps) in high brightness environment, so skip 1 frame to avoid flicker.</p>
+<div class="codehilite"><pre><span></span>if(params-&gt;expo.expo_lines &gt; 2 * params-&gt;expo.vts - params-&gt;max_rhs1 -3){
+    vts = (params-&gt;expo.expo_lines + params-&gt;max_rhs1 + 3 + 1) / 2;
+    }else{
+    vts = params-&gt;expo.vts;
+    }
+
+    params-&gt;expo.vts = vts;
+    pCus_SetAEUSecsHDR_DOL_SEF1(handle, params-&gt;expo.expo_sef_us);
+    params-&gt;skip_cnt = 1;
+    return SUCCESS;
+</pre></div>
+
+
+<p><strong>Step 3.</strong> The actual time to skip frame in function of “AESStatusNotify”.
+Please add the following features. SensorIF will calculate the time to set the
+VIF mask disable based on the number of skip frames and the current fps time
+period.</p>
+<div class="codehilite"><pre><span></span>            if(params-&gt;skip_cnt){
+                sensor_if-&gt;SetSkipFrame(handle-&gt;snr_pad_group, params-&gt;expo.fps, params-&gt;skip_cnt);
+                params-&gt;skip_cnt = 0;
+            }
+            break;
+        default :
+            break;
+    }
+    return SUCCESS;
+</pre></div>
+
+
+<hr />
+<h3 id="46-sensor-post-initial-feature-special-case-for-smartsens">4.6. Sensor post initial feature (Special case for SmartSens)<a class="headerlink" href="#46-sensor-post-initial-feature-special-case-for-smartsens" title="Permanent link">&para;</a></h3>
+<p>Since the Smartsens sensor first transmit i2c cmd after power-on, the
+probability of the sensor mipi csi and clock will be pulled down, it leads to
+SoC mipi csi abnormal.</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting24.png" /></p>
+<p>Figure 9: Smartsense sensor signal</p>
+<p>Currently, the solution is to change the sequence of the sensor power-on and the
+sensor initialization. After the sensor initialize completed, then enable SoC
+mipi csi to resolve this problem. Please refer to the following process:</p>
+<p><img alt="" src="mymedia/Sensor Porting/porting25.png" /></p>
+<p>Figure 10: power on sequence flow change</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="audiotuning.html" title="音频调试手册" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                音频调试手册
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                QFN88 SSC37X Demo板说明
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../search/search_index.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

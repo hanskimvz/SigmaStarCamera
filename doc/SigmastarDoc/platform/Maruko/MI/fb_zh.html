@@ -1,0 +1,7645 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>FB - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                FB
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Development/sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        FB
+      </label>
+    
+    <a href="fb_zh.html" title="FB" class="md-nav__link md-nav__link--active">
+      FB
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1.  模块说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 基本结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 功能介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4. 应用场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1.5. 芯片差异
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    1.6. 工作原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    1.7. 开发流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    1.8. 实例介绍
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    2. API参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1. 标准功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2. 扩展功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_fb-api" class="md-nav__link">
+    2.3. MI_FB API参考
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1. 标准定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_fb" class="md-nav__link">
+    3.2. MI_FB 数据类型定义
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 错误码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs" class="md-nav__link">
+    5. PROCFS介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1.  模块说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 基本结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 功能介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4. 应用场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1.5. 芯片差异
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    1.6. 工作原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    1.7. 开发流程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    1.8. 实例介绍
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    2. API参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1. 标准功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2. 扩展功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_fb-api" class="md-nav__link">
+    2.3. MI_FB API参考
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1. 标准定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_fb" class="md-nav__link">
+    3.2. MI_FB 数据类型定义
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 错误码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs" class="md-nav__link">
+    5. PROCFS介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI FB API</h1>
+<!-- REVISION HISTORY
+
+| Revision No. | Description                                                  | Date       |
+| ------------ | ------------------------------------------------------------ | ---------- |
+| 3.0          | - Initial release                                            | 07/27/2021 |
+|              | - 修改图1-1，图形层支持叠加到SCL  PATH，并新增相关说明  - 1.5章节芯片差异部分新增图形层叠加到SCL PATH在不同芯片的支持情况  - 1.7章节对新增INI配置参数做相关介绍 | 08/08/2021 |
+|              | - 新增PROCFS介绍                                             | 08/25/2021 |
+|              | - 改变HW_LAYER_ID的定义，并重构芯片差异表格                  | 12/17/2021 |
+|              | - 新增Mochi芯片差异部分                                      | 02/16/2022 |
+|              | - 新增Maruko芯片差异部分                                     | 03/21/2022 |
+|              | - 新增API ”FBIO_WAITFORVSYNC”支持                          | 04/11/2022 |
+|              | - 新增对FB_BUFFER_LEN字段的详细解释                          | 07/07/2022 |
+|              | - 更新“配置启动参数”说明                                   | 07/08/2022 |
+|              | - 更新proc信息和cmd说明                                      | 08/10/2022 |
+
+-->
+
+<hr />
+<h2 id="1">1. 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="11">1.1.  模块说明<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>MI_FB是一个基于Linux Framebuff实现的图形层设备驱动。它将显示缓冲区抽象，屏蔽图像硬件的底层差异，允许上层应用程序在图形模式下直接对显示缓冲区进行读写操作，用户不必关心物理显示缓冲区的具体位置及存放方式，这些都由MI_FB模块驱动来完成。在提供Linux Framebuff基本功能的基础上，MI_FB还提供了一些扩展功能，如层间Alpha、ColorKey、设置显示区域等。</p>
+<hr />
+<h3 id="12">1.2. 基本结构<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>MI_FB主要用来管理多个图形层，每一个图形层在芯片能力支持的情况下可以选择叠加到不同的视频处理/输出路径上。</p>
+<ol>
+<li>
+<p>视频预览叠加路径指图形层可以叠加到视频显示单元上，MI_DISP子模块用来管理视频显示单元，如果选择叠加到视频显示单元需要首先配置MI_DISP子模块，然后再操作MI_FB子模块来进行图形层的绘制，最终由视频显示单元将叠加后的视频数据输出到显示设备，视频显示单元决定最终的显示分辨率。</p>
+</li>
+<li>
+<p>视频处理叠加路径指图形层可以叠加到视频处理单元上，MI_SCL子模块用来管理视频处理单元，如果选择叠加到视频处理单元需要首先配置MI_SCL子模块，然后再操作MI_FB子模块进行图形层的绘制，最终由视频处理单元将叠加后的视频数据输出到视频编码单元，或者输出到视频显示单元进行预览播放。</p>
+<p><img alt="" src="mymedia/fb/fb-1.svg" /></p>
+<p>图1‑1 图形层叠加路径示意图</p>
+</li>
+</ol>
+<p>从应用程序的开发角度来看，基于MI_FB的图形层绘制有两种方式。</p>
+<p>方式1：应用程序基于Linux文件系统使用MI_FB。</p>
+<p>方式2：应用程序基于MI_FB提供的API进行开发（提供和方式1同样的功能）。</p>
+<p><img alt="" src="mymedia/fb/fb-2.svg" /></p>
+<p>图1‑2 MI_FB的使用方式</p>
+<p><mark>注意：以上两种方式是互斥的，应用程序只能选择其中一种进行开发。</mark></p>
+<hr />
+<h3 id="13">1.3. 功能介绍<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>MI_FB支持以下Linux Framebuff的标准功能：</p>
+<ol>
+<li>
+<p>获取显示设备的固定信息（比如显存大小）</p>
+</li>
+<li>
+<p>将物理显存映射（或解除映射）到虚拟内存空间</p>
+</li>
+<li>
+<p>像操作普通文件一样操作物理显存</p>
+</li>
+<li>
+<p>设置硬件显示分辨率和像素格式</p>
+</li>
+<li>
+<p>从物理显存的任何位置进行读、写、显示等操作</p>
+</li>
+<li>
+<p>支持设置和获取256色的调色板</p>
+</li>
+</ol>
+<p>MI_FB增加以下的扩展功能：</p>
+<ol>
+<li>
+<p>设置和获取叠加图形层的Alpha值</p>
+</li>
+<li>
+<p>设置和获取叠加图形层的ColorKey值</p>
+</li>
+<li>
+<p>设置当前叠加图形层的显示位置（相对于屏幕原点的偏移）</p>
+</li>
+<li>
+<p>设置当前叠加图形层的显示区域（支持画布放大显示）</p>
+</li>
+<li>
+<p>设置和获取当前叠加层的显示状态（显示/隐藏）</p>
+</li>
+<li>
+<p>通过INI配置文件管理物理显存大小和叠加图形层的数目</p>
+</li>
+<li>
+<p>动态同步显示设备输出分辨率</p>
+</li>
+<li>
+<p>支持硬件鼠标的一系列操作</p>
+</li>
+</ol>
+<p>MI_FB不支持的Linux Framebuff标准功能：</p>
+<ol>
+<li>
+<p>设置和获取控制台对应的Linux Framebuff</p>
+</li>
+<li>
+<p>获取硬件扫描的实时信息</p>
+</li>
+<li>
+<p>获取硬件相关信息</p>
+</li>
+<li>
+<p>设置硬件同步时序</p>
+</li>
+<li>
+<p>设置硬件同步信号机制</p>
+</li>
+</ol>
+<hr />
+<h3 id="14">1.4. 应用场景<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>MI_FB可应用于以下场景：</p>
+<ol>
+<li>
+<p>Pure linux场景</p>
+<p>在linux环境下基于Framebuff框架的应用程序（例如MiniGUI），也可以基于MI_FB提供的API接口进行开发。</p>
+</li>
+<li>
+<p>Pure rtos场景</p>
+<p>在rtos环境下，不支援标准Linux Framebuff框架，应用程序可以基于MI_FB提供的API接口进行UI的开发（例如使用轻量级的lvgl开发UI）。</p>
+</li>
+<li>
+<p>Dualos场景</p>
+<p>在dualos环境下，在linux端运行的应用程序可以基于标准Framebuff框架，也可以基于MI_FB API开发；在rtos端运行的应用程序只能基于MI_FB API开发。</p>
+</li>
+</ol>
+<hr />
+<h3 id="15">1.5. 芯片差异<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
+<p>MI_FB有两种形式的用户态接口，为了让用户行为保持一致，MI_FB加入了FB ID的概念。下图描述了FB ID和Framebuff设备节点的关系。</p>
+<p><img alt="" src="mymedia/fb/fb-3.svg" /></p>
+<p>图1‑3 FB ID和设备节点的关系</p>
+<p>MI_FB定义ID号的增长顺序和Framebuff的设备节点保持一致，即/dev/fbxxx对应FB IDxxx。</p>
+<p>MI_FB每一个FB ID最多可以控制一个GUI和一个鼠标层，即应用程序可以使用同一个FB ID来同时操作和该ID绑定的GUI和鼠标层，GUI可以选择叠加到视频显示单元或者视频处理单元，鼠标层只能叠加到视频显示单元上，GUI和鼠标层的叠加输出路径在config.ini中配置，<a href="#ini">1.7.2节</a>会详细描述INI的配置方法。</p>
+<p>MI_FB目前可以管理16个FB ID，具体支持的ID个数和芯片能力有关，不同芯片的差异如下表：</p>
+<ul>
+<li>
+<p>Layer ID对应MI_FB启动参数中的FB_HWLAYER_ID项，配置启动参数时请参照对应芯片表格中的Layer ID项进行配置。</p>
+</li>
+<li>
+<p>处于同一视频显示单元同一PATH的不同图形层的层级关系自底向上为 GUI &rarr; OSD &rarr; 鼠标。</p>
+</li>
+<li>
+<p>Alpha0/1代表color format为ARGB1555，Alpha bit为0/1时，实际的Alpha值。在某些图形层上，只支持设置 Alpha1，不支持设置 Alpha0，此项就标记为 N。</p>
+</li>
+</ul>
+<h4>1.5.1. Taiyaki</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=99 colspan=3 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 rowspan=2 bgcolor="#FFD966">视频显示单元</td>
+      <td width=48 rowspan=2 bgcolor="#FFD966">DISP PATH0</td>
+      <td width=30 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">1</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=30 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">0</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+</table>
+
+<h4>1.5.2. Takoyaki</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=99 colspan=3 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 rowspan=2 bgcolor="#FFD966">视频显示单元</td>
+      <td width=48 rowspan=2 bgcolor="#FFD966">DISP PATH0</td>
+      <td width=30 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">1</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=30 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">0</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+</table>
+
+<h4>1.5.3. Ispahan</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=51 colspan=2 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 bgcolor="#FFD966">视频处理单元</td>
+      <td width=30 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">NA</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+</table>
+
+<h4>1.5.4. Pudding</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=51 colspan=2 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 bgcolor="#FFD966">视频处理单元</td>
+      <td width=30 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">NA</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+</table>
+
+<h4>1.5.5. Ikayaki</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=99 colspan=3 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 bgcolor="#FFD966">视频显示单元</td>
+      <td width=48 bgcolor="#FFD966">DISP PATH0</td>
+      <td width=30 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">1</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+</table>
+
+<h4>1.5.6. Tiramisu</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=99 colspan=3 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 rowspan=4 bgcolor="#FFD966">视频显示单元</td>
+      <td width=48 rowspan=2 bgcolor="#FFD966">DISP PATH0</td>
+      <td width=30 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">1</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=30 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">0</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=48 rowspan=2 bgcolor="#FFD966">DISP PATH1</td>
+      <td width=30 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">3</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=30 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">2</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=21 bgcolor="#FFD966">视频处理单元</td>
+      <td width=78 colspan=2 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">NA</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+</table>
+
+<h4>1.5.7. Muffin</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=102 colspan=3 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 rowspan=9 bgcolor="#FFD966">视频显示单元</td>
+      <td width=48 rowspan=3 bgcolor="#FFD966">DISP PATH0</td>
+      <td width=34 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">1</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">0</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">OSD</td>
+      <td width=40 bgcolor="#FFD966">2</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=48 rowspan=3 bgcolor="#FFD966">DISP PATH1</td>
+      <td width=34 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">9</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">8</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">OSD</td>
+      <td width=40 bgcolor="#FFD966">10</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=48 rowspan=3 bgcolor="#FFD966">DISP PATH2</td>
+      <td width=34 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">17</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">16</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">OSD</td>
+      <td width=40 bgcolor="#FFD966">18</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=21 bgcolor="#FFD966">视频处理单元</td>
+      <td width=81 colspan=2 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">NA</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+</table>
+
+<p><mark>Muffin系列芯片的视频显示单元新增了一个OSD图形层，通常作为MI_RGN叠加到DISP上的默认图形层，如果MI_FB需要使用OSD图形层，则MI_RGN无法叠加OSD到DISP。</mark></p>
+<h4>1.5.8. Mochi</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=102 colspan=3 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 rowspan=6 bgcolor="#FFD966">视频显示单元</td>
+      <td width=48 rowspan=3 bgcolor="#FFD966">DISP PATH0</td>
+      <td width=34 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">1</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">0</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">OSD</td>
+      <td width=40 bgcolor="#FFD966">2</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=48 rowspan=3 bgcolor="#FFD966">DISP PATH1</td>
+      <td width=34 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">9</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">Y</td>
+      <td width=61 bgcolor="#A6A6A6">N</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">鼠标</td>
+      <td width=40 bgcolor="#FFD966">8</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=34 bgcolor="#FFD966">OSD</td>
+      <td width=40 bgcolor="#FFD966">10</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+    <tr>
+      <td width=21 bgcolor="#FFD966">视频处理单元</td>
+      <td width=81 colspan=2 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">NA</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+</table>
+
+<p><mark>Mochi系列芯片的视频显示单元上的OSD图形层通常作为MI_RGN叠加到DISP上的默认图形层，如果MI_FB需要使用OSD图形层，则MI_RGN无法叠加OSD到DISP。</mark></p>
+<h4>1.5.9. Maruko</h4>
+<table border=1 cellspacing=0 cellpadding=0>
+    <tr>
+      <td width=102 colspan=3 rowspan=2 bgcolor="#D9D9D9">图形层</td>
+      <td width=40 rowspan=2 bgcolor="#D9D9D9">Layer ID</td>
+      <td width=324 colspan=7 bgcolor="#D9D9D9">颜色格式</td>
+      <td width=21 rowspan=2 bgcolor="#D9D9D9">放大</td>
+      <td width=61 rowspan=2 bgcolor="#D9D9D9">Alpha0/1</td>
+    </tr>
+    <tr>
+      <td width=70 bgcolor="#D9D9D9">ARGB8888</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB1555</td>
+      <td width=70 bgcolor="#D9D9D9">ARGB4444</td>
+      <td width=54 bgcolor="#D9D9D9">RGB565</td>
+      <td width=20 bgcolor="#D9D9D9">I2</td>
+      <td width=20 bgcolor="#D9D9D9">I4</td>
+      <td width=20 bgcolor="#D9D9D9">I8</td>
+    </tr>
+    <tr>
+      <td width=21 bgcolor="#FFD966">视频显示单元</td>
+      <td width=48 bgcolor="#FFD966">DISP PATH0</td>
+      <td width=34 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">2</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A8D08D">Y</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A8D08D">N</td>
+      <td width=61 bgcolor="#A6A6A6">Y</td>
+    </tr>
+    <tr>
+      <td width=21 bgcolor="#FFD966">视频处理单元</td>
+      <td width=81 colspan=2 bgcolor="#FFD966">GUI</td>
+      <td width=40 bgcolor="#FFD966">NA</td>
+      <td width=70 bgcolor="#A6A6A6">N</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=70 bgcolor="#A8D08D">Y</td>
+      <td width=54 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A6A6A6">N</td>
+      <td width=20 bgcolor="#A8D08D">Y</td>
+      <td width=21 bgcolor="#A6A6A6">N</td>
+      <td width=61 bgcolor="#A8D08D">Y</td>
+    </tr>
+</table>
+
+<p><mark>Maruko系列芯片视频显示单元GUI层、视频处理单元GUI和MI_RGN中的SCL/DISP GOP共用同一个硬件，当MI_RGN向SCL/DISP上叠加OSD时，不能使用FB。反之亦然。</mark></p>
+<hr />
+<h3 id="16">1.6. 工作原理<a class="headerlink" href="#16" title="Permanent link">&para;</a></h3>
+<h4>1.6.1 图形层刷新模式</h4>
+<ol>
+<li>
+<p>单buff模式</p>
+<p><img alt="" src="mymedia/fb/fb-4.png" /></p>
+<p>图1‑4 单buff刷新模式</p>
+<p>在单buff模式下，MI_FB提供一张显示buff，应用程序可以直接绘制显示buff，这种方式可以节省内存，但是用户会在显示设备上看到图形的绘制过程.</p>
+<p>用户也可以另外申请一块buff用于图形绘制，然后在绘制完成后将画面搬移到显示buff，但是这种方式会看到锯齿。</p>
+</li>
+<li>
+<p>双buff模式</p>
+<p><img alt="" src="mymedia/fb/fb-5.png" /></p>
+<p>图1‑5 双buff刷新模式</p>
+<p>在双buff模式下，MI_FB提供两张显示buff，当图形层设备正在使用显示buff2时，用户可以在buff1上绘制，当buff1绘制完成后，通过设置虚拟屏幕偏移位置使显示buff切换到buff1的起始位置，反之同理。该模式比较消耗内存，但是显示效果最好。</p>
+</li>
+</ol>
+<h4>1.6.2 虚拟屏幕分辨率、可见区域和显示分辨率的关系</h4>
+<p><img alt="" src="mymedia/fb/fb-6.png" /></p>
+<p>图1‑6 各种分辨率之间的关系</p>
+<p>虚拟屏幕的大小可以看作MI_FB提供的整个显存的大小，用户可以自己在配置文件中定义可见区域的分辨率（xres,yres）,
+MI_FB将会根据可见区域的范围调整虚拟屏幕分辨率（xres_virtual,
+yres_virtual）,默认情况下虚拟屏幕分辨率的xres_virtual=
+xoffset+xres，xoffset是可见区域在虚拟屏幕的水平方向偏移，xres是可见区域水平方向的width。</p>
+<p>MI_FB将会根据xres_virtual和像素格式以及整个显存的大小调整yres_virtual；用户可以在（xres_virtual,
+yres_virtual）范围内随意改变可见区域的（xoffset,
+yoffset）来切换显示内容，双buff的刷新模式也是基于此来实现。</p>
+<p>图形层设备将会从可见区域读取内存数据，然后根据用户配置的显示区域属性输出到显示设备，显示区域属性包括显示区域范围和相对显示屏幕原点的偏移位置。</p>
+<p>从可见区域到显示区域的过程支持放大，也就是说显示区域的（dst_width,
+dst_height）可以大于可见区域的（xres，yres），但是不能超过显示设备的分辨率（display
+width, display height），显示设备的分辨率由MI_DISP模块的输出timing决定。</p>
+<hr />
+<h3 id="17">1.7. 开发流程<a class="headerlink" href="#17" title="Permanent link">&para;</a></h3>
+<h4>1.7.1 编译配置</h4>
+<ol>
+<li>
+<p>进入alkaid project根目录，make menuconfig</p>
+<p><img alt="" src="mymedia/fb/fb-7.png" /></p>
+</li>
+<li>
+<p>回车键进入Sdk Config子选项</p>
+<p><img alt="" src="mymedia/fb/fb-8.png" /></p>
+</li>
+<li>
+<p>回车键进入Interface Compile Config子选项</p>
+<p><img alt="" src="mymedia/fb/fb-9.png" /></p>
+</li>
+<li>
+<p>空格键选中fb子模块，并重新编译project</p>
+<p>编译完成将在project/release下生成mi_fb.ko并同时将mi_fb.h、mi_fb_datatype.h
+release到该目录，在pure
+linux环境下会默认打包进入images，在dualos环境下默认不打包，需要手动编译并安装。</p>
+</li>
+</ol>
+<h4><span id=ini>1.7.2 配置MI_FB启动参数</span></h4>
+<p>MI_FB的启动参数在系统配置文件config.json中管理，在config.json的fb_device_disp_path和fb_device_video_path字段描述了当前平台GUI参数的入口。</p>
+<ol>
+<li>
+<p>fb_device_disp_path描述的是叠加到视频显示单元的GUI层和鼠标层的配置信息；</p>
+</li>
+<li>
+<p>fb_device_video_path描述的是叠加到视频处理单元的GUI层的配置信息。</p>
+</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;mi_fb&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;fb_device_disp_path&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;fb_hwlayer_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="nt">&quot;fb_hwwin_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;fb_hwwin_format&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="nt">&quot;fb_width&quot;</span><span class="p">:</span> <span class="mi">1920</span><span class="p">,</span>
+                <span class="nt">&quot;fb_height&quot;</span><span class="p">:</span> <span class="mi">1080</span><span class="p">,</span>
+                <span class="nt">&quot;fb_timing_width&quot;</span><span class="p">:</span> <span class="mi">1920</span><span class="p">,</span>
+                <span class="nt">&quot;fb_timing_height&quot;</span><span class="p">:</span> <span class="mi">1080</span><span class="p">,</span>
+                <span class="nt">&quot;fb_buffer_len&quot;</span><span class="p">:</span> <span class="mi">16384</span><span class="p">,</span>
+                <span class="nt">&quot;cursor&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;fb_hwlayer_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;fb_hwwin_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;fb_hwwin_format&quot;</span><span class="p">:</span> <span class="mi">6</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="err">//其它叠加在disp</span> <span class="err">path的GUI和鼠标(如果芯片支持)</span>
+<span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;fb_device_video_path&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;fb_buf_id_path&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;fb_gwin_id&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                    <span class="nt">&quot;fb_mod&quot;</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
+                    <span class="nt">&quot;fb_dev&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="nt">&quot;fb_chn&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="nt">&quot;fb_port&quot;</span><span class="p">:</span> <span class="mi">0</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;fb_hwwin_format&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="nt">&quot;fb_width&quot;</span><span class="p">:</span> <span class="mi">1920</span><span class="p">,</span>
+                <span class="nt">&quot;fb_height&quot;</span><span class="p">:</span> <span class="mi">1080</span><span class="p">,</span>
+                <span class="nt">&quot;fb_timing_width&quot;</span><span class="p">:</span> <span class="mi">1920</span><span class="p">,</span>
+                <span class="nt">&quot;fb_timing_height&quot;</span><span class="p">:</span> <span class="mi">1080</span><span class="p">,</span>
+                <span class="nt">&quot;fb_buf_cnt&quot;</span><span class="p">:</span> <span class="mi">3</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="err">//其它叠加在video</span> <span class="err">path的GUI(如果芯片支持)</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><strong>注意：</strong></p>
+<ol>
+<li>如果要添加多个GUI层（芯片支持的情况下），需要将新的节点加入对应的path里。</li>
+<li>/dev/fbx 设备节点的顺序和path中的排序保持一致，fb_device_disp_path会排在前面。</li>
+</ol>
+<p>config.json中各配置参数说明如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">fb_hwlayer_id</td>
+<td>当前图形层的ID（对应设备号）</td>
+</tr>
+<tr>
+<td align="left">fb_hwwin_id</td>
+<td>硬件设备ID（决定叠加到视频层设备DISP的哪一个输出PATH上）</td>
+</tr>
+<tr>
+<td align="left">fb_hwwin_format</td>
+<td>描述画布的像素格式</td>
+</tr>
+<tr>
+<td align="left">fb_width</td>
+<td>描述可见区域范围（xres）</td>
+</tr>
+<tr>
+<td align="left">fb_height</td>
+<td>描述可见区域范围（yres）</td>
+</tr>
+<tr>
+<td align="left">fb_timing_width</td>
+<td>描述显示设备分辨率（display width）</td>
+</tr>
+<tr>
+<td align="left">fb_timing_height</td>
+<td>描述显示设备分辨率（display height）</td>
+</tr>
+<tr>
+<td align="left">fb_buffer_len</td>
+<td>描述显存大小（单位Kbyte）</td>
+</tr>
+<tr>
+<td align="left">fb_buf_cnt</td>
+<td>用来计算叠加到视频处理单元的图形层的显存大小</td>
+</tr>
+<tr>
+<td align="left">fb_gwin_id</td>
+<td>叠加图形层的视频处理单元GWIN ID</td>
+</tr>
+<tr>
+<td align="left">fb_mod</td>
+<td>叠加图形层的视频处理单元MODULE ID</td>
+</tr>
+</tbody>
+</table>
+<h4>1.7.3 不同层显存大小计算</h4>
+<p>对于“fb_device_disp_path”中描述的GUI层，需要提前计算好实际应用场景中可能使用到的最大内存并填入fb_buffer_len.该值通常由以下几点决定：</p>
+<ul>
+<li>
+<p>最大UI分辨率W x H。</p>
+</li>
+<li>
+<p>颜色格式中最大的BPP（Byte Per Pixel，指每像素所占字节数，如ARGB888的BPP为4）；</p>
+</li>
+<li>
+<p>使用的buffer个数NUM.</p>
+</li>
+</ul>
+<p>fb_buffer_len = W * H * BPP * NUM / 1024 (KByte)</p>
+<p>如果GUI层设定中包含“cursor”字段，FB内部会在GUI申请内存时多申请0x20000 Bytes 的内存给鼠标层使用。</p>
+<p>对于“fb_device_video_path”描述的GUI层，FB内部会根据配置文件中的fb_width / fb_height / fb_hwwin_format / fb_buf_cnt自行计算所需的内存大小。</p>
+<h4>1.7.4 配置MI_FB显示内存池</h4>
+<p><strong>注意：只有下表列出的芯片需要配置此内存池，其他芯片可跳过此节。</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">芯片名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Mochi</td>
+</tr>
+</tbody>
+</table>
+<p>上表列出的芯片默认的mma_heap使用了64位的物理地址空间，但使用了32位的编译器，标准framebuffer框架中用 unsigned long 定义了存放物理地址的变量，在32位编译环境下，会导致丢失数据。</p>
+<p>为了避免上述错误，需要在bootargs中为fb配置独立的mma_heap并在MI_SYS中保证了其地址空间位于32位可表示的范围内。</p>
+<p>需要增加的bootargs参数如下：</p>
+<div class="codehilite"><pre><span></span><span class="na">mma_heap</span><span class="o">=</span><span class="s">mma_heap_fb,miu=0,sz=0x2040000</span>
+</pre></div>
+
+
+<p>默认已配置此参数，可以按需调整sz（size）。</p>
+<p>sz的计算方式如下：</p>
+<ul>
+<li>每增加一个disp path GUI，需要加上对应配置的fb_buffer_len大小（PS：请注意单位换算）</li>
+<li>每增加一个cursor，需要额外增加0x20000，即128K</li>
+<li>每增加一个video path GUI，需要额外增加fb_device_video_path所需的内存大小。</li>
+</ul>
+<h4>1.7.5 接口调用</h4>
+<p>接口调用分为两种，一种是基于标准Linux Framebuff的文件系统调用，一种是基于MI_FB API的接口调用。两种调用方式实现相同的功能。</p>
+<p><img alt="" src="mymedia/fb/fb-10.png" /></p>
+<p>图1‑7 MI_FB接口调用流程</p>
+<p>MI_FB的接口调用分为以下几步：</p>
+<ol>
+<li>
+<p>打开指定的FB设备</p>
+</li>
+<li>
+<p>设置像素格式、可见区域等参数</p>
+</li>
+<li>
+<p>获取MI_FB分配到的显存信息</p>
+</li>
+<li>
+<p>将物理显存映射到虚拟内存空间</p>
+</li>
+<li>
+<p>调用ioctl或者MI_FB API设置ColorKey、层间Alpha、显示位置和区域等参数</p>
+</li>
+<li>
+<p>操作虚拟内存地址完成具体的绘制任务</p>
+</li>
+<li>
+<p>解除显存映射</p>
+</li>
+<li>
+<p>关闭FB设备</p>
+</li>
+<li>
+<p>退出应用</p>
+</li>
+</ol>
+<hr />
+<h3 id="18">1.8. 实例介绍<a class="headerlink" href="#18" title="Permanent link">&para;</a></h3>
+<p>本实例分别基于Linux Framebuff和MI_FB
+API实现在屏幕中间位置显示红、橙、蓝三个阶梯排列的色块，使用ARGB8888像素格式。</p>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fcntl.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/ioctl.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/mman.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;linux/fb.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mi_sys.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mi_disp.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mi_disp_datatype.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mi_fb.h</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mi_fb_datatype.h&quot;</span><span class="cp"></span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="o">*</span><span class="n">framebuffer</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="cp">#define LINUX_FRAMEBUFF</span>
+
+<span class="kt">void</span> <span class="nf">set_disp_dev</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">MI_DISP_PubAttr_t</span> <span class="n">stPubAttr</span><span class="p">;</span>
+    <span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stPubAttr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">MI_DISP_PubAttr_t</span><span class="p">));</span>
+    <span class="n">stPubAttr</span><span class="p">.</span><span class="n">u32BgColor</span> <span class="o">=</span> <span class="n">YUYV_BLACK</span><span class="p">;</span>
+    <span class="n">stPubAttr</span><span class="p">.</span><span class="n">eIntfType</span> <span class="o">==</span> <span class="n">E_MI_DISP_INTF_TTL</span><span class="p">;</span>
+    <span class="n">MI_DISP_SetPubAttr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stPubAttr</span><span class="p">);</span>
+    <span class="n">MI_PANEL_Init</span><span class="p">(</span><span class="n">E_MI_DISP_INTF_TTL</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cp">#ifdef LINUX_FRAMEBUFF</span>
+
+<span class="c1">//基于Linux Framebuff实现</span>
+<span class="kt">void</span> <span class="nf">drawRect_rgb32</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">color</span><span class="p">,</span> <span class="k">struct</span> <span class="n">fb_var_screeninfo</span> <span class="o">*</span><span class="n">vinfo</span><span class="p">,</span> <span class="k">struct</span> <span class="n">fb_fix_screeninfo</span> <span class="o">*</span><span class="n">finfo</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">fb</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">bytesPerPixel</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">stride</span> <span class="o">=</span> <span class="n">finfo</span><span class="o">-&gt;</span><span class="n">line_length</span> <span class="o">/</span> <span class="n">bytesPerPixel</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="o">*</span><span class="n">dest</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="p">(</span><span class="n">fb</span><span class="p">)</span>
+        <span class="o">+</span> <span class="p">(</span><span class="n">y0</span> <span class="o">+</span> <span class="n">vinfo</span><span class="o">-&gt;</span><span class="n">yoffset</span><span class="p">)</span> <span class="o">*</span> <span class="n">stride</span> <span class="o">+</span> <span class="p">(</span><span class="n">x0</span> <span class="o">+</span> <span class="n">vinfo</span><span class="o">-&gt;</span><span class="n">xoffset</span><span class="p">);</span>
+
+    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="o">++</span><span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="o">++</span><span class="n">x</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">dest</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">dest</span> <span class="o">+=</span> <span class="n">stride</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">devfile</span> <span class="o">=</span> <span class="s">&quot;/dev/fb0&quot;</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">fbFd</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">long</span> <span class="kt">int</span> <span class="n">screensize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">MI_SYS_Init</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">//set disp pub</span>
+    <span class="n">set_disp_dev</span><span class="p">();</span>
+    <span class="n">fbFd</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">devfile</span><span class="p">,</span> <span class="n">O_RDWR</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">fbFd</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">perror</span> <span class="p">(</span><span class="s">&quot;Error: cannot open framebuffer device&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//get fb_fix_screeninfo</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">ioctl</span><span class="p">(</span><span class="n">fbFd</span><span class="p">,</span> <span class="n">FBIOGET_FSCREENINFO</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">finfo</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&quot;Error reading fixed information&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//get fb_var_screeninfo</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">ioctl</span><span class="p">(</span><span class="n">fbFd</span><span class="p">,</span> <span class="n">FBIOGET_VSCREENINFO</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">vinfo</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">perror</span><span class="p">(</span><span class="s">&quot;Error reading variable information&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">screensize</span> <span class="o">=</span> <span class="n">finfo</span><span class="p">.</span><span class="n">smem_len</span><span class="p">;</span>
+
+    <span class="cm">/* Map the device to memory */</span>
+    <span class="n">framebuffer</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">mmap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">screensize</span><span class="p">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span>
+            <span class="n">fbFd</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">framebuffer</span> <span class="o">==</span> <span class="n">MAP_FAILED</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">perror</span> <span class="p">(</span><span class="s">&quot;Error: Failed to map framebuffer device to memory&quot;</span><span class="p">);</span>
+        <span class="n">exit</span> <span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//draw red rectangle</span>
+    <span class="n">drawRect_rgb32</span> <span class="p">(</span><span class="n">vinfo</span><span class="p">.</span><span class="n">xres</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="n">vinfo</span><span class="p">.</span><span class="n">yres</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span>
+            <span class="n">vinfo</span><span class="p">.</span><span class="n">xres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">vinfo</span><span class="p">.</span><span class="n">yres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mh">0xffff0000</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">vinfo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">finfo</span><span class="p">,</span> <span class="n">framebuffer</span><span class="p">);</span>
+
+    <span class="c1">//draw DarkGoldenrod rectangle</span>
+    <span class="n">drawRect_rgb32</span> <span class="p">(</span><span class="n">vinfo</span><span class="p">.</span><span class="n">xres</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="n">vinfo</span><span class="p">.</span><span class="n">yres</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span>
+            <span class="n">vinfo</span><span class="p">.</span><span class="n">xres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">vinfo</span><span class="p">.</span><span class="n">yres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mh">0xffb8860b</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">vinfo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">finfo</span><span class="p">,</span> <span class="n">framebuffer</span><span class="p">);</span>
+
+    <span class="c1">//draw blue rectanble</span>
+    <span class="n">drawRect_rgb32</span> <span class="p">(</span><span class="n">vinfo</span><span class="p">.</span><span class="n">xres</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="n">vinfo</span><span class="p">.</span><span class="n">yres</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">/</span> <span class="mi">16</span><span class="p">,</span>
+            <span class="n">vinfo</span><span class="p">.</span><span class="n">xres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">vinfo</span><span class="p">.</span><span class="n">yres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mh">0xff0000ff</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">vinfo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">finfo</span><span class="p">,</span> <span class="n">framebuffer</span><span class="p">);</span>
+
+    <span class="n">munmap</span><span class="p">(</span><span class="n">framebuffer</span><span class="p">,</span> <span class="n">screensize</span><span class="p">);</span>
+    <span class="n">framebuffer</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="n">close</span><span class="p">(</span><span class="n">fbFd</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#else</span>
+
+<span class="c1">//基于MI_FB API实现</span>
+<span class="kt">void</span> <span class="nf">drawRect_rgb32</span><span class="p">(</span><span class="kt">int</span> <span class="n">x0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y0</span><span class="p">,</span> <span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">color</span><span class="p">,</span> <span class="n">MI_FB_VarScreenInfo_t</span> <span class="o">*</span><span class="n">vinfo</span><span class="p">,</span> <span class="n">MI_FB_FixScreenInfo_t</span> <span class="o">*</span><span class="n">finfo</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">fb</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">bytesPerPixel</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">stride</span> <span class="o">=</span> <span class="n">finfo</span><span class="o">-&gt;</span><span class="n">u32LineLength</span><span class="o">/</span> <span class="n">bytesPerPixel</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="o">*</span><span class="n">dest</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span> <span class="p">(</span><span class="n">fb</span><span class="p">)</span>
+        <span class="o">+</span> <span class="p">(</span><span class="n">y0</span> <span class="o">+</span> <span class="n">vinfo</span><span class="o">-&gt;</span><span class="n">u32Yoffset</span><span class="p">)</span> <span class="o">*</span> <span class="n">stride</span> <span class="o">+</span> <span class="p">(</span><span class="n">x0</span> <span class="o">+</span> <span class="n">vinfo</span><span class="o">-&gt;</span><span class="n">u32Xoffset</span><span class="p">);</span>
+
+    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="o">++</span><span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="o">++</span><span class="n">x</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">dest</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">dest</span> <span class="o">+=</span> <span class="n">stride</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">MI_S32</span> <span class="n">s32Ret</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">MI_U8</span> <span class="n">u8FbId</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">MI_U32</span> <span class="n">screensize</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">MI_SYS_Init</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">//set disp pub</span>
+    <span class="n">set_disp_dev</span><span class="p">();</span>
+
+    <span class="n">s32Ret</span> <span class="o">=</span> <span class="n">MI_FB_Open</span><span class="p">(</span><span class="n">u8FbId</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">s32Ret</span> <span class="o">!=</span> <span class="n">MI_SUCCESS</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;open fb id:%d failed</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">u8FbId</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">s32Ret</span> <span class="o">=</span> <span class="n">MI_FB_GetFixScreenInfo</span><span class="p">(</span><span class="n">u8FbId</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stFixScreenInfo</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">s32Ret</span> <span class="o">!=</span> <span class="n">MI_SUCCESS</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;get fix screen info failed</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">s32Ret</span> <span class="o">=</span> <span class="n">MI_FB_GetVarScreenInfo</span><span class="p">(</span><span class="n">u8FbId</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stVarScreenInfo</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">s32Ret</span> <span class="o">!=</span> <span class="n">MI_SUCCESS</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;get var screen info failed</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">screensize</span> <span class="o">=</span> <span class="n">stFixScreenInfo</span><span class="p">.</span><span class="n">u32SmemLen</span><span class="p">;</span>
+    <span class="n">MI_FB_Mmap</span><span class="p">(</span><span class="n">u8FbId</span><span class="p">,</span> <span class="n">screensize</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">framebuffer</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">framebuffer</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;mmap framebuffer failed</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//draw red rectangle</span>
+    <span class="n">drawRect_rgb32</span> <span class="p">(</span><span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Xres</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Yres</span><span class="o">/</span> <span class="mi">8</span><span class="p">,</span>
+         <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Xres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Yres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mh">0xffff0000</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stVarScreenInfo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stFixScreenInfo</span><span class="p">,</span> <span class="n">framebuffer</span><span class="p">);</span>
+
+    <span class="c1">//draw DarkGoldenrod rectangle</span>
+    <span class="n">drawRect_rgb32</span> <span class="p">(</span><span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Xres</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Yres</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span>
+         <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Xres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Yres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mh">0xffb8860b</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stVarScreenInfo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stFixScreenInfo</span><span class="p">,</span> <span class="n">framebuffer</span><span class="p">);</span>
+
+    <span class="c1">//draw blue rectanble</span>
+    <span class="n">drawRect_rgb32</span> <span class="p">(</span><span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Xres</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span> <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Yres</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Xres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="n">stVarScreenInfo</span><span class="p">.</span><span class="n">u32Yres</span> <span class="o">/</span> <span class="mi">4</span><span class="p">,</span> <span class="mh">0xff0000ff</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stVarScreenInfo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">stFixScreenInfo</span><span class="p">,</span> <span class="n">framebuffer</span><span class="p">);</span>
+
+    <span class="n">MI_FB_Munmap</span><span class="p">(</span><span class="n">u8FbId</span><span class="p">,</span> <span class="n">framebuffer</span><span class="p">,</span> <span class="n">screensize</span><span class="p">);</span>
+    <span class="n">framebuffer</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="n">MI_FB_Close</span><span class="p">(</span><span class="n">u8FbId</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+
+
+<hr />
+<h2 id="2-api">2. API参考<a class="headerlink" href="#2-api" title="Permanent link">&para;</a></h2>
+<hr />
+<p><strong>MI_FB的用户态接口有两种体现形式：</strong></p>
+<ol>
+<li>
+<p>基于Linux Framebuff的文件操作，以ioctl的形式体现。int ioctl(int fd, unsigned long cmd, CMD_DATA_TYPE *cmddata); 其中CMD_DATA_TYPE随参数cmd的变化而变化，MI_FB支持以下cmd。</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符，是调用open函数的返回值。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>cmd</td>
+<td>主要的cmd（命令控制字）如下：<br><a href="#211-fbioget_vscreeninfo">FBIOGET_VSCREENINFO</a>：获取屏幕可变信息  <br/><a href="#212-fbioput_vscreeninfo">FBIOPUT_VSCREENINFO</a>：设置屏幕可变信息  <br/><a href="#213-fbioget_fscreeninfo">FBIOGET_FSCREENINFO</a>：获取屏幕固定信息  <br/><a href="#214-fbiopan_display">FBIOPAN_DISPLAY</a>：设置 PAN 显示  <br/><a href="#216-fbiogetcmap">FBIOGETCMAP</a>: 获取颜色表信息  <br/><a href="#217-fbioputcmap">FBIOPUTCMAP</a>: 设置颜色表信息  <br/><a href="#221-fbioget_screen_location">FBIOGET_SCREEN_LOCATION</a>：获取叠加层显示区域  <br/><a href="#222-fbioset_screen_location">FBIOSET_SCREEN_LOCATION</a>：设置叠加层显示区域  <br/><a href="#223-fbioget_show">FBIOGET_SHOW</a>：获取叠加层显示状态  <br/><a href="#224-fbioset_show">FBIOSET_SHOW</a>：设置叠加层显示状态  <br/><a href="#225-fbioget_global_alpha">FBIOGET_GLOBAL_ALPHA</a>：获取叠加层 Alpha属性  <br/><a href="#226-fbioset_global_alpha">FBIOSET_GLOBAL_ALPHA</a>：设置叠加层 Alpha属性  <br/><a href="#227-fbioget_colorkey">FBIOGET_COLORKEY</a>：获取叠加层的 Colorkey 属性  <br/><a href="#228-fbioset_colorkey">FBIOSET_COLORKEY</a>：设置叠加层的 Colorkey 属性  <br/><a href="#2210-fbioget_displaylayer_attributes">FBIOGET_DISPLAYLAYER_ATTRIBUTES</a>:获取叠加层属性  <br/><a href="#229-fbioset_displaylayer_attributes">FBIOSET_DISPLAYLAYER_ATTRIBUTES</a>:设置叠加层属性  <br/><a href="#2211-fbioget_cursor_attribute">FBIOGET_CURSOR_ATTRIBUTE</a>:获取鼠标层属性  <br/><a href="#2212-fbioset_cursor_attribute">FBIOSET_CURSOR_ATTRIBUTE</a>:设置鼠标层属性</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>cmddata</td>
+<td>各cmd对应的数据类型：  <br/>获取或设置屏幕可变信息：struct fb_var_screeninfo *类型  <br/>获取屏幕固定信息：struct fb_fix_screeninfo *类型  <br/>设置 PAN 显示：struct fb_var_screeninfo *类型  <br/>获取或设置屏幕叠加层坐标原点：MI_FB_Rectangle_t *类型  <br/>获取或设置叠加层显示状态：MI_BOOL *类型  <br/>获取或设置叠加层Alpha：MI_FB_GlobalAlpha_t *类型  <br/>获取或设置叠加层Colorkey: MI_FB_ColorKey_t *类型  <br/>获取或设置叠加层属性: MI_FB_DisplayLayerAttr_t *类型  <br/>获取或设置鼠标图层属性: MI_FB_CursorAttr_t *类型</td>
+<td>输入/输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>基于MI_FB API以动态库或静态库的形式体现，目前支持以下API。</p>
+<table>
+<thead>
+<tr>
+<th><strong>API名</strong></th>
+<th><strong>功能</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#231-mi_fb_open">MI_FB_Open</a></td>
+<td>打开FB设备</td>
+</tr>
+<tr>
+<td><a href="#232-mi_fb_close">MI_FB_Close</a></td>
+<td>关闭FB设备</td>
+</tr>
+<tr>
+<td><a href="#233-mi_fb_mmap">MI_FB_Mmap</a></td>
+<td>映射物理显存到虚拟内存空间</td>
+</tr>
+<tr>
+<td><a href="#234-mi_fb_munmap">MI_FB_Munmap</a></td>
+<td>取消映射物理显存到虚拟内存空间</td>
+</tr>
+<tr>
+<td><a href="#235-mi_fb_getvarscreeninfo">MI_FB_GetVarScreenInfo</a></td>
+<td>获取屏幕可变信息</td>
+</tr>
+<tr>
+<td><a href="#236-mi_fb_setvarscreeninfo">MI_FB_SetVarScreenInfo</a></td>
+<td>设置屏幕可变信息</td>
+</tr>
+<tr>
+<td><a href="#237-mi_fb_getfixscreeninfo">MI_FB_GetFixScreenInfo</a></td>
+<td>获取FB固定信息</td>
+</tr>
+<tr>
+<td><a href="#238-mi_fb_pandisplay">MI_FB_PanDisplay</a></td>
+<td>设置从虚拟分辨率中的不同偏移处开始显示</td>
+</tr>
+<tr>
+<td><a href="#239-mi_fb_waitforvsync">MI_FB_WaitForVsync</a></td>
+<td>等待屏幕垂直刷新完成(Vsync)信号</td>
+</tr>
+<tr>
+<td><a href="#2310-mi_fb_getscreenlocation">MI_FB_GetScreenLocation</a></td>
+<td>获取叠加层在屏幕上的显示区域</td>
+</tr>
+<tr>
+<td><a href="#2311-mi_fb_setscreenlocation">MI_FB_SetScreenLocation</a></td>
+<td>设置叠加层在屏幕上的显示区域</td>
+</tr>
+<tr>
+<td><a href="#2312-mi_fb_getdisplaylayerattr">MI_FB_GetDisplayLayerAttr</a></td>
+<td>获取图层信息</td>
+</tr>
+<tr>
+<td><a href="#2313-mi_fb_setdisplaylayerattr">MI_FB_SetDisplayLayerAttr</a></td>
+<td>设置图层信息</td>
+</tr>
+<tr>
+<td><a href="#2314-mi_fb_getcursorattr">MI_FB_GetCursorAttr</a></td>
+<td>获取鼠标图层信息</td>
+</tr>
+<tr>
+<td><a href="#2315-mi_fb_setcursorattr">MI_FB_SetCursorAttr</a></td>
+<td>设置鼠标图层信息</td>
+</tr>
+<tr>
+<td><a href="#2316-mi_fb_getglobalalpha">MI_FB_GetGlobalAlpha</a></td>
+<td>获取叠加层的Alpha设置</td>
+</tr>
+<tr>
+<td><a href="#2317-mi_fb_setglobalalpha">MI_FB_SetGlobalAlpha</a></td>
+<td>设置叠加层的Alpha</td>
+</tr>
+<tr>
+<td><a href="#2318-mi_fb_getcolorkey">MI_FB_GetColorKey</a></td>
+<td>获取叠加层的colorkey设置</td>
+</tr>
+<tr>
+<td><a href="#2319-mi_fb_setcolorkey">MI_FB_SetColorKey</a></td>
+<td>设置叠加层的colorkey</td>
+</tr>
+<tr>
+<td><a href="#2320-mi_fb_setcmap">MI_FB_SetCmap</a></td>
+<td>设置颜色表</td>
+</tr>
+<tr>
+<td><a href="#2321-mi_fb_getcmap">MI_FB_GetCmap</a></td>
+<td>获取颜色表信息</td>
+</tr>
+<tr>
+<td><a href="#2322-mi_fb_getshow">MI_FB_GetShow</a></td>
+<td>获取叠加层显示状态</td>
+</tr>
+<tr>
+<td><a href="#2323-mi_fb_setshow">MI_FB_SetShow</a></td>
+<td>显示或隐藏叠加层</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p>在1.4章节已经介绍了两种体现形式的API在不同场景下的使用，用户可以根据实际情况选择使用其中一种API使用。</p>
+<p><mark>注意：两种调用方式不可以共存，用户只能二选其一。</mark></p>
+<p>以下内容将对两种体现形式的API接口进行详细描述。</p>
+<hr />
+<h3 id="21">2.1. 标准功能<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<h4>2.1.1 FBIOGET_VSCREENINFO</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取屏幕的可变信息。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGET_VSCREENINFO, struct fb_var_screeninfo *var);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口获取屏幕的可变信息，主要包括分辨率和像素格式。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGET_VSCREENINFO</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>var</td>
+<td>可变信息结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：fb.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#212-fbioput_vscreeninfo">FBIOPUT_VSCREENINFO</a></p>
+</li>
+</ul>
+<h4>2.1.2 FBIOPUT_VSCREENINFO</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>设置 Framebuffer 的屏幕分辨率和像素格式等。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOPUT_VSCREENINFO, struct fb_var_screeninfo *var);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口设置屏幕分辨率、像素格式。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOPUT_VSCREENINFO</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>var</td>
+<td>可变信息结构体指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：fb.h</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>必须保证实际分辨率与偏移的和在虚拟分辨率范围内，否则系统会自动调整实际分辨率的大小让其在虚拟分辨率范围内。</p>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#211-fbioget_vscreeninfo">FBIOGET_VSCREENINFO</a></p>
+</li>
+</ul>
+<h4>2.1.3 FBIOGET_FSCREENINFO</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取 Framebuffer 的固定信息。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGET_FSCREENINFO, struct fb_fix_screeninfo *fix);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口获取 Framebuffer
+固定信息，包括显存起始物理地址、显存大小和行间距等。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGET_FSCREENINFO</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>fix</td>
+<td>固定信息结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：fb.h</li>
+</ul>
+</li>
+</ul>
+<h4>2.1.4 FBIOPAN_DISPLAY</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>设置从虚拟分辨率中的不同偏移处开始显示。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOPAN_DISPLAY, struct fb_var_screeninfo *var);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口设置从虚拟分辨率中的不同偏移处开始显示，实际的分辨率不变。</p>
+<p>如<a href="#jump">图2-1</a>所示（xres_virtual, yres_virtual）是虚拟分辨率，（xres,
+yres）是实际显示的分辨率， (xoffset, yoffset)是显示的偏移。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOPAN_DISPLAY</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>var</td>
+<td>可变信息结构体指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：fb.h</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>必须保证实际分辨率与偏移的和在虚拟分辨率范围内，否则设置不成功。</p>
+<p><span id="jump">图2‑1</span> 设置从虚拟分辨率中的不同偏移处开始显示</p>
+<p><img alt="" src="mymedia/fb/fb-11.png" /></p>
+</li>
+</ul>
+<h4>2.1.5 FBIO_WAITFORVSYNC</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>等待屏幕垂直刷新完成(Vsync)信号。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIO_WAITFORVSYNC, u32 *zero);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入**</strong>/****输出**</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGETCMAP</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>zero</td>
+<td>确保传递的参数值为0，否则它将无法工作</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：fb.h</li>
+</ul>
+</li>
+</ul>
+<h4>2.1.6 FBIOGETCMAP</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取颜色表信息。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGETCMAP, struct fb_cmap_user *cmap);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGETCMAP</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>cmap</td>
+<td>描述颜色表信息</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：fb.h</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#217-fbioputcmap">FBIOPUTCMAP</a></p>
+<p><a href="#2320-mi_fb_setcmap">MI_FB_SetCmap</a></p>
+</li>
+</ul>
+<h4>2.1.7 FBIOPUTCMAP</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>设置颜色表信息。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOPUTCMAP, struct fb_cmap_user *cmap);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOPUTCMAP</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>cmap</td>
+<td>描述颜色表信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：fb.h</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#216-fbiogetcmap">FBIOGETCMAP</a></p>
+<p><a href="#2321-mi_fb_getcmap">MI_FB_GetCmap</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="22">2.2. 扩展功能<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h4>2.2.1 FBIOGET_SCREEN_LOCATION</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取叠加层在屏幕上的显示区域</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGET_SCREEN_LOCATION, MI_FB_Rectangle_t* pstRectangle);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口获取叠加层在屏幕上的显示区域</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th align="left">描述</th>
+<th align="left">输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td align="left">Framebuffer 设备文件描述符</td>
+<td align="left">输入</td>
+</tr>
+<tr>
+<td>FBIOGET_SCREEN_LOCATION</td>
+<td align="left">ioctl cmd</td>
+<td align="left">输入</td>
+</tr>
+<tr>
+<td>pstRectangle</td>
+<td align="left">MI_FB_Rectangle_t结构体指针，包含(x,y)坐标和width,height。表示叠加层在屏幕上的显示区域</td>
+<td align="left">输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#222-fbioset_screen_location">FBIOSET_SCREEN_LOCATION</a></p>
+</li>
+</ul>
+<h4>2.2.2 FBIOSET_SCREEN_LOCATION</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>设置叠加层在屏幕上的显示区域</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOSET_SCREEN_LOCATION, MI_FB_Rectangle_t* pstRectangle);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口设置叠加层在屏幕上的显示区域</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOSET_SCREEN_LOCATION</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstRectangle</td>
+<td>MI_FB_Rectangle_t结构体指针，包含(x,y)坐标和width,height。表示叠加层在屏幕上的显示区域</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#221-fbioget_screen_location">FBIOGET_SCREEN_LOCATION</a></p>
+</li>
+</ul>
+<h4>2.2.3 FBIOGET_SHOW</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取当前叠加层的显示状态。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGET_SHOW, MI_BOOL *bShow);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口获取当前叠加层显示状态。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGET_SHOW</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>bShow</td>
+<td>指示当前叠加层的状态：    <br>*bShow = MS_TRUE：当前叠加层处于显示状态  <br>*bShow = MS_FALSE：当前叠加层处于隐藏状态</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#224-fbioset_show">FBIOSET_SHOW</a></p>
+</li>
+</ul>
+<h4>2.2.4 FBIOSET_SHOW</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>显示或隐藏该叠加层。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOSET_SHOW, MI_BOOL *bShow);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口设置叠加层显示状态：显示或隐藏。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOSET_SHOW</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>bShow</td>
+<td>该叠加层的显示状态：  <br>*bShow = MS_TRUE：显示当前叠加层  <br>*bShow = MS_FALSE：隐藏当前叠加层</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#223-fbioget_show">FBIOGET_SHOW</a></p>
+</li>
+</ul>
+<h4>2.2.5 FBIOGET_GLOBAL_ALPHA</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取叠加层 Alpha 设置。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGET_GLOBAL_ALPHA, MI_FB_GlobalAlpha_t *pstAlpha);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口获取当前叠加层的 Alpha 设置。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGET_GLOBAL_ALPHA</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstAlpha</td>
+<td>MI_FB_GlobalAlpha_t 结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#226-fbioset_global_alpha">FBIOSET_GLOBAL_ALPHA</a></p>
+</li>
+</ul>
+<h4>2.2.6 FBIOSET_GLOBAL_ALPHA</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>设置叠加层的 Alpha。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOSET_GLOBAL_ALPHA, MI_FB_GlobalAlpha_t *pstAlpha);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口设置当前叠加层的 Alpha 功能。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOSET_GLOBAL_ALPHA</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstAlpha</td>
+<td>MI_FB_GlobalAlpha_t 结构体指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#225-fbioget_global_alpha">FBIOGET_GLOBAL_ALPHA</a></p>
+</li>
+</ul>
+<h4>2.2.7 FBIOGET_COLORKEY</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取叠加层的 colorkey。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGET_COLORKEY, MI_FB_ColorKey_t *pstColorKey);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口获取叠加层的 colorkey。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGET_COLORKEY</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstColorKey</td>
+<td>MI_FB_ColorKey_t 结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#228-fbioset_colorkey">FBIOSET_COLORKEY</a></p>
+</li>
+</ul>
+<h4>2.2.8 FBIOSET_COLORKEY</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>设置叠加层的 colorkey。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOSET_COLORKEY, MI_FB_ColorKey_t *pstColorKey);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>使用此接口设置当前叠加层的 colorkey 功能。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOSET_COLORKEY</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstColorKey</td>
+<td>MI_FB_ColorKey_t 结构体指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#227-fbioget_colorkey">FBIOGET_COLORKEY</a></p>
+</li>
+</ul>
+<h4>2.2.9 FBIOSET_DISPLAYLAYER_ATTRIBUTES</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>设置图层信息。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOSET_DISPLAYLAYER_ATTRIBUTES, MI_FB_DisplayLayerAttr_t *pstLayerInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>此接口用于设置图层信息，包括图层在屏幕的显示区域、画布分辨率、显存分辨率、屏幕显示分辨率以及是否使能预乘。以上信息的更详细说明见MI_FB_DisplayLayerAttr_t的描述。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOSET_DISPLAYLAYER_ATTRIBUTES</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstLayerInfo</td>
+<td>MI_FB_DisplayLayerAttr_t结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#229-fbioset_displaylayer_attributes">FBIOSET_DISPLAYLAYER_ATTRIBUTES</a></p>
+</li>
+</ul>
+<h4>2.2.10 FBIOGET_DISPLAYLAYER_ATTRIBUTES</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取图层信息。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGET_DISPLAYLAYER_ATTRIBUTES, MI_FB_DisplayLayerAttr_t *pstLayerInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>用于获取图层信息，包括图层在屏幕的显示区域、显存分辨率、屏幕显示分辨率以及是否使能预乘。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGET_DISPLAYLAYER_ATTRIBUTES</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstLayerInfo</td>
+<td>图层信息结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#2210-fbioget_displaylayer_attributes">FBIOGET_DISPLAYLAYER_ATTRIBUTES</a></p>
+</li>
+</ul>
+<h4>2.2.11 FBIOGET_CURSOR_ATTRIBUTE</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>获取鼠标图层信息。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOGET_CURSOR_ATTRIBUTE, MI_FB_CursorAttr_t *pstCursorAttr)
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>获取鼠标图层信息，包括hotspot、位置、Alpha、Colorkey、是否可见。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOGET_CURSOR_ATTRIBUTE</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCursorAttr</td>
+<td>MI_FB_CursorAttr_t结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#2212-fbioset_cursor_attribute">FBIOSET_CURSOR_ATTRIBUTE</a></p>
+</li>
+</ul>
+<h4>2.2.12 FBIOSET_CURSOR_ATTRIBUTE</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>设置鼠标图层信息。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int ioctl (int fd, FBIOSET_CURSOR_ATTRIBUTE, MI_FB_CursorAttr_t *pstCursorAttr)
+</pre></div>
+
+
+</li>
+<li>
+<p>描述</p>
+<p>设置鼠标图层信息, 包括hotspot、位置、Alpha、Colorkey、是否可见。</p>
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fd</td>
+<td>Framebuffer 设备文件描述符</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>FBIOSET_CURSOR_ATTRIBUTE</td>
+<td>ioctl cmd</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCursorAttr</td>
+<td>MI_FB_CursorAttr_t结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功</p>
+</li>
+<li>
+<p>-1：失败</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>头文件：mi_fb_datatype.h</li>
+</ul>
+</li>
+<li>
+<p>相关接口</p>
+<p><a href="#2211-fbioget_cursor_attribute">FBIOGET_CURSOR_ATTRIBUTE</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="23-mi_fb-api">2.3. MI_FB API参考<a class="headerlink" href="#23-mi_fb-api" title="Permanent link">&para;</a></h3>
+<h4>2.3.1 MI_FB_Open</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和open framebuff设备节点相同</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_Open (MI_U32 u32FbId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<div class="codehilite"><pre><span></span>MI_S32 s32Ret = MI_SUCCESS;
+MI_U32 u32FbId = 0;
+void *framebuff = NULL;
+MI_U32 u32ScreenSize;
+MI_FB_VarScreenInfo_t stVarScreenInfo;
+MI_FB_FixScreenInfo_t stFixScreenInfo;
+
+memset(&amp;stVarScreenInfo, 0, sizeof(MI_FB_VarScreenInfo_t));
+memset(&amp;stFixScreenInfo, 0, sizeof(MI_FB_FixScreenInfo_t));
+
+s32Ret = MI_FB_Open(u32FbId);
+if(MI_SUCCESS == s32Ret)
+{
+    MI_FB_GetFixScreenInfo(u32FbId, &amp;stFixScreenInfo);
+    MI_FB_GetVarScreenInfo(u32FbId, &amp;stVarScreenInfo);
+    u32ScreenSize = stFixScreenInfo.u32SmemLen;
+    if(u32ScreenSize)
+    MI_FB_Mmap(u32FbId, u32ScreenSize, &amp;framebuff);
+    if(framebuff)
+    {
+        draw(x, y, framebuff);
+        stVarScreenInfo.u32Xoffset = 0;
+        stVarScreenInfo.u32Yoffset = stVarScreenInfo.u32Yres;
+        MI_FB_PanDisplay(u32FbId, &amp;stVarScreenInfo);
+    }
+    MI_FB_Close(u32FbId);
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#232-mi_fb_close">MI_FB_Close</a></p>
+</li>
+</ul>
+<h4>2.3.2 MI_FB_Close</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和close framebuff设备节点相同</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_Close (MI_U32 u32FbId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#231-mi_fb_open">MI_FB_Open</a></p>
+</li>
+</ul>
+<h4>2.3.3 MI_FB_Mmap</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和framebuff mmap相同</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_Mmap (MI_U32 u32FbId, MI_U32 u32size, void **pVirAddr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>u32size</td>
+<td>buff大小</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pVirAddr</td>
+<td>返回映射后的虚拟地址</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4>2.3.4 MI_FB_Munmap</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和framebuff munmap相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_Munmap (MI_U32 u32FbId, void *pVirAddr, MI_U32 u32Size);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pVirAddr</td>
+<td>映射过的虚拟地址</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>u32Size</td>
+<td>buff大小</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4>2.3.5 MI_FB_GetVarScreenInfo</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#211-fbioget_vscreeninfo">FBIOGET_VSCREENINFO</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetVarScreenInfo (MI_U32 u32FbId, MI_FB_VarScreenInfo_t *pstVarScreenInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstVarScreenInfo</td>
+<td>描述屏幕可变信息</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#236-mi_fb_setvarscreeninfo">MI_FB_SetVarScreenInfo</a></p>
+<p><a href="#211-fbioget_vscreeninfo">FBIOGET_VSCREENINFO</a></p>
+</li>
+</ul>
+<h4>2.3.6 MI_FB_SetVarScreenInfo</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#212-fbioput_vscreeninfo">FBIOPUT_VSCREENINFO</a>相同</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_SetVarScreenInfo (MI_U32 u32FbId, MI_FB_VarScreenInfo_t *pstVarScreenInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstVarScreenInfo</td>
+<td>描述屏幕可变信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#235-mi_fb_getvarscreeninfo">MI_FB_GetVarScreenInfo</a></p>
+<p><a href="#212-fbioput_vscreeninfo">FBIOPUT_VSCREENINFO</a></p>
+</li>
+</ul>
+<h4>2.3.7 MI_FB_GetFixScreenInfo</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#213-fbioget_fscreeninfo">FBIOGET_FSCREENINFO</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetFixScreenInfo (MI_U32 u32FbId, MI_FB_FixScreenInfo_t *pstFixScreenInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstFixScreenInfo</td>
+<td>描述屏幕固定信息</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#213-fbioget_fscreeninfo">FBIOGET_FSCREENINFO</a></p>
+</li>
+</ul>
+<h4>2.3.8 MI_FB_PanDisplay</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#214-fbiopan_display">FBIOPAN_DISPLAY</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_PanDisplay (MI_U32 u32FbId, MI_FB_VarScreenInfo_t *pstVarScreenInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstVarScreenInfo</td>
+<td>描述屏幕可变信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#214-fbiopan_display">FBIOPAN_DISPLAY</a></p>
+</li>
+</ul>
+<h4>2.3.9 MI_FB_WaitForVsync</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#215-fbio_waitforvsync">FBIO_WAITFORVSYNC</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_WaitForVsync (MI_U32 u32FbId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4>2.3.10 MI_FB_GetScreenLocation</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#221-fbioget_screen_location">FBIOGET_SCREEN_LOCATION</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetScreenLocation (MI_U32 u32FbId, MI_FB_Rectangle_t *pstWinRect);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstWinRect</td>
+<td>描述叠加层在屏幕上的显示区域</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2311-mi_fb_setscreenlocation">MI_FB_SetScreenLocation</a></p>
+<p><a href="#221-fbioget_screen_location">FBIOGET_SCREEN_LOCATION</a></p>
+</li>
+</ul>
+<h4>2.3.11 MI_FB_SetScreenLocation</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#222-fbioset_screen_location">FBIOSET_SCREEN_LOCATION</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_SetScreenLocation (MI_U32 u32FbId, MI_FB_Rectangle_t *pstWinRect);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstWinRect</td>
+<td>描述叠加层在屏幕上的显示区域</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2310-mi_fb_getscreenlocation">MI_FB_GetScreenLocation</a></p>
+<p><a href="#222-fbioset_screen_location">FBIOSET_SCREEN_LOCATION</a></p>
+</li>
+</ul>
+<h4>2.3.12 MI_FB_GetDisplayLayerAttr</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#2210-fbioget_displaylayer_attributes">FBIOGET_DISPLAYLAYER_ATTRIBUTES</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetDisplayLayerAttr (MI_U32 u32FbId, MI_FB_DisplayLayerAttr_t *pstDisplayLayerAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstDisplayLayerAttr</td>
+<td>描述图层信息</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2313-mi_fb_setdisplaylayerattr">MI_FB_SetDisplayLayerAttr</a></p>
+<p><a href="#2210-fbioget_displaylayer_attributes">FBIOGET_DISPLAYLAYER_ATTRIBUTES</a></p>
+</li>
+</ul>
+<h4>2.3.13 MI_FB_SetDisplayLayerAttr</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#229-fbioset_displaylayer_attributes">FBIOSET_DISPLAYLAYER_ATTRIBUTES</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_SetDisplayLayerAttr (MI_U32 u32FbId, MI_FB_DisplayLayerAttr_t *pstDisplayLayerAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstDisplayLayerAttr</td>
+<td>描述图层信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2312-mi_fb_getdisplaylayerattr">MI_FB_GetDisplayLayerAttr</a></p>
+<p><a href="#229-fbioset_displaylayer_attributes">FBIOSET_DISPLAYLAYER_ATTRIBUTES</a></p>
+</li>
+</ul>
+<h4>2.3.14 MI_FB_GetCursorAttr</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#2211-fbioget_cursor_attribute">FBIOGET_CURSOR_ATTRIBUTE</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetCursorAttr (MI_U32 u32FbId, MI_FB_CursorAttr_t *pstCursorAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCursorAttr</td>
+<td>描述鼠标图层信息</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2315-mi_fb_setcursorattr">MI_FB_SetCursorAttr</a></p>
+<p><a href="#2211-fbioget_cursor_attribute">FBIOGET_CURSOR_ATTRIBUTE</a></p>
+</li>
+</ul>
+<h4>2.3.15 MI_FB_SetCursorAttr</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#2212-fbioset_cursor_attribute">FBIOSET_CURSOR_ATTRIBUTE</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_SetCursorAttr (MI_U32 u32FbId, MI_FB_CursorAttr_t *pstCursorAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCursorAttr</td>
+<td>描述鼠标图层信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2314-mi_fb_getcursorattr">MI_FB_GetCursorAttr</a></p>
+<p><a href="#2212-fbioset_cursor_attribute">FBIOSET_CURSOR_ATTRIBUTE</a></p>
+</li>
+</ul>
+<h4>2.3.16 MI_FB_GetGlobalAlpha</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#225-fbioget_global_alpha">FBIOGET_GLOBAL_ALPHA</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetGlobalAlpha (MI_U32 u32FbId, MI_FB_GlobalAlpha_t *pstAlpha);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstAlpha</td>
+<td>描述叠加层的Alpha</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2317-mi_fb_setglobalalpha">MI_FB_SetGlobalAlpha</a></p>
+<p><a href="#225-fbioget_global_alpha">FBIOGET_GLOBAL_ALPHA</a></p>
+</li>
+</ul>
+<h4>2.3.17 MI_FB_SetGlobalAlpha</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#226-fbioset_global_alpha">FBIOSET_GLOBAL_ALPHA</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_SetGlobalAlpha (MI_U32 u32FbId, MI_FB_GlobalAlpha_t *pstAlpha);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstAlpha</td>
+<td>描述叠加层的Alpha</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2316-mi_fb_getglobalalpha">MI_FB_GetGlobalAlpha</a></p>
+<p><a href="#226-fbioset_global_alpha">FBIOSET_GLOBAL_ALPHA</a></p>
+</li>
+</ul>
+<h4>2.3.18 MI_FB_GetColorKey</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#227-fbioget_colorkey">FBIOGET_COLORKEY</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetColorKey (MI_U32 u32FbId, MI_FB_ColorKey_t *pstClrKey);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstClrKey</td>
+<td>描述叠加层的colorkey信息</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2319-mi_fb_setcolorkey">MI_FB_SetColorKey</a></p>
+<p><a href="#227-fbioget_colorkey">FBIOGET_COLORKEY</a></p>
+</li>
+</ul>
+<h4>2.3.19 MI_FB_SetColorKey</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#228-fbioset_colorkey">FBIOSET_COLORKEY</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_SetColorKey (MI_U32 u32FbId, MI_FB_ColorKey_t *pstClrKey);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstClrKey</td>
+<td>描述叠加层的colorkey信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2318-mi_fb_getcolorkey">MI_FB_GetColorKey</a></p>
+<p><a href="#228-fbioset_colorkey">FBIOSET_COLORKEY</a></p>
+</li>
+</ul>
+<h4>2.3.20 MI_FB_SetCmap</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#217-fbioputcmap">FBIOPUTCMAP</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_SetCmap (MI_U32 u32FbId, MI_FB_Cmap_t *pstCmap);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCmap</td>
+<td>描述颜色表信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2321-mi_fb_getcmap">MI_FB_GetCmap</a></p>
+</li>
+</ul>
+<h4>2.3.21 MI_FB_GetCmap</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#216-fbiogetcmap">FBIOGETCMAP</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetCmap (MI_U32 u32FbId, MI_FB_Cmap_t *pstCmap);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCmap</td>
+<td>描述颜色表信息</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h mi_fb_datatype.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2320-mi_fb_setcmap">MI_FB_SetCmap</a></p>
+</li>
+</ul>
+<h4>2.3.22 MI_FB_GetShow</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#223-fbioget_show">FBIOGET_SHOW</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_GetShow (MI_U32 u32FbId, MI_BOOL *pbShown);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pbShown</td>
+<td>叠加层显示状态</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2323-mi_fb_setshow">MI_FB_SetShow</a></p>
+<p><a href="#223-fbioget_show">FBIOGET_SHOW</a></p>
+</li>
+</ul>
+<h4>2.3.23 MI_FB_SetShow</h4>
+<ul>
+<li>
+<p>功能</p>
+<p>该API功能和<a href="#224-fbioset_show">FBIOSET_SHOW</a>相同。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_FB_SetShow (MI_U32 u32FbId, MI_BOOL bShown);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FbId</td>
+<td>FB设备号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>bShown</td>
+<td>1：显示  0：隐藏</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0：成功。</p>
+</li>
+<li>
+<p>非0：失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_fb.h</p>
+</li>
+<li>
+<p>库文件：libmi_fb.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#2322-mi_fb_getshow">MI_FB_GetShow</a></p>
+<p><a href="#224-fbioset_show">FBIOSET_SHOW</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="3">3. 数据类型<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<hr />
+<p>Linux Framebuff标准中定义的数据类型：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#311-struct-fb_bitfield">struct fb_bitfield</a></td>
+<td>位域信息,用于设置像素格式</td>
+</tr>
+<tr>
+<td><a href="#312-struct-fb_var_screeninfo">struct fb_var_screeninfo</a></td>
+<td>可变的屏幕信息</td>
+</tr>
+<tr>
+<td><a href="#313-struct-fb_fix_screeninfo">struct fb_fix_screeninfo</a></td>
+<td>固定的屏幕信息</td>
+</tr>
+<tr>
+<td><a href="#314-struct-fb_cmap_user">struct fb_cmap_user</a></td>
+<td>描述颜色表信息</td>
+</tr>
+</tbody>
+</table>
+<p>MI_FB中定义的数据类型：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#321-mi_fb_bitfield_t">MI_FB_BitField_t</a></td>
+<td>同标准定义</td>
+</tr>
+<tr>
+<td><a href="#322-mi_fb_varscreeninfo_t">MI_FB_VarScreenInfo_t</a></td>
+<td>同标准定义</td>
+</tr>
+<tr>
+<td><a href="#323-mi_fb_fixscreeninfo_t">MI_FB_FixScreenInfo_t</a></td>
+<td>同标准定义</td>
+</tr>
+<tr>
+<td><a href="#324-mi_fb_colorfmt_e">MI_FB_ColorFmt_e</a></td>
+<td>FB支持的像素格式</td>
+</tr>
+<tr>
+<td><a href="#325-mi_fb_ouputcolorspace_e">MI_FB_OuputColorSpace_e</a></td>
+<td>叠加层输出的color space</td>
+</tr>
+<tr>
+<td><a href="#326-mi_fb_dstdisplayplane_e">MI_FB_DstDisplayPlane_e</a></td>
+<td>FB叠加层输出到display chain的目的模组</td>
+</tr>
+<tr>
+<td><a href="#327-mi_fb_displaylayerattrmaskbit_e">MI_FB_DisplayLayerAttrMaskBit_e</a></td>
+<td>指定<a href="#329-mi_fb_displaylayerattr_t">MI_FB_DisplayLayerAttr_t</a>中需要更新的属性</td>
+</tr>
+<tr>
+<td><a href="#328-mi_fb_cursorattrmaskbit_e">MI_FB_CursorAttrMaskBit_e</a></td>
+<td>指定<a href="#3213-mi_fb_cursorattr_t">MI_FB_CursorAttr_t</a>中需要更新的属性</td>
+</tr>
+<tr>
+<td><a href="#329-mi_fb_displaylayerattr_t">MI_FB_DisplayLayerAttr_t</a></td>
+<td>描述叠加层的属性信息</td>
+</tr>
+<tr>
+<td><a href="#3210-mi_fb_globalalpha_t">MI_FB_GlobalAlpha_t</a></td>
+<td>Alpha信息结构体</td>
+</tr>
+<tr>
+<td><a href="#3211-mi_fb_colorkey_t">MI_FB_ColorKey_t</a></td>
+<td>Colorkey信息结构体</td>
+</tr>
+<tr>
+<td><a href="#3212-mi_fb_cursorimage_t">MI_FB_CursorImage_t</a></td>
+<td>描述鼠标图标数据信息</td>
+</tr>
+<tr>
+<td><a href="#3213-mi_fb_cursorattr_t">MI_FB_CursorAttr_t</a></td>
+<td>描述鼠标图层信息</td>
+</tr>
+<tr>
+<td><a href="#3214-mi_fb_rectangle_t">MI_FB_Rectangle_t</a></td>
+<td>描述叠加层的显示区域</td>
+</tr>
+<tr>
+<td><a href="#3215-mi_fb_cmap_t">MI_FB_Cmap_t</a></td>
+<td>描述颜色表信息</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注：本节已涵盖各重要的数据类型，部分未列出数据类型请参见 mi_fb_datatype.h</strong></p>
+<h3 id="31">3.1. 标准定义<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<h4>3.1.1 struct fb_bitfield</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>位域信息，用于设置像素格式。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>struct fb_bitfield
+{
+    __u32 offset;   /* beginning of bitfield */
+    __u32 length;   /* length of bitfield */
+    __u32 msb_right;    /* != 0: Most significant bit is right */
+};
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>offset</td>
+<td>颜色分量起始比特位。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>length</td>
+<td>颜色分量所占比特长度。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>msb_right</td>
+<td>右边的比特是否为最高有效位。</td>
+<td>只支持该位为 0，即最左边的 bit 为最高有效位。</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>3.1.2 struct fb_var_screeninfo</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>可变的屏幕信息。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>struct fb_var_screeninfo
+{
+    __u32 xres; /* visible resolution */
+    __u32 yres;
+    __u32 xres_virtual; /* virtual resolution */
+    __u32 yres_virtual;
+    __u32 xoffset;  /* offset from virtual to visible */
+    __u32 yoffset;  /* resolution */
+
+    __u32 bits_per_pixel;   /* guess what */
+    __u32 grayscale;    /* != 0 Graylevels instead of colors */
+    struct fb_bitfield red; /* bitfield in fb mem if true color, */ struct fb_bitfield green;   /* else only length is significant */ struct fb_bitfield blue;
+    struct fb_bitfield transp; /* transparency */
+
+    __u32 nonstd;   /* != 0 Non standard pixel format */
+
+    __u32 activate; /* see FB_ACTIVATE_* */
+
+    __u32 height;   /* height of picture in mm */
+    __u32 width;    /* width of picture in mm */
+
+    __u32 accel_flags;  /* (OBSOLETE) see fb_info.flags */
+
+    /* Timing: All values in pixclocks, except pixclock (of course) */
+    __u32 pixclock; /* pixel clock in ps (pico seconds) */
+    __u32 left_margin;  /* time from sync to picture */
+    __u32 right_margin; /* time from picture to sync */
+    __u32 upper_margin; /* time from sync to picture */
+    __u32 lower_margin;
+    __u32 hsync_len;    /* length of horizontal sync */
+    __u32 vsync_len;    /* length of vertical sync */
+    __u32 sync; /* see FB_SYNC_* */
+    __u32 vmode;    /* see FB_VMODE_* */
+    __u32 rotate;   /* angle we rotate counter clockwise */
+    __u32 reserved[5];  /* Reserved for future compatibility */
+};
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xres</td>
+<td>可见屏幕宽度（像素数）。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>yres</td>
+<td>可见屏幕高度（像素数）。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>xres_virtual</td>
+<td>虚拟屏幕宽度（显存中图像宽 度），当该值小于 xres 时会修改xres，使 xres 值与该值相等。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>yres_virtual</td>
+<td>虚拟屏幕高度（显存中图像高 度），当该值小于 yres 时会修改yres，使 yres 值与该值相等。结合xres_virtual，可以用来快速水平或垂直平移图像。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>xoffset</td>
+<td>在 x 方向上的偏移像素数。</td>
+<td>支持，默认为 0。</td>
+</tr>
+<tr>
+<td>yoffset</td>
+<td>在 y 方向上的偏移像素数。</td>
+<td>支持，默认为 0。</td>
+</tr>
+<tr>
+<td>bits_per_pixel</td>
+<td>每个像素所占的比特数。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>grayscale</td>
+<td>灰度级。</td>
+<td>不支持，缺省值为 0，表示彩色。</td>
+</tr>
+<tr>
+<td>red</td>
+<td>颜色分量中红色的位域信息。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>green</td>
+<td>颜色分量中绿色的位域信息。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>blue</td>
+<td>颜色分量中蓝色的位域信息。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>transp</td>
+<td>颜色分量中 alpha 分量的位域信息。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>nonstd</td>
+<td>是否为标准像素格式。</td>
+<td>不支持，缺省值为 0，表示支持标准象素格式。</td>
+</tr>
+<tr>
+<td>activate</td>
+<td>设置生效的时刻。</td>
+<td>不支持，缺省值为  FB_ACTIVATE_NOW，  表示设置立刻生效。</td>
+</tr>
+<tr>
+<td>height</td>
+<td>屏幕高，单位为 mm。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>width</td>
+<td>屏幕宽，单位为 mm。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>accel_flags</td>
+<td>加速标志。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>pixclock</td>
+<td>显示一个点需要的时间，单位为ns。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>left_margin<br>right_margin<br>hsync_len</td>
+<td>分别是左消隐信号、右消隐信号、水平同步时长，这三个值之和等于水平回扫时间，单位为点时钟。</td>
+<td>不支持，缺省值为64。</td>
+</tr>
+<tr>
+<td>upper_margin<br>lower_margin<br>vsync_len</td>
+<td>分别是上消隐信号、下消隐信号、垂直同步时长，这三个值之和等于垂直回扫时间，单位为点时钟。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>sync</td>
+<td>同步信号方式。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>vmode</td>
+<td>扫描模式。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>顺时针旋转的角度。</td>
+<td>不支持，缺省值为 0，表示无旋转。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>高清设备图形层默认的分辩率为
+1280x720；标清设备图形层默认的分辩率为720x576，鼠标层默认的分辩率为
+128x128。像素格式为 ARGB1555。</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#311-struct-fb_bitfield">struct fb_bitfield</a></p>
+<p><a href="#211-fbioget_vscreeninfo">FBIOGET_VSCREENINFO</a></p>
+<p><a href="#212-fbioput_vscreeninfo">FBIOPUT_VSCREENINFO</a></p>
+</li>
+</ul>
+<h4>3.1.3 struct fb_fix_screeninfo</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>固定的屏幕信息。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>struct fb_fix_screeninfo
+{
+    char id[16];  /* identification string eg &quot;TT Builtin&quot; */ unsigned long smem_start; /* Start of frame buffer mem (physical
+    address) */
+    __u32 smem_len; /* Length of frame buffer mem */
+    __u32 type; /* see FB_TYPE_* */
+    __u32 type_aux; /* Interleave for interleaved Planes */
+    __u32 visual;   /* see FB_VISUAL_* */
+    __u16 xpanstep; /* zero if no hardware panning */
+    __u16 ypanstep; /* zero if no hardware panning */
+    __u16 ywrapstep;    /* zero if no hardware ywrap */
+    __u32 line_length;  /* length of a line in bytes */ unsigned long mmio_start;   /* Start of Memory Mapped I/O (physical
+    address) */
+    __u32 mmio_len; /* Length of Memory Mapped I/O */
+    __u32 accel; /* Indicate to driver which specific chip/card we have */
+    __u16 reserved[3];  /* Reserved for future compatibility */
+};
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xres</td>
+<td>可见屏幕宽度（像素数）。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>yres</td>
+<td>可见屏幕高度（像素数）。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>xres_virtual</td>
+<td>虚拟屏幕宽度（显存中图像宽 度），当该值小于 xres 时会修改xres，使 xres 值与该值相等。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>yres_virtual</td>
+<td>虚拟屏幕高度（显存中图像高 度），当该值小于 yres 时会修改yres，使 yres 值与该值相等。结合xres_virtual，可以用来快速水平或垂直平移图像。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>xoffset</td>
+<td>在 x 方向上的偏移像素数。</td>
+<td>支持，默认为 0。</td>
+</tr>
+<tr>
+<td>yoffset</td>
+<td>在 y 方向上的偏移像素数。</td>
+<td>支持，默认为 0。</td>
+</tr>
+<tr>
+<td>bits_per_pixel</td>
+<td>每个像素所占的比特数。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>grayscale</td>
+<td>灰度级。</td>
+<td>不支持，缺省值为 0，表示彩色。</td>
+</tr>
+<tr>
+<td>red</td>
+<td>颜色分量中红色的位域信息。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>green</td>
+<td>颜色分量中绿色的位域信息。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>blue</td>
+<td>颜色分量中蓝色的位域信息。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>transp</td>
+<td>颜色分量中 alpha 分量的位域信息。</td>
+<td>支持。</td>
+</tr>
+<tr>
+<td>nonstd</td>
+<td>是否为标准像素格式。</td>
+<td>不支持，缺省值为 0，表示支持标准象素格式。</td>
+</tr>
+<tr>
+<td>activate</td>
+<td>设置生效的时刻。</td>
+<td>不支持，缺省值为  FB_ACTIVATE_NOW，  表示设置立刻生效。</td>
+</tr>
+<tr>
+<td>height</td>
+<td>屏幕高，单位为 mm。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>width</td>
+<td>屏幕宽，单位为 mm。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>accel_flags</td>
+<td>加速标志。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>pixclock</td>
+<td>显示一个点需要的时间，单位为ns。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>left_margin<br>right_margin<br>hsync_len</td>
+<td>分别是左消隐信号、右消隐信号、水平同步时长，这三个值之和等于水平回扫时间，单位为点时钟。</td>
+<td>不支持，缺省值为64。</td>
+</tr>
+<tr>
+<td>upper_margin<br>lower_margin<br>vsync_len</td>
+<td>分别是上消隐信号、下消隐信号、垂直同步时长，这三个值之和等于垂直回扫时间，单位为点时钟。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>sync</td>
+<td>同步信号方式。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>vmode</td>
+<td>扫描模式。</td>
+<td>不支持，缺省值为–1。</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>顺时针旋转的角度。</td>
+<td>不支持，缺省值为 0，表示无旋转。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#213-fbioget_fscreeninfo">FBIOGET_FSCREENINFO</a></p>
+</li>
+</ul>
+<h4>3.1.4 struct fb_cmap_user</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述颜色表信息。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>struct fb_cmap_user
+{
+    __u32 start;    /* First entry */
+    __u32 len;  /* Number of entries */
+    __u32 __user *red;  /* Red values */
+    __u32 __user *green;
+    __u32 __user *blue;
+    __u32 __user *transp;   /* transparency, can be NULL*/
+};
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>第一个元素的入口</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>len</td>
+<td>元素个数</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>red</td>
+<td>红色分量起始位置</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>green</td>
+<td>绿色分量起始位置</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>blue</td>
+<td>蓝色分量起始位置</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>transp</td>
+<td>透明度分量起始位置</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h3 id="32-mi_fb">3.2. MI_FB 数据类型定义<a class="headerlink" href="#32-mi_fb" title="Permanent link">&para;</a></h3>
+<h4>3.2.1 MI_FB_BitField_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述信息和标准定义相同，参考<a href="#311-struct-fb_bitfield">struct fb_bitfield</a></p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#235-mi_fb_getvarscreeninfo">MI_FB_GetVarScreenInfo</a></p>
+<p><a href="#236-mi_fb_setvarscreeninfo">MI_FB_SetVarScreenInfo</a></p>
+</li>
+</ul>
+<h4>3.2.2 MI_FB_VarScreenInfo_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述信息和标准定义相同，参考<a href="#312-struct-fb_var_screeninfo">struct fb_var_screeninfo</a></p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#235-mi_fb_getvarscreeninfo">MI_FB_GetVarScreenInfo</a></p>
+<p><a href="#236-mi_fb_setvarscreeninfo">MI_FB_SetVarScreenInfo</a></p>
+</li>
+</ul>
+<h4>3.2.3 MI_FB_FixScreenInfo_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述信息和标准定义相同，参考<a href="#313-struct-fb_fix_screeninfo">struct fb_fix_screeninfo</a></p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#237-mi_fb_getfixscreeninfo">MI_FB_GetFixScreenInfo</a></p>
+</li>
+</ul>
+<h4>3.2.4 MI_FB_ColorFmt_e</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>FB支持的像素格式集合</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_FB_COLOR_FMT_RGB565            = 1,
+    E_MI_FB_COLOR_FMT_ARGB4444          = 2,
+    E_MI_FB_COLOR_FMT_I8                 = 4,
+    E_MI_FB_COLOR_FMT_ARGB8888          = 5,
+    E_MI_FB_COLOR_FMT_ARGB1555          = 6,
+    E_MI_FB_COLOR_FMT_YUV422             = 9,
+    E_MI_FB_COLOR_FMT_I4                  = 13,
+    E_MI_FB_COLOR_FMT_I2                  = 14,
+    /// Invalid color format.
+    E_MI_FB_COLOR_FMT_INVALID
+}MI_FB_ColorFmt_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_FB_COLOR_FMT_RGB565</td>
+<td>RGB565 格式。</td>
+</tr>
+<tr>
+<td>E_MI_FB_COLOR_FMT_ARGB4444</td>
+<td>ARGB444 格式。</td>
+</tr>
+<tr>
+<td>E_MI_FB_COLOR_FMT_I8</td>
+<td>I8</td>
+</tr>
+<tr>
+<td>E_MI_FB_COLOR_FMT_ARGB8888</td>
+<td>ARGB8888</td>
+</tr>
+<tr>
+<td>E_MI_FB_COLOR_FMT_ARGB1555</td>
+<td>ARGB1555</td>
+</tr>
+<tr>
+<td>E_MI_FB_COLOR_FMT_YUV422</td>
+<td>YUV422</td>
+</tr>
+<tr>
+<td>E_MI_FB_COLOR_FMT_I4</td>
+<td>I4</td>
+</tr>
+<tr>
+<td>E_MI_FB_COLOR_FMT_I2</td>
+<td>I2</td>
+</tr>
+<tr>
+<td>E_MI_FB_COLOR_FMT_INVALID</td>
+<td>无效像素格式</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#329-mi_fb_displaylayerattr_t">MI_FB_DisplayLayerAttr_t</a></p>
+</li>
+</ul>
+<h4>3.2.5 MI_FB_OuputColorSpace_e</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>FB叠加层输出的color space</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_FB_OUTPUT_RGB = 0,
+    E_MI_FB_OUTPUT_YUV = 1
+}MI_FB_OutputClrSpace_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_FB_OUTPUT_RGB</td>
+<td>RGB ColorSpace</td>
+</tr>
+<tr>
+<td>E_MI_FB_OUTPUT_YUV</td>
+<td>YUV ColorSpace</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#329-mi_fb_displaylayerattr_t">MI_FB_DisplayLayerAttr_t</a></p>
+</li>
+</ul>
+<h4>3.2.6 MI_FB_DstDisplayPlane_e</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>FB叠加层输出到display chain的目的模组，通过配置不同的display
+chain，可以选择叠加层参与的图像调整过程。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_FB_DST_IP0 = 0,
+    E_MI_FB_DST_IP0_SUB = 1,
+    E_MI_FB_DST_MIXER2VE = 2,
+    E_MI_FB_DST_OP0 = 3,
+    E_MI_FB_DST_VOP = 4,
+    E_MI_FB_DST_IP1 = 5,
+    E_MI_FB_DST_IP1_SUB = 6,
+    E_MI_FB_DST_MIXER2OP = 7,
+    E_MI_FB_DST_VOP_SUB = 8,
+    E_MI_FB_DST_FRC = 9,
+    E_MI_FB_DST_VE = 10,
+    E_MI_FB_DST_BYPASS = 11,
+    E_MI_FB_DST_OP1 = 12,
+    E_MI_FB_DST_MIXER2OP1 = 13,
+    E_MI_FB_DST_DIP = 14,
+    E_MI_FB_DST_COPScaling = 15,
+    E_MI_FB_DST_OP_DUAL_RATE = 16,
+    E_MI_FB_DST_INVALID = 17,
+}MI_FB_DstDisplayPlane_e
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_FB_DST_OP0</td>
+<td>OP0 path</td>
+</tr>
+<tr>
+<td>E_MI_FB_DST_OP1</td>
+<td>OP1 path</td>
+</tr>
+</tbody>
+</table>
+<p>目前只支持E_MI_FB_DST_OP0/E_MI_FB_DST_OP1</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#329-mi_fb_displaylayerattr_t">MI_FB_DisplayLayerAttr_t</a></p>
+</li>
+</ul>
+<h4>3.2.7 MI_FB_DisplayLayerAttrMaskBit_e</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>指定<a href="#329-mi_fb_displaylayerattr_t">MI_FB_DisplayLayerAttr_t</a>中需要更新的属性</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_POS = 0x1,
+    E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_SIZE = 0x2,
+    E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_BUFFER_SIZE = 0x4,
+    E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_SCREEN_SIZE = 0x8,
+    E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_PREMUL = 0x10,
+    E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_COLOR_FMB = 0x20,
+    E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_OUTPUT_COLORSPACE = 0x40,
+    E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_DST_DISP = 0x80,
+}MI_FB_DisplayLayerAttrMaskBit_e
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_POS</td>
+<td>更新显示位置</td>
+</tr>
+<tr>
+<td>E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_SIZE</td>
+<td>更新显示范围</td>
+</tr>
+<tr>
+<td>E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_BUFFER_SIZE</td>
+<td>更新buff size</td>
+</tr>
+<tr>
+<td>E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_SCREEN_SIZE</td>
+<td>更新屏幕分辨率</td>
+</tr>
+<tr>
+<td>E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_PREMUL</td>
+<td>更新premultiply alpha</td>
+</tr>
+<tr>
+<td>E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_COLOR_FMB</td>
+<td>更新pixel format</td>
+</tr>
+<tr>
+<td>E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_OUTPUT_COLORSPACE</td>
+<td>更新输出颜色空间</td>
+</tr>
+<tr>
+<td>E_MI_FB_DISPLAYLAYER_ATTR_MASK_DISP_DST_DISP</td>
+<td>更新叠加层输出到display chain的目的模组</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#329-mi_fb_displaylayerattr_t">MI_FB_DisplayLayerAttr_t</a></p>
+</li>
+</ul>
+<h4>3.2.8 MI_FB_CursorAttrMaskBit_e</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>指定<a href="#3213-mi_fb_cursorattr_t">MI_FB_CursorAttr_t</a>中需要更新的属性</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_FB_CURSOR_ATTR_MASK_ICON = 0x1,
+    E_MI_FB_CURSOR_ATTR_MASK_POS = 0x2,
+    E_MI_FB_CURSOR_ATTR_MASK_ALPHA = 0x4,
+    E_MI_FB_CURSOR_ATTR_MASK_SHOW = 0x8,
+    E_MI_FB_CURSOR_ATTR_MASK_HIDE = 0x10,
+    E_MI_FB_CURSOR_ATTR_MASK_COLORKEY = 0x20,
+    E_MI_FB_CURSOR_ATTR_MASK = 0x3F,
+}MI_FB_CursorAttrMaskBit_e
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_FB_CURSOR_ATTR_MASK_ICON</td>
+<td>鼠标图标发生变化</td>
+</tr>
+<tr>
+<td>E_MI_FB_CURSOR_ATTR_MASK_POS</td>
+<td>鼠标位置发生变化</td>
+</tr>
+<tr>
+<td>E_MI_FB_CURSOR_ATTR_MASK_ALPHA</td>
+<td>Alpha发生变化</td>
+</tr>
+<tr>
+<td>E_MI_FB_CURSOR_ATTR_MASK_SHOW</td>
+<td>显示鼠标</td>
+</tr>
+<tr>
+<td>E_MI_FB_CURSOR_ATTR_MASK_HIDE</td>
+<td>隐藏鼠标</td>
+</tr>
+<tr>
+<td>E_MI_FB_CURSOR_ATTR_MASK_COLORKEY</td>
+<td>Color key发生变化</td>
+</tr>
+<tr>
+<td>E_MI_FB_CURSOR_ATTR_MASK</td>
+<td>用于标识鼠标所有可设置属性</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#3213-mi_fb_cursorattr_t">MI_FB_CursorAttr_t</a></p>
+</li>
+</ul>
+<h4>3.2.9 MI_FB_DisplayLayerAttr_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述叠加层属性信息</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct
+{
+    MI_U32 u32XPos;         /**the x pos of orign point in screen*/
+    MI_U32 u32YPos;         /**the y pos of orign point in screen*/
+    MI_U32 u32DstWidth;      /**display buffer dest with in screen*/
+    MI_U32 u32DstHeight;     /**display buffer dest hight in screen*/
+    MI_U32 u32DisplayWidth;  /**the width of display buf in fb */
+    MI_U32 u32DisplayHeight;  /**the height of display buf in fb. */
+    MI_U32 u32ScreenWidth;   /**the width of screen */
+    MI_U32 u32ScreenHeight;  /** the height of screen */
+    MI_BOOL bPreMul;        /**the data drawed in buffer whether is premultiply alpha or not*/
+    MI_FB_ColorFmt_e eFbColorFmt;     /**the color format of framebuffer*/
+    MI_FB_OutputClrSpace_e  eFbOutputColorSpace;   /**output color space*/
+    MI_FB_DstDisplayPlane_e  eFbDestDisplayPlane;   /**destination displayplane*/
+    MI_U32 u32DisplayInfoMask;    /** display attribute modify mask*/
+}MI_FB_DisplayLayerAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32XPos</td>
+<td>图层在屏幕上的原点横坐标。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32YPos</td>
+<td>图层在屏幕上的原点纵坐标。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32DstWidth</td>
+<td>图层在屏幕上的显示宽度</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32DstHeight</td>
+<td>图层在屏幕上的显示高度</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32DisplayWidth</td>
+<td>显存分辨率的宽。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32DisplayHeight</td>
+<td>显存分辨率的高。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32ScreenWidth</td>
+<td>屏幕显示分辩率的宽。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32ScreenHeight</td>
+<td>屏幕显示分辩率的高。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>bPreMul</td>
+<td>FB 中的数据是否为预乘数据。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>eFbColorFmt</td>
+<td>FB的像素格式。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32SetAttrMask</td>
+<td>设置图层信息时参数修改掩码位。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>eFbOutputColorSpace</td>
+<td>设置叠加层输出的Color space</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>eFbDestDisplayPlane</td>
+<td>设置叠加层输出到display chain的目的模组。默认为E_MI_FB_DST_OP0。</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#2312-mi_fb_getdisplaylayerattr">MI_FB_GetDisplayLayerAttr</a></p>
+<p><a href="#2313-mi_fb_setdisplaylayerattr">MI_FB_SetDisplayLayerAttr</a></p>
+</li>
+</ul>
+<h4>3.2.10 MI_FB_GlobalAlpha_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>Alpha信息结构体</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct
+{
+    MI_BOOL bAlphaEnable;      /* alpha enable flag */
+    MI_BOOL bAlphaChannel;     /* alpha channel enable flag */
+    MI_BOOL bAlphaInvert;
+    MI_U8 u8Alpha0;             /* alpha0 value */
+    MI_U8 u8Alpha1;             /* alpha1 value */
+    MI_U8 u8GlobalAlpha;        /* global alpha value */
+    MI_U8 u8Reserved;
+} MI_FB_GlobalAlpha_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bAlphaEnable</td>
+<td>Alpha 叠加使能，默认为 1。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>bAlphaChannel</td>
+<td>Alpha 通道使能，默认为 0。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>bAlphaInvert</td>
+<td>Alpha invert flag</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u8Alpha0</td>
+<td>Alpha0 值，范围 0～255，默认为 255。在  RGB1:5:5:5 格式下，当最高位为 0 时，选择该值作为 Alpha 叠加的 Alpha 值。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u8Alpha1</td>
+<td>Alpha1 值，范围 0～255，默认为 255。在  RGB1:5:5:5 格式下，当最高位为 1 时，选择该值作为 Alpha 叠加的 Alpha 值。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u8GlobalAlpha</td>
+<td>全局 Alpha 值，范围为 0～255，默认为 255。在 Alpha 通道使能时起作用。</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#2316-mi_fb_getglobalalpha">MI_FB_GetGlobalAlpha</a></p>
+<p><a href="#2317-mi_fb_setglobalalpha">MI_FB_SetGlobalAlpha</a></p>
+</li>
+</ul>
+<h4>3.2.11 MI_FB_ColorKey_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述color key信息结构体</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct
+{
+    MI_BOOL bKeyEnable;
+    MI_U8 u8Red;
+    MI_U8 u8Green;
+    MI_U8 u8Blue;
+} MI_FB_ColorKey_t
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bKeyEnable</td>
+<td>Colorkey 是否使能标识。  TRUE：使能；  FALSE：不使能。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u8Red</td>
+<td>Colorkey的R分量数值</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u8Green</td>
+<td>Colorkey的G分量数值</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u8Blue</td>
+<td>Colorkey的B分量数值</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#2318-mi_fb_getcolorkey">MI_FB_GetColorKey</a></p>
+<p><a href="#2319-mi_fb_setcolorkey">MI_FB_SetColorKey</a></p>
+</li>
+</ul>
+<h4>3.2.12 MI_FB_CursorImage_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述鼠标图标数据信息</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct
+{
+    MI_U32 u32Width;     /**width, unit pixel*/
+    MI_U32 u32Height;    /**Height, unit pixel*/
+    MI_U32 u32Pitch;     /**Pitch, unit pixel*/
+    MI_FB_ColorFmt_e eColorFmt;   /**Color format*/
+    const char *pData;
+}MI_FB_CursorImage_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Width</td>
+<td>图标宽度</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32Height</td>
+<td>图标高度</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32Pitch</td>
+<td>pitch</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>eColorFmt</td>
+<td>图标数据像素格式</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>pData</td>
+<td>图标数据</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#3213-mi_fb_cursorattr_t">MI_FB_CursorAttr_t</a></p>
+</li>
+</ul>
+<h4>3.2.13 MI_FB_CursorAttr_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述鼠标图层信息</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct
+{
+    MI_U32 u32XPos;
+    MI_U32 u32YPos;
+    MI_U32 u32HotSpotX;
+    MI_U32 u32HotSpotY;
+    MI_FB_GlobalAlpha_t stAlpha;
+    MI_FB_ColorKey_t stClrKey;
+    MI_BOOL bShown;
+    MI_FB_CursorImage_t stCursorImageInfo;
+    MI_U16 u16CursorInfoMask;
+}MI_FB_CursorAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32XPos</td>
+<td>鼠标位置横坐标</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32YPos</td>
+<td>鼠标位置纵坐标</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32HotSpotX</td>
+<td>鼠标热点横坐标</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32HotSpotY</td>
+<td>鼠标热点纵坐标</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>stAlpha</td>
+<td>MI_FB_GlobalAlpha_t结构体,鼠标图层alpha信息</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>stColorKey</td>
+<td>MI_FB_ColorKey_t结构体，鼠标图层colorkey信息</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>bShown</td>
+<td>鼠标是否可见  TRUE：表示可见  FALSE：表示不可见</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>MI_FB_CursorImage_t</td>
+<td>图标数据信息。</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u16CursorInfoMask</td>
+<td>设置鼠标图层参数修改掩码位</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#2314-mi_fb_getcursorattr">MI_FB_GetCursorAttr</a></p>
+<p><a href="#2315-mi_fb_setcursorattr">MI_FB_SetCursorAttr</a></p>
+</li>
+</ul>
+<h4>3.2.14 MI_FB_Rectangle_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述叠加层的显示区域</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct
+{
+    MI_U32 u32XPos;
+    MI_U32 u32YPos;
+    MI_U32 u32Width;
+    MI_U32 u32Height;
+}MI_FB_Rectangle_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32XPos</td>
+<td>左上角x坐标</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32YPos</td>
+<td>左上角y坐标</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32Width</td>
+<td>宽度</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>u32Height</td>
+<td>高度</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#2310-mi_fb_getscreenlocation">MI_FB_GetScreenLocation</a></p>
+<p><a href="#2311-mi_fb_setscreenlocation">MI_FB_SetScreenLocation</a></p>
+</li>
+</ul>
+<h4>3.2.15 MI_FB_Cmap_t</h4>
+<ul>
+<li>
+<p>说明</p>
+<p>描述信息和标准定义相同，参考<a href="#314-struct-fb_cmap_user">struct fb_cmap_user</a></p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#2320-mi_fb_setcmap">MI_FB_SetCmap</a></p>
+<p><a href="#2321-mi_fb_getcmap">MI_FB_GetCmap</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="4">4. <span id="errorcode">错误码</span><a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<hr />
+<p>FB API 错误码如表4-1所示：</p>
+<p>表4-1</p>
+<table>
+<thead>
+<tr>
+<th>错误代码</th>
+<th>宏定义</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0</td>
+<td>MI_SUCCESS</td>
+<td>succeeded</td>
+</tr>
+<tr>
+<td>0xA00B2011</td>
+<td>MI_ERR_FB_INVALID_PARAM</td>
+<td>非法参数</td>
+</tr>
+<tr>
+<td>0xA00B2006</td>
+<td>MI_ERR_FB_NULL_PTR</td>
+<td>空指针异常</td>
+</tr>
+<tr>
+<td>0xA00B2001</td>
+<td>MI_ERR_FB_INVALID_DEVID</td>
+<td>无效设备号</td>
+</tr>
+<tr>
+<td>0xA00B2018</td>
+<td>MI_ERR_FB_DRV_FAILED</td>
+<td>FB驱动返回失败</td>
+</tr>
+<tr>
+<td>0xA00B2015</td>
+<td>MI_ERR_FB_NOT_INIT</td>
+<td>FB未初始化</td>
+</tr>
+<tr>
+<td>0xA00B2008</td>
+<td>MI_ERR_FB_NOT_SUPPORT</td>
+<td>不支持操作</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-procfs">5. PROCFS介绍<a class="headerlink" href="#5-procfs" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="51-cat">5.1. cat<a class="headerlink" href="#51-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>调试信息</p>
+<div class="codehilite"><pre><span></span>/ # cat /proc/mi_modules/mi_fb/mi_fb0
+
+#####################################[ Start dump fb ]#####################################
+
+==============================[ Start dump MI_FB module info ]==============================
+Frame buffer disp path: enable
+Frame buffer video path: enable
+
+default_reserved_mem_name: &quot;fb&quot;
+===============================[ End dump MI_FB module info ]===============================
+
+==========================================[ FB 0 ]==========================================
+Framebuffer id=SStar FB0
+open count:2
+fix.smem_start=0    fix.smem_length=1074151424
+fix.line_length=1024    colorFmt=ARGB1555
+xres=512    yres=300
+xres_virtual=512    yres_virtual=8320
+xoffset=0    yoffset=0
+Show=TRUE    Output Space=RGB
+ScreenLocation Info ==&gt;    Pos=[0, 0]    Size=[512, 300]
+Alpha Info ==&gt;    Enable=1    Type=Pixel    Invert=0
+                  GlobalAlphaValue=0xff    Alpha0=0x0    Aalpha1=0xff
+ColorKey Info ==&gt;    Enable=0    ColorKey Value=[0x0, 0x0, 0x0]
+-------------------------------------[ Dump Gop Info ]-------------------------------------
+Gop ID=2
+Gwin ID=1
+StretchWindow Info ==&gt;    Pos=[0, 0]    Src=[512, 300]    Dst=[512, 300]
+Gwin Info ==&gt;    Pos=[0, 0]    Size=[512, 300]    colorFmt=6    pitch=1024    phyAddr:0x40064000
+Current timing=[1024, 600]
+
+++++++++++++++++++++++++++++++++++++++++[ CURSOR 0 ]++++++++++++++++++++++++++++++++++++++++
+Init=0    Show=FALSE
+Icon Size=[0, 0]
+Icon Pos=[0, 0]    Hotspot=[0, 0]
+Alpha Info ==&gt;    Enable=0    Type=Global    Invert=0
+                  GlobalAlphaValue=0x0    Alpha0=0x0    Aalpha1=0x0
+ColorKey Info ==&gt;    Enable=0    ColorKey Value=[0x0, 0x0, 0x0]
+-------------------------------------[ Dump Gop Info ]-------------------------------------
+Gop ID=2
+Gwin ID=0
+StretchWindow Info ==&gt;    Pos=[0, 0]    Src=[0, 0]    Dst=[0, 600]
+Gwin Info ==&gt;    Pos=[0, 0]    Size=[0, 0]    colorFmt=0    pitch=0    phyAddr:0x0
+
+==========================================[ FB 1 ]==========================================
+Framebuffer id=SStar FB1
+open count:0
+fix.smem_start=0    fix.smem_length=0
+fix.line_length=3840    colorFmt=ARGB1555
+xres=1920    yres=1080
+xres_virtual=1920    yres_virtual=5760
+xoffset=0    yoffset=0
+Show=FALSE    Output Space=RGB
+ScreenLocation Info ==&gt;    Pos=[0, 0]    Size=[1920, 1080]
+Alpha Info ==&gt;    Enable=0    Type=Global    Invert=0
+                  GlobalAlphaValue=0x0    Alpha0=0x0    Aalpha1=0x0
+ColorKey Info ==&gt;    Enable=0    ColorKey Value=[0x0, 0x0, 0x0]
+-------------------------------------[ Dump Gop Info ]-------------------------------------
+Path=[34, 1, 0, 0]
+Gwin ID=7
+Canvas Info ==&gt;    Pos=[0, 0]    Size=[0, 0]    colorFmt=0    Stride=0    phyAddr=0x0
+
+######################################[ End dump fb ]######################################
+</pre></div>
+
+
+</li>
+<li>
+<p>调试信息分析</p>
+<p>记录当前Fbdev &amp;&amp; Hwcursor的使用状况以及OSD图层属性、OSD
+device属性、Hwcursor属性，可以动态地获取到这些信息，方便调试和测试。</p>
+</li>
+<li>
+<p>参数说明</p>
+<p><table>
+    <tr>
+        <th colspan="2">参数</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td rowspan="3">module info</td>
+        <td>Frame buffer disp path</td>
+        <td>Framebuffer是否支持disp path，enable:支持、disable:不支持 <br>只有在支持disp path的时候，才会解析disp path的fb设备</td>
+    </tr>
+    <tr>
+        <td>Frame buffer video path</td>
+        <td>Framebuffer是否支持video path，enabke:支持、disable:不支持 <br>只有在支持video path的时候，才会解析video path的fb设备</td>
+    </tr>
+    <tr>
+        <td>default_reserved_mem_name</td>
+        <td>默认reserve memory name，在使能了GOP显示bootlogo的设备中，申请了一张buffer用于存储bootlogo，需要在fb pandisplay时去reserve，这个参数用于索引到内存。</td>
+    </tr>
+    <tr>
+        <td rowspan="24">FB UI Device Info</td>
+        <td>Framebuffer id</td>
+        <td>Framebuffer设备ID</td>
+    </tr>
+    <tr>
+        <td>open count</td>
+        <td>该图形层打开次数。在用户调用open()时增1；调用close()时减1</td>
+    </tr>
+    <tr>
+        <td>fix.smem_start</td>
+        <td>帧缓冲内起始地址</td>
+    </tr>
+    <tr>
+        <td>fix.smem_length</td>
+        <td>帧缓冲内存长度，单位字节数</td>
+    </tr>
+    <tr>
+        <td>fix.line_length</td>
+        <td>虚拟分辨率每行的字节数</td>
+    </tr>
+    <tr>
+        <td>colorFmt</td>
+        <td>图形层格式 <br>取值:{ARGB1555,ARGB4444,ARGB8888,RGB565}。<br>用户设置可变屏幕信息中的格式项后更新</td>
+    </tr>
+    <tr>
+        <td>xres</td>
+        <td>可见分辨率宽度</td>
+    </tr>
+    <tr>
+        <td>yres</td>
+        <td>可见分辨率宽高度</td>
+    </tr>
+    <tr>
+        <td>xres_virtual</td>
+        <td>虚拟分辨率的宽度</td>
+    </tr>
+    <tr>
+        <td>yres_virtual</td>
+        <td>虚拟分辨率的高度</td>
+    </tr>
+    <tr>
+        <td>xoffset</td>
+        <td>可见分辨率到虚拟分辨率的x偏移量</td>
+    </tr>
+    <tr>
+        <td>yoffset</td>
+        <td>可见分辨率到虚拟分辨率的y偏移量</td>
+    </tr>
+    <tr>
+        <td>Show</td>
+        <td>该图层显示状态。<br>
+            取值:{"TRUE"表示可见，"FALSE"表示不可见}<br>用户显示调用FBIOSET_SHOW去设置图层可见状态。</td>
+    </tr>
+    <tr>
+        <td>Output Space</td>
+        <td>该图形层输出的颜色空间。<br>取值：{YUV表示输出YUV color space；RGB表示输出RGB color space }。默认为RGB</td>
+    </tr>
+    <tr>
+        <td>ScreenLocation Info =&gt; Pos</td>
+        <td>图形层在显示设备上的起始位置。<br>单位:像素 <br>默认为0，用户可调用。FBIOSET_SCREEN_LOCATION去设置。</td>
+    </tr>
+    <tr>
+        <td>ScreenLocation Info =&gt; Size</td>
+        <td>默认设置为fb的实际屏幕大小，在使用支持放大的GOP显示UI时，才支持设置，表示放大后的UI在屏幕上的大小。<br>可以通过FBIOSET_SCREEN_LOCATION去设置</td>
+    </tr>
+    <tr>
+        <td>Alpha Info =&gt; Enable</td>
+        <td>图形层alpha是否使能。<br>取值:{0表示否，1表示是}, 默认为1。<br>用户可通过FBIOSET_GLOBAL_ALPHA去设置后更新。<br>该项关闭，则像素alpha配置不生效，图形层将按照像素中的RGB分量以完全不透明的效果显示。</td>
+    </tr>
+    <tr>
+        <td>Alpha Info =&gt; Type</td>
+        <td>图形层alpha类型。<br>
+            取值:{"Pixel"表示使用像素alpha，"Global"表示使用全局alpha}，默认为像素alpha。<br>
+            当类型为像素alpha时，图形层显示的透明度参考每个像素中的alpha分量<br>
+            (如果color format为ARGB1555时，只有1bit来表示alpha，alpha=1时透明度为alpha1、alpha=0时透明度为alpha0)</td>
+    </tr>
+        <tr>
+        <td>Alpha Info =&gt; Invert</td>
+        <td>alpha invert。<br>
+            取值：{0表示否，1表示是}，默认为0。<br>
+            仅在color format为ARGB1555时生效，使能后像素中的透明度分量=1时实际显示的透明度为alpha0，透明度分量=0时实际显示的透明度为alpha1。</td>
+    </tr>
+    <tr>
+        <td>Alpha Info =&gt; GlobalAlphaValue</td>
+        <td>全局alpha值。<br>
+            取值:{0~0xff}，默认为255。<br>
+            在alpha 类型为"Global"时生效，生效时图形层使用这个值作为唯一的透明度。</td>
+    </tr>
+    <tr>
+        <td>Alpha Info =&gt; Alpha0</td>
+        <td>ARGB1555格式时，当最高位为0时,选择Alpha0作为Alpha混合的Alpha数值。<br>取值: 0~255，默认为0。</td>
+    </tr>
+    <tr>
+        <td>Alpha Info =&gt; Alpha1</td>
+        <td>ARGB1555格式时，当最高位为1时，选择Alpha1作为Alpha混合的Alpha数值。<br>取值: 0~255，默认为0。</td>
+    </tr>
+    <tr>
+        <td>ColorKey Info =&gt; Enable</td>
+        <td>图形层ColorKey是否使能 <br>取值:{0表示Disable ColorKey; 1表示Enable ColorKey}。<br>用户设置可通过FBIOSET_COLORKEY去设置</td>
+    </tr>
+    <tr>
+        <td>ColorKey Info =&gt; Value</td>
+        <td>图形层ColorKey的RED,GREEN,BLUE通道数值。<br>
+            取值:每个通道的取值范围从0-255。ColorKey val的数值用RGB888格式表示。<br>
+            用户可通过FBIOSET_COLORKEY去设置后更新</td>
+    </tr>
+    <tr>
+        <td rowspan="11">FB UI Disp Path GOP Info</td>
+        <td>Gop ID</td>
+        <td>图层硬件ID</td>
+    </tr>
+    <tr>
+        <td>Gwin ID</td>
+        <td>图层硬件显示窗口ID</td>
+    </tr>
+    <tr>
+        <td>StretchWindow Info =&gt; Pos</td>
+        <td>图形层在显示设备上的起始位置。<br>
+            单位:像素<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>StretchWindow Info =&gt; Src</td>
+        <td>图形层原始分辨率的宽度和高度。<br>
+            单位:像素<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>StretchWindow Info =&gt; Dst</td>
+        <td>图形层在显示设备上的宽度和高度。<br>
+            单位:像素<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Gwin Info =&gt; Pos</td>
+        <td>图形层显示窗口的起始位置<br>
+            单位:像素<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Gwin Info =&gt; Size</td>
+        <td>图形层显示窗口的宽度、高度。<br>
+            单位:像素<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Gwin Info =&gt; ColorFmt</td>
+        <td>图形层实际下的color format值。<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Gwin Info =&gt; pitch</td>
+        <td>Gwin stride。<br>
+            单位:byte<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Gwin Info =&gt; PhyAddr</td>
+        <td>图形层当前显示数据的物理地址。<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Current Timing</td>
+        <td>当前输出timing的宽度、高度。<br>
+            单位：像素</td>
+    </tr>
+    <tr>
+        <td rowspan="7">FB UI Video Path Gop Info</td>
+        <td>Path</td>
+        <td>video path FB 设备指向的路径<br>
+            四个参数意义分别为[mod id, dev id, chn id, port id]，因为video path fb是依赖MI_RGN模块实现的，需要用这几个参数确定MI_RGN工作的path</td>
+    </tr>
+    <tr>
+        <td>Gwin ID</td>
+        <td>video path fb占用的显示窗口</td>
+    </tr>
+    <tr>
+        <td>Canvas Info =&gt; Pos</td>
+        <td>传递给MI_RGN的参数，描述UI显示的起始位置<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Canvas Info =&gt; Size</td>
+        <td>描述UI显示区域的大小<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Canvas Info =&gt; colorFmt</td>
+        <td>UI使用的color format<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Canvas Info =&gt; Stride</td>
+        <td>buffer stride。<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Canvas Info =&gt; phyAddr</td>
+        <td>buffer 物理起始地址。<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td rowspan="7">FB CURSOR Deivce Info</td>
+        <td>Init</td>
+        <td>鼠标初始化状态。<br>
+            默认值：0，用户在调用FBIOSET_CURSOR_ATTRBUTE时才会被置1</td>
+    </tr>
+    <tr>
+        <td>Show</td>
+        <td>该图层显示状态。<br>
+            取值:{"TRUE"表示可见，"FALSE"表示不可见}
+            <br>用户显示调用FBIOSET_CURSOR_ATTRIBUTE去设置鼠标可见状态。</td>
+    </tr>
+    <tr>
+        <td>Icon Size</td>
+        <td>鼠标图标尺寸<br>
+            取值:{0~128}<br>
+            用户显示调用FBIOSET_CURSOR_ATTRIBUTE去设置鼠标图标大小。</td>
+    </tr>
+    <tr>
+        <td>Icon Pos</td>
+        <td>鼠标图标的位置信息<br>
+            单位：pixel<br>
+            用户显示调用FBIOSET_CURSOR_ATTRIBUTE去设置鼠标图标位置信息。</td>
+    </tr>
+    <tr>
+        <td>HotSpot</td>
+        <td>鼠标图标的热点信息<br>
+            单位：pixel<br>
+            热点信息通常和鼠标图标相关，用户可通过FBIOSET_CURSOR_ATTRIBUTE设置</td>
+    </tr>
+    <tr>
+        <td>Alpha Info =&gt; *</td>
+        <td>意义同UI层中Alpha Info描述一致。<br>
+            用户可通过FBIOSET_CURSOR_ATTRIBUTE设置</td>
+    </tr>
+    <tr>
+        <td>ColorKey Info =&gt; *</td>
+        <td>意义同UI层中ColorKey Info描述一致。<br>
+            用户可通过FBIOSET_CURSOR_ATTRIBUTE设置</td>
+    </tr>
+    <tr>
+        <td rowspan="4">FB CURSOR GOP Info</td>
+        <td>Gop ID</td>
+        <td>鼠标图层硬件ID</td>
+    </tr>
+    <tr>
+        <td>Cursor Gwin ID</td>
+        <td>鼠标图层硬件显示窗口ID</td>
+    </tr>
+    <tr>
+        <td>StretchWindow Info =&gt; *</td>
+        <td>意义同UI层中StretchWindow Info描述一致。<br>
+            debug用</td>
+    </tr>
+    <tr>
+        <td>Gwin Info =&gt; *</td>
+        <td>意义同UI层中Gwin Info描述一致。<br>
+            debug用</td>
+    </tr>
+</table></p>
+</li>
+</ul>
+<hr />
+<h3 id="52-echo">5.2. echo<a class="headerlink" href="#52-echo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 打开或关闭指定的图层</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo SHOW [FbID] [Layer] [Status] > /proc/mi_modules/mi_fb/mi_fb0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>[FbID] fb设备index <br>[Layer]  "GUI" 或者 "CURSOR"，操作的layer<br>[Status]  on: 打开; off: 关闭</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo SHOW 0 GUI on > /proc/mi_modules/mi_fb/mi_fb0 <br>显示fb0的UI层 <br>echo SHOW 0 CURSOR off > /proc/mi_modules/mi_fb/mi_fb0 <br>//隐藏fb0 的鼠标层</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 为指定的图层设置Colorkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo COLORKEY [FbID] [Layer] [Red] [Green] [Blue] > /proc/mi_modules/mi_fb/mi_fb0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>[FbID] UI层所在的fb设备index   <br>[Layer]  "GUI" 或者 "CURSOR"，操作的layer<br/>[Red] 红色分量 以16进制,ARGB888 格式表示 <br> [Green] 绿色分量 以16进制,ARGB888 格式表示  <br>[Blue] 蓝色分量 以16进制,ARGB888 格式表示</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo COLORKEY 0 GUI ff 00 00 > /proc/mi_modules/mi_fb0 <br>//设置fb0 UI层的Colorkey为红色</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> Dump当前正在显示的鼠标图标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo DUMP_CURSOR [FbID] [Path] > /proc/mi_modules/mi_fb/mi_fb0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>[FbID] 鼠标层所在的fb设备index <br>[Path] dump 的路径</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo DUMP_CURSOR 0 /mnt > /proc/mi_modules/mi_fb/mi_fb0 <br>//dump cursor Icon到/mnt路径，文件名为CursorIcon_width*_currentBufX，用7yuv打开，宽高设置为128,128，格式按照cursor icon的格式设置即可显示Rawdata</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 分别为ARGB1555格式的alpha bit0, alpha bi1设置pixel alpha数值。<br>因为目前msr620不支持这个feature，暂时未实现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo ALPHA01 [FbID] [Layer] [Alpha0] [Alpha1]> /proc/mi_modules/mi_fb/mi_fb0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>[FbID]  UI层所在的fb设备index <br>[Layer]  "GUI" 或者 "CURSOR"，操作的layer <br>[Alpha0] alpha0 的数值 <br>[Alpha1] alpha1 的数值</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo ALPHA01 0 CURSOR 0 0xff &gt; /proc/mi_modules/mi_fb/mi_fb0 <br>//设置fb0 CURSOR层的alpha0为0，alpha1为0xff。</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="disp_zh.html" title="DISP" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                DISP
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ipu_zh.html" title="IPU" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                IPU
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../search/search_index.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

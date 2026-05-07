@@ -1,0 +1,1877 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>SPI使用参考 - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                SPI使用参考
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Development/sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        SPI使用参考
+      </label>
+    
+    <a href="spi.html" title="SPI使用参考" class="md-nav__link md-nav__link--active">
+      SPI使用参考
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 驱动配置
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1. 引脚复用关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-dma-mode" class="md-nav__link">
+    2.2. dma mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-clk-out-mode" class="md-nav__link">
+    2.3. clk-out-mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-cs-extended-mode" class="md-nav__link">
+    2.4. cs extended mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-4-to-3-mode" class="md-nav__link">
+    2.5. 4 to 3 mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 驱动使用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-spi" class="md-nav__link">
+    3.1. 用户态读写SPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-spi" class="md-nav__link">
+    3.2. 内核态读写SPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3. 驱动支持的模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-spidev_test" class="md-nav__link">
+    3.4. 使用spidev_test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 驱动配置
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1. 引脚复用关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-dma-mode" class="md-nav__link">
+    2.2. dma mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-clk-out-mode" class="md-nav__link">
+    2.3. clk-out-mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-cs-extended-mode" class="md-nav__link">
+    2.4. cs extended mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-4-to-3-mode" class="md-nav__link">
+    2.5. 4 to 3 mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 驱动使用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-spi" class="md-nav__link">
+    3.1. 用户态读写SPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-spi" class="md-nav__link">
+    3.2. 内核态读写SPI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3. 驱动支持的模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-spidev_test" class="md-nav__link">
+    3.4. 使用spidev_test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>SPI使用参考</h1>
+<hr />
+<h2 id="1">1. 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>SPI是一个同步串行接口，可以连接各种外部设备。MSPI（Master SPI）在FIFO mode下支持全双工读写，DMA模式下支持半双工读写；支持Motorola SPI兼容时序（CPHA / CPOL）；8字节读写缓冲区（FIFO mode）；字节传输1bit到15bit可配置位宽度。</p>
+<h2 id="2">2. 驱动配置<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>MSPI Group</strong></th>
+<th><strong>DMA</strong></th>
+<th><strong>FIFO</strong></th>
+<th><strong>Full-duplex</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSPI group0</td>
+<td>Support</td>
+<td>Support</td>
+<td>Support</td>
+</tr>
+</tbody>
+</table>
+<p>当前平台提供1组HW MSPI，支持DMA和FIFO mode。</p>
+<div class="codehilite"><pre><span></span>1.  spi0@0 {  
+2.      compatible = &quot;sstar,mspi&quot;;  
+3.      mspi-group = &lt;0&gt;;  
+4.  #ifdef CONFIG_CAM_CLK  
+5.      camclk = &lt;CAMCLK_mspi0&gt;;  
+6.  #else  
+7.      clocks = &lt;&amp;CLK_mspi0&gt;;  
+8.  #endif  
+9.      reg = &lt;0x1F222000 0x200&gt;;  
+10.     interrupts = &lt;GIC_SPI INT_IRQ_MSPI_0 IRQ_TYPE_LEVEL_HIGH&gt;;  
+11.     use_dma = &lt;0&gt;;  
+12.     status = &quot;ok&quot;;  
+13. };
+</pre></div>
+
+
+<p>SPI master驱动中支持配置的属性：</p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>compatible</td>
+<td>用于匹配驱动进行驱动注册，需与代码中一致</td>
+<td>禁止修改</td>
+</tr>
+<tr>
+<td>reg</td>
+<td>用于指定SPI寄存器bank的地址</td>
+<td>不需要修改</td>
+</tr>
+<tr>
+<td>interrupts</td>
+<td>用于指定使用的硬件中断号及属性</td>
+<td>不需要更改</td>
+</tr>
+<tr>
+<td>clocks</td>
+<td>用于指定使用的时钟源</td>
+<td>不需要更改</td>
+</tr>
+<tr>
+<td>mspi-group</td>
+<td>用于指定SPI外设编号序列号</td>
+<td>不需要修改</td>
+</tr>
+<tr>
+<td>use-dma</td>
+<td>用于指定是否使能DMA模式</td>
+<td>可根据需要修改</td>
+</tr>
+<tr>
+<td>clk-out-mode</td>
+<td>用于指定是否开启clk-out-mode</td>
+<td>可根据需要修改</td>
+</tr>
+<tr>
+<td>cs-num</td>
+<td>用于指定Engine自带的cs pad的数量</td>
+<td>和cs-ext配合使用</td>
+</tr>
+<tr>
+<td>cs-ext</td>
+<td>用于指定除Engine自带的cs外要使用的pad index</td>
+<td>可根据需要修改</td>
+</tr>
+<tr>
+<td>4to3-mode</td>
+<td>用于指定是否开启4Wires作为3Wires使用</td>
+<td>可根据需要修改</td>
+</tr>
+<tr>
+<td>status</td>
+<td>用于选择是否使能SPI master驱动</td>
+<td>可根据需要修改</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21">2.1. 引脚复用关系<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>为了避免各驱动管理各自使用到的引脚的复用关系导致引脚复用关系相互冲突、修改到其他驱动的引脚复用关系照成系统不稳定，所以SPI Master相关的引脚复用关系已经全部转移至各平台的xx-padmux.dtsi中设置。如下：</p>
+<div class="codehilite"><pre><span></span>1.  &lt;PAD_SPI0_DO        PINMUX_FOR_SPI0_MODE_1        MDRV_PUSE_SPI0_DO&gt;,  
+2.  &lt;PAD_SPI0_DI        PINMUX_FOR_SPI0_MODE_1        MDRV_PUSE_SPI0_DI&gt;,  
+3.  &lt;PAD_SPI0_CK        PINMUX_FOR_SPI0_MODE_1        MDRV_PUSE_SPI0_CK&gt;,  
+4.  &lt;PAD_SPI0_CZ        PINMUX_FOR_SPI0_MODE_1        MDRV_PUSE_SPI0_CZ&gt;,
+</pre></div>
+
+
+<h3 id="22-dma-mode">2.2. dma mode<a class="headerlink" href="#22-dma-mode" title="Permanent link">&para;</a></h3>
+<p>SigmaStar SPI Master支持两种基本通信模式：buffer mode和dma mode。当SPI Master处于buffer mode工作模式时，SPI Master驱动将需要发送的数据写入SPI Master的发送buffer中，同时将接收到的数据从接收buffer中读出。发送buffer和接收buffer为SPI Master外设中的寄存器，发送buffer和接收buffer的容量为各8 * 2-bytes。由于SPI Master工作在buffer mode时，需要软件参与发送buffer和接收buffer的操作，所以波形会受到软件调度的影响，在每次发送的之间会产生一定间隔。</p>
+<p>当SPI Master处于dma mode工作模式时，驱动只需将需要发送的数据的地址和接收的数据需要存放的地址设置到SPI Master DMA相关的寄存器中后，SPI Master会自动连续发送和接收数据，此过程不需要软件参与。因此当SPI Master工作在dma mode时，SPI的波形连续性较好。</p>
+<p>当SPI Master和SPI Device通讯时发送或接收的数据量较少，可以考虑使用buffer mode，工作效率较高。当SPI Master和SPI Device通讯时发送或接收的数据量较大，如接收SPI Sensor数据等等，此类大量数据通讯如果使用buffer mode会使系统的CPU占用率很高，影响系统效率，在大量数据通讯的场景下可以考虑使用dma mode。</p>
+<p>**[注意]**当前SigmaStar SPI Master dma mode只支持半双工（half-duplex）的工作模式，SPI Master的发送和接收共用同一个dma channel。当设备需要使用全双工（full-duplex）通讯时，只能使用buffer mode的工作模式。use-dma属性指定的是工作在半双工模式下使用buffer mode或者dma mode，当Device驱动需要使用全双工通讯时，Master驱动会自动切换到buffer mode，所以如有希望使用全双工模式时，也可以指定use-dma属性。</p>
+<h3 id="23-clk-out-mode">2.3. clk-out-mode<a class="headerlink" href="#23-clk-out-mode" title="Permanent link">&para;</a></h3>
+<p>clk-out-mode为SigmaStar SPI Master所支持的一种特殊模式。当SPI Master处于clk-out-mode时，SPI Master的MOSI和MISO不再按给定的数据发送或接收数据，SPI Master的Clock信号会不断输出方波。此功能的应用场景为使用SPI Master输出的clock作为其他Device的工作Clock。clk-out-mode属性的值用于指定输出clock的频率，如下为配置为clk-out-mode的示例：</p>
+<div class="codehilite"><pre><span></span>1.  spi0@0 {  
+2.      compatible = &quot;sstar,mspi&quot;;  
+3.      mspi-group = &lt;0&gt;;  
+4.  #ifdef CONFIG_CAM_CLK  
+5.      camclk = &lt;CAMCLK_mspi0&gt;;  
+6.  #else  
+7.      clocks = &lt;&amp;CLK_mspi0&gt;;  
+8.  #endif  
+9.      reg = &lt;0x1F222000 0x200&gt;;  
+10.     interrupts = &lt;GIC_SPI INT_IRQ_MSPI_0 IRQ_TYPE_LEVEL_HIGH&gt;;  
+11.     clk-out-mode = &lt;3750000&gt;;
+12.     status = &quot;ok&quot;;  
+13. };
+</pre></div>
+
+
+<h3 id="24-cs-extended-mode">2.4. cs extended mode<a class="headerlink" href="#24-cs-extended-mode" title="Permanent link">&para;</a></h3>
+<p>SPI Master Engine有硬件预设的cs pad，当pad mode使能为SPI mode时，对应的pad的控制权将交由SPI Master Engine，SPI Master预设的cs pad的数量通过cs-num告诉SPI Master驱动。通常SPI Master预设的cs pad是有限的，当出现需要使用的cs pad数量大于预设的cs pad的数量时，SPI Master驱动支持使用其他引脚设置成GPIO Mode作为SPI Master的扩展cs使用。如下为cs扩展模式的配置范例：</p>
+<div class="codehilite"><pre><span></span>1.  spi0@0 {  
+2.      compatible = &quot;sstar,mspi&quot;;  
+3.      mspi-group = &lt;0&gt;;  
+4.  #ifdef CONFIG_CAM_CLK  
+5.      camclk = &lt;CAMCLK_mspi0&gt;;  
+6.  #else  
+7.      clocks = &lt;&amp;CLK_mspi0&gt;;  
+8.  #endif  
+9.      reg = &lt;0x1F222000 0x200&gt;;  
+10.     interrupts = &lt;GIC_SPI INT_IRQ_MSPI_0 IRQ_TYPE_LEVEL_HIGH&gt;;  
+11.     cs-num = &lt;2&gt;;
+12.     cs-ext = &lt;PAD_GPIO0 PAD_GPIO1 PAD_GPIO2&gt;;
+13.     status = &quot;ok&quot;;  
+14. };
+</pre></div>
+
+
+<p>如上范例中共使用了五个cs，SPI Master默认自带两个cs，使用PAD_GPIO0、PAD_GPIO1和PAD_GPIO2作为扩展的三个cs。</p>
+<p>**[注意]**扩展的cs的引脚复用关系也需要在xx-padmux.dtsi中指定，如下：</p>
+<div class="codehilite"><pre><span></span>1.  &lt;PAD_SPI0_DO        PINMUX_FOR_SPI0_MODE_1        MDRV_PUSE_SPI0_DO&gt;,  
+2.  &lt;PAD_SPI0_DI        PINMUX_FOR_SPI0_MODE_1        MDRV_PUSE_SPI0_DI&gt;,  
+3.  &lt;PAD_SPI0_CK        PINMUX_FOR_SPI0_MODE_1        MDRV_PUSE_SPI0_CK&gt;,  
+4.  
+5.  &lt;PAD_SPI0_CZ        PINMUX_FOR_SPI0_MODE_1        MDRV_PUSE_SPI0_CZ&gt;, 
+6.  &lt;PAD_GPIO0          PINMUX_FOR_GPIO_MODE          MDRV_PUSE_SPI0_CZ1&gt;,
+7.  &lt;PAD_GPIO1          PINMUX_FOR_GPIO_MODE          MDRV_PUSE_SPI0_CZ2&gt;,
+8.  &lt;PAD_GPIO2          PINMUX_FOR_GPIO_MODE          MDRV_PUSE_SPI0_CZ3&gt;,
+</pre></div>
+
+
+<h3 id="25-4-to-3-mode">2.5. 4 to 3 mode<a class="headerlink" href="#25-4-to-3-mode" title="Permanent link">&para;</a></h3>
+<p>某些平台的SPI Master 3-wires mode不支持dma mode，如果此时有3-wires dma mode的通讯需求时可以开启4 to 3 mode模式。硬件上将Master的MOSI和MISO短接并连接至Device的SDAT，如图：</p>
+<p><img alt="" src="mymedia/spi/spi-1.png" /></p>
+<p>当驱动在读数据时，会将MOSI自动切换为GPIO Input Mode从而不干扰MISO的波形输入，从而达到将四线模式用作三线模式。如下为配置为4 to 3 mode的示例：</p>
+<div class="codehilite"><pre><span></span>1.  spi0@0 {  
+2.      compatible = &quot;sstar,mspi&quot;;  
+3.      mspi-group = &lt;0&gt;;  
+4.  #ifdef CONFIG_CAM_CLK  
+5.      camclk = &lt;CAMCLK_mspi0&gt;;  
+6.  #else  
+7.      clocks = &lt;&amp;CLK_mspi0&gt;;  
+8.  #endif  
+9.      reg = &lt;0x1F222000 0x200&gt;;  
+10.     interrupts = &lt;GIC_SPI INT_IRQ_MSPI_0 IRQ_TYPE_LEVEL_HIGH&gt;;  
+11.     4to3-mode;
+12.     status = &quot;ok&quot;;  
+13. };
+</pre></div>
+
+
+<h2 id="3">3. 驱动使用<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31-spi">3.1. 用户态读写SPI<a class="headerlink" href="#31-spi" title="Permanent link">&para;</a></h3>
+<p>内核有自带一套用于测试MSPI Master的Device Driver 以及用户程序：drivers/spi/spidev.c 和tools/spi/spidev_test.c。要使用内核自带测试程序，需要修改配置文件打开 CONFIG_SPI_SPIDEV 选项。CONFIG_SPI_SPIDEV选项在menuconfig中：</p>
+<div class="codehilite"><pre><span></span>Device Drivers ---&gt;
+
+    [*] SPI Support ---&gt;
+
+        &lt;*&gt; User mode SPI device driver support
+</pre></div>
+
+
+<p>开启CONFIG_SPI_SPIDEV选项后，内核会在/dev文件夹下生成spidev0.0、spidev1.0、spidev2.0以及spidev3.0文件。用户程序可以通过操作这几个文件操作对应的spi master。对这几个文件的操作可以参考tools/spi/spidev_test.c。</p>
+<p>spidev_test的生成可以通过在tools/目录下执行make spi获取，生成的文件在：tools/spi/spidev_test，将spidev_test拷贝到开发板上运行，就可以通过命令行操作MSPI Master了。spidev_test核心发送/接收函数示例如下：</p>
+<div class="codehilite"><pre><span></span>1.  static void transfer(int fd, uint8_t const *tx, uint8_t const *rx, size_t len)  
+2.  {  
+3.      int ret;  
+4.      int out_fd;  
+5.      struct spi_ioc_transfer tr = {  
+6.          .tx_buf = (unsigned long)tx,  
+7.          .rx_buf = (unsigned long)rx,  
+8.          .len = len,  
+9.          .delay_usecs = delay,  
+10.         .speed_hz = speed,  
+11.         .bits_per_word = bits,  
+12.     };  
+13.   
+14.     if (mode &amp; SPI_TX_QUAD)  
+15.         tr.tx_nbits = 4;  
+16.     else if (mode &amp; SPI_TX_DUAL)  
+17.         tr.tx_nbits = 2;  
+18.     if (mode &amp; SPI_RX_QUAD)  
+19.         tr.rx_nbits = 4;  
+20.     else if (mode &amp; SPI_RX_DUAL)  
+21.         tr.rx_nbits = 2;  
+22.     if (!(mode &amp; SPI_LOOP)) {  
+23.         if (mode &amp; (SPI_TX_QUAD | SPI_TX_DUAL))  
+24.             tr.rx_buf = 0;  
+25.         else if (mode &amp; (SPI_RX_QUAD | SPI_RX_DUAL))  
+26.             tr.tx_buf = 0;  
+27.     }  
+28.   
+29.     ret = ioctl(fd, SPI_IOC_MESSAGE(1), &amp;tr);  
+30.     if (ret &lt; 1)  
+31.         pabort(&quot;can&#39;t send spi message&quot;);  
+32.   
+33.     if (verbose)  
+34.         hex_dump(tx, len, 32, &quot;TX&quot;);  
+35.   
+36.     if (output_file) {  
+37.         out_fd = open(output_file, O_WRONLY | O_CREAT | O_TRUNC, 0666);  
+38.         if (out_fd &lt; 0)  
+39.             pabort(&quot;could not open output file&quot;);  
+40.   
+41.         ret = write(out_fd, rx, len);  
+42.         if (ret != len)  
+43.             pabort(&quot;not all bytes written to output file&quot;);  
+44.   
+45.         close(out_fd);  
+46.     }  
+47.   
+48.     if (verbose || !output_file)  
+49.         hex_dump(rx, len, 32, &quot;RX&quot;);  
+50. }
+</pre></div>
+
+
+<p>当struct spi_ioc_transfer tr中.rx_buff不为null，.tx_buff为null时，MSPI Master执行的为半双工读操作；当.rx_buff为null，.tx_buff不为null时，执行的为半双工写操作；当.rx_buff和.tx_buff都不为null时，执行的为全双工读写操作。对应的波形示意图如下：</p>
+<p><img alt="" src="mymedia/spi/spi-2.png" /></p>
+<p>图中MOSI对应的为.tx_buff中的数据，MISO对应的为.rx_buff中的数据。</p>
+<h3 id="32-spi">3.2. 内核态读写SPI<a class="headerlink" href="#32-spi" title="Permanent link">&para;</a></h3>
+<p>内核态读写MSPI可以参考/drivers/spi/spidev.c的实现：</p>
+<div class="codehilite"><pre><span></span>1.  spidev_sync_read(struct spidev_data *spidev, size_t len)  
+2.  {  
+3.      struct spi_transfer t = {  
+4.              .rx_buf     = spidev-&gt;rx_buffer,  
+5.              .len        = len,  
+6.              .speed_hz   = spidev-&gt;speed_hz,  
+7.          };  
+8.      struct spi_message  m;  
+9.    
+10.     spi_message_init(&amp;m);  
+11.     spi_message_add_tail(&amp;t, &amp;m);  
+12.     return spidev_sync(spidev, &amp;m);  
+13. }  
+14.   
+15. spidev_sync_write(struct spidev_data *spidev, size_t len)  
+16. {  
+17.     struct spi_transfer t = {  
+18.             .tx_buf     = spidev-&gt;tx_buffer,  
+19.             .len        = len,  
+20.             .speed_hz   = spidev-&gt;speed_hz,  
+21.         };  
+22.     struct spi_message  m;  
+23.   
+24.     spi_message_init(&amp;m);  
+25.     spi_message_add_tail(&amp;t, &amp;m);  
+26.     return spidev_sync(spidev, &amp;m);  
+27. }
+</pre></div>
+
+
+<h3 id="33">3.3. 驱动支持的模式<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>当前驱动中支持的模式如表2-1：</p>
+<p>表2-1</p>
+<table>
+<thead>
+<tr>
+<th><strong>模式</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>备注</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPI_CPHA</td>
+<td>用于和SPI_CPOL配合组成4种通讯时序</td>
+<td></td>
+</tr>
+<tr>
+<td>SPI_CPOL</td>
+<td>用于和SPI_CPHA配合组成4种通讯时序</td>
+<td></td>
+</tr>
+<tr>
+<td>SPI_CS_HIGH</td>
+<td>用于指定CS高有效</td>
+<td></td>
+</tr>
+<tr>
+<td>SPI_LSB_FIRST</td>
+<td>用于指定通讯序列为LSB（默认为MSB）</td>
+<td></td>
+</tr>
+<tr>
+<td>SPI_3WIRE</td>
+<td>用于指定使用三线模式</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-spidev_test">3.4. 使用spidev_test<a class="headerlink" href="#34-spidev_test" title="Permanent link">&para;</a></h3>
+<p>首先需要打开内核配置：</p>
+<div class="codehilite"><pre><span></span>Device Drivers ---&gt;
+    [*] SPI Support ---&gt;
+        &lt;*&gt; User mode SPI device driver support
+</pre></div>
+
+
+<p>将开启配置后的内核镜像更新至开发板上。接下来需要进入内核目录：tools/spi/
+执行 make，此时会在该目录下生成测试程序：spidev_test</p>
+<p>将改测试程序拷贝至开发板上，拷贝到开发板上的方式有很多，可以是编译到文件系统中、通过tftp发送至开发板、通过nfs挂载文件系统至开发板、通过usb复制至开发板等等。</p>
+<p>在开发板下执行 spidev_test 即可对 spi master 进行操作，常用的操作有：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-D</td>
+<td>用于选择操作的设备节点，如：/dev/spidev0.0 默认为：/dev/spidev1.1</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>用于选择spi时钟速率，单位为Hz</td>
+</tr>
+<tr>
+<td>-H</td>
+<td>用于和 -O 搭配选择spi的通讯时序</td>
+</tr>
+<tr>
+<td>-O</td>
+<td>用于和 -H 搭配选择spi的通讯时序</td>
+</tr>
+<tr>
+<td>-C</td>
+<td>用于指定CS为高有效</td>
+</tr>
+<tr>
+<td>-L</td>
+<td>用于指定字节序为LSB</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>用于指定通讯模式为三线模式</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>用于指定打印出发送&amp;接收的数据内容</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>用于指定发送的文件（二进制文件）</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>用于指定接收的数据保存成文件的路径（二进制文件）</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>用于指定发送的数据，如：“1234\xde\xad”</td>
+</tr>
+</tbody>
+</table>
+<p>当前驱动所支持的功能如上表所列，具体的使用方法可以参考help命令：spidev_test
+help。参数可以自由组合，请根据需要调整。</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="sar.html" title="SAR使用参考" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                SAR使用参考
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="uart.html" title="UART使用参考" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                UART使用参考
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../search/search_index.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

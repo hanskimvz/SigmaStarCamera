@@ -1,0 +1,1459 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>IQSERVER - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#revision-history" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                IQSERVER
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="aec_en.html" class="md-tabs__link md-tabs__link--active">
+          Development
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../customer/IPC/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      SDK Module API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        SDK Module API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_en.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_en.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_en.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_en.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_en.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_en.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_en.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_en.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_en.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        IQSERVER
+      </label>
+    
+    <a href="iqserver_en.html" title="IQSERVER" class="md-nav__link md-nav__link--active">
+      IQSERVER
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. OVERVIEW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-keyword" class="md-nav__link">
+    1.3. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-list" class="md-nav__link">
+    2. API LIST
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_iqserver_open" class="md-nav__link">
+    2.1. MI_IQSERVER_Open
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_iqserver_close" class="md-nav__link">
+    2.2. MI_IQSERVER_Close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_iqserver_setdatapath" class="md-nav__link">
+    2.3. MI_IQSERVER_SetDataPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_iqserver_setcustfunc" class="md-nav__link">
+    2.4. MI_IQSERVER_SetCustFunc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-error-code" class="md-nav__link">
+    3. ERROR CODE
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_en.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_en.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_en.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_en.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_en.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_en.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_en.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_en.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_en.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_en.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_en.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_en.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_en.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_en.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdisp_en.html" title="VDISP" class="md-nav__link">
+      VDISP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-nav__link">
+      ABBR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. OVERVIEW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-keyword" class="md-nav__link">
+    1.3. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-list" class="md-nav__link">
+    2. API LIST
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_iqserver_open" class="md-nav__link">
+    2.1. MI_IQSERVER_Open
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_iqserver_close" class="md-nav__link">
+    2.2. MI_IQSERVER_Close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_iqserver_setdatapath" class="md-nav__link">
+    2.3. MI_IQSERVER_SetDataPath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_iqserver_setcustfunc" class="md-nav__link">
+    2.4. MI_IQSERVER_SetCustFunc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-error-code" class="md-nav__link">
+    3. ERROR CODE
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI IQSERVER API</h1>
+<hr />
+<h2 id="revision-history">REVISION HISTORY<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision No.</th>
+<th><div style="width:335pt">Description</div></th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.0</td>
+<td><li> Initial release</td>
+<td>12/04/2020</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-overview">1. OVERVIEW<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="11-module-description">1.1. Module Description<a class="headerlink" href="#11-module-description" title="Permanent link">&para;</a></h3>
+<p>IQSERVER (Image Quality tuning Server) is used for data transport between tuning
+tool (IQ Tool) and EVB, including ISP parameter setting, image capture and file
+upload/download.</p>
+<hr />
+<h3 id="12-flow-chart">1.2. Flow Chart<a class="headerlink" href="#12-flow-chart" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="mymedia/iqserver/iqserver-1.svg" /></p>
+<hr />
+<h3 id="13-keyword">1.3. Keyword<a class="headerlink" href="#13-keyword" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>ISP</p>
+<p>Image Signal Processing, used for image noise reduction, color rendering,
+brightness adjustment, and other functions.</p>
+</li>
+<li>
+<p>SCL</p>
+<p>Scale.</p>
+</li>
+<li>
+<p>VENC</p>
+<p>Video Encoder, used for encoding YUV stream to H264/H265/Jpeg format
+bit-stream.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-api-list">2. API LIST<a class="headerlink" href="#2-api-list" title="Permanent link">&para;</a></h2>
+<p>This function module provides the following APIs.</p>
+<table>
+<thead>
+<tr>
+<th>API Name</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_iqserver_open">MI_IQSERVER_Open</a></td>
+<td>Open IQ server</td>
+</tr>
+<tr>
+<td><a href="#22-mi_iqserver_close">MI_IQSERVER_Close</a></td>
+<td>Close IQ server</td>
+</tr>
+<tr>
+<td><a href="#23-mi_iqserver_setdatapath">MI_IQSERVER_SetDataPath</a></td>
+<td>Set IQ server data path</td>
+</tr>
+<tr>
+<td><a href="#24-mi_iqserver_setcustfunc">MI_IQSERVER_SetCustFunc</a></td>
+<td>Set user specified execute function</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="21-mi_iqserver_open">2.1. MI_IQSERVER_Open<a class="headerlink" href="#21-mi_iqserver_open" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Call this interface to open IQ server.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_IQSERVER_Open();
+</pre></div>
+
+
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_IQSERVER_OK: Successful</p>
+</li>
+<li>
+<p>Others: Failed, see error code for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Head file: mi_iqserver.h</p>
+</li>
+<li>
+<p>Others: libmi_iqserver.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Currently, only one IQ server can be created. After creation, you can use IQ Tool to connect and debug.</p>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>/*declaration*/
+
+MI_S32 s32Ret = 0;
+
+/* open IQSERVER*/
+
+s32Ret = MI_IQSERVER_Open();
+
+if (MI_IQSERVER_OK != s32Ret)
+
+{
+
+    Printf(“open iqserver error:%x\n”, s32Ret);
+
+    return s32Ret;
+
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#22-mi_iqserver_close">MI_IQSERVER_Close</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="22-mi_iqserver_close">2.2. MI_IQSERVER_Close<a class="headerlink" href="#22-mi_iqserver_close" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Call this interface to close IQ server.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_ S32 MI_IQSERVER_Close();
+</pre></div>
+
+
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_IQSERVER_OK: Successful.</p>
+</li>
+<li>
+<p>Others: Failed, see error code for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Head file: mi_iqserver.h</p>
+</li>
+<li>
+<p>Library file: libmi_iqserver.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>The number of calls for <a href="#21-mi_iqserver_open">MI_IQSERVER_Open</a> and
+<a href="#22-mi_iqserver_close">MI_IQSERVER_Close</a> must correspond.</p>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>/*declaration*/
+
+MI_S32 s32Ret = 0;
+
+/* close IQSERVER*/
+
+s32Ret = MI_IQSERVER_Close();
+
+if (MI_IQSERVER_OK != s32Ret)
+
+{
+
+    Printf(“close iqserver error:%x\n”, s32Ret);
+
+    return s32Ret;
+
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#21-mi_iqserver_open">MI_IQSERVER_Open</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="23-mi_iqserver_setdatapath">2.3. MI_IQSERVER_SetDataPath<a class="headerlink" href="#23-mi_iqserver_setdatapath" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set IQ server data path.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_IQSERVER_SetDataPath(char* path);
+</pre></div>
+
+
+</li>
+<li>
+<p>Form parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>Path of IQ server data, ending with \0.</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_IQSERVER_OK: Successful.</p>
+</li>
+<li>
+<p>Others: Failed, see error code for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Head file: mi_iqserver.h</p>
+</li>
+<li>
+<p>Library file: libmi_iqserver.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>You can call this API before <a href="#21-mi_iqserver_open">MI_IQSERVER_Open</a>.</p>
+</li>
+<li>
+<p>Before calling this API, make sure that the path is accessible and that the
+    data needed by the IQ server is available.</p>
+</li>
+<li>
+<p>Normally, the data needed by the IQ server include isp_api.xml (for use by
+    IQ Tool).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>/*declaration*/
+
+MI_S32 s32Ret = 0;
+
+char *data_path = “/customer/iqconfig/”;
+
+/* set IQSERVER data path*/
+
+s32Ret = MI_IQSERVER_SetDataPath(data_path);
+
+if (MI_IQSERVER_OK != s32Ret)
+
+{
+
+    Printf(“set iqserver data path error:%x\n”, s32Ret);
+
+    return s32Ret;
+
+}
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="24-mi_iqserver_setcustfunc">2.4. MI_IQSERVER_SetCustFunc<a class="headerlink" href="#24-mi_iqserver_setcustfunc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set user-specified execute function, for IQ server to call it.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_IQSERVER_SetCustFunc(MI_S32(*func)(MI_U16 data_type,
+MI_U32 length, MI_U8 *data));
+</pre></div>
+
+
+</li>
+<li>
+<p>Form parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>func</td>
+<td>Execute function</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_IQSERVER_OK: Successful.</p>
+</li>
+<li>
+<p>Others: Failed, see error code for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Head file: mi_iqserver.h</p>
+</li>
+<li>
+<p>Library file: libmi_iqserver.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Before using this API, define the function with the parameters below:</p>
+<ol>
+<li>
+<p>datatype: type of data, user defined, to distinguish different data.</p>
+</li>
+<li>
+<p>length: length of data, IQ tool will auto set the value.</p>
+</li>
+<li>
+<p>data: data address.</p>
+</li>
+</ol>
+<p>You can do some processing in func with these parameters.</p>
+</li>
+<li>
+<p>By this API, you can add user-defined execute function in IQ server. IQ
+    server will get the data from IQ tool, then call the user-defined function.
+    After that, func will get the data, to implement custom features.</p>
+<p>For example:</p>
+<ol>
+<li>
+<p>Use IQ tool to write firmware, then IQ server calls func to flash firmware.</p>
+</li>
+<li>
+<p>Use IQ tool to set IR cut, then IQ server calls func to switch IR.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Before calling this function, make sure func is executable.</p>
+</li>
+<li>
+<p>Data_type and data come from IQ tool, and length means data length.</p>
+</li>
+<li>
+<p>Data_type can be used to distinguish what function the data is used for.
+    You can define different function for different data.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>/*declaration*/
+
+MI_S32 s32Ret = 0;
+
+MI_S32 sample_func(MI_U16 data_type, MI_U32 length, MI_U8 *data)
+
+{
+
+    printf(&quot;call MI_IQSERVER_SetCustFunc() success\n&quot;);
+
+    printf(“data_type is %d, length:%u, data addr:%p\n”, data_type, length, data);
+    //do something
+
+    return MI_IQSERVER_OK;
+
+}
+
+/* set IQSERVER custom function*/
+
+s32Ret = MI_IQSERVER_SetCustFunc(sample_func);
+
+if (MI_IQSERVER_OK != s32Ret)
+
+{
+
+    Printf(“set iqserver cust func error:%x\n”, s32Ret);
+
+    return s32Ret;
+
+}
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h2 id="3-error-code">3. ERROR CODE<a class="headerlink" href="#3-error-code" title="Permanent link">&para;</a></h2>
+<hr />
+<p>The IQSERVER API error code is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Macro Definition</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x0</td>
+<td>MI_IQSERVER_OK</td>
+<td>Successful</td>
+</tr>
+<tr>
+<td>0x1</td>
+<td>MI_ERR_IQSERVER_FAIL</td>
+<td>Failed</td>
+</tr>
+<tr>
+<td>0x2</td>
+<td>MI_ERR_IQSERVER_NULL_PTR</td>
+<td>Null pointer</td>
+</tr>
+<tr>
+<td>0x3</td>
+<td>MI_ERR_IQSERVER_NO_BUFF</td>
+<td>No buffer</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ipu_en.html" title="IPU" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IPU
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="isp_en.html" title="ISP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ISP
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/search_index.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

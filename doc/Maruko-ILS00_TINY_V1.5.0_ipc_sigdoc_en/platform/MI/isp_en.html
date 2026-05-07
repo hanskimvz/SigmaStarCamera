@@ -1,0 +1,7716 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>ISP - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#revision-history" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                ISP
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="aec_en.html" class="md-tabs__link md-tabs__link--active">
+          Development
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../customer/IPC/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      SDK Module API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        SDK Module API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_en.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_en.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_en.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_en.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_en.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_en.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_en.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_en.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_en.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_en.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ISP
+      </label>
+    
+    <a href="isp_en.html" title="ISP" class="md-nav__link md-nav__link--active">
+      ISP
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow chart
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-tiramisu" class="md-nav__link">
+    1.2.1. Tiramisu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-muffin" class="md-nav__link">
+    1.2.2. Muffin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-mochi" class="md-nav__link">
+    1.2.3. Mochi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-maruko" class="md-nav__link">
+    1.2.4. Maruko
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-keyword" class="md-nav__link">
+    1.3. Keyword
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-specification" class="md-nav__link">
+    1.4. Specification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-json-parameter-list" class="md-nav__link">
+    1.5. JSON Parameter List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-reference" class="md-nav__link">
+    2.  API REFERENCE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_isp_createdevice" class="md-nav__link">
+    2.1. MI_ISP_CreateDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_isp_destroydevice" class="md-nav__link">
+    2.2. MI_ISP_DestroyDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_isp_createchannel" class="md-nav__link">
+    2.3. MI_ISP_CreateChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_isp_destroychannel" class="md-nav__link">
+    2.4. MI_ISP_DestroyChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_isp_setinputportcrop" class="md-nav__link">
+    2.5. MI_ISP_SetInputPortCrop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_isp_getinputportcrop" class="md-nav__link">
+    2.6. MI_ISP_GetInputPortCrop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_isp_setchnparam" class="md-nav__link">
+    2.7. MI_ISP_SetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_isp_getchnparam" class="md-nav__link">
+    2.8. MI_ISP_GetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_isp_startchannel" class="md-nav__link">
+    2.9. MI_ISP_StartChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_isp_stopchannel" class="md-nav__link">
+    2.10. MI_ISP_StopChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_isp_setoutputportparam" class="md-nav__link">
+    2.11. MI_ISP_SetOutputPortParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_isp_getoutputportparam" class="md-nav__link">
+    2.12. MI_ISP_GetOutputPortParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_isp_enableoutputport" class="md-nav__link">
+    2.13. MI_ISP_EnableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_isp_disableoutputport" class="md-nav__link">
+    2.14. MI_ISP_DisableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_isp_alloc_iqdatabuf" class="md-nav__link">
+    2.15. MI_ISP_Alloc_IQDataBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_isp_free_iqdatabuf" class="md-nav__link">
+    2.16. MI_ISP_Free_IQDataBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_isp_callbacktask_register" class="md-nav__link">
+    2.17. MI_ISP_CallBackTask_Register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-mi_isp_callbacktask_unregister" class="md-nav__link">
+    2.18. MI_ISP_CallBackTask_Unregister
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-mi_isp_skipframe" class="md-nav__link">
+    2.19. MI_ISP_SkipFrame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220-mi_isp_loadportzoomtable" class="md-nav__link">
+    2.20. MI_ISP_LoadPortZoomTable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-mi_isp_startportzoom" class="md-nav__link">
+    2.21. MI_ISP_StartPortZoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-mi_isp_stopportzoom" class="md-nav__link">
+    2.22. MI_ISP_StopPortZoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-mi_isp_getportcurzoomattr" class="md-nav__link">
+    2.23. MI_ISP_GetPortCurZoomAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-mi_isp_setcustsegattr" class="md-nav__link">
+    2.24. MI_ISP_SetCustSegAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-mi_isp_getcustsegattr" class="md-nav__link">
+    2.25. MI_ISP_GetCustSegAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#226-mi_isp_getcustsegbuf" class="md-nav__link">
+    2.26. MI_ISP_GetCustSegBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#227-mi_isp_putcustsegbuf" class="md-nav__link">
+    2.27. MI_ISP_PutCustSegBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#228-mi_isp_getsubchnid" class="md-nav__link">
+    2.28. MI_ISP_GetSubChnId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229-mi_isp_setsubchnparam" class="md-nav__link">
+    2.29. MI_ISP_SetSubChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#230-mi_isp_getsubchnparam" class="md-nav__link">
+    2.30. MI_ISP_GetSubChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#231-mi_isp_setchnoverlapattr" class="md-nav__link">
+    2.31. MI_ISP_SetChnOverlapAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-mi_isp_getchnoverlapattr" class="md-nav__link">
+    2.32. MI_ISP_GetChnOverlapAttr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-isp-data-type" class="md-nav__link">
+    3.  ISP Data type
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_isp_dev" class="md-nav__link">
+    3.1. MI_ISP_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_isp_channel" class="md-nav__link">
+    3.2. MI_ISP_CHANNEL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_isp_port" class="md-nav__link">
+    3.3. MI_ISP_PORT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_isp_devmaskid_e" class="md-nav__link">
+    3.4. MI_ISP_DevMaskId_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_isp_devattr_t" class="md-nav__link">
+    3.5. MI_ISP_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_isp_hdrtype_e" class="md-nav__link">
+    3.6. MI_ISP_HDRType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_isp_3dnr_level_e" class="md-nav__link">
+    3.7. MI_ISP_3DNR_Level_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_isp_bindsnrid_e" class="md-nav__link">
+    3.8. MI_ISP_BindSnrId_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_isp_sync3a_e" class="md-nav__link">
+    3.9. MI_ISP_SYNC3A_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_isp_iqapiheader_t" class="md-nav__link">
+    3.10. MI_ISP_IQApiHeader_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_isp_versionpara_t" class="md-nav__link">
+    3.11. MI_ISP_VersionPara_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_isp_custiqparam_t" class="md-nav__link">
+    3.12. MI_ISP_CustIQParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_isp_channelattr_t" class="md-nav__link">
+    3.13. MI_ISP_ChannelAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_isp_chnparam_t" class="md-nav__link">
+    3.14. MI_ISP_ChnParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mi_isp_outportparam_t" class="md-nav__link">
+    3.15. MI_ISP_OutPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-mi_isp_callbk_func" class="md-nav__link">
+    3.16. MI_ISP_CALLBK_FUNC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-mi_isp_callbackmode_e" class="md-nav__link">
+    3.17. MI_ISP_CallBackMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-mi_isp_irqtype_e" class="md-nav__link">
+    3.18. MI_ISP_IrqType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319-mi_isp_callbackparam_t" class="md-nav__link">
+    3.19. MI_ISP_CallBackParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320-mi_isp_zoomentry_t" class="md-nav__link">
+    3.20. MI_ISP_ZoomEntry_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-mi_isp_zoomtable_t" class="md-nav__link">
+    3.21. MI_ISP_ZoomTable_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-mi_isp_zoomattr_t" class="md-nav__link">
+    3.22. MI_ISP_ZoomAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-mi_isp_custsegattr_t" class="md-nav__link">
+    3.23. MI_ISP_CustSegAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-mi_isp_custseginportparam_t" class="md-nav__link">
+    3.24. MI_ISP_CustSegInPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-mi_isp_custsegoutportparam_t" class="md-nav__link">
+    3.25. MI_ISP_CustSegOutPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-mi_isp_custsegmode_e" class="md-nav__link">
+    3.26. MI_ISP_CustSegMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#327-mi_isp_internalseg_e" class="md-nav__link">
+    3.27. MI_ISP_InternalSeg_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#328-mi_isp_bufferlayout_e" class="md-nav__link">
+    3.28. MI_ISP_BufferLayout_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#329-mi_isp_overlap_e" class="md-nav__link">
+    3.29. MI_ISP_Overlap_e
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-isp-error-code" class="md-nav__link">
+    4. ISP Error code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_en.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_en.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_en.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_en.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_en.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_en.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_en.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_en.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_en.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_en.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_en.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_en.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_en.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdisp_en.html" title="VDISP" class="md-nav__link">
+      VDISP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-nav__link">
+      ABBR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow chart
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-tiramisu" class="md-nav__link">
+    1.2.1. Tiramisu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-muffin" class="md-nav__link">
+    1.2.2. Muffin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-mochi" class="md-nav__link">
+    1.2.3. Mochi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-maruko" class="md-nav__link">
+    1.2.4. Maruko
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-keyword" class="md-nav__link">
+    1.3. Keyword
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-specification" class="md-nav__link">
+    1.4. Specification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-json-parameter-list" class="md-nav__link">
+    1.5. JSON Parameter List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-reference" class="md-nav__link">
+    2.  API REFERENCE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_isp_createdevice" class="md-nav__link">
+    2.1. MI_ISP_CreateDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_isp_destroydevice" class="md-nav__link">
+    2.2. MI_ISP_DestroyDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_isp_createchannel" class="md-nav__link">
+    2.3. MI_ISP_CreateChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_isp_destroychannel" class="md-nav__link">
+    2.4. MI_ISP_DestroyChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_isp_setinputportcrop" class="md-nav__link">
+    2.5. MI_ISP_SetInputPortCrop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_isp_getinputportcrop" class="md-nav__link">
+    2.6. MI_ISP_GetInputPortCrop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_isp_setchnparam" class="md-nav__link">
+    2.7. MI_ISP_SetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_isp_getchnparam" class="md-nav__link">
+    2.8. MI_ISP_GetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_isp_startchannel" class="md-nav__link">
+    2.9. MI_ISP_StartChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_isp_stopchannel" class="md-nav__link">
+    2.10. MI_ISP_StopChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_isp_setoutputportparam" class="md-nav__link">
+    2.11. MI_ISP_SetOutputPortParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_isp_getoutputportparam" class="md-nav__link">
+    2.12. MI_ISP_GetOutputPortParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_isp_enableoutputport" class="md-nav__link">
+    2.13. MI_ISP_EnableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_isp_disableoutputport" class="md-nav__link">
+    2.14. MI_ISP_DisableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_isp_alloc_iqdatabuf" class="md-nav__link">
+    2.15. MI_ISP_Alloc_IQDataBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_isp_free_iqdatabuf" class="md-nav__link">
+    2.16. MI_ISP_Free_IQDataBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_isp_callbacktask_register" class="md-nav__link">
+    2.17. MI_ISP_CallBackTask_Register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-mi_isp_callbacktask_unregister" class="md-nav__link">
+    2.18. MI_ISP_CallBackTask_Unregister
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-mi_isp_skipframe" class="md-nav__link">
+    2.19. MI_ISP_SkipFrame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220-mi_isp_loadportzoomtable" class="md-nav__link">
+    2.20. MI_ISP_LoadPortZoomTable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-mi_isp_startportzoom" class="md-nav__link">
+    2.21. MI_ISP_StartPortZoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-mi_isp_stopportzoom" class="md-nav__link">
+    2.22. MI_ISP_StopPortZoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-mi_isp_getportcurzoomattr" class="md-nav__link">
+    2.23. MI_ISP_GetPortCurZoomAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-mi_isp_setcustsegattr" class="md-nav__link">
+    2.24. MI_ISP_SetCustSegAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-mi_isp_getcustsegattr" class="md-nav__link">
+    2.25. MI_ISP_GetCustSegAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#226-mi_isp_getcustsegbuf" class="md-nav__link">
+    2.26. MI_ISP_GetCustSegBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#227-mi_isp_putcustsegbuf" class="md-nav__link">
+    2.27. MI_ISP_PutCustSegBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#228-mi_isp_getsubchnid" class="md-nav__link">
+    2.28. MI_ISP_GetSubChnId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229-mi_isp_setsubchnparam" class="md-nav__link">
+    2.29. MI_ISP_SetSubChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#230-mi_isp_getsubchnparam" class="md-nav__link">
+    2.30. MI_ISP_GetSubChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#231-mi_isp_setchnoverlapattr" class="md-nav__link">
+    2.31. MI_ISP_SetChnOverlapAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-mi_isp_getchnoverlapattr" class="md-nav__link">
+    2.32. MI_ISP_GetChnOverlapAttr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-isp-data-type" class="md-nav__link">
+    3.  ISP Data type
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_isp_dev" class="md-nav__link">
+    3.1. MI_ISP_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_isp_channel" class="md-nav__link">
+    3.2. MI_ISP_CHANNEL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_isp_port" class="md-nav__link">
+    3.3. MI_ISP_PORT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_isp_devmaskid_e" class="md-nav__link">
+    3.4. MI_ISP_DevMaskId_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_isp_devattr_t" class="md-nav__link">
+    3.5. MI_ISP_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_isp_hdrtype_e" class="md-nav__link">
+    3.6. MI_ISP_HDRType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_isp_3dnr_level_e" class="md-nav__link">
+    3.7. MI_ISP_3DNR_Level_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_isp_bindsnrid_e" class="md-nav__link">
+    3.8. MI_ISP_BindSnrId_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_isp_sync3a_e" class="md-nav__link">
+    3.9. MI_ISP_SYNC3A_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_isp_iqapiheader_t" class="md-nav__link">
+    3.10. MI_ISP_IQApiHeader_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_isp_versionpara_t" class="md-nav__link">
+    3.11. MI_ISP_VersionPara_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_isp_custiqparam_t" class="md-nav__link">
+    3.12. MI_ISP_CustIQParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_isp_channelattr_t" class="md-nav__link">
+    3.13. MI_ISP_ChannelAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_isp_chnparam_t" class="md-nav__link">
+    3.14. MI_ISP_ChnParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mi_isp_outportparam_t" class="md-nav__link">
+    3.15. MI_ISP_OutPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-mi_isp_callbk_func" class="md-nav__link">
+    3.16. MI_ISP_CALLBK_FUNC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-mi_isp_callbackmode_e" class="md-nav__link">
+    3.17. MI_ISP_CallBackMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-mi_isp_irqtype_e" class="md-nav__link">
+    3.18. MI_ISP_IrqType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319-mi_isp_callbackparam_t" class="md-nav__link">
+    3.19. MI_ISP_CallBackParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320-mi_isp_zoomentry_t" class="md-nav__link">
+    3.20. MI_ISP_ZoomEntry_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-mi_isp_zoomtable_t" class="md-nav__link">
+    3.21. MI_ISP_ZoomTable_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-mi_isp_zoomattr_t" class="md-nav__link">
+    3.22. MI_ISP_ZoomAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-mi_isp_custsegattr_t" class="md-nav__link">
+    3.23. MI_ISP_CustSegAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-mi_isp_custseginportparam_t" class="md-nav__link">
+    3.24. MI_ISP_CustSegInPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-mi_isp_custsegoutportparam_t" class="md-nav__link">
+    3.25. MI_ISP_CustSegOutPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-mi_isp_custsegmode_e" class="md-nav__link">
+    3.26. MI_ISP_CustSegMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#327-mi_isp_internalseg_e" class="md-nav__link">
+    3.27. MI_ISP_InternalSeg_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#328-mi_isp_bufferlayout_e" class="md-nav__link">
+    3.28. MI_ISP_BufferLayout_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#329-mi_isp_overlap_e" class="md-nav__link">
+    3.29. MI_ISP_Overlap_e
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-isp-error-code" class="md-nav__link">
+    4. ISP Error code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI ISP API</h1>
+<hr />
+<h2 id="revision-history">REVISION HISTORY<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision No.</th>
+<th><div style="width:335pt">Description</div></th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.0</td>
+<td><li> Initial  release</td>
+<td>12/04/2020</td>
+</tr>
+<tr>
+<td>3.1</td>
+<td><li> Added new API: MI_ISP_SetCustSegAttr, MI_ISP_GetCustSegAttr, MI_ISP_GetCustSegBuf, MI_ISP_PutCustSegBuf <li> Update API: MI_ISP_SetChnParam</td>
+<td>07/25/2021</td>
+</tr>
+<tr>
+<td></td>
+<td><li> Added PROCFS INTRODUCTION</td>
+<td>08/25/2021</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td><li> Added new API: MI_ISP_GetSubChnId</td>
+<td>11/23/2021</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td><li> Added Mochi Info</td>
+<td>02/17/2022</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td><li> Added Maruko info</td>
+<td>03/21/2022</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td><li> Added new API: MI_ISP_SetSubChnParam, MI_ISP_GetSubChnParam, MI_ISP_SetChnOverlapAttr, MI_ISP_GetChnOverlapAttr <li> Update API: MI_ISP_SetOutputPortParam</td>
+<td>05/23/2022</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td><li> In Section 5.2 add debug CMD:ptsth/sendoneframe/dnrlevel/resethw/crcmode/datagen/cmdqtimeout</td>
+<td>08/03/2022</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td><li> add eSensorPixFormat and stSensorRes in MI_ISP_ZoomEntry_t</td>
+<td>08/14/2023</td>
+</tr>
+<tr>
+<td>3.8</td>
+<td><li> In Section 3.6, modify MI_ISP_HDRType_e enum value</td>
+<td>08/01/2024</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<h3 id="11-module-description">1.1. Module description<a class="headerlink" href="#11-module-description" title="Permanent link">&para;</a></h3>
+<p>ISP (Image Signal Processing) realizes HDR, 3D/2D noise reduction, 3A algorithm, WDR and other related functions.</p>
+<h3 id="12-flow-chart">1.2. Flow chart<a class="headerlink" href="#12-flow-chart" title="Permanent link">&para;</a></h3>
+<h4 id="121-tiramisu">1.2.1. Tiramisu<a class="headerlink" href="#121-tiramisu" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/isp/isp-1.svg" /></p>
+<p>Figure 1‑1: Tiramisu flow chart</p>
+<p>Note:</p>
+<ul>
+<li>
+<p>Tiramisu only has a device0, and each device supports up to 16 channels.</p>
+</li>
+<li>
+<p>Only YUV422_yuyv / uyvy and Bayer format input are supported, Bayer format can support 3DNR and 3a functions.</p>
+</li>
+</ul>
+<h4 id="122-muffin">1.2.2. Muffin<a class="headerlink" href="#122-muffin" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/isp/isp-2.svg" /></p>
+<p>Figure 1‑2: Muffin flow chart</p>
+<p>Note:</p>
+<ul>
+<li>
+<p>Muffin has Device0 and Device1, and each Device supports up to 16 channels.</p>
+</li>
+<li>
+<p>Only supports YUV422_YUYV/UYVY and bayer format input.</p>
+</li>
+<li>
+<p>After enabling AI ISP through <a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a>, it supports app to take out the buffer from before 3DNR/before WDR/before RGB2YUV, and send it back to before 3DNR/before WDR/before RGB2YUV after processing.</p>
+</li>
+<li>
+<p>Before 3DNR is the data before entering the DNR module.</p>
+</li>
+<li>
+<p>AI ISP function means that app takes out the buffer from the MI ISP, uses an algorithm to optimize the image of the buffer, and then plugs it back into the MI ISP.</p>
+</li>
+</ul>
+<h4 id="123-mochi">1.2.3. Mochi<a class="headerlink" href="#123-mochi" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/isp/isp-3.svg" /></p>
+<p>Figure 1-3: Mochi flow chart</p>
+<p>Note:</p>
+<ul>
+<li>
+<p>Mochi only has a device0, and each device supports up to 16 channels.</p>
+</li>
+<li>
+<p>Only YUV422_uyvy format input are supported.</p>
+</li>
+<li>
+<p>Do not support HDR/Rotation/Mirror/Flip.</p>
+</li>
+</ul>
+<h4 id="124-maruko">1.2.4. Maruko<a class="headerlink" href="#124-maruko" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/isp/isp-12.svg" /></p>
+<p>Figure 1-4: Maruko flow chart</p>
+<p>Note:</p>
+<ul>
+<li>
+<p>Maruko only has a device0, and each device supports up to 16 channels.</p>
+</li>
+<li>
+<p>Only YUV422_yuyv / uyvy and Bayer format input are supported, Bayer format can support 3DNR/3A/Rot functions.</p>
+</li>
+</ul>
+<h3 id="13-keyword">1.3. Keyword<a class="headerlink" href="#13-keyword" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Device</p>
+<p>Hardware device.</p>
+</li>
+<li>
+<p>channel</p>
+<p>Time division multiplexed channel on device.</p>
+</li>
+<li>
+<p>DNR</p>
+<p>Digital Noise Reduction.</p>
+<p>2D Noise Reduction: average a pixel with surrounding pixels, and the noise will be reduced after that, but the picture will be blurred;</p>
+<p>3D Noise Reduction: add time domain processing, 2D noise reduction only considers one frame of image, while 3D noise reduction considers the time domain relationship between frames, and averages each pixel in time domain.</p>
+</li>
+<li>
+<p>3A algorithm</p>
+<p>AE (Auto Exposure), AWB (Auto White Balance), and AF(Auto Focus).</p>
+</li>
+<li>
+<p>HDR</p>
+<p>High-Dynamic Range.</p>
+<p>According to the LDR (Low-Dynamic Range) of different exposure times, the final HDR image is synthesized using the LDR image with the best detail corresponding to each exposure time. It can better reflect the visual effects in the real environment.</p>
+</li>
+<li>
+<p>WDR</p>
+<p>Wide Dynamic Range.</p>
+<p>After turning it on, the bright and dark parts of the scene can be seen clearly. The wide dynamic range is the ratio of the brightest and the darkest signal value that the image can distinguish.</p>
+</li>
+<li>
+<p>Rotation</p>
+<p>Rotate the original image around the center point by 0°/90°/180°/270°.</p>
+</li>
+<li>
+<p>mirror</p>
+<p>Horizontal mirror flip.</p>
+</li>
+<li>
+<p>Flip</p>
+<p>Mirror up and down.</p>
+</li>
+<li>
+<p>Crop</p>
+<p>Crop the image.</p>
+</li>
+<li>
+<p>seg</p>
+<p>Segment module.</p>
+</li>
+<li>
+<p>Compress</p>
+<p>Compress mode, compress data transmission to save bandwidth.</p>
+</li>
+<li>
+<p>IR</p>
+<p>IR Data of RGBIR sensor.</p>
+</li>
+</ul>
+<h3 id="14-specification">1.4. Specification<a class="headerlink" href="#14-specification" title="Permanent link">&para;</a></h3>
+<p>Both ‘\’ and ‘N’ means this function is not supported.</p>
+<ul>
+<li>
+<p>Module function specifications</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Tiramisu</th>
+<th>Mochi</th>
+<th>Muffin</th>
+<th>Maruko</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dev Number</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Chn Number</td>
+<td>32</td>
+<td>32</td>
+<td>32</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Port Number</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>DNR Range</td>
+<td>0-2</td>
+<td>0-7</td>
+<td>0-2</td>
+<td>0-6</td>
+</tr>
+<tr>
+<td>InputCrop</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>3A</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>HDR</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>mirror</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>flip</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>WDR</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>OutPutCrop</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>IR</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Compress</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Seg</td>
+<td>N</td>
+<td>N</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Max Pixel Rate</td>
+<td>4K30</td>
+<td>4K60</td>
+<td>4K60</td>
+<td>4K30</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Input specifications</p>
+<p><table>
+<tr>
+    <th colspan=2>Input</th>
+    <th>Tiramisu</th>
+    <th>Mochi</th>
+    <th>Muffin</th>
+    <th>Maruko</th>
+</tr>
+<tr>
+    <td rowspan=3>Pixel</td>
+    <td>yuv422  YUYV</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422  UYVY</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>Bayer</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td rowspan=4>Compress</td>
+    <td>NONE</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>TO_8BIT</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>TO_6BIT</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>N</td>
+</tr>
+<tr>
+    <td>SFBC0</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>N</td>
+</tr>
+<tr>
+    <td colspan=2>Crop</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td rowspan=2>resolution</td>
+    <td>MAX</td>
+    <td>4208</td>
+    <td>3840</td>
+    <td>4068</td>
+    <td>3840</td>
+</tr>
+<tr>
+    <td>MIN</td>
+    <td>320x256(Enable AE) <br>16x16(Disable AE)</td>
+    <td>16x16</td>
+    <td>320x256(Enable AE) <br>16x16(Disable AE)</td>
+    <td>320x256(Enable AE) <br>16x16(Disable AE)</td>
+</tr>
+<tr>
+    <td>Pixel  Alignment (WxH)</td>
+    <td>2x2</td>
+    <td>2x2</td>
+    <td>2x2</td>
+    <td>2x2</td>
+</tr>
+</table></p>
+</li>
+<li>
+<p>Output specifications</p>
+<p><table>
+<tr>
+    <th colspan=2>Output</th>
+    <th>Tiramisu</th>
+    <th>Mochi</th>
+    <th>Muffin</th>
+    <th>Maruko</th>
+</tr>
+<tr>
+    <td rowspan=12>Pixel</td>
+    <td>ARGB8888</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>ABGR8888</td>
+    <td>N</td>
+    <td>N</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>BGRA8888</td>
+    <td>N</td>
+    <td>N</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv420SP NV12</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv420SP NV21</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv420 Planer</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 YUYV</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 YVYU</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 VYUY</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 UYVY</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 SP</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 Planer</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td rowspan=2>Compress</td>
+    <td>NONE</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>10TO6</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td colspan=2>Crop</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td colspan=2>IR</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td colspan=2>Pixel  Alignment (WxH)</td>
+    <td>2x2</td>
+    <td>2x2</td>
+    <td>2x2</td>
+    <td>2x2</td>
+</tr>
+</table></p>
+</li>
+</ul>
+<h3 id="15-json-parameter-list">1.5. JSON Parameter List<a class="headerlink" href="#15-json-parameter-list" title="Permanent link">&para;</a></h3>
+<p>The parameters that can be adjusted in the JSON file are as follows：</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32DefaultDropNum</td>
+<td>drop number  of buffers after MI_ISP_CreateChannel</td>
+<td>1. default:10.  Because  ISP needs to converge, ten buffers will drop by default.  <br>2. Any  value can be set by the user.  In the  quick start scenario, reducing the number of drops can shorten the startup  time.</td>
+</tr>
+</tbody>
+</table>
+<p>For JSON use method, please refer to <a href="sys_en.html">MI SYS API</a>.</p>
+<h2 id="2-api-reference">2.  API REFERENCE<a class="headerlink" href="#2-api-reference" title="Permanent link">&para;</a></h2>
+<p>This function module provides the following APIs:</p>
+<table>
+<thead>
+<tr>
+<th><strong>API</strong>   <strong>Name</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a></td>
+<td>Create an ISP device</td>
+</tr>
+<tr>
+<td><a href="#22-mi_isp_destroydevice">MI_ISP_DestroyDevice</a></td>
+<td>Destroy an ISP device</td>
+</tr>
+<tr>
+<td><a href="#23-mi_isp_createchannel">MI_ISP_CreateChannel</a></td>
+<td>Create an ISP channel</td>
+</tr>
+<tr>
+<td><a href="#24-mi_isp_destroychannel">MI_ISP_DestroyChannel</a></td>
+<td>Destroy an ISP channel</td>
+</tr>
+<tr>
+<td><a href="#25-mi_isp_setinputportcrop">MI_ISP_SetInputPortCrop</a></td>
+<td>Set ISP input port cropping parameter</td>
+</tr>
+<tr>
+<td><a href="#26-mi_isp_getinputportcrop">MI_ISP_GetInputPortCrop</a></td>
+<td>Get ISP input port cropping parameter</td>
+</tr>
+<tr>
+<td><a href="#27-mi_isp_setchnparam">MI_ISP_SetChnParam</a></td>
+<td>Set ISP channel parameter</td>
+</tr>
+<tr>
+<td><a href="#28-mi_isp_getchnparam">MI_ISP_GetChnParam</a></td>
+<td>Get ISP channel parameter</td>
+</tr>
+<tr>
+<td><a href="#29-mi_isp_startchannel">MI_ISP_StartChannel</a></td>
+<td>Start ISP channel</td>
+</tr>
+<tr>
+<td><a href="#210-mi_isp_stopchannel">MI_ISP_StopChannel</a></td>
+<td>Stop ISP channel</td>
+</tr>
+<tr>
+<td><a href="#211-mi_isp_setoutputportparam">MI_ISP_SetOutputPortParam</a></td>
+<td>Set ISP output port parameter</td>
+</tr>
+<tr>
+<td><a href="#212-mi_isp_getoutputportparam">MI_ISP_GetOutputPortParam</a></td>
+<td>Get ISP output port parameter</td>
+</tr>
+<tr>
+<td><a href="#213-mi_isp_enableoutputport">MI_ISP_EnableOutputPort</a></td>
+<td>Enable ISP output channel</td>
+</tr>
+<tr>
+<td><a href="#214-mi_isp_disableoutputport">MI_ISP_DisableOutputPort</a></td>
+<td>Disable ISP output port</td>
+</tr>
+<tr>
+<td><a href="#215-mi_isp_alloc_iqdatabuf">MI_ISP_Alloc_IQDataBuf</a></td>
+<td>Allocate IQ data buffer</td>
+</tr>
+<tr>
+<td><a href="#216-mi_isp_free_iqdatabuf">MI_ISP_Free_IQDataBuf</a></td>
+<td>Release IQ data buffer</td>
+</tr>
+<tr>
+<td><a href="#217-mi_isp_callbacktask_register">MI_ISP_CallBackTask_Register</a></td>
+<td>Register ISP callback interface</td>
+</tr>
+<tr>
+<td><a href="#218-mi_isp_callbacktask_unregister">MI_ISP_CallBackTask_Unregister</a></td>
+<td>Unregister ISP callback interface</td>
+</tr>
+<tr>
+<td><a href="#219-mi_isp_skipframe">MI_ISP_SkipFrame</a></td>
+<td>Set skip FrameNum</td>
+</tr>
+<tr>
+<td><a href="#220-mi_isp_loadportzoomtable">MI_ISP_LoadPortZoomTable</a></td>
+<td>Load ISP port Zoom Table</td>
+</tr>
+<tr>
+<td><a href="#221-mi_isp_startportzoom">MI_ISP_StartPortZoom</a></td>
+<td>Start ISP port Zoom</td>
+</tr>
+<tr>
+<td><a href="#222-mi_isp_stopportzoom">MI_ISP_StopPortZoom</a></td>
+<td>Stop ISP port Zoom</td>
+</tr>
+<tr>
+<td><a href="#223-mi_isp_getportcurzoomattr">MI_ISP_GetPortCurZoomAttr</a></td>
+<td>Get ISP port current Zoom attribute</td>
+</tr>
+<tr>
+<td><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></td>
+<td>Set AI ISP attribute.</td>
+</tr>
+<tr>
+<td><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></td>
+<td>Get AI ISP attribute</td>
+</tr>
+<tr>
+<td><a href="#226-mi_isp_getcustsegbuf">MI_ISP_GetCustSegBuf</a></td>
+<td>Get AI ISP buffer</td>
+</tr>
+<tr>
+<td><a href="#227-mi_isp_putcustsegbuf">MI_ISP_PutCustSegBuf</a></td>
+<td>Release AI ISP buffer</td>
+</tr>
+<tr>
+<td><a href="#228-mi_isp_getsubchnid">MI_ISP_GetSubChnId</a></td>
+<td>Get ISP subchannel ID</td>
+</tr>
+<tr>
+<td><a href="#229-mi_isp_setsubchnparam">MI_ISP_SetSubChnParam</a></td>
+<td>Set ISP subchannel parameter</td>
+</tr>
+<tr>
+<td><a href="#230-mi_isp_getsubchnparam">MI_ISP_GetSubChnParam</a></td>
+<td>Get ISP subchannel parameter</td>
+</tr>
+<tr>
+<td><a href="#231-mi_isp_setchnoverlapattr">MI_ISP_SetChnOverlapAttr</a></td>
+<td>Set ISP channel overlap attribute</td>
+</tr>
+<tr>
+<td><a href="#232-mi_isp_getchnoverlapattr">MI_ISP_GetChnOverlapAttr</a></td>
+<td>Get ISP channel overlap attribute</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-mi_isp_createdevice">2.1. MI_ISP_CreateDevice<a class="headerlink" href="#21-mi_isp_createdevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Create an ISP device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_CreateDevice(MI_ISP_DEV DevId, MI_ISP_DevAttr_t *pstDevAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstDevAttr</td>
+<td>ISP device attribute pointer. Static  attribute.</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Make sure that the ISP device is disabled before calling. If it is enabled, please use <a href="#22-mi_isp_destroydevice">MI_ISP_DestroyDevice</a> to disable it.</p>
+</li>
+<li>
+<p>In function MI_ISP_CreateDevice, when parameter DevId = MI_ISP_CREATE_MULTI_DEV(MI_ISP_DEV0), isp is working in multi device mode. At this time, isp device 0 and isp device 1 is running in one channel.</p>
+</li>
+<li>
+<p>Only Muffin supports multi device mode.</p>
+</li>
+<li>
+<p>In multi device mode, use parameter DevId = MI_ISP_DEV0 when calling other isp api except <a href="#22-mi_isp_destroydevice">MI_ISP_DestroyDevice</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>MI_ISP initialization:</p>
+<div class="codehilite"><pre><span></span>MI_S32 ST_IspModuleInit(MI_ISP_DEV IspDevId)
+{
+#define ST_MAX_ISP_OUTPORT_NUM (2)
+    MI_ISP_CHANNEL IspChnId = 0;
+    MI_ISP_PORT  IspOutPortId =0;
+
+    MI_ISP_DevAttr_t stCreateDevAttr;
+    memset(&amp;stCreateDevAttr, 0x0, sizeof(MI_ISP_DevAttr_t));
+    stCreateDevAttr.u32DevStitchMask = E_MI_ISP_DEVICE_ID0;
+
+    MI_ISP_CreateDevice(IspDevId, &amp;stCreateDevAttr);
+
+    MI_ISP_ChannelAttr_t  stIspChnAttr;
+    memset(&amp;stIspChnAttr, 0x0, sizeof(MI_ISP_ChannelAttr_t));
+    stIspChnAttr. u32SensorBindId = E_MI_ISP_SENSOR0;
+    MI_ISP_CreateChannel(IspDevId, IspChnId, &amp;stIspChnAttr);
+
+    MI_SYS_WindowRect_t  stInputCropInfo;
+    stInputCropInfo.u16x=0;
+    stInputCropInfo.u16y=0;
+    stInputCropInfo.u16width=0;
+    stInputCropInfo.u16height=0;//width/height==0 no use crop.
+    MI_ISP_SetInputPortCrop(IspDevId, IspChnId, &amp;stInputCropInfo);
+
+    MI_ISP_ChnParam_t  stChnParam;
+    stChnParam.eHDRType = E_MI_ISP_HDR_TYPE_OFF;
+    stChnParam.e3DNRLevel = E_MI_ISP_3DNR_LEVEL2;
+    stChnParam.bMirror = FALSE;
+    stChnParam.bFlip = FALSE;
+    stChnParam.eRot = E_MI_SYS_ROTATE_NONE;
+    //use rot or flip, 3dnr level must more than 0
+    stChnParam.bY2bEnable = FALSE;
+    MI_ISP_SetChnParam(IspDevId, IspChnId, &amp;stChnParam);
+    MI_ISP_StartChannel(IspDevId, IspChnId);
+
+    for(IspOutPortId=0; IspOutPortId&lt;ST_MAX_ISP_OUTPORT_NUM; IspOutPortId++)
+    {
+        MI_ISP_OutPortParam_t  stIspOutputParam;
+        memset(&amp;stIspOutputParam, 0x0, sizeof(MI_ISP_OutPortParam_t));
+        stIspOutputParam.stCropRect.u16x=0;
+        stIspOutputParam.stCropRect.u16y=0;
+        stIspOutputParam.stCropRect.u16Width=0;
+        stIspOutputParam.stCropRect.u16Height=0;//width/height use 0, not use crop
+        stIspOutputParam.ePixelFormat = E_MI_SYS_PIXEL_FRAME_YUV_SEMIPLANAR_YUV420;
+        MI_ISP_SetOutputPortParam(IspDevId, IspChnId, IspOutPortId, &amp;stIspOutputParam);
+        MI_ISP_EnableOutputPort(IspDevId, IspChnId, IspOutPortId);
+    }
+
+    return MI_SUCCESS;
+}
+</pre></div>
+
+
+<p>MI_ISP de-initialization:</p>
+<div class="codehilite"><pre><span></span>MI_S32 ST_IspModuleUnInit(MI_ISP_DEV IspDevId)
+{
+#define ST_MAX_ISP_OUTPORT_NUM (2)
+
+    MI_ISP_CHANNEL IspChnId = 0;
+    MI_ISP_PORT  IspOutPortId =0;
+
+    for(IspOutPortId=0; IspOutPortId&lt;ST_MAX_ISP_OUTPORT_NUM; IspOutPortId++)
+    {
+        MI_ISP_DisableOutputPort(IspDevId, IspChnId, IspOutPortId);
+    }
+
+    MI_ISP_StopChannel(IspDevId, IspChnId);
+    MI_ISP_DestroyChannel(IspDevId, IspChnId);
+
+    MI_ISP_DestroyDevice(IspDevId);
+
+return MI_SUCCESS;
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#22-mi_isp_destroydevice">MI_ISP_DestroyDevice</a></p>
+</li>
+</ul>
+<h3 id="22-mi_isp_destroydevice">2.2. MI_ISP_DestroyDevice<a class="headerlink" href="#22-mi_isp_destroydevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Destroy an ISP device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_DestroyDevice(MI_ISP_DEV DevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>You need to disable all the output ports first, and then stop and destroy the channel to destroy device.</p>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a></p>
+</li>
+</ul>
+<h3 id="23-mi_isp_createchannel">2.3. MI_ISP_CreateChannel<a class="headerlink" href="#23-mi_isp_createchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Create an ISP channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_CreateChannel(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ChannelAttr_t *pstChAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstChAttr</td>
+<td>ISP channel attribute  pointer</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Create device firstly, and then create channel.</p>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#24-mi_isp_destroychannel">MI_ISP_DestroyChannel</a>.</p>
+</li>
+</ul>
+<h3 id="24-mi_isp_destroychannel">2.4. MI_ISP_DestroyChannel<a class="headerlink" href="#24-mi_isp_destroychannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Destroy an ISP channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_DestroyChannel(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>You need to disable all the output ports first, and then stop channel, so that you can destroy channel.</p>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#23-mi_isp_createchannel">MI_ISP_CreateChannel</a></p>
+</li>
+</ul>
+<h3 id="25-mi_isp_setinputportcrop">2.5. MI_ISP_SetInputPortCrop<a class="headerlink" href="#25-mi_isp_setinputportcrop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set ISP input port cropping parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetInputPortCrop(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_SYS_WindowRect_t *pstCropInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstCropInfo</td>
+<td>ISP input port  cropping parameter pointer</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>When the input is Dram buffer, the input crop can be supported.</p>
+</li>
+<li>
+<p>Crop x, Crop y, width, height are all aligned with 2.</p>
+</li>
+<li>
+<p>The 3A inside the Isp only counts the information of the cropped area, which will affect the final 3A calculation result of the entire screen.</p>
+</li>
+<li>
+<p>When the input data compression mode is not E_MI_SYS_COMPRESS_MODE_NONE, the input data does not support cropping.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="26-mi_isp_getinputportcrop">2.6. MI_ISP_GetInputPortCrop<a class="headerlink" href="#26-mi_isp_getinputportcrop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get ISP input port cropping parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetInputPortCrop(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_SYS_WindowRect_t *pstCropInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstCropInfo</td>
+<td>ISP input port  cropping parameter pointer</td>
+<td>output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="27-mi_isp_setchnparam">2.7. MI_ISP_SetChnParam<a class="headerlink" href="#27-mi_isp_setchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set ISP channel parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetChnParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>ISP channel parameter pointer</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>It is recommended to switch the channel parameters when the channel is stopped to avoid mismatch between the buffer and back-end parameters in the channel, which may cause an exception.</p>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#28-mi_isp_getchnparam">MI_ISP_GetChnParam</a></p>
+</li>
+</ul>
+<h3 id="28-mi_isp_getchnparam">2.8. MI_ISP_GetChnParam<a class="headerlink" href="#28-mi_isp_getchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get ISP channel parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetChnParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>ISP channel parameter  pointer</td>
+<td>output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#27-mi_isp_setchnparam">MI_ISP_SetChnParam</a></p>
+</li>
+</ul>
+<h3 id="29-mi_isp_startchannel">2.9. MI_ISP_StartChannel<a class="headerlink" href="#29-mi_isp_startchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Start ISP channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_StartChannel(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#27-mi_isp_setchnparam">MI_ISP_SetChnParam</a></p>
+</li>
+</ul>
+<h3 id="210-mi_isp_stopchannel">2.10. MI_ISP_StopChannel<a class="headerlink" href="#210-mi_isp_stopchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Stop ISP channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_StopChannel(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>You can stop the channel when created, and all the output port will have no data output.</p>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a>.</p>
+</li>
+</ul>
+<h3 id="211-mi_isp_setoutputportparam">2.11. MI_ISP_SetOutputPortParam<a class="headerlink" href="#211-mi_isp_setoutputportparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set ISP output port parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetOutputPortParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_PORT PortId, MI_ISP_OutPortParam_t *pstOutPortParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>ISP port ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstOutPortParam</td>
+<td>ISP output port  parameter pointer</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Output port0 can only bind with MI_SCL realtime, output area is the same as input, which has no need to call this API to set.</p>
+</li>
+<li>
+<p>Output port1 support crop, and the output size need to be specified.</p>
+</li>
+<li>
+<p>Output port2 only supports the output of the IR data of the RGBIR sensor. Output W/H is fixed at half of the input W/H, which has no need to call this API to set.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a>.</p>
+</li>
+</ul>
+<h3 id="212-mi_isp_getoutputportparam">2.12. MI_ISP_GetOutputPortParam<a class="headerlink" href="#212-mi_isp_getoutputportparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get ISP output port parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetOutputPortParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_PORT PortId, MI_ISP_OutPortParam_t *pstOutPortParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>ISP port ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstOutPortParam</td>
+<td>ISP output port parameter  pointer</td>
+<td>output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#211-mi_isp_setoutputportparam">MI_ISP_SetOutputPortParam</a></p>
+</li>
+</ul>
+<h3 id="213-mi_isp_enableoutputport">2.13. MI_ISP_EnableOutputPort<a class="headerlink" href="#213-mi_isp_enableoutputport" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Enable ISP output channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_EnableOutputPort(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_PORT PortId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>ISP port ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Output port1 can be enabled only when the attribute is set.</p>
+</li>
+<li>
+<p>Output port2 can only be enabled when using RGBIR sensor.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#214-mi_isp_disableoutputport">MI_ISP_DisableOutputPort</a></p>
+</li>
+</ul>
+<h3 id="214-mi_isp_disableoutputport">2.14. MI_ISP_DisableOutputPort<a class="headerlink" href="#214-mi_isp_disableoutputport" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Disable ISP output port.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_DisableOutputPort(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_PORT PortId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>ISP port ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="215-mi_isp_alloc_iqdatabuf">2.15. MI_ISP_Alloc_IQDataBuf<a class="headerlink" href="#215-mi_isp_alloc_iqdatabuf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Allocate IQ data buffer.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_Alloc_IQDataBuf(MI_U32 u32Size,void **pUserVirAddr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Size</td>
+<td>IQ data buffer size.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pUserVirAddr</td>
+<td>IQ data buffer pointer  address</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>It is recommended to use this api to apply for IQ api data to avoid the high risk of cpu loading caused by high frequency calls.</p>
+</li>
+<li>
+<p>A thread applies for an isp data buffer to avoid buffer sharing between threads.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>#define  MI_ISP_MAX_DATA_SIZE  (80*1024)
+MI_ISP_Alloc_IQDataBuf(MI_ISP_MAX_DATA_SIZE, &amp;pIspBuffer);
+MI_ISP_IQ_ColorToGrayType_t *pstColorToGray = (MI_ISP_IQ_ColorToGrayType_t *)pIspBuffer;
+MI_ISP_IQ_GetColorToGray( Channel, pstColorToGray);
+if(pstColorToGray-&gt;bEnable == SS_TRUE)
+    pstColorToGray-&gt;bEnable = SS_FALSE;
+else
+    pstColorToGray-&gt;bEnable = SS_TRUE;
+MI_ISP_IQ_SetColorToGray( Channel, pstColorToGray);
+
+MI_ISP_IQ_ContrastType_t *pstContrast = (MI_ISP_IQ_ContrastType_t *)pIspBuffer;
+MI_ISP_IQ_GetContrast( Channel, pstContrast);
+MI_ISP_IQ_SetContrast( Channel, pstContrast);
+
+MI_ISP_Free_IQDataBuf(pIspBuffer)
+</pre></div>
+
+
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#216-mi_isp_free_iqdatabuf">MI_ISP_Free_IQDataBuf</a>.</p>
+</li>
+</ul>
+<h3 id="216-mi_isp_free_iqdatabuf">2.16. MI_ISP_Free_IQDataBuf<a class="headerlink" href="#216-mi_isp_free_iqdatabuf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Release IQ data buffer.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_Free_IQDataBuf(void *pUserBuf);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pUserBuf</td>
+<td>IQ request data buffer  pointer</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#215-mi_isp_alloc_iqdatabuf">MI_ISP_Alloc_IQDataBuf</a>.</p>
+</li>
+</ul>
+<h3 id="217-mi_isp_callbacktask_register">2.17. MI_ISP_CallBackTask_Register<a class="headerlink" href="#217-mi_isp_callbacktask_register" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Register ISP callback interface.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_CallBackTask_Register(MI_ISP_DEV DevId, MI_ISP_CallBackParam_t *pstCallBackParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstCallBackParam</td>
+<td>ISP callback parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>The interface currently only supports calling by kernel mode.</p>
+</li>
+<li>
+<p>Called in pair with <a href="#218-mi_isp_callbacktask_unregister">MI_ISP_CallBackTask_Unregister</a>.</p>
+</li>
+<li>
+<p>This feature is not supported in the current version.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>MI_S32 _MI_ISP_vsync1(MI_U64 u64Data)
+{
+    DBG_ERR(&quot;DATA %llu \n&quot;, u64Data);
+    return 0;
+}
+
+MI_S32 _MI_ISP_vsync2(MI_U64 u64Data)
+{
+    DBG_ERR(&quot;DATA %llu \n&quot;, u64Data);
+    return 0;
+}
+
+static MS_S32 _MI_ISP_testRegCallback(void)
+{
+    MI_ISP_CallBackParam_t stCallBackParam1;
+    MI_ISP_CallBackParam_t stCallBackParam2;
+    memset(&amp;stCallBackParam1, 0x0, sizeof(MI_ISP_CallBackParam_t));
+    memset(&amp;stCallBackParam2, 0x0, sizeof(MI_ISP_CallBackParam_t));
+    stCallBackParam1.eCallBackMode = E_MI_ISP _CALLBACK_ISR;
+    stCallBackParam1. eIrqType = E_MI_ISP_IRQ_ISPVSYNC;
+    stCallBackParam1.pfnCallBackFunc = _mi_ISP_vsync1;
+    stCallBackParam1.u64Data = 12;
+    MI_ISP_CallBackTask_Register(&amp;stCallBackParam1);
+    stCallBackParam2.eCallBackMode = E_MI_ISP_CALLBACK_ISR;
+    stCallBackParam2. eIrqType = E_MI_ISP_IRQ_ISPVSYNC;
+    stCallBackParam2.pfnCallBackFunc = _mi_ISP_vsync2;
+    stCallBackParam2.u64Data = 23;
+    MI_ISP_CallBackTask_Register(&amp;stCallBackParam2);
+    return 0;
+}
+
+static MS_S32 _MI_ISP_testUnRegCallback(void)
+{
+    MI_ISP_CallBackParam_t stCallBackParam1;
+    MI_ISP_CallBackParam_t stCallBackParam2;
+    memset(&amp;stCallBackParam1, 0x0, sizeof(MI_ISP_CallBackParam_t));
+    memset(&amp;stCallBackParam2, 0x0, sizeof(MI_ISP_CallBackParam_t));
+    stCallBackParam1.eCallBackMode = E_MI_ISP_CALLBACK_ISR;
+    stCallBackParam1.eIrqType = E_MI_ISP_IRQ_ISPVSYNC;
+    stCallBackParam1.pfnCallBackFunc = _mi_ISP_vsync1;
+    stCallBackParam1.u64Data = 12;
+    MI_ISP_CallBackTask_Unregister(&amp;stCallBackParam1);
+    stCallBackParam2.eCallBackMode = E_MI_ISP_CALLBACK_ISR;
+    stCallBackParam2.eIrqType = E_MI_ISP_IRQ_ISPVSYNC;
+    stCallBackParam2.pfnCallBackFunc = _mi_ISP_vsync2;
+    stCallBackParam2.u64Data = 23;
+    MI_ISP_CallBackTask_Unregister(&amp;stCallBackParam2);
+    return 0;
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#218-mi_isp_callbacktask_unregister">MI_ISP_CallBackTask_Unregister</a></p>
+</li>
+</ul>
+<h3 id="218-mi_isp_callbacktask_unregister">2.18. MI_ISP_CallBackTask_Unregister<a class="headerlink" href="#218-mi_isp_callbacktask_unregister" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Unregister ISP callback interface</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_CallBackTask_Unregister(MI_ISP_DEV DevId, MI_ISP_CallBackParam_t *pstCallBackParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstCallBackParam</td>
+<td>ISP callback parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>The interface currently only supports calling by kernel mode.</p>
+</li>
+<li>
+<p>Called in pair of <a href="#217-mi_isp_callbacktask_register">MI_ISP_CallBackTask_Register</a>.</p>
+</li>
+<li>
+<p>This feature is not supported in the current version.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#217-mi_isp_callbacktask_register">MI_ISP_CallBackTask_Register</a></p>
+</li>
+</ul>
+<h3 id="219-mi_isp_skipframe">2.19. MI_ISP_SkipFrame<a class="headerlink" href="#219-mi_isp_skipframe" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set to skip Frame count from calling this API.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SkipFrame(MI_ISP_DEV DevId,MI_ISP_CHANNEL ChnId, MI_U32 u32FrameNum);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u32FrameNum</td>
+<td>Frame number</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="220-mi_isp_loadportzoomtable">2.20. MI_ISP_LoadPortZoomTable<a class="headerlink" href="#220-mi_isp_loadportzoomtable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Load ISP port Zoom Table.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_LoadPortZoomTable(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ZoomTable_t *pZoomTable);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pZoomTable</td>
+<td>Zoom Table parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Load zoom table through the interface in advance, each frame applies the zoom parameters in the table in turn to ensure smooth zoom effects.</p>
+</li>
+<li>
+<p>Call MI_ISP_SetOutputPortParam cyclically to set crop, which cannot guarantee the effective setting of each frame and cannot achieve smooth effect.</p>
+<table>
+<thead>
+<tr>
+<th>X0</th>
+<th>Y0</th>
+<th>W0</th>
+<th>H0</th>
+<th>SensorId=0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X1</td>
+<td>Y1</td>
+<td>W1</td>
+<td>H1</td>
+<td>SensorId=0</td>
+</tr>
+<tr>
+<td>X2</td>
+<td>Y2</td>
+<td>W2</td>
+<td>H2</td>
+<td>SensorId=1</td>
+</tr>
+<tr>
+<td>X3</td>
+<td>Y3</td>
+<td>W3</td>
+<td>H3</td>
+<td>SensorId=1</td>
+</tr>
+</tbody>
+</table>
+<p>The table contains crop position and corresponding sensorid information, sensorid information supports long and short focus switching scenes.</p>
+</li>
+<li>
+<p>The zoom function is completed by the cooperation of MI_ISP and MI_SCL. MI_ISP is responsible for the 3A effect and the long and short focus switching scenes during the zoom process to notify the sensor driver to switch the sensor. MI_SCL is responsible for cropping and scaling up, so in the zoom scene, MI_SCL can no longer use the crop function.</p>
+</li>
+<li>
+<p>During the operation of Zoom, you cannot load the table repeatedly, please use <a href="#222-mi_isp_stopportzoom">MI_ISP_StopPortZoom</a> first, and then load table.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="221-mi_isp_startportzoom">2.21. MI_ISP_StartPortZoom<a class="headerlink" href="#221-mi_isp_startportzoom" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Start ISP port Zoom.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_StartPortZoom(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ZoomAttr_t *pstZoomAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstZoomAttr</td>
+<td>Zoom Table parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<table>
+<thead>
+<tr>
+<th>X0</th>
+<th>Y0</th>
+<th>W0</th>
+<th>H0</th>
+<th>SensorId=0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X1</td>
+<td>Y1</td>
+<td>W1</td>
+<td>H1</td>
+<td>SensorId=0</td>
+</tr>
+<tr>
+<td>X2</td>
+<td>Y2</td>
+<td>W2</td>
+<td>H2</td>
+<td>SensorId=1</td>
+</tr>
+<tr>
+<td>X3</td>
+<td>Y3</td>
+<td>W3</td>
+<td>H3</td>
+<td>SensorId=1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>u32FromEntryIndex and u32ToEntryIndex are any one of index 0~3 in the table.</p>
+</li>
+<li>
+<p>When u32FromEntryIndex != u32ToEntryIndex, apply crop parameters from u32FromEntryIndex to u32ToEntryIndex frame by frame.</p>
+</li>
+<li>
+<p>When u32FromEntryIndex == u32ToEntryIndex, it will stop at the current u32FromEntryIndex parameter.</p>
+</li>
+<li>
+<p>When MI detects that the sensorid of the next entry is inconsistent with the current sensor id, the sensor driver will be notified of the sensor driver after the current frame is finished, and switch to the corresponding sensor.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#222-mi_isp_stopportzoom">MI_ISP_StopPortZoom</a></p>
+</li>
+</ul>
+<h3 id="222-mi_isp_stopportzoom">2.22. MI_ISP_StopPortZoom<a class="headerlink" href="#222-mi_isp_stopportzoom" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Stop ISP port Zoom.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_StopPortZoom(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Called in pair with <a href="#221-mi_isp_startportzoom">MI_ISP_StartPortZoom</a>.</p>
+</li>
+</ul>
+<h3 id="223-mi_isp_getportcurzoomattr">2.23. MI_ISP_GetPortCurZoomAttr<a class="headerlink" href="#223-mi_isp_getportcurzoomattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get ISP port current Zoom attribute.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetPortCurZoomAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ZoomAttr_t *pstZoomAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstZoomAttr</td>
+<td>Zoom attribute</td>
+<td>output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="224-mi_isp_setcustsegattr">2.24. MI_ISP_SetCustSegAttr<a class="headerlink" href="#224-mi_isp_setcustsegattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set AI ISP attribute.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetCustSegAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_CustSegAttr_t *pstCustSegAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstCustSegAttr</td>
+<td>AI ISP attribute</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p><img alt="" src="mymedia/isp/isp-4.svg" /></p>
+<ul>
+<li>
+<p>When the value of pstCustSegAttr&rarr;eMode is E_MI_ISP_CUST_SEG_MODE_INSERT or E_MI_ISP_CUST_SEG_MODE_REPLACE, AI ISP is enabled. MI ISP will be divided into pass0, pass1 and pass2 internally, and the functions are composed of hdr, 3dnr, wdr, rgb2yuv. Pass1 specifically provides raw buffer to the app.</p>
+</li>
+<li>
+<p>When AI ISP is enabled, isp rotation/mirror/flip is not supported.</p>
+</li>
+<li>
+<p>The combination of Pass0 and pass2 is as follows, which can be represented by <a href="#323-mi_isp_custsegattr_t">MI_ISP_CustSegAttr_t</a>.Note: The pass0 module serial number must be smaller than pass2.</p>
+<p>Pass0: HDR, HDR&rarr;3DNR, HDR&rarr;3DNR&rarr;WDR, HDR&rarr;3DNR&rarr;WDR&rarr;RGB2YUV</p>
+<p>Pass2: RGB2YUV, WDR&rarr;RGB2YUV, 3DNR&rarr;WDR&rarr;RGB2YUV, HDR&rarr;3DNR&rarr;WDR&rarr;RGB2YUV</p>
+<p><a href="#327-mi_isp_internalseg_e">E_MI_ISP_SEG_HDR</a> output is before 3DNR.</p>
+<p><a href="#327-mi_isp_internalseg_e">E_MI_ISP_SEG_3DNR</a> contains DNR Rotation/mirror/flip, and the output is before WDR.</p>
+<p><a href="#327-mi_isp_internalseg_e">E_MI_ISP_SEG_WDR</a> output is before RGB2YUV.</p>
+</li>
+<li>
+<p>pstCustSegAttr&rarr;eMode, pstCustSegAttr&rarr;eFrom and pstCustSegAttr&rarr;eTo are used to describe the functional composition of pass1.</p>
+<p><a href="#326-mi_isp_custsegmode_e">E_MI_ISP_CUST_SEG_MODE_INSERT</a>: Insert the app image in HDR&rarr;3DNR&rarr;WDR&rarr;RGB2YUV to process pass1.</p>
+<p><a href="#326-mi_isp_custsegmode_e">E_MI_ISP_CUST_SEG_MODE_REPLACE</a>: Replace the function of HDR, 3DNR, WDR, RGB2YUV. You can replace only 3DNR or WDR, or replace both of them.</p>
+<p>For example:</p>
+<ol>
+<li>
+<p>eFrom= E_MI_ISP_SEG_3DNR, eTo= E_MI_ISP_SEG_WDR, eMode= E_MI_ISP_CUST_SEG_MODE_INSERT</p>
+<p><img alt="" src="mymedia/isp/isp-5.svg" /></p>
+</li>
+<li>
+<p>eFrom= E_MI_ISP_SEG_3DNR, eTo= E_MI_ISP_SEG_WDR, eMode= E_MI_ISP_CUST_SEG_MODE_REPLACE</p>
+<p><img alt="" src="mymedia/isp/isp-6.svg" /></p>
+</li>
+<li>
+<p>eFrom= E_MI_ISP_SEG_3DNR, eTo= E_MI_ISP_SEG_3DNR, eMode= E_MI_ISP_CUST_SEG_MODE_REPLACE</p>
+<p><img alt="" src="mymedia/isp/isp-7.svg" /></p>
+</li>
+<li>
+<p>eFrom= E_MI_ISP_SEG_HDR, eTo= E_MI_ISP_SEG_HDR, eMode= E_MI_ISP_CUST_SEG_MODE_REPLACE</p>
+<p><img alt="" src="mymedia/isp/isp-8.svg" /></p>
+</li>
+<li>
+<p>eFrom= E_MI_ISP_SEG_RGB2YUV, eTo= E_MI_ISP_SEG_RGB2YUV, eMode= E_MI_ISP_CUST_SEG_MODE_REPLACE</p>
+<p><img alt="" src="mymedia/isp/isp-9.svg" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>MI_ISP_SetCustSegAttr should be called after MI_ISP_CreateChannel and before MI_ISP_StartChannel and MI_ISP_SetOutputPortParam.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>MI_ISP initialization:</p>
+<div class="codehilite"><pre><span></span>MI_S32 ST_IspModuleInit(MI_ISP_DEV IspDevId)
+{
+    MI_ISP_CHANNEL IspChnId = 0;
+    MI_ISP_PORT  IspOutPortId =1;
+
+    MI_ISP_DevAttr_t stCreateDevAttr;
+    memset(&amp;stCreateDevAttr, 0x0, sizeof(MI_ISP_DevAttr_t));
+    stCreateDevAttr.u32DevStitchMask = E_MI_ISP_DEVICE_ID0;
+
+    MI_ISP_CreateDevice(IspDevId, &amp;stCreateDevAttr);
+
+    MI_ISP_ChannelAttr_t  stIspChnAttr;
+    memset(&amp;stIspChnAttr, 0x0, sizeof(MI_ISP_ChannelAttr_t));
+    stIspChnAttr. u32SensorBindId = E_MI_ISP_SENSOR0;
+    MI_ISP_CreateChannel(IspDevId, IspChnId, &amp;stIspChnAttr);
+
+    MI_SYS_WindowRect_t  stInputCropInfo;
+    stInputCropInfo.u16x=0;
+    stInputCropInfo.u16y=0;
+    stInputCropInfo.u16width=0;
+    stInputCropInfo.u16height=0;//width/height==0 no use crop.
+    MI_ISP_SetInputPortCrop(IspDevId, IspChnId, &amp; stInputCropInfo);
+
+    MI_ISP_ChnParam_t  stChnParam;
+    stChnParam.eHDRType = E_MI_ISP_HDR_TYPE_OFF;
+    stChnParam.e3DNRLevel = E_MI_ISP_3DNR_LEVEL2;
+    stChnParam.bMirror = FALSE;
+    stChnParam.bFlip = FALSE;
+    stChnParam.eRot = E_MI_SYS_ROTATE_NONE;
+    stChnParam.bY2bEnable = FALSE;
+    MI_ISP_SetChnParam(IspDevId, IspChnId, &amp; stChnParam);
+
+    MI_ISP_CustSegAttr_t stCustSegAttr;
+    memset(&amp;stCustSegAttr, 0x0, sizeof(MI_ISP_CustSegAttr_t));
+    stCustSegAttr.eMode = E_MI_ISP_CUST_SEG_MODE_INSERT;
+    stCustSegAttr.eFrom = E_MI_ISP_SEG_3DNR;
+    stCustSegAttr.eTo = E_MI_ISP_SEG_WDR;
+    stCustSegAttr.stInputParam.ePixelFormat = RGB_BAYER_PIXEL(E_MI_SYS_DATA_PRECISION_12BPP, E_MI_SYS_PIXEL_BAYERID_GR);
+    stCustSegAttr.stOutputParam.ePixelFormat = stCustSegAttr.stInputParam.ePixelFormat;
+    MI_ISP_SetCustSegAttr(enDevId,enChnId, &amp;stCustSegAttr);
+
+    MI_ISP_StartChannel(IspDevId, IspChnId);
+
+    MI_ISP_OutPortParam_t  stIspOutputParam;
+    memset(&amp;stIspOutputParam, 0x0, sizeof(MI_ISP_OutPortParam_t));
+    stIspOutputParam.stCropRect.u16x=0;
+    stIspOutputParam.stCropRect.u16y=0;
+    stIspOutputParam.stCropRect.u16Width=0;
+    stIspOutputParam.stCropRect.u16Height=0;//width/height use 0, not use crop
+    stIspOutputParam.ePixelFormat = E_MI_SYS_PIXEL_FRAME_YUV_SEMIPLANAR_YUV420;
+    MI_ISP_SetOutputPortParam(IspDevId, IspChnId, IspOutPortId, &amp;stIspOutputParam);
+    MI_ISP_EnableOutputPort(IspDevId, IspChnId, IspOutPortId);
+
+    return MI_SUCCESS;
+}
+</pre></div>
+
+
+<p>Get raw:</p>
+<div class="codehilite"><pre><span></span>MI_SYS_BUF_HANDLE hBufHandle = NULL;
+MI_SYS_BufInfo_t stInputBufInfo;
+MI_SYS_BufInfo_t stOutputBufInfo;
+MI_U8 *pSrcData = NULL, *pDstData = NULL;
+
+memset(&amp;stInputBufInfo, 0, sizeof(MI_SYS_BufInfo_t));
+memset(&amp;stOutputBufInfo, 0, sizeof(MI_SYS_BufInfo_t));
+s32Ret = MI_ISP_GetCustSegBuf(stChnPort.u32DevId, stChnPort.u32ChnId, &amp;hBufHandle,
+                &amp;stInputBufInfo, &amp;stOutputBufInfo, 200);
+if(s32Ret == MI_SUCCESS)
+{
+    pSrcData = stInputBufInfo.stFrameData-&gt;pVirAddr[0];
+    pDstData = stOutputBufInfo.stFrameData-&gt;pVirAddr[0];
+    memcpy(pDstData, pSrcData, stOutputBufInfo.stFrameData.u32BufSize);
+    memset(pDstData, 0, stOutputBufInfo.stFrameData.u32BufSize/4);
+    MI_ISP_PutCustSegBuf(stChnPort.u32DevId, stChnPort.u32ChnId, hBufHandle);
+}
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="225-mi_isp_getcustsegattr">2.25. MI_ISP_GetCustSegAttr<a class="headerlink" href="#225-mi_isp_getcustsegattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get AI ISP attributes.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetCustSegAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_CustSegAttr_t *pstCustSegAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstCustSegAttr</td>
+<td>API ISP attribute</td>
+<td>output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="226-mi_isp_getcustsegbuf">2.26. MI_ISP_GetCustSegBuf<a class="headerlink" href="#226-mi_isp_getcustsegbuf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get AI ISP buffer.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetCustSegBuf(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId,MI_SYS_BUF_HANDLE *pBufHandle, MI_SYS_BufInfo_t *pstInputBufInfo, MI_SYS_BufInfo_t *pstOutputBufInfo, MI_S32 s32MilliSec);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pBufHandle,</td>
+<td>Pass1 input/output Buf handle</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>pstInputBufInfo</td>
+<td>Pass1 input buffer</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>pstOutputBufInfo</td>
+<td>Pass1 output buffer</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>s32MilliSec</td>
+<td>Timeout, unit: ms</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Used in pairs with <a href="#227-mi_isp_putcustsegbuf">MI_ISP_PutCustSegBuf</a>.</p>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to the example of <a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a>.</p>
+</li>
+</ul>
+<h3 id="227-mi_isp_putcustsegbuf">2.27. MI_ISP_PutCustSegBuf<a class="headerlink" href="#227-mi_isp_putcustsegbuf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Release AI ISP buffer.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_PutCustSegBuf(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_SYS_BUF_HANDLE bufHandle);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pBufHandle,</td>
+<td>Pass1 input/output Buf  handle</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Used in pairs with <a href="#226-mi_isp_getcustsegbuf">MI_ISP_GetCustSegBuf</a>.</p>
+</li>
+<li>
+<p><a href="#227-mi_isp_putcustsegbuf">MI_ISP_PutCustSegBuf</a> should be called in the order as <a href="#226-mi_isp_getcustsegbuf">MI_ISP_GetCustSegBuf</a> gets buffer.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to the example of <a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a>.</p>
+</li>
+</ul>
+<h3 id="228-mi_isp_getsubchnid">2.28. MI_ISP_GetSubChnId<a class="headerlink" href="#228-mi_isp_getsubchnid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get ISP subchannel ID</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetSubChnId(MI_ISP_DEV DevId, MI_ISP_CHANNEL MainChnId,
+MI_ISP_BindSnrId_e eSensorBindId, MI_U32 *pu32SubChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>MainChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>eSensorBindId</td>
+<td>Sensor  ID of subchannel binding</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pu32SubChnId</td>
+<td>ISP subchannel ID</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>In the scene of Stitch, an MI_ISP channel will bind multiple sensors, when IQ wants to control the corresponding sensors, you need to input MI_ISP dev ID, MI_ISP channel ID and sensor ID to get the corresponding subchannel ID, that is, the channel used by IQ.</p>
+</li>
+<li>
+<p>In other cases, the channel used by IQ is the same as MI_ISP channel ID.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="229-mi_isp_setsubchnparam">2.29. MI_ISP_SetSubChnParam<a class="headerlink" href="#229-mi_isp_setsubchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set ISP subchannel parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetSubChnParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId,
+MI_ISP_SUB_CHANNEL SubChnId, MI_ISP_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>MainChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>SubChnId</td>
+<td>ISP  subchannel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>ISP subchannel  parameter pointer</td>
+<td>Intput</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>It is recommended to switch the sub channel parameters when the channel is stopped to avoid mismatch between the buffer and back-end parameters in the channel, which may cause an exception.</p>
+</li>
+<li>
+<p>Make sure width/height of input and output to be the same between sub channels when setting eRot. E_MI_SYS_ROTATE_90/ E_MI_SYS_ROTATE_270, or E_MI_SYS_ROTATE_NONE/ E_MI_SYS_ROTATE_180.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="230-mi_isp_getsubchnparam">2.30. MI_ISP_GetSubChnParam<a class="headerlink" href="#230-mi_isp_getsubchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get ISP subchannel parameter.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetSubChnParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId,
+MI_ISP_SUB_CHANNEL SubChnId, MI_ISP_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>MainChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>SubChnId</td>
+<td>ISP  sub channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>ISP sub channel  parameter pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="231-mi_isp_setchnoverlapattr">2.31. MI_ISP_SetChnOverlapAttr<a class="headerlink" href="#231-mi_isp_setchnoverlapattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set ISP channel overlap attribute</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetChnOverlapAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId,
+MI_ISP_Overlap_e eOverlap);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>eOverlap</td>
+<td>overlap</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Overlay is used to merge left and right of image smoothly.</p>
+</li>
+<li>
+<p>Overlay can only take effect when parameter DevId = MI_ISP_CREATE_MULTI_DEV(MI_ISP_DEV0) in calling MI_ISP_CreateDevice, and value of parameter pstChAttr-&gt;u32SensorBindId is one sensor in calling MI_ISP_CreateChannel.</p>
+</li>
+<li>
+<p>E_MI_ISP_OVERLAP_128 will read more 128 pixels. E_MI_ISP_OVERLAP_256 will read more 256 pixels.</p>
+</li>
+<li>
+<p>When eOverlap = E_MI_ISP_OVERLAP_256, run as below.</p>
+<p><img alt="" src="mymedia/isp/isp-13.svg" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="232-mi_isp_getchnoverlapattr">2.32. MI_ISP_GetChnOverlapAttr<a class="headerlink" href="#232-mi_isp_getchnoverlapattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get ISP channel overlap attribute</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetChnOverlapAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId,
+MI_ISP_Overlap_e *peOverlap);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP device ID.</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP channel ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>peOverlap</td>
+<td>overlap</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return value</p>
+<ul>
+<li>
+<p>MI_SUCCESS (0) successful.</p>
+</li>
+<li>
+<p>Non-Zero: failed, see <a href="#4-isp-error-code">error code</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_isp_datatype.h, mi_isp.h</p>
+</li>
+<li>
+<p>Library: libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-isp-data-type">3.  ISP Data type<a class="headerlink" href="#3-isp-data-type" title="Permanent link">&para;</a></h2>
+<p>Video input related data type definition is as following:</p>
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#31-mi_isp_dev">MI_ISP_DEV</a></td>
+<td>Define ISP device type</td>
+</tr>
+<tr>
+<td><a href="#32-mi_isp_channel">MI_ISP_CHANNEL</a></td>
+<td>Define ISP channel type</td>
+</tr>
+<tr>
+<td><a href="#33-mi_isp_port">MI_ISP_PORT</a></td>
+<td>Define ISP port type</td>
+</tr>
+<tr>
+<td><a href="#34-mi_isp_devmaskid_e">MI_ISP_DevMaskId_e</a></td>
+<td>Define the device ID used by the mask for the ISP device</td>
+</tr>
+<tr>
+<td><a href="#35-mi_isp_devattr_t">MI_ISP_DevAttr_t</a></td>
+<td>Define ISP device attribute  parameter</td>
+</tr>
+<tr>
+<td><a href="#36-mi_isp_hdrtype_e">MI_ISP_HDRType_e</a></td>
+<td>Define HDR switch mode</td>
+</tr>
+<tr>
+<td><a href="#37-mi_isp_3dnr_level_e">MI_ISP_3DNR_Level_e</a></td>
+<td>Define 3DNR setting level</td>
+</tr>
+<tr>
+<td><a href="#38-mi_isp_bindsnrid_e">MI_ISP_BindSnrId_e</a></td>
+<td>Define the sensor ID bound to the ISP</td>
+</tr>
+<tr>
+<td><a href="#39-mi_isp_sync3a_e">MI_ISP_SYNC3A_e</a></td>
+<td>Synchronize 3A parameters of  each channel</td>
+</tr>
+<tr>
+<td><a href="#310-mi_isp_iqapiheader_t">MI_ISP_IQApiHeader_t</a></td>
+<td>Define IQ api data type</td>
+</tr>
+<tr>
+<td><a href="#311-mi_isp_versionpara_t">MI_ISP_VersionPara_t</a></td>
+<td>Define ISP special parameter  version</td>
+</tr>
+<tr>
+<td><a href="#312-mi_isp_custiqparam_t">MI_ISP_CustIQParam_t</a></td>
+<td>Define ISP initialization  parameter</td>
+</tr>
+<tr>
+<td><a href="#313-mi_isp_channelattr_t">MI_ISP_ChannelAttr_t</a></td>
+<td>Define ISP channel static  attribute parameter</td>
+</tr>
+<tr>
+<td><a href="#314-mi_isp_chnparam_t">MI_ISP_ChnParam_t</a></td>
+<td>Define ISP channel dynamic  attribute parameter</td>
+</tr>
+<tr>
+<td><a href="#315-mi_isp_outportparam_t">MI_ISP_OutPortParam_t</a></td>
+<td>Define ISP output port  parameter</td>
+</tr>
+<tr>
+<td><a href="#316-mi_isp_callbk_func">MI_ISP_CALLBK_FUNC</a></td>
+<td>Define callback function type</td>
+</tr>
+<tr>
+<td><a href="#317-mi_isp_callbackmode_e">MI_ISP_CallBackMode_e</a></td>
+<td>Define callback mode</td>
+</tr>
+<tr>
+<td><a href="#318-mi_isp_irqtype_e">MI_ISP_IrqType_e</a></td>
+<td>Define hardware interrupt type</td>
+</tr>
+<tr>
+<td><a href="#319-mi_isp_callbackparam_t">MI_ISP_CallBackParam_t</a></td>
+<td>Define callback parameter</td>
+</tr>
+<tr>
+<td><a href="#320-mi_isp_zoomentry_t">MI_ISP_ZoomEntry_t</a></td>
+<td>Define the Zoom cell entry type</td>
+</tr>
+<tr>
+<td><a href="#321-mi_isp_zoomtable_t">MI_ISP_ZoomTable_t</a></td>
+<td>Define Zoom Table type</td>
+</tr>
+<tr>
+<td><a href="#322-mi_isp_zoomattr_t">MI_ISP_ZoomAttr_t</a></td>
+<td>Define Zoom attribute</td>
+</tr>
+<tr>
+<td><a href="#323-mi_isp_custsegattr_t">MI_ISP_CustSegAttr_t</a></td>
+<td>Define AI ISP attribute</td>
+</tr>
+<tr>
+<td><a href="#324-mi_isp_custseginportparam_t">MI_ISP_CustSegInPortParam_t</a></td>
+<td>Pass1 input port attribute</td>
+</tr>
+<tr>
+<td><a href="#325-mi_isp_custsegoutportparam_t">MI_ISP_CustSegOutPortParam_t</a></td>
+<td>Pass1 output port attribute</td>
+</tr>
+<tr>
+<td><a href="#326-mi_isp_custsegmode_e">MI_ISP_CustSegMode_e</a></td>
+<td>AI ISP mode</td>
+</tr>
+<tr>
+<td><a href="#327-mi_isp_internalseg_e">MI_ISP_InternalSeg_e</a></td>
+<td>ISP module name</td>
+</tr>
+<tr>
+<td><a href="#328-mi_isp_bufferlayout_e">MI_ISP_BufferLayout_e</a></td>
+<td>ISP buffer layout</td>
+</tr>
+<tr>
+<td><a href="#329-mi_isp_overlap_e">MI_ISP_Overlap_e</a></td>
+<td>ISP overlap.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-mi_isp_dev">3.1. MI_ISP_DEV<a class="headerlink" href="#31-mi_isp_dev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP device type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_ISP_DEV;
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="32-mi_isp_channel">3.2. MI_ISP_CHANNEL<a class="headerlink" href="#32-mi_isp_channel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP channel type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_ISP_CHANNEL;
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="33-mi_isp_port">3.3. MI_ISP_PORT<a class="headerlink" href="#33-mi_isp_port" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP port type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_ISP_PORT;
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="34-mi_isp_devmaskid_e">3.4. MI_ISP_DevMaskId_e<a class="headerlink" href="#34-mi_isp_devmaskid_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define the device ID used by the mask for the ISP device.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_ISP_DEVICEMASK_ID0 = 0x0001,
+
+    E_MI_ISP_DEVICEMASK_ID1 = 0x0002,
+
+    E_MI_ISP_DEVICEMASK_ID_MAX = 0xffff
+
+} MI_ISP_DevMaskId_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Note</p>
+<p>ISP E_MI_ISP_DEVICEMASK_ID0 only used by Tiramisu / Mochi / Maruko.</p>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a></p>
+</li>
+</ul>
+<h3 id="35-mi_isp_devattr_t">3.5. MI_ISP_DevAttr_t<a class="headerlink" href="#35-mi_isp_devattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP device attribute parameter.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_DevAttr_s
+
+{
+
+    MI_U32  u32DevStitchMask; //multi ISP dev bitmask by MI_ISP_DevMaskId_e
+
+}MI_ISP_DevAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32DevStitchMask</td>
+<td>ISP DEV ID mask.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>u32DevStitchMask is composed of MI_ISP_DevMaskId_e and bitmask. If the processing speed of an isp device on the channel cannot meet the requirements, you can use this parameter to reuse another Device, but another device can no longer be created.</p>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a></p>
+</li>
+</ul>
+<h3 id="36-mi_isp_hdrtype_e">3.6. MI_ISP_HDRType_e<a class="headerlink" href="#36-mi_isp_hdrtype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define HDR switch mode.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_ISP_HDR_TYPE_OFF,
+
+    E_MI_ISP_HDR_TYPE_VC = 0x1,
+
+    E_MI_ISP_HDR_TYPE_DOL = 0x2,
+
+    E_MI_ISP_HDR_TYPE_EMBEDDED = 0x4,
+
+    E_MI_ISP_HDR_TYPE_LI = 0x8,
+
+    E_MI_ISP_HDR_TYPE_MAX
+
+} MI_ISP_HDRType_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_OFF</td>
+<td>Turn off HDR</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_VC</td>
+<td>virtual channel mode HDR,  vc0-&gt;long,vc1-&gt;short</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_DOL</td>
+<td>Digital Overlap High Dynamic Range</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_EMBEDDED</td>
+<td>compressed HDR mode</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_LI</td>
+<td>Line interlace HDR</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_MAX</td>
+<td>HDR boundary value</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>The HDR Type used can be obtained through the MI_SNR_GetPadInfo interface.</p>
+</li>
+<li>
+<p>The HDR function requires the cooperation of MI_VIF and MI_ISP modules, and the same HDR type needs to be set on both sides.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#314-mi_isp_chnparam_t">MI_ISP_ChnParam_t</a></p>
+</li>
+</ul>
+<h3 id="37-mi_isp_3dnr_level_e">3.7. MI_ISP_3DNR_Level_e<a class="headerlink" href="#37-mi_isp_3dnr_level_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define 3DNR setting level.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_3DNR_LEVEL_OFF,
+    E_MI_ISP_3DNR_LEVEL1,
+    E_MI_ISP_3DNR_LEVEL2,
+    E_MI_ISP_3DNR_LEVEL3,
+    E_MI_ISP_3DNR_LEVEL4,
+    E_MI_ISP_3DNR_LEVEL5,
+    E_MI_ISP_3DNR_LEVEL6,
+    E_MI_ISP_3DNR_LEVEL7,
+    E_MI_ISP_3DNR_LEVEL_NUM
+}MI_ISP_3DNR_Level_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Note</p>
+<p>The higher the level, the better the noise reduction effect and the more buffer consumed.</p>
+<table>
+<thead>
+<tr>
+<th>Chip</th>
+<th>3DNR support max level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiramisu</td>
+<td>E_MI_ISP_3DNR_LEVEL2</td>
+</tr>
+<tr>
+<td>Muffin</td>
+<td>E_MI_ISP_3DNR_LEVEL2</td>
+</tr>
+<tr>
+<td>Mochi</td>
+<td>E_MI_ISP_3DNR_LEVEL7</td>
+</tr>
+<tr>
+<td>Maruko</td>
+<td>E_MI_ISP_3DNR_LEVEL7</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#314-mi_isp_chnparam_t">MI_ISP_ChnParam_t</a></p>
+</li>
+</ul>
+<h3 id="38-mi_isp_bindsnrid_e">3.8. MI_ISP_BindSnrId_e<a class="headerlink" href="#38-mi_isp_bindsnrid_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define the sensor ID bound to the ISP.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_SENSOR_INVALID = 0,
+    E_MI_ISP_SENSOR0 = 0x1,
+    E_MI_ISP_SENSOR1 = 0x2,
+    E_MI_ISP_SENSOR2 = 0x4,
+    E_MI_ISP_SENSOR3 = 0x8,
+    E_MI_ISP_SENSOR4 = 0x10,
+    E_MI_ISP_SENSOR5 = 0x20,
+    E_MI_ISP_SENSOR6 = 0x40,
+    E_MI_ISP_SENSOR7 = 0x80,
+    E_MI_ISP_SENSOR_MAX = 8
+}MI_ISP_BindSnrId_e;
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="39-mi_isp_sync3a_e">3.9. MI_ISP_SYNC3A_e<a class="headerlink" href="#39-mi_isp_sync3a_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Synchronize 3A parameters of each channel.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+E_MI_ISP_SYNC3A_NONE = 0x00,
+E_MI_ISP_SYNC3A_AE   = 0x01,
+E_MI_ISP_SYNC3A_AWB  = 0x02,
+E_MI_ISP_SYNC3A_IQ   = 0x04
+}MI_ISP_SYNC3A_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_SYNC3A_NONE</td>
+<td>Async 3A</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SYNC3A_AE</td>
+<td>Sync AE</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SYNC3A_AWB</td>
+<td>Sync AWB</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SYNC3A_IQ</td>
+<td>Sync IQ parameter setting</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="310-mi_isp_iqapiheader_t">3.10. MI_ISP_IQApiHeader_t<a class="headerlink" href="#310-mi_isp_iqapiheader_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define IQ api data type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_IQApiHeader_s
+{
+    MI_U32 u32HeadSize;    //Size of MIIspApiHeader_t
+    MI_U32 u32DataLen;     //Data length;
+    MI_U32 u32CtrlID;      //Function ID
+    MI_U32 u32Channel;     //Isp channel number
+    MI_U32 u32DevId;    //Isp Device Id
+    MI_S32 s32Ret;         //Isp api retuen value
+} MI_ISP_IQApiHeader_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32HeadSize</td>
+<td>MI_ISP_IQApiHeader_t struct takes up space</td>
+</tr>
+<tr>
+<td>u32DataLen</td>
+<td>Data size</td>
+</tr>
+<tr>
+<td>u32CtrlID</td>
+<td>Function corresponding control Id</td>
+</tr>
+<tr>
+<td>u32Channel</td>
+<td>Isp channel Id</td>
+</tr>
+<tr>
+<td>u32DevId</td>
+<td>Isp device Id</td>
+</tr>
+<tr>
+<td>s32Ret</td>
+<td>Interface return value</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="311-mi_isp_versionpara_t">3.11. MI_ISP_VersionPara_t<a class="headerlink" href="#311-mi_isp_versionpara_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP special parameter version.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_VersionPara_s
+{
+    MI_U32 u32Revision;
+    MI_U32 u32Size;
+    MI_U8 u8Data[VERSIONPARA_DATA_SIZE];
+}MI_ISP_VersionPara_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Revision</td>
+<td>Negotiate with IQ team  to define the corresponding version number</td>
+</tr>
+<tr>
+<td>u32Size</td>
+<td>Data corresponds to  effective size</td>
+</tr>
+<tr>
+<td>u8Data[VERSIONPARA_DATA_SIZE]</td>
+<td>Store data, the value  of VERSIONPARA_DATA_SIZE is 64</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#312-mi_isp_custiqparam_t">MI_ISP_CustIQParam_t</a></p>
+</li>
+</ul>
+<h3 id="312-mi_isp_custiqparam_t">3.12. MI_ISP_CustIQParam_t<a class="headerlink" href="#312-mi_isp_custiqparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP initialization parameter.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CustIQParam_s
+{
+    MI_ISP_VersionPara_t  stVersion;
+}MI_ISP_CustIQParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stVersion</td>
+<td>Version parameter</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>Some IQ initialization parameters that require ISP customized processing can be set through this parameter. If there is no requirement, you can set all of them to 0.</p>
+</li>
+</ul>
+<h3 id="313-mi_isp_channelattr_t">3.13. MI_ISP_ChannelAttr_t<a class="headerlink" href="#313-mi_isp_channelattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP channel static attribute parameter.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ChannelAttr_s
+{
+    MI_U32  u32SensorBindId; //bitmask by MI_ISP_BindSnrId_e
+    MI_ISP_CustIQParam_t stIspCustIqParam;
+    MI_U32  u32Sync3AType; //sync 3a bitmask by MI_ISP_SYNC3A_e
+}MI_ISP_ChannelAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32SensorBindId</td>
+<td>Sensor Id  corresponding to channel binding</td>
+</tr>
+<tr>
+<td>stIspCustIqParam</td>
+<td>Isp IQ initialization  parameter</td>
+</tr>
+<tr>
+<td>u32Sync3AType</td>
+<td>Sync the 3A/IQ  parameters between multiple groups of images in the channel</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>When a multi-sensor splicing scene, one ISP channel needs to process multiple sensor images, you need to set up multiple sensor Id bitmasks through u32SensorBindId, otherwise only the corresponding sensor Id interface is set. If you do not need ISP to do IQ/3A, or the front-end data source is not sensor, you can set it to 0.</p>
+</li>
+<li>
+<p>When multi-sensor splicing scenes, one ISP channel needs to process multiple sensor images, set the 3A/IQ effect synchronization between multiple images through u32Sync3AType to avoid excessive differences in effects between the two images.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#23-mi_isp_createchannel">MI_ISP_CreateChannel</a></p>
+</li>
+</ul>
+<h3 id="314-mi_isp_chnparam_t">3.14. MI_ISP_ChnParam_t<a class="headerlink" href="#314-mi_isp_chnparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP channel dynamic attribute parameter.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ChnParam_s
+{
+    MI_ISP_HDRType_e      eHDRType;
+    MI_ISP_3DNR_Level_e   e3DNRLevel;
+    MI_BOOL               bMirror;
+    MI_BOOL               bFlip;
+    MI_SYS_Rotate_e       eRot;
+    MI_BOOL              bY2bEnable;
+} MI_ISP_ChnParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eHDRType</td>
+<td>HDR switch parameter</td>
+</tr>
+<tr>
+<td>e3DNRLevel</td>
+<td>3dnr lever</td>
+</tr>
+<tr>
+<td>bMirror</td>
+<td>Enable channel mirror</td>
+</tr>
+<tr>
+<td>bFlip</td>
+<td>Enable channel flip</td>
+</tr>
+<tr>
+<td>eRot</td>
+<td>Channel rotation  parameter</td>
+</tr>
+<tr>
+<td>bY2bEnable</td>
+<td>Enable the conversion function of yuv to bayer</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Non Maruko chip, when eRot &gt; 0 or bflip = true, e3dnrlevel must be greater than 0.</p>
+</li>
+<li>
+<p>bY2bEnable is only supported by Muffin and only supported when the input port is Frame Mode.</p>
+</li>
+<li>
+<p>Mochi does not support HDR/Mirror/Flip/Rot/Y2bEnable.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#27-mi_isp_setchnparam">MI_ISP_SetChnParam</a></p>
+</li>
+</ul>
+<h3 id="315-mi_isp_outportparam_t">3.15. MI_ISP_OutPortParam_t<a class="headerlink" href="#315-mi_isp_outportparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define ISP output port parameter.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_OutPortParam_s
+{
+    MI_SYS_WindowRect_t stCropRect;
+    MI_SYS_PixelFormat_e  ePixelFormat;
+    MI_SYS_CompressMode_e eCompressMode;
+    MI_ISP_BufferLayout_e eBufLayout;
+}MI_ISP_OutPortParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stCropRect</td>
+<td>Output crop area</td>
+</tr>
+<tr>
+<td>ePixelFormat</td>
+<td>Pixel format</td>
+</tr>
+<tr>
+<td>eCompressMode</td>
+<td>Output compress mode</td>
+</tr>
+<tr>
+<td>eBufLayout</td>
+<td>Output image buffer layout</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>eCompressMode support range:</p>
+<table>
+<thead>
+<tr>
+<th>Chip</th>
+<th>Output compress mode supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiramisu</td>
+<td>E_MI_SYS_COMPRESS_MODE_NONE</td>
+</tr>
+<tr>
+<td>Muffin</td>
+<td>E_MI_SYS_COMPRESS_MODE_NONE</td>
+</tr>
+<tr>
+<td>Mochi</td>
+<td>E_MI_SYS_COMPRESS_MODE_NONE  <br>E_MI_SYS_COMPRESS_MODE_TO_6BIT</td>
+</tr>
+<tr>
+<td>Maruko</td>
+<td>E_MI_SYS_COMPRESS_MODE_TO_6BIT</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>E_MI_SYS_COMPRESS_MODE_10TO6 limit</p>
+<p><table>
+    <tr>
+        <th colspan=2>Output_Compress_10TO6</th>
+        <th>Mochi</th>
+        <th>Maruko</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Pixel</td>
+        <td>yuv420SP NV12</td>
+        <td>Y</td>
+        <td>Y</td>
+    </tr>
+    <tr>
+        <td>yuv422 YUYV</td>
+        <td>Y</td>
+        <td>Y</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Pixel Alignment (WxH)</td>
+        <td>yuv420SP NV12</td>
+        <td>16x2</td>
+        <td>16x2</td>
+    </tr>
+    <tr>
+        <td>yuv422 YUYV</td>
+        <td>2x2</td>
+        <td>2x2</td>
+    </tr>
+</table></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="316-mi_isp_callbk_func">3.16. MI_ISP_CALLBK_FUNC<a class="headerlink" href="#316-mi_isp_callbk_func" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define callback function type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_S32 (*MI_ISP_CALLBK_FUNC)(MI_U64 u64Data);
+</pre></div>
+
+
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#319-mi_isp_callbackparam_t">MI_ISP_CallBackParam_t</a></p>
+</li>
+</ul>
+<h3 id="317-mi_isp_callbackmode_e">3.17. MI_ISP_CallBackMode_e<a class="headerlink" href="#317-mi_isp_callbackmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define callback mode.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_CALLBACK_ISR,
+    E_MI_ISP_CALLBACK_MAX,
+} MI_ISP_CallBackMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_CALLBACK_ISR</td>
+<td>Hardware interrupt mode callback</td>
+</tr>
+<tr>
+<td>E_MI_ISP_CALLBACK_MAX</td>
+<td>Maximum value of callback mode</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>Currently only supports ISR callback mode.</p>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#319-mi_isp_callbackparam_t">MI_ISP_CallBackParam_t</a></p>
+</li>
+</ul>
+<h3 id="318-mi_isp_irqtype_e">3.18. MI_ISP_IrqType_e<a class="headerlink" href="#318-mi_isp_irqtype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define hardware interrupt type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_IRQ_ISPVSYNC,
+    E_MI_ISP_IRQ_ISPFRAMEDONE,
+    E_MI_ISP_IRQ_MAX,
+} MI_ISP_IrqType_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_IRQ_ISPVSYNC</td>
+<td>ISP Vsync interrupt type</td>
+</tr>
+<tr>
+<td>E_MI_ISP_IRQ_ISPFRAMEDONE</td>
+<td>ISP Frame done interrupt type</td>
+</tr>
+<tr>
+<td>E_MI_ISP_IRQ_MAX</td>
+<td>ISP hardware interrupt  type maximum</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>E_MI_VPE_IRQ_ISPVSYNC: The signal of the first pixel in each frame.</p>
+</li>
+<li>
+<p>E_MI_VPE_IRQ_ISPFRAMEDONE: The signal at the end of each frame written by isp.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#319-mi_isp_callbackparam_t">MI_ISP_CallBackParam_t</a></p>
+</li>
+</ul>
+<h3 id="319-mi_isp_callbackparam_t">3.19. MI_ISP_CallBackParam_t<a class="headerlink" href="#319-mi_isp_callbackparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define callback parameter.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CallBackParam_s
+{
+    MI_ISP_CallBackMode_e eCallBackMode;
+    MI_ISP_IrqType_e  eIrqType;
+    MI_ISP_CALLBK_FUNC  pfnCallBackFunc;
+    MI_U64    u64Data;
+} MI_ISP_CallBackParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eCallBackMode</td>
+<td>Callback mode</td>
+</tr>
+<tr>
+<td>eIrqType</td>
+<td>Hardware interrupt  mode type</td>
+</tr>
+<tr>
+<td>pfnCallBackFunc</td>
+<td>Callback interface  pointer</td>
+</tr>
+<tr>
+<td>u64Data</td>
+<td>Callback interface  parameter</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>None.</p>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#217-mi_isp_callbacktask_register">MI_ISP_CallBackTask_Register</a></p>
+<p><a href="#218-mi_isp_callbacktask_unregister">MI_ISP_CallBackTask_Unregister</a></p>
+</li>
+</ul>
+<h3 id="320-mi_isp_zoomentry_t">3.20. MI_ISP_ZoomEntry_t<a class="headerlink" href="#320-mi_isp_zoomentry_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define the Zoom cell entry type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ZoomEntry_s
+
+{
+
+    MI_SYS_WindowRect_t stCropWin;
+
+    MI_U8 u8ZoomSensorId;
+
+    MI_SYS_PixelFormat_e eSensorPixFormat;
+
+    MI_SYS_WindowSize_t  stSensorRes;
+} MI_ISP_ZoomEntry_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stCropWin</td>
+<td>Crop position parameter</td>
+</tr>
+<tr>
+<td>u8ZoomSensorId</td>
+<td>The sensor Id corresponding to the Crop parameter</td>
+</tr>
+<tr>
+<td>eSensorPixFormat</td>
+<td>The sensor PixelFormat corresponding to the Crop parameter</td>
+</tr>
+<tr>
+<td>stSensorRes</td>
+<td>The sensor Resolution corresponding to the Crop parameter</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>u8ZoomSensorId corresponds to the return value of the pCus_sensor_GetCurSwtichSensorId callback function in the sensor driver.</p>
+<p>eSensorPixFormat is the piexl of the front-end sensor corresponding to the current ZoomEntry, stSensorRes is the resolution of the front-end sensor corresponding to the current ZoomEntry,these two parameters need to be set when switching sensors with different resolutions.</p>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#321-mi_isp_zoomtable_t">MI_ISP_ZoomTable_t</a></p>
+</li>
+</ul>
+<h3 id="321-mi_isp_zoomtable_t">3.21. MI_ISP_ZoomTable_t<a class="headerlink" href="#321-mi_isp_zoomtable_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define Zoom Table type.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ZoomTable_s
+{
+    MI_U32 u32EntryNum;
+    MI_ISP_ZoomEntry_t *pVirTableAddr;
+} MI_ISP_ZoomTable_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32EntryNum</td>
+<td>Number  of entries in the Zoom Table</td>
+</tr>
+<tr>
+<td>pVirTableAddr</td>
+<td>Zoom  Table Buffer Pointer</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#220-mi_isp_loadportzoomtable">MI_ISP_LoadPortZoomTable</a></p>
+</li>
+</ul>
+<h3 id="322-mi_isp_zoomattr_t">3.22. MI_ISP_ZoomAttr_t<a class="headerlink" href="#322-mi_isp_zoomattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define Zoom attribute.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ZoomAttr_s
+
+{
+
+    MI_U32 u32FromEntryIndex;
+
+    MI_U32 u32ToEntryIndex;
+
+    MI_U32 u32CurEntryIndex;
+
+} MI_ISP_ZoomAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FromEntryIndex</td>
+<td>Start  to run Zoom entry index</td>
+</tr>
+<tr>
+<td>u32ToEntryIndex</td>
+<td>Stop  to run Zoom entry index</td>
+</tr>
+<tr>
+<td>u32CurEntryIndex</td>
+<td>Index  of current Zoom position</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#221-mi_isp_startportzoom">MI_ISP_StartPortZoom</a></p>
+<p><a href="#223-mi_isp_getportcurzoomattr">MI_ISP_GetPortCurZoomAttr</a></p>
+</li>
+</ul>
+<h3 id="323-mi_isp_custsegattr_t">3.23. MI_ISP_CustSegAttr_t<a class="headerlink" href="#323-mi_isp_custsegattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define AI ISP attribute.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CustSegAttr_s
+{
+    MI_ISP_CustSegMode_e        eMode;
+    MI_ISP_InternalSeg_e         eFrom;
+    MI_ISP_InternalSeg_e         eTo;
+    MI_ISP_CustSegInPortParam_t  stInputParam;
+    MI_ISP_CustSegOutPortParam_t stOutputParam;
+} MI_ISP_CustSegAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eMode</td>
+<td>Pass1  mode</td>
+</tr>
+<tr>
+<td>eFrom</td>
+<td>Head  module of Pass1</td>
+</tr>
+<tr>
+<td>eTo</td>
+<td>End  module of Pass1</td>
+</tr>
+<tr>
+<td>stInputParam</td>
+<td>Pass1  input port attribute</td>
+</tr>
+<tr>
+<td>stOutputParam</td>
+<td>Pass1  output port attribute</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>For parameter function, please refer to the description of <a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a>.</p>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="324-mi_isp_custseginportparam_t">3.24. MI_ISP_CustSegInPortParam_t<a class="headerlink" href="#324-mi_isp_custseginportparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Pass1 input port attribute.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CustSegInPortParam_s
+{
+    MI_SYS_PixelFormat_e ePixelFormat;
+} MI_ISP_CustSegInPortParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePixelFormat</td>
+<td>Data  format</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Before 3DNR only supports 12bit bayer and 16bit bayer input and output.</p>
+</li>
+<li>
+<p>Before WDR only supports 16bit bayer input and output.</p>
+</li>
+<li>
+<p>Before RGB2YUV only supports the input and output of E_MI_SYS_PIXEL_FRAME_ARGB8888 and E_MI_SYS_PIXEL_FRAME_RGB101010.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="325-mi_isp_custsegoutportparam_t">3.25. MI_ISP_CustSegOutPortParam_t<a class="headerlink" href="#325-mi_isp_custsegoutportparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Pass1 output port attribute.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CustSegOutPortParam_s
+
+{
+
+​     MI_SYS_PixelFormat_e ePixelFormat;
+
+} MI_ISP_CustSegOutPortParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePixelFormat</td>
+<td>Data  format</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Before 3DNR only supports 12bit bayer and 16bit bayer input and output.</p>
+</li>
+<li>
+<p>Before WDR only supports 16bit bayer input and output.</p>
+</li>
+<li>
+<p>Before RGB2YUV only supports the input and output of E_MI_SYS_PIXEL_FRAME_ARGB8888 and E_MI_SYS_PIXEL_FRAME_RGB101010.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="326-mi_isp_custsegmode_e">3.26. MI_ISP_CustSegMode_e<a class="headerlink" href="#326-mi_isp_custsegmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>AI ISP mode.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+​     E_MI_ISP_CUST_SEG_MODE_NONE = 0,
+
+​     E_MI_ISP_CUST_SEG_MODE_INSERT,
+
+​     E_MI_ISP_CUST_SEG_MODE_REPLACE,
+
+​     E_MI_ISP_CUST_SEG_MODE_MAX
+
+} MI_ISP_CustSegMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_CUST_SEG_MODE_NONE</td>
+<td>Disable  AI ISP</td>
+</tr>
+<tr>
+<td>E_MI_ISP_CUST_SEG_MODE_INSERT</td>
+<td>Insert  mode</td>
+</tr>
+<tr>
+<td>E_MI_ISP_CUST_SEG_MODE_REPLACE</td>
+<td>Replacement  mode</td>
+</tr>
+<tr>
+<td>E_MI_ISP_CUST_SEG_MODE_MAX</td>
+<td>Maximum  value</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="327-mi_isp_internalseg_e">3.27. MI_ISP_InternalSeg_e<a class="headerlink" href="#327-mi_isp_internalseg_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>ISP module name.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_SEG_INVALID = 0,
+    E_MI_ISP_SEG_HDR,     // HDR
+    E_MI_ISP_SEG_3DNR,    // 3DNR
+    E_MI_ISP_SEG_WDR,     // WDR
+    E_MI_ISP_SEG_RGB2YUV, // RGB2YUV
+    E_MI_ISP_SEG_MAX
+} MI_ISP_InternalSeg_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_SEG_INVALID</td>
+<td>Invalid  module</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_HDR</td>
+<td>HDR  module</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_3DNR</td>
+<td>DNR,Rotation/mirror/flip  module</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_WDR</td>
+<td>WDR  module</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_RGB2YUV</td>
+<td>RGB2YUV  module</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_MAX</td>
+<td>Maximum  value</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="328-mi_isp_bufferlayout_e">3.28. MI_ISP_BufferLayout_e<a class="headerlink" href="#328-mi_isp_bufferlayout_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>ISP buffer layout.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_BUFFER_LAYOUT_ONE_FRAME,
+    E_MI_ISP_BUFFER_LAYOUT_MULTI_PLANE,
+    E_MI_ISP_BUFFER_LAYOUT_MAX,
+} MI_ISP_BufferLayout_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_BUFFER_LAYOUT_ONE_FRAME</td>
+<td>Data  layout in one buffer</td>
+</tr>
+<tr>
+<td>E_MI_ISP_BUFFER_LAYOUT_MULTI_PLANE</td>
+<td>Data  layout in multi buffer</td>
+</tr>
+<tr>
+<td>E_MI_ISP_BUFFER_LAYOUT_MAX</td>
+<td>Maximum  value</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Only in stitch mode, eBufLayout can set E_MI_ISP_BUFFER_LAYOUT_MULTI_PLANE. In this case, buffer type of output port is E_MI_SYS_BUFDATA_MULTIPLANE. Otherwise E_MI_SYS_BUFDATA_FRAME is output.</p>
+</li>
+<li>
+<p>Only output port 1 supports eBufLayout = E_MI_ISP_BUFFER_LAYOUT_MULTI_PLANE.</p>
+</li>
+<li>
+<p>You can look up E_MI_SYS_BUFDATA_MULTIPLANE and E_MI_SYS_BUFDATA_FRAME in <a href="sys_en.html">MI SYS API</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#211-mi_isp_setoutputportparam">MI_ISP_SetOutputPortParam</a></p>
+<p><a href="#212-mi_isp_getoutputportparam">MI_ISP_GetOutputPortParam</a></p>
+</li>
+</ul>
+<h3 id="329-mi_isp_overlap_e">3.29. MI_ISP_Overlap_e<a class="headerlink" href="#329-mi_isp_overlap_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>ISP overlap.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_OVERLAP_NONE,
+    E_MI_ISP_OVERLAP_128,
+    E_MI_ISP_OVERLAP_256,
+    E_MI_ISP_OVERLAP_MAX
+} MI_ISP_Overlap_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_OVERLAP_NONE</td>
+<td>Disable  overlap</td>
+</tr>
+<tr>
+<td>E_MI_ISP_OVERLAP_128</td>
+<td>Read  more 128 pixels</td>
+</tr>
+<tr>
+<td>E_MI_ISP_OVERLAP_256</td>
+<td>Read  more 256 pixels</td>
+</tr>
+<tr>
+<td>E_MI_ISP_OVERLAP_MAX</td>
+<td>Maximum  value</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data type and interface</p>
+<p><a href="#231-mi_isp_setchnoverlapattr">MI_ISP_SetChnOverlapAttr</a></p>
+<p><a href="#232-mi_isp_getchnoverlapattr">MI_ISP_GetChnOverlapAttr</a></p>
+</li>
+</ul>
+<h2 id="4-isp-error-code">4. ISP Error code<a class="headerlink" href="#4-isp-error-code" title="Permanent link">&para;</a></h2>
+<p>API error codes are as the table shown below:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Error code</strong></th>
+<th><strong>Macro definition</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xA0078001</td>
+<td>MI_ERR_ISP_INVALID_CHNID</td>
+<td>Invalid device channel ID</td>
+</tr>
+<tr>
+<td>0xA0078002</td>
+<td>MI_ERR_ISP_INVALID_PORTID</td>
+<td>Invalid device port ID</td>
+</tr>
+<tr>
+<td>0xA0078003</td>
+<td>MI_ERR_ISP_ILLEGAL_PARAM</td>
+<td>Illegal parameter</td>
+</tr>
+<tr>
+<td>0xA0078004</td>
+<td>MI_ERR_ISP_EXIST</td>
+<td>Device has exited</td>
+</tr>
+<tr>
+<td>0xA0078005</td>
+<td>MI_ERR_ISP_UNEXIST</td>
+<td>Device has not exited</td>
+</tr>
+<tr>
+<td>0xA0078006</td>
+<td>MI_ERR_ISP_NULL_PTR</td>
+<td>Null pointer parameter</td>
+</tr>
+<tr>
+<td>0xA0078008</td>
+<td>MI_ERR_ISP_NOT_SUPPORT</td>
+<td>Not supported</td>
+</tr>
+<tr>
+<td>0xA0078009</td>
+<td>MI_ERR_ISP_NOT_PERM</td>
+<td>Operation is not permitted</td>
+</tr>
+<tr>
+<td>0xA007800C</td>
+<td>MI_ERR_ISP_NOMEM</td>
+<td>Failed to allocate memory</td>
+</tr>
+<tr>
+<td>0xA007800D</td>
+<td>MI_ERR_ISP_NOBUF</td>
+<td>Memory has run out</td>
+</tr>
+<tr>
+<td>0xA007800E</td>
+<td>MI_ERR_ISP_BUF_EMPTY</td>
+<td>Video input buffer is empty</td>
+</tr>
+<tr>
+<td>0xA0078010</td>
+<td>MI_ERR_ISP_NOTREADY</td>
+<td>Device is not initialized</td>
+</tr>
+<tr>
+<td>0xA0078012</td>
+<td>MI_ERR_ISP_BUSY</td>
+<td>Device system is busy</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-procfs-introduction">5. PROCFS INTRODUCTION<a class="headerlink" href="#5-procfs-introduction" title="Permanent link">&para;</a></h2>
+<h3 id="51-cat">5.1. cat<a class="headerlink" href="#51-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Debug info</p>
+<div class="codehilite"><pre><span></span># cat /proc/mi_modules/mi_isp/mi_isp0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/isp/isp-10.png" /></p>
+</li>
+<li>
+<p>Debug info analysis</p>
+<p>Record the current ISP usage status and related attributes, you can
+get this information dynamically, which is convenient for debugging and testing.</p>
+</li>
+<li>
+<p>Parameter Description</p>
+<p><table>
+    <tr>
+    <th width=189 colspan=2>Parameter</th>
+    <th width=254 valign=top>Description</th>
+      </tr>
+    <tr>
+        <td width=180 rowspan=15 valign=top>ISP Dev info</td>
+        <td width=108 valign=top>DevId </td>
+        <td width=254 valign=top>Isp Dev Id</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>CreChnNum</td>
+        <td width=254 valign=top>Chn number</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>DevMask </td>
+        <td width=254 valign=top>Stitch Dev Mask</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>cmdq</td>
+        <td width=254 valign=top>Cmdq pointer</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>En</td>
+        <td width=254 valign=top>ISR interrupt enable flag</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>Mode</td>
+        <td width=254 valign=top>ISR interrupt mode</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>num</td>
+        <td width=254 valign=top>ISR ID</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>VsyncCnt</td>
+        <td width=254 valign=top>ISR ID</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>FrameDoneCnt</td>
+        <td width=254 valign=top>ISR Frame Done Cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>DropCnt</td>
+        <td width=254 valign=top>ISR Frame Drop Cnt</td>
+    </tr>
+     <tr>
+        <td width=108 valign=top>crcfailcnt</td>
+        <td width=254 valign=top>input crc check fail cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>RdmaVfcFailCnt</td>
+        <td width=254 valign=top>input VFC decompress fail cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>3dnrVfcFailCnt</td>
+        <td width=254 valign=top>3dnr VFC decompress fail cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>fifofullcnt</td>
+        <td width=254 valign=top>fifo full cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>rstcnt</td>
+        <td width=254 valign=top>reset hw cnt</td>
+    </tr>
+    <tr>
+        <td width=180 rowspan=24 valign=top>ISP Chn info</td>
+        <td width=147 valign=top>DevId </td>
+        <td width=224 valign=top>Isp Dev Id</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>ChnId </td>
+        <td width=224 valign=top>Isp Chn Id</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>start</td>
+        <td width=224 valign=top>Chn Start Flag</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>SnrId</td>
+        <td width=224 valign=top>Bind sensorId</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Sync3A</td>
+        <td width=224 valign=top>Sync 3A type</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>chnNum</td>
+        <td width=224 valign=top>Muti chn Num</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Crop</td>
+        <td width=224 valign=top>Input Crop Size</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>InSize</td>
+        <td width=224 valign=top>Input Size</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>pixel</td>
+        <td width=224 valign=top>Input pixel format</td>
+    </tr>
+     <tr>
+        <td width=147 valign=top>compress</td>
+        <td width=224 valign=top>Input compress type</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Stride</td>
+        <td width=224 valign=top>Input Buffer Stride</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Atom</td>
+        <td width=224 valign=top>Bottom buffers </td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Atom0</td>
+        <td width=224 valign=top>There is no buffer at the bottem after the buffer is released</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Rot</td>
+        <td width=224 valign=top>Rotation angle</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>bMirror/Flip</td>
+        <td width=224 valign=top>mirror/flip</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>3DNRLevel</td>
+        <td width=224 valign=top>3DNR Level</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>HdrMode</td>
+        <td width=224 valign=top>HDR mode</td>
+    </tr>
+     <tr>
+        <td width=147 valign=top>CustMode</td>
+        <td width=224 valign=top>AI ISP Cust Seg mode</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>CustFrom</td>
+        <td width=224 valign=top>AI ISP From Cust seg</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>CustTo</td>
+        <td width=224 valign=top>AI ISP to Cust</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>PreCnt/EnqCnt/BarCnt/
+    checkin/checkout/DeqCnt</td>
+        <td width=224 valign=top>Callback execution times  </td>
+    </tr>
+     <tr>
+        <td width=147 valign=top>MaxIv/MinIv</td>
+        <td width=224 valign=top>callback execution interval time</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>DropCnt</td>
+        <td width=224 valign=top>drop task cnt</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>EnqOTNull</td>
+        <td width=224 valign=top>Statistics of times that OutBuffer is Null in Enq</td>
+    </tr>
+    <tr>
+        <td width=180 rowspan=13 valign=top>ISP OutPut Port info</td>
+        <td width=98 valign=top>DevId </td>
+        <td width=258 valign=top>Dev Id</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>ChnId </td>
+        <td width=258 valign=top>Plane id</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>PortID</td>
+        <td width=258 valign=top>Port Id</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Bindtype</td>
+        <td width=258 valign=top>Binding mode with post-level </td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Enable</td>
+        <td width=258 valign=top>Port enable flag</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Pixel</td>
+        <td width=258 valign=top>Port output pixel format</td>
+    </tr>
+     <tr>
+        <td width=98 valign=top>compress</td>
+        <td width=258 valign=top>Port output compress type</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>PortCrop</td>
+        <td width=258 valign=top>output Crop Size</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Stride</td>
+        <td width=258 valign=top>Output Stride</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>GetCnt</td>
+        <td width=258 valign=top>Count of getting Output buffers</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Failcnt</td>
+        <td width=258 valign=top>Count of failed to get Output buffers</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>FinishCnt</td>
+        <td width=258 valign=top>Count of finished output buffers</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>fps</td>
+        <td width=258 valign=top>Output port frame rate</td>
+    </tr>
+</table></p>
+</li>
+</ul>
+<h3 id="52-echo">5.2. echo<a class="headerlink" href="#52-echo" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="err">#</span> <span class="nx">echo</span> <span class="nx">help</span> <span class="o">&gt;</span> <span class="err">/proc/mi_modules/mi_isp/mi_isp0</span>
+</pre></div>
+
+
+<p><img alt="" src="mymedia/isp/isp-11.png" /></p>
+<p>Echo help can view the available commands.                                                |</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Stop the specified channel.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo stopchnl [ChnID] [ON/OFF] &gt;  /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>[ChnId]   Channel id   <br>[ON/OFF]   ON: stop chn   OFF: start chn</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo stopchnl 0 ON &gt;  /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+    <tr>
+        <th>Function</th>
+        <th><div style="width:415pt">Dump the output data of the selected channel and save it in /path.</th>
+    </tr>
+    <tr>
+        <td>Command</td>
+        <td>echo dumptaskfile [chnid, Cnt, /path/, bOnlyDumpResChange, bdumpport] > /proc/mi_modules/mi_isp/mi_isp0</td>
+    </tr>
+    <tr>
+        <td rowspan="5">Parameter <br>Description</td>
+        <td>Chnid: Channel id</td>
+    </tr>
+    <tr>
+        <td>Cnt: Dump count</td>
+    </tr>
+    <tr>
+        <td>Path: Path to store dump files</td>
+    </tr>
+    <tr>
+        <td>bOnlyDumpResChange: Blurred images may be generated when switching resolutions. The dump command and switching resolution operations are not easy to perform together. You can set this parameter first, and then switch the resolution. After the program recognizes it, the buffer after the resolution change will be dumped. (Optional) </td>
+    </tr>
+    <tr>
+        <td>Bdumpport: Only dump a certain portid, the default is to dump all the ports in the output. (Optional)</td>
+    </tr>
+    <tr>
+        <td>Example</td>
+        <td>echo dumptaskfile 0 1 /mnt  > /proc/mi_modules/mi_isp/mi_isp0</td>
+    </tr>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set Dev atomvalue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo setatom [chnid AtomValue] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>chnid: chnel id <br> AtomValue: The maximum number of buffers held by the Driver in input realtime mode</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo setatom  0 3 &gt; /proc/mi_modules/mi_isp/mi_isp0 <br> ps: Increase the atom when the bottom layer is stuck, add a buffer to the driver, and re-trig to see if it recovers, or increase it when the frame is dropped to see if the frame can be full.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">  Clear the input/output/done of the specified channel portbuffer.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo clearbuf [chnid, portid bClearInput, bclearoutput, bcleardonebuff] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id   <br> Portid: port id  <br> bClearInput: Clear input buffer  <br> bclearoutput: Clear output buffer   <br>bcleardonebuff: Clear done buffer</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo clearbuf 0 0 1 0 0 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set debug level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo debuglv [level] &gt;/proc/mi_modules/mi_isp/mi_isp0 <br>echo debuglv [chnid][level] &gt;/proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id <br>Level: <br>Single level parameter: 1:isp api,2:flow,4:check irq done  <br>Double level parameter: 1:check buffer,2:check loop,4:check frame pts,8:check fence done,16:check func time,32:check sidebandmsg,64:check zoominfo</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo debuglv 4 &gt; /proc/mi_modules/mi_isp/mi_isp0   //Open check irq done related MI print <br> echo debuglv 0 3 &gt; /proc/mi_modules/mi_isp/mi_isp0   // Open channel0 level3 printing to print buffer info and loop info</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Drop frame count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo skipframe [chnid, skipnum] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id   <br> skipnum: drop frame count</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo skipframe 0 60 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Clear Bind Q buffer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo clearbindq [chnid bclear] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id  <br> bclear: Whether to clear</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo clearbindq 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0      //Clear channel0 bindQ buffer <br>The ISP BindQ is full and the front-end cannot get the buffer, and judge whether the ISP is too slow. Clear bindQ and observe whether it will accumulate. If it is, the ISP is too slow, if not, the previous exception is not consumed.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set the print frame rate, print if it is lower than this value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo fpsth [chnid portid fpsint fpsfloat] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id   <br> Portid: port id  <br> fpsint: Frame rate integer bits  <br> fpsfloat: Frame rate demical bits</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo fpsth 0 0 30 30 &gt; /proc/mi_modules/mi_isp/mi_isp0    //Print the fps which is less than 30.30 in channel0 port0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set the print pts, print if it is exceeding PTS interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo ptsth [chnid portid minptsinterval maxptsinterval] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id   <br> Portid: port id  <br> minptsinterval: pts interval min value  <br> maxptsinterval: pts interval max value</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo ptsth 0 0 30000 40000 &gt; /proc/mi_modules/mi_isp/mi_isp0    // Values with PTS interval less than 30ms and more than 40ms in channel0 port0 are printed out</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Enable port or not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo enableport [chnid, portid, bEn] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id  <br>  Portid: port id  <br>  bEn: 1/0</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo enableport 0 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set output port parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo outputparam pixel [chnid, portid pixelmode] &gt; /proc/mi_modules/mi _isp/mi_isp0 <br>echo outputparam compress [chnid, portid compressmode]  &gt; /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam crop [chnid, portid cropX  cropY cropW cropH] &gt; /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam all [chnid, portid pixelmode compressmode cropX cropY cropW cropH] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id  <br>Portid: port id <br>Pixelmode: output pixel format <br>Compressmode: output compress mode <br>cropX: output crop X  <br>cropY: output crop Y <br>cropW: output crop width  <br>cropH: output crop height</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo outputparam pixel 0 1 11 &gt;  /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam compress 0 1 5 &gt;  /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam crop 0 1 0 0 1920 1080  &gt; /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam all 0 1 11 5 0 0 1920 1080  &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set to always send the same picture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo sendoneframe [chnid, bEn]  &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id  <br>   bEn: 1/0</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo sendoneframe 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set 3dnr level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo dnrlevel [chnid, level]  &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id  <br>   level: 3dnr level, please refer to MI_ISP_3DNR_Level_e</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo dnrlevel 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Reset ISP entire hardware</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo resethw  &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>none</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo resethw &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set output CRC check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo crcmode [chnid, bEn] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id  <br>   bEn: 1/0</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo crcmode 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set datagen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo datagen [chnid, bEn] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>Chnid: channel id  <br>   bEn: 1/0</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo datagen 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt"> Set the command fetching information executed after cmdq timeout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo cmdqtimeout [bEn, keyword, cmdline, path] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>Parameter <br>Description</td>
+<td>bEn: 1/0  <br>  keyword: Executed commands    <br>  cmdline: Executed string  <br>  path: Information saving path</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo 1 cat /proc/mi_modules/mi_isp/mi_isp0 /mnt/cmdqerr.txt &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="iqserver_en.html" title="IQSERVER" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IQSERVER
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ive_en.html" title="IVE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                IVE
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/search_index.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

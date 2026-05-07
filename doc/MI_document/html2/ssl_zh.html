@@ -1,0 +1,3285 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>SSL - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                SSL
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Development/sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        SSL
+      </label>
+    
+    <a href="ssl_zh.html" title="SSL" class="md-nav__link md-nav__link--active">
+      SSL
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 算法说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 关键词说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 数组系统及坐标系
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1. 多麦克风数组
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    3. API参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-api" class="md-nav__link">
+    3.1. 功能模块API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-iaassl_getbuffersize" class="md-nav__link">
+    3.2. IaaSsl_GetBufferSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-iaassl_init" class="md-nav__link">
+    3.3. IaaSsl_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-iaassl_config" class="md-nav__link">
+    3.4. IaaSsl_Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-iaassl_get_config" class="md-nav__link">
+    3.5. IaaSsl_Get_Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-iaassl_set_shape" class="md-nav__link">
+    3.6. IaaSsl_Set_Shape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-iaassl_cal_params" class="md-nav__link">
+    3.7. IaaSsl_Cal_Params
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-iaassl_run" class="md-nav__link">
+    3.8. IaaSsl_Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-iaassl_get_direction" class="md-nav__link">
+    3.9. IaaSsl_Get_Direction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-iaassl_reset_mapping" class="md-nav__link">
+    3.10. IaaSsl_Reset_Mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-iaassl_reset" class="md-nav__link">
+    3.11. IaaSsl_Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-iaassl_free" class="md-nav__link">
+    3.12. IaaSsl_Free
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ssl" class="md-nav__link">
+    4. SSL数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ssl" class="md-nav__link">
+    4.1. SSL模块相关数据类型定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-audiosslinit" class="md-nav__link">
+    4.2. AudioSslInit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-audiosslconfig" class="md-nav__link">
+    4.3. AudioSslConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ssl_handle" class="md-nav__link">
+    4.4. SSL_HANDLE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 错误码
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 算法说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 关键词说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 数组系统及坐标系
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1. 多麦克风数组
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    3. API参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-api" class="md-nav__link">
+    3.1. 功能模块API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-iaassl_getbuffersize" class="md-nav__link">
+    3.2. IaaSsl_GetBufferSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-iaassl_init" class="md-nav__link">
+    3.3. IaaSsl_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-iaassl_config" class="md-nav__link">
+    3.4. IaaSsl_Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-iaassl_get_config" class="md-nav__link">
+    3.5. IaaSsl_Get_Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-iaassl_set_shape" class="md-nav__link">
+    3.6. IaaSsl_Set_Shape
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-iaassl_cal_params" class="md-nav__link">
+    3.7. IaaSsl_Cal_Params
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-iaassl_run" class="md-nav__link">
+    3.8. IaaSsl_Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-iaassl_get_direction" class="md-nav__link">
+    3.9. IaaSsl_Get_Direction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-iaassl_reset_mapping" class="md-nav__link">
+    3.10. IaaSsl_Reset_Mapping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-iaassl_reset" class="md-nav__link">
+    3.11. IaaSsl_Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-iaassl_free" class="md-nav__link">
+    3.12. IaaSsl_Free
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ssl" class="md-nav__link">
+    4. SSL数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ssl" class="md-nav__link">
+    4.1. SSL模块相关数据类型定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-audiosslinit" class="md-nav__link">
+    4.2. AudioSslInit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-audiosslconfig" class="md-nav__link">
+    4.3. AudioSslConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ssl_handle" class="md-nav__link">
+    4.4. SSL_HANDLE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 错误码
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI SSL API</h1>
+<!-- REVISION HISTORY
+
+| Revision   No. | Description                                        | Date       |
+| -------------- | -------------------------------------------------- | ---------- |
+| 1.0            | - Initial release                                  | 09/12/2020 |
+| 1.1            | - Modified API                                     | 10/15/2020 |
+| 1.2            | - 4MIC Sound Source Localization and Modified API  | 11/03/2021 | 
+
+-->
+
+<h2 id="1">1. 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1. 算法说明<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>SSL（Sound Source Localization）声源定位，用于定位声音来源的方向。</p>
+<h3 id="12">1.2. 关键词说明<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>当两个麦克风距离(distance)为5cm时，下图描述音源方向(direction)来源的定义:</p>
+<p><img alt="" src="mymedia/ssl/ssl-1.png" /></p>
+<p>当麦克风个数多于两颗以上，将会有两种可能的数组形状，分别是均匀线性数组以及均匀圆形数组。</p>
+<h3 id="13">1.3. 注意<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<h4>1.3.1. 使用</h4>
+<p>为方便调试和确认算法效果，需要用户应用自行实现替换算法参数和抓取音频数据的逻辑。</p>
+<h4>1.3.2. 区分</h4>
+<p>不同通道数会对应到不同参考库。用户需要自行确认是否使用正确的通道数及对应参考库。</p>
+<h2 id="2">2. 数组系统及坐标系<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1. 多麦克风数组<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>常见的多麦克风数组主要有两类，分别是均匀线性数组以及均匀圆形数组。以下皆为二维示意图(无高度差之影响)。</p>
+<h4>2.1.1. 均匀线性数组及坐标系</h4>
+<p>均匀线性数组为一直线排列，且相邻麦克风之间距distance皆相同，并且由于其具有对称性，定位角度仅考虑上半平面(-90度至90度)。图2-1为均匀线性数组于空间坐标系之示意图。声音方向的角度(microphone_doa)定义为与数组中心及x轴之夹角。逆时钟方向为正。distance 单位为公分，建议至少大于5 cm 或 6 cm。</p>
+<p><img alt="" src="mymedia/ssl/ssl-2.png" /></p>
+<p>图2-1 均匀线性数组及其坐标系</p>
+<h4>2.1.2. 均匀圆形数组及坐标系</h4>
+<p>均匀圆形数组为一圆形排列，且相邻麦克风与数组中心之夹角皆相同，麦克风间距即为圆形之直径，由于不具对称性，定位角度可以为整个平面(-90度至270度)，图2-2为均匀圆形数组于空间坐标系之示意图。声音方向的角度(microphone_doa)定义为与数组中心及x轴之夹角。逆时钟方向为正。distance 为圆形的直径。单位为公分。建议至少大于6 cm。 </p>
+<p>​<img alt="" src="mymedia/ssl/ssl-3.png" />  </p>
+<p>图2-2 均匀圆形数组及其坐标系</p>
+<h2 id="3-api">3. API参考<a class="headerlink" href="#3-api" title="Permanent link">&para;</a></h2>
+<h3 id="31-api">3.1. 功能模块API<a class="headerlink" href="#31-api" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>API名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#32-iaassl_getbuffersize">IaaSsl_GetBufferSize</a></td>
+<td>获取Ssl算法运行需要的内存大小</td>
+</tr>
+<tr>
+<td><a href="#33-iaassl_init">IaaSsl_Init</a></td>
+<td>初始化Ssl算法</td>
+</tr>
+<tr>
+<td><a href="#34-iaassl_config">IaaSsl_Config</a></td>
+<td>配置Ssl算法</td>
+</tr>
+<tr>
+<td><a href="#35-iaassl_get_config">IaaSsl_Get_Config</a></td>
+<td>获取Ssl算法当前的配置参数信息</td>
+</tr>
+<tr>
+<td><a href="#36-iaassl_set_shape">IaaSsl_Set_Shape</a></td>
+<td>Ssl指派麦克风数组形状</td>
+</tr>
+<tr>
+<td><a href="#37-iaassl_cal_params">IaaSsl_Cal_Params</a></td>
+<td>SSL根据数组形状计算参数</td>
+</tr>
+<tr>
+<td><a href="#38-iaassl_run">IaaSsl_Run</a></td>
+<td>Ssl算法处理</td>
+</tr>
+<tr>
+<td><a href="#39-iaassl_get_direction">IaaSsl_Get_Direction</a></td>
+<td>获取Ssl算法处理的结果</td>
+</tr>
+<tr>
+<td><a href="#310-iaassl_reset_mapping">IaaSsl_Reset_Mapping</a></td>
+<td>当IaaSsl_Get_Direction完成后重新初始化定位缓冲区</td>
+</tr>
+<tr>
+<td><a href="#311-iaassl_reset">IaaSsl_Reset</a></td>
+<td>重新初始化Ssl算法</td>
+</tr>
+<tr>
+<td><a href="#312-iaassl_free">IaaSsl_Free</a></td>
+<td>释放Ssl算法资源</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-iaassl_getbuffersize">3.2. IaaSsl_GetBufferSize<a class="headerlink" href="#32-iaassl_getbuffersize" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取Ssl算法运行所需要的内存大小。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>unsigned int IaaSsl_GetBufferSize(void);
+</pre></div>
+
+
+</li>
+<li>
+<p>返回值</p>
+<p>返回值为Ssl算法运行所需要的内存大小，此内存大小与使用的麦克风数有关。</p>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h </p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>该接口仅返回需要的内存大小，申请和释放内存的动作需应用来处理。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="33-iaassl_init">3.3. IaaSsl_Init<a class="headerlink" href="#33-iaassl_init" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>初始化Ssl算法。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>SSL_HANDLE IaaSsl_Init(char* working_buffer, AudioSslInit* ssl_init);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>working_buffer</td>
+<td>Ssl算法所使用的内存地址，用户申请内存大小后所得地址</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ssl_init</td>
+<td>Ssl算法的初始化结构体指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>非NULL</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="34-iaassl_config">3.4. IaaSsl_Config<a class="headerlink" href="#34-iaassl_config" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>配置Ssl算法。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_SSL_RET IaaSsl_Config(SSL_HANDLE handle, AudioSslConfig* ssl_config);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Ssl算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ssl_config</td>
+<td>Ssl算法的配置结构体指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="35-iaassl_get_config">3.5. IaaSsl_Get_Config<a class="headerlink" href="#35-iaassl_get_config" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取Ssl算法当前的配置参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_SSL_RET IaaSsl_Get_Config(SSL_HANDLE handle, AudioSslConfig *ssl_config);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Ssl算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ssl_config</td>
+<td>Ssl算法的配置结构体指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="36-iaassl_set_shape">3.6. IaaSsl_Set_Shape<a class="headerlink" href="#36-iaassl_set_shape" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>SSL 指派数组形状。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_SSL_RET IaaSsl_Set_Shape(SSL_HANDLE handle,int shape);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Ssl算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>指派数组形状。0:均匀线性数组，1:均匀圆形数组</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>仅提供均匀线性数组及均匀圆型数组(示意图请看图2-1及图2-2)，客户有特殊数组需求，需告知修改</p>
+</li>
+<li>
+<p>麦克风个数为2个时，只存在线性数组，其间距即为所设定麦克风间距</p>
+</li>
+<li>
+<p>数组位置设定会强烈影响SSL效果，因此设定之数组位置必须与真实数组位置相同</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="37-iaassl_cal_params">3.7. IaaSsl_Cal_Params<a class="headerlink" href="#37-iaassl_cal_params" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>SSL根据数组形状计算其定位用之参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_SSL_RET IaaSsl_Cal_Params(SSL_HANDLE handle);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Ssl算法handle</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="38-iaassl_run">3.8. IaaSsl_Run<a class="headerlink" href="#38-iaassl_run" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>Ssl算法处理</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_SSL_RET IaaSsl_Run(SSL_HANDLE handle, short* microphone_input, 
+int *delay_sample);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Ssl算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>microphone_input</td>
+<td>待进行声源定位的数据指针</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>delay_sample</td>
+<td>不同对麦克风之间的延迟样本数。此值建议当bf_mode开启时再拿作使用。</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>对于两颗麦克风数组(双声道音频可以负荷)，microphone_input指向的数据应以采样点为最小单位，按照L,R,L,R的格式摆放，数据长度必须和IaaSsl_Init中设定的point_number(即多少个采样点进行一次beamforming处理)相对应。&rarr;范例一</p>
+</li>
+<li>
+<p>对于多颗麦克风数组(麦克风数多于两颗，双声道音频无法负荷)之情况，各个麦克风音频须为单声道，microphone_input指向的数据仍应已采样点为最小单位，并按照麦克风于数组的相对位置，由左至右的格式摆放，例如4颗线性麦克风数组，摆放的方式为 [左一&rarr;左二&rarr;右二&rarr;右一]，数据长度必须和IaaBf_Init中设定的point_number(即多少个采样点进行一次SSL处理)相对应。&rarr;范例二</p>
+</li>
+<li>
+<p>以图2-1及图2-2的麦克风数组为例，microphone_input摆放的格式为[MIC1&rarr;MIC2&rarr;MIC3&rarr;MIC4]。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>范例一：两颗麦克风数组(麦克风输入为双声道音频)</p>
+<div class="codehilite"><pre><span></span>1.  #include &lt;stdio.h&gt;
+2.  #include &lt;unistd.h&gt;
+3.  #include &lt;fcntl.h&gt;
+4.  #include &lt;string.h&gt;
+5.  #include &lt;sys/time.h&gt;
+6.  #include &lt;sys/ioctl.h&gt;
+7.  #include &lt;stdlib.h&gt;
+8.  #include &quot;AudioSslProcess.h&quot;
+9.  
+10. #define MIC_NUM (2)
+11. #define USE_MALLOC   (1)
+12. typedef unsigned char               uint8;
+13. typedef unsigned short              uint16;
+14. typedef unsigned long               uint32;
+15. 
+16. 
+17. unsigned int _OsCounterGetMs(void)
+18. {
+19.     struct  timeval t1;
+20.     gettimeofday(&amp;t1,NULL);
+21.     unsigned int T = ( (1000000 * t1.tv_sec)+ t1.tv_usec ) / 1000;
+22.     return T;
+23. }
+24. 
+25. int main(int argc, char *argv[])
+26. {
+27.     /*******Input file init*********/
+28.     short input[256];
+29.     char infileName[512];
+30.     char outfileName[512];
+31.     FILE * fin;
+32.     FILE * fout;
+33.     ALGO_SSL_RET ret;
+34.     int counter2 = 0;
+35.     unsigned int T0,T1,T2,T3;
+36.     float avg = 0.0;
+37.     float avg2 = 0.0;
+38.     /**********common setting SSL***************/
+39.     int point_number = 128;
+40.     float microphone_distance = 12.0;
+41.     int temperature = 20;
+42.     int sample_rate = 16000;
+43.     int delay_sample[1] = {0};
+44.     int shape = 0;
+45.     int direction = 0;
+46.     int frame_number = 32;
+47.     /**************SSL data init***********/
+48.     int counter = 0;
+49. #if USE_MALLOC
+50.     char *WorkingBuffer2;
+51.     WorkingBuffer2 = (char*)malloc(IaaSsl_GetBufferSize());
+52. #endif
+53.     AudioSslInit ssl_init;
+54.     AudioSslConfig ssl_config;
+55.     SSL_HANDLE handle;
+56.     
+57.     ssl_init.mic_distance = microphone_distance; //cm
+58.     ssl_init.point_number = point_number;
+59.     ssl_init.sample_rate = sample_rate;
+60.     ssl_init.bf_mode = 0;
+61.     ssl_init.channel = MIC_NUM;
+62.     ssl_config.temperature = temperature; //c
+63.     ssl_config.noise_gate_dbfs = -80;
+64.     ssl_config.direction_frame_num = frame_number;
+65.     /******init algorithm********/
+66.     handle = IaaSsl_Init((char*)WorkingBuffer2, &amp;ssl_init);
+67.     if (handle==NULL)
+68.     {
+69.         printf(&quot;SSL init error\n\r&quot;);
+70.         return -1;
+71.     }
+72.     else
+73.     {
+74.         printf(&quot;SSL init succeed\n\r&quot;);
+75.     }
+76.     
+77.     ret = IaaSsl_Config(handle ,&amp;(ssl_config));
+78.     if (ret)
+79.     {
+80.         printf(&quot;Error occured in SSL Config\n\r&quot;);
+81.         return -1;
+82.     }
+83.     ret = IaaSsl_Set_Shape(handle,shape);
+84.     if (ret)
+85.     {
+86.         printf(&quot;Error occured in Array shape\n\r&quot;);
+87.         return -1;
+88.     }
+89. 
+90.     ret = IaaSsl_Cal_Params(handle);
+91.     if (ret)
+92.     {
+93.         printf(&quot;Error occured in Array matrix calculation\n\r&quot;);
+94.         return -1;
+95.     }
+96. 
+97.     sprintf(infileName,&quot;%s&quot;,&quot;./../sample/data/Chn_Left_right_12_0.wav&quot;);
+98.     sprintf(outfileName,&quot;%s&quot;,&quot;./SSL_result.txt&quot;);
+99.     
+100.        fin = fopen(infileName, &quot;rb&quot;);
+101.        if(!fin)
+102.        {       printf(&quot;the input file 0 could not be open\n\r&quot;);
+103.            return -1;
+104.        }
+105.    
+106.        fout = fopen(outfileName, &quot;w&quot;);
+107.        if(!fout)
+108.        {
+109.            printf(&quot;the output file could not be open\n\r&quot;);
+110.            return -1;
+111.        }
+112.    
+113.        fread(input, sizeof(char), 44, fin); // read header 44 bytes
+114.        fprintf(fout,&quot;%s\t%s\t%s\n\r&quot;,&quot;time&quot;,&quot;direction&quot;,&quot;case&quot;);
+115.        while(fread(input, sizeof(short), ssl_init.point_number*2, fin))
+116.        {
+117.            counter++;
+118.            T0  = (long)_OsCounterGetMs();
+119.            ret = IaaSsl_Run(handle,input,delay_sample);
+120.            if(ret != 0)
+121.            {
+122.                printf(&quot;The Run fail\n&quot;);
+123.                return -1;
+124.            }
+125.            // low resolution
+126.    //      if (ssl_init.bf_mode == 1)
+127.    //      {
+128.    //          printf(&quot;delay_sample: %d\n&quot;,delay_sample[0]);
+129.    //      }
+130.            T1  = (long)_OsCounterGetMs();
+131.            avg += (T1-T0);
+132.            if(counter == ssl_config.direction_frame_num &amp;&amp; ssl_init.bf_mode == 0)
+133.            {
+134.                counter2++;
+135.                counter= 0;
+136.                T2  = (long)_OsCounterGetMs();
+137.                ret = IaaSsl_Get_Direction(handle, &amp;direction);
+138.                T3  = (long)_OsCounterGetMs();
+139.                avg2 += (T3-T2);
+140.                if(ret != 0 &amp;&amp; ret!=ALGO_SSL_RET_RESULT_UNRELIABLE &amp;&amp; ret!=ALGO_SSL_RET_BELOW_NOISE_GATE&amp;&amp;ret!=ALGO_SSL_RET_DELAY_SAMPLE_TOO_LARGE)
+141.                {
+142.                    printf(&quot;The Get_Direction fail\n&quot;);
+143.                    return -1;
+144.                }
+145.                // write txt file
+146.                fprintf(fout,&quot;%f\t%d&quot;,(float)(counter2*ssl_config.direction_frame_num*0.008),direction);
+147.                if (ret==0)
+148.                {
+149.                    fprintf(fout,&quot;\t%s\n\r&quot;,&quot;current time is reliable!&quot;);
+150.                }
+151.                else if (ret==ALGO_SSL_RET_BELOW_NOISE_GATE)
+152.                {
+153.                    fprintf(fout,&quot;\t%s\n\r&quot;,&quot;current time volume is too small!&quot;);
+154.                }
+155.                else if(ret==ALGO_SSL_RET_DELAY_SAMPLE_TOO_LARGE)
+156.                {
+157.                    fprintf(fout,&quot;\t%s\n\r&quot;,&quot;current time delay_sample is out of range!&quot;);
+158.                }
+159.                else
+160.                {
+161.                    fprintf(fout,&quot;\t%s\n\r&quot;,&quot;current time is not reliable!&quot;);
+162.                }
+163.                // reset voting
+164.                ret = IaaSsl_Reset_Mapping(handle);
+165.                if(ret != 0)
+166.                {
+167.                    printf(&quot;The ResetVoting fail\n&quot;);
+168.                    return -1;
+169.                }
+170.            }
+171.        }
+172.        avg  = avg / (float)(ssl_config.direction_frame_num*counter2);
+173.        avg2 = avg2 / (float)(counter2);
+174.        printf(&quot;AVG for IaaSSL_RUN is %.3f ms\n&quot;,avg);
+175.        printf(&quot;AVG for IaaSSL_GetDirection is %.3f ms\n&quot;,avg2);
+176.        IaaSsl_Free(handle);
+177.        fclose(fin);
+178.        fclose(fout);
+179.        free(WorkingBuffer2);
+180.        printf(&quot;Done\n&quot;);
+181.        return 0;
+182.}
+</pre></div>
+
+
+<p>范例二: 多颗麦克风数组(麦克风输入为4个单声道音讯)</p>
+<div class="codehilite"><pre><span></span>1.  #include &lt;stdio.h&gt;
+2.  #include &lt;unistd.h&gt;
+3.  #include &lt;fcntl.h&gt;
+4.  #include &lt;string.h&gt;
+5.  #include &lt;sys/time.h&gt;
+6.  #include &lt;sys/ioctl.h&gt;
+7.  #include &lt;stdlib.h&gt;
+8.  #include &quot;AudioSslProcess.h&quot;
+9.  
+10. #define MIC_NUM (4)
+11. #define USE_MALLOC   (1)
+12. typedef unsigned char               uint8;
+13. typedef unsigned short              uint16;
+14. typedef unsigned long               uint32;
+15. 
+16. unsigned int _OsCounterGetMs(void)
+17. {
+18.     struct  timeval t1;
+19.     gettimeofday(&amp;t1,NULL);
+20.     unsigned int T = ( (1000000 * t1.tv_sec)+ t1.tv_usec ) / 1000;
+21.     return T;
+22. }
+23. 
+24. int main(int argc, char *argv[])
+25. {
+26.     /*********Input file init*******/
+27.     short input[512];
+28.     short input_tmp1[128],input_tmp2[128],input_tmp3[128],input_tmp4[128];
+29.     char infileName[MIC_NUM][512];
+30.     char outfileName[512];
+31.     FILE * fin0,* fin1,* fin2,* fin3;
+32.     FILE * fout;
+33.     int k;
+34.     ALGO_SSL_RET ret;
+35.     int counter2 = 0;
+36.     unsigned int T0,T1,T2,T3;
+37.     float avg = 0.0;
+38.     float avg2 = 0.0;
+39.     /********common setting  SSL ********/
+40.     int point_number = 128;
+41.     float microphone_distance = 4.0;
+42.     int temperature = 20;
+43.     int sample_rate = 16000;
+44.     int delay_sample[MIC_NUM-1] = {0,0,0}; //channel-1
+45.     int shape  = 0;
+46.     int direction = 0;
+47.     int frame_number = 32;
+48.     /********SSL data init********/
+49.     int counter = 0;
+50. #if USE_MALLOC
+51.     char *WorkingBuffer_SSL;
+52.     WorkingBuffer_SSL = (char*)malloc(IaaSsl_GetBufferSize());
+53. #endif
+54.     AudioSslInit ssl_init;
+55.     AudioSslConfig ssl_config;
+56.     SSL_HANDLE ssl_handle;
+57.     
+58.     ssl_init.mic_distance = microphone_distance;
+59.     ssl_init.point_number = point_number;
+60.     ssl_init.sample_rate = sample_rate;
+61.     ssl_init.bf_mode = 0;
+62.     ssl_init.channel  = MIC_NUM;
+63.     ssl_config.temperature = temperature;
+64.     ssl_config.noise_gate_dbfs = -80;
+65.     ssl_config.direction_frame_num = frame_number;
+66. 
+67.     /*******init algorithm *****/
+68.     ssl_handle = IaaSsl_Init((char*)WorkingBuffer_SSL, &amp;ssl_init);
+69.     if (ssl_handle == NULL)
+70.     {
+71.         printf(&quot;Init fail\n\r&quot;);
+72.         return -1;
+73.     }
+74.     else
+75.     {
+76.         printf(&quot;SSL init succeed\n\r&quot;);
+77.     }
+78. 
+79.     ret = IaaSsl_Config(ssl_handle ,&amp;(ssl_config));
+80.     if (ret)
+81.     {
+82.         printf(&quot;Error occured in SSL Config\n\r&quot;);
+83.         return -1;
+84.     }
+85. 
+86.     ret = IaaSsl_Set_Shape(ssl_handle,shape);
+87.     if (ret)
+88.     {
+89.         printf(&quot;Error occured in Array shape\n\r&quot;);
+90.         return -1;
+91.     }
+92. 
+93.     ret = IaaSsl_Cal_Params(ssl_handle);
+94.     if (ret)
+95.     {
+96.         printf(&quot;Error occured in Array matrix calculation\n\r&quot;);
+97.         return -1;
+98.     }
+99.     
+100.        /********open input file and input file*****/
+101.    
+102.        sprintf(infileName[0],&quot;%s&quot;,&quot;./../sample/data/Chn-01.wav&quot;);
+103.        sprintf(infileName[1],&quot;%s&quot;,&quot;./../sample/data/Chn-02.wav&quot;);
+104.        sprintf(infileName[2],&quot;%s&quot;,&quot;./../sample/data/Chn-03.wav&quot;);
+105.        sprintf(infileName[3],&quot;%s&quot;,&quot;./../sample/data/Chn-04.wav&quot;);
+106.        sprintf(outfileName,&quot;%s&quot;,&quot;./SSL_result.txt&quot;);
+107.        fin0 = fopen(infileName[0], &quot;rb&quot;);
+108.        if(!fin0)
+109.        {       
+110.            printf(&quot;the input file0 could not be open\n\r&quot;);
+111.            return -1;
+112.        }
+113.        fin1 = fopen(infileName[1], &quot;rb&quot;);
+114.        if(!fin1)
+115.        {       
+116.            printf(&quot;the input file 1 could not be open\n\r&quot;);
+117.            return -1;
+118.        }
+119.        fin2 = fopen(infileName[2], &quot;rb&quot;);
+120.        if(!fin2)
+121.        {       
+122.            printf(&quot;the input file 2 could not be open\n\r&quot;);
+123.            return -1;
+124.        }
+125.        fin3 = fopen(infileName[3], &quot;rb&quot;);
+126.        if(!fin3)
+127.        {       
+128.            printf(&quot;the input file 3 could not be open\n\r&quot;);
+129.            return -1;
+130.        }
+131.        fout = fopen(outfileName, &quot;w&quot;);
+132.        if(!fout)
+133.        {
+134.            printf(&quot;the output file could not be open\n\r&quot;);
+135.            return -1;
+136.        }
+137.    
+138.        fread(input, sizeof(char), 44, fin0); // read header 44 bytes
+139.        fread(input, sizeof(char), 44, fin1); // read header 44 bytes
+140.        fread(input, sizeof(char), 44, fin2); // read header 44 bytes
+141.        fread(input, sizeof(char), 44, fin3); // read header 44 bytes
+142.        
+143.        short * input_ptr;
+144.        fprintf(fout,&quot;%s\t%s\t%s\n\r&quot;,&quot;time&quot;,&quot;direction&quot;,&quot;case&quot;);
+145.        while(fread(input_tmp1, sizeof(short), point_number, fin0))
+146.        {
+147.            fread(input_tmp2, sizeof(short), point_number, fin1);
+148.            fread(input_tmp3, sizeof(short), point_number, fin2);
+149.            fread(input_tmp4, sizeof(short), point_number, fin3);
+150.            input_ptr = input;
+151.            for(k=0;k&lt;point_number;k++)
+152.            {
+153.                *input_ptr =  input_tmp1[k];
+154.                input_ptr++;
+155.                *input_ptr =  input_tmp2[k];
+156.                input_ptr++;
+157.                *input_ptr =  input_tmp3[k];
+158.                input_ptr++;
+159.                *input_ptr =  input_tmp4[k];
+160.                input_ptr++;
+161.            }
+162.            counter++;
+163.            T0  = (long)_OsCounterGetMs();
+164.            ret = IaaSsl_Run(ssl_handle,input,delay_sample);
+165.            if(ret != 0)
+166.            {
+167.                printf(&quot;The Run fail\n&quot;);
+168.                return -1;
+169.            }
+170.            // low resolution
+171.    //      if (ssl_init.bf_mode == 1)
+172.    //      {
+173.    //          printf(&quot;delay_sample: %d,%d,%d\n&quot;,delay_sample[0],delay_sample[1],delay_sample[2]);
+174.    //      }
+175.            T1  = (long)_OsCounterGetMs();
+176.            avg += (T1-T0);
+177.            
+178.            if(counter == ssl_config.direction_frame_num &amp;&amp; ssl_init.bf_mode == 0)
+179.            {
+180.                counter2++;
+181.                counter= 0;
+182.                T2  = (long)_OsCounterGetMs();
+183.                ret = IaaSsl_Get_Direction(ssl_handle, &amp;direction);
+184.                T3  = (long)_OsCounterGetMs();
+185.                avg2 += (T3-T2);
+186.                if(ret != 0 &amp;&amp; ret!=ALGO_SSL_RET_RESULT_UNRELIABLE &amp;&amp; ret!=ALGO_SSL_RET_BELOW_NOISE_GATE&amp;&amp;ret!=ALGO_SSL_RET_DELAY_SAMPLE_TOO_LARGE)
+187.                {
+188.                    printf(&quot;The Get_Direction fail\n&quot;);
+189.                    return -1;
+190.                }
+191.                // write txt file
+192.                fprintf(fout,&quot;%f\t%d&quot;,(float)(counter2*ssl_config.direction_frame_num*0.008),direction);
+193.                if (ret==0)
+194.                {
+195.                    fprintf(fout,&quot;\t%s\n\r&quot;,&quot;current time is reliable!&quot;);
+196.                }
+197.                else if (ret==ALGO_SSL_RET_BELOW_NOISE_GATE)
+198.                {
+199.                    fprintf(fout,&quot;\t%s\n\r&quot;,&quot;current time volume is too small!&quot;);
+200.                }
+201.                else if(ret==ALGO_SSL_RET_DELAY_SAMPLE_TOO_LARGE)
+202.                {
+203.                    fprintf(fout,&quot;\t%s\n\r&quot;,&quot;current time delay_sample is out of range!&quot;);
+204.                }
+205.                else
+206.                {
+207.                    fprintf(fout,&quot;\t%s\n\r&quot;,&quot;current time is not reliable!&quot;);
+208.                }
+209.                // reset voting
+210.                ret = IaaSsl_Reset_Mapping(ssl_handle);
+211.                if(ret != 0)
+212.                {
+213.                    printf(&quot;The ResetVoting fail\n&quot;);
+214.                    return -1;
+215.                }
+216.            }
+217.        }
+218.        avg  = avg / (float)(ssl_config.direction_frame_num*counter2);
+219.        avg2 = avg2 / (float)(counter2);
+220.        printf(&quot;AVG for IaaSSL_RUN is %.3f ms\n&quot;,avg);
+221.        printf(&quot;AVG for IaaSSL_GetDirection is %.3f ms\n&quot;,avg2);
+222.        IaaSsl_Free(ssl_handle);
+223.        fclose(fin0);
+224.        fclose(fin1);
+225.        fclose(fin2);
+226.        fclose(fin3);
+227.        fclose(fout);
+228.        free(WorkingBuffer_SSL);
+229.        printf(&quot;Done\n&quot;);
+230.        
+231.        return 0;
+232.}
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="39-iaassl_get_direction">3.9. IaaSsl_Get_Direction<a class="headerlink" href="#39-iaassl_get_direction" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取Ssl算法的处理结果</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_SSL_RET IaaSsl_Get_Direction(SSL_HANDLE handle, int* direction);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Ssl算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>若是均匀线性数组，数值介于-90<sub>90之间，若是均匀圆形数组，则数值介于-90</sub>270之间，当回传数值为-10000，代表可能发生下面三种状况其中之一。第一种状况为音量低于noise_gate_dbfs；第二种情况为数据量不够，无法计算出可信的方向;第三种状况为估测状况超出范围</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>0x10000107</td>
+<td>成功。警告: 估测状况超出范围</td>
+</tr>
+<tr>
+<td>0x10000113</td>
+<td>成功。警告: 音量低于噪音阀值</td>
+</tr>
+<tr>
+<td>0100000114</td>
+<td>成功。警告: 数据量不足以计算出可信的方向</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>当呼叫<a href="#39-iaassl_get_direction">IaaSsl_Get_Direction</a>后务必呼叫IaaSsl_Reset_Mapping。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="310-iaassl_reset_mapping">3.10. IaaSsl_Reset_Mapping<a class="headerlink" href="#310-iaassl_reset_mapping" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>当IaaSsl_Get_Direction完成后重新初始化定位缓冲区。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_SSL_RET IaaSsl_Reset_Mapping(SSL_HANDLE handle);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Ssl算法handle</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>当呼叫<a href="#39-iaassl_get_direction">IaaSsl_Get_Direction</a>后务必呼叫IaaSsl_Reset_Mapping</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="311-iaassl_reset">3.11. IaaSsl_Reset<a class="headerlink" href="#311-iaassl_reset" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>重新初始化Ssl算法。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>SSL_HANDLE IaaSsl_Reset(SSL_HANDLE working_buffer, AudioSslInit* ssl_init);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>working_buffer</td>
+<td>Ssl算法运行的内存地址</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ssl_init</td>
+<td>Ssl算法的初始化参数结构体指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h3 id="312-iaassl_free">3.12. IaaSsl_Free<a class="headerlink" href="#312-iaassl_free" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>释放Ssl算法资源。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_SSL_RET IaaSsl_Free(SSL_HANDLE handle);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Src算法handle</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#errorcode">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioSslProcess.h</p>
+</li>
+<li>
+<p>库文件: libSSL_2MIC_LINUX.so/ libSSL_2MIC_LINUX.a/libSSL_4MIC_LINUX.so/libSSL_4MIC_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#38-iaassl_run">IaaSsl_Run</a>举例部分。</p>
+</li>
+</ul>
+<h2 id="4-ssl">4. SSL数据类型<a class="headerlink" href="#4-ssl" title="Permanent link">&para;</a></h2>
+<h3 id="41-ssl">4.1. SSL模块相关数据类型定义<a class="headerlink" href="#41-ssl" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#42-audiosslinit">AudioSslInit</a></td>
+<td>Ssl算法初始化参数结构体类型</td>
+</tr>
+<tr>
+<td><a href="#43-audiosslconfig">AudioSslConfig</a></td>
+<td>Ssl算法配置参数结构体类型</td>
+</tr>
+<tr>
+<td><a href="#44-ssl_handle">SSL_HANDLE</a></td>
+<td>Ssl算法句柄类型</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-audiosslinit">4.2. AudioSslInit<a class="headerlink" href="#42-audiosslinit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义Ssl算法的初始化参数类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    unsigned int point_number;
+
+    unsigned int sample_rate;
+
+    float mic_distance;
+
+    unsigned int bf_mode;
+
+    int channel;
+
+}AudioSslInit;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>point_number</td>
+<td>Ssl算法处理一次的采样点数</td>
+</tr>
+<tr>
+<td>sample_rate</td>
+<td>取样率，目前支持8k/16k/32k/48k</td>
+</tr>
+<tr>
+<td>mic_distance</td>
+<td>两个mic的距离，单位为cm</td>
+</tr>
+<tr>
+<td>bf_mode</td>
+<td>是否为beamforming模式  若想使用定位角度，设定为0并由 IaaSsl_Get_Direction得到定位结果。若想使用估测的延迟的样本数，设定为1</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>麦克风个数</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>若需delay_sample 则建议将bf_mode开启。</p>
+</li>
+<li>
+<p>若将bf_mode 设为 1，则无法呼叫 IaaSsl_Get_Direction 以及 IaaSsl_Reset_Mapping。</p>
+</li>
+<li>
+<p>若数组为均匀线性数组，则mic_distance 需设定为相邻麦克风之间的距离，若为均匀圆形数组，mic_distance 需设定为圆形的直径。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#33-iaassl_init">IaaSsl_Init</a></p>
+<p><a href="#311-iaassl_reset">IaaSsl_Reset</a></p>
+</li>
+</ul>
+<h3 id="43-audiosslconfig">4.3. AudioSslConfig<a class="headerlink" href="#43-audiosslconfig" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义Ssl算法的配置参数结构体类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct
+
+{
+
+    unsigned int temperature;
+
+    int noise_gate_dbfs;
+
+    int direction_frame_num;
+
+}AudioSslConfig;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>temperature</td>
+<td>环境温度（摄氏度）  摄氏度＝(5 / 9) * (华氏度 - 32)  步长为1</td>
+</tr>
+<tr>
+<td>noise_gate_dbfs</td>
+<td>噪音增益门限值（dBfs）  注意：低于此值将会把该帧作为噪声部分处理，则不会进入方向的计算。  步长为1</td>
+</tr>
+<tr>
+<td>direction_frame_num</td>
+<td>声源定位功能检测的帧数  步长为32  注意：进行声源定位检测的帧数，数值必须为32的倍数，声源定位处理的一帧数据为128个采样点。检测一次的时间 = s32DirectionFrameNum * 128 / 采样率。如：当前采样率为16K，s32DirectionFrameNum设置成32，则检测时间=32 * 128 / 16000 = 0.256(s)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#34-iaassl_config">IaaSsl_Config</a></p>
+<p><a href="#35-iaassl_get_config">IaaSsl_Get_Config</a></p>
+</li>
+</ul>
+<h3 id="44-ssl_handle">4.4. SSL_HANDLE<a class="headerlink" href="#44-ssl_handle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明 </p>
+<p>定义Ssl算法的句柄类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef void* SSL_HANDLE;
+</pre></div>
+
+
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#33-iaassl_init">IaaSsl_Init</a></p>
+<p><a href="#34-iaassl_config">IaaSsl_Config</a></p>
+<p><a href="#35-iaassl_get_config">IaaSsl_Get_Config</a></p>
+<p><a href="#36-iaassl_set_shape">IaaSsl_Set_Shape</a></p>
+<p><a href="#37-iaassl_cal_params">IaaSsl_Cal_Params</a></p>
+<p><a href="#38-iaassl_run">IaaSsl_Run</a></p>
+<p><a href="#39-iaassl_get_direction">IaaSsl_Get_Direction</a></p>
+<p><a href="#310-iaassl_reset_mapping">IaaSsl_Reset_Mapping</a></p>
+<p><a href="#311-iaassl_reset">IaaSsl_Reset</a></p>
+<p><a href="#312-iaassl_free">IaaSsl_Free</a></p>
+</li>
+</ul>
+<h2 id="5">5. <span id=errorcode>错误码</span><a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>SSL API 错误码如下表所示：</p>
+<p>表5‑1 SSL API错误码</p>
+<table>
+<thead>
+<tr>
+<th>错误码</th>
+<th>宏定义</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00000000</td>
+<td>ALGO_ SSL _RET_SUCCESS</td>
+<td>SSL执行成功</td>
+</tr>
+<tr>
+<td>0x10000101</td>
+<td>ALGO_ SSL _RET_INIT_ERROR</td>
+<td>SSL初始化错误</td>
+</tr>
+<tr>
+<td>0x10000102</td>
+<td>ALGO_ SSL _RET_INVALID_CONFIG</td>
+<td>SSL Config无效</td>
+</tr>
+<tr>
+<td>0x10000103</td>
+<td>ALGO_ SSL _RET_INVALID_HANDLE</td>
+<td>SSL Handle无效</td>
+</tr>
+<tr>
+<td>0x10000104</td>
+<td>ALGO_ SSL  _RET_INVALID_SAMPLERATE</td>
+<td>SSL采样率无效</td>
+</tr>
+<tr>
+<td>0x10000105</td>
+<td>ALGO_ SSL _RET_INVALID_POINTNUMBER</td>
+<td>SSL采样点数无效</td>
+</tr>
+<tr>
+<td>0x10000106</td>
+<td>ALGO_SSL_RET_INVALID_BFMODE</td>
+<td>SSL init 的bf_mode设置无效</td>
+</tr>
+<tr>
+<td>0x10000107</td>
+<td>ALGO_SSL_RET_DELAY_SAMPLE_TOO_LARGE</td>
+<td>警告:延迟样本过大，请检查设定的距离和取样率</td>
+</tr>
+<tr>
+<td>0x10000108</td>
+<td>ALGO_ SSL _RET_INVALID_CALLING</td>
+<td>SSL呼叫API顺序错误</td>
+</tr>
+<tr>
+<td>0x10000109</td>
+<td>ALGO_ SSL _RET_API_CONFLICT</td>
+<td>有其他API正在运行</td>
+</tr>
+<tr>
+<td>0x10000110</td>
+<td>ALGO_SSL_RET_INVALID_CHANNEL</td>
+<td>SSL 通道数无效</td>
+</tr>
+<tr>
+<td>0x10000111</td>
+<td>ALGO_SSL_RET_INVALID_GEOMETRY_TYPE</td>
+<td>SSL  数组形状无效</td>
+</tr>
+<tr>
+<td>0x10000112</td>
+<td>ALGO_SSL_RET_INVALID_ARRAY_TYPE</td>
+<td>SSL  双麦克风数组必为线性数组shape=0</td>
+</tr>
+<tr>
+<td>0x10000113</td>
+<td>ALGO_SSL_RET_BELOW_NOISE_GATE</td>
+<td>警告:音量小于噪音阀值</td>
+</tr>
+<tr>
+<td>0x10000114</td>
+<td>ALGO_SSL_RET_RESULT_UNRELIABLE</td>
+<td>警告:数据量不足以计算出可信的方向</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="src_zh.html" title="SRC" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                SRC
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="sys_zh.html" title="SYS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SYS
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../search/search_index.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

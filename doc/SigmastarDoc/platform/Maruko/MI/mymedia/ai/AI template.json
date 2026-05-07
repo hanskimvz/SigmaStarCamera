@@ -1,0 +1,19 @@
+{
+	"DEV":{
+		"enFormat":0,
+		"enSoundMode":2,
+		"enSampleRate":8000,
+		"u32PeriodSize":1024,
+		"bInterleaved":0,
+		"aenAiIfs":[1,5]
+	},
+	"I2S_A":{
+		"enMode":0,
+		"enBitWidth":0,
+		"enFormat":0,
+		"enSampleRate":8000,
+		"enMclk":0,
+		"bSyncClock":0,
+		"u32TdmSlots":2
+	}
+}

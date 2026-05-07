@@ -1,0 +1,2988 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>音频调试手册 - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1-" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                音频调试手册
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/MI/vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/BSP/power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../platform/Maruko/ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        音频调试手册
+      </label>
+    
+    <a href="audiotuning.html" title="音频调试手册" class="md-nav__link md-nav__link--active">
+      音频调试手册
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    1. 音频系统介绍 -- 软件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 音频算法流程图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 音频优化算法与相关名词
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 回声消除相关名词及定义
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-acoustic-echo" class="md-nav__link">
+    2.1. 声学回声 (Acoustic Echo)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-sin" class="md-nav__link">
+    2.2. 近端讯号 (Sin)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-rin" class="md-nav__link">
+    2.3. 远程讯号 (Rin)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-single-talk" class="md-nav__link">
+    2.4. 单讲(Single Talk)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-double-talk" class="md-nav__link">
+    2.5. 双讲(Double Talk)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 回声消除规格
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-span-idtest-span" class="md-nav__link">
+    4. &lt;span id=test    声学机构测试&lt;/span
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1. 机构与回声消除之关联
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2. 客观声学测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 机构无法修改之状况
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-aec" class="md-nav__link">
+    6. AEC结果波型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-aec4-and-15" class="md-nav__link">
+    6.1. AEC不同强度下的结果(4 and 15)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-dh" class="md-nav__link">
+    7. DH名词与定义
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-lower-bin" class="md-nav__link">
+    7.1. Lower Bin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-ptpr" class="md-nav__link">
+    7.2. PTPR阀值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-papr" class="md-nav__link">
+    7.3. PAPR阀值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-phpr" class="md-nav__link">
+    7.4. PHPR阀值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-suppression" class="md-nav__link">
+    7.5. Suppression阀值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-supbins" class="md-nav__link">
+    7.6. Supbins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#77-excess-supbins-frames" class="md-nav__link">
+    7.7. Excess Supbins Frames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#78-within-supbins-frames" class="md-nav__link">
+    7.8. Within Supbins Frames
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-dh" class="md-nav__link">
+    8. DH预设参数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    8.1. 预设参数表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-agc" class="md-nav__link">
+    9. AGC名词与定义
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    9.1. 压缩率曲线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-drop-gain-threshold" class="md-nav__link">
+    9.2. Drop gain threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-noise-gate-threshold" class="md-nav__link">
+    9.3. Noise Gate Threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-attack-time" class="md-nav__link">
+    9.4. Attack Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-release-time" class="md-nav__link">
+    9.5 Release Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96-gain-info" class="md-nav__link">
+    9.6. Gain Info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#97-drop-gain-max" class="md-nav__link">
+    9.7. Drop Gain Max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#98-noise-gate-attenuation" class="md-nav__link">
+    9.8. Noise Gate Attenuation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#99-gain-step" class="md-nav__link">
+    9.9. Gain Step
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#910-automatic-gain-control-by-frequency-band" class="md-nav__link">
+    9.10. Automatic gain control by frequency band
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-agc" class="md-nav__link">
+    10. AGC范例问题解法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-clipping" class="md-nav__link">
+    10.1 Clipping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-agc" class="md-nav__link">
+    10.2. AGC失效
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-agc" class="md-nav__link">
+    10.3. AGC后音量太小
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-nr" class="md-nav__link">
+    11. NR名词与定义
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-nr" class="md-nav__link">
+    11.1. NR模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-nr-intensity-frequency-band" class="md-nav__link">
+    11.2. NR Intensity Frequency Band
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-nr-intensity" class="md-nav__link">
+    11.3. NR Intensity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-nr-smooth-level" class="md-nav__link">
+    11.4. NR Smooth Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-nr-converge-speed" class="md-nav__link">
+    11.5. NR Converge Speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-nr-filter-mode" class="md-nav__link">
+    11.6. NR Filter Mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-nragc" class="md-nav__link">
+    12. NR与AGC预设参数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    12.1 预设参数表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-nr" class="md-nav__link">
+    13. NR结果波型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-nr-1530" class="md-nav__link">
+    13.1. 不同强度之NR结果波型 (15和30)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-eq" class="md-nav__link">
+    14. EQ参数设定
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-" class="md-nav__link">
+    1. 音频系统介绍 -- 软件
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 音频算法流程图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 音频优化算法与相关名词
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 回声消除相关名词及定义
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-acoustic-echo" class="md-nav__link">
+    2.1. 声学回声 (Acoustic Echo)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-sin" class="md-nav__link">
+    2.2. 近端讯号 (Sin)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-rin" class="md-nav__link">
+    2.3. 远程讯号 (Rin)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-single-talk" class="md-nav__link">
+    2.4. 单讲(Single Talk)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-double-talk" class="md-nav__link">
+    2.5. 双讲(Double Talk)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 回声消除规格
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-span-idtest-span" class="md-nav__link">
+    4. &lt;span id=test    声学机构测试&lt;/span
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1. 机构与回声消除之关联
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2. 客观声学测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 机构无法修改之状况
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-aec" class="md-nav__link">
+    6. AEC结果波型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-aec4-and-15" class="md-nav__link">
+    6.1. AEC不同强度下的结果(4 and 15)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-dh" class="md-nav__link">
+    7. DH名词与定义
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-lower-bin" class="md-nav__link">
+    7.1. Lower Bin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-ptpr" class="md-nav__link">
+    7.2. PTPR阀值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-papr" class="md-nav__link">
+    7.3. PAPR阀值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-phpr" class="md-nav__link">
+    7.4. PHPR阀值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-suppression" class="md-nav__link">
+    7.5. Suppression阀值
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-supbins" class="md-nav__link">
+    7.6. Supbins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#77-excess-supbins-frames" class="md-nav__link">
+    7.7. Excess Supbins Frames
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#78-within-supbins-frames" class="md-nav__link">
+    7.8. Within Supbins Frames
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-dh" class="md-nav__link">
+    8. DH预设参数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81" class="md-nav__link">
+    8.1. 预设参数表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-agc" class="md-nav__link">
+    9. AGC名词与定义
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    9.1. 压缩率曲线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-drop-gain-threshold" class="md-nav__link">
+    9.2. Drop gain threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-noise-gate-threshold" class="md-nav__link">
+    9.3. Noise Gate Threshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-attack-time" class="md-nav__link">
+    9.4. Attack Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-release-time" class="md-nav__link">
+    9.5 Release Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96-gain-info" class="md-nav__link">
+    9.6. Gain Info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#97-drop-gain-max" class="md-nav__link">
+    9.7. Drop Gain Max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#98-noise-gate-attenuation" class="md-nav__link">
+    9.8. Noise Gate Attenuation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#99-gain-step" class="md-nav__link">
+    9.9. Gain Step
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#910-automatic-gain-control-by-frequency-band" class="md-nav__link">
+    9.10. Automatic gain control by frequency band
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-agc" class="md-nav__link">
+    10. AGC范例问题解法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-clipping" class="md-nav__link">
+    10.1 Clipping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-agc" class="md-nav__link">
+    10.2. AGC失效
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-agc" class="md-nav__link">
+    10.3. AGC后音量太小
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-nr" class="md-nav__link">
+    11. NR名词与定义
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-nr" class="md-nav__link">
+    11.1. NR模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-nr-intensity-frequency-band" class="md-nav__link">
+    11.2. NR Intensity Frequency Band
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-nr-intensity" class="md-nav__link">
+    11.3. NR Intensity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-nr-smooth-level" class="md-nav__link">
+    11.4. NR Smooth Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-nr-converge-speed" class="md-nav__link">
+    11.5. NR Converge Speed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-nr-filter-mode" class="md-nav__link">
+    11.6. NR Filter Mode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-nragc" class="md-nav__link">
+    12. NR与AGC预设参数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    12.1 预设参数表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-nr" class="md-nav__link">
+    13. NR结果波型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-nr-1530" class="md-nav__link">
+    13.1. 不同强度之NR结果波型 (15和30)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-eq" class="md-nav__link">
+    14. EQ参数设定
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>音频调试手册</h1>
+<p><center>Version 1.5</center></p>
+<hr />
+<h2 id="1-">1. 音频系统介绍 -- 软件<a class="headerlink" href="#1-" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1. 音频算法流程图<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="mymedia/audiotuning/tuning-1.png" /></p>
+<p>NOTE: AEC Hardware loopback version and SW loopback version cannot be
+used at the same time.</p>
+<p>图1: 音频算法流程图</p>
+<h3 id="12">1.2. 音频优化算法与相关名词<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<h4>1.2.1 回声消除 (AEC)</h4>
+<p>当扬声器设备播放的声音通过直接或间接路径传回麦克风时，会产生回声。
+因此，远程的通话者在延迟后会听到他或她自己的声音，这称为声学回声
+(acoustic echo)。 声学回声消除 (Acoustic echo cancellation)
+是指防止讲话者听到自己声音回声的回声消除方法。</p>
+<h4>1.2.2. 去啸叫 (DH)</h4>
+<p>啸叫在扩声系统中很常见。
+当麦克风和扬声器在同一空间时，声音从扬声器放大，然后被麦克风接收，形成一个声音反馈回路。
+当放大增益足够大时，在特定频段会发生自激振荡，从而产生刺耳的啸叫。
+De-Howling (DH) 是抑制啸叫的功能。</p>
+<h4>1.2.3. 噪声消除(ANR)</h4>
+<p>降噪可以降低语音信号中从环境中持续出现一段时间并持续存在的背景噪声。</p>
+<h4>1.2.4. 均衡器 (EQ)</h4>
+<p>均衡器可以增强或衰减某些频段的能量。</p>
+<h4>1.2.5. 自动增益控制 (AGC)</h4>
+<p>自动增益控制可以平衡信号的功率。
+如果信号能量太低，它可以增强增益，如果信号能量太高，它可以衰减增益。</p>
+<h2 id="2">2. 回声消除相关名词及定义<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21-acoustic-echo">2.1. 声学回声 (Acoustic Echo)<a class="headerlink" href="#21-acoustic-echo" title="Permanent link">&para;</a></h3>
+<p>当扬声器设备播放的声音通过直接或间接路径传回麦克风时，会产生回声。
+因此，远程的通话者在延迟后会听到他或她自己的声音，这称为声学回声 (AE)。
+声学回声消除 (AEC) 是指防止讲话者听到自己声音回声的回声消除方法。
+扬声器与麦克风之间可能包括各种路径，如下所示：</p>
+<ol>
+<li>
+<p>扬声器和麦克风之间的直接路径；</p>
+</li>
+<li>
+<p>VoIP 电话机构表面之反射；</p>
+</li>
+<li>
+<p>来自摆放VoIP 电话空间的墙壁和其他物体/人的反射；</p>
+</li>
+<li>
+<p>通过手机的物理外壳耦合声音，以底盘振动的形式；</p>
+</li>
+<li>
+<p>电话音频前端硬件音频编解码器中的环回模式。</p>
+</li>
+</ol>
+<h3 id="22-sin">2.2. 近端讯号 (Sin)<a class="headerlink" href="#22-sin" title="Permanent link">&para;</a></h3>
+<p>从麦克风记录的信号，指的是近端信号。 它可以混合声学回声 (AE) 和讲话者
+(NS) 的信号。 见图 2。</p>
+<h3 id="23-rin">2.3. 远程讯号 (Rin)<a class="headerlink" href="#23-rin" title="Permanent link">&para;</a></h3>
+<p>扬声器的源信号，指的是远程信号。
+它可能来自音频文件（播放音乐的智能扬声器）或互联网（有人用其他设备说话）。
+详见图 2。</p>
+<h3 id="24-single-talk">2.4. 单讲(Single Talk)<a class="headerlink" href="#24-single-talk" title="Permanent link">&para;</a></h3>
+<p>对讲时仅从扬声器播放一些音频或语音（即 Sin = AE + NS，其中 NS = 0）。
+见图 2。</p>
+<h3 id="25-double-talk">2.5. 双讲(Double Talk)<a class="headerlink" href="#25-double-talk" title="Permanent link">&para;</a></h3>
+<p>对奖时从扬声器播放一些音频或语音，有人也在麦克风前讲话（即 Sin = AE +
+NS，其中 NS≠0）。 见图 2。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-2.png" /></p>
+<p>图2: 回声消除输入输出讯号关系图</p>
+<h2 id="3">3. 回声消除规格<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>AEC所需规格如下：</p>
+<ol>
+<li>
+<p>扬声器与麦克风距离最好在4厘米到10厘米之间，越长越好。设备外壳同时需要遵循<a href="#test">4.声学机构测试</a>规范。</p>
+</li>
+<li>
+<p>如果使用音讯文件作为音源，请确保：</p>
+<p>A.  音讯文件中没有混迭（参见图 3），因为会影响 AEC 结果。</p>
+<p>B.  音频文件中没有信号削波（见图 4），因为会影响 AEC 结果。</p>
+<p>C.  采样频率为 8 kHz 或 16 kHz。</p>
+<p>D.  麦克风录到回声时，远程信号已送入AEC库（见图5）；
+    否则，结果将受到影响。</p>
+</li>
+<li>
+<p>AO和AI之间的延迟时间在采样率为16 kHz时必须小于0.128秒（或在采样率为8
+    kHz时为0.256秒），并且Far-End信号的时序应早于Near-end的时序
+    信号（见图 6）。</p>
+</li>
+<li>
+<p>麦克风和扬声器的取样频率必须相同。</p>
+</li>
+<li>
+<p>喇叭不要超载； 否则 AEC 性能会随着非线性失真增加而降低。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-3.png" />
+<img alt="" src="mymedia/audiotuning/tuning-4.png" /></p>
+<p>图3: 无混迭信号 (L) 与混迭信号 (R)</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-5.png" /></p>
+<p>图4: 信号削波实例</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-6.png" /></p>
+<p>图5: 出现回声时，AEC 中未馈送远程信号</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-7.png" /></p>
+<p>图6: AI和AO之间的延迟时间，以及远程信号和近端信号之间的时序关系</p>
+</li>
+</ol>
+<h2 id="4-span-idtest-span">4. &lt;span id=test    声学机构测试&lt;/span<a class="headerlink" href="#4-span-idtest-span" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1. 机构与回声消除之关联<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>外壳设计在很大程度上决定了免持设备（例如，具有免持电话模式的电话）的性能。
+即使使用世界上最好的 AEC 软件，也会因为设备外壳设计不当，语音质量受到严重影响。</p>
+<p>以下部分列出了一些主要建议，以确保硬件不会成为 AEC 性能方面的绊脚石。
+例如，仅当麦克风和扬声器是宽带时，宽带语音编解码器支持才有意义。
+同样，如果麦克风或扬声器在回声路径中若有任何非线性，则回声的线性模型将无法有效地消除回声；
+如此的话，将在全双工条件下引起失真副作用。</p>
+<h4>4.1.1. 机构设计建议</h4>
+<p><strong>扬声器:</strong></p>
+<p>后腔是必须的。 请勿仅在产品外壳中使用扬声器。 参见图 7。
+扬声器外壳前部和后部之间的紧密连接将有助于减少从后腔到扬声器前部的声音传播。
+扬声器应牢固地安装在前后腔之间的接口处，因为扬声器将作为后箱体结构的一部分。
+扬声器的安全安装还将确保扬声器和外壳不会产生卡嗒卡嗒的声音。
+将扬声器框架安装到外壳时通常使用高密度泡沫，建立安全且紧密的机构配置。
+前腔孔应至少占扬声器面积的 20%，与扬声器框架的间距为 1-2 毫米。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-8.png" />
+<img alt="" src="mymedia/audiotuning/tuning-9.png" />
+<img alt="" src="mymedia/audiotuning/tuning-10.png" /></p>
+<p>图7: 为设备的扬声器挑选合适的后腔</p>
+<p><strong>麦克风:</strong></p>
+<p>确保麦克风紧密安装在麦克风信道中，通过直接路径减少扬声器-麦克风耦合来增加
+ERL（回声回波损耗）。 除此之外，还可以将麦克风包裹在外壳内的单独外壳中。
+麦克风应与孔对齐。 见图 8。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-11.png" />
+<img alt="" src="mymedia/audiotuning/tuning-12.png" /></p>
+<p>图8: 麦克风安装示意图</p>
+<p><strong>麦克风与扬声器相对位置:</strong></p>
+<p>扬声器和麦克风之间的距离应尽可能远离。
+如果距离太近，从麦克风记录的回声很有可能因为大大声而被削波。
+为了在这种情况下保持 AEC 性能，用户应将扬声器的音量设置得较低，但这样声压级可能不符合客户需求，如图
+9 所示。 </p>
+<p><img alt="" src="mymedia/audiotuning/tuning-13.png" /></p>
+<p>图9: 确保麦克风与扬声器间距以避免麦克风讯号截波</p>
+<h3 id="42">4.2. 客观声学测试<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>产品外壳设计完成后，使用者需要评估两个客观值来验证机构与外壳是否合格，客观值有如下建议：</p>
+<ul>
+<li>
+<p>隔音： 可以测量扬声器和麦克风之间的外壳内部的隔离度</p>
+</li>
+<li>
+<p>扬声器和麦克风性能： 回波回波损耗（ERL）：可以测量从扬声器到麦克风衰减了多少声学回声功率。</p>
+</li>
+</ul>
+<p>测量前，使用者需要确认以下参数：</p>
+<p>a)  DUT 与用户之间的距离 = X cm</p>
+<p>b)  用户想在这个距离听到 DUT SPK 的 Y dBSPL</p>
+<p>DUT MIC 期望从用户接收 Z dBSPL 后续的测量环境将根据这些参数进行设置。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-14.png" /></p>
+<p>备注：</p>
+<ol>
+<li>
+<p>建议使用IEEE女性（-18dB AVGRMS）语音检查距离和增益</p>
+</li>
+<li>
+<p>体积计算方法</p>
+<ul>
+<li>
+<p>录音结束后，删除前后无声部分</p>
+</li>
+<li>
+<p>将整个语音框起来计算 AVGRMS</p>
+</li>
+</ul>
+</li>
+<li>
+<p>确保录制的语音在任何频率下都不会出现截波。</p>
+</li>
+<li>
+<p>需要避免语音截波</p>
+<ul>
+<li>
+<p>重新设计麦克风与扬声器增益值</p>
+</li>
+<li>
+<p>重新定义用户距离和音量</p>
+</li>
+<li>
+<p>测量 DUT 麦克风和 DUT 扬声器的性能</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4>4.2.1. 麦克风声学隔离</h4>
+<p>测试环境噪音不能超过40dbA。 请使用分贝计，设置为 FAST 并使用最小刻度。
+SPK 级别和 MIC 级别应确保在 SPK 播放正常语音时录音文件不会被截波。</p>
+<p>使用者需要评估三个客观值，以验证机构外壳是否足以满足音频质量。</p>
+<p>a)  <strong>外部隔音</strong></p>
+<ol>
+<li>
+<p>禁用麦克风和扬声器算法（AEC、NR、AGC、EQ...）</p>
+</li>
+<li>
+<p>使用参考 MIC 测量 DUT 位置的扬声器音量。 外部 SPK 播放白噪声。
+    音量必须满足 80dBSPL。</p>
+<ul>
+<li>
+<p>Ref MIC 使用 MIC 校准器测量 1kHz 94dBSPL 正弦波 = X dBRMS</p>
+</li>
+<li>
+<p>预期参考 MIC 测得 1kHz 80dBSPL = X -14 dBRMS</p>
+</li>
+<li>
+<p>修改外部 SPK的音量，使ref MIC测量到X-14 dBRMS</p>
+</li>
+<li>
+<p>完成SPK 音量校准。</p>
+</li>
+</ul>
+<p><img alt="" src="mymedia/audiotuning/tuning-15.png" /></p>
+<p>图10: 麦克风校正方式</p>
+</li>
+<li>
+<p>DUT 记录来自外部 SPK = AVGRMS(X) 的 80dBSPL 白噪声</p>
+</li>
+<li>
+<p>使用粘土密封 MIC 孔，然后 DUT 记录来自外部 SPK = AVGRMS(Y) 的
+    80dBSPL 白噪声</p>
+</li>
+<li>
+<p>规格：AVGRMS(X)-AVGRMS(Y)     20dBRMS</p>
+</li>
+</ol>
+<p><img alt="" src="mymedia/audiotuning/tuning-16.png" /></p>
+<p>图11: 麦克风声学隔离量测方式</p>
+<p>b)  内部隔音</p>
+<ol>
+<li>
+<p>禁用麦克风和扬声器算法（AEC、NR、AGC、EQ...）</p>
+</li>
+<li>
+<p>使用距离 DUT 50cm 的参考 MIC 测量 DUT SPK 的音量。 DUT SPK
+    回放白噪声。 音量必须满足 80dBSPL。</p>
+<ul>
+<li>
+<p>Ref MIC 使用 MIC 校准器测量 1k 94dBSPL 正弦波 = X dBRMS</p>
+</li>
+<li>
+<p>预期参考 MIC 测得 1k 80dBSPL = X -14 dBRMS</p>
+</li>
+<li>
+<p>因此，Ref MIC 将在距离 DUT 50cm 处测量 X -14dBRMS</p>
+</li>
+<li>
+<p>修改 DUT SPK 增益，让 Ref MIC 测量 X-14 dBRMS</p>
+</li>
+<li>
+<p>完成SPK 音量校准。</p>
+</li>
+</ul>
+<p><img alt="" src="mymedia/audiotuning/tuning-17.png" /></p>
+<p>图12: 扬声器校正方式</p>
+</li>
+<li>
+<p>DUT 记录来自 DUT SPK = AVGRMS(X) 的白噪声</p>
+</li>
+<li>
+<p>使用粘土密封 MIC 孔，然后 DUT 记录来自 DUT SPK = AVGRMS(Y) 的白噪声</p>
+</li>
+<li>
+<p>规格：AVGRMS(X)-AVGRMS(Y)    20dBRMS</p>
+</li>
+</ol>
+<p><img alt="" src="mymedia/audiotuning/tuning-18.png" /></p>
+<p>图13: 测量内部声学隔离方式</p>
+<h4>4.2.2. 扬声器质量</h4>
+<p>隔音检查后，我们必须测试扬声器在这种机械设计中的性能。</p>
+<ul>
+<li>
+<p>频率响应</p>
+<ol>
+<li>
+<p>禁用算法（AEC、NR、AGC、EQ...）</p>
+</li>
+<li>
+<p>使用 SoundCheck 脚本"Triggered record Using WAV File.sqc"</p>
+</li>
+<li>
+<p>DUT播放IEEE女声并将REF MIC录制的Tx音讯增益调整为Y dBSPL，完成DUT
+    Tx音讯增益设置</p>
+</li>
+<li>
+<p>通过 SoundCheck 生成 -18dBFS 20Hz ~ 20kHz 扫频正弦波</p>
+</li>
+<li>
+<p>将扫频正弦波放入 DUT 并使用设置的 Tx 音讯增益播放此 .WAV</p>
+</li>
+<li>
+<p>使用SoundCheck同时录音检查频率响应</p>
+</li>
+</ol>
+</li>
+<li>
+<p>总偕波失真 + 噪声</p>
+<ol>
+<li>频率响应测试后，可以直接看到THD+N的结果</li>
+</ol>
+</li>
+</ul>
+<h4>4.2.3. 麦克风质量</h4>
+<p>检查完隔音后，我们必须测试机构设计中的麦克风性能</p>
+<p>a)  频率响应</p>
+<ol>
+<li>
+<p>禁用算法（AEC、NR、AGC、EQ...）</p>
+</li>
+<li>
+<p>将 DUT Rx 音讯增益设置为 0</p>
+</li>
+<li>
+<p>使用 SoundCheck 脚本"Open Loop Microphone.sqc"</p>
+</li>
+<li>
+<p>使用SoundCheck与人工嘴播放的 IEEE 女声（置于 DUT MIC 位置）并以REF
+    MIC录音</p>
+</li>
+<li>
+<p>调整 SoundCheck 人工嘴播放音量，Ref MIC 必须测量 Z dBSPL</p>
+</li>
+<li>
+<p>使用此音量设置，通过 SoundCheck 人工嘴播放 -18dBFS 20Hz ~ 20kHz
+    正弦波并通过 DUT MIC 录制</p>
+</li>
+<li>
+<p>从 DUT 中拉出 .WAV 并将其放入 SoundCheck</p>
+</li>
+<li>
+<p>使用 SoundCheck 分析这个 .WAV 并检查 FR</p>
+</li>
+</ol>
+<p>b)  总谐波失真 + 噪声</p>
+<ol>
+<li>FR测试后，可以直接看到THD+N的结果</li>
+</ol>
+<p>备注：</p>
+<p>DUT录音后，需要将音档转换为PCM类型.wav，Soundcheck才可以顺利使用该文件类型</p>
+<h4>4.2.4. DBRMS计算</h4>
+<p>下载Audacity软件，并使用stats.ny插件，如图13所示</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-19.png" /></p>
+<p>图13: Audacity 插件stats.ny</p>
+<p>加载档案，选择analysis         wav
+stats，可以得到如图13所示之窗口，请调整长度至10 sec</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-20.png" /></p>
+<p>图14: Audacity Wave Stats</p>
+<p>可以看到结果如 图15:</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-21.png" /></p>
+<p>图15: dBRMS结果</p>
+<h4>4.2.5. 频率响应测量</h4>
+<p>导入wave文件，选择需要分析的区域，如图15。选择analysis        Frequency
+graph，可以看到频率响应，如图16。然后用汉明窗和128点长度做分析频率响应。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-22.png" /></p>
+<p>图16: 选择扫频的区段</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-23.png" /></p>
+<p>图17: 频率响应窗口</p>
+<h2 id="5">5. 机构无法修改之状况<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>&lt;font color=red    当机构无法满足上述要求，且无法修改外壳设计，AEC性能会下降&lt;/font    ，并产生一些副作用，如图 18 所示。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-24.png" /></p>
+<p><strong>注意：两个红色圆圈中的条件是相互排斥的。</strong></p>
+<p>图18: 机构无法修改之影响</p>
+<p>如果远程语者和近端语者同时讲话，当抑制强度设置得较低时，远程语者将听到残留的回声。
+另一方面，如果抑制强度设置得较高，远程语者将无法听到来自近端讲话者的声音。</p>
+<p><strong>因为根本原因（由外壳机构引起）没有解决，所以不管使用什么调试软件，都会有一些副作用。接下来我们将给出一些关于回声消除软件调试的建议。但是请特别注意，这种副作用在一定程度上仍然存在。</strong></p>
+<h4>5.1.1. AEC调试</h4>
+<ol>
+<li>
+<p>将AO增益设置为0 db，AI增益设置为0 db。</p>
+</li>
+<li>
+<p>重复4.2.3节的第四步，得到音档Record5.wav。</p>
+</li>
+<li>
+<p>打开Recored5.wav，如图18所示，可以看到数字电平还是偏低。</p>
+</li>
+<li>
+<p>从扬声器中播放出一个语音音（TestFile2.wav）文件，记录为Record_S.wav，如图19所示。可以看到数字电平还是很低。如有必要，需将麦克风增益调高。</p>
+</li>
+<li>
+<p>调节麦克风增益3db，直到Record_S.wav出现截波，选择更大的麦克风增益电平，不会导致Record_S.wav出现截波，如图20所示。如果在麦克风增益或扬声器增益非常小时机构密封一样很差，请参阅第 5.1.2、5.1.3 和 5.1.4 节。</p>
+</li>
+<li>
+<p>固定AO增益、AI增益并开启部分音频功能后，如果需要，预设的AEC抑制强度设置如下：</p>
+<p>MI_U32 u32AecSupfreq[6] = {20,40,60,80,100,120};</p>
+<p>MI_U32 u32AecSupIntensity[7] = {4,4,4,4,4,4,4};</p>
+<p>请先测试单讲。如果AEC处理后有残留回声，请查看PCM波型，档名MI_AI_Dev0Chn0_16K_AecOut.wav，查看残留回声的频段。如果残余回声频率集中（如图21所示），请调整u32AecSupfreq和u32AecSupIntensity，转至步骤7。否则，需调高u32AecSupIntensity[7]数值。</p>
+</li>
+<li>
+<p>根据每帧点数和取样频率计算剩余回声频段对应的频带u32AecSupfreq[6]。接着调高对应频段的强度参数u32AecSupIntensity。如图 21 所示，可以通过以下公式计算频带：</p>
+<div>
+<div class="MathJax_Preview">\frac{\text{residual\ echo\ frequency}}{\frac{\text{sampling\ rate}}{2}} \times point\ number = \frac{2600\sim 2800}{4000} \times 128 \approx 83\sim 90</div>
+<script type="math/tex; mode=display">\frac{\text{residual\ echo\ frequency}}{\frac{\text{sampling\ rate}}{2}} \times point\ number = \frac{2600\sim 2800}{4000} \times 128 \approx 83\sim 90</script>
+</div>
+<p>请按上面计算出之频带区间加强AEC 抑制强度：</p>
+<p>MI_U32 u32AecSupfreq[6] = {20, 40, 60, 83, 90, 120};</p>
+<p>MI_U32 u32AecSupIntensity[7] = {4, 4, 4, 4, 8, 4, 4};</p>
+<p>调整后应抑制残留回声，如图22所示。</p>
+</li>
+<li>
+<p>测试双向通话并重复第 6 步和第 7
+步。</p>
+</li>
+</ol>
+<p><img alt="" src="mymedia/audiotuning/tuning-25.png" /></p>
+<p>图19: 从扬声器播放扫描频时的回声</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-26.png" /></p>
+<p>图20: 麦克风增益 = 0 DB</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-27.png" /></p>
+<p>图21: 麦克风增益 = 24DB</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-28.png" /></p>
+<p>图22: 残留回声之频率集中在频带 2600~2800
+Hz</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-29.png" /></p>
+<p>图23: AEC参数调整后之结果</p>
+<h4>5.1.2. AEC参数调试--范例 1</h4>
+<p>如果你完成了第0节的SOP，且麦克风增益很小，说明外壳的隔音性很差。
+解决机构上的隔音问题是最好的解决方案。但如果您无法解决隔音问题，切记某些副作用是无可避免的。若您可以调低扬声器增益，请先调低扬声器电平，然后重复第0节中所述的过程以找到新的麦克风增益。
+否则，请遵循以下SOP：</p>
+<ol>
+<li>
+<p>打开Record5.wav，如图23所示，然后将其转换到频域并得到频率响应。参见图 24。</p>
+</li>
+<li>
+<p>在AO路径开启EQ，使用EQ抑制较高能量的回声频段，如图24。EQ设置方法见第14章。</p>
+</li>
+<li>
+<p>在AO路径中应用EQ表，并重复第0部分中的SOP。</p>
+</li>
+<li>
+<p>如果麦克风增益仍然很小，请在步骤 2中压抑更多的DB值，并重复步骤3。</p>
+</li>
+</ol>
+<p><img alt="" src="mymedia/audiotuning/tuning-30.png" /></p>
+<p>图24: 播放扫频音档回录的AE</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-31.png" /></p>
+<p>图25: AE频响曲线</p>
+<h4>5.1.3. AEC参数调试--范例2</h4>
+<p>若使用EQ后仍无法改善AEC效果，请调低麦克风增益并启用麦克风中的AGC功能和NR功能。AGC调试方法参见第7章和第10章。NR调试方法参见第11章。</p>
+<h4>5.1.4. AEC参数调试--范例3</h4>
+<p>如果麦克风输出仍然很小，但回声仍然截波，请先关闭HW loopback，然后将压抑强度设置得更高。 请记住启用AEC时可能产生的副作用。参见图 26。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-32.png" /></p>
+<p><img alt="" src="mymedia/audiotuning/tuning-33.png" /></p>
+<p>图26: 远程和近端同时启动时的副作用</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-34.png" /></p>
+<p>图27: 双端通话情况下的失真，其中近端语音的功率可能会降低</p>
+<h2 id="6-aec">6. AEC结果波型<a class="headerlink" href="#6-aec" title="Permanent link">&para;</a></h2>
+<h3 id="61-aec4-and-15">6.1. AEC不同强度下的结果(4 and 15)<a class="headerlink" href="#61-aec4-and-15" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="mymedia/audiotuning/tuning-35.png" /></p>
+<p>图28: 扬声器播放讯号(远程)</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-36.png" /></p>
+<p>图29: 麦克风收到讯号(近端)</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-37.png" /></p>
+<p>图30: AEC强度4之结果</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-38.png" /></p>
+<p>图31: AEC强度15之结果</p>
+<p>AEC抑制强度决定了AEC的激进程度。强度0是最保守的，而强度15是最激进的。强度越激进，残余回声越少，出现的失真越大。建议强度为
+4。</p>
+<h2 id="7-dh">7. DH名词与定义<a class="headerlink" href="#7-dh" title="Permanent link">&para;</a></h2>
+<h3 id="71-lower-bin">7.1. Lower Bin<a class="headerlink" href="#71-lower-bin" title="Permanent link">&para;</a></h3>
+<p>lower bin表示最低抑制频带，根据采样率和点数计算。如果不抑制低于x Hz的频率区间，则根据以下公式计算下区间：</p>
+<div>
+<div class="MathJax_Preview">\frac{x}{\frac{\text{sampling\ rate}}{2}} \times \text{point\ number}</div>
+<script type="math/tex; mode=display">\frac{x}{\frac{\text{sampling\ rate}}{2}} \times \text{point\ number}</script>
+</div>
+<p>值范围：[0, 128]。最小单位为1。建议值为19。建议将此值始终设置为19以上；如果设置为小于19的值，则可能会抑制语音频率bin并导致正常语音失真。</p>
+<h3 id="72-ptpr">7.2. PTPR阀值<a class="headerlink" href="#72-ptpr" title="Permanent link">&para;</a></h3>
+<p>峰阈功率比的阈值。它是啸叫检测的标准之一。该值设置得越小，越容易被检测为啸叫。值范围：[0, 80]。 最小单位为 1。建议值为0。</p>
+<h3 id="73-papr">7.3. PAPR阀值<a class="headerlink" href="#73-papr" title="Permanent link">&para;</a></h3>
+<p>峰均功率比的阈值。它是啸叫检测的标准之一。该值设置得越小，越容易被检测为啸叫。值范围：[0, 80]。最小单位为1。建议值为10。</p>
+<h3 id="74-phpr">7.4. PHPR阀值<a class="headerlink" href="#74-phpr" title="Permanent link">&para;</a></h3>
+<p>峰谐波功率比阈值。它是啸叫检测的标准之一。该值设置得越小，越容易被检测为啸叫。值范围：[0, 80]。最小单位为1。建议值为20。</p>
+<h3 id="75-suppression">7.5. Suppression阀值<a class="headerlink" href="#75-suppression" title="Permanent link">&para;</a></h3>
+<p>范围内压抑啸叫能量的阈值。当范围内的啸叫能量超过该值时，会被抑制。该设置值越小，对啸叫频段周围的抑制程度越强。值范围：[0, 80]。 最小单位为1。建议值为5。</p>
+<h3 id="76-supbins">7.6. Supbins<a class="headerlink" href="#76-supbins" title="Permanent link">&para;</a></h3>
+<p>帧中抑制频率区间的总数。如果超过此设定值，将被检测为过度啸叫帧。该设置值越小，越容易被检测为过度的啸叫帧。这个值需要和PTPR、PAPR、PHPR的阈值一起调整。当PTPR、PAPR和PHPR的阈值较小时，该值必须增大；否则，太容易被检测为过度的啸叫帧。值范围：[0, 128]。最小单位为1。建议值为30。</p>
+<h3 id="77-excess-supbins-frames">7.7. Excess Supbins Frames<a class="headerlink" href="#77-excess-supbins-frames" title="Permanent link">&para;</a></h3>
+<p>这是检测是否降低音量的标准。当连续累积过多的啸叫帧超过该值时，必须降低音量才能达到更好的效果。该值越小，越容易达到需要较低音量的标准。请小心设置此值。如果设置得太低，容易将扬声器切换到低音量模式，使整体音量低于预期。反之，如果设置过高，则无法完全抑制啸叫。值范围：[0, 100]。 最小单位为1。推荐值为30。</p>
+<h3 id="78-within-supbins-frames">7.8. Within Supbins Frames<a class="headerlink" href="#78-within-supbins-frames" title="Permanent link">&para;</a></h3>
+<p>是否恢复音量的标准。当非啸叫帧连续累积超过此值时，可以将音量调整回原始设置。该值设置得越小，越容易达到恢复音量的标准。请小心设置此值。如果设置得太低，容易将扬声器切换到原始音量模式，使整体音量不稳定。反之，如果此值设置得太高，则会使扬声器保持低音量。值范围：[0, 500]。最小单位为1。推荐值为100。</p>
+<h2 id="8-dh">8. DH预设参数<a class="headerlink" href="#8-dh" title="Permanent link">&para;</a></h2>
+<h3 id="81">8.1. 预设参数表<a class="headerlink" href="#81" title="Permanent link">&para;</a></h3>
+<p>Table 1: DH 预设参数表</p>
+<table>
+    <tr>
+      <th width=96 valign=top>Module</th>
+      <th width=205 valign=top>Parameter</th>
+      <th width=161 valign=top>Default</th>
+    </tr>
+    <tr>
+      <td width=96 nowrap rowspan=8 valign=top>DH</td>
+      <td width=205 nowrap valign=top>Lower Bin</td>
+      <td width=161 nowrap valign=top>19</td>
+    </tr>
+    <tr>
+      <td width=205 nowrap valign=top>PTPR Threshold </td>
+      <td width=161 nowrap valign=top>0</td>
+    </tr>
+    <tr>
+      <td width=205 nowrap valign=top>PAPR Threshold </td>
+      <td width=161 nowrap valign=top>10</td>
+    </tr>
+    <tr>
+      <td width=205 nowrap valign=top>PHPR Threshold</td>
+      <td width=161 nowrap valign=top>20</td>
+    </tr>
+    <tr>
+      <td width=205 nowrap valign=top>Suppression Threshold </td>
+      <td width=161 nowrap valign=top>5</td>
+    </tr>
+    <tr>
+      <td width=205 nowrap valign=top>Supbins </td>
+      <td width=161 nowrap valign=top>30</td>
+    </tr>
+    <tr>
+      <td width=205 nowrap valign=top>Excess Supbins Frames </td>
+      <td width=161 nowrap valign=top>30</td>
+    </tr>
+    <tr>
+      <td width=205 nowrap valign=top>Within Supbins Frames</td>
+      <td width=161 nowrap valign=top>100</td>
+    </tr>
+</table>
+
+<h2 id="9-agc">9. AGC名词与定义<a class="headerlink" href="#9-agc" title="Permanent link">&para;</a></h2>
+<h3 id="91">9.1. 压缩率曲线<a class="headerlink" href="#91" title="Permanent link">&para;</a></h3>
+<p>压缩比曲线是输入功率电平(dBFS)和输出功率电平(dBFS)之间的关系（比率）。压缩率会压缩音频的动态范围。
+您最多可以在输入输出功率电平的关系坐标上设置五个坐标点来确定您想要的曲线。这七个包含六个转折点的点可以确定六个不同的斜率。例如，如果压缩比设置如下：</p>
+<p>compression_ratio_input[7] = {-80, -60, -50,-40,-30,-12,0}</p>
+<p>compression_ratio_output[7] = {-80, -45, -36, -27, -18, -9, -6}</p>
+<p>如图 31 所示，参数表示当输入为-80 dBFS时，Target Level将设置为-80 dBFS；当输入为-60 dBFS时，目标电平将设置为-45 dBFS，依此类推。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-39.png" /></p>
+<p>图32: 压缩率曲线</p>
+<p>如果不需要六个转折点，可以将其余参数设置为零：</p>
+<p>compression_ratio_input[7] = {-70, -60, -30, 0,0,0,0};</p>
+<p>compression_ratio_output[7] = {-60, -50, -10, -3, 0,0,0};</p>
+<p>如图32 所示，这组参数将只有三个不同的斜率。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-40.png" /></p>
+<p>图33: 三段斜率之压缩率曲线</p>
+<p>在设置压缩比曲线之前，您必须检查输入数据功率电平，并了解您想要提升或衰减多少增益(dB)或您想要达到的目标功率电平。除此之外，数字功率电平并不代表扬声器的响度。实际响度应该用分贝计来测量。我们建议将压缩率曲线输出的最大值设置为-3 dBFS以防止数据截波。如果输出资料的功率电平不符合您的要求，您可以尝试在低电平输入功率上提高更多增益。换句话说，这意味着增加低功率电平曲线的斜率。</p>
+<p>对于音频输入与输出，用户应提供清晰的压缩比曲线或想要达到多少平均能量(dBFS)的信息。如需记录真实场景中的波形数据，请用户提供以下信息：</p>
+<ol>
+<li>
+<p>扬声器和麦克风之间的确切距离（例如1m、2m、3m......）。</p>
+</li>
+<li>
+<p>语者说话的响度（正常说话音量约65-70dBA）。</p>
+</li>
+<li>
+<p>是否播放语音或音乐。可以的话希望客户提供wav档。如果用户需要播放语音，但没有wav档，请参考IEEE_Female_mono_16_kHz或IEEE_269-2010_Male_mono_16_kHz_-18dBFS。</p>
+</li>
+</ol>
+<p><img alt="" src="mymedia/audiotuning/tuning-41.png" /></p>
+<p>图34: 使用分贝计量测麦克风处之音量</p>
+<p>对于音讯输出，用户应提供清晰的压缩率曲线或想要达到多少dB
+SPL（由分贝计测量）的信息。真实响度不仅与数字信号的功率电平有关，还与硬设备有关。如果数字数据的功率电平接近
+0dBFS，但扬声器仍无法达到所需的音量，请要求用户更换扬声器或修改响度规格。如需分贝计测量数据，请用户提供以下信息：</p>
+<ol>
+<li>
+<p>设备与分贝计之间的准确距离（如 1m、2m、3m......）</p>
+</li>
+<li>
+<p>设备在指定距离所需的响度</p>
+</li>
+<li>
+<p>指定播放的音讯文件</p>
+</li>
+</ol>
+<p><img alt="" src="mymedia/audiotuning/tuning-42.png" /></p>
+<p>图35: Audio Output Record Schematic Diagram</p>
+<p>此外，请填写AGC测试结果表。它可以协助我方FAE了解当前的情况。</p>
+<h3 id="92-drop-gain-threshold">9.2. Drop gain threshold<a class="headerlink" href="#92-drop-gain-threshold" title="Permanent link">&para;</a></h3>
+<p>Drop gain threshold是指设置峰值允许输出幅度的值(dBFS)。在音频原始数据加上数字增益后，我们的AGC将估计峰值是否会超过此阈值。如果峰值超过阈值，数字增益将立即下降以防止截波。增益下降的最大值由参数Drop Gain Max决定。</p>
+<h3 id="93-noise-gate-threshold">9.3. Noise Gate Threshold<a class="headerlink" href="#93-noise-gate-threshold" title="Permanent link">&para;</a></h3>
+<p>低于Noise Gate Threshold值时，AGC会逐渐将增益降为0，下降速度根据attack time相同。设置Noise Gate
+Threshold之前请先测量纯噪声信号功率电平，并设置合适的噪声门阈值，AGC会得到更好的效果。Noise
+Gate Threshold的优先级高于压缩率曲线。无论压缩率曲线设置多少，当输入的功率电平低于噪声门阈值时，信号都会被判断为噪声。最小单位为1dB。取值范围：[-80dBFS, 0dBFS]。建议值为-60 dBFS。</p>
+<p>如果用户将噪声门阈值设置为正值，在相应的噪声门值以下增益将于上一帧相同。例如，如果用户将噪声门设置为60，如果输入数据的功率低于-60 dBFS，增益将保持不变。</p>
+<p>用户也可以通过设置指定的曲线来达到想要的效果。如图 35 所示，如果功率低于-60dBFS噪声门限，我们的 AGC 将维持上一帧的增益。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-43.png" /></p>
+<p>图36: 在噪声阀值下维持增益不变</p>
+<h3 id="94-attack-time">9.4. Attack Time<a class="headerlink" href="#94-attack-time" title="Permanent link">&para;</a></h3>
+<p>两次增益递减之间的最短时间。请参考图36和图37。最小单位为4ms。这意味着增益将在帧与帧之间降低
+0.5dB。建议值为1。如果设置为2，Attack time为8ms，以此类推。</p>
+<h3 id="95-release-time">9.5 Release Time<a class="headerlink" href="#95-release-time" title="Permanent link">&para;</a></h3>
+<p>两次增益上升的最短时间。请参考图36和图37。最小单位为4ms。这意味着增益将在帧与帧之间增加0.5dB。
+建议值为5。如果设置为2，Release time为8ms，以此类推。 注意：如果 Release
+Time 设置的太短，增益会快速增加。 它可能会导致高机率截波。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-44.png" /></p>
+<p>图37: AGC输入讯号</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-45.png" /></p>
+<p>图38: AGC输出讯号，Release time与Attack time行为展示</p>
+<h3 id="96-gain-info">9.6. Gain Info<a class="headerlink" href="#96-gain-info" title="Permanent link">&para;</a></h3>
+<p>Gain Info定义了AGC的最大、最小和初始增益值。</p>
+<p>最小单位为1dB。</p>
+<p>最大增益：值范围：[0 dB, 60 dB]</p>
+<p>最小增益：值范围：[-40 dB, 30 dB]</p>
+<p>初始增益：值范围：[-20 dB, 60 dB]</p>
+<h3 id="97-drop-gain-max">9.7. Drop Gain Max<a class="headerlink" href="#97-drop-gain-max" title="Permanent link">&para;</a></h3>
+<p>Drop Gain Max是指防止输出饱和的增益下降最大值。由于AGC会在帧与帧之间平滑数据，因此不确定每个点是否都没有被截波。所以我们建议您同时透过压缩率曲线和释放时间，以确保没有数据截波。最小单位为 1dB。值范围：[0 dB, 60 dB]。 建议值为 12 dB。</p>
+<p>注意：如果Drop Gain Max值设置得太大，帧和帧之间的连接处可能会出现明显的不平滑连接。另一方面，如果
+Drop Gain Max值设置得太小，输出可能会有很多截波点。因此，您应该谨慎调整此参数以满足要求。</p>
+<h3 id="98-noise-gate-attenuation">9.8. Noise Gate Attenuation<a class="headerlink" href="#98-noise-gate-attenuation" title="Permanent link">&para;</a></h3>
+<p>噪声门衰减是指输入功率在Noise gate以下时衰减的百分比。当输入信号的功率低于Noise gate时，信号会立即衰减指定百分比。请参阅图39。</p>
+<p>最小单位为1。取值范围：[0, 100]。建议值为0。我们建议您避免使用噪声门衰减，以防止输出信号听起来像是连接中断。此外，语音的尾音和起始音也高机率会被衰减，使语音变得不自然。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-46.png" /></p>
+<p>图39: Noise Gate Attenuation</p>
+<h3 id="99-gain-step">9.9. Gain Step<a class="headerlink" href="#99-gain-step" title="Permanent link">&para;</a></h3>
+<p>增益上升或下降的速度. 如果设为1, 帧与帧之间升降增益的单位是±0.5dB。</p>
+<p>若设定值越高，音量升降速度越快，最小单位为1。取值范围：[0, 10]。建议值为1。</p>
+<h3 id="910-automatic-gain-control-by-frequency-band">9.10. Automatic gain control by frequency band<a class="headerlink" href="#910-automatic-gain-control-by-frequency-band" title="Permanent link">&para;</a></h3>
+<p>当用户设置模式为2时，我们的AGC支持按频段调整增益。用户最多可以设置不同的3个频段。</p>
+<p>例如：</p>
+<div class="codehilite"><pre><span></span>int freqBand[3] = {3000,6000,8000};
+
+IaaApc_SetAgcFreqBand(handle, freqBand);
+</pre></div>
+
+
+<p>然后，用户可以为每个频段设置不同的压缩比曲线，如下示例代码：</p>
+<div class="codehilite"><pre><span></span>int compressionRatioArrayLowInput[7] = {-80,-60,-40,-20,0,0,0};
+
+int compressionRatioArrayLowOutput[7] = {-5,-5,-5,-5,-5,-5,-5};
+
+int compressionRatioArrayMidInput[7] = {-80,-60,-40,-20,0,0,0};
+
+int compressionRatioArrayMidOutput[7] = {-80,-60,-40,-20,0,0,0};
+
+int compressionRatioArrayHighInput[7] = {-80,-60,-40,-20,0,0,0};
+
+int compressionRatioArrayHighOutput[7] = {-80,-60,-40,-20,0,0,0};
+
+IaaApc_SetLowFreqCompressionRatioCurve(handle, compressionRatioArrayLowInput, compressionRatioArrayLowOutput);
+
+IaaApc_SetMidFreqCompressionRatioCurve(handle, compressionRatioArrayMidInput, compressionRatioArrayMidOutput);
+
+IaaApc_SetHighFreqCompressionRatioCurve(handle, compressionRatioArrayHighInput, compressionRatioArrayHighOutput);
+</pre></div>
+
+
+<p>AGC 会对不同的频段应用不同的输入输出关系曲线。</p>
+<h2 id="10-agc">10. AGC范例问题解法<a class="headerlink" href="#10-agc" title="Permanent link">&para;</a></h2>
+<h3 id="101-clipping">10.1 Clipping<a class="headerlink" href="#101-clipping" title="Permanent link">&para;</a></h3>
+<p>如果输出信号数据的截波点过多，可以通过增加 Drop Gain Max 或降低 Compression Curve 的斜率或增加 Release Time。</p>
+<p>下面的图39显示了不同Drop Gain Max值的结果。上图是Drop Gain Max 6dB的结果，下图是Drop Gain Max 12dB的结果，其中Drop Gain Max测量值太小，导致增益衰减不够。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-47.png" /></p>
+<p>图40: 不同Drop gain value状态下的截波状况</p>
+<p>图40显示了不同压缩比曲线的结果。上一个在-48 dBFS到-25 dBFS的范围内提升较小的增益，可以避免音量突然增加。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-48.png" /></p>
+<p>图41: 不同压缩率曲线的截波状况</p>
+<p>图 41 显示了不同发布时间的结果。合适的Release Time可以有效的减少截波点。
+但如果Release Time设置的太长，会导致AGC拉升增益速度太慢，整体音量不够。</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-49.png" /></p>
+<p>图42: 不同Release time的截波状态</p>
+<h3 id="102-agc">10.2. AGC失效<a class="headerlink" href="#102-agc" title="Permanent link">&para;</a></h3>
+<p>如果输出信号在0.5秒后没有应用任何增益，请检查增益信息、释放时间、起音时间和压缩比曲线。如果Gain
+Info设置不正确，将严重影响AGC套用增益，请把Gain Info设置成更大的范围。</p>
+<p>如果Noise gate设置得太高，输入信号将保持在Noise
+gate之下，AGC不会对输出信号套用增益。请检查语音功率电平是否在您设置的Noise
+gate之下。如果要按百分比衰减噪声门以下的信号，请调整配置（参见第9.8节）。但请注意，此参数可能会导致结尾和起点的声音不自然。因此，在设置此参数时，应仔细考虑Noise
+gate值。设置完成后，转存输入档，并将输出档发送给SigmaStar FAE做分析。</p>
+<h3 id="103-agc">10.3. AGC后音量太小<a class="headerlink" href="#103-agc" title="Permanent link">&para;</a></h3>
+<p>如果输出平均功率电平没有达到您需要的目标能量，请检查压缩比曲线设置、噪声门和释放时间，查看释放时间是否设置得太长或压缩比曲线设置得太平缓，以修复相应的问题。</p>
+<h2 id="11-nr">11. NR名词与定义<a class="headerlink" href="#11-nr" title="Permanent link">&para;</a></h2>
+<h3 id="111-nr">11.1. NR模式<a class="headerlink" href="#111-nr" title="Permanent link">&para;</a></h3>
+<p>降噪模式；</p>
+<p>取值范围：[0, 1, 2]。</p>
+<p>0：默认语音模式</p>
+<p>1：用户设置模式</p>
+<h3 id="112-nr-intensity-frequency-band">11.2. NR Intensity Frequency Band<a class="headerlink" href="#112-nr-intensity-frequency-band" title="Permanent link">&para;</a></h3>
+<p>NR支持7个不同强度的灵活频段。 用户可以在 0 到 128 的范围内设置该值。该值代表频率区间。最小单位为1。例如设置强度频带为{3,24,40,64,80,100}表示NR将被分成7段，即0-3、3-24、24-40、40-64、64-80、80-100和100-128。0-3代表从0Hz到<span><span class="MathJax_Preview">\frac{\frac{\text{sample\ rate}}{2}}{128}*3</span><script type="math/tex">\frac{\frac{\text{sample\ rate}}{2}}{128}*3</script></span>Hz的频率，3-24代表从<span><span class="MathJax_Preview">\frac{\frac{\text{sample\ rate}}{2}}{128}*3</span><script type="math/tex">\frac{\frac{\text{sample\ rate}}{2}}{128}*3</script></span>到<span><span class="MathJax_Preview">\frac{\frac{\text{sample\ rate}}{2}}{128}*24</span><script type="math/tex">\frac{\frac{\text{sample\ rate}}{2}}{128}*24</script></span>的频率 128*24Hz 等等。</p>
+<h3 id="113-nr-intensity">11.3. NR Intensity<a class="headerlink" href="#113-nr-intensity" title="Permanent link">&para;</a></h3>
+<p>NR强度支持7个不同频段；强度30是最高级别的噪声抑制，但它会带来更多细节损失/损坏。建议您观察输入数据的频谱，判断哪个频段需要更大的强度。与参数 NR Intensity Frequency Band一起，您可以选择所需的任何频率区域。</p>
+<h3 id="114-nr-smooth-level">11.4. NR Smooth Level<a class="headerlink" href="#114-nr-smooth-level" title="Permanent link">&para;</a></h3>
+<p>信号频域平滑电平；值越大，信号越平滑。</p>
+<p>取值范围：[0, 10]。 最小单位为 1。建议值为 10。</p>
+<h3 id="115-nr-converge-speed">11.5. NR Converge Speed<a class="headerlink" href="#115-nr-converge-speed" title="Permanent link">&para;</a></h3>
+<p>噪声估计更新速度；然而，较大的值会导致NR检测噪声更快，但代价是更多的细节损失/损坏。取值范围：[0, 1, 2]。 建议值为 1。</p>
+<h3 id="116-nr-filter-mode">11.6. NR Filter Mode<a class="headerlink" href="#116-nr-filter-mode" title="Permanent link">&para;</a></h3>
+<p>降噪滤波器模式； 取值范围：[0, 1, 2, 3, 4, 5]。</p>
+<p>0：默认噪声估计模式</p>
+<p>1：修正噪声估计模式</p>
+<p>2：积极噪声估计类型 1 模式</p>
+<p>3：积极噪声估计类型 2 模式</p>
+<p>4：快速噪声估计模式</p>
+<p>5：深度学习模式模式</p>
+<p>0 到模式 4基于传统的信号处理方法。模式 5 基于深度学习方法。考虑到计算成本从大到小依次为模式5、模式1、模式2、模式3、模式0和模式4。推荐模式为模式0。在某些场景下，如冲击噪声和非平稳噪声，推荐模式为5。</p>
+<p>注意：如果 NR Filter Mode为5，NR Converge Speed应设置为2。5: Deep learning mode</p>
+<h2 id="12-nragc">12. NR与AGC预设参数<a class="headerlink" href="#12-nragc" title="Permanent link">&para;</a></h2>
+<h3 id="121">12.1 预设参数表<a class="headerlink" href="#121" title="Permanent link">&para;</a></h3>
+<p>Table 2: NR与AGC预设参数表</p>
+<table>
+    <tr>
+      <th width=98 rowspan=2>Module</th>
+      <th width=194 rowspan=2>Parameter</th>
+      <th width=367 colspan=2>Scenario (Mode)</th>
+    </tr>
+    <tr>
+      <td width=183>Speech Mode</td>
+      <td width=183>Music Mode</td>
+    </tr>
+    <tr>
+      <td width=98 nowrap rowspan=5 valign=top>NR</td>
+      <td width=194 nowrap valign=top>Intensity
+      band</td>
+      <td width=183 nowrap valign=top>{3,24,40,64,80,128};</td>
+      <td width=183 nowrap valign=top>{3,24,40,64,80,128};</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Intensity</td>
+      <td width=183 nowrap valign=top>{20,20,20,20,20,20,20}</td>
+      <td width=183 nowrap valign=top>{20,20,20,20,20,20,20}</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Smooth
+      Level</td>
+      <td width=183 nowrap valign=top>10</td>
+      <td width=183 nowrap valign=top>10</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Converge Speed</td>
+      <td width=183 nowrap valign=top>1</td>
+      <td width=183 nowrap valign=top>1</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Filter
+      Mode</td>
+      <td width=183 nowrap valign=top>0</td>
+      <td width=183 nowrap valign=top>0</td>
+    </tr>
+    <tr>
+      <td width=98 nowrap rowspan=12 valign=top>AGC</td>
+      <td width=194 nowrap valign=top>Drop gain
+      threshold</td>
+      <td width=183 nowrap valign=top>-3</td>
+      <td width=183 nowrap valign=top>-3</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Attack
+      Time</td>
+      <td width=183 nowrap valign=top>1</td>
+      <td width=183 nowrap valign=top>1</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Release
+      Time</td>
+      <td width=183 nowrap valign=top>5</td>
+      <td width=183 nowrap valign=top>5</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Noise Gate</td>
+      <td width=183 nowrap valign=top>-60</td>
+      <td width=183 nowrap valign=top>-60</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Compression
+      Ratio Input</td>
+      <td width=183 nowrap valign=top>{-77,-70,-40,-20,-15,-10,-5}</td>
+      <td width=183 nowrap valign=top>{-77,-70,-40,-20,-15,-10,-5}</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Compression
+      Ratio Output</td>
+      <td width=183 nowrap valign=top>{-80,-60,-30,-15,-10,-5,-3}</td>
+      <td width=183 nowrap valign=top>{-80,-60,-30,-15,-10,-5,-3}</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Noise Gate
+      Attenuation</td>
+      <td width=183 nowrap valign=top>0</td>
+      <td width=183 nowrap valign=top>0</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Drop Gain
+      Max</td>
+      <td width=183 nowrap valign=top>12</td>
+      <td width=183 nowrap valign=top>12</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Maximum
+      Gain</td>
+      <td width=183 nowrap valign=top>20</td>
+      <td width=183 nowrap valign=top>20</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Minimum
+      Gain</td>
+      <td width=183 nowrap valign=top>-5</td>
+      <td width=183 nowrap valign=top>-5</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Initial
+      Gain</td>
+      <td width=183 nowrap valign=top>0</td>
+      <td width=183 nowrap valign=top>0</td>
+    </tr>
+    <tr>
+      <td width=194 nowrap valign=top>Gain Step</td>
+      <td width=183 nowrap valign=top>1</td>
+      <td width=183 nowrap valign=top>1</td>
+    </tr>
+</table>
+
+<h2 id="13-nr">13. NR结果波型<a class="headerlink" href="#13-nr" title="Permanent link">&para;</a></h2>
+<h3 id="131-nr-1530">13.1. 不同强度之NR结果波型 (15和30)<a class="headerlink" href="#131-nr-1530" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="mymedia/audiotuning/tuning-50.png" /></p>
+<p>图43: NR 结果波型 (强度: 15)</p>
+<p><img alt="" src="mymedia/audiotuning/tuning-51.png" /></p>
+<p>图44: NR 结果波型 (强度: 30)</p>
+<h2 id="14-eq">14. EQ参数设定<a class="headerlink" href="#14-eq" title="Permanent link">&para;</a></h2>
+<p>请设置数组eq_gain_db[_EQ_BAND_NUM]，表示EQ频段的增益调整，然后将频率分成129等份。</p>
+<p>每个值代表： 8k / 129 = 62.015 赫兹</p>
+<p>8 kHz频段仅在采样频率（s32WorkSampleRate）设置为16 kHz时有效。
+每个频段的取值范围为 [--100, +20] dB。 例如，如果您需要将 -10DB 从 1560 Hz 降低到 3000 Hz，则设置 eq_gain_db 数组索引，(<span><span class="MathJax_Preview">floor(\frac{1560}{62.015})</span><script type="math/tex">floor(\frac{1560}{62.015})</script></span> 至 <span><span class="MathJax_Preview">ceil(\frac{3000}{62.015})</span><script type="math/tex">ceil(\frac{3000}{62.015})</script></span> ) 增益为
+-10 DB。</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ubi.html" title="UBI文件系统使用指南" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                UBI文件系统使用指南
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="Sensor Porting.html" title="Sensor Porting Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Sensor Porting Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../search/search_index.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

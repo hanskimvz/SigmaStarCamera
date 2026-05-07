@@ -1,0 +1,5139 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>AI - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#revision-history" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                AI
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="aec_en.html" class="md-tabs__link md-tabs__link--active">
+          Development
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../customer/IPC/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      SDK Module API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        SDK Module API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_en.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_en.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        AI
+      </label>
+    
+    <a href="ai_en.html" title="AI" class="md-nav__link md-nav__link--active">
+      AI
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-audio-codec-block-diagram" class="md-nav__link">
+    1.2. Audio Codec Block Diagram
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-muffin-series" class="md-nav__link">
+    1.2.1. Muffin series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-mochi-series" class="md-nav__link">
+    1.2.2. Mochi series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-maruko-series" class="md-nav__link">
+    1.2.3. Maruko series
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-audio-codec-device-description" class="md-nav__link">
+    1.3. Audio Codec Device Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-audio-codec-difference-description" class="md-nav__link">
+    1.4. Audio Codec Difference Description
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-muffin-series" class="md-nav__link">
+    1.4.1. Muffin series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-mochi-series" class="md-nav__link">
+    1.4.2. Mochi series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-maruko-series" class="md-nav__link">
+    1.4.3. Maruko series
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-keyword" class="md-nav__link">
+    1.5. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-reference" class="md-nav__link">
+    2.  API reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_ai_open" class="md-nav__link">
+    2.1. MI_AI_Open
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_ai_openwithcfgfile" class="md-nav__link">
+    2.2. MI_AI_OpenWithCfgFile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_ai_close" class="md-nav__link">
+    2.3. MI_AI_Close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_ai_attachif" class="md-nav__link">
+    2.4. MI_AI_AttachIf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_ai_enablechngroup" class="md-nav__link">
+    2.5. MI_AI_EnableChnGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_ai_disablechngroup" class="md-nav__link">
+    2.6. MI_AI_DisableChnGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_ai_read" class="md-nav__link">
+    2.7. MI_AI_Read
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_ai_releasedata" class="md-nav__link">
+    2.8. MI_AI_ReleaseData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_ai_setgain" class="md-nav__link">
+    2.9. MI_AI_SetGain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_ai_getgain" class="md-nav__link">
+    2.10. MI_AI_GetGain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_ai_setmute" class="md-nav__link">
+    2.11. MI_AI_SetMute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_ai_getmute" class="md-nav__link">
+    2.12. MI_AI_GetMute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_ai_setifgain" class="md-nav__link">
+    2.13. MI_AI_SetIfGain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_ai_getifgain" class="md-nav__link">
+    2.14. MI_AI_GetIfGain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_ai_setifmute" class="md-nav__link">
+    2.15. MI_AI_SetIfMute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_ai_getifmute" class="md-nav__link">
+    2.16. MI_AI_GetIfMute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_ai_seti2sconfig" class="md-nav__link">
+    2.17. MI_AI_SetI2SConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-mi_ai_geti2sconfig" class="md-nav__link">
+    2.18. MI_AI_GetI2SConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-mi_ai_dupchngroup" class="md-nav__link">
+    2.19. MI_AI_DupChnGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220-mi_ai_initdev" class="md-nav__link">
+    2.20. MI_AI_InitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-mi_ai_deinitdev" class="md-nav__link">
+    2.21. MI_AI_DeInitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-mi_ai_getattr" class="md-nav__link">
+    2.22. MI_AI_GetAttr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ai-data-type" class="md-nav__link">
+    3.  AI Data type
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_audio_dev" class="md-nav__link">
+    3.1. MI_AUDIO_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_audio_format_e" class="md-nav__link">
+    3.2. MI_AUDIO_Format_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_audio_soundmode_e" class="md-nav__link">
+    3.3. MI_AUDIO_SoundMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_audio_samplerate_e" class="md-nav__link">
+    3.4. MI_AUDIO_SampleRate_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_ai_attr_t" class="md-nav__link">
+    3.5. MI_AI_Attr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_ai_if_e" class="md-nav__link">
+    3.6. MI_AI_If_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_ai_max_chn_num" class="md-nav__link">
+    3.7. MI_AI_MAX_CHN_NUM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_ai_data_t" class="md-nav__link">
+    3.8. MI_AI_Data_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_audio_i2smode_e" class="md-nav__link">
+    3.9. MI_AUDIO_I2sMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_audio_i2sbitwidth_e" class="md-nav__link">
+    3.10. MI_AUDIO_I2sBitWidth_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_audio_i2sformat_e" class="md-nav__link">
+    3.11. MI_AUDIO_I2sFormat_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_audio_i2smclk_e" class="md-nav__link">
+    3.12. MI_AUDIO_I2sMclk_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_audio_i2sconfig_t" class="md-nav__link">
+    3.13. MI_AUDIO_I2sConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_ai_initparam_t" class="md-nav__link">
+    3.14. MI_AI_InitParam_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-error-code" class="md-nav__link">
+    4.  Error Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_en.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_en.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_en.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_en.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_en.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_en.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_en.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_en.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_en.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_en.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_en.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_en.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_en.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_en.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_en.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_en.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_en.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_en.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_en.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_en.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_en.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdisp_en.html" title="VDISP" class="md-nav__link">
+      VDISP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-nav__link">
+      ABBR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-audio-codec-block-diagram" class="md-nav__link">
+    1.2. Audio Codec Block Diagram
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-muffin-series" class="md-nav__link">
+    1.2.1. Muffin series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-mochi-series" class="md-nav__link">
+    1.2.2. Mochi series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-maruko-series" class="md-nav__link">
+    1.2.3. Maruko series
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-audio-codec-device-description" class="md-nav__link">
+    1.3. Audio Codec Device Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-audio-codec-difference-description" class="md-nav__link">
+    1.4. Audio Codec Difference Description
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-muffin-series" class="md-nav__link">
+    1.4.1. Muffin series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-mochi-series" class="md-nav__link">
+    1.4.2. Mochi series
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-maruko-series" class="md-nav__link">
+    1.4.3. Maruko series
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-keyword" class="md-nav__link">
+    1.5. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-reference" class="md-nav__link">
+    2.  API reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_ai_open" class="md-nav__link">
+    2.1. MI_AI_Open
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_ai_openwithcfgfile" class="md-nav__link">
+    2.2. MI_AI_OpenWithCfgFile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_ai_close" class="md-nav__link">
+    2.3. MI_AI_Close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_ai_attachif" class="md-nav__link">
+    2.4. MI_AI_AttachIf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_ai_enablechngroup" class="md-nav__link">
+    2.5. MI_AI_EnableChnGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_ai_disablechngroup" class="md-nav__link">
+    2.6. MI_AI_DisableChnGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_ai_read" class="md-nav__link">
+    2.7. MI_AI_Read
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_ai_releasedata" class="md-nav__link">
+    2.8. MI_AI_ReleaseData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_ai_setgain" class="md-nav__link">
+    2.9. MI_AI_SetGain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_ai_getgain" class="md-nav__link">
+    2.10. MI_AI_GetGain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_ai_setmute" class="md-nav__link">
+    2.11. MI_AI_SetMute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_ai_getmute" class="md-nav__link">
+    2.12. MI_AI_GetMute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_ai_setifgain" class="md-nav__link">
+    2.13. MI_AI_SetIfGain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_ai_getifgain" class="md-nav__link">
+    2.14. MI_AI_GetIfGain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_ai_setifmute" class="md-nav__link">
+    2.15. MI_AI_SetIfMute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_ai_getifmute" class="md-nav__link">
+    2.16. MI_AI_GetIfMute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_ai_seti2sconfig" class="md-nav__link">
+    2.17. MI_AI_SetI2SConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-mi_ai_geti2sconfig" class="md-nav__link">
+    2.18. MI_AI_GetI2SConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-mi_ai_dupchngroup" class="md-nav__link">
+    2.19. MI_AI_DupChnGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220-mi_ai_initdev" class="md-nav__link">
+    2.20. MI_AI_InitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-mi_ai_deinitdev" class="md-nav__link">
+    2.21. MI_AI_DeInitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-mi_ai_getattr" class="md-nav__link">
+    2.22. MI_AI_GetAttr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ai-data-type" class="md-nav__link">
+    3.  AI Data type
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_audio_dev" class="md-nav__link">
+    3.1. MI_AUDIO_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_audio_format_e" class="md-nav__link">
+    3.2. MI_AUDIO_Format_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_audio_soundmode_e" class="md-nav__link">
+    3.3. MI_AUDIO_SoundMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_audio_samplerate_e" class="md-nav__link">
+    3.4. MI_AUDIO_SampleRate_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_ai_attr_t" class="md-nav__link">
+    3.5. MI_AI_Attr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_ai_if_e" class="md-nav__link">
+    3.6. MI_AI_If_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_ai_max_chn_num" class="md-nav__link">
+    3.7. MI_AI_MAX_CHN_NUM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_ai_data_t" class="md-nav__link">
+    3.8. MI_AI_Data_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_audio_i2smode_e" class="md-nav__link">
+    3.9. MI_AUDIO_I2sMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_audio_i2sbitwidth_e" class="md-nav__link">
+    3.10. MI_AUDIO_I2sBitWidth_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_audio_i2sformat_e" class="md-nav__link">
+    3.11. MI_AUDIO_I2sFormat_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_audio_i2smclk_e" class="md-nav__link">
+    3.12. MI_AUDIO_I2sMclk_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_audio_i2sconfig_t" class="md-nav__link">
+    3.13. MI_AUDIO_I2sConfig_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_ai_initparam_t" class="md-nav__link">
+    3.14. MI_AI_InitParam_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-error-code" class="md-nav__link">
+    4.  Error Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI AI API</h1>
+<hr />
+<h2 id="revision-history">REVISION HISTORY<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision No.</th>
+<th><div style="width:335pt">Description</div></th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.50</td>
+<td><li> Initial  release</td>
+<td>12/04/2020</td>
+</tr>
+<tr>
+<td>3.51</td>
+<td><li> Audio  new architecture</td>
+<td>07/19/2021</td>
+</tr>
+<tr>
+<td></td>
+<td><li> Added procfs introduction</td>
+<td>08/25/2021</td>
+</tr>
+<tr>
+<td>3.52</td>
+<td><li> Added MI_AI_GetAttr</td>
+<td>09/08/2021</td>
+</tr>
+<tr>
+<td></td>
+<td><li> Modified version: Audio 3.0  Version starts from 3.50(3.0 to 3.49 are Audio 2.0  versions)</td>
+<td>12/29/2021</td>
+</tr>
+<tr>
+<td>3.53</td>
+<td><li> Added Mochi info</td>
+<td>02/17/2022</td>
+</tr>
+<tr>
+<td>3.54</td>
+<td><li> Added Maruko info</td>
+<td>03/29/2022</td>
+</tr>
+<tr>
+<td></td>
+<td><li> Modified config file format of MI_AI_OpenWithCfgFile</td>
+<td>05/19/2022</td>
+</tr>
+<tr>
+<td></td>
+<td><li> Added the tiny version description</td>
+<td>04/12/2023</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<h3 id="11-module-description">1.1. Module Description<a class="headerlink" href="#11-module-description" title="Permanent link">&para;</a></h3>
+<p>Audio Input (AI) is mainly used to configure and enable audio input devices, read Audio data, and adjust volume.</p>
+<h3 id="12-audio-codec-block-diagram">1.2. Audio Codec Block Diagram<a class="headerlink" href="#12-audio-codec-block-diagram" title="Permanent link">&para;</a></h3>
+<h4 id="121-muffin-series">1.2.1. Muffin series<a class="headerlink" href="#121-muffin-series" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/ai/ai-1.png" /></p>
+<p>Figure 1‑1: Muffin series chips</p>
+<p>The audio codec of Muffin series chips has the following resources:</p>
+<ul>
+<li>
+<p>WDMA * 5</p>
+</li>
+<li>
+<p>RDMA * 3</p>
+</li>
+<li>
+<p>DMIC interface (support 4Chn DMIC signal) * 1</p>
+</li>
+<li>
+<p>ADC (support 2Chn Amic/Linein) * 2</p>
+</li>
+<li>
+<p>I2S-TDM RX * 4</p>
+</li>
+<li>
+<p>I2S-TDM TX * 2</p>
+</li>
+<li>
+<p>DAC (support 2Chn Lineout) * 2</p>
+</li>
+<li>
+<p>SRC * 1</p>
+</li>
+<li>
+<p>HDMI TX * 1</p>
+</li>
+</ul>
+<h4 id="122-mochi-series">1.2.2. Mochi series<a class="headerlink" href="#122-mochi-series" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/ai/ai-8.png" /></p>
+<p>Figure 1‑2: Mochi series chips</p>
+<p>The audio codec of Mochi series chips has the following resources:</p>
+<ul>
+<li>
+<p>WDMA * 3</p>
+</li>
+<li>
+<p>RDMA * 2</p>
+</li>
+<li>
+<p>DMIC interface (support 4Chn DMIC signal) * 1</p>
+</li>
+<li>
+<p>ADC (support 2Chn Amic/Linein) * 2</p>
+</li>
+<li>
+<p>I2S-TDM RX (16 slot) * 1</p>
+</li>
+<li>
+<p>I2S-TDM TX (16 slot, but there are only two channels of valid data) * 1</p>
+</li>
+<li>
+<p>DAC (support 2Chn Lineout) * 2</p>
+</li>
+<li>
+<p>SRC * 1</p>
+</li>
+<li>
+<p>HDMI TX * 1</p>
+</li>
+</ul>
+<h4 id="123-maruko-series">1.2.3. Maruko series<a class="headerlink" href="#123-maruko-series" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/ai/ai-9.png" /></p>
+<p>Figure 1-3: Maruko series chips</p>
+<p>The audio codec of Maruko series chips has the following resources:</p>
+<ul>
+<li>
+<p>WDMA * 1</p>
+</li>
+<li>
+<p>RDMA * 1</p>
+</li>
+<li>
+<p>DMIC interface (support 6Chn DMIC signal) * 1</p>
+</li>
+<li>
+<p>ADC (support 2Chn Amic/Linein) * 2</p>
+</li>
+<li>
+<p>I2S RX(2 slot) * 2</p>
+</li>
+<li>
+<p>I2S TX(2 slot) * 1</p>
+</li>
+<li>
+<p>DAC (support 2Chn Lineout) * 2</p>
+</li>
+<li>
+<p>SRC * 1</p>
+</li>
+</ul>
+<h3 id="13-audio-codec-device-description">1.3. Audio Codec Device Description<a class="headerlink" href="#13-audio-codec-device-description" title="Permanent link">&para;</a></h3>
+<ul>
+<li>DMA</li>
+</ul>
+<p>Direct Memory Access, DMA transfer copies data from one address space to another address space, and provides high-speed data transfer between peripherals and memory or between memory and memory. When the CPU initializes this transfer action, the transfer action itself is realized and completed by the DMA controller. The DMA transmission method does not require the CPU to directly control the transmission, and there is no interrupt processing method to retain the scene and restore the scene process. The hardware opens a channel for direct data transmission for RAM and IO devices, which greatly improves the efficiency of the CPU.</p>
+<ul>
+<li>WDMA</li>
+</ul>
+<p>Direct Memory Access Writer.</p>
+<ul>
+<li>RDMA</li>
+</ul>
+<p>Direct Memory Access Reader.</p>
+<ul>
+<li>MUX</li>
+</ul>
+<p>MUX is the multiplexer data selector. In the process of multiplexing data transmission, any circuit that can be multiplexed out according to needs. The Mux in front of WDMA selects multiple data sources for WDMA, which can support the selection of &frac12;/4 data sources (the data sources can be the same or different). Each data source has two channels, that is, the selection of 2/4/8 channels data is written to DRAM by WDMA, which acts as a multiplexer. However, the Mux, which is close to the output peripheral interface (such as I2S TX/HDMI/DAC, etc.), realizes the function of selecting one.</p>
+<ul>
+<li>DPGA</li>
+</ul>
+<p>Digital Programmable Gain Amplifier, is a very versatile amplifier, and its amplification factor can be controlled by a program as needed.</p>
+<ul>
+<li>DMIC</li>
+</ul>
+<p>Digital Microphone Interface, audio codec only provides DMIC interface, not a complete DMIC. The DMIC interface provides the clock signal required for DMIC work, and receives the PDM signal from the DMIC.</p>
+<ul>
+<li>ADC</li>
+</ul>
+<p>Analog Digital Conversion, the electronic component that convert analog signals into digital signals.</p>
+<ul>
+<li>I2S</li>
+</ul>
+<p>Inter-IC Sound integrated circuit built-in audio bus, is a bus standard developed by Philips for audio data transmission between digital audio devices. Sigmastar's I2S bus only supports the standard I2S data format and the left-justified I2S data format. At the same time, it also supports TDM (Time-Division Multiplexing) technology, which interleaves different signals in different time periods and transmits them along the same channel, which can support 4/8/16 (Mochi series chips support 16 slots) channel data transmission.</p>
+<ul>
+<li>DAC</li>
+</ul>
+<p>Digital Analog Conversion, the electronic component that convert digital signals into analog signals.</p>
+<ul>
+<li>SRC</li>
+</ul>
+<p>Sample Rate Convert.</p>
+<ul>
+<li>HDMI_TX</li>
+</ul>
+<p>High Definition Multimedia Interface TX, is a fully digital video and sound transmission interface, which can transmit uncompressed audio and video signals.</p>
+<h3 id="14-audio-codec-difference-description">1.4. Audio Codec Difference Description<a class="headerlink" href="#14-audio-codec-difference-description" title="Permanent link">&para;</a></h3>
+<h4 id="141-muffin-series">1.4.1. Muffin series<a class="headerlink" href="#141-muffin-series" title="Permanent link">&para;</a></h4>
+<p>Muffin series chips have I2S RX * 4, but I2S RX C and I2S RX D have two modes, one is called share mode and the other is called slave mode. In share mode, I2S RX C and I2S RX A share I2S Clock (Wck and Bck), and I2S RX D and I2S RX B share I2S Clock (Wck and Bck). When both I2S RX A and I2S RX C need to be used at the same time The I2S parameters of the I2S must be completely consistent. The Codec that is connected to the I2S RX C needs to connect the I2S Clock pins (Wck and Bck) to the I2S Clock (Wck and Bck) of the I2S RX A, and the Data pin to the Data of the I2S RX C. Then, the hardware solution is shown in the figure below. Slave mode, I2S RX C and I2S RX D have independent clocks, but they can only be used as slaves. These two modes can be set by i2s-rx-mode under the dts sound node, 0 is slave mode, and 1 is share mode.</p>
+<p><img alt="" src="mymedia/ai/ai-2.png" /></p>
+<h4 id="142-mochi-series">1.4.2. Mochi series<a class="headerlink" href="#142-mochi-series" title="Permanent link">&para;</a></h4>
+<p>The Mochi series chip I2S supports a maximum of 16 slots, and the sampling rate is newly added to support 96K/192K. Note: In the usage scenario of I2S, the maximum I2S BCK cannot exceed 30MHz (eg: BCK=16bit * 16slots * 192K=49.152M or BCK=32bit * 16slots * 192K=98.304M, the usage of BCK &gt; 30MHz is not supported). MUX currently supports up to 8 channels, so if you need to use I2S RX 16slot, you need to attach 16-channel data to two DMAs.</p>
+<h4 id="143-maruko-series">1.4.3. Maruko series<a class="headerlink" href="#143-maruko-series" title="Permanent link">&para;</a></h4>
+<p>Maruko series chips, although there are two sets of I2S RX, but two sets of I2S RX cannot be used at the same time. Here are two sets of I2S RX usage scenarios:</p>
+<p>I2S RX:</p>
+<ul>
+<li>
+<p>External codec transmits non-I2S signals, which need to be adjusted to Wck and Bck, such as receiving PCM signals.</p>
+</li>
+<li>
+<p>Need to synchronize with Dmic Share clock to achieve Dmic and I2S RX.</p>
+</li>
+<li>
+<p>External codec works in master mode.</p>
+</li>
+</ul>
+<p>I2S TRX:</p>
+<ul>
+<li>Need to use I2S TX.</li>
+</ul>
+<p>The I2S RX is selected by using the i2s-pcm under the dts sound node. 1 is I2S RX and 0 is I2S TRX. In addition, whether I2S RX and Dmic share clock are configured through dmic-bck-share. 1 is the share clock, and 0 is the independent clock.</p>
+<h3 id="15-keyword">1.5. Keyword<a class="headerlink" href="#15-keyword" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Device (Audio input device)</li>
+</ul>
+<p>AI Device refers to WDMA of audio codec. Device is an abstraction of DMA in audio codec by audio3.0. WDMA in audio codec and AI Device have a one-to-one correspondence. For example, AI Device0 corresponds to WDMA1 in audio codec, AI Device1 corresponds to WDMA2 in audio codec, and so on. The data streams of audio3.0 are all connected in series with DMA as the center.</p>
+<ul>
+<li>Channel Group (Audio input channel group)</li>
+</ul>
+<p>AI Channel Group refers to a collection of multiple physical channels. The number of physical channels in the set is determined by the Sound Mode of the AI Device. The meaning of Channel Group is to ensure the synchronization of related multiple physical channel data. For example, to make a 4Mic beamforming algorithm, the 4 physical channels must ensure data synchronization. The solution is to operate the 4 physical channels as a whole. This is the meaning of Channel Group. How many Channel Groups the AI Device shares is determined by the number of physical channels connected to the AI Device and the Sound Mode. Channel Group Number = (the number of physical channels connected to the Device - the number of physical channels connected to the Device of Echo) / Sound Mode.</p>
+<ul>
+<li>Interface (Audio input peripherals)</li>
+</ul>
+<p>AI Interface is an abstraction of audio input peripheral interfaces in audio codec, such as Amic/Dmic/I2S/HDMI interfaces.</p>
+<ul>
+<li>Attach</li>
+</ul>
+<p>AI Attach refers to mounting Interface to the MUX corresponding to WDMA, that is, associating Device with Interface. For AI Device, Attach is to set the MUX corresponding to WDMA, select which Interface data can pass through the MUX, and WDMA will do the subsequent data transfer. AI Device does not support dynamic Attach Interface.</p>
+<p>The following figure is the result of attaching Dmic and ADC to WDMA2. MUX selects Dmic and ADC0/1 as two data sources and connects to WDMA2, so that WDMA2 can receive data from Dmic and ADC0/1.</p>
+<p><img alt="" src="mymedia/ai/ai-3.png" /></p>
+<ul>
+<li>Echo</li>
+</ul>
+<p>AI Echo refers to the AEC reference data provided by the audio codec. It can be seen from the audio codec block diagram that the input of SRC is the signal output by RDMA and amplified by DPGA, and the output of SRC is the signal after re-sampling the input, which can be sent to WDMA through Multi Channel as the echo reference data of the AEC algorithm. For AI Device, Echo represents the output signal of SRC in the audio codec block diagram. For AO Device, Echo means to connect the output of AO Device to the input of SRC. The following figure shows the data flow of AI Device and AO Device using Echo at the same time with a simple block diagram. The application can obtain the aligned AEC far end and near end data.</p>
+<p><img alt="" src="mymedia/ai/ai-4.png" /></p>
+<ul>
+<li>Sound Mode</li>
+</ul>
+<p>AI Sound Mode refers to how many physical channels a channel group consists of, and how many Channel Groups a Device has depends on the number of physical channels on the attach and the Sound Mode.</p>
+<p>Channel Group Number = (Physical Channels on Attach - Echo Channels on Attach) / Sound Mode.</p>
+<ul>
+<li>Gain</li>
+</ul>
+<p>AI Gain is divided into two categories in the audio3.0 architecture. One is DPGA Gain associated with Device, that is, DPGA in the audio codec block diagram, and the other is Gain unique to Interface. At present, the Interface with Gain has ADC and Dmic interface. For AI, if the Interface itself does not have an independent Interface Gain and is not connected to Dpga, then Gain cannot be set.</p>
+<ul>
+<li>Format</li>
+</ul>
+<p>What data format is used to represent an audio sample. Currently, only S16_LE format (PCM Linear 16bit (Little Endian)) is supported.</p>
+<ul>
+<li>Sample Rate</li>
+</ul>
+<p>The frequency the recording device samples the analog signal per unit time. The higher the sampling frequency, the more realistic and natural the waveform of the mechanical wave.</p>
+<ul>
+<li>Period Size</li>
+</ul>
+<p>For AI Device, Period Size represents the amount of data contained in each AI buffer (number of samples).</p>
+<ul>
+<li>Interleave</li>
+</ul>
+<p>For AI Device, whether Interleave is turned on or not determines how MI_AI stores the data of the Channel Group. If Interleave is turned on, the data of each physical channel in the Channel Group is stored interleaved by sample. If Interleave is closed, the data of each physical channel in the Channel Group is stored separately.</p>
+<ul>
+<li>
+<p>I2S parameter</p>
+</li>
+<li>
+<p>I2S Mode</p>
+<p>I2S Mode determines the working mode of I2S, whether it is standard I2S mode or Tdm I2S mode (2Channel or multi-channel), Master or Slave (Master provides synchronous clock, Slave receives synchronous clock). Generally speaking, there are no restrictions on the working mode, as long as it can match the external Codec clock.</p>
+</li>
+<li>
+<p>I2S BitWidth</p>
+<p>The bit width of I2S sending and receiving data, currently support 16/32bit, but the hardware can only process 16bit, which means that when the bit width is 32bit, the lower 16bit is invalid data.</p>
+</li>
+<li>
+<p>I2S Format</p>
+<p>I2S Format is the alignment of I2S. Currently, only I2S Philips and Left-justified alignment are supported. The following figure shows the waveforms of these two formats.</p>
+<p><img alt="" src="mymedia/ai/ai-5.png" /></p>
+<p><img alt="" src="mymedia/ai/ai-6.png" /></p>
+<p>I2S Philips alignment format, the first data bit of the sample data appears after the first BCLK (serial clock) of the WCLK (left and right channel switching clock) transition. In the left-aligned format, the first data bit of the sample data appears in the first BCLK (serial clock) of the WCLK (left and right channel switching clock) transition, and the polarity of WCLK is opposite to the alignment format of I2S Philips.</p>
+</li>
+<li>
+<p>I2S Sample Rate</p>
+<p>The sample frequency of I2S transmission and reception.</p>
+</li>
+<li>
+<p>Mclk</p>
+<p>Mclk, called the master clock, also called the system clock (System Clock), is generally 256 or 384 times the sample rate. The function is to enable better synchronization between systems, but it is not necessary. Currently only 12.288M, 16.384M, 18.432M, 24.576M, 24M, 48M, etc. are supported.</p>
+</li>
+<li>
+<p>bSyncClock/4-Wire/6-Wire Mode</p>
+<p>There are two wiring methods for SigmaStar's I2S. One is the 4-Wire mode, including RX_WCK, RX_BCK, RX_SDI, TX_SDO four wires. In this mode, TX does not have an independent clock, and all clocks are provided by RX. Therefore, in this mode, TX needs to rely on RX to use. TX cannot be used alone, and the parameters of I2S TX must be consistent with I2S RX. The other is 6-Wire mode, including RX_WCK, RX_BCK, RX_SDI, TX_WCK, TX_BCK, TX_SDO six wires. In this mode, RX and TX are independent and not related. The choice of 4-Wire/6-Wire Mode needs to be decided according to specific scenarios.</p>
+<p>If bSyncClock in the MI API I2S parameter is TRUE, 4-Wire Mode is used, and FALSE is 6-Wire Mode. The RX and TX belonging to the same group of I2S cannot be set to 4-Wire Mode on one side and 6-Wire Mode on the other side.</p>
+</li>
+<li>
+<p>Slot</p>
+<p>Slot represents the number of channels transmitted by I2S. Currently, 2 slots are supported in I2S mode, and 4/8 slots (Mochi series chips support 16 slots) are supported in Tdm mode.</p>
+</li>
+</ul>
+<h2 id="2-api-reference">2.  API reference<a class="headerlink" href="#2-api-reference" title="Permanent link">&para;</a></h2>
+<p>Audio Input (AI) mainly implements functions such as configuring and enabling audio input devices and acquiring audio frame data.</p>
+<table>
+<thead>
+<tr>
+<th><strong>API Name</strong></th>
+<th><strong>Features</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_ai_open">MI_AI_Open</a></td>
+<td>Enable audio input  device</td>
+</tr>
+<tr>
+<td><a href="#22-mi_ai_openwithcfgfile">MI_AI_OpenWithCfgFile</a></td>
+<td>Enable the audio  input device and initialize it according to the config file</td>
+</tr>
+<tr>
+<td><a href="#23-mi_ai_close">MI_AI_Close</a></td>
+<td>Close AI devices</td>
+</tr>
+<tr>
+<td><a href="#24-mi_ai_attachif">MI_AI_AttachIf</a></td>
+<td>Mount peripherals to AI device</td>
+</tr>
+<tr>
+<td><a href="#25-mi_ai_enablechngroup">MI_AI_EnableChnGroup</a></td>
+<td>Enable AI channel  group</td>
+</tr>
+<tr>
+<td><a href="#26-mi_ai_disablechngroup">MI_AI_DisableChnGroup</a></td>
+<td>Disable AI channel group</td>
+</tr>
+<tr>
+<td><a href="#27-mi_ai_read">MI_AI_Read</a></td>
+<td>Read audio data</td>
+</tr>
+<tr>
+<td><a href="#28-mi_ai_releasedata">MI_AI_ReleaseData</a></td>
+<td>Release audio data</td>
+</tr>
+<tr>
+<td><a href="#29-mi_ai_setgain">MI_AI_SetGain</a></td>
+<td>Set the volume of the  AI channel group</td>
+</tr>
+<tr>
+<td><a href="#210-mi_ai_getgain">MI_AI_GetGain</a></td>
+<td>Get the volume of the  AI channel group</td>
+</tr>
+<tr>
+<td><a href="#211-mi_ai_setmute">MI_AI_SetMute</a></td>
+<td>Set the mute  parameters of the AI channel group</td>
+</tr>
+<tr>
+<td><a href="#212-mi_ai_getmute">MI_AI_GetMute</a></td>
+<td>Get the mute  parameters of the AI channel group</td>
+</tr>
+<tr>
+<td><a href="#213-mi_ai_setifgain">MI_AI_SetIfGain</a></td>
+<td>Set AI peripheral volume</td>
+</tr>
+<tr>
+<td><a href="#214-mi_ai_getifgain">MI_AI_GetIfGain</a></td>
+<td>Get AI  peripheral volume</td>
+</tr>
+<tr>
+<td><a href="#215-mi_ai_setifmute">MI_AI_SetIfMute</a></td>
+<td>Set AI peripheral mute  parameters</td>
+</tr>
+<tr>
+<td><a href="#216-mi_ai_getifmute">MI_AI_GetIfMute</a></td>
+<td>Get AI peripheral mute  parameters</td>
+</tr>
+<tr>
+<td><a href="#217-mi_ai_seti2sconfig">MI_AI_SetI2SConfig</a></td>
+<td>Set I2S RX config info</td>
+</tr>
+<tr>
+<td><a href="#218-mi_ai_geti2sconfig">MI_AI_GetI2SConfig</a></td>
+<td>Get I2S RX config info</td>
+</tr>
+<tr>
+<td><a href="#219-mi_ai_dupchngroup">MI_AI_DupChnGroup</a></td>
+<td>Sync status of AI channel group</td>
+</tr>
+<tr>
+<td><a href="#220-mi_ai_initdev">MI_AI_InitDev</a></td>
+<td>Initialize the AI device</td>
+</tr>
+<tr>
+<td><a href="#221-mi_ai_deinitdev">MI_AI_DeInitDev</a></td>
+<td>De-Initialize the AI device</td>
+</tr>
+<tr>
+<td><a href="#222-mi_ai_getattr">MI_AI_GetAttr</a></td>
+<td>Get AI device attributes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-mi_ai_open">2.1. MI_AI_Open<a class="headerlink" href="#21-mi_ai_open" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Enable audio input device.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_Open(MI_AUDIO_DEV AiDevId, const MI_AI_Attr_t *pstAttr);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstAttr</td>
+<td>Device property  pointer</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+</ul>
+<p>Audio input device attributes include data format, sound mode, sampling rate, audio data samples, and interleaving mode.</p>
+<ul>
+<li>
+<p>Audio data format (<a href="#32-mi_audio_format_e">MI_AUDIO_Format_e</a>)</p>
+<p>The data format of the sampled samples. Only S16_LE is supported.</p>
+</li>
+<li>
+<p>Audio sound mode (<a href="#33-mi_audio_soundmode_e">MI_AUDIO_SoundMode_e</a>)</p>
+<p>The physical channels included in the channel group.</p>
+<p>MONO: 1 channel group contains 1 physical channel;</p>
+<p>STEREO: 1 channel group contains 2 physical channels;</p>
+<p>4CH: 1 channel group contains 4 physical channels;</p>
+<p>6CH: 1 channel group contains 6 physical channels;</p>
+<p>8CH: 1 channel group contains 8 physical channels.</p>
+</li>
+<li>
+<p>Audio sampling rate (<a href="#34-mi_audio_samplerate_e">MI_AUDIO_SampleRate_e</a>)</p>
+<p>The number of samples in one second. The higher the sampling rate, the smaller the distortion, but the amount of data processed also increases.</p>
+</li>
+<li>
+<p>Audio data samples(u32PeriodSize)</p>
+<p>The number of samples contained in the audio data read each time. When the audio sampling rate is high, it is recommended to increase u32PeriodSize accordingly. If the collected sound is not continuous, please increase u32PeriodSize and buffer size.</p>
+</li>
+<li>
+<p>Interlaced mode (bInterleaved)</p>
+<p>Whether the interleaving mode is enabled determines the data arrangement of each physical channel in the channel group. Take for example when the sound mode is 4CH, the following is described with Sx instead of the xth sample. When the interleaving mode is enabled, the data of the 4 physical channels are interleaved, such as Chn0S0 Chn1S0 Chn2S0 Chn3S0 Chn0S1 Chn1S1 Chn2S1 Chn3S1……;</p>
+<p>When the interleaving mode is disabled, the data of the 4 physical channels are arranged in the order of the channels. As follows:</p>
+<p>Chn0S0 Chn0S1 Chn0S2 Chn0S3 …… Chn0Sn</p>
+<p>Chn1S0 Chn1S1 Chn1S2 Chn1S3 …… Chn1Sn</p>
+<p>Chn2S0 Chn2S1 Chn2S2 Chn2S3 …… Chn2Sn</p>
+<p>Chn3S0 Chn3S1 Chn3S2 Chn3S3 …… Chn3Sn</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1.    MI_AI_Attr_t stAiSetAttr = {0};
+  2.    MI_AUDIO_DEV AiDevId = 0;
+  3.    stAiSetAttr.enFormat = E_MI_AUDIO_FORMAT_PCM_S16_LE;
+  4.    stAiSetAttr.enSoundMode = E_MI_AUDIO_SOUND_MODE_MONO;
+  5.    stAiSetAttr.enSampleRate = E_MI_AUDIO_SAMPLE_RATE_8000;
+  6.    stAiSetAttr.u32PeriodSize = 1024;
+  7.    stAiSetAttr.bInterleaved = TRUE;
+  8.    ExecFunc(MI_AI_Open(AiDevId, &amp;stAiSetAttr), MI_SUCCESS);
+</pre></div>
+
+
+<p>The detailed example is as follows:</p>
+<div class="codehilite"><pre><span></span>  1.    MI_AI_Attr_t stAiSetAttr = {0};
+  2.    MI_AI_Attr_t stAiGetAttr = {0};
+  3.    MI_AUDIO_DEV AiDevId = 0;
+  4.    MI_AI_If_e enAiIf[] = {E_MI_AI_IF_ADC_AB};
+  5.    MI_AI_Data_t stAiChFrame;
+  6.    MI_AI_Data_t stAecFrame;
+  7.    MI_U8 u8ChnGrpId = 0;
+  8.    MI_SYS_ChnPort_t stAiChnOutputPort;
+  9.    MI_S8 s8DpgaGain[] = {-10};
+  10.
+  11.    // Set the Format of AI Device to S16_LE
+  12.    stAiSetAttr.enFormat = E_MI_AUDIO_FORMAT_PCM_S16_LE;
+  13.
+  14.    // Set the Sound Mode to Mono, one Channel Group corresponds to one physical channel
+  15.    stAiSetAttr.enSoundMode = E_MI_AUDIO_SOUND_MODE_MONO;
+  16.
+  17.    // Set the sample rate of AI Device to 8KHz
+  18.    stAiSetAttr.enSampleRate = E_MI_AUDIO_SAMPLE_RATE_8000;
+  19.
+  20.    // Set each AI Buffer to contain 1024 sampling samples
+  21.    stAiSetAttr.u32PeriodSize = 1024;
+  22.
+  23.    // Set the data arrangement form of AI buffer
+  24.    stAiSetAttr.bInterleaved = TRUE;
+  25.
+  26.    // Open AI Device
+  27.    ExecFunc(MI_AI_Open(AiDevId, &amp;stAiSetAttr), MI_SUCCESS);
+  28.
+  29.    // Get device attributes
+  30.    ExecFunc(MI_AI_GetAttr(AiDevId, &amp;stAiGetAttr), MI_SUCCESS);
+  31.
+  32.    // Attach ADC0/1 to WDMA1
+  33.    ExecFunc(MI_AI_AttachIf(AiDevId, enAiIf, sizeof(enAiIf) / sizeof(enAiIf[0])), MI_SUCCESS);
+  34.
+  35.    // Set output depth
+  36.    memset(&amp;stAiChnOutputPort, 0, sizeof(stAiChnOutputPort));
+  37.    stAiChnOutputPort.eModId = E_MI_MODULE_ID_AI;
+  38.    stAiChnOutputPort.u32DevId = AiDevId;
+  39.    stAiChnOutputPort.u32ChnId = u8ChnGrpId;
+  40.    stAiChnOutputPort.u32PortId = 0;
+  41.    ExecFunc(MI_SYS_SetChnOutputPortDepth(0, &amp;stAiChnOutputPort, 4, 8), MI_SUCCESS);
+  42.
+  43.    // Set Interface gain of ADC0/1
+  44.    ExecFunc(MI_AI_SetIfGain(E_MI_AI_IF_ADC_AB, 18, 0), MI_SUCCESS);
+  45.
+  46.    // Set DPGA gain of ADC0/1
+  47.    ExecFunc(MI_AI_SetGain(AiDevId, u8ChnGrpId, s8DpgaGain, sizeof(s8DpgaGain) / sizeof(s8DpgaGain[0])), MI_SUCCESS);
+  48.
+  49.
+  50.    // Enable Channel Group
+  51.    ExecFunc(MI_AI_EnableChnGroup(AiDevId, u8ChnGrpId), MI_SUCCESS);
+  52.
+  53.    // Get audio frame data
+  54.    MI_AI_Read(AiDevId, u8ChnGrpId, &amp;stAiChFrame, &amp;stAecFrame, -1);
+  55.
+  56.    // do something
+  57.
+  58.    // Release audio frame data
+  59.    MI_AI_ReleaseData(AiDevId, u8ChnGrpId, &amp;stAiChFrame, &amp;stAecFrame);
+  60.
+  61.    // Disable Channel Group
+  62.    ExecFunc(MI_AI_DisableChnGroup(AiDevId, u8ChnGrpId), MI_SUCCESS);
+  63.
+  64.    // Close AI Device
+  65.    ExecFunc(MI_AI_Close(MI_AI_DEV_1), MI_SUCCESS);
+</pre></div>
+
+
+<h3 id="22-mi_ai_openwithcfgfile">2.2. MI_AI_OpenWithCfgFile<a class="headerlink" href="#22-mi_ai_openwithcfgfile" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Enable the audio input device and initialize it according to the config file.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_OpenWithCfgFile(MI_AUDIO_DEV AiDevId, const char *pCfgPath);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pCfgPath</td>
+<td>Path of config file</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>This interface is equivalent to the combination of <a href="#21-mi_ai_open">MI_AI_Open</a> and <a href="#24-mi_ai_attachif">MI_AI_AttachIf</a>.</p>
+</li>
+<li>
+<p>If the audio input device is enabled, it returns success.</p>
+</li>
+<li>
+<p>The config file template is as follows:</p>
+<div class="codehilite"><pre><span></span> 1.    {
+ 2.        &quot;DEV&quot;:{
+ 3.            &quot;enFormat&quot;:0,
+ 4.            &quot;enSoundMode&quot;:2,
+ 5.            &quot;enSampleRate&quot;:8000,
+ 6.            &quot;u32PeriodSize&quot;:1024,
+ 7.            &quot;bInterleaved&quot;:0,
+ 8.            &quot;aenAiIfs&quot;:[1,5]
+ 9.        },
+ 10.        &quot;I2S_A&quot;:{
+ 11.            &quot;enMode&quot;:0,
+ 12.            &quot;enBitWidth&quot;:0,
+ 13.            &quot;enFormat&quot;:0,
+ 14.            &quot;enSampleRate&quot;:8000,
+ 15.            &quot;enMclk&quot;:0,
+ 16.            &quot;bSyncClock&quot;:0,
+ 17.            &quot;u32TdmSlots&quot;:2
+ 18.        }
+ 19.    }
+ 20.
+</pre></div>
+
+
+<p>The “DEV” node contains parameters required by <a href="#21-mi_ai_open">MI_AI_Open</a> and <a href="#24-mi_ai_attachif">MI_AI_AttachIf</a>. “enFormat”, “enSoundMode”, “enSampleRate”, “u32PeriodSize”, and “bInterleaved” are the configuration information required by <a href="#21-mi_ai_open">MI_AI_Open</a>, please refer to the description of <a href="#24-mi_ai_attachif">MI_AI_AttachIf</a>. “aenAiIfs” is the configuration information required by <a href="#24-mi_ai_attachif">MI_AI_AttachIf</a>, please refer to <a href="#36-mi_ai_if_e">MI_AI_If_e</a> for details. The “I2S_A” node contains configuration information required by <a href="#217-mi_ai_seti2sconfig">MI_AI_SetI2SConfig</a>, please refer to <a href="#313-mi_audio_i2sconfig_t">MI_AUDIO_I2sConfig_t</a> for details.</p>
+<p>The value of the config item is consistent with the parameters given to the MI API. enFormat = 0 means AI Device uses S16_LE format, enSoundMode = 1 means Sound Mode uses Mono, enSampleRate = 8000 means AI Device uses 8KHz sample rate, u32PeriodSize = 1024 means one AI Buffer contains 1024 sample points, bInterleaved = 1 means that the channel group data arrangement is arranged in an interlaced manner, and aenAiIfs={1} means that ADC0/1 is attached to WDMA. If you need to use I2S RX, you also need to set the parameters of I2S RX. The above configuration works on I2S_A, enMode = 0 means using I2S Master mode, enBitWidth = 0 means I2S receiving bit width is 16bit, enFormat = 0 means aligning according to I2S Philips mode, enSampleRate = 8000 means that the sample rate of I2S RX is 8KHz, enMclk = 0 means that Mclk is not used, bSyncClock = 0 means 4-wire mode, and u32TdmSlots means receiving 2-channel data.</p>
+<p><a href="mymedia/ai/AI template.json">AI template.json</a></p>
+</li>
+<li>
+<p>The tiny version does not support this API.</p>
+</li>
+<li>
+<p>Example</p>
+<ol>
+<li>char *path = "/tmp/Dev0Cfg.json";</li>
+<li>ExecFunc(MI_AI_OpenWithCfgFile(AiDevId, path), MI_SUCCESS);</li>
+</ol>
+</li>
+</ul>
+<h3 id="23-mi_ai_close">2.3. MI_AI_Close<a class="headerlink" href="#23-mi_ai_close" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Close AI devices.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_Close(MI_AUDIO_DEV AiDevId);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>If the AI device is already closed, it will return Success directly.</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follows:</p>
+<div class="codehilite"><pre><span></span>  1. ExecFunc(MI_AI_Close(MI_AI_DEV_1), MI_SUCCESS);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="24-mi_ai_attachif">2.4. MI_AI_AttachIf<a class="headerlink" href="#24-mi_ai_attachif" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Mount peripherals to AI device.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_AttachIf(MI_AUDIO_DEV AiDevId, const MI_AI_If_e aenAiIfs[], MI_U8 u8AiIfSize);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>aenAiIfs</td>
+<td>AI Interface array, peripheral information that needs to be mounted to  the AI device;  An element of the array  represents the peripherals mounted on two adjacent physical channels</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>U8AiIfSize</td>
+<td>Size of the interface array, the  maximum is (<a href="#37-mi_ai_max_chn_num">MI_AI_MAX_CHN_NUM</a>/2)</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>This interface can only be called after <a href="#21-mi_ai_open">MI_AI_Open</a> succeeds.</p>
+</li>
+<li>
+<p>If you need to mount the I2S RX to the AI device, please call <a href="#217-mi_ai_seti2sconfig">MI_AI_SetI2SConfig</a> first to initialize the I2S RX.</p>
+</li>
+<li>
+<p>If you want to get echo reference data, the AI module needs to attach E_MI_AI_IF_ECHO_A, and the AO module needs to attach E_MI_AO_IF_ECHO_A. In the AI module, E_MI_AI_IF_ECHO_A must be attached with an interface other than E_MI_AI_IF_ECHO_A, and must be placed after the interface other than E_MI_AI_IF_ECHO_A.</p>
+</li>
+<li>
+<p>When the number of attached interface channels(minus the number of channels of E_MI_AI_IF_ECHO_A) is less than or not divisible by the audio sound mode(<a href="#33-mi_audio_soundmode_e">MI_AUDIO_SoundMode_e</a>), an error is returned.</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1.    MI_AI_If_e enAiIf[] = {E_MI_AI_IF_ADC_AB, E_MI_AI_IF_ADC_CD};
+  2.    ExecFunc(MI_AI_AttachIf(AiDevId, enAiIf, sizeof(enAiIf) / sizeof(enAiIf[0])), MI_SUCCESS);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="25-mi_ai_enablechngroup">2.5. MI_AI_EnableChnGroup<a class="headerlink" href="#25-mi_ai_enablechngroup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Enable AI channel group.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_EnableChnGroup(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>AiChn</td>
+<td>AI channel group number.   Total audio input channels group = (the  physical channels of the AI device attached to the peripheral – the physical  channels occupied by the echo) / the sound mode of the AI device  AI channel group number range: [0, total  audio input channel group-1]</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>This interface can only be called after <a href="#21-mi_ai_open">MI_AI_Open</a> and <a href="#24-mi_ai_attachif">MI_AI_AttachIf</a> succeed.</p>
+</li>
+<li>
+<p>If the AI channel group has been enabled, it will return success directly.</p>
+</li>
+<li>
+<p>The operation of the AI channel group does not support multiple processes. If a process is enabled, it can only be used and disabled here.</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1. ExecFunc(MI_AI_EnableChnGroup(AiDevId, 0), MI_SUCCESS);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="26-mi_ai_disablechngroup">2.6. MI_AI_DisableChnGroup<a class="headerlink" href="#26-mi_ai_disablechngroup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Disable AI channel group.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_DisableChnGroup(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ChnGrpIdx</td>
+<td>AI channel group number.   Range: [0, Channel Group Number-1]  Channel Group Number = (the number of  physical channels on attach-the number of Echo channels on attach) / Sound  Mode</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>If the AI channel group has been disabled, it will return success directly.</p>
+</li>
+<li>
+<p>The operation of the AI channel group does not support multiple processes. If a process is enabled, it can only be used and disabled here.</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1. ExecFunc(MI_AI_DisableChnGroup(AiDevId, 0), MI_SUCCESS);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="27-mi_ai_read">2.7. MI_AI_Read<a class="headerlink" href="#27-mi_ai_read" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Read audio data.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_Read(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx, MI_AI_Data_t *pstData, MI_AI_Data_e *pstEchoRefData, MI_S32 s32TimeoutMs);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ChnGrpIdx</td>
+<td>AI channel group number.   Range: [0, Channel Group Number-1]  Channel Group Number = (the number of  physical channels on attach-the number of Echo channels on attach) / Sound  Mode</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstData</td>
+<td>Audio data structure pointer</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>pstEchoRefData</td>
+<td>Echo reference data structure pointer</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>s32TimeoutMs</td>
+<td>Timeout for getting data:  -1: blocking mode, waiting for no data;   0 means non-blocking mode, when there is  no data, it will return an error;   &gt;0: blocking s32TimeoutMs milliseconds, and it will report an error and return when it  times out.</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>This interface can only be called after <a href="#21-mi_ai_open">MI_AI_Open</a> / <a href="#24-mi_ai_attachif">MI_AI_AttachIf</a> / <a href="#25-mi_ai_enablechngroup">MI_AI_EnableChnGroup</a> succeed.</p>
+</li>
+<li>
+<p>If you need to obtain an echo reference data, pstEchoRefData cannot be a null pointer. If you do not want to get the echo reference data pstEchoRefData, you can set it to a null pointer.</p>
+</li>
+<li>
+<p>s32TimeoutMs value must be greater than equal to -1, -1 is equal to the data acquired using the blocking mode, the data acquired is equal to non-blocking mode 0, is greater than 0, the blocking s32TimeoutMs milliseconds, and no data timeout then return error.</p>
+</li>
+<li>
+<p>This interface supports select operations. It is recommended to use the select/poll operation instead of timeout parameter.</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1. MI_AI_Data_t stAiChFrame;
+
+  2. MI_AI_Data_t stAecFrame;
+
+  3. MI_AI_Read(AiDevId, AiChnGroup, &amp;stAiChFrame, &amp;stAecFrame, -1);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="28-mi_ai_releasedata">2.8. MI_AI_ReleaseData<a class="headerlink" href="#28-mi_ai_releasedata" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Release audio data.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_ReleaseData(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx, MI_AI_Data_t *pstData, MI_AI_Data_t *pstEchoRefData);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ChnGrpIdx</td>
+<td>AI channel group number.   Range: [0, Channel Group Number-1]  Channel Group Number = (the number of  physical channels on attach-the number of Echo channels on attach) / Sound  Mode</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstData</td>
+<td>Audio data structure pointer</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstEchoRefData</td>
+<td>Echo reference data structure pointer</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1. MI_AI_ReleaseData(AiDevId, AiChnGroup, &amp;stAiChFrame, &amp;stAecFrame);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="29-mi_ai_setgain">2.9. MI_AI_SetGain<a class="headerlink" href="#29-mi_ai_setgain" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Set the volume of the AI channel group.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_SetGain(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx, const MI_S8 as8Gains[], MI_U8 u8GainSize);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ChnGrpIdx</td>
+<td>AI channel group number.   Range: [0, Channel Group Number-1]  Channel Group Number = (the number of  physical channels on attach-the number of Echo channels on attach) / Sound  Mode</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>as8Gains</td>
+<td>Volume array  An element of the array represents the volume of a physical channel  Range: [-60, 30]</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8GainSize</td>
+<td>Sze of the volume array, the  maximum is the physical channel corresponding to Sound Mode</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>To set the volume of the AI channel group, you must first enable the AI device and mount the peripheral.</p>
+</li>
+<li>
+<p>Only the channels corresponding to E_MI_AI_IF_ADC_AB support this setting for Muffin series chips.</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1.    MI_S8 s8DpgaGain[] = {-10};
+  2.    ExecFunc(MI_AI_SetGain(AiDevId, u8ChnGroupIdx, s8DpgaGain, sizeof(s8DpgaGain) / sizeof(s8DpgaGain[0])), MI_SUCCESS);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="210-mi_ai_getgain">2.10. MI_AI_GetGain<a class="headerlink" href="#210-mi_ai_getgain" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Get the volume of the AI channel group.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_GetGain(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx, MI_S8 as8Gains[], MI_U8 *pu8GainSize);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ChnGrpIdx</td>
+<td>AI channel group number.   Range: [0, Channel Group Number-1]  Channel Group Number = (the number of  physical channels on attach-the number of Echo channels on attach) / Sound  Mode</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>as8Gains</td>
+<td>Volume array  An element of the array represents the volume of a physical channel  Range: [-60, 30]</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>pu8GainSize</td>
+<td>Sze of the volume array, the  maximum is the physical channel corresponding to Sound Mode</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai,so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>To get the volume of the AI channel group, you must first enable the AI device and mount the peripheral.</p>
+</li>
+<li>
+<p>Only the channels corresponding to E_MI_AI_IF_ADC_AB support this setting for Muffin series chips.</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1.    MI_S8 s8DpgaGain[MI_AI_MAX_CHN_NUM];
+  2.    MI_U8 u8Size;
+  3.    memset(&amp;s8DpgaGain, 0x0, sizeof(s8DpgaGain));
+  4.    ExecFunc(MI_AI_GetGain(AiDevId, u8ChnGroupIdx, s8DpgaGain, &amp;u8Size), MI_SUCCESS);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="211-mi_ai_setmute">2.11. MI_AI_SetMute<a class="headerlink" href="#211-mi_ai_setmute" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Set the mute parameters of the AI channel group.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_SetMute(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx, const MI_BOOL abMutes[], MI_U8 u8MuteSize);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>Audio  device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ChnGrpIdx</td>
+<td>AI channel group number.   Range: [0, Channel Group Number-1]  Channel Group Number = (the number of  physical channels on attach-the number of Echo channels on attach) / Sound  Mode</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>abMutes</td>
+<td>Mute  parameter array  An  element of the mute parameter array represents the mute parameter of a  physical channel</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8MuteSize</td>
+<td>Sze of  the mute parameter array, the maximum is the physical channel corresponding  to Sound Mode</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>To set the mute parameters of the AI channel group, you must first enable the AI device and mount the peripheral.</p>
+</li>
+<li>
+<p>Example</p>
+<ol>
+<li>MI_BOOL bDpgaMute[] = {TRUE, FALSE};</li>
+<li>ExecFunc(MI_AI_SetMute(AiDevId, u8ChnGroupIdx, bDpgaMute, sizeof(bDpgaMute) / sizeof(bDpgaMute[0])), MI_SUCCESS);</li>
+</ol>
+</li>
+</ul>
+<h3 id="212-mi_ai_getmute">2.12. MI_AI_GetMute<a class="headerlink" href="#212-mi_ai_getmute" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Get the mute parameters of the AI channel group.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_GetMute(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx, MI_BOOL abMutes[], MI_U8 *pu8MuteSize);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI  device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ChnGrpIdx</td>
+<td>AI channel group number.   Range: [0, Channel Group Number-1]  Channel Group Number = (the number of  physical channels on attach-the number of Echo channels on attach) / Sound  Mode</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>abMutes</td>
+<td>Mute  parameter array  An  element of the mute parameter array represents the mute parameter of a  physical channel</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pu8MuteSize</td>
+<td>Size  of the mute parameter array, the maximum is the physical channel corresponding  to Sound Mode</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>To get the mute parameters of the AI channel group, you must first enable the AI device and mount the peripheral.</p>
+</li>
+<li>
+<p>Example</p>
+<ol>
+<li>MI_BOOL bDpgaMute[MI_AI_MAX_CHN_NUM];</li>
+<li>MI_U8 u8Size;</li>
+<li>memset(&amp;bDpgaMute, 0x0, sizeof(bDpgaMute));</li>
+<li>ExecFunc(MI_AI_GetMute(AiDevId, u8ChnGroupIdx, s8DpgaGain, &amp;u8Size), MI_SUCCESS);</li>
+</ol>
+</li>
+</ul>
+<h3 id="213-mi_ai_setifgain">2.13. MI_AI_SetIfGain<a class="headerlink" href="#213-mi_ai_setifgain" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Set AI peripheral volume.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_SetIfGain(MI_AI_If_e enAiIf, MI_S8 s8LeftIfGain, MI_S8 s8RightIfGain);</p>
+</li>
+<li>
+<p>Parameter</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enAiIf</td>
+<td>AI  peripherals</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>s8LeftIfGain</td>
+<td>Left channel volume</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>s8RightIfGain</td>
+<td>Right channel volume</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>Only E_MI_AI_IF_ADC_AB/E_MI_AI_IF_ADC_CD/E_MI_AI_IF_DMIC_A_01/E_MI_AI_IF_DMIC_A_23/ E_MI_AI_IF_DMIC_A_45 supports this setting.</p>
+</li>
+<li>
+<p>The volume range supported by E_MI_AI_IF_ADC_AB/E_MI_AI_IF_ADC_CD: Muffin/Mochi[0, 19], corresponding to 0~57Db, 3dB/step; Maruko[0, 21], corresponding to -6~57Db, 3dB/step.</p>
+</li>
+<li>
+<p>The volume range supported by E_MI_AI_IF_DMIC_A_01/E_MI_AI_IF_DMIC_A_23/ E_MI_AI_IF_DMIC_A_45 is [0,6], corresponding to 0~36dB, 6dB/step.</p>
+</li>
+<li>
+<p>Example</p>
+</li>
+</ul>
+<p>The simple example is as follow:</p>
+<div class="codehilite"><pre><span></span>  1.    ExecFunc(MI_AI_SetIfGain(E_MI_AI_IF_ADC_AB, 18, 18), MI_SUCCESS);
+  2.    ExecFunc(MI_AI_SetIfGain(E_MI_AI_IF_ADC_CD, 18, 18), MI_SUCCESS);
+  3.    ExecFunc(MI_AI_SetIfGain(E_MI_AI_IF_DMIC_A_01, 4, 4), MI_SUCCESS);
+  4.    ExecFunc(MI_AI_SetIfGain(E_MI_AI_IF_DMIC_A_23, 4, 4), MI_SUCCESS);
+</pre></div>
+
+
+<p>Please refer to <a href="#21-mi_ai_open">MI_AI_Open</a> for the detailed example.</p>
+<h3 id="214-mi_ai_getifgain">2.14. MI_AI_GetIfGain<a class="headerlink" href="#214-mi_ai_getifgain" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Get AI peripheral volume.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_GetIfGain(MI_AI_If_e enAiIf, MI_S8 *ps8LeftIfGain, MI_S8 *ps8RightIfGain);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enAiIf</td>
+<td>AI  peripherals</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ps8LeftIfGain</td>
+<td>Left  channel volume pointer</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>ps8RightIfGain</td>
+<td>Right  channel volume pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>Only E_MI_AI_IF_ADC_AB/E_MI_AI_IF_ADC_CD/E_MI_AI_IF_DMIC_A_01/E_MI_AI_IF_DMIC_A_23/ E_MI_AI_IF_DMIC_A_45 supports this setting.</p>
+</li>
+<li>
+<p>Example</p>
+<ol>
+<li>MI_S8 s8IfLeftGain, s8IfRightGain;</li>
+<li>ExecFunc(MI_AI_GetIfGain(E_MI_AI_IF_ADC_AB, &amp;s8IfLeftGain, &amp;s8IfRightGain), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_GetIfGain(E_MI_AI_IF_ADC_CD, &amp;s8IfLeftGain, &amp;s8IfRightGain), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_GetIfGain(E_MI_AI_IF_DMIC_A_01, &amp;s8IfLeftGain, &amp;s8IfRightGain), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_GetIfGain(E_MI_AI_IF_DMIC_A_23, &amp;s8IfLeftGain, &amp;s8IfRightGain), MI_SUCCESS);</li>
+</ol>
+</li>
+</ul>
+<h3 id="215-mi_ai_setifmute">2.15. MI_AI_SetIfMute<a class="headerlink" href="#215-mi_ai_setifmute" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Set AI peripheral mute parameters.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_SetIfMute(MI_AI_If_e enAiIf, MI_BOOL bLeftMute, MI_BOOL bRightMute);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enAiIf</td>
+<td>AI  peripherals</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>bLeftMute</td>
+<td>Left  channel mute parameter</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>bRightMute</td>
+<td>Right  channel mute parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>No input peripheral supports this setting.</p>
+</li>
+<li>
+<p>The tiny version does not support this API.</p>
+</li>
+<li>
+<p>Example</p>
+<ol>
+<li>ExecFunc(MI_AI_SetIfMute(E_MI_AI_IF_ADC_AB, TRUE, FALSE), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_SetIfMute(E_MI_AI_IF_ADC_CD, TRUE, FALSE), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_SetIfMute(E_MI_AI_IF_DMIC_A_01, TRUE, FALSE), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_SetIfMute(E_MI_AI_IF_DMIC_A_23, TRUE, FALSE), MI_SUCCESS);</li>
+</ol>
+</li>
+</ul>
+<h3 id="216-mi_ai_getifmute">2.16. MI_AI_GetIfMute<a class="headerlink" href="#216-mi_ai_getifmute" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Get AI peripheral mute parameters.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_GetIfMute(MI_AI_If_e enAiIf, MI_BOOL *pbLeftMute, MI_BOOL *pbRightMute);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enAiIf</td>
+<td>AI  peripherals</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pbLeftMute</td>
+<td>Left  channel mute parameter pointer</td>
+<td>Output</td>
+</tr>
+<tr>
+<td>pbRightMute</td>
+<td>Right  channel mute parameter pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Example</p>
+<ol>
+<li>MI_BOOL bIfLeftMute, bIfRightMute;</li>
+<li>ExecFunc(MI_AI_GetIfMute(E_MI_AI_IF_ADC_AB, &amp;bIfLeftMute, &amp;bIfRightMute), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_GetIfMute(E_MI_AI_IF_ADC_CD, &amp;bIfLeftMute, &amp;bIfRightMute), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_GetIfMute(E_MI_AI_IF_DMIC_A_01, &amp;bIfLeftMute, &amp;bIfRightMute), MI_SUCCESS);</li>
+<li>ExecFunc(MI_AI_GetIfMute(E_MI_AI_IF_DMIC_A_23, &amp;bIfLeftMute, &amp;bIfRightMute), MI_SUCCESS);</li>
+</ol>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>No input peripheral supports this setting.</p>
+</li>
+<li>
+<p>The tiny version does not support this API.</p>
+</li>
+</ul>
+<h3 id="217-mi_ai_seti2sconfig">2.17. MI_AI_SetI2SConfig<a class="headerlink" href="#217-mi_ai_seti2sconfig" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Set I2S RX config info.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_SetI2SConfig(MI_AI_If_e enAiI2SIf, const MI_AUDIO_I2sConfig_t *pstConfig);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enAiI2Sif</td>
+<td>Audio I2S RX input peripheral</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstConfig</td>
+<td>Audio I2S RX config information</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>A group of I2S RX only needs to be configured once. For example, after using E_MI_AI_IF_I2S_A_01, I2S_A has been initialized, and then using other interfaces belonging to I2S_A, there is no need to configure I2S_A, unless the configuration parameters of I2S_A are changed.</p>
+</li>
+<li>
+<p>The enSampleRate in <a href="#313-mi_audio_i2sconfig_t">MI_AUDIO_I2sConfig_t</a> must be the same as the enSampleRate in <a href="#35-mi_ai_attr_t">MI_AI_Attr_t</a>, otherwise attach will report an error.</p>
+</li>
+<li>
+<p>Example</p>
+<ol>
+<li>MI_AUDIO_I2sConfig_t stAiI2sACfg;</li>
+<li>memset(&amp;stAiI2sACfg, 0x0, sizeof(stAiI2sACfg));</li>
+<li>stAiI2sACfg.enMode = E_MI_AUDIO_I2S_MODE_I2S_MASTER;</li>
+<li>stAiI2sACfg.enFormat = E_MI_AUDIO_I2S_FMT_I2S_MSB;</li>
+<li>stAiI2sACfg.enSampleRate = E_MI_AUDIO_SAMPLE_RATE_8000;</li>
+<li>stAiI2sACfg.enMclk = E_MI_AUDIO_I2S_MCLK_0;</li>
+<li>stAiI2sACfg.bSyncClock = TRUE;</li>
+<li>stAiI2sACfg.u32TdmSlots = 2;</li>
+<li>stAiI2sACfg.enBitWidth = E_MI_AUDIO_BIT_WIDTH_16;</li>
+<li>ExecFunc(MI_AI_SetI2SConfig(E_MI_AI_IF_I2S_A_01, &amp;stAiI2sACfg), MI_SUCCESS);</li>
+</ol>
+</li>
+</ul>
+<h3 id="218-mi_ai_geti2sconfig">2.18. MI_AI_GetI2SConfig<a class="headerlink" href="#218-mi_ai_geti2sconfig" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Get I2S RX config info.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_GetI2SConfig(MI_AI_If_e enAiI2SIf, MI_AUDIO_I2sConfig_t *pstConfig);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enAiI2Sif</td>
+<td>Audio I2S RX input peripheral</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstConfig</td>
+<td>Audio I2S RX config information</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Example</p>
+<ol>
+<li>MI_AUDIO_I2sConfig_t stAiI2sACfg;</li>
+<li>memset(&amp;stAiI2sACfg, 0x0, sizeof(stAiI2sACfg));</li>
+<li>ExecFunc(MI_AI_GetI2SConfig(E_MI_AI_IF_I2S_A_01, &amp;stAiI2sACfg), MI_SUCCESS);</li>
+</ol>
+</li>
+</ul>
+<h3 id="219-mi_ai_dupchngroup">2.19. MI_AI_DupChnGroup<a class="headerlink" href="#219-mi_ai_dupchngroup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Sync status of AI channel group.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_DupChnGroup(MI_AUDIO_DEV AiDevId, MI_U8 u8ChnGrpIdx)</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>u8ChnGrpIdx</td>
+<td>AI channel group number.   Range: [0, Channel Group Number-1]  Channel Group Number = (the number of  physical channels on attach-the number of Echo channels on attach) / Sound  Mode</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>This is only used for dual os. It is used to synchronize the state of the AI channel group when the initialized AI channel group under RTOS is switched to Linux.</p>
+</li>
+<li>
+<p>The tiny version does not support this API.</p>
+</li>
+</ul>
+<h3 id="220-mi_ai_initdev">2.20. MI_AI_InitDev<a class="headerlink" href="#220-mi_ai_initdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Initialize the AI device.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_InitDev(MI_AI_InitParam_t *pstInitParam);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pstInitParam</td>
+<td>Device initialization parameters</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>It must be used in pairs with <a href="#221-mi_ai_deinitdev">MI_AI_DeInitDev</a>, and cannot be called repeatedly, otherwise it returns to fail.</p>
+</li>
+<li>
+<p>Only used to reinitialize the AI module after the STR state is enabled.</p>
+</li>
+</ul>
+<h3 id="221-mi_ai_deinitdev">2.21. MI_AI_DeInitDev<a class="headerlink" href="#221-mi_ai_deinitdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>De-Initialize the AI device.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_DeInitDev(void);</p>
+</li>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.a/libmi_ai.so</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>This function must be called after the device is initialized, otherwise, it returns to fail.</p>
+</li>
+<li>
+<p>If it is not called before the app exits, the device will be automatically deinitialized internally</p>
+</li>
+<li>
+<p>It must be used in pairs with <a href="#220-mi_ai_initdev">MI_AI_InitDev</a> , and cannot be called repeatedly, otherwise it returns to fail.</p>
+</li>
+</ul>
+<h3 id="222-mi_ai_getattr">2.22. MI_AI_GetAttr<a class="headerlink" href="#222-mi_ai_getattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Features</li>
+</ul>
+<p>Get audio input device attributes.</p>
+<ul>
+<li>
+<p>Syntax</p>
+<p>MI_S32 MI_AI_GetAttr(MI_AUDIO_DEV AiDevId, MI_AI_Attr_t *pstAttr);</p>
+</li>
+<li>
+<p>Parameters</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>Audio input device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstAttr</td>
+<td>Audio input device attributes</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Return value</p>
+</li>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+<li>
+<p>Dependency</p>
+</li>
+<li>
+<p>Header: mi_ai.h</p>
+</li>
+<li>
+<p>Library: libmi_ai.so/libmi_ai.a</p>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>This function must be called after opening the device successfully, otherwise it will return failed.</p>
+</li>
+</ul>
+<h2 id="3-ai-data-type">3.  AI Data type<a class="headerlink" href="#3-ai-data-type" title="Permanent link">&para;</a></h2>
+<p>The AI module related data types are defined as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Data type</strong></th>
+<th><strong>Definition</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#31-mi_audio_dev">MI_AUDIO_DEV</a></td>
+<td>Define the audio input/output device number</td>
+</tr>
+<tr>
+<td><a href="#32-mi_audio_format_e">MI_AUDIO_Format_e</a></td>
+<td>Define audio data format</td>
+</tr>
+<tr>
+<td><a href="#33-mi_audio_soundmode_e">MI_AUDIO_SoundMode_e</a></td>
+<td>Define audio sound mode</td>
+</tr>
+<tr>
+<td><a href="#34-mi_audio_samplerate_e">MI_AUDIO_SampleRate_e</a></td>
+<td>Define audio sample rate</td>
+</tr>
+<tr>
+<td><a href="#35-mi_ai_attr_t">MI_AI_Attr_t</a></td>
+<td>Define AI device attribute structure</td>
+</tr>
+<tr>
+<td><a href="#36-mi_ai_if_e">MI_AI_If_e</a></td>
+<td>Define AI peripherals</td>
+</tr>
+<tr>
+<td><a href="#37-mi_ai_max_chn_num">MI_AI_MAX_CHN_NUM</a></td>
+<td>Define the maximum number of physical channels  supported by AI devices</td>
+</tr>
+<tr>
+<td><a href="#38-mi_ai_data_t">MI_AI_Data_t</a></td>
+<td>Define audio structure</td>
+</tr>
+<tr>
+<td><a href="#39-mi_audio_i2smode_e">MI_AUDIO_I2sMode_e</a></td>
+<td>Define the working mode of audio I2S RX/TX</td>
+</tr>
+<tr>
+<td><a href="#310-mi_audio_i2sbitwidth_e">MI_AUDIO_I2sBitWidth_e</a></td>
+<td>Define the bit width of audio I2S RX/TX</td>
+</tr>
+<tr>
+<td><a href="#311-mi_audio_i2sformat_e">MI_AUDIO_I2sFormat_e</a></td>
+<td>Define the data  transmission format of audio I2S RX/TX</td>
+</tr>
+<tr>
+<td><a href="#312-mi_audio_i2smclk_e">MI_AUDIO_I2sMclk_e</a></td>
+<td>Define the mclk frequency of audio I2S RX/TX</td>
+</tr>
+<tr>
+<td><a href="#313-mi_audio_i2sconfig_t">MI_AUDIO_I2sConfig_t</a></td>
+<td>Define I2S  RX/TX config info</td>
+</tr>
+<tr>
+<td><a href="#314-mi_ai_initparam_t">MI_AI_InitParam_t</a></td>
+<td>AI device initialization parameters</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-mi_audio_dev">3.1. MI_AUDIO_DEV<a class="headerlink" href="#31-mi_audio_dev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define the audio input/output device number.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef MI_S32 MI_AUDIO_DEV</p>
+</li>
+</ul>
+<h3 id="32-mi_audio_format_e">3.2. MI_AUDIO_Format_e<a class="headerlink" href="#32-mi_audio_format_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define audio data format.</p>
+<ul>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_AUDIO_FORMAT_INVALID = -1,
+
+    E_MI_AUDIO_FORMAT_PCM_S16_LE = 0,
+
+} MI_AUDIO_Format_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_AUDIO_FORMAT_INVALID</td>
+<td>Illegal data format</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_FORMAT_PCM_S16_LE</td>
+<td>PCM Linear 16bit (Little  Endian)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#35-mi_ai_attr_t">MI_AI_Attr_t</a></p>
+<h3 id="33-mi_audio_soundmode_e">3.3. MI_AUDIO_SoundMode_e<a class="headerlink" href="#33-mi_audio_soundmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define audio sound mode.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef enum</p>
+<p>{</p>
+<p>​     E_MI_AUDIO_SOUND_MODE_MONO = 1,</p>
+<p>​     E_MI_AUDIO_SOUND_MODE_STEREO = 2,</p>
+<p>​     E_MI_AUDIO_SOUND_MODE_4CH = 4,</p>
+<p>​     E_MI_AUDIO_SOUND_MODE_6CH = 6,</p>
+<p>​     E_MI_AUDIO_SOUND_MODE_8CH = 8,</p>
+<p>}MI_AUDIO_SoundMode_e</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_AUDIO_SOUND_MODE_MONO</td>
+<td>MONO</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SOUND_MODE_STEREO</td>
+<td>STEREO</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SOUND_MODE_4CH</td>
+<td>4-channels</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SOUND_MODE_6CH</td>
+<td>6-channels</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SOUND_MODE_8CH</td>
+<td>8-channels</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#35-mi_ai_attr_t">MI_AI_Attr_t</a></p>
+<h3 id="34-mi_audio_samplerate_e">3.4. MI_AUDIO_SampleRate_e<a class="headerlink" href="#34-mi_audio_samplerate_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define audio sample rate.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef enum</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  E_MI_AUDIO_SAMPLE_RATE_8000 = 8000,
+
+  E_MI_AUDIO_SAMPLE_RATE_11052 = 11025,
+
+  E_MI_AUDIO_SAMPLE_RATE_12000 = 12000,
+
+  E_MI_AUDIO_SAMPLE_RATE_16000 = 16000,
+
+  E_MI_AUDIO_SAMPLE_RATE_22050 = 22050,
+
+  E_MI_AUDIO_SAMPLE_RATE_24000 = 24000,
+
+  E_MI_AUDIO_SAMPLE_RATE_32000 = 32000,
+
+  E_MI_AUDIO_SAMPLE_RATE_44100 = 44100,
+
+  E_MI_AUDIO_SAMPLE_RATE_48000 = 48000,
+
+  E_MI_AUDIO_SAMPLE_RATE_96000 = 96000,
+
+  E_MI_AUDIO_SAMPLE_RATE_192000 = 192000,
+</pre></div>
+
+
+<p>}MI_AUDIO_SampleRate_e;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_8000</td>
+<td>8kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_11025</td>
+<td>11.025kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_12000</td>
+<td>12kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_16000</td>
+<td>16kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_22050</td>
+<td>22.05kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_24000</td>
+<td>24kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_32000</td>
+<td>32kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_44100</td>
+<td>44.1kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_48000</td>
+<td>48kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_96000</td>
+<td>96kHz sample rate</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_192000</td>
+<td>192kHz sample rate</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>Except I2S RX which supports 8/16/32/48/96/192kHz, and I2S RX can only be attached separately when using 96/192kHz, other AI peripherals only support 8/16/32/48kHz.</p>
+</li>
+<li>
+<p>Muffin's I2S RX only supports 8/16/32/48/96 kHz.</p>
+</li>
+<li>
+<p>Related data types and interfaces</p>
+</li>
+</ul>
+<p><a href="#35-mi_ai_attr_t">MI_AI_Attr_t</a></p>
+<h3 id="35-mi_ai_attr_t">3.5. MI_AI_Attr_t<a class="headerlink" href="#35-mi_ai_attr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define AI device attribute structure.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef struct MI_AUDIO_Attr_s</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  MI_AUDIO_Format_e enFormat;
+
+  MI_AUDIO_SoundMode_e enSoundMode;
+
+  MI_AUDIO_SampleRate_e enSampleRate;
+
+  MI_U32 u32PeriodSize;
+
+  MI_BOOL bInterleaved;
+</pre></div>
+
+
+<p>}MI_AI_Attr_t;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enFormat</td>
+<td>Audio data format.  Static attributes.</td>
+</tr>
+<tr>
+<td>enSoundMode</td>
+<td>Audio sound mode.  Static attributes.  The sound mode  determines how many physical channels a channel group corresponds to.</td>
+</tr>
+<tr>
+<td>enSampleRate</td>
+<td>Audio sampling rate.  Static attributes.</td>
+</tr>
+<tr>
+<td>u32PeriodSize</td>
+<td>Audio data samples.  Static attributes.</td>
+</tr>
+<tr>
+<td>bInterleaved</td>
+<td>Whether the audio data  is in interlace mode.  Static attributes.</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_SAMPLE_RATE_192000</td>
+<td>192kHz sample rate</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#21-mi_ai_open">MI_AI_Open</a></p>
+<h3 id="36-mi_ai_if_e">3.6. MI_AI_If_e<a class="headerlink" href="#36-mi_ai_if_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define AI peripherals.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef enum
+  {
+      E_MI_AI_IF_NONE = 0,
+      E_MI_AI_IF_ADC_AB = 1,
+      E_MI_AI_IF_ADC_CD = 2,
+      E_MI_AI_IF_DMIC_A_01 = 3,
+      E_MI_AI_IF_DMIC_A_23 = 4,
+      E_MI_AI_IF_I2S_A_01 = 5,
+      E_MI_AI_IF_I2S_A_23 = 6,
+      E_MI_AI_IF_I2S_A_45 = 7,
+      E_MI_AI_IF_I2S_A_67 = 8,
+      E_MI_AI_IF_I2S_A_89 = 9,
+      E_MI_AI_IF_I2S_A_ab = 10,
+      E_MI_AI_IF_I2S_A_cd = 11,
+      E_MI_AI_IF_I2S_A_ef = 12,
+      E_MI_AI_IF_I2S_B_01 = 13,
+      E_MI_AI_IF_I2S_B_23 = 14,
+      E_MI_AI_IF_I2S_B_45 = 15,
+      E_MI_AI_IF_I2S_B_67 = 16,
+      E_MI_AI_IF_I2S_B_89 = 17,
+      E_MI_AI_IF_I2S_B_ab = 18,
+      E_MI_AI_IF_I2S_B_cd = 19,
+      E_MI_AI_IF_I2S_B_ef = 20,
+      E_MI_AI_IF_I2S_C_01 = 21,
+      E_MI_AI_IF_I2S_C_23 = 22,
+      E_MI_AI_IF_I2S_C_45 = 23,
+      E_MI_AI_IF_I2S_C_67 = 24,
+      E_MI_AI_IF_I2S_C_89 = 25,
+      E_MI_AI_IF_I2S_C_ab = 26,
+      E_MI_AI_IF_I2S_C_cd = 27,
+      E_MI_AI_IF_I2S_C_ef = 28,
+      E_MI_AI_IF_I2S_D_01 = 29,
+      E_MI_AI_IF_I2S_D_23 = 30,
+      E_MI_AI_IF_I2S_D_45 = 31,
+      E_MI_AI_IF_I2S_D_67 = 32,
+      E_MI_AI_IF_I2S_D_89 = 33,
+      E_MI_AI_IF_I2S_D_ab = 34,
+      E_MI_AI_IF_I2S_D_cd = 35,
+      E_MI_AI_IF_I2S_D_ef = 36,
+      E_MI_AI_IF_ECHO_A = 37,
+      E_MI_AI_IF_HDMI_A = 38,
+      E_MI_AI_IF_DMIC_A_45 = 39,
+      E_MI_AI_IF_MAX,
+  } MI_AI_If_e;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_AI_IF_NONE</td>
+<td>None</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_ADC_AB</td>
+<td>ADC0/1</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_ADC_CD</td>
+<td>ADC&#8532;</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_DMIC_A_01</td>
+<td>DMIC Chn0 and Chn1</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_DMIC_A_23</td>
+<td>DMIC Chn2 and Chn3</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_A_01</td>
+<td>I2S RX A Chn0 and Chn1</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_A_23</td>
+<td>I2S RX A Chn2 and Chn3</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_A_45</td>
+<td>I2S RX A Chn4 and Chn5</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_A_67</td>
+<td>I2S RX A Chn6 and Chn7</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_A_89</td>
+<td>I2S RX A Chn8 and Chn9</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_A_ab</td>
+<td>I2S RX A Chn10 and Chn11</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_A_cd</td>
+<td>I2S RX A Chn12 and Chn13</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_A_ef</td>
+<td>I2S RX A Chn14 and Chn15</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_B_01</td>
+<td>I2S RX B Chn0 and Chn1</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_B_23</td>
+<td>I2S RX B Chn2 and Chn3</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_B_45</td>
+<td>I2S RX B Chn4 and Chn5</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_B_67</td>
+<td>I2S RX B Chn6 and Chn7</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_B_89</td>
+<td>I2S RX B Chn8 and Chn9</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_B_ab</td>
+<td>I2S RX B Chn10 and Chn11</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_B_cd</td>
+<td>I2S RX B Chn12 and Chn13</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_I2S_D_ef</td>
+<td>I2S RX D Chn14 and Chn15</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_ECHO_A</td>
+<td>SRC data (Echo)</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_HDMI_A</td>
+<td>HDMI RX</td>
+</tr>
+<tr>
+<td>E_MI_AI_IF_DMIC_A_45</td>
+<td>DMIC Chn4 and Chn5</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#24-mi_ai_attachif">MI_AI_AttachIf</a></p>
+<p><a href="#213-mi_ai_setifgain">MI_AI_SetIfGain</a></p>
+<p><a href="#214-mi_ai_getifgain">MI_AI_GetIfGain</a></p>
+<p><a href="#215-mi_ai_setifmute">MI_AI_SetIfMute</a></p>
+<p><a href="#216-mi_ai_getifmute">MI_AI_GetIfMute</a></p>
+<p><a href="#217-mi_ai_seti2sconfig">MI_AI_SetI2SConfig</a></p>
+<p><a href="#218-mi_ai_geti2sconfig">MI_AI_GetI2SConfig</a></p>
+<h3 id="37-mi_ai_max_chn_num">3.7. MI_AI_MAX_CHN_NUM<a class="headerlink" href="#37-mi_ai_max_chn_num" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define the maximum number of physical channels supported by AI devices.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>#define MI_AI_MAX_CHN_NUM 8</p>
+</li>
+</ul>
+<h3 id="38-mi_ai_data_t">3.8. MI_AI_Data_t<a class="headerlink" href="#38-mi_ai_data_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define audio structure.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef struct MI_AI_Data_s</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  void *apvBuffer[MI_AI_MAX_CHN_NUM];
+
+  MI_U32 u32Bytes[MI_AI_MAX_CHN_NUM];
+
+  MI_U64 u64Pts;
+
+  MI_U64 u64Seq;
+</pre></div>
+
+
+<p>}MI_AI_Data_t;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apvBuffer</td>
+<td>Audio data address.  AI device enables the interleaved mode, and  the data is stored in apvBuffer[0].  AI device disables the  interleaving mode, and the data is arranged in apvBuffer in order.</td>
+</tr>
+<tr>
+<td>u32Bytes</td>
+<td>Audio data length.  One-to-one  correspondence with apvBuffer.</td>
+</tr>
+<tr>
+<td>u64Pts</td>
+<td>Audio data timestamp.  Unit: µs.</td>
+</tr>
+<tr>
+<td>u64Seq</td>
+<td>Audio data sequence  number.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#27-mi_ai_read">MI_AI_Read</a></p>
+<p><a href="#28-mi_ai_releasedata">MI_AI_ReleaseData</a></p>
+<h3 id="39-mi_audio_i2smode_e">3.9. MI_AUDIO_I2sMode_e<a class="headerlink" href="#39-mi_audio_i2smode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define the working mode of audio I2S RX/TX.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef enum</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  E_MI_AUDIO_I2S_MODE_I2S_MASTER,
+
+  E_MI_AUDIO_I2S_MODE_I2S_SLAVE,
+
+  E_MI_AUDIO_I2S_MODE_TDM_MASTER,
+
+  E_MI_AUDIO_I2S_MODE_TDM_SLAVE,
+</pre></div>
+
+
+<p>} MI_AUDIO_I2sMode_e;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_AUDIO_I2S_MODE_I2S_MASTER</td>
+<td>I2S master mode</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MODE_I2S_SLAVE</td>
+<td>I2S slave mode</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MODE_TDM_MASTER</td>
+<td>TDM master mode</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MODE_TDM_SLAVE</td>
+<td>TDM slave mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Note</li>
+</ul>
+<p>Determine whether to support the master/slave mode according to different chips.</p>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#313-mi_audio_i2sconfig_t">MI_AUDIO_I2sConfig_t</a></p>
+<h3 id="310-mi_audio_i2sbitwidth_e">3.10. MI_AUDIO_I2sBitWidth_e<a class="headerlink" href="#310-mi_audio_i2sbitwidth_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define the bit width of audio I2S RX/TX.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef enum</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  E_MI_AUDIO_BIT_WIDTH_16,
+
+  E_MI_AUDIO_BIT_WIDTH_32,
+</pre></div>
+
+
+<p>} MI_AUDIO_I2sBitWidth_e;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_AUDIO_BIT_WIDTH_16</td>
+<td>I2S bit width is 16</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_BIT_WIDTH_32</td>
+<td>I2S bit width is 32</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#313-mi_audio_i2sconfig_t">MI_AUDIO_I2sConfig_t</a></p>
+<h3 id="311-mi_audio_i2sformat_e">3.11. MI_AUDIO_I2sFormat_e<a class="headerlink" href="#311-mi_audio_i2sformat_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define the data transmission format of audio I2S RX/TX.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef enum</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  E_MI_AUDIO_I2S_FMT_I2S_MSB,
+
+  E_MI_AUDIO_I2S_FMT_LEFT_JUSTIFY_MSB,
+</pre></div>
+
+
+<p>} MI_AUDIO_I2sFormat_e;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member  Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_AUDIO_I2S_FMT_I2S_MSB</td>
+<td>I2S standard format;  Highest priority</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_FMT_LEFT_JUSTIFY_MSB</td>
+<td>I2S left-justified  format;  Highest priority</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#313-mi_audio_i2sconfig_t">MI_AUDIO_I2sConfig_t</a></p>
+<h3 id="312-mi_audio_i2smclk_e">3.12. MI_AUDIO_I2sMclk_e<a class="headerlink" href="#312-mi_audio_i2smclk_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define the mclk frequency of audio I2S RX/TX.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef enum</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  E_MI_AUDIO_I2S_MCLK_0,
+
+  E_MI_AUDIO_I2S_MCLK_12_288M,
+
+  E_MI_AUDIO_I2S_MCLK_16_384M,
+
+  E_MI_AUDIO_I2S_MCLK_18_432M,
+
+  E_MI_AUDIO_I2S_MCLK_24_576M,
+
+  E_MI_AUDIO_I2S_MCLK_24M,
+
+  E_MI_AUDIO_I2S_MCLK_48M,
+</pre></div>
+
+
+<p>} MI_AUDIO_I2sMclk_e;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member   Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_AUDIO_I2S_MCLK_0</td>
+<td>Turn off MCLK</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MCLK_12_288M</td>
+<td>Set MCLK  to 12.88M</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MCLK_16_384M</td>
+<td>Set MCLK  to 16.384M</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MCLK_18_432M</td>
+<td>Set MCLK  to 18.432M</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MCLK_24_576M</td>
+<td>Set MCLK  to 24.576M</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MCLK_24M</td>
+<td>Set  MCLK to 24M</td>
+</tr>
+<tr>
+<td>E_MI_AUDIO_I2S_MCLK_48M</td>
+<td>Set  MCLK to 48M</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#313-mi_audio_i2sconfig_t">MI_AUDIO_I2sConfig_t</a></p>
+<h3 id="313-mi_audio_i2sconfig_t">3.13. MI_AUDIO_I2sConfig_t<a class="headerlink" href="#313-mi_audio_i2sconfig_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>Define I2S RX/TX config info.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef struct MI_AUDIO_I2sConfig_s</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  MI_AUDIO_I2sMode_e enMode;
+
+  MI_AUDIO_I2sBitWidth_e enBitWidth;
+
+  MI_AUDIO_I2sFormat_e enFormat;
+
+  MI_AUDIO_SampleRate_e enSampleRate;
+
+  MI_AUDIO_I2sMclk_e enMclk;
+
+  MI_BOOL bSyncClock;
+
+  MI_U32 u32TdmSlots;
+</pre></div>
+
+
+<p>} MI_AUDIO_I2sConfig_t;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member  Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enMode</td>
+<td>I2S working mode</td>
+</tr>
+<tr>
+<td>enBitWidth</td>
+<td>I2S data bit width.</td>
+</tr>
+<tr>
+<td>enFormat</td>
+<td>I2S transmission data  format.</td>
+</tr>
+<tr>
+<td>enSampleRate</td>
+<td>I2S sampling rate.</td>
+</tr>
+<tr>
+<td>enMclk</td>
+<td>I2S mclk frequency.</td>
+</tr>
+<tr>
+<td>bSyncClock</td>
+<td>Whether I2S RX and I2S  TX share the clock.</td>
+</tr>
+<tr>
+<td>u32TdmSlots</td>
+<td>Number of I2S TDM slots  (valid only in TDM mode)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#217-mi_ai_seti2sconfig">MI_AI_SetI2SConfig</a></p>
+<p><a href="#218-mi_ai_geti2sconfig">MI_AI_GetI2SConfig</a></p>
+<h3 id="314-mi_ai_initparam_t">3.14. MI_AI_InitParam_t<a class="headerlink" href="#314-mi_ai_initparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Description</li>
+</ul>
+<p>AI device initialization parameters.</p>
+<ul>
+<li>
+<p>Definition</p>
+<p>typedef struct MI_AI_InitParam_s</p>
+<p>{</p>
+<div class="codehilite"><pre><span></span>  MI_AUDIO_DEV AiDevId;
+
+  MI_U8 *u8Data;
+</pre></div>
+
+
+<p>} MI_AI_InitParam_t;</p>
+</li>
+<li>
+<p>Member</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Member   Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AiDevId</td>
+<td>AI device number</td>
+</tr>
+<tr>
+<td>u8Data</td>
+<td>Initialization parameter pointer (reserved)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Related data types and interfaces</li>
+</ul>
+<p><a href="#220-mi_ai_initdev">MI_AI_InitDev</a></p>
+<h2 id="4-error-code">4.  Error Code<a class="headerlink" href="#4-error-code" title="Permanent link">&para;</a></h2>
+<p>The AI API error codes are shown in the table below:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Error Code</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xA0042001</td>
+<td>MI_AI_ERR_INVALID_DEVID</td>
+<td>Invalid audio input device number</td>
+</tr>
+<tr>
+<td>0xA0042002</td>
+<td>MI_AI_ERR_INVALID_CHNGRPID</td>
+<td>Invalid audio input channel group number</td>
+</tr>
+<tr>
+<td>0xA0042003</td>
+<td>MI_AI_ERR_ILLEGAL_PARAM</td>
+<td>Invalid audio input parameter setting</td>
+</tr>
+<tr>
+<td>0xA0042006</td>
+<td>MI_AI_ERR_NULL_PTR</td>
+<td>Input parameter empty indicator error</td>
+</tr>
+<tr>
+<td>0xA0042007</td>
+<td>MI_AI_ERR_NOT_CONFIG</td>
+<td>Audio input device properties are not set</td>
+</tr>
+<tr>
+<td>0xA0042008</td>
+<td>MI_AI_ERR_NOT_SUPPORT</td>
+<td>Operation is not supported</td>
+</tr>
+<tr>
+<td>0xA0042009</td>
+<td>MI_AI_ERR_NOT_PERM</td>
+<td>Operation not allowed</td>
+</tr>
+<tr>
+<td>0xA004200C</td>
+<td>MI_AI_ERR_NOMEM</td>
+<td>Failed to allocate memory</td>
+</tr>
+<tr>
+<td>0xA004200D</td>
+<td>MI_AI_ERR_NOBUF</td>
+<td>Insufficient audio input buffer</td>
+</tr>
+<tr>
+<td>0xA004200E</td>
+<td>MI_AI_ERR_BUF_EMPTY</td>
+<td>Audio input buffer is empty</td>
+</tr>
+<tr>
+<td>0xA004200F</td>
+<td>MI_AI_ERR_BUF_FULL</td>
+<td>Audio input buffer is full</td>
+</tr>
+<tr>
+<td>0xA0042010</td>
+<td>MI_AI_ERR_SYS_NOTREADY</td>
+<td>Audio input system is not initialized</td>
+</tr>
+<tr>
+<td>0xA0042012</td>
+<td>MI_AI_ERR_BUSY</td>
+<td>Audio input system is busy</td>
+</tr>
+<tr>
+<td>0xA0042017</td>
+<td>MI_AI_ERR_NOT_ENABLED</td>
+<td>Audio input device or channel is not  enabled</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-procfs-introduction">5. PROCFS INTRODUCTION<a class="headerlink" href="#5-procfs-introduction" title="Permanent link">&para;</a></h2>
+<h3 id="51-cat">5.1. cat<a class="headerlink" href="#51-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Debug info</p>
+<div class="codehilite"><pre><span></span># cat proc/mi_modules/mi_ai/mi_ai0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/ai/ai-7.png" /></p>
+</li>
+<li>
+<p>Debug info analysis</p>
+<p>Record the current AI usage status and device/channel group attributes, and can dynamically obtain information, which is convenient for debugging and testing.</p>
+</li>
+<li>
+<p>Parameter description</p>
+</li>
+</ul>
+<p><table>
+        <tr>
+            <th colspan=2>Parameter</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td rowspan=14>AI Device Attr</td>
+            <td>DevStatus</td>
+            <td>AI device status <br>uninit: uninit <br>opened: opened successfully</td>
+        </tr>
+        <tr>
+            <td>Format</td>
+            <td>Audio format (Bit width and size end, etc)<br>Currently only support S16_LE (16bit, small end mode)</td>
+        </tr>
+        <tr>
+            <td>SoundMode</td>
+            <td>Sound mode: <br>mono <br>stereo <br>SOUND_MODE_4CH: 4channel <br>SOUND_MODE_6CH: 6channel <br>SOUND_MODE_8CH: 8channel</td>
+        </tr>
+        <tr>
+            <td>SampleRate</td>
+            <td>8k/16k/32k/48k</td>
+        </tr>
+        <tr>
+            <td>PeriodSize</td>
+            <td>AI data per frame</td>
+        </tr>
+        <tr>
+            <td>Interleaved</td>
+            <td>Whether it is interleaved mode</td>
+        </tr>
+        <tr>
+            <td>DmaBufSize</td>
+            <td>DMA buffer size</td>
+        </tr>
+        <tr>
+            <td>DmaBusySize</td>
+            <td>DMA buffer busy size</td>
+        </tr>
+        <tr>
+            <td>DmaFreeSize</td>
+            <td>DMA buffer free size</td>
+        </tr>
+        <tr>
+            <td>MhalChnCnt</td>
+            <td>Channel count of Mhal device</td>
+        </tr>
+        <tr>
+            <td>MiChnGrpCnt</td>
+            <td>MI channel group count</td>
+        </tr>
+        <tr>
+            <td>ReadCountFromMhal</td>
+            <td>Frame count read by AI from Mhal</td>
+        </tr>
+        <tr>
+            <td>If slot[IfIdx]: interface type</td>
+            <td>[IfIdx]: Interface index <br>interface type: Interface type</td>
+        </tr>
+        <tr>
+            <td>[interface type]:<br>Gain(Leftgain,RightGain)
+            <br>Mute(LeftMute,RightMute)</td>
+            <td>[interface type]: Interface type <br>Gain(Leftgain,RightGain) <br>Mute(LeftMute,RightMute)</td>
+        </tr>
+        <tr>
+            <td rowspan=6>AI I2S Status </td>
+            <td>I2sMode</td>
+            <td>I2S Rx workmode (Only valid when interface is I2S Rx) <br>i2s-master <br>i2s-slave <br>tdm-master <br>tdm-slave</td>
+        </tr>
+        <tr>
+            <td>I2sMclk</td>
+            <td>I2S Rx Mclk frequency (Only valid when interface is I2S Rx) <br>disable: not use Mclk <br>Other values are the current Mclk frequency</td>
+        </tr>
+        <tr>
+            <td>I2sFmt</td>
+            <td>I2S Rx data format (Only valid when interface is I2S Rx)<br>I2S-MSB: I2S format <br>LEFT-MSB: I2S left-justified format</td>
+        </tr>
+        <tr>
+            <td>bI2sSync</td>
+            <td>Whether I2S RX and TX share clock (Only valid when interface is I2S Rx) <br>1: 4 wire mode, RX and TX share clock <br>0: 6 wire mode, RX and TX have indepentent clock</td>
+        </tr>
+        <tr>
+            <td>TdmSlots</td>
+            <td>I2S Rx TDM slot number (Only valid when the device is I2S Rx and in TDM mode)</td>
+        </tr>
+        <tr>
+            <td>I2sBitWidth</td>
+            <td>I2S RX bit width (Only valid when the device is I2S Rx and the chips support TDM mode)</td>
+        </tr>
+        <tr>
+            <td rowspan=7>AI ChnGrp info </td>
+            <td>ChnGrpId</td>
+            <td>MI channel group ID</td>
+        </tr>
+        <tr>
+            <td>bEnable</td>
+            <td>Whether to enable</td>
+        </tr>
+        <tr>
+            <td>ReadFrameCount</td>
+            <td>Frame count read by the corresponding channel group</td>
+        </tr>
+        <tr>
+            <td>Mute Status</td>
+            <td>DPGA Mute info</td>
+        </tr>
+        <tr>
+            <td>Mute[PhyChnIdx]:bMute</td>
+            <td>[PhyChnIdx]: channel index in channel group <br>bMute: mute status</td>
+        </tr>
+        <tr>
+            <td>Dpga Gain</td>
+            <td>DPGA gain info</td>
+        </tr>
+        <tr>
+            <td>Dpga Gain[PhyChnIdx]:Gain</td>
+            <td>[PhyChnIdx]: channel index in channel group <br>Gain</td>
+        </tr>
+    </table></p>
+<h3 id="52-echo">5.2. echo<a class="headerlink" href="#52-echo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th><div style="width:415pt">Dynamically enable/disable AI device to dump mhal pcm data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo dump_mhal_chn [Path]  [ON/on/1, OFF/off/0] &gt; proc/mi_modules/mi_ao/mi_ao[ID]</td>
+</tr>
+<tr>
+<td>Parameter Description</td>
+<td>[Path] Path to dump file  <br>[ON/on/1, OFF/off/0] Enable or not <br>[ID] AI device ID</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo dump_mhal_chn /tmp 1 &gt;  proc/mi_modules/mi_ai/mi_ai0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th><div style="width:415pt">Dynamically enable/disable AI device to dump mi pcm data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  dump_mi_chn [ChnGrpId] [Path] [ON/on/1, OFF/off/0] &gt;  proc/mi_modules/mi_ao/mi_ao[ID]</td>
+</tr>
+<tr>
+<td>Parameter Description</td>
+<td>[ChnGrpId] channel group ID  <br>[Path] Path to dump file  <br>[ON/on/1, OFF/off/0] Enable or not <br>[ID] AI device ID</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo dump_mi_chn 0 /tmp 1 &gt;  proc/mi_modules/mi_ai/mi_ai0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th><div style="width:415pt">Dynamically set AI DPGA gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo set_dpga_gain  [ChnGrpId] [ChnId] [Gain] &gt; proc/mi_modules/mi_ao/mi_ao[ID]</td>
+</tr>
+<tr>
+<td>Parameter Description</td>
+<td>[ChnGrpId] channel group ID <br>[ChnId] channel index in channel group <br>[Gain] AI digital gain</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo set_dpga_gain 0 0 -10 &gt;  proc/mi_modules/mi_ai/mi_ai0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th><div style="width:415pt">Dynamically set AI  Interface gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo set_inf_gain  [If] [LeftGain] [RightGain] &gt; proc/mi_modules/mi_ao/mi_ao[ID]</td>
+</tr>
+<tr>
+<td>Parameter Description</td>
+<td>[If] AI Interface <br>[LeftGain] [RightGain]</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo set_inf_gain 1 18 18 &gt;  proc/mi_modules/mi_ao/mi_ai0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th><div style="width:415pt">Dynamically set AI  DPGA mute mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  set_dpga_mute [ChnGrpId] [ChnId] [Mute] &gt; proc/mi_modules/mi_ao/mi_ao[ID]</td>
+</tr>
+<tr>
+<td>Parameter Description</td>
+<td>[ChnGrpId] channel group ID  <br>[ChnID] channel index in channel group   <br>[Mute] AI DPGA mute</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo set_dpga_mute 0 0 1 &gt;  proc/mi_modules/mi_ai/mi_ai0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th><div style="width:415pt">Dynamically set AI  Interface mute mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo  set_inf_mute [If] [LeftMute] [RightMute] &gt; proc/mi_modules/mi_ao/mi_ao[ID]</td>
+</tr>
+<tr>
+<td>Parameter Description</td>
+<td>[If] AI Interface <br>[LeftMute] [RightMute]</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo set_inf_mute 1 0 1 &gt;  proc/mi_modules/mi_ai/mi_ai0</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>The tiny version does not support this cmd</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Dynamically enable/disable Singen of AI Device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo singen [SinGen Index] [Enable] &gt;  proc/mi_modules/mi_ai/mi_ai[ID]</td>
+</tr>
+<tr>
+<td>Parameter description</td>
+<td>[SinGen Index] Singen ID <br>[Enable] enable/disable Singen</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo singen 0 1 &gt; proc/mi_modules/mi_ao/mi_ai0</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>The tiny version does not support this cmd</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="aed_en.html" title="AED" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                AED
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ao_en.html" title="AO" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                AO
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/search_index.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

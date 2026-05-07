@@ -1,0 +1,3698 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>VDISP - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#revision-history" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                VDISP
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="aec_en.html" class="md-tabs__link md-tabs__link--active">
+          Development
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../customer/IPC/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      SDK Module API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        SDK Module API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_en.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_en.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_en.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_en.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_en.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_en.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_en.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_en.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_en.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_en.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_en.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_en.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_en.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_en.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_en.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_en.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_en.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_en.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_en.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_en.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_en.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_en.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_en.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_en.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        VDISP
+      </label>
+    
+    <a href="vdisp_en.html" title="VDISP" class="md-nav__link md-nav__link--active">
+      VDISP
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-summary" class="md-nav__link">
+    1. SUMMARY
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-constraints" class="md-nav__link">
+    1.3. Constraints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-list-of-apis" class="md-nav__link">
+    2. List of APIs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_vdisp_init" class="md-nav__link">
+    2.1. MI_VDISP_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_vdisp_exit" class="md-nav__link">
+    2.2. MI_VDISP_Exit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_vdisp_opendevice" class="md-nav__link">
+    2.3. MI_VDISP_OpenDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_vdisp_closedevice" class="md-nav__link">
+    2.4. MI_VDISP_CloseDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_vdisp_setoutputportattr" class="md-nav__link">
+    2.5. MI_VDISP_SetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_vdisp_getoutputportattr" class="md-nav__link">
+    2.6. MI_VDISP_GetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_vdisp_setinputchannelattr" class="md-nav__link">
+    2.7. MI_VDISP_SetInputChannelAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_vdisp_getinputchannelattr" class="md-nav__link">
+    2.8. MI_VDISP_GetInputChannelAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_vdisp_enableinputchannel" class="md-nav__link">
+    2.9. MI_VDISP_EnableInputChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_vdisp_disableinputchannel" class="md-nav__link">
+    2.10. MI_VDISP_DisableInputChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_vdisp_startdev" class="md-nav__link">
+    2.11. MI_VDISP_StartDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_vdisp_stopdev" class="md-nav__link">
+    2.12. MI_VDISP_StopDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_vdisp_initdev" class="md-nav__link">
+    2.13. MI_VDISP_InitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_vdisp_deinitdev" class="md-nav__link">
+    2.14. MI_VDISP_DeInitDev
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-type" class="md-nav__link">
+    3.  DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_vdisp_dev" class="md-nav__link">
+    3.1. MI_VDISP_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_vdisp_port" class="md-nav__link">
+    3.2. MI_VDISP_PORT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_vdisp_chn" class="md-nav__link">
+    3.3. MI_VDISP_CHN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_vdisp_outputportattr_t" class="md-nav__link">
+    3.4. MI_VDISP_OutputPortAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_vdisp_inputchnattr_t" class="md-nav__link">
+    3.5. MI_VDISP_InputChnAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_vdisp_initparam_t" class="md-nav__link">
+    3.6. MI_VDISP_InitParam_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-error-code" class="md-nav__link">
+    4. ERROR CODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-specification" class="md-nav__link">
+    5. SPECIFICATION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-appendix" class="md-nav__link">
+    6. APPENDIX
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-flow-chart-of-sample" class="md-nav__link">
+    6.1. Flow Chart of Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-partial-sample-involving-vdisp" class="md-nav__link">
+    6.2. Partial Sample Involving vdisp
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-construct-module-vdisp" class="md-nav__link">
+    6.2.1. Construct module vdisp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-binding-frontback-ends" class="md-nav__link">
+    6.2.2. Binding front/back ends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-unbinding-frontback-ends" class="md-nav__link">
+    6.2.3. Unbinding front/back ends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-destruct-module-vdisp" class="md-nav__link">
+    6.2.4. Destruct module vdisp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-full-implementation" class="md-nav__link">
+    6.3. Full implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-procfs-introduction" class="md-nav__link">
+    7. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-cat" class="md-nav__link">
+    7.1. cat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-nav__link">
+      ABBR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-summary" class="md-nav__link">
+    1. SUMMARY
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-constraints" class="md-nav__link">
+    1.3. Constraints
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-list-of-apis" class="md-nav__link">
+    2. List of APIs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_vdisp_init" class="md-nav__link">
+    2.1. MI_VDISP_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_vdisp_exit" class="md-nav__link">
+    2.2. MI_VDISP_Exit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_vdisp_opendevice" class="md-nav__link">
+    2.3. MI_VDISP_OpenDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_vdisp_closedevice" class="md-nav__link">
+    2.4. MI_VDISP_CloseDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_vdisp_setoutputportattr" class="md-nav__link">
+    2.5. MI_VDISP_SetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_vdisp_getoutputportattr" class="md-nav__link">
+    2.6. MI_VDISP_GetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_vdisp_setinputchannelattr" class="md-nav__link">
+    2.7. MI_VDISP_SetInputChannelAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_vdisp_getinputchannelattr" class="md-nav__link">
+    2.8. MI_VDISP_GetInputChannelAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_vdisp_enableinputchannel" class="md-nav__link">
+    2.9. MI_VDISP_EnableInputChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_vdisp_disableinputchannel" class="md-nav__link">
+    2.10. MI_VDISP_DisableInputChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_vdisp_startdev" class="md-nav__link">
+    2.11. MI_VDISP_StartDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_vdisp_stopdev" class="md-nav__link">
+    2.12. MI_VDISP_StopDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_vdisp_initdev" class="md-nav__link">
+    2.13. MI_VDISP_InitDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_vdisp_deinitdev" class="md-nav__link">
+    2.14. MI_VDISP_DeInitDev
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-type" class="md-nav__link">
+    3.  DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_vdisp_dev" class="md-nav__link">
+    3.1. MI_VDISP_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_vdisp_port" class="md-nav__link">
+    3.2. MI_VDISP_PORT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_vdisp_chn" class="md-nav__link">
+    3.3. MI_VDISP_CHN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_vdisp_outputportattr_t" class="md-nav__link">
+    3.4. MI_VDISP_OutputPortAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_vdisp_inputchnattr_t" class="md-nav__link">
+    3.5. MI_VDISP_InputChnAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_vdisp_initparam_t" class="md-nav__link">
+    3.6. MI_VDISP_InitParam_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-error-code" class="md-nav__link">
+    4. ERROR CODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-specification" class="md-nav__link">
+    5. SPECIFICATION
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-appendix" class="md-nav__link">
+    6. APPENDIX
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-flow-chart-of-sample" class="md-nav__link">
+    6.1. Flow Chart of Sample
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-partial-sample-involving-vdisp" class="md-nav__link">
+    6.2. Partial Sample Involving vdisp
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-construct-module-vdisp" class="md-nav__link">
+    6.2.1. Construct module vdisp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-binding-frontback-ends" class="md-nav__link">
+    6.2.2. Binding front/back ends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-unbinding-frontback-ends" class="md-nav__link">
+    6.2.3. Unbinding front/back ends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-destruct-module-vdisp" class="md-nav__link">
+    6.2.4. Destruct module vdisp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-full-implementation" class="md-nav__link">
+    6.3. Full implementation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-procfs-introduction" class="md-nav__link">
+    7. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-cat" class="md-nav__link">
+    7.1. cat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI VDISP API</h1>
+<hr />
+<h2 id="revision-history">REVISION HISTORY<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision No.</th>
+<th><div style="width:335pt">Description</div></th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.03</td>
+<td><li> Initial  release</td>
+<td>04/12/2018</td>
+</tr>
+<tr>
+<td>2.04</td>
+<td><li> Update  statement</td>
+<td></td>
+</tr>
+<tr>
+<td>2.05</td>
+<td><li> Update  base on new architecture</td>
+<td>10/29/2019</td>
+</tr>
+<tr>
+<td>2.06</td>
+<td><li> Fix  errors and format</td>
+<td>01/13/2020</td>
+</tr>
+<tr>
+<td>2.07</td>
+<td><li> Add API: MI_VDISP_InitDev and MI_VDISP_DeInitDev</td>
+<td>04/26/2020</td>
+</tr>
+<tr>
+<td></td>
+<td><li> Add PROCFS  Introduction</td>
+<td>08/25/2021</td>
+</tr>
+<tr>
+<td>2.08</td>
+<td><li> Add figure title <li> Fix hyperlinks <li> Add error code value</td>
+<td>10/26/2021</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-summary">1. SUMMARY<a class="headerlink" href="#1-summary" title="Permanent link">&para;</a></h2>
+<h3 id="11-module-description">1.1. Module Description<a class="headerlink" href="#11-module-description" title="Permanent link">&para;</a></h3>
+<p>The module MI_VDISP is designed to assemble multiple outputs from front-end module along with user injections as needed to a whole data frame with thumbnail window for each input, and then output it.</p>
+<p>A typical scenario of VDISP goes like this:</p>
+<ul>
+<li>
+<p>Assuming we have three vdec output channels: <font color=green>green&lt;0&gt;</font>/<font color=blue>blue&lt;1&gt;</font>/<font color=yellow>yellow&lt;2&gt;</font></p>
+</li>
+<li>
+<p>Binding vdec <font color=green>channel&lt;0&gt;</font> with vdisp input <font color=green>channel&lt; overlay &gt;</font>, vdec <font color=blue>channel&lt;1&gt;</font> with vdisp input <font color=blue>channel&lt;1&gt;</font>, vdec <font color=yellow>channel&lt;2&gt;</font> with vdisp input <font color=yellow>channel&lt;2&gt;</font></p>
+</li>
+<li>
+<p>Binding vdisp output port&lt;0&gt; with disp input port&lt;0&gt;</p>
+</li>
+<li>
+<p>Outputting data frame by VGA</p>
+</li>
+</ul>
+<p><img alt="" src="mymedia/vdisp/vdisp-1.png" /></p>
+<h3 id="12-flow-chart">1.2. Flow Chart<a class="headerlink" href="#12-flow-chart" title="Permanent link">&para;</a></h3>
+<p>Unlike many other modules, VDISP is a PURE software module, no proprietary HW IP occupied. VDISP is a proxy of memory buffer which supplies output buffers of those which would eventually be sent to VDISP’s input channels for its front end module by allocating buffers from its own output buffers maintained through a buffer queue.</p>
+<p>Thus, we can assemble multiple inputs without copying anything.</p>
+<p><img alt="" src="mymedia/vdisp/vdisp-2.png" /></p>
+<h3 id="13-constraints">1.3. Constraints<a class="headerlink" href="#13-constraints" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Alignment for beginning horizontal coordinate (u32OutX) of input channels is essential, because HW IPs were designed to access aligned memory address usually. The specific alignment value is determined by front-end modules. Generally, 16 is highly recommended, although 8 is sufficient enough for some scenarios.</p>
+</li>
+<li>
+<p>Currently, VDISP supports two input data formats:</p>
+<p>E_MI_SYS_PIXEL_FRAME_YUV_SEMIPLANAR_420</p>
+<p>E_MI_SYS_PIXEL_FRAME_YUV_SEMIPLANAR_422</p>
+</li>
+<li>
+<p>Currently, VDISP only supports fixed frame-rate output. See parameter u32FrmRate of <a href="#34-mi_vdisp_outputportattr_t">MI_VDISP_OutputPortAttr_t</a>.</p>
+</li>
+<li>
+<p>Currently, VDISP does not support <strong>format-conversion/cropping/scaling</strong>.</p>
+</li>
+<li>
+<p>Please refer to <a href="#5-specification">SPECIFICATION</a> for more details.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-list-of-apis">2. List of APIs<a class="headerlink" href="#2-list-of-apis" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Name of API</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_vdisp_init">MI_VDISP_Init</a></td>
+<td>Initialize  Module</td>
+</tr>
+<tr>
+<td><a href="#22-mi_vdisp_exit">MI_VDISP_Exit</a></td>
+<td>De-initialize  Module</td>
+</tr>
+<tr>
+<td><a href="#23-mi_vdisp_opendevice">MI_VDISP_OpenDevice</a></td>
+<td>Open a virtual  VDISP device</td>
+</tr>
+<tr>
+<td><a href="#24-mi_vdisp_closedevice">MI_VDISP_CloseDevice</a></td>
+<td>Close a virtual  VDISP device</td>
+</tr>
+<tr>
+<td><a href="#25-mi_vdisp_setoutputportattr">MI_VDISP_SetOutputPortAttr</a></td>
+<td>Set attributes  of output port</td>
+</tr>
+<tr>
+<td><a href="#26-mi_vdisp_getoutputportattr">MI_VDISP_GetOutputPortAttr</a></td>
+<td>Get attributes  of output port</td>
+</tr>
+<tr>
+<td><a href="#27-mi_vdisp_setinputchannelattr">MI_VDISP_SetInputChannelAttr</a></td>
+<td>Set attributes  of input channel</td>
+</tr>
+<tr>
+<td><a href="#28-mi_vdisp_getinputchannelattr">MI_VDISP_GetInputChannelAttr</a></td>
+<td>Get attributes  of input channel</td>
+</tr>
+<tr>
+<td><a href="#29-mi_vdisp_enableinputchannel">MI_VDISP_EnableInputChannel</a></td>
+<td>Enable an input  channel</td>
+</tr>
+<tr>
+<td><a href="#210-mi_vdisp_disableinputchannel">MI_VDISP_DisableInputChannel</a></td>
+<td>Disable an  input channel</td>
+</tr>
+<tr>
+<td><a href="#211-mi_vdisp_startdev">MI_VDISP_StartDev</a></td>
+<td>Start a VDISP  device</td>
+</tr>
+<tr>
+<td><a href="#212-mi_vdisp_stopdev">MI_VDISP_StopDev</a></td>
+<td>Stop a VDISP  device</td>
+</tr>
+<tr>
+<td><a href="#213-mi_vdisp_initdev">MI_VDISP_InitDev</a></td>
+<td>Initialize VDISP device</td>
+</tr>
+<tr>
+<td><a href="#214-mi_vdisp_deinitdev">MI_VDISP_DeInitDev</a></td>
+<td>De-initialize VDISP device</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-mi_vdisp_init">2.1. MI_VDISP_Init<a class="headerlink" href="#21-mi_vdisp_init" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Initialize VDISP module.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_ModuleInit(void);
+</pre></div>
+
+
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Reference</p>
+<p><a href="#22-mi_vdisp_exit">MI_VDISP_Exit</a></p>
+</li>
+</ul>
+<h3 id="22-mi_vdisp_exit">2.2. MI_VDISP_Exit<a class="headerlink" href="#22-mi_vdisp_exit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>De-initialize VDISP module.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_ModuleDeinit(void);
+</pre></div>
+
+
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Reference</p>
+<p><a href="#21-mi_vdisp_init">MI_VDISP_Init</a></p>
+</li>
+</ul>
+<h3 id="23-mi_vdisp_opendevice">2.3. MI_VDISP_OpenDevice<a class="headerlink" href="#23-mi_vdisp_opendevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Open a VDISP virtual device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_OpenDevice(MI_VDISP_DEV DevId)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Initialize VDISP before opening a device.</p>
+</li>
+</ul>
+<h3 id="24-mi_vdisp_closedevice">2.4. MI_VDISP_CloseDevice<a class="headerlink" href="#24-mi_vdisp_closedevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Close a VDISP virtual device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_CloseDevice(MI_VDISP_DEV DevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="25-mi_vdisp_setoutputportattr">2.5. MI_VDISP_SetOutputPortAttr<a class="headerlink" href="#25-mi_vdisp_setoutputportattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set attributes of output port.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_SetOutputPortAttr(MI_VDISP_DEV DevId, MI_VDISP_PORT PortId,MI_VDISP_OutputPortAttr_t *pstOutputPortAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>Port ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstOutputPortAttr</td>
+<td>Pointer  to attributes of output port</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="26-mi_vdisp_getoutputportattr">2.6. MI_VDISP_GetOutputPortAttr<a class="headerlink" href="#26-mi_vdisp_getoutputportattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get attributes of output port.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_GetOutputPortAttr(MI_VDISP_DEV DevId, MI_VDISP_PORT PortId,MI_VDISP_OutputPortAttr_t *pstOutputPortAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>Port ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstOutputPortAttr</td>
+<td>Pointer  to attributes of output port</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="27-mi_vdisp_setinputchannelattr">2.7. MI_VDISP_SetInputChannelAttr<a class="headerlink" href="#27-mi_vdisp_setinputchannelattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Set attributes of input channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_SetInputChannelAttr(MI_VDISP_DEV DevId, MI_VDISP_CHN ChnId,MI_VDISP_InputChnAttr_t *pstInputChnAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>Channel Id</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstInputChntAttr</td>
+<td>Pointer  to attributes of input channel</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="28-mi_vdisp_getinputchannelattr">2.8. MI_VDISP_GetInputChannelAttr<a class="headerlink" href="#28-mi_vdisp_getinputchannelattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Get attributes of input channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_GetInputChannelAttr(MI_VDISP_DEV DevId, MI_VDISP_CHN ChnId,MI_VDISP_InputChnAttr_t *pstInputChnAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>Channel Id</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstInputChnAttr</td>
+<td>Pointer  to attributes of input channel</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="29-mi_vdisp_enableinputchannel">2.9. MI_VDISP_EnableInputChannel<a class="headerlink" href="#29-mi_vdisp_enableinputchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Enable an input channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_EnableInputChannel(MI_VDISP_DEV DevId, MI_VDISP_CHN ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>Channel ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="210-mi_vdisp_disableinputchannel">2.10. MI_VDISP_DisableInputChannel<a class="headerlink" href="#210-mi_vdisp_disableinputchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Disable an input channel.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_DisableInputChannel(MI_VDISP_DEV DevId, MI_VDISP_CHN ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>Channel ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="211-mi_vdisp_startdev">2.11. MI_VDISP_StartDev<a class="headerlink" href="#211-mi_vdisp_startdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Start a VDISP device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_StartDev(MI_VDISP_DEV DevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="212-mi_vdisp_stopdev">2.12. MI_VDISP_StopDev<a class="headerlink" href="#212-mi_vdisp_stopdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Stop a VDISP device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_StopDev(MI_VDISP_DEV DevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>Device ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>Frame data buffered in VDISP will be cleaned after device is stopped.</p>
+</li>
+</ul>
+<h3 id="213-mi_vdisp_initdev">2.13. MI_VDISP_InitDev<a class="headerlink" href="#213-mi_vdisp_initdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>Initialize VDISP device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_InitDev(MI_VDISP_InitParam_t *pstInitParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pstInitParam</td>
+<td>Initialization Parameter</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>pstInitParam is unused for now; pass NULL instead.</p>
+</li>
+<li>
+<p>For version 2.07 and above, we recommend using this interface to replace the original <a href="#21-mi_vdisp_init">MI_VDISP_Init</a> interface.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="214-mi_vdisp_deinitdev">2.14. MI_VDISP_DeInitDev<a class="headerlink" href="#214-mi_vdisp_deinitdev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Function</p>
+<p>De-initialize VDISP device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VDISP_DeInitDev(void);
+</pre></div>
+
+
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>Zero: Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependency</p>
+<ul>
+<li>
+<p>Header: mi_vdisp.h, mi_vdisp_datatype.h</p>
+</li>
+<li>
+<p>Library: libmi_vdisp.a(so)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>For Version 2.07 and above, we recommend using this interface to replace the original <a href="#22-mi_vdisp_exit">MI_VDISP_Exit</a> interface.</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-data-type">3.  DATA TYPE<a class="headerlink" href="#3-data-type" title="Permanent link">&para;</a></h2>
+<p>Definition of data type in MI VDISP is as listed in the following table: </p>
+<table>
+<thead>
+<tr>
+<th><strong>Data Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#31-mi_vdisp_dev">MI_VDISP_DEV</a></td>
+<td>Type of device ID</td>
+</tr>
+<tr>
+<td><a href="#32-mi_vdisp_port">MI_VDISP_PORT</a></td>
+<td>Type of port ID</td>
+</tr>
+<tr>
+<td><a href="#33-mi_vdisp_chn">MI_VDISP_CHN</a></td>
+<td>Type of channel ID</td>
+</tr>
+<tr>
+<td><a href="#34-mi_vdisp_outputportattr_t">MI_VDISP_OutputPortAttr_t</a></td>
+<td>Type of output port attributes</td>
+</tr>
+<tr>
+<td><a href="#35-mi_vdisp_inputchnattr_t">MI_VDISP_InputChnAttr_t</a></td>
+<td>Type of input channel attributes</td>
+</tr>
+<tr>
+<td><a href="#36-mi_vdisp_initparam_t">MI_VDISP_InitParam_t</a></td>
+<td>Type of initialization parameter of VDISP device</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-mi_vdisp_dev">3.1. MI_VDISP_DEV<a class="headerlink" href="#31-mi_vdisp_dev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Type of device ID.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_S32 MI_VDISP_DEV;
+</pre></div>
+
+
+</li>
+<li>
+<p>Note</p>
+<p>Valid for natural number. </p>
+</li>
+</ul>
+<h3 id="32-mi_vdisp_port">3.2. MI_VDISP_PORT<a class="headerlink" href="#32-mi_vdisp_port" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Type of port ID.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_S32 MI_VDISP_PORT;
+</pre></div>
+
+
+</li>
+<li>
+<p>Note</p>
+<p>Valid for natural number.</p>
+</li>
+</ul>
+<h3 id="33-mi_vdisp_chn">3.3. MI_VDISP_CHN<a class="headerlink" href="#33-mi_vdisp_chn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Type of channel ID.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_S32 MI_VDISP_CHN;
+</pre></div>
+
+
+</li>
+<li>
+<p>Note</p>
+<p>Valid for natural number.</p>
+</li>
+</ul>
+<h3 id="34-mi_vdisp_outputportattr_t">3.4. MI_VDISP_OutputPortAttr_t<a class="headerlink" href="#34-mi_vdisp_outputportattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Type of output port attributes.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VDISP_OutputPortAttr_s
+
+{
+
+    MI_U32 u32BgColor;  /* Background color of a output port, in YUV format. [23:16]:v, [15:8]:y, [7:0]:u*/
+
+    PIXEL_FORMAT_E ePixelFormat; /* pixel format of a output port */
+
+    MI_U64 u64pts; /* current PTS */
+
+    MI_U32 u32FrmRate; /* the frame rate of output port */
+
+    MI_U32 u32Width; /* the frame width of a output port */
+
+    MI_U32 u32Height; /* the frame height of a output port */
+
+} MI_VDISP_OutputPortAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32BgColor</td>
+<td>Background color of output frame, yuv444  <br>[23:16]: v  <br>[15:8]: y  <br>[7:0]: u</td>
+</tr>
+<tr>
+<td>ePixelFormat</td>
+<td>Pixel format of output frame.</td>
+</tr>
+<tr>
+<td>u64pts</td>
+<td>Present PTS of output frame.</td>
+</tr>
+<tr>
+<td>u32FrmRate</td>
+<td>Fixed output frame-rate  <br>0: Use frame-rate value in binding setting</td>
+</tr>
+<tr>
+<td>u32Width</td>
+<td>Width of output frame</td>
+</tr>
+<tr>
+<td>u32Height</td>
+<td>Height of output frame</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="35-mi_vdisp_inputchnattr_t">3.5. MI_VDISP_InputChnAttr_t<a class="headerlink" href="#35-mi_vdisp_inputchnattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Type of input channel attributes.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VDISP_InputPortAttr_s
+
+{
+
+    MI_U32 u32OutX; /* the output frame X position of this input port */
+
+    MI_U32 u32OutY; /* the output frame Y position of this input port */
+
+    MI_U32 u32OutWidth; /* the output frame width of this input port */
+
+    MI_U32 u32OutHeight; /* the output frame height of this input port */
+
+    MI_S32 s32IsFreeRun; /* is this port free run */
+
+} MI_VDISP_InputPortAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32OutX</td>
+<td>Coordinate X  where thumbnail of input frame will be present in assembled output frame</td>
+</tr>
+<tr>
+<td>u32OutY</td>
+<td>Coordinate Y  where thumbnail of input frame will be present in assembled output frame</td>
+</tr>
+<tr>
+<td>u32OutWidth</td>
+<td>Width for thumbnail  of input frame which will be present in the assembled output frame</td>
+</tr>
+<tr>
+<td>u32OutHeight</td>
+<td>Height for thumbnail  of input frame which will be present in the assembled output frame</td>
+</tr>
+<tr>
+<td>s32IsFreeRun</td>
+<td>0: Input  channel’s frame in which PTS smaller than present PTS of output port will be  ignored.  Other: Input  frame will not be checked</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="36-mi_vdisp_initparam_t">3.6. MI_VDISP_InitParam_t<a class="headerlink" href="#36-mi_vdisp_initparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>VDISP device initialization parameter.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VDISP_InitParam_s
+
+{
+
+    MI_U32 u32DevId;
+
+    MI_U8 *u8Data;
+
+} MI_VDISP_InitParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th><strong>Member</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32DevId</td>
+<td>Device ID</td>
+</tr>
+<tr>
+<td>u8Data</td>
+<td>Data pointer</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Data Type and Interface</p>
+<p><a href="#213-mi_vdisp_initdev">MI_VDISP_InitDev</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="4-error-code">4. ERROR CODE<a class="headerlink" href="#4-error-code" title="Permanent link">&para;</a></h2>
+<p>The VDISP error codes are as shown in Table 4-1: </p>
+<p>Table 4-1: API Error Code</p>
+<table>
+<thead>
+<tr>
+<th><strong>Error Code</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0XA0142000</td>
+<td>MI_SUCCESS</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>0XA0142031</td>
+<td>MI_VDISP_ERR_FAIL</td>
+<td>Operation failed, please refer to system log</td>
+</tr>
+<tr>
+<td>0XA0142001</td>
+<td>MI_VDISP_ERR_INVALID_DEVID</td>
+<td>Illegal device id, please refer to system log</td>
+</tr>
+<tr>
+<td>0XA0142003</td>
+<td>MI_VDISP_ERR_ILLEGAL_PARAM</td>
+<td>Illegal parameter, please refer to system log</td>
+</tr>
+<tr>
+<td>0XA0142008</td>
+<td>MI_VDISP_ERR_NOT_SUPPORT</td>
+<td>Operation failed, output color format was not  supported</td>
+</tr>
+<tr>
+<td>0XA0142022</td>
+<td>MI_VDISP_ERR_MOD_INITED</td>
+<td>Operation failed, VDISP module already  initialized</td>
+</tr>
+<tr>
+<td>0XA0142021</td>
+<td>MI_VDISP_ERR_MOD_NOT_INIT</td>
+<td>Operation failed, VDISP module needs to be initialized</td>
+</tr>
+<tr>
+<td>0XA0142240</td>
+<td>MI_VDISP_ERR_DEV_OPENED</td>
+<td>Operation failed, VDISP device already opened</td>
+</tr>
+<tr>
+<td>0XA0142241</td>
+<td>MI_VDISP_ERR_DEV_NOT_OPEN</td>
+<td>Operation failed, open VDISP device first</td>
+</tr>
+<tr>
+<td>0XA0142027</td>
+<td>MI_VDISP_ERR_DEV_NOT_STOP</td>
+<td>Operation failed, stop VDISP device first</td>
+</tr>
+<tr>
+<td>0XA0142242</td>
+<td>MI_VDISP_ERR_DEV_NOT_CLOSE</td>
+<td>Operation failed, close VDISP device first</td>
+</tr>
+<tr>
+<td>0XA0142007</td>
+<td>MI_VDISP_ERR_NOT_CONFIG</td>
+<td>Operation failed, configure VDISP output port  first</td>
+</tr>
+<tr>
+<td>0XA0142024</td>
+<td>MI_VDISP_ERR_PORT_NOT_DISABLE</td>
+<td>Operation failed, disable input channels first</td>
+</tr>
+<tr>
+<td>0XA0142243</td>
+<td>MI_VDISP_ERR_PORT_NOT_UNBIND</td>
+<td>Operation failed, unbind input/output first</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-specification">5. SPECIFICATION<a class="headerlink" href="#5-specification" title="Permanent link">&para;</a></h2>
+<p>Table 5-1: Specification of VDISP</p>
+<table>
+<thead>
+<tr>
+<th><strong>Definition</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VDISP_MAX_DEVICE_NUM</td>
+<td>4</td>
+<td>Max virtual  device number</td>
+</tr>
+<tr>
+<td>VDISP_MAX_CHN_NUM_PER_DEV</td>
+<td>16</td>
+<td>Max non-overlay  input channel number per device</td>
+</tr>
+<tr>
+<td>VDISP_MAX_INPUTPORT_NUM</td>
+<td>1</td>
+<td>Max port number  of input channel.</td>
+</tr>
+<tr>
+<td>VDISP_MAX_OVERLAYINPUTCHN_NUM</td>
+<td>4</td>
+<td>Max overlay  input channel number per device.  Built-in  constable value. Rebuilding module is required if more overlay channels are needed.</td>
+</tr>
+<tr>
+<td>VDISP_OVERLAYINPUTCHNID</td>
+<td>VDISP_MAX_CHN_NUM_PER_DEV</td>
+<td>Starting ID of  overlay input channel</td>
+</tr>
+<tr>
+<td>VDISP_MAX_OUTPUTPORT_NUM</td>
+<td>1</td>
+<td>Max output port  number per device</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-appendix">6. APPENDIX<a class="headerlink" href="#6-appendix" title="Permanent link">&para;</a></h2>
+<p>This section details an implementation of the scenario described in Summary section.</p>
+<h3 id="61-flow-chart-of-sample">6.1. Flow Chart of Sample<a class="headerlink" href="#61-flow-chart-of-sample" title="Permanent link">&para;</a></h3>
+<p><font color=green>GREEN</font> parts indicate the module vdisp was involved.</p>
+<p><img alt="" src="mymedia/vdisp/vdisp-3.png" /></p>
+<h3 id="62-partial-sample-involving-vdisp">6.2. Partial Sample Involving vdisp<a class="headerlink" href="#62-partial-sample-involving-vdisp" title="Permanent link">&para;</a></h3>
+<h4 id="621-construct-module-vdisp">6.2.1. Construct module vdisp<a class="headerlink" href="#621-construct-module-vdisp" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>/*
+* Initialize module vdisp
+*      v        
+* Open vdisp device 
+*      v        
+* Setting parameters of vdisp input channel/output port
+*      v        
+* Activate input channels
+*      v        
+* Start vdisp device
+*/
+void construct_vdisp_module(void)
+{
+#define MAKE_YUYV_VALUE(y,u,v)    ((y) &lt;&lt; 24) | ((u) &lt;&lt; 16) | ((y) &lt;&lt; 8) | (v)
+#define YUYV_BLACK                MAKE_YUYV_VALUE(0,128,128)
+#define ALIGN16_DOWN(x) (x&amp;0xFFF0)
+
+    typedef struct RECT
+    {
+        /*
+        (x,y)_ _ _ _ _ 
+        |             |
+        |            (h)
+        |_ _ _(w)_ _ _|
+        */
+        short x;
+        short y;
+        short w;
+        short h;
+    } RECT;
+
+    /*
+    * Initialize module vdisp
+    */
+    MI_VDISP_Init();
+
+    MI_VDISP_InputChnAttr_t stInputChnAttr;
+    MI_VDISP_OutputPortAttr_t stOutputPortAttr;
+    MI_VDISP_DEV DevId = 0;
+    RECT rect_0, rect_1, rect_2;
+    MI_VDISP_CHN Chn_0_Id = VDISP_OVERLAYINPUTCHNID;
+    MI_VDISP_CHN Chn_1_Id = 1;
+    MI_VDISP_CHN Chn_2_Id = 2;
+
+    /*
+    * open a virtual device of vdisp
+    */
+    MI_VDISP_OpenDevice(DevId);
+
+    /*
+    * align starting horizontal corrdinate by 16
+    * setting parameters of input channel
+    */
+    rect_0.x = ALIGN16_DOWN(960);
+    rect_0.y = 0;
+    rect_0.w = 960;
+    rect_0.h = 960;
+    stInputChnAttr.s32IsFreeRun = TRUE;
+    stInputChnAttr.u32OutHeight = rect_0.h;
+    stInputChnAttr.u32OutWidth = rect_0.w;
+    stInputChnAttr.u32OutX = rect_0.x;
+    stInputChnAttr.u32OutY = rect_0.y;
+    /*
+    *setting parameters of input channel&lt;VDISP_OVERLAYINPUTCHNID&gt;
+    */
+    MI_VDISP_SetInputChannelAttr(DevId, Chn_0_Id, &amp;stInputChnAttr);
+
+    /*
+    * align starting horizontal corrdinate by 16
+    * setting parameters of input channel
+    */
+    rect_1.x = ALIGN16_DOWN(0);
+    rect_1.y = 1080 - 300;
+    rect_1.w = ALIGN16_DOWN(300);
+    rect_1.h = 300;
+    stInputChnAttr.s32IsFreeRun = TRUE;
+    stInputChnAttr.u32OutHeight = rect_1.h;
+    stInputChnAttr.u32OutWidth = rect_1.w;
+    stInputChnAttr.u32OutX = rect_1.x;
+    stInputChnAttr.u32OutY = rect_1.y;
+    /*
+    *setting parameters of input channel&lt;1&gt;
+    */
+    MI_VDISP_SetInputChannelAttr(DevId, Chn_1_Id, &amp;stInputChnAttr);
+
+    /*
+    * align starting horizontal corrdinate by 16
+    * setting parameters of input channel
+    */
+    rect_2.x = ALIGN16_DOWN(300);
+    rect_2.y = 1080 - 700;
+    rect_2.w = 700;
+    rect_2.h = 700;
+    stInputChnAttr.s32IsFreeRun = TRUE;
+    stInputChnAttr.u32OutHeight = rect_2.h;
+    stInputChnAttr.u32OutWidth = rect_2.w;
+    stInputChnAttr.u32OutX = rect_2.x;
+    stInputChnAttr.u32OutY = rect_2.y;
+    /*
+    *setting parameters of input channel&lt;2&gt;
+    */
+    MI_VDISP_SetInputChannelAttr(DevId, Chn_2_Id, &amp;stInputChnAttr);
+
+    //setting output color format
+    stOutputPortAttr.ePixelFormat = E_MI_SYS_PIXEL_FRAME_YUV_SEMIPLANAR_420;
+    //setting backgroud color of vdisp&#39;s output frame
+    stOutputPortAttr.u32BgColor = YUYV_BLACK;
+    //setting output framerate
+    stOutputPortAttr.u32FrmRate = 30;
+    //setting height of output frame
+    stOutputPortAttr.u32Height = 1080;
+    //setting width of output frame
+    stOutputPortAttr.u32Width = 1920;
+    //settin initial pts of output frame
+    stOutputPortAttr.u64pts = 0;
+
+    /*
+    * setting parameters of output port&lt;0&gt;
+    */
+    MI_VDISP_SetOutputPortAttr(DevId,0,&amp;stOutputPortAttr);
+
+    /*
+    * activating input channels &lt;VDISP_OVERLAYINPUTCHNID,1,2&gt;
+    */
+    MI_VDISP_EnableInputChannel(DevId, Chn_0_Id);
+    MI_VDISP_EnableInputChannel(DevId, Chn_1_Id);
+    MI_VDISP_EnableInputChannel(DevId, Chn_2_Id);
+
+    /*
+    * start vdisp device
+    */
+    MI_VDISP_StartDev(DevId);
+}
+</pre></div>
+
+
+<h4 id="622-binding-frontback-ends">6.2.2. Binding front/back ends<a class="headerlink" href="#622-binding-frontback-ends" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>/*
+* binding vdec out0 -&gt; vdisp inOverlay---\
+* binding vdec out1 -&gt; vdisp in1 ---------&gt;vdisp out0--&gt; disp in0
+* binding vdec out2 -&gt; vdisp in2---------/
+*/
+void bind_disp_vdisp_vdec(void)
+{
+    MI_SYS_ChnPort_t stSrcChnPort;
+    MI_SYS_ChnPort_t stDstChnPort;
+
+    /*
+    * binding vdisp out0-&gt; disp in0
+    * &lt;chn,dev,port&gt; : (0,0,0) -&gt; (0,0,0)
+    */
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stSrcChnPort.u32ChnId = 0;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_DISP;
+    stDstChnPort.u32ChnId = 0;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_BindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort, 30, 30);
+
+    /*
+    * binding vdec out0-&gt; vdisp inOverlay
+    * &lt;chn,dev,port&gt; : (0,0,0) -&gt; (VDISP_OVERLAYINPUTCHNID,0,0)
+    */
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 0;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = VDISP_OVERLAYINPUTCHNID;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_BindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort, 30, 30);
+
+    /*
+    * binding vdec out0-&gt; vdisp in1
+    * &lt;chn,dev,port&gt; : (1,0,0) -&gt; (1,0,0)
+    */
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 1;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = 1;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_BindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort, 30, 30);
+
+    /*
+    * binding vdec out2-&gt; vdisp in2
+    * &lt;chn,dev,port&gt; : (2,0,0) -&gt; (2,0,0)
+    */
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 2;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = 2;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_BindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort, 30, 30);
+
+}
+</pre></div>
+
+
+<h4 id="623-unbinding-frontback-ends">6.2.3. Unbinding front/back ends<a class="headerlink" href="#623-unbinding-frontback-ends" title="Permanent link">&para;</a></h4>
+<p>The procedure is quite similar to <a href="#622-binding-frontback-ends">binding front/back ends</a>. Please refer to <a href="#63-full-implementation">Full implementation</a> for actual source code.</p>
+<h4 id="624-destruct-module-vdisp">6.2.4. Destruct module vdisp<a class="headerlink" href="#624-destruct-module-vdisp" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>/*
+* disable all channels enabled
+*      v        
+* stop vdisp device
+*      v        
+* close vdisp device
+*      v        
+* exit vdisp
+*/
+void destruct_vdisp_module(void)
+{
+    MI_VDISP_DEV DevId = 0;
+    MI_VDISP_CHN Chn_0_Id = VDISP_OVERLAYINPUTCHNID;
+    MI_VDISP_CHN Chn_1_Id = 1;
+    MI_VDISP_CHN Chn_2_Id = 2;
+/*
+    * diable vdisp channels &lt;VDISP_OVERLAYINPUTCHNID,1,2&gt;
+    */
+    MI_VDISP_DisableInputChannel(DevId, Chn_0_Id);
+    MI_VDISP_DisableInputChannel(DevId, Chn_1_Id);
+    MI_VDISP_DisableInputChannel(DevId, Chn_2_Id);
+
+/*
+    *stop vdisp device
+    */
+    MI_VDISP_StopDev(DevId);
+/*
+    *close vdisp device
+    */
+    MI_VDISP_CloseDevice(DevId);
+/*
+    *exit vdisp
+    */
+    MI_VDISP_Exit();
+}
+</pre></div>
+
+
+<h3 id="63-full-implementation">6.3. Full implementation<a class="headerlink" href="#63-full-implementation" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>#include &lt;threads.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;assert.h&gt;
+#include &lt;signal.h&gt;
+
+#include &lt;mi_sys_datatype.h&gt;
+#include &lt;mi_sys.h&gt;
+#include &lt;mi_vdec_datatype.h&gt;
+#include &lt;mi_vdec.h&gt;
+#include &lt;mi_disp_datatype.h&gt;
+#include &lt;mi_disp.h&gt;
+#include &lt;mi_vdisp_datatype.h&gt;
+#include &lt;mi_vdisp.h&gt;
+
+
+static volatile int keepRunning = 1;
+
+static void intHandler(int dummy)
+{
+    keepRunning = 0;
+}
+
+void construct_disp_module(void)
+{
+
+    MI_DISP_PubAttr_t stDispPubAttr;
+    stDispPubAttr.eIntfSync = E_MI_DISP_OUTPUT_1080P60;
+    stDispPubAttr.eIntfType = E_MI_DISP_INTF_VGA;
+    MI_DISP_SetPubAttr(0, &amp;stDispPubAttr);
+
+    MI_DISP_InputPortAttr_t stInputPortAttr;
+    stInputPortAttr.u16SrcWidth = 1920;
+    stInputPortAttr.u16SrcHeight = 1080;
+    stInputPortAttr.stDispWin.u16X = 0;
+    stInputPortAttr.stDispWin.u16Y = 0;
+    stInputPortAttr.stDispWin.u16Width = 1920;
+    stInputPortAttr.stDispWin.u16Height = 1080;
+    MI_DISP_SetInputPortAttr(0, 0, &amp;stInputPortAttr);
+
+    MI_DISP_Enable(0);
+    MI_DISP_EnableVideoLayer(0);
+    MI_DISP_EnableInputPort(0, 0);
+}
+void destruct_disp_module(void)
+{
+    MI_DISP_DisableInputPort(0, 0);
+    MI_DISP_DisableVideoLayer(0);
+    MI_DISP_UnBindVideoLayer(0, 0);
+    MI_DISP_Disable(0);
+}
+typedef struct vdecStream
+{
+    FILE *fp;
+    MI_VDEC_CHN VdecChn;
+    int frameRate;
+} vdecStream;
+
+MI_U64 get_pts(MI_U32 u32FrameRate)
+{
+    if(0 == u32FrameRate)
+    {
+        return (MI_U64)(-1);
+    }
+
+    return (MI_U64)(1000 / u32FrameRate);
+}
+
+int push_stream(void *args)
+{
+
+#define MI_U32VALUE(pu8Data, index) (pu8Data[index]&lt;&lt;24)|(pu8Data[index+1]&lt;&lt;16)|(pu8Data[index+2]&lt;&lt;8)|(pu8Data[index+3])
+#define VESFILE_READER_BATCH (128 * 1024)
+
+    MI_S32 s32Ret = MI_SUCCESS;
+    MI_VDEC_CHN VdecChn;
+    MI_U32 u32FrmRate = 0;
+    MI_U8 *pu8Buf = NULL;
+    MI_U32 u32Len = 0;
+    MI_U32 u32FrameLen = 0;
+    MI_U64 u64Pts = 0;
+    MI_U8 au8Header[16] = {0};
+    MI_U32 u32Pos = 0;
+    MI_VDEC_ChnStat_t stChnStat;
+    vdecStream *vdecS = (vdecStream *)args;
+    MI_VDEC_VideoStream_t stVdecStream;
+    MI_S32 s32TimeOutMs = 20;
+
+    MI_U32 u32FpBackLen = 0; // if send stream failed, file pointer back length
+
+    VdecChn    = vdecS-&gt;VdecChn;
+    u32FrmRate = vdecS-&gt;frameRate;
+
+    pu8Buf = malloc(VESFILE_READER_BATCH);
+
+    while(keepRunning)
+    {
+        ///frame mode, read one frame lenght every time
+
+        memset(au8Header, 0, 16);
+        u32Pos = fseek(vdecS-&gt;fp, 0L, SEEK_CUR);
+        u32Len = fread(au8Header, 16, 1, vdecS-&gt;fp);
+
+        if(u32Len &lt;= 0)
+        {
+            fseek(vdecS-&gt;fp, 0, SEEK_SET);
+            continue;
+        }
+
+        u32FrameLen = MI_U32VALUE(au8Header, 4);
+        if(u32FrameLen &gt; VESFILE_READER_BATCH)
+        {
+            fseek(vdecS-&gt;fp, 0, SEEK_SET);
+            continue;
+        }
+
+        u32Len = fread(pu8Buf, u32FrameLen, 1, vdecS-&gt;fp);
+
+        if(u32Len &lt;= 0)
+        {
+            fseek(vdecS-&gt;fp, 0, SEEK_SET);
+            continue;
+        }
+
+        stVdecStream.pu8Addr = pu8Buf;
+        stVdecStream.u32Len = u32FrameLen;
+        stVdecStream.u64PTS = u64Pts;
+        stVdecStream.bEndOfFrame = 1;
+        stVdecStream.bEndOfStream = 0;
+
+        u32FpBackLen = stVdecStream.u32Len + 16; //back length
+
+        if(MI_SUCCESS != (s32Ret = MI_VDEC_SendStream(VdecChn, &amp;stVdecStream, s32TimeOutMs)))
+        {
+            fseek(vdecS-&gt;fp, - u32FpBackLen, SEEK_CUR);
+        }
+
+        u64Pts = u64Pts + get_pts(1000 / u32FrmRate);
+
+        memset(&amp;stChnStat, 0x0, sizeof(stChnStat));
+        MI_VDEC_GetChnStat(VdecChn, &amp;stChnStat);
+        usleep(20 * 1000);
+
+    }
+
+    free(pu8Buf);
+    return NULL;
+}
+
+thrd_t thr0, thr1, thr2;
+vdecStream vS0, vS1, vS2;
+
+void construct_vdec_module(void)
+{
+    MI_VDEC_ChnAttr_t stChnAttr;
+    MI_VDEC_CHN Chn_0_Id = 0;
+    MI_VDEC_CHN Chn_1_Id = 1;
+    MI_VDEC_CHN Chn_2_Id = 2;
+
+    memset(&amp;stChnAttr, 0, sizeof(MI_VDEC_ChnAttr_t));
+
+    MI_VDEC_InitParam_t stVdecInitParam;
+    MI_VDEC_ChnParam_t stChnParam;
+    MI_VDEC_OutputPortAttr_t stOutputPortAttr;
+    stVdecInitParam.bDisableLowLatency = FALSE;
+    MI_VDEC_InitDev(&amp;stVdecInitParam);
+
+    stChnAttr.eCodecType    = E_MI_VDEC_CODEC_TYPE_H264;
+    stChnAttr.u32PicWidth   = 1920;
+    stChnAttr.u32PicHeight  = 1080;
+    stChnAttr.eVideoMode    = E_MI_VDEC_VIDEO_MODE_FRAME;
+    stChnAttr.u32BufSize    = 1024 * 1024;
+    stChnAttr.eDpbBufMode  = E_MI_VDEC_DPB_MODE_NORMAL;
+    stChnAttr.stVdecVideoAttr.u32RefFrameNum = 2;
+    stChnAttr.u32Priority = 0;
+
+    MI_VDEC_CreateChn(Chn_0_Id, &amp;stChnAttr);
+    stOutputPortAttr.u16Width = 960;
+    stOutputPortAttr.u16Height = 960;
+    MI_VDEC_SetOutputPortAttr(Chn_0_Id, &amp;stOutputPortAttr);
+
+    MI_VDEC_CreateChn(Chn_1_Id, &amp;stChnAttr);
+    stOutputPortAttr.u16Width = 300;
+    stOutputPortAttr.u16Height = 300;
+    MI_VDEC_SetOutputPortAttr(Chn_1_Id, &amp;stOutputPortAttr);
+
+    MI_VDEC_CreateChn(Chn_2_Id, &amp;stChnAttr);
+    stOutputPortAttr.u16Width = 700;
+    stOutputPortAttr.u16Height = 700;
+    MI_VDEC_SetOutputPortAttr(Chn_2_Id, &amp;stOutputPortAttr);
+
+    MI_VDEC_StartChn(Chn_0_Id);
+    MI_VDEC_StartChn(Chn_1_Id);
+    MI_VDEC_StartChn(Chn_2_Id);
+
+#define VDEC_FILE0 &quot;./vdisp_demo0.h264&quot;
+#define VDEC_FILE1 &quot;./vdisp_demo1.h264&quot;
+#define VDEC_FILE2 &quot;./vdisp_demo2.h264&quot;
+
+    vS0.fp = fopen(VDEC_FILE0, &quot;rb&quot;);
+    vS0.frameRate = 30;
+    vS0.VdecChn = Chn_0_Id;
+    assert(vS0.fp);
+    thrd_create(&amp;thr0, push_stream, &amp;vS0);
+    vS1.fp = fopen(VDEC_FILE1, &quot;rb&quot;);
+    vS1.frameRate = 30;
+    vS1.VdecChn = Chn_1_Id;
+    assert(vS1.fp);
+    thrd_create(&amp;thr1, push_stream, &amp;vS1);
+    vS2.fp = fopen(VDEC_FILE2, &quot;rb&quot;);
+    vS2.frameRate = 30;
+    vS2.VdecChn = Chn_2_Id;
+    assert(vS2.fp);
+    thrd_create(&amp;thr2, push_stream, &amp;vS2);
+}
+void destruct_vdec_module(void)
+{
+    thrd_join(thr0,NULL);
+    thrd_join(thr1,NULL);
+    thrd_join(thr2,NULL);
+    MI_VDEC_StopChn(vS0.VdecChn);
+    MI_VDEC_StopChn(vS1.VdecChn);
+    MI_VDEC_StopChn(vS2.VdecChn);
+    MI_VDEC_DestroyChn(vS0.VdecChn);
+    MI_VDEC_DestroyChn(vS1.VdecChn);
+    MI_VDEC_DestroyChn(vS2.VdecChn);
+    MI_VDEC_DeInitDev();
+}
+
+/*
+* Initialize module vdisp
+*      v        
+* Open vdisp device 
+*      v        
+* Setting parameters of vdisp input channel/output port
+*      v        
+* Activate input channels
+*      v        
+* Start vdisp device
+*/
+void construct_vdisp_module(void)
+{
+#define MAKE_YUYV_VALUE(y,u,v)    ((y) &lt;&lt; 24) | ((u) &lt;&lt; 16) | ((y) &lt;&lt; 8) | (v)
+#define YUYV_BLACK                MAKE_YUYV_VALUE(0,128,128)
+#define ALIGN16_DOWN(x) (x&amp;0xFFF0)
+
+    typedef struct RECT
+    {
+        /*
+        (x,y)_ _ _ _ _ 
+        |             |
+        |            (h)
+        |_ _ _(w)_ _ _|
+        */
+        short x;
+        short y;
+        short w;
+        short h;
+    } RECT;
+
+    /*
+    * Initialize module vdisp
+    */
+    MI_VDISP_Init();
+
+    MI_VDISP_InputChnAttr_t stInputChnAttr;
+    MI_VDISP_OutputPortAttr_t stOutputPortAttr;
+    MI_VDISP_DEV DevId = 0;
+    RECT rect_0, rect_1, rect_2;
+    MI_VDISP_CHN Chn_0_Id = VDISP_OVERLAYINPUTCHNID;
+    MI_VDISP_CHN Chn_1_Id = 1;
+    MI_VDISP_CHN Chn_2_Id = 2;
+
+    /*
+    * open a virtual device of vdisp
+    */
+    MI_VDISP_OpenDevice(DevId);
+
+    /*
+    * align starting horizontal corrdinate by 16
+    * setting parameters of input channel
+    */
+    rect_0.x = ALIGN16_DOWN(960);
+    rect_0.y = 0;
+    rect_0.w = 960;
+    rect_0.h = 960;
+    stInputChnAttr.s32IsFreeRun = TRUE;
+    stInputChnAttr.u32OutHeight = rect_0.h;
+    stInputChnAttr.u32OutWidth = rect_0.w;
+    stInputChnAttr.u32OutX = rect_0.x;
+    stInputChnAttr.u32OutY = rect_0.y;
+    /*
+    *setting parameters of input channel&lt;VDISP_OVERLAYINPUTCHNID&gt;
+    */
+    MI_VDISP_SetInputChannelAttr(DevId, Chn_0_Id, &amp;stInputChnAttr);
+
+    /*
+    * align starting horizontal corrdinate by 16
+    * setting parameters of input channel
+    */
+    rect_1.x = ALIGN16_DOWN(0);
+    rect_1.y = 1080 - 300;
+    rect_1.w = ALIGN16_DOWN(300);
+    rect_1.h = 300;
+    stInputChnAttr.s32IsFreeRun = TRUE;
+    stInputChnAttr.u32OutHeight = rect_1.h;
+    stInputChnAttr.u32OutWidth = rect_1.w;
+    stInputChnAttr.u32OutX = rect_1.x;
+    stInputChnAttr.u32OutY = rect_1.y;
+    /*
+    *setting parameters of input channel&lt;1&gt;
+    */
+    MI_VDISP_SetInputChannelAttr(DevId, Chn_1_Id, &amp;stInputChnAttr);
+
+    /*
+    * align starting horizontal corrdinate by 16
+    * setting parameters of input channel
+    */
+    rect_2.x = ALIGN16_DOWN(300);
+    rect_2.y = 1080 - 700;
+    rect_2.w = 700;
+    rect_2.h = 700;
+    stInputChnAttr.s32IsFreeRun = TRUE;
+    stInputChnAttr.u32OutHeight = rect_2.h;
+    stInputChnAttr.u32OutWidth = rect_2.w;
+    stInputChnAttr.u32OutX = rect_2.x;
+    stInputChnAttr.u32OutY = rect_2.y;
+    /*
+    *setting parameters of input channel&lt;2&gt;
+    */
+    MI_VDISP_SetInputChannelAttr(DevId, Chn_2_Id, &amp;stInputChnAttr);
+
+    //setting output color format
+    stOutputPortAttr.ePixelFormat = E_MI_SYS_PIXEL_FRAME_YUV_SEMIPLANAR_420;
+    //setting backgroud color of vdisp&#39;s output frame
+    stOutputPortAttr.u32BgColor = YUYV_BLACK;
+    //setting output framerate
+    stOutputPortAttr.u32FrmRate = 30;
+    //setting height of output frame
+    stOutputPortAttr.u32Height = 1080;
+    //setting width of output frame
+    stOutputPortAttr.u32Width = 1920;
+    //settin initial pts of output frame
+    stOutputPortAttr.u64pts = 0;
+
+    /*
+    * setting parameters of output port&lt;0&gt;
+    */
+    MI_VDISP_SetOutputPortAttr(DevId,0,&amp;stOutputPortAttr);
+
+    /*
+    * activating input channels &lt;VDISP_OVERLAYINPUTCHNID,1,2&gt;
+    */
+    MI_VDISP_EnableInputChannel(DevId, Chn_0_Id);
+    MI_VDISP_EnableInputChannel(DevId, Chn_1_Id);
+    MI_VDISP_EnableInputChannel(DevId, Chn_2_Id);
+
+    /*
+    * start vdisp device
+    */
+    MI_VDISP_StartDev(DevId);
+}
+
+/*
+* disable all channels enabled
+*      v        
+* stop vdisp device
+*      v        
+* close vdisp device
+*      v        
+* exit vdisp
+*/
+void destruct_vdisp_module(void)
+{
+    MI_VDISP_DEV DevId = 0;
+    MI_VDISP_CHN Chn_0_Id = VDISP_OVERLAYINPUTCHNID;
+    MI_VDISP_CHN Chn_1_Id = 1;
+    MI_VDISP_CHN Chn_2_Id = 2;
+/*
+    * diable vdisp channels &lt;VDISP_OVERLAYINPUTCHNID,1,2&gt;
+    */
+    MI_VDISP_DisableInputChannel(DevId, Chn_0_Id);
+    MI_VDISP_DisableInputChannel(DevId, Chn_1_Id);
+    MI_VDISP_DisableInputChannel(DevId, Chn_2_Id);
+
+/*
+    *stop vdisp device
+    */
+    MI_VDISP_StopDev(DevId);
+/*
+    *close vdisp device
+    */
+    MI_VDISP_CloseDevice(DevId);
+/*
+    *exit vdisp
+    */
+    MI_VDISP_Exit();
+}
+
+/*
+* binding vdec out0 -&gt; vdisp inOverlay---\
+* binding vdec out1 -&gt; vdisp in1 ---------&gt;vdisp out0--&gt; disp in0
+* binding vdec out2 -&gt; vdisp in2---------/
+*/
+void bind_disp_vdisp_vdec(void)
+{
+    MI_SYS_ChnPort_t stSrcChnPort;
+    MI_SYS_ChnPort_t stDstChnPort;
+
+    /*
+    * binding vdisp out0-&gt; disp in0
+    * &lt;chn,dev,port&gt; : (0,0,0) -&gt; (0,0,0)
+    */
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stSrcChnPort.u32ChnId = 0;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_DISP;
+    stDstChnPort.u32ChnId = 0;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_BindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort, 30, 30);
+
+    /*
+    * binding vdec out0-&gt; vdisp inOverlay
+    * &lt;chn,dev,port&gt; : (0,0,0) -&gt; (VDISP_OVERLAYINPUTCHNID,0,0)
+    */
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 0;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = VDISP_OVERLAYINPUTCHNID;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_BindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort, 30, 30);
+
+    /*
+    * binding vdec out0-&gt; vdisp in1
+    * &lt;chn,dev,port&gt; : (1,0,0) -&gt; (1,0,0)
+    */
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 1;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = 1;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_BindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort, 30, 30);
+
+    /*
+    * binding vdec out2-&gt; vdisp in2
+    * &lt;chn,dev,port&gt; : (2,0,0) -&gt; (2,0,0)
+    */
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 2;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = 2;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_BindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort, 30, 30);
+
+}
+
+void unbind_disp_vdisp_vdec(void)
+{
+    MI_SYS_ChnPort_t stSrcChnPort;
+    MI_SYS_ChnPort_t stDstChnPort;
+
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stSrcChnPort.u32ChnId = 0;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_DISP;
+    stDstChnPort.u32ChnId = 0;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_UnBindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort);
+
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 0;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = VDISP_OVERLAYINPUTCHNID;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_UnBindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort);
+
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 1;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = 1;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_UnBindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort);
+
+    stSrcChnPort.eModId = E_MI_MODULE_ID_VDEC;
+    stSrcChnPort.u32ChnId = 2;
+    stSrcChnPort.u32DevId = 0;
+    stSrcChnPort.u32PortId = 0;
+
+    stDstChnPort.eModId = E_MI_MODULE_ID_VDISP;
+    stDstChnPort.u32ChnId = 2;
+    stDstChnPort.u32DevId = 0;
+    stDstChnPort.u32PortId = 0;
+    MI_SYS_UnBindChnPort(&amp;stSrcChnPort, &amp;stDstChnPort);
+
+}
+
+int main(void)
+{
+    signal(SIGINT, intHandler);
+
+    MI_SYS_Init();
+    construct_disp_module();
+    construct_vdisp_module();
+    construct_vdec_module();
+    bind_disp_vdisp_vdec();
+    while(keepRunning)
+    {
+        sleep(1);
+    }
+    unbind_disp_vdisp_vdec();
+    destruct_disp_module();
+    destruct_vdisp_module();
+    destruct_vdec_module();
+    MI_SYS_Exit();
+    return 0;
+}
+</pre></div>
+
+
+<hr />
+<h2 id="7-procfs-introduction">7. PROCFS INTRODUCTION<a class="headerlink" href="#7-procfs-introduction" title="Permanent link">&para;</a></h2>
+<h3 id="71-cat">7.1. cat<a class="headerlink" href="#71-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Debug info</p>
+<div class="codehilite"><pre><span></span>​# cat proc/mi_modules/mi_vdisp/mi_vdisp0
+
+============================Private Vdisp0 Info ===============================
+DevStatus
+    Start
+------------------------------------------------------- Input Port Info ---------------------------------------------
+PortID  PortStatus  ChnX  ChnY  ChnW  ChnH  IsFreeRun    TryOk      RecvOk
+    0   Enabled      0     0      960     540    1      245356299     313332
+    1   Enabled      960   0      960     540    1      355670297     313332
+    2   Enabled      0     540    960     540    1      578760014     313331
+    3   Enabled      960   540    960     540    1      757579130     313330
+------------------------------------------------------ Output Port Info -------------------------------------------------
+Inited  FrmInterval  BgColor  PixelFmt  FrmRate  Width  Height    SendOk
+    1      33333     8388736     0        30     1920    1080     471418        ​
+</pre></div>
+
+
+</li>
+<li>
+<p>Debug info analysis</p>
+<p>Record VDISP current usage status, device attribute, Input port attribute and Output port attribute, which can be dynamically got to debug and test.</p>
+</li>
+<li>
+<p>Parameter Description</p>
+<p><table border=1 cellspacing=0 cellpadding=0 width=0>
+<thead>
+  <tr>
+    <td width=274 colspan=2 bgcolor="#D9D9D9">Parameter</td>
+    <td width=409 bgcolor="#D9D9D9">Description</td>
+  </tr>
+</thead>
+<tr>
+  <td width=150>device info</td>
+  <td width=124>DevStatus</td>
+  <td width=409>Working status of Vdisp: Uninit/ Init/ Start/ Stop</td>
+</tr>
+<tr>
+  <td width=150 rowspan=9>layer info</td>
+  <td width=124>PortID&nbsp; </td>
+  <td width=409 valign=top>Inport ID <br>Value range: [0~16], 16 is the overlay
+  channel (PIP channel).</td>
+</tr>
+<tr>
+  <td width=124>PortStatus&nbsp; </td>
+  <td width=409 valign=top>Port status: Uninit/ Init/ Enabled/
+  Disabled</td>
+</tr>
+<tr>
+  <td width=124>ChnX&nbsp; </td>
+  <td width=409 valign=top>Input the X starting coordinate address
+      of the inport <br>Value range: [0~4094], need to be aligned
+  according to the chip</td>
+</tr>
+<tr>
+  <td width=124>ChnY&nbsp; </td>
+  <td width=409 valign=top>Input the Y starting coordinate address
+  of the inport <br>Value range: [0~2159]</td>
+</tr>
+<tr>
+  <td width=124>ChnW&nbsp; </td>
+  <td width=409 valign=top>Input the image width of the inport, which needs to be aligned according to the chip <br>Value range:[0~4096] </td>
+</tr>
+<tr>
+  <td width=124>ChnH&nbsp; </td>
+  <td width=409 valign=top>Input the image height of the inport <br>Value range:[0~4096]</td>
+</tr>
+<tr>
+  <td width=124>IsFreeRun&nbsp;&nbsp;&nbsp; </td>
+  <td width=409 valign=top>Frame rate control or not <br>0: pts control play <br>1: free play</td>
+</tr>
+<tr>
+  <td width=124>TryOk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+  <td width=409 valign=top>Try to get the times that the front-level
+  bound port</td>
+</tr>
+<tr>
+  <td width=124>RecvOk</td>
+  <td width=409 valign=top>The times that get data from the
+  front-level bound port successfully</td>
+</tr>
+<tr>
+  <td width=150 rowspan=8>Output port info</td>
+  <td width=124>Inited</td>
+  <td width=409>Output Port has been initialized or not <br>0: Uninit <br>1: Init</td>
+</tr>
+<tr>
+  <td width=124>FrmInterval</td>
+  <td width=409>Output frame time interval, unit: US</td>
+</tr>
+<tr>
+  <td width=124>BgColor</td>
+  <td width=409>Background color, printed here is
+  decimal</td>
+</tr>
+<tr>
+  <td width=124>PixelFmt</td>
+  <td width=409>Color space <br>Value range: [0~E_MI_SYS_PIXEL_FRAME_FORMAT_MAX-1]  <br>0-YUYV422, 9-YUVSP420</td>
+</tr>
+<tr>
+  <td width=124>FrmRate</td>
+  <td width=409>Output frame rate</td>
+</tr>
+<tr>
+  <td width=124>Width</td>
+  <td width=409>Image output width <br>Value range: [0~4096], need to be aligned according to the chip</td>
+</tr>
+<tr>
+  <td width=124>Height</td>
+  <td width=409>Image output height <br>Value range:[0~2160], need to be aligned according to the chip</td>
+</tr>
+<tr>
+  <td width=124>SendOk</td>
+  <td width=409>Frame statistics that successful pushed to the rear-level</td>
+</tr>
+</table></p>
+</li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="vif_en.html" title="VIF" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VIF
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ABBR
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/search_index.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

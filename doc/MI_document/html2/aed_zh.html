@@ -1,0 +1,3286 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>AED - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                AED
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Development/sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        AED
+      </label>
+    
+    <a href="aed_zh.html" title="AED" class="md-nav__link md-nav__link--active">
+      AED
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 算法说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 关键词说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    2. API 参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-api" class="md-nav__link">
+    2.1. 功能模块API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-iaaaed_getbuffersize" class="md-nav__link">
+    2.2. IaaAed_GetBufferSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-iaaaed_init" class="md-nav__link">
+    2.3. IaaAed_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-iaaaed_config" class="md-nav__link">
+    2.4. IaaAed_Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-iaaaed_run" class="md-nav__link">
+    2.5. IaaAed_Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-iaaaed_getresult" class="md-nav__link">
+    2.6. IaaAed_GetResult
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-iaaaed_setsensitivity" class="md-nav__link">
+    2.7. IaaAed_SetSensitivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-iaaaed_setsamplerate" class="md-nav__link">
+    2.8. IaaAed_SetSampleRate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-iaaaed_setoperatingpoint" class="md-nav__link">
+    2.9. IaaAed_SetOperatingPoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-iaaaed_setvadthreshold" class="md-nav__link">
+    2.10. IaaAed_SetVadThreshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-iaaaed_setlsdthreshold" class="md-nav__link">
+    2.11. IaaAed_SetLsdThreshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-iaaaed_runlsd" class="md-nav__link">
+    2.12. IaaAed_RunLsd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-iaaaed_getlsdresult" class="md-nav__link">
+    2.13. IaaAed_GetLsdResult
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-iaaaed_release" class="md-nav__link">
+    2.14. IaaAed_Release
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-aed" class="md-nav__link">
+    3. AED 数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-aed" class="md-nav__link">
+    3.1. AED模块相关数据类型定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-aedprocessstruct" class="md-nav__link">
+    3.2. AedProcessStruct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-aedhandle" class="md-nav__link">
+    3.3. AedHandle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-aedsensitivity" class="md-nav__link">
+    3.4. AedSensitivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-aedsamplerate" class="md-nav__link">
+    3.5. AedSampleRate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 错误码
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 算法说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 关键词说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    2. API 参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-api" class="md-nav__link">
+    2.1. 功能模块API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-iaaaed_getbuffersize" class="md-nav__link">
+    2.2. IaaAed_GetBufferSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-iaaaed_init" class="md-nav__link">
+    2.3. IaaAed_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-iaaaed_config" class="md-nav__link">
+    2.4. IaaAed_Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-iaaaed_run" class="md-nav__link">
+    2.5. IaaAed_Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-iaaaed_getresult" class="md-nav__link">
+    2.6. IaaAed_GetResult
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-iaaaed_setsensitivity" class="md-nav__link">
+    2.7. IaaAed_SetSensitivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-iaaaed_setsamplerate" class="md-nav__link">
+    2.8. IaaAed_SetSampleRate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-iaaaed_setoperatingpoint" class="md-nav__link">
+    2.9. IaaAed_SetOperatingPoint
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-iaaaed_setvadthreshold" class="md-nav__link">
+    2.10. IaaAed_SetVadThreshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-iaaaed_setlsdthreshold" class="md-nav__link">
+    2.11. IaaAed_SetLsdThreshold
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-iaaaed_runlsd" class="md-nav__link">
+    2.12. IaaAed_RunLsd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-iaaaed_getlsdresult" class="md-nav__link">
+    2.13. IaaAed_GetLsdResult
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-iaaaed_release" class="md-nav__link">
+    2.14. IaaAed_Release
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-aed" class="md-nav__link">
+    3. AED 数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-aed" class="md-nav__link">
+    3.1. AED模块相关数据类型定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-aedprocessstruct" class="md-nav__link">
+    3.2. AedProcessStruct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-aedhandle" class="md-nav__link">
+    3.3. AedHandle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-aedsensitivity" class="md-nav__link">
+    3.4. AedSensitivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-aedsamplerate" class="md-nav__link">
+    3.5. AedSampleRate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 错误码
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI AED API</h1>
+<!-- REVISION HISTORY
+
+| Revision No. | Description       | Date       |
+| ------------ | ----------------- | ---------- |
+| 1.0          | - Initial release | 09/12/2020 |
+| 1.1          | - Modified API    | 10/15/2020 |
+
+-->
+
+<hr />
+<h2 id="1">1. 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="11">1.1. 算法说明<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>AED（Acoustic Event Detection）声学事件检测，用于在音讯码流中侦测特定的声音事件。目前支持对婴儿哭声和高分贝声音的检测（LSD）。</p>
+<hr />
+<h3 id="12">1.2. 关键词说明<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Sensitivity</p>
+<p>婴儿哭声检测灵敏度。灵敏度越低，需要更长时间的连续婴儿哭声才会发报，反之，灵敏度越高，越容易被检测到。参数范围依照<a href="#34-aedsensitivity">AedSensitivity</a>列举。</p>
+</li>
+<li>
+<p>Operating Point</p>
+<p>婴儿哭声检测操作点。提高操作点将会降低误报警率，减小操作点将会降低漏报率。此参数需在[-10,10]范围内。</p>
+</li>
+<li>
+<p>Vad Threshold</p>
+<p>语音活性检测 (Voice activity detection)dBFS门坎值，须高于此设定值，才会进入婴儿哭声检测。</p>
+</li>
+<li>
+<p>LSD Threshold</p>
+<p>高分贝声音检测(Loud Sound Detection)dBFS门坎值，高于此设定值，将被侦测为高分贝声音。</p>
+</li>
+</ul>
+<hr />
+<h3 id="13">1.3. 注意<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>为方便调试和确认算法效果，需要用户应用自行实现替换算法参数和抓取音频数据的逻辑。</p>
+<hr />
+<h2 id="2-api">2. API 参考<a class="headerlink" href="#2-api" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="21-api">2.1. 功能模块API<a class="headerlink" href="#21-api" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>API名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#22-iaaaed_getbuffersize">IaaAed_GetBufferSize</a></td>
+<td>获取所需内存大小</td>
+</tr>
+<tr>
+<td><a href="#23-iaaaed_init">IaaAed_Init</a></td>
+<td>初始化Aed算法</td>
+</tr>
+<tr>
+<td><a href="#24-iaaaed_config">IaaAed_Config</a></td>
+<td>配置Aed算法</td>
+</tr>
+<tr>
+<td><a href="#25-iaaaed_run">IaaAed_Run</a></td>
+<td>执行婴儿哭声检测</td>
+</tr>
+<tr>
+<td><a href="#26-iaaaed_getresult">IaaAed_GetResult</a></td>
+<td>获取婴儿哭声检测结果</td>
+</tr>
+<tr>
+<td><a href="#27-iaaaed_setsensitivity">IaaAed_SetSensitivity</a></td>
+<td>设置婴儿哭声检测灵敏度</td>
+</tr>
+<tr>
+<td><a href="#28-iaaaed_setsamplerate">IaaAed_SetSampleRate</a></td>
+<td>设置婴儿哭声检测资料取样率</td>
+</tr>
+<tr>
+<td><a href="#29-iaaaed_setoperatingpoint">IaaAed_SetOperatingPoint</a></td>
+<td>设置婴儿哭声检测操作点</td>
+</tr>
+<tr>
+<td><a href="#210-iaaaed_setvadthreshold">IaaAed_SetVadThreshold</a></td>
+<td>设置婴儿哭声检测VAD的dBFS阈值</td>
+</tr>
+<tr>
+<td><a href="#211-iaaaed_setlsdthreshold">IaaAed_SetLsdThreshold</a></td>
+<td>设置高分贝声音检测的dBFS阈值</td>
+</tr>
+<tr>
+<td><a href="#212-iaaaed_runlsd">IaaAed_RunLsd</a></td>
+<td>高分贝检测算法处理</td>
+</tr>
+<tr>
+<td><a href="#213-iaaaed_getlsdresult">IaaAed_GetLsdResult</a></td>
+<td>获取高分贝声音检测的结果</td>
+</tr>
+<tr>
+<td><a href="#214-iaaaed_release">IaaAed_Release</a></td>
+<td>退出Aed并释放内存</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="22-iaaaed_getbuffersize">2.2. IaaAed_GetBufferSize<a class="headerlink" href="#22-iaaaed_getbuffersize" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取Aed算法运行所需要的内存大小。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>unsigned int IaaAed_GetBufferSize(void);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<p>返回值为Aed算法运行所需要的内存大小</p>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>该接口仅返回需要的内存大小，申请和释放内存的动作需应用来处理。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="23-iaaaed_init">2.3. IaaAed_Init<a class="headerlink" href="#23-iaaaed_init" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>初始化Aed算法。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>AedHandle IaaAed_Init(char *working_buf_ptr, AedProcessStruct*aed_struct);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>working_buf_ptr</td>
+<td>Aed算法的初始化参数指标</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>aed_struct</td>
+<td>Aed 初始化算法结构体</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>非NULL</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>无论是使用婴儿哭声检测还是高分贝检测功能，都需要调用MI_AED_Init来初始化Aed算法，获取Aed算法handle。</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="24-iaaaed_config">2.4. IaaAed_Config<a class="headerlink" href="#24-iaaaed_config" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>配置Aed算法。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_Config(AedHandle handle);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="25-iaaaed_run">2.5. IaaAed_Run<a class="headerlink" href="#25-iaaaed_run" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>Aed算法婴儿哭声检测处理</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_Run(AedHandle handle,short *audio_io);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>audio_io</td>
+<td>用于婴儿哭声检测的数据指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>audio_input的数据长度必须和<a href="#32-aedprocessstruct">AedProcessStruct</a>所设定的point_number（Aed算法一次处理的采样点数）相对应。</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<div class="codehilite"><pre><span></span>#include &lt;stdio.h&gt;  
+#include &lt;string.h&gt;  
+#include &lt;stdlib.h&gt;
+
+#include &quot;AudioAedProcess.h&quot;
+
+/*  0:Fixed input file  1:User input file   */  
+#define IN_PARAMETER 1
+
+int main(int argc, char *argv[])  
+{  
+    AedHandle AED_HANDLE;  
+    AedProcessStruct aed_params;  
+    unsigned int aedBuffSize;  
+    char *working_buf_ptr = NULL;  
+    /************************User change section start**************************/  
+    int vad_threshold_db = -40;  
+    int lsd_threshold_db = -15;  
+    int operating_point = -10;  
+    AedSensitivity sensitivity = AED_SEN_HIGH;  
+    AedSampleRate sample_rate = AED_SRATE_8K;  
+    aed_params.channel = 1;  
+    /************************User change section end***************************/  
+    short input[1024];  
+    char src_file[128] = {0};  
+    FILE * fpIn;  
+    ALGO_AED_RET ret = ALGO_AED_RET_SUCCESS;  
+    int bcd_result;  
+    int lsd_result;  
+    int frm_cnt = 0;  
+    int lsd_db = 0; //useless param.
+
+#if IN_PARAMETER  
+    if(argc &lt; 2)  
+    {  
+        printf(&quot;Please enter the correct parameters!\n&quot;);  
+        return -1;  
+    }  
+    sscanf(argv[1], &quot;%s&quot;, src_file);  
+#else  
+    sprintf(src_file, &quot;%s&quot;, &quot;./AFE_8K.wav&quot;);  
+#endif
+
+    switch (sample_rate)  
+    {  
+        case AED_SRATE_8K:  
+            aed_params.point_number = 256;  
+            break;  
+        case AED_SRATE_16K:  
+            aed_params.point_number = 512;  
+            break;  
+        case AED_SRATE_32K:  
+            aed_params.point_number = 1024;  
+            break;  
+        case AED_SRATE_48K:  
+            aed_params.point_number = 1535;  
+            break;  
+        default:  
+            printf(&quot;Unsupported current sample rate !\n&quot;);  
+            return -1;  
+    }  
+    aedBuffSize = IaaAed_GetBufferSize();  
+    working_buf_ptr = (char *)malloc(aedBuffSize);  
+    if(NULL == working_buf_ptr)  
+    {  
+        printf(&quot;malloc workingBuffer failed !\n&quot;);  
+        return -1;  
+    }  
+    printf(&quot;malloc workingBuffer succeed !\n&quot;);  
+    AED_HANDLE = IaaAed_Init(working_buf_ptr, &amp;aed_params);  
+    if(NULL == AED_HANDLE)  
+    {  
+        printf(&quot;IaaAed_Init faild !\n&quot;);  
+        return -1;  
+    }  
+    printf(&quot;IaaAed_Init succeed !\n&quot;);  
+    ret = IaaAed_Config(AED_HANDLE);  
+    if(ALGO_AED_RET_SUCCESS != ret)  
+    {  
+        printf(&quot;IaaAed_Config failed !, ret = %d\n&quot;, ret);  
+        return -1;  
+    }  
+    ret = IaaAed_SetSensitivity(AED_HANDLE, sensitivity);  
+    if(ALGO_AED_RET_SUCCESS != ret)  
+    {  
+        printf(&quot;IaaAed_SetSensitivity failed !, ret = %d\n&quot;, ret);  
+        return -1;  
+    }  
+    ret = IaaAed_SetSampleRate(AED_HANDLE, sample_rate);  
+    if(ALGO_AED_RET_SUCCESS != ret)  
+    {  
+        printf(&quot;IaaAed_SetSampleRate failed !, ret = %d\n&quot;, ret);  
+        return -1;  
+    }  
+    ret = IaaAed_SetOperatingPoint(AED_HANDLE, operating_point);  
+    if(ALGO_AED_RET_SUCCESS != ret)  
+    {  
+        printf(&quot;IaaAed_SetOperatingPoint failed !, ret = %d\n&quot;, ret);  
+        return -1;  
+    }  
+    ret = IaaAed_SetLsdThreshold(AED_HANDLE, lsd_threshold_db);  
+    if(ALGO_AED_RET_SUCCESS != ret)  
+    {  
+        printf(&quot;IaaAed_SetLsdThreshold failed !, ret = %d\n&quot;, ret);  
+        return -1;  
+    }  
+    ret = IaaAed_SetVadThreshold(AED_HANDLE, vad_threshold_db);  
+    if(ALGO_AED_RET_SUCCESS != ret)  
+    {  
+        printf(&quot;IaaAed_SetVadThreshold failed !, ret = %d\n&quot;, ret);  
+        return -1;  
+    }
+
+    fpIn = fopen(src_file, &quot;rb&quot;);  
+    if(NULL == fpIn)  
+    {  
+        printf(&quot;fopen in_file failed !\n&quot;);  
+        return -1;  
+    }  
+    printf(&quot;fopen in_file success !\n&quot;);  
+    memset(input, 0, sizeof(short) * 1024);  
+#if 1  
+    /*Consider whether the input file has a header*/  
+    fread(input, sizeof(char), 44, fpIn); // Remove the 44 bytes header  
+#endif  
+    while(fread(input, sizeof(short), aed_params.point_number * aed_params.channel, fpIn))  
+    {  
+        frm_cnt++;  
+        /* Run LSD process */  
+        ret = IaaAed_RunLsd(AED_HANDLE, input, &amp;lsd_db);  
+        if (ALGO_AED_RET_SUCCESS != ret)  
+        {  
+            printf(&quot;MI_AED_RunLsd failed !, ret = %d\n&quot;, ret);  
+            break;  
+        }  
+        ret = IaaAed_GetLsdResult(AED_HANDLE, &amp;lsd_result);  
+        if(ALGO_AED_RET_SUCCESS != ret)  
+        {  
+            printf(&quot;IaaAed_GetLsdResult failed !, ret = %d\n&quot;, ret);  
+        }  
+        if (lsd_result)  
+        {  
+            printf(&quot;current time = %f, loud sound detected!\n&quot;, \  
+            frm_cnt * ((float)aed_params.point_number / sample_rate));  
+        }  
+        /* Run AED process */  
+        ret = IaaAed_Run(AED_HANDLE, input);  
+        if(ALGO_AED_RET_SUCCESS != ret)  
+        {  
+            printf(&quot;MI_AED_Run failed !,ret = %d\n&quot;, ret);  
+            break;  
+        }  
+        ret = IaaAed_GetResult(AED_HANDLE, &amp;bcd_result);  
+        if(ALGO_AED_RET_SUCCESS != ret)  
+        {  
+            printf(&quot;IaaAed_GetResult failed !, ret = %d\n&quot;, ret);  
+        }  
+        if(bcd_result)  
+        {  
+            printf(&quot;Baby cried at %.3f.\n&quot;, \  
+            frm_cnt * ((float)aed_params.point_number / sample_rate));  
+        }  
+    }  
+    printf(&quot;AED end !\n&quot;);  
+    ret = IaaAed_Release(AED_HANDLE);  
+    if(ALGO_AED_RET_SUCCESS != ret)  
+    {  
+        printf(&quot;IaaAed_Release failed !, ret = %d\n&quot;, ret);  
+    }  
+    fclose(fpIn);  
+    return 0;  
+}
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="26-iaaaed_getresult">2.6. IaaAed_GetResult<a class="headerlink" href="#26-iaaaed_getresult" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取婴儿哭声检测的结果</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_GetResult(AedHandle handle, int *aed_result);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>aed_result</td>
+<td>婴儿哭声检测结果</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="27-iaaaed_setsensitivity">2.7. IaaAed_SetSensitivity<a class="headerlink" href="#27-iaaaed_setsensitivity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设置婴儿哭声检测的灵敏度</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_SetSensitivity(AedHandle handle,AedSensitivity sensitivity);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>sensitivity</td>
+<td>婴儿哭声检测的灵敏度</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="28-iaaaed_setsamplerate">2.8. IaaAed_SetSampleRate<a class="headerlink" href="#28-iaaaed_setsamplerate" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设置婴儿哭声检测的资料采样率</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_SetSampleRate(AedHandle handle,AedSampleRate srate);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>srate</td>
+<td>婴儿哭声检测的资料取样率</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="29-iaaaed_setoperatingpoint">2.9. IaaAed_SetOperatingPoint<a class="headerlink" href="#29-iaaaed_setoperatingpoint" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设置婴儿哭声检测的操作点</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_SetOperatingPoint(AedHandle handle,int operating_point);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>operating_point</td>
+<td>婴儿哭声检测的操作点</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="210-iaaaed_setvadthreshold">2.10. IaaAed_SetVadThreshold<a class="headerlink" href="#210-iaaaed_setvadthreshold" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设置婴儿哭声检测的Vad dBFS阈值，高于此阀值则进入婴儿哭声检测</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_SetVadThreshold(AedHandle handle,int threshold_db);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>threshold_db</td>
+<td>婴儿哭声检测的Vad dBFS阈值</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="211-iaaaed_setlsdthreshold">2.11. IaaAed_SetLsdThreshold<a class="headerlink" href="#211-iaaaed_setlsdthreshold" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设置Aed算法高分贝检测的阈值</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_SetLsdThreshold(AedHandle handle,int threshold_db);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>threshold_db</td>
+<td>高分贝检测的阈值，达到多少dBFS以上才认为是高分贝</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="212-iaaaed_runlsd">2.12. IaaAed_RunLsd<a class="headerlink" href="#212-iaaaed_runlsd" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>Aed算法高分贝检测处理</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_RunLsd(AedHandle handle,short *audio_input, int *lsd_db);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>audio_input</td>
+<td>用于高分贝检测的数据指针</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>lsd_db</td>
+<td>当前资料的分贝数</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>audio_input的数据长度必须和<a href="#32-aedprocessstruct">AedProcessStruct</a>所设定的point_number（Aed算法一次处理的采样点数）相对应。</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>请参考IaaAed_Run举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="213-iaaaed_getlsdresult">2.13. IaaAed_GetLsdResult<a class="headerlink" href="#213-iaaaed_getlsdresult" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取Aed算法高分贝检测的结果</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_GetLsdResult(AedHandle handle, int* lsd_result);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>lsd_result</td>
+<td>高分贝声音检测结果</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h3 id="214-iaaaed_release">2.14. IaaAed_Release<a class="headerlink" href="#214-iaaaed_release" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>释放Aed算法资源。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>ALGO_AED_RET IaaAed_Release(AedHandle handle);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>handle</td>
+<td>Aed算法handle</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失败，参照<a href="#jump">错误码</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件: AudioAedProcess.h</p>
+</li>
+<li>
+<p>库文件: libAED_LINUX.so/ libAED_LINUX.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>无。</p>
+</li>
+<li>
+<p>举例</p>
+<p>请参考<a href="#25-iaaaed_run">IaaAed_Run</a> 举例部分。</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-aed">3. AED 数据类型<a class="headerlink" href="#3-aed" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="31-aed">3.1. AED模块相关数据类型定义<a class="headerlink" href="#31-aed" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#32-aedprocessstruct">AedProcessStruct</a></td>
+<td>Aed算法初始化参数结构体类型</td>
+</tr>
+<tr>
+<td><a href="#33-aedhandle">AedHandle</a></td>
+<td>Aed算法句柄类型</td>
+</tr>
+<tr>
+<td><a href="#34-aedsensitivity">AedSensitivity</a></td>
+<td>Aed算法的婴儿哭声检测灵敏度类型</td>
+</tr>
+<tr>
+<td><a href="35-aedsamplerate">AedSampleRate</a></td>
+<td>Aed算法的婴儿哭声检测数据取样率</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-aedprocessstruct">3.2. AedProcessStruct<a class="headerlink" href="#32-aedprocessstruct" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义Aed算法的初始化参数结构体类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct {
+
+    unsigned int point_number;
+
+    unsigned int channel;
+
+} AedProcessStruct;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>point_number</td>
+<td>采样点数，需依照采样率给值 采样率:采样点数 8K:256, 16K:512, 32K:1024, 48K:1536</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>音频数据信道数</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>无</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#23-iaaaed_init">IaaAed_Init</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="33-aedhandle">3.3. AedHandle<a class="headerlink" href="#33-aedhandle" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义Aed算法句柄类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef void* AedHandle;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>无。</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#23-iaaaed_init">IaaAed_Init</a></p>
+<p><a href="#24-iaaaed_config">IaaAed_Config</a></p>
+<p><a href="#25-iaaaed_run">IaaAed_Run</a> </p>
+<p><a href="#26-iaaaed_getresult">IaaAed_GetResult</a></p>
+<p><a href="#27-iaaaed_setsensitivity">IaaAed_SetSensitivity</a></p>
+<p><a href="#28-iaaaed_setsamplerate">IaaAed_SetSampleRate</a></p>
+<p><a href="#29-iaaaed_setoperatingpoint">IaaAed_SetOperatingPoint</a></p>
+<p><a href="#210-iaaaed_setvadthreshold">IaaAed_SetVadThreshold</a></p>
+<p><a href="#211-iaaaed_setlsdthreshold">IaaAed_SetLsdThreshold</a></p>
+<p><a href="#212-iaaaed_runlsd">IaaAed_RunLsd</a></p>
+<p><a href="#213-iaaaed_getlsdresult">IaaAed_GetLsdResult</a></p>
+<p><a href="#214-iaaaed_release">IaaAed_Release</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="34-aedsensitivity">3.4. AedSensitivity<a class="headerlink" href="#34-aedsensitivity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义Aed算法的婴儿哭声检测灵敏度类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum {
+
+    AED_SEN_LOW,
+
+    AED_SEN_MID,
+
+    AED_SEN_HIGH
+
+} AedSensitivity;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AED_SEN_LOW</td>
+<td>低灵敏度</td>
+</tr>
+<tr>
+<td>AED_SEN_MID</td>
+<td>中灵敏度</td>
+</tr>
+<tr>
+<td>AED_SEN_HIGH</td>
+<td>高灵敏度</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>无</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#27-iaaaed_setsensitivity">IaaAed_SetSensitivity</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="35-aedsamplerate">3.5. AedSampleRate<a class="headerlink" href="#35-aedsamplerate" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义Aed算法的婴儿哭声检测采样率类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum {
+
+    AED_SRATE_8K = 8000,
+
+    AED_SRATE_16K = 16000,
+
+    AED_SRATE_32K = 32000,
+
+    AED_SRATE_48K = 48000
+
+} AedSampleRate;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AED_SRATE_8K</td>
+<td>采样率8000Hz</td>
+</tr>
+<tr>
+<td>AED_SRATE_16K</td>
+<td>采样率16000Hz</td>
+</tr>
+<tr>
+<td>AED_SRATE_32K</td>
+<td>采样率32000Hz</td>
+</tr>
+<tr>
+<td>AED_SRATE_48K</td>
+<td>采样率48000Hz</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>无</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#28-iaaaed_setsamplerate">IaaAed_SetSampleRate</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="4">4. <span id="jump">错误码</span><a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>AED API 错误码如表所示：</p>
+<p>表 4‑1 AED API错误码</p>
+<table>
+<thead>
+<tr>
+<th>错误码</th>
+<th>宏定义</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00000000</td>
+<td>ALGO_AED_RET_SUCCESS</td>
+<td>AED执行成功</td>
+</tr>
+<tr>
+<td>0x10000201</td>
+<td>ALGO_AED_RET_INIT_ERROR</td>
+<td>AED初始化错误</td>
+</tr>
+<tr>
+<td>0x10000202</td>
+<td>ALGO_AED_RET_INVALID_CONFIG</td>
+<td>AED Config无效</td>
+</tr>
+<tr>
+<td>0x10000203</td>
+<td>ALGO_AED_RET_INVALID_HANDLE</td>
+<td>AED Handle无效</td>
+</tr>
+<tr>
+<td>0x10000204</td>
+<td>ALGO_AED_RET_INVALID_SAMPLERATE</td>
+<td>AED采样率无效</td>
+</tr>
+<tr>
+<td>0x10000205</td>
+<td>ALGO_AED_RET_INVALID_POINTNUMBER</td>
+<td>AED采样点数无效</td>
+</tr>
+<tr>
+<td>0x10000206</td>
+<td>ALGO_AED_RET_INVALID_CHANNEL</td>
+<td>AED通道数无效</td>
+</tr>
+<tr>
+<td>0x10000207</td>
+<td>ALGO_AED_RET_INVALID_SENSITIVITY</td>
+<td>AED检测灵敏度无效</td>
+</tr>
+<tr>
+<td>0x10000208</td>
+<td>ALGO_AED_RET_INVALID_CALLING</td>
+<td>AED呼叫API顺序错误</td>
+</tr>
+<tr>
+<td>0x10000209</td>
+<td>ALGO_AED_RET_API_CONFLICT</td>
+<td>有其他API正在运行</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="aec_zh.html" title="AEC" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                AEC
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ai_zh.html" title="AI" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                AI
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../search/search_index.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

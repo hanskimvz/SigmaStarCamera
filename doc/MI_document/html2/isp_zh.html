@@ -1,0 +1,8024 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>ISP - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                ISP
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Development/sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ISP
+      </label>
+    
+    <a href="isp_zh.html" title="ISP" class="md-nav__link md-nav__link--active">
+      ISP
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 模块说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 流程框图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 关键字说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4. 规格说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-json" class="md-nav__link">
+    1.5. JSON参数说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    2. API参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_isp_createdevice" class="md-nav__link">
+    2.1. MI_ISP_CreateDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_isp_destroydevice" class="md-nav__link">
+    2.2. MI_ISP_DestroyDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_isp_createchannel" class="md-nav__link">
+    2.3. MI_ISP_CreateChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_isp_destroychannel" class="md-nav__link">
+    2.4. MI_ISP_DestroyChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_isp_setinputportcrop" class="md-nav__link">
+    2.5. MI_ISP_SetInputPortCrop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_isp_getinputportcrop" class="md-nav__link">
+    2.6. MI_ISP_GetInputPortCrop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_isp_setchnparam" class="md-nav__link">
+    2.7. MI_ISP_SetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_isp_getchnparam" class="md-nav__link">
+    2.8. MI_ISP_GetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_isp_startchannel" class="md-nav__link">
+    2.9. MI_ISP_StartChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_isp_stopchannel" class="md-nav__link">
+    2.10. MI_ISP_StopChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_isp_setoutputportparam" class="md-nav__link">
+    2.11. MI_ISP_SetOutputPortParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_isp_getoutputportparam" class="md-nav__link">
+    2.12. MI_ISP_GetOutputPortParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_isp_enableoutputport" class="md-nav__link">
+    2.13. MI_ISP_EnableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_isp_disableoutputport" class="md-nav__link">
+    2.14. MI_ISP_DisableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_isp_alloc_iqdatabuf" class="md-nav__link">
+    2.15. MI_ISP_Alloc_IQDataBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_isp_free_iqdatabuf" class="md-nav__link">
+    2.16. MI_ISP_Free_IQDataBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_isp_callbacktask_register" class="md-nav__link">
+    2.17. MI_ISP_CallBackTask_Register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-mi_isp_callbacktask_unregister" class="md-nav__link">
+    2.18. MI_ISP_CallBackTask_Unregister
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-mi_isp_skipframe" class="md-nav__link">
+    2.19. MI_ISP_SkipFrame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220-mi_isp_loadportzoomtable" class="md-nav__link">
+    2.20. MI_ISP_LoadPortZoomTable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-mi_isp_startportzoom" class="md-nav__link">
+    2.21. MI_ISP_StartPortZoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-mi_isp_stopportzoom" class="md-nav__link">
+    2.22. MI_ISP_StopPortZoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-mi_isp_getportcurzoomattr" class="md-nav__link">
+    2.23. MI_ISP_GetPortCurZoomAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-mi_isp_setcustsegattr" class="md-nav__link">
+    2.24. MI_ISP_SetCustSegAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-mi_isp_getcustsegattr" class="md-nav__link">
+    2.25. MI_ISP_GetCustSegAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#226-mi_isp_getcustsegbuf" class="md-nav__link">
+    2.26. MI_ISP_GetCustSegBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#227-mi_isp_putcustsegbuf" class="md-nav__link">
+    2.27. MI_ISP_PutCustSegBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#228-mi_isp_getsubchnid" class="md-nav__link">
+    2.28. MI_ISP_GetSubChnId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229-mi_isp_setsubchnparam" class="md-nav__link">
+    2.29. MI_ISP_SetSubChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#230-mi_isp_getsubchnparam" class="md-nav__link">
+    2.30. MI_ISP_GetSubChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#231-mi_isp_setchnoverlapattr" class="md-nav__link">
+    2.31. MI_ISP_SetChnOverlapAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-mi_isp_getchnoverlapattr" class="md-nav__link">
+    2.32. MI_ISP_GetChnOverlapAttr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-isp" class="md-nav__link">
+    3. ISP数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_isp_dev" class="md-nav__link">
+    3.1. MI_ISP_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_isp_channel" class="md-nav__link">
+    3.2. MI_ISP_CHANNEL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_isp_port" class="md-nav__link">
+    3.3. MI_ISP_PORT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_isp_devmaskid_e" class="md-nav__link">
+    3.4. MI_ISP_DevMaskId_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_isp_devattr_t" class="md-nav__link">
+    3.5. MI_ISP_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_isp_hdrtype_e" class="md-nav__link">
+    3.6. MI_ISP_HDRType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_isp_3dnr_level_e" class="md-nav__link">
+    3.7. MI_ISP_3DNR_Level_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_isp_bindsnrid_e" class="md-nav__link">
+    3.8. MI_ISP_BindSnrId_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_isp_sync3a_e" class="md-nav__link">
+    3.9. MI_ISP_SYNC3A_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_isp_iqapiheader_t" class="md-nav__link">
+    3.10. MI_ISP_IQApiHeader_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_isp_versionpara_t" class="md-nav__link">
+    3.11. MI_ISP_VersionPara_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_isp_custiqparam_t" class="md-nav__link">
+    3.12. MI_ISP_CustIQParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_isp_channelattr_t" class="md-nav__link">
+    3.13. MI_ISP_ChannelAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_isp_chnparam_t" class="md-nav__link">
+    3.14. MI_ISP_ChnParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mi_isp_outportparam_t" class="md-nav__link">
+    3.15. MI_ISP_OutPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-mi_isp_callbk_func" class="md-nav__link">
+    3.16. MI_ISP_CALLBK_FUNC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-mi_isp_callbackmode_e" class="md-nav__link">
+    3.17. MI_ISP_CallBackMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-mi_isp_irqtype_e" class="md-nav__link">
+    3.18. MI_ISP_IrqType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319-mi_isp_callbackparam_t" class="md-nav__link">
+    3.19. MI_ISP_CallBackParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320-mi_isp_zoomentry_t" class="md-nav__link">
+    3.20. MI_ISP_ZoomEntry_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-mi_isp_zoomtable_t" class="md-nav__link">
+    3.21. MI_ISP_ZoomTable_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-mi_isp_zoomattr_t" class="md-nav__link">
+    3.22. MI_ISP_ZoomAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-mi_isp_custsegattr_t" class="md-nav__link">
+    3.23. MI_ISP_CustSegAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-mi_isp_custseginportparam_t" class="md-nav__link">
+    3.24. MI_ISP_CustSegInPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-mi_isp_custsegoutportparam_t" class="md-nav__link">
+    3.25. MI_ISP_CustSegOutPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-mi_isp_custsegmode_e" class="md-nav__link">
+    3.26. MI_ISP_CustSegMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#327-mi_isp_internalseg_e" class="md-nav__link">
+    3.27. MI_ISP_InternalSeg_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#328-mi_isp_bufferlayout_e" class="md-nav__link">
+    3.28. MI_ISP_BufferLayout_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#329-mi_isp_overlap_e" class="md-nav__link">
+    3.29. MI_ISP_Overlap_e
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-isp" class="md-nav__link">
+    4. ISP错误码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs" class="md-nav__link">
+    5. PROCFS介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 模块说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 流程框图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 关键字说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4. 规格说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-json" class="md-nav__link">
+    1.5. JSON参数说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    2. API参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_isp_createdevice" class="md-nav__link">
+    2.1. MI_ISP_CreateDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_isp_destroydevice" class="md-nav__link">
+    2.2. MI_ISP_DestroyDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_isp_createchannel" class="md-nav__link">
+    2.3. MI_ISP_CreateChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_isp_destroychannel" class="md-nav__link">
+    2.4. MI_ISP_DestroyChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_isp_setinputportcrop" class="md-nav__link">
+    2.5. MI_ISP_SetInputPortCrop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_isp_getinputportcrop" class="md-nav__link">
+    2.6. MI_ISP_GetInputPortCrop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_isp_setchnparam" class="md-nav__link">
+    2.7. MI_ISP_SetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_isp_getchnparam" class="md-nav__link">
+    2.8. MI_ISP_GetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_isp_startchannel" class="md-nav__link">
+    2.9. MI_ISP_StartChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_isp_stopchannel" class="md-nav__link">
+    2.10. MI_ISP_StopChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_isp_setoutputportparam" class="md-nav__link">
+    2.11. MI_ISP_SetOutputPortParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_isp_getoutputportparam" class="md-nav__link">
+    2.12. MI_ISP_GetOutputPortParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_isp_enableoutputport" class="md-nav__link">
+    2.13. MI_ISP_EnableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_isp_disableoutputport" class="md-nav__link">
+    2.14. MI_ISP_DisableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_isp_alloc_iqdatabuf" class="md-nav__link">
+    2.15. MI_ISP_Alloc_IQDataBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#216-mi_isp_free_iqdatabuf" class="md-nav__link">
+    2.16. MI_ISP_Free_IQDataBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#217-mi_isp_callbacktask_register" class="md-nav__link">
+    2.17. MI_ISP_CallBackTask_Register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#218-mi_isp_callbacktask_unregister" class="md-nav__link">
+    2.18. MI_ISP_CallBackTask_Unregister
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#219-mi_isp_skipframe" class="md-nav__link">
+    2.19. MI_ISP_SkipFrame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#220-mi_isp_loadportzoomtable" class="md-nav__link">
+    2.20. MI_ISP_LoadPortZoomTable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-mi_isp_startportzoom" class="md-nav__link">
+    2.21. MI_ISP_StartPortZoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-mi_isp_stopportzoom" class="md-nav__link">
+    2.22. MI_ISP_StopPortZoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-mi_isp_getportcurzoomattr" class="md-nav__link">
+    2.23. MI_ISP_GetPortCurZoomAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-mi_isp_setcustsegattr" class="md-nav__link">
+    2.24. MI_ISP_SetCustSegAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#225-mi_isp_getcustsegattr" class="md-nav__link">
+    2.25. MI_ISP_GetCustSegAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#226-mi_isp_getcustsegbuf" class="md-nav__link">
+    2.26. MI_ISP_GetCustSegBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#227-mi_isp_putcustsegbuf" class="md-nav__link">
+    2.27. MI_ISP_PutCustSegBuf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#228-mi_isp_getsubchnid" class="md-nav__link">
+    2.28. MI_ISP_GetSubChnId
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229-mi_isp_setsubchnparam" class="md-nav__link">
+    2.29. MI_ISP_SetSubChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#230-mi_isp_getsubchnparam" class="md-nav__link">
+    2.30. MI_ISP_GetSubChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#231-mi_isp_setchnoverlapattr" class="md-nav__link">
+    2.31. MI_ISP_SetChnOverlapAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-mi_isp_getchnoverlapattr" class="md-nav__link">
+    2.32. MI_ISP_GetChnOverlapAttr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-isp" class="md-nav__link">
+    3. ISP数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_isp_dev" class="md-nav__link">
+    3.1. MI_ISP_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_isp_channel" class="md-nav__link">
+    3.2. MI_ISP_CHANNEL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_isp_port" class="md-nav__link">
+    3.3. MI_ISP_PORT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_isp_devmaskid_e" class="md-nav__link">
+    3.4. MI_ISP_DevMaskId_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_isp_devattr_t" class="md-nav__link">
+    3.5. MI_ISP_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_isp_hdrtype_e" class="md-nav__link">
+    3.6. MI_ISP_HDRType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_isp_3dnr_level_e" class="md-nav__link">
+    3.7. MI_ISP_3DNR_Level_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_isp_bindsnrid_e" class="md-nav__link">
+    3.8. MI_ISP_BindSnrId_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_isp_sync3a_e" class="md-nav__link">
+    3.9. MI_ISP_SYNC3A_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_isp_iqapiheader_t" class="md-nav__link">
+    3.10. MI_ISP_IQApiHeader_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_isp_versionpara_t" class="md-nav__link">
+    3.11. MI_ISP_VersionPara_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_isp_custiqparam_t" class="md-nav__link">
+    3.12. MI_ISP_CustIQParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_isp_channelattr_t" class="md-nav__link">
+    3.13. MI_ISP_ChannelAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_isp_chnparam_t" class="md-nav__link">
+    3.14. MI_ISP_ChnParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mi_isp_outportparam_t" class="md-nav__link">
+    3.15. MI_ISP_OutPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-mi_isp_callbk_func" class="md-nav__link">
+    3.16. MI_ISP_CALLBK_FUNC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-mi_isp_callbackmode_e" class="md-nav__link">
+    3.17. MI_ISP_CallBackMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-mi_isp_irqtype_e" class="md-nav__link">
+    3.18. MI_ISP_IrqType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319-mi_isp_callbackparam_t" class="md-nav__link">
+    3.19. MI_ISP_CallBackParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320-mi_isp_zoomentry_t" class="md-nav__link">
+    3.20. MI_ISP_ZoomEntry_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-mi_isp_zoomtable_t" class="md-nav__link">
+    3.21. MI_ISP_ZoomTable_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-mi_isp_zoomattr_t" class="md-nav__link">
+    3.22. MI_ISP_ZoomAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-mi_isp_custsegattr_t" class="md-nav__link">
+    3.23. MI_ISP_CustSegAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-mi_isp_custseginportparam_t" class="md-nav__link">
+    3.24. MI_ISP_CustSegInPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-mi_isp_custsegoutportparam_t" class="md-nav__link">
+    3.25. MI_ISP_CustSegOutPortParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-mi_isp_custsegmode_e" class="md-nav__link">
+    3.26. MI_ISP_CustSegMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#327-mi_isp_internalseg_e" class="md-nav__link">
+    3.27. MI_ISP_InternalSeg_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#328-mi_isp_bufferlayout_e" class="md-nav__link">
+    3.28. MI_ISP_BufferLayout_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#329-mi_isp_overlap_e" class="md-nav__link">
+    3.29. MI_ISP_Overlap_e
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-isp" class="md-nav__link">
+    4. ISP错误码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs" class="md-nav__link">
+    5. PROCFS介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI ISP API</h1>
+<!-- REVISION HISTORY
+
+| Revision No. | Description                                                  | Date       |
+| ------------ | ------------------------------------------------------------ | ---------- |
+| 3.0          | - Initial  release                                          | 12/04/2020 |
+| 3.1          | - Added new API: MI_ISP_SetCustSegAttr, MI_ISP_GetCustSegAttr, MI_ISP_GetCustSegBuf, MI_ISP_PutCustSegBuf <br>- Update API: MI_ISP_SetChnParam| 07/25/2021 |
+|              | - Added PROCFS INTRODUCTION                                   | 08/25/2021 |
+| 3.2          | - Added new API: MI_ISP_GetSubChnId | 11/23/2021 |
+| 3.3          | - Added Mochi Info | 02/17/2022 |
+| 3.4          | - Added Maruko info | 03/21/2022 |
+| 3.5          | - Added new API: MI_ISP_SetSubChnParam, MI_ISP_GetSubChnParam, MI_ISP_SetChnOverlapAttr, MI_ISP_GetChnOverlapAttr <br>- Update API: MI_ISP_SetOutputPortParam | 05/23/2022 |
+| 3.6          | - In Section 5.2 add debug CMD:ptsth/sendoneframe/dnrlevel/resethw/crcmode/datagen/cmdqtimeout| 08/03/2022 |
+
+-->
+
+<hr />
+<h2 id="1">1. 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1. 模块说明<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>图像信号处理（Image Signal Processing），实现HDR、3D/2D降噪、3A算法、WDR等相关功能。</p>
+<h3 id="12">1.2. 流程框图<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<h4>1.2.1. Tiramisu框图</h4>
+<p><img alt="" src="mymedia/isp/isp-1.svg" /></p>
+<p>图1‑1：Tiramisu框图</p>
+<p>注意：</p>
+<ul>
+<li>
+<p>Tiramisu 只有一个Device0，每个Device最多支持16个channel。</p>
+</li>
+<li>
+<p>只支持YUV422_YUYV/UYVY 和bayer格式输入，只有bayer格式可以支持3DNR和3A功能。</p>
+</li>
+</ul>
+<h4>1.2.2. Muffin框图</h4>
+<p><img alt="" src="mymedia/isp/isp-2.svg" /></p>
+<p>图1‑2：Muffin框图</p>
+<p>注意：</p>
+<ul>
+<li>
+<p>Muffin 有两个Device。Device0和Device1, 每个Device最多支持16个channel。</p>
+</li>
+<li>
+<p>只支持YUV422_YUYV/UYVY 和bayer格式输入。</p>
+</li>
+<li>
+<p>通过<a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a>接口，使能AI ISP后，支持app从before 3DNR/before WDR/before RGB2YUV取出buffer，并对buffer处理完成后，塞回给before 3DNR/before WDR/before RGB2YUV。</p>
+</li>
+<li>
+<p>Before 3DNR，就是进入DNR模块之前的数据。</p>
+</li>
+<li>
+<p>AI ISP功能，指的是app从MI ISP中取出buffer，使用算法对buffer进行图像优化处理后，塞回给MI ISP。</p>
+</li>
+</ul>
+<h4>1.2.3. Mochi框图</h4>
+<p><img alt="" src="mymedia/isp/isp-3.svg" /></p>
+<p>图1-3：Mochi框图</p>
+<p>注意：</p>
+<ul>
+<li>
+<p>Mochi只有一个Device0, 每个Device最多支持16个channel。</p>
+</li>
+<li>
+<p>只支持YUV422_UYVY格式输入。</p>
+</li>
+<li>
+<p>不支持 HDR/Rotation/Mirror/Flip 功能。</p>
+</li>
+</ul>
+<h4>1.2.4. Maruko框图</h4>
+<p><img alt="" src="mymedia/isp/isp-12.svg" /></p>
+<p>图1-4：Maruko框图</p>
+<p>注意：</p>
+<ul>
+<li>
+<p>Maruko 只有一个Device0，每个Device最多支持16个channel。</p>
+</li>
+<li>
+<p>只支持YUV422_YUYV/UYVY 和bayer格式输入，只有bayer格式可以支持3DNR/3A/Rot功能。</p>
+</li>
+</ul>
+<h3 id="13">1.3. 关键字说明<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Device</p>
+<p>硬件设备。</p>
+</li>
+<li>
+<p>channel</p>
+<p>Device上的分时复用通道。</p>
+</li>
+<li>
+<p>DNR</p>
+<p>Digital Noise Reduction，数字降噪技术。</p>
+<p>2D降噪：将一个像素与其周围像素平均，平均后噪声降低，缺点是会造成画面模糊；</p>
+<p>3D降噪：增添了时域处理，2D降噪只考虑一帧图像，而3D降噪进一步考虑帧与帧之间的时域关系，对每个像素进行时域上的平均。</p>
+</li>
+<li>
+<p>3A算法</p>
+<p>AE (Auto Exposure，自动曝光)、AWB(Auto White Balance，自动白平衡)和AF(Auto Focus，自动对焦)。</p>
+</li>
+<li>
+<p>HDR</p>
+<p>High-Dynamic Range，高动态范围图像。</p>
+<p>据不同的<a href="https://baike.baidu.com/item/曝光时间/485425">曝光时间</a>的LDR（Low-Dynamic Range，低动态范围图像），并利用每个曝光时间相对应最佳细节的LDR图像来合成最终HDR图像。能够更好的反映出真实环境中的视觉效果。</p>
+</li>
+<li>
+<p>WDR</p>
+<p>Wide Dynamic Range，宽动态范围。</p>
+<p>开启后场景中特别亮和特别暗的部位都能看得清楚。宽动态范围是图像能分辨的最亮的亮度信号值与最暗的亮光信号值的比值。</p>
+</li>
+<li>
+<p>Rotation</p>
+<p>旋转，将原始图像绕中心点旋转0°/90°/180°/270°。</p>
+</li>
+<li>
+<p>mirror</p>
+<p>水平镜像翻转。</p>
+</li>
+<li>
+<p>Flip</p>
+<p>上下镜像翻转。</p>
+</li>
+<li>
+<p>Crop</p>
+<p>裁剪，对图像进行裁剪。</p>
+</li>
+<li>
+<p>seg</p>
+<p>分段模块，segment的缩写。</p>
+</li>
+<li>
+<p>Compress</p>
+<p>压缩模式，对数据进行压缩传输，节省带宽。</p>
+</li>
+<li>
+<p>IR</p>
+<p>RGBIR sensor的IR 数据。</p>
+</li>
+</ul>
+<h3 id="14">1.4. 规格说明<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<p>‘\’ 与 ‘N’ 均为不支持该功能。</p>
+<ul>
+<li>
+<p>模块功能规格</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Tiramisu</th>
+<th>Mochi</th>
+<th>Muffin</th>
+<th>Maruko</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dev Number</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Chn Number</td>
+<td>32</td>
+<td>32</td>
+<td>32</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Port Number</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>DNR Range</td>
+<td>0-2</td>
+<td>0-7</td>
+<td>0-2</td>
+<td>0-6</td>
+</tr>
+<tr>
+<td>InputCrop</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>3A</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>HDR</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>mirror</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>flip</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>WDR</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>OutPutCrop</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>IR</td>
+<td>Y</td>
+<td>N</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Compress</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Seg</td>
+<td>N</td>
+<td>N</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Max Pixel Rate</td>
+<td>4k30</td>
+<td>4K60</td>
+<td>4K60</td>
+<td>4k30</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>输入规格</p>
+<p><table>
+<tr>
+    <td colspan=2>Input</td>
+    <td>Tiramisu</td>
+    <td>Mochi</td>
+    <td>Muffin</td>
+    <td>Maruko</td>
+</tr>
+<tr>
+    <td rowspan=3>Pixel</td>
+    <td>yuv422  YUYV</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422  UYVY</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>Bayer</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td rowspan=4>Compress</td>
+    <td>NONE</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>TO_8BIT</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>TO_6BIT</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>N</td>
+</tr>
+<tr>
+    <td>SFBC0</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>N</td>
+</tr>
+<tr>
+    <td colspan=2>Crop</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td rowspan=2>resolution</td>
+    <td>MAX</td>
+    <td>4208</td>
+    <td>3840</td>
+    <td>4068</td>
+    <td>3840</td>
+</tr>
+<tr>
+    <td>MIN</td>
+    <td>320x256(开AE) <br>16x16（不开AE）</td>
+    <td>16x16</td>
+    <td>320x256(开AE) <br>16x16（不开AE）</td>
+    <td>320x256(开AE) <br>16x16（不开AE）</td>
+</tr>
+<tr>
+    <td>Pixel  Alignment (WxH)</td>
+    <td>2x2</td>
+    <td>2x2</td>
+    <td>2x2</td>
+    <td>2x2</td>
+</tr>
+</table></p>
+</li>
+<li>
+<p>输出规格</p>
+<p><table>
+<tr>
+    <td colspan=2>Output</td>
+    <td>Tiramisu</td>
+    <td>Mochi</td>
+    <td>Muffin</td>
+    <td>Maruko</td>
+</tr>
+<tr>
+    <td rowspan=12>Pixel</td>
+    <td>ARGB8888</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>ABGR8888</td>
+    <td>N</td>
+    <td>N</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>BGRA8888</td>
+    <td>N</td>
+    <td>N</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv420SP NV12</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv420SP NV21</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv420 Planer</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 YUYV</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 YVYU</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 VYUY</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 UYVY</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 SP</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>yuv422 Planer</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td rowspan=2>Compress</td>
+    <td>NONE</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td>10TO6</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td colspan=2>Crop</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td colspan=2>IR</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>Y</td>
+    <td>Y</td>
+</tr>
+<tr>
+    <td colspan=2>Pixel  Alignment (WxH)</td>
+    <td>2x2</td>
+    <td>2x2</td>
+    <td>2x2</td>
+    <td>2x2</td>
+</tr>
+</table></p>
+</li>
+</ul>
+<h3 id="15-json">1.5. JSON参数说明<a class="headerlink" href="#15-json" title="Permanent link">&para;</a></h3>
+<p>使用json 文件可以调整的参数使用情况如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32DefaultDropNum</td>
+<td>drop MI_ISP_CreateChannel 之后buffer的张数</td>
+<td>1.default:10。由于 ISP 需要收敛，默认会drop掉10张  <br>2.用户可以设定任意值。在快启的场景时，减少drop的张数，可以缩短启动时间</td>
+</tr>
+</tbody>
+</table>
+<p>Json 使用方法详情见 <a href="sys_zh.html">MI SYS API</a>。</p>
+<h2 id="2-api">2. API参考<a class="headerlink" href="#2-api" title="Permanent link">&para;</a></h2>
+<p>该功能模块提供以下API:</p>
+<p>表 2‑1：API参考</p>
+<table>
+<thead>
+<tr>
+<th><strong>API名</strong></th>
+<th><strong>功能</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a></td>
+<td>创建一个 ISP 设备</td>
+</tr>
+<tr>
+<td><a href="#22-mi_isp_destroydevice">MI_ISP_DestroyDevice</a></td>
+<td>销毁一个 ISP 设备</td>
+</tr>
+<tr>
+<td><a href="#23-mi_isp_createchannel">MI_ISP_CreateChannel</a></td>
+<td>创建一个 ISP 通道</td>
+</tr>
+<tr>
+<td><a href="#24-mi_isp_destroychannel">MI_ISP_DestroyChannel</a></td>
+<td>销毁一个 ISP 通道</td>
+</tr>
+<tr>
+<td><a href="#25-mi_isp_setinputportcrop">MI_ISP_SetInputPortCrop</a></td>
+<td>设定 ISP 输入端口裁剪参数</td>
+</tr>
+<tr>
+<td><a href="#26-mi_isp_getinputportcrop">MI_ISP_GetInputPortCrop</a></td>
+<td>获取 ISP 输入端口裁剪参数</td>
+</tr>
+<tr>
+<td><a href="#27-mi_isp_setchnparam">MI_ISP_SetChnParam</a></td>
+<td>设定 ISP 通道参数</td>
+</tr>
+<tr>
+<td><a href="#28-mi_isp_getchnparam">MI_ISP_GetChnParam</a></td>
+<td>获取 ISP 通道参数</td>
+</tr>
+<tr>
+<td><a href="#29-mi_isp_startchannel">MI_ISP_StartChannel</a></td>
+<td>启动 ISP 通道</td>
+</tr>
+<tr>
+<td><a href="#210-mi_isp_stopchannel">MI_ISP_StopChannel</a></td>
+<td>停止 ISP 通道</td>
+</tr>
+<tr>
+<td><a href="#211-mi_isp_setoutputportparam">MI_ISP_SetOutputPortParam</a></td>
+<td>设定 ISP 输出端口参数</td>
+</tr>
+<tr>
+<td><a href="#212-mi_isp_getoutputportparam">MI_ISP_GetOutputPortParam</a></td>
+<td>获取 ISP 输出端口参数</td>
+</tr>
+<tr>
+<td><a href="#213-mi_isp_enableoutputport">MI_ISP_EnableOutputPort</a></td>
+<td>启用 ISP 输出端口</td>
+</tr>
+<tr>
+<td><a href="#214-mi_isp_disableoutputport">MI_ISP_DisableOutputPort</a></td>
+<td>禁用 ISP 输出端口</td>
+</tr>
+<tr>
+<td><a href="#215-mi_isp_alloc_iqdatabuf">MI_ISP_Alloc_IQDataBuf</a></td>
+<td>申请 IQ 数据缓存区</td>
+</tr>
+<tr>
+<td><a href="#216-mi_isp_free_iqdatabuf">MI_ISP_Free_IQDataBuf</a></td>
+<td>释放 IQ 数据缓存区</td>
+</tr>
+<tr>
+<td><a href="#217-mi_isp_callbacktask_register">MI_ISP_CallBackTask_Register</a></td>
+<td>注册 ISP 回调接口</td>
+</tr>
+<tr>
+<td><a href="#218-mi_isp_callbacktask_unregister">MI_ISP_CallBackTask_Unregister</a></td>
+<td>注销 ISP 回调接口</td>
+</tr>
+<tr>
+<td><a href="#219-mi_isp_skipframe">MI_ISP_SkipFrame</a></td>
+<td>设定跳过 FrameNum</td>
+</tr>
+<tr>
+<td><a href="#220-mi_isp_loadportzoomtable">MI_ISP_LoadPortZoomTable</a></td>
+<td>载入 ISP 端口 Zoom Table</td>
+</tr>
+<tr>
+<td><a href="#221-mi_isp_startportzoom">MI_ISP_StartPortZoom</a></td>
+<td>启动 ISP 端口 Zoom</td>
+</tr>
+<tr>
+<td><a href="#222-mi_isp_stopportzoom">MI_ISP_StopPortZoom</a></td>
+<td>停止 ISP 端口 Zoom</td>
+</tr>
+<tr>
+<td><a href="#223-mi_isp_getportcurzoomattr">MI_ISP_GetPortCurZoomAttr</a></td>
+<td>获取 ISP 端口实时的 Zoom 属性</td>
+</tr>
+<tr>
+<td><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></td>
+<td>设置AI ISP属性</td>
+</tr>
+<tr>
+<td><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></td>
+<td>获取AI ISP属性</td>
+</tr>
+<tr>
+<td><a href="#226-mi_isp_getcustsegbuf">MI_ISP_GetCustSegBuf</a></td>
+<td>获取AI ISP buffer</td>
+</tr>
+<tr>
+<td><a href="#227-mi_isp_putcustsegbuf">MI_ISP_PutCustSegBuf</a></td>
+<td>释放AI ISP buffer</td>
+</tr>
+<tr>
+<td><a href="#228-mi_isp_getsubchnid">MI_ISP_GetSubChnId</a></td>
+<td>获取ISP的子通道号</td>
+</tr>
+<tr>
+<td><a href="#229-mi_isp_setsubchnparam">MI_ISP_SetSubChnParam</a></td>
+<td>设置ISP的子通道参数</td>
+</tr>
+<tr>
+<td><a href="#230-mi_isp_getsubchnparam">MI_ISP_GetSubChnParam</a></td>
+<td>获取ISP的子通道参数</td>
+</tr>
+<tr>
+<td><a href="#231-mi_isp_setchnoverlapattr">MI_ISP_SetChnOverlapAttr</a></td>
+<td>设置ISP重叠属性</td>
+</tr>
+<tr>
+<td><a href="#232-mi_isp_getchnoverlapattr">MI_ISP_GetChnOverlapAttr</a></td>
+<td>获取ISP重叠属性</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-mi_isp_createdevice">2.1. MI_ISP_CreateDevice<a class="headerlink" href="#21-mi_isp_createdevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>创建一个 ISP 设备。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_CreateDevice(MI_ISP_DEV DevId, MI_ISP_DevAttr_t *pstDevAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstDevAttr</td>
+<td>ISP 设备属性指针。静态属性。</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>在调用前要保证 ISP 设备处于禁用状态。如果 ISP 设备已处于使能状态，可以使用<a href="#22-mi_isp_destroydevice">MI_ISP_DestroyDevice</a>来禁用设备。</p>
+</li>
+<li>
+<p>MI_ISP_CreateDevice 中，参数DevId = MI_ISP_CREATE_MULTI_DEV(MI_ISP_DEV0)时，表示multi device模式，Isp device 0, isp device 1同时工作。</p>
+</li>
+<li>
+<p>只有Muffin支持multi device模式。</p>
+</li>
+<li>
+<p>Multi device模式时，调用除MI_ISP_DestroyDevice外的其他接口，参数DevId = MI_ISP_DEV0。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>MI_ISP 初始化：</p>
+<div class="codehilite"><pre><span></span>MI_S32 ST_IspModuleInit(MI_ISP_DEV IspDevId)
+{
+#define ST_MAX_ISP_OUTPORT_NUM (2)
+    MI_ISP_CHANNEL IspChnId = 0;
+    MI_ISP_PORT  IspOutPortId =0;
+
+    MI_ISP_DevAttr_t stCreateDevAttr;
+    memset(&amp;stCreateDevAttr, 0x0, sizeof(MI_ISP_DevAttr_t));
+    stCreateDevAttr.u32DevStitchMask = E_MI_ISP_DEVICE_ID0;
+
+    MI_ISP_CreateDevice(IspDevId, &amp;stCreateDevAttr);
+
+    MI_ISP_ChannelAttr_t  stIspChnAttr;
+    memset(&amp;stIspChnAttr, 0x0, sizeof(MI_ISP_ChannelAttr_t));
+    stIspChnAttr. u32SensorBindId = E_MI_ISP_SENSOR0;
+    MI_ISP_CreateChannel(IspDevId, IspChnId, &amp;stIspChnAttr);
+
+    MI_SYS_WindowRect_t  stInputCropInfo;
+    stInputCropInfo.u16x=0;
+    stInputCropInfo.u16y=0;
+    stInputCropInfo.u16width=0;
+    stInputCropInfo.u16height=0;//width/height==0 no use crop.
+    MI_ISP_SetInputPortCrop(IspDevId, IspChnId, &amp;stInputCropInfo);
+
+    MI_ISP_ChnParam_t  stChnParam;
+    stChnParam.eHDRType = E_MI_ISP_HDR_TYPE_OFF;
+    stChnParam.e3DNRLevel = E_MI_ISP_3DNR_LEVEL2;
+    stChnParam.bMirror = FALSE;
+    stChnParam.bFlip = FALSE;
+    stChnParam.eRot = E_MI_SYS_ROTATE_NONE;
+    //use rot or flip, 3dnr level must more than 0
+    stChnParam.bY2bEnable = FALSE;
+    MI_ISP_SetChnParam(IspDevId, IspChnId, &amp;stChnParam);
+    MI_ISP_StartChannel(IspDevId, IspChnId);
+
+    for(IspOutPortId=0; IspOutPortId&lt;ST_MAX_ISP_OUTPORT_NUM; IspOutPortId++)
+    {
+        MI_ISP_OutPortParam_t  stIspOutputParam;
+        memset(&amp;stIspOutputParam, 0x0, sizeof(MI_ISP_OutPortParam_t));
+        stIspOutputParam.stCropRect.u16x=0;
+        stIspOutputParam.stCropRect.u16y=0;
+        stIspOutputParam.stCropRect.u16Width=0;
+        stIspOutputParam.stCropRect.u16Height=0;//width/height use 0, not use crop
+        stIspOutputParam.ePixelFormat = E_MI_SYS_PIXEL_FRAME_YUV_SEMIPLANAR_YUV420;
+        MI_ISP_SetOutputPortParam(IspDevId, IspChnId, IspOutPortId, &amp;stIspOutputParam);
+        MI_ISP_EnableOutputPort(IspDevId, IspChnId, IspOutPortId);
+    }
+
+    return MI_SUCCESS;
+}
+</pre></div>
+
+
+<p>MI_ISP 去初始化：</p>
+<div class="codehilite"><pre><span></span>MI_S32 ST_IspModuleUnInit(MI_ISP_DEV IspDevId)
+{
+#define ST_MAX_ISP_OUTPORT_NUM (2)
+
+    MI_ISP_CHANNEL IspChnId = 0;
+    MI_ISP_PORT  IspOutPortId =0;
+
+    for(IspOutPortId=0; IspOutPortId&lt;ST_MAX_ISP_OUTPORT_NUM; IspOutPortId++)
+    {
+        MI_ISP_DisableOutputPort(IspDevId, IspChnId, IspOutPortId);
+    }
+
+    MI_ISP_StopChannel(IspDevId, IspChnId);
+    MI_ISP_DestroyChannel(IspDevId, IspChnId);
+
+    MI_ISP_DestroyDevice(IspDevId);
+
+return MI_SUCCESS;
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#22-mi_isp_destroydevice">MI_ISP_DestroyDevice</a></p>
+</li>
+</ul>
+<h3 id="22-mi_isp_destroydevice">2.2. MI_ISP_DestroyDevice<a class="headerlink" href="#22-mi_isp_destroydevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>销毁一个 ISP 设备。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_DestroyDevice(MI_ISP_DEV DevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>需要先禁用所有的输出端口，然后停下channel，销毁通道，才能销毁设备。</p>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a> 举例。</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a></p>
+</li>
+</ul>
+<h3 id="23-mi_isp_createchannel">2.3. MI_ISP_CreateChannel<a class="headerlink" href="#23-mi_isp_createchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>创建一个 ISP 通道。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_CreateChannel(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ChannelAttr_t *pstChAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChAttr</td>
+<td>ISP 通道属性指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>需要先创建设备，才能创建通道。</p>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a> 举例。</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#24-mi_isp_destroychannel">MI_ISP_DestroyChannel</a></p>
+</li>
+</ul>
+<h3 id="24-mi_isp_destroychannel">2.4. MI_ISP_DestroyChannel<a class="headerlink" href="#24-mi_isp_destroychannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>销毁一个 ISP 通道。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_DestroyChannel(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>需要先禁用所有的输出端口， 然后停下channel，才能销毁通道。</p>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a> 举例。</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#23-mi_isp_createchannel">MI_ISP_CreateChannel</a></p>
+</li>
+</ul>
+<h3 id="25-mi_isp_setinputportcrop">2.5. MI_ISP_SetInputPortCrop<a class="headerlink" href="#25-mi_isp_setinputportcrop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设定 ISP 输入端口裁剪参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetInputPortCrop(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_SYS_WindowRect_t *pstCropInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCropInfo</td>
+<td>ISP 输入端口裁剪参数指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>只有input 是Dram buffer 时，才支持input crop。</p>
+</li>
+<li>
+<p>Crop x、Crop y、width、height 都是2对齐</p>
+</li>
+<li>
+<p>Isp内部的3A 只会统计裁剪区域的信息，会影响到整个画面最终3A计算结果。</p>
+</li>
+<li>
+<p>当输入数据压缩模式不为E_MI_SYS_COMPRESS_MODE_NONE 时，输入数据不支持裁剪。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="26-mi_isp_getinputportcrop">2.6. MI_ISP_GetInputPortCrop<a class="headerlink" href="#26-mi_isp_getinputportcrop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取 ISP 输入端口裁剪参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetInputPortCrop(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_SYS_WindowRect_t *pstCropInfo);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCropInfo</td>
+<td>ISP 输入端口裁剪参数指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="27-mi_isp_setchnparam">2.7. MI_ISP_SetChnParam<a class="headerlink" href="#27-mi_isp_setchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设定 ISP 通道参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetChnParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>ISP 通道参数指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>建议在通道停止的情况下切换通道参数，避免通道内缓存的buffer和后端参数不匹配，导致异常。</p>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a> 举例。</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#28-mi_isp_getchnparam">MI_ISP_GetChnParam</a></p>
+</li>
+</ul>
+<h3 id="28-mi_isp_getchnparam">2.8. MI_ISP_GetChnParam<a class="headerlink" href="#28-mi_isp_getchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取 ISP 通道参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetChnParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>ISP 通道参数指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#27-mi_isp_setchnparam">MI_ISP_SetChnParam</a></p>
+</li>
+</ul>
+<h3 id="29-mi_isp_startchannel">2.9. MI_ISP_StartChannel<a class="headerlink" href="#29-mi_isp_startchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>启动 ISP 通道。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_StartChannel(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a> 举例。</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#27-mi_isp_setchnparam">MI_ISP_SetChnParam</a></p>
+</li>
+</ul>
+<h3 id="210-mi_isp_stopchannel">2.10. MI_ISP_StopChannel<a class="headerlink" href="#210-mi_isp_stopchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>停止 ISP 通道。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_StopChannel(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>在通道创建的情况下，都可以停下通道，通道停下所有的输出端口都不会有数据输出。</p>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a> 举例。</p>
+</li>
+</ul>
+<h3 id="211-mi_isp_setoutputportparam">2.11. MI_ISP_SetOutputPortParam<a class="headerlink" href="#211-mi_isp_setoutputportparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设定 ISP 输出端口参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetOutputPortParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_PORT PortId, MI_ISP_OutPortParam_t *pstOutPortParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>ISP 端口号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstOutPortParam</td>
+<td>ISP 输出端口参数指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>Output port0 只支持和MI_SCL realtime 绑定，输出区域和input 相同， 可以不调用此api设置。</p>
+</li>
+<li>
+<p>Output port1 支持crop，需要指定size 输出。</p>
+</li>
+<li>
+<p>Output port2 只支持输出RGBIR sensor的IR 数据，Output W/H固定为input W/H的各一半，可以不调用此api设置。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a> 举例。</p>
+</li>
+</ul>
+<h3 id="212-mi_isp_getoutputportparam">2.12. MI_ISP_GetOutputPortParam<a class="headerlink" href="#212-mi_isp_getoutputportparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取 ISP 输出端口参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetOutputPortParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_PORT PortId, MI_ISP_OutPortParam_t *pstOutPortParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>ISP 端口号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstOutPortParam</td>
+<td>ISP 输出端口参数指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#211-mi_isp_setoutputportparam">MI_ISP_SetOutputPortParam</a></p>
+</li>
+</ul>
+<h3 id="213-mi_isp_enableoutputport">2.13. MI_ISP_EnableOutputPort<a class="headerlink" href="#213-mi_isp_enableoutputport" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>启用 ISP 输出端口。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_EnableOutputPort(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_PORT PortId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>ISP 端口号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>Output port1 必须要在设置了output port属性的前提下才可以使能该端口。</p>
+</li>
+<li>
+<p>Output port2 只有在使用RGBIR sensor的时候才可以使能。</p>
+</li>
+</ul>
+<p>​       </p>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a> 举例。</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#214-mi_isp_disableoutputport">MI_ISP_DisableOutputPort</a></p>
+</li>
+</ul>
+<h3 id="214-mi_isp_disableoutputport">2.14. MI_ISP_DisableOutputPort<a class="headerlink" href="#214-mi_isp_disableoutputport" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>禁用 ISP 输出端口。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_DisableOutputPort(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_PORT PortId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>ISP 端口号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="215-mi_isp_alloc_iqdatabuf">2.15. MI_ISP_Alloc_IQDataBuf<a class="headerlink" href="#215-mi_isp_alloc_iqdatabuf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>申请 IQ API数据缓存区。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_Alloc_IQDataBuf(MI_U32 u32Size,void **pUserVirAddr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Size</td>
+<td>IQ 数据缓存区大小。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pUserVirAddr</td>
+<td>IQ 数据缓存区指针地址</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>建议使用该api申请IQ api 数据，避免高频率调用造成cpu loading较高风险。</p>
+</li>
+<li>
+<p>一个线程申请一块isp data buffer，避免线程间buffer共用，导致线程之间buffer 互踩。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<div class="codehilite"><pre><span></span>#define  MI_ISP_MAX_DATA_SIZE  (80*1024)
+MI_ISP_Alloc_IQDataBuf(MI_ISP_MAX_DATA_SIZE, &amp;pIspBuffer);
+MI_ISP_IQ_ColorToGrayType_t *pstColorToGray = (MI_ISP_IQ_ColorToGrayType_t *)pIspBuffer;
+MI_ISP_IQ_GetColorToGray( Channel, pstColorToGray);
+if(pstColorToGray-&gt;bEnable == SS_TRUE)
+    pstColorToGray-&gt;bEnable = SS_FALSE;
+else
+    pstColorToGray-&gt;bEnable = SS_TRUE;
+MI_ISP_IQ_SetColorToGray( Channel, pstColorToGray);
+
+MI_ISP_IQ_ContrastType_t *pstContrast = (MI_ISP_IQ_ContrastType_t *)pIspBuffer;
+MI_ISP_IQ_GetContrast( Channel, pstContrast);
+MI_ISP_IQ_SetContrast( Channel, pstContrast);
+
+MI_ISP_Free_IQDataBuf(pIspBuffer)
+</pre></div>
+
+
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#216-mi_isp_free_iqdatabuf">MI_ISP_Free_IQDataBuf</a></p>
+</li>
+</ul>
+<h3 id="216-mi_isp_free_iqdatabuf">2.16. MI_ISP_Free_IQDataBuf<a class="headerlink" href="#216-mi_isp_free_iqdatabuf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>释放 IQ 数据缓存区。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_Free_IQDataBuf(void *pUserBuf);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pUserBuf</td>
+<td>IQ 申请的数据缓存区指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#215-mi_isp_alloc_iqdatabuf">MI_ISP_Alloc_IQDataBuf</a>举例。</p>
+</li>
+</ul>
+<h3 id="217-mi_isp_callbacktask_register">2.17. MI_ISP_CallBackTask_Register<a class="headerlink" href="#217-mi_isp_callbacktask_register" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>注册 ISP 回调接口。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_CallBackTask_Register(MI_ISP_DEV DevId, MI_ISP_CallBackParam_t *pstCallBackParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCallBackParam</td>
+<td>ISP 回调参数</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>该接口目前只支持kernel mode 调用</p>
+</li>
+<li>
+<p>和<a href="#218-mi_isp_callbacktask_unregister">MI_ISP_CallBackTask_Unregister</a>成对调用</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<div class="codehilite"><pre><span></span>MI_S32 _MI_ISP_vsync1(MI_U64 u64Data)
+{
+    DBG_ERR(&quot;DATA %llu \n&quot;, u64Data);
+    return 0;
+}
+
+MI_S32 _MI_ISP_vsync2(MI_U64 u64Data)
+{
+    DBG_ERR(&quot;DATA %llu \n&quot;, u64Data);
+    return 0;
+}
+
+static MS_S32 _MI_ISP_testRegCallback(void)
+{
+    MI_ISP_CallBackParam_t stCallBackParam1;
+    MI_ISP_CallBackParam_t stCallBackParam2;
+    memset(&amp;stCallBackParam1, 0x0, sizeof(MI_ISP_CallBackParam_t));
+    memset(&amp;stCallBackParam2, 0x0, sizeof(MI_ISP_CallBackParam_t));
+    stCallBackParam1.eCallBackMode = E_MI_ISP _CALLBACK_ISR;
+    stCallBackParam1. eIrqType = E_MI_ISP_IRQ_ISPVSYNC;
+    stCallBackParam1.pfnCallBackFunc = _mi_ISP_vsync1;
+    stCallBackParam1.u64Data = 12;
+    MI_ISP_CallBackTask_Register(&amp;stCallBackParam1);
+    stCallBackParam2.eCallBackMode = E_MI_ISP_CALLBACK_ISR;
+    stCallBackParam2. eIrqType = E_MI_ISP_IRQ_ISPVSYNC;
+    stCallBackParam2.pfnCallBackFunc = _mi_ISP_vsync2;
+    stCallBackParam2.u64Data = 23;
+    MI_ISP_CallBackTask_Register(&amp;stCallBackParam2);
+    return 0;
+}
+
+static MS_S32 _MI_ISP_testUnRegCallback(void)
+{
+    MI_ISP_CallBackParam_t stCallBackParam1;
+    MI_ISP_CallBackParam_t stCallBackParam2;
+    memset(&amp;stCallBackParam1, 0x0, sizeof(MI_ISP_CallBackParam_t));
+    memset(&amp;stCallBackParam2, 0x0, sizeof(MI_ISP_CallBackParam_t));
+    stCallBackParam1.eCallBackMode = E_MI_ISP_CALLBACK_ISR;
+    stCallBackParam1.eIrqType = E_MI_ISP_IRQ_ISPVSYNC;
+    stCallBackParam1.pfnCallBackFunc = _mi_ISP_vsync1;
+    stCallBackParam1.u64Data = 12;
+    MI_ISP_CallBackTask_Unregister(&amp;stCallBackParam1);
+    stCallBackParam2.eCallBackMode = E_MI_ISP_CALLBACK_ISR;
+    stCallBackParam2.eIrqType = E_MI_ISP_IRQ_ISPVSYNC;
+    stCallBackParam2.pfnCallBackFunc = _mi_ISP_vsync2;
+    stCallBackParam2.u64Data = 23;
+    MI_ISP_CallBackTask_Unregister(&amp;stCallBackParam2);
+    return 0;
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#218-mi_isp_callbacktask_unregister">MI_ISP_CallBackTask_Unregister</a></p>
+</li>
+</ul>
+<h3 id="218-mi_isp_callbacktask_unregister">2.18. MI_ISP_CallBackTask_Unregister<a class="headerlink" href="#218-mi_isp_callbacktask_unregister" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>注销回调接口。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_CallBackTask_Unregister(MI_ISP_DEV DevId, MI_ISP_CallBackParam_t *pstCallBackParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCallBackParam</td>
+<td>ISP 回调参数</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>该接口目前只支持kernel mode 调用</p>
+</li>
+<li>
+<p>和<a href="#217-mi_isp_callbacktask_register">MI_ISP_CallBackTask_Register</a>成对调用</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>见<a href="#217-mi_isp_callbacktask_register">MI_ISP_CallBackTask_Register</a>举例。</p>
+</li>
+</ul>
+<h3 id="219-mi_isp_skipframe">2.19. MI_ISP_SkipFrame<a class="headerlink" href="#219-mi_isp_skipframe" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设定从调用该API开始跳过 Frame count。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SkipFrame(MI_ISP_DEV DevId,MI_ISP_CHANNEL ChnId, MI_U32 u32FrameNum);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>u32FrameNum</td>
+<td>Frame 数量</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="220-mi_isp_loadportzoomtable">2.20. MI_ISP_LoadPortZoomTable<a class="headerlink" href="#220-mi_isp_loadportzoomtable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>载入 ISP 端口 Zoom Table。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_LoadPortZoomTable(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ZoomTable_t *pZoomTable);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pZoomTable</td>
+<td>Zoom Table参数</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>通过该接口提前加载好zoom table， 可以每一帧frame依次应用table中的zoom参数，保证zoom效果平滑，对比应用循环call MI_ISP_SetOutputPortParam 设置crop，没有办法保证每一帧frame 生效设置，无法做到平滑效果。</p>
+<table>
+<thead>
+<tr>
+<th>X0</th>
+<th>Y0</th>
+<th>W0</th>
+<th>H0</th>
+<th>SensorId=0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X1</td>
+<td>Y1</td>
+<td>W1</td>
+<td>H1</td>
+<td>SensorId=0</td>
+</tr>
+<tr>
+<td>X2</td>
+<td>Y2</td>
+<td>W2</td>
+<td>H2</td>
+<td>SensorId=1</td>
+</tr>
+<tr>
+<td>X3</td>
+<td>Y3</td>
+<td>W3</td>
+<td>H3</td>
+<td>SensorId=1</td>
+</tr>
+</tbody>
+</table>
+<p>表中包含crop位置和对应sensorid 信息，sensorid信息以支持长短焦切换场景。</p>
+</li>
+<li>
+<p>Zoom 功能由MI_ISP 和MI_SCL 配合完成，MI_ISP 负责zoom过程中3A效果和长短焦切换场景时通知sensor driver切换sensor。</p>
+</li>
+<li>
+<p>MI_SCL 负责crop 和scaling up，所以在zoom场景中，MI_SCL不能再使用crop 功能。</p>
+</li>
+<li>
+<p>Zoom运行过程中，不可以重复load table，需要先<a href="#222-mi_isp_stopportzoom">MI_ISP_StopPortZoom</a>，再load table。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="221-mi_isp_startportzoom">2.21. MI_ISP_StartPortZoom<a class="headerlink" href="#221-mi_isp_startportzoom" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>启动 ISP端口Zoom。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_StartPortZoom(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ZoomAttr_t *pstZoomAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstZoomAttr</td>
+<td>Zoom Table参数</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<table>
+<thead>
+<tr>
+<th>X0</th>
+<th>Y0</th>
+<th>W0</th>
+<th>H0</th>
+<th>SensorId=0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X1</td>
+<td>Y1</td>
+<td>W1</td>
+<td>H1</td>
+<td>SensorId=0</td>
+</tr>
+<tr>
+<td>X2</td>
+<td>Y2</td>
+<td>W2</td>
+<td>H2</td>
+<td>SensorId=1</td>
+</tr>
+<tr>
+<td>X3</td>
+<td>Y3</td>
+<td>W3</td>
+<td>H3</td>
+<td>SensorId=1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>u32FromEntryIndex 和 u32ToEntryIndex 为table中index0~3 任意一个。</p>
+</li>
+<li>
+<p>当u32FromEntryIndex != u32ToEntryIndex，逐帧应用从u32FromEntryIndex到u32ToEntryIndex的crop 参数。</p>
+</li>
+<li>
+<p>当u32FromEntryIndex == u32ToEntryIndex，会停在当前u32FromEntryIndex参数。</p>
+</li>
+<li>
+<p>当MI内部检测到下一个entry的sensorid 和当前sensor id 不一致时，当前帧做完后会将sensirid通知给sensor driver，切换到对应sensor 上。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#222-mi_isp_stopportzoom">MI_ISP_StopPortZoom</a></p>
+</li>
+</ul>
+<h3 id="222-mi_isp_stopportzoom">2.22. MI_ISP_StopPortZoom<a class="headerlink" href="#222-mi_isp_stopportzoom" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>停止 ISP端口Zoom。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_StopPortZoom(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>和<a href="#221-mi_isp_startportzoom">MI_ISP_StartPortZoom</a>成对调用。</p>
+</li>
+</ul>
+<h3 id="223-mi_isp_getportcurzoomattr">2.23. MI_ISP_GetPortCurZoomAttr<a class="headerlink" href="#223-mi_isp_getportcurzoomattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取 ISP 端口实时的 Zoom 属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetPortCurZoomAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_ZoomAttr_t *pstZoomAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstZoomAttr</td>
+<td>Zoom 属性状态</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="224-mi_isp_setcustsegattr">2.24. MI_ISP_SetCustSegAttr<a class="headerlink" href="#224-mi_isp_setcustsegattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>设置AI ISP属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetCustSegAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_CustSegAttr_t *pstCustSegAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCustSegAttr</td>
+<td>AI ISP属性</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p><img alt="" src="mymedia/isp/isp-4.svg" /></p>
+<ul>
+<li>
+<p>pstCustSegAttr&rarr;eMode的值为<a href="#326-mi_isp_custsegmode_e">E_MI_ISP_CUST_SEG_MODE_INSERT</a>或<a href="#326-mi_isp_custsegmode_e">E_MI_ISP_CUST_SEG_MODE_INSERT</a>时，会使能AI ISP。此时MI ISP内部会分成3个pass。pass0，pass1和pass2，功能由ISP的hdr、3dnr、wdr、rgb2yuv 4个组件组成。pass1是专门给app提供raw buffer。</p>
+</li>
+<li>
+<p>使能AI ISP时，不支持isp rotation/mirror/flip。</p>
+</li>
+<li>
+<p>Pass0和pass2有以下组合，使用<a href="#323-mi_isp_custsegattr_t">MI_ISP_CustSegAttr_t</a>表示。注意pass0模块序号不能比pass2大。</p>
+<p>Pass0: HDR, HDR&rarr;3DNR, HDR&rarr;3DNR&rarr;WDR, HDR&rarr;3DNR&rarr;WDR&rarr;RGB2YUV</p>
+<p>Pass2: RGB2YUV, WDR&rarr;RGB2YUV, 3DNR&rarr;WDR&rarr;RGB2YUV, HDR&rarr;3DNR&rarr;WDR&rarr;RGB2YUV</p>
+<p><a href="#327-mi_isp_internalseg_e">E_MI_ISP_SEG_HDR</a>输出是before 3DNR。</p>
+<p><a href="#327-mi_isp_internalseg_e">E_MI_ISP_SEG_3DNR</a>包含DNR Rotation/mirror/flip，输出是before WDR。</p>
+<p><a href="#327-mi_isp_internalseg_e">E_MI_ISP_SEG_WDR</a>输出是before RGB2YUV。</p>
+</li>
+<li>
+<p>pstCustSegAttr&rarr;eMode、pstCustSegAttr&rarr;eFrom和pstCustSegAttr&rarr;eTo，用于描述pass1的功能组成。</p>
+<p><a href="#326-mi_isp_custsegmode_e">E_MI_ISP_CUST_SEG_MODE_INSERT</a>表示在HDR&rarr;3DNR&rarr;WDR&rarr;RGB2YUV中间某个地方插入app的图像处理pass1。</p>
+<p><a href="#326-mi_isp_custsegmode_e">E_MI_ISP_CUST_SEG_MODE_REPLACE</a>，表示替换HDR、3DNR、WDR、RGB2YUV的功能。可以只替换3DNR，只替换WDR，或3DNR、WDR都替换掉。</p>
+<p>例如：</p>
+<ol>
+<li>
+<p>eFrom= E_MI_ISP_SEG_3DNR, eTo= E_MI_ISP_SEG_WDR, eMode= E_MI_ISP_CUST_SEG_MODE_INSERT</p>
+<p><img alt="" src="mymedia/isp/isp-5.svg" /></p>
+</li>
+<li>
+<p>eFrom= E_MI_ISP_SEG_3DNR, eTo= E_MI_ISP_SEG_WDR, eMode= E_MI_ISP_CUST_SEG_MODE_REPLACE</p>
+<p><img alt="" src="mymedia/isp/isp-6.svg" /></p>
+</li>
+<li>
+<p>eFrom= E_MI_ISP_SEG_3DNR, eTo= E_MI_ISP_SEG_3DNR, eMode= E_MI_ISP_CUST_SEG_MODE_REPLACE</p>
+<p><img alt="" src="mymedia/isp/isp-7.svg" /></p>
+</li>
+<li>
+<p>eFrom= E_MI_ISP_SEG_HDR, eTo= E_MI_ISP_SEG_HDR, eMode= E_MI_ISP_CUST_SEG_MODE_REPLACE</p>
+<p><img alt="" src="mymedia/isp/isp-8.svg" /></p>
+</li>
+<li>
+<p>eFrom= E_MI_ISP_SEG_RGB2YUV, eTo= E_MI_ISP_SEG_RGB2YUV, eMode= E_MI_ISP_CUST_SEG_MODE_REPLACE</p>
+<p><img alt="" src="mymedia/isp/isp-9.svg" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>MI_ISP_SetCustSegAttr要在MI_ISP_CreateChannel后，在MI_ISP_StartChannel和MI_ISP_SetOutputPortParam前调用。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>MI_ISP 初始化：</p>
+<div class="codehilite"><pre><span></span>MI_S32 ST_IspModuleInit(MI_ISP_DEV IspDevId)
+{
+    MI_ISP_CHANNEL IspChnId = 0;
+    MI_ISP_PORT  IspOutPortId =1;
+
+    MI_ISP_DevAttr_t stCreateDevAttr;
+    memset(&amp;stCreateDevAttr, 0x0, sizeof(MI_ISP_DevAttr_t));
+    stCreateDevAttr.u32DevStitchMask = E_MI_ISP_DEVICE_ID0;
+
+    MI_ISP_CreateDevice(IspDevId, &amp;stCreateDevAttr);
+
+    MI_ISP_ChannelAttr_t  stIspChnAttr;
+    memset(&amp;stIspChnAttr, 0x0, sizeof(MI_ISP_ChannelAttr_t));
+    stIspChnAttr. u32SensorBindId = E_MI_ISP_SENSOR0;
+    MI_ISP_CreateChannel(IspDevId, IspChnId, &amp;stIspChnAttr);
+
+    MI_SYS_WindowRect_t  stInputCropInfo;
+    stInputCropInfo.u16x=0;
+    stInputCropInfo.u16y=0;
+    stInputCropInfo.u16width=0;
+    stInputCropInfo.u16height=0;//width/height==0 no use crop.
+    MI_ISP_SetInputPortCrop(IspDevId, IspChnId, &amp; stInputCropInfo);
+
+    MI_ISP_ChnParam_t  stChnParam;
+    stChnParam.eHDRType = E_MI_ISP_HDR_TYPE_OFF;
+    stChnParam.e3DNRLevel = E_MI_ISP_3DNR_LEVEL2;
+    stChnParam.bMirror = FALSE;
+    stChnParam.bFlip = FALSE;
+    stChnParam.eRot = E_MI_SYS_ROTATE_NONE;
+    stChnParam.bY2bEnable = FALSE;
+    MI_ISP_SetChnParam(IspDevId, IspChnId, &amp; stChnParam);
+
+    MI_ISP_CustSegAttr_t stCustSegAttr;
+    memset(&amp;stCustSegAttr, 0x0, sizeof(MI_ISP_CustSegAttr_t));
+    stCustSegAttr.eMode = E_MI_ISP_CUST_SEG_MODE_INSERT;
+    stCustSegAttr.eFrom = E_MI_ISP_SEG_3DNR;
+    stCustSegAttr.eTo = E_MI_ISP_SEG_WDR;
+    stCustSegAttr.stInputParam.ePixelFormat = RGB_BAYER_PIXEL(E_MI_SYS_DATA_PRECISION_12BPP, E_MI_SYS_PIXEL_BAYERID_GR);
+    stCustSegAttr.stOutputParam.ePixelFormat = stCustSegAttr.stInputParam.ePixelFormat;
+    MI_ISP_SetCustSegAttr(enDevId,enChnId, &amp;stCustSegAttr);
+
+    MI_ISP_StartChannel(IspDevId, IspChnId);
+
+    MI_ISP_OutPortParam_t  stIspOutputParam;
+    memset(&amp;stIspOutputParam, 0x0, sizeof(MI_ISP_OutPortParam_t));
+    stIspOutputParam.stCropRect.u16x=0;
+    stIspOutputParam.stCropRect.u16y=0;
+    stIspOutputParam.stCropRect.u16Width=0;
+    stIspOutputParam.stCropRect.u16Height=0;//width/height use 0, not use crop
+    stIspOutputParam.ePixelFormat = E_MI_SYS_PIXEL_FRAME_YUV_SEMIPLANAR_YUV420;
+    MI_ISP_SetOutputPortParam(IspDevId, IspChnId, IspOutPortId, &amp;stIspOutputParam);
+    MI_ISP_EnableOutputPort(IspDevId, IspChnId, IspOutPortId);
+
+    return MI_SUCCESS;
+}
+</pre></div>
+
+
+<p>获取raw：</p>
+<div class="codehilite"><pre><span></span>MI_SYS_BUF_HANDLE hBufHandle = NULL;
+MI_SYS_BufInfo_t stInputBufInfo;
+MI_SYS_BufInfo_t stOutputBufInfo;
+MI_U8 *pSrcData = NULL, *pDstData = NULL;
+
+memset(&amp;stInputBufInfo, 0, sizeof(MI_SYS_BufInfo_t));
+memset(&amp;stOutputBufInfo, 0, sizeof(MI_SYS_BufInfo_t));
+s32Ret = MI_ISP_GetCustSegBuf(stChnPort.u32DevId, stChnPort.u32ChnId, &amp;hBufHandle,
+                &amp;stInputBufInfo, &amp;stOutputBufInfo, 200);
+if(s32Ret == MI_SUCCESS)
+{
+    pSrcData = stInputBufInfo.stFrameData-&gt;pVirAddr[0];
+    pDstData = stOutputBufInfo.stFrameData-&gt;pVirAddr[0];
+    memcpy(pDstData, pSrcData, stOutputBufInfo.stFrameData.u32BufSize);
+    memset(pDstData, 0, stOutputBufInfo.stFrameData.u32BufSize/4);
+    MI_ISP_PutCustSegBuf(stChnPort.u32DevId, stChnPort.u32ChnId, hBufHandle);
+}
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="225-mi_isp_getcustsegattr">2.25. MI_ISP_GetCustSegAttr<a class="headerlink" href="#225-mi_isp_getcustsegattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取AI ISP属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetCustSegAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_ISP_CustSegAttr_t *pstCustSegAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstCustSegAttr</td>
+<td>AI ISP属性</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="226-mi_isp_getcustsegbuf">2.26. MI_ISP_GetCustSegBuf<a class="headerlink" href="#226-mi_isp_getcustsegbuf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取AI ISP buffer。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetCustSegBuf(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId,MI_SYS_BUF_HANDLE *pBufHandle, MI_SYS_BufInfo_t *pstInputBufInfo, MI_SYS_BufInfo_t *pstOutputBufInfo, MI_S32 s32MilliSec);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pBufHandle,</td>
+<td>Pass1 input/output Buf的handle句柄</td>
+<td>输出</td>
+</tr>
+<tr>
+<td>pstInputBufInfo</td>
+<td>Pass1 input buffer</td>
+<td>输出</td>
+</tr>
+<tr>
+<td>pstOutputBufInfo</td>
+<td>Pass1 output buffer</td>
+<td>输出</td>
+</tr>
+<tr>
+<td>s32MilliSec</td>
+<td>超时时间 ms</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>和<a href="#227-mi_isp_putcustsegbuf">MI_ISP_PutCustSegBuf</a>成对使用。</p>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a>举例。</p>
+</li>
+</ul>
+<h3 id="227-mi_isp_putcustsegbuf">2.27. MI_ISP_PutCustSegBuf<a class="headerlink" href="#227-mi_isp_putcustsegbuf" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>释放AI ISP buffer。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_PutCustSegBuf(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, MI_SYS_BUF_HANDLE bufHandle);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pBufHandle,</td>
+<td>Pass1 input/output Buf的handle句柄</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>和<a href="#226-mi_isp_getcustsegbuf">MI_ISP_GetCustSegBuf</a>成对使用。</p>
+</li>
+<li>
+<p>要按<a href="#226-mi_isp_getcustsegbuf">MI_ISP_GetCustSegBuf</a>获取buffer的顺序，调用<a href="#227-mi_isp_putcustsegbuf">MI_ISP_PutCustSegBuf</a>，不能乱序put buffer。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>参考<a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a>举例。</p>
+</li>
+</ul>
+<h3 id="228-mi_isp_getsubchnid">2.28. MI_ISP_GetSubChnId<a class="headerlink" href="#228-mi_isp_getsubchnid" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>功能</p>
+<p>获取ISP的子通道号。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetSubChnId(MI_ISP_DEV DevId, MI_ISP_CHANNEL MainChnId, 
+MI_ISP_BindSnrId_e eSensorBindId, MI_U32 *pu32SubChnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>MainChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>eSensorBindId</td>
+<td>子通道绑定的sensor号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pu32SubChnId</td>
+<td>ISP 子通道号</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>在Stitch场景下，一个MI_ISP Channel会绑定多个Sensor，当IQ要控制对应Sensor时，需要输入MI_ISP DevId，MI_ISP ChannelId 和 SensorId，获取对应的SubChannelId，也就是IQ所使用的通道。</p>
+</li>
+<li>
+<p>其他情况下IQ所使用的通道和MI_ISP ChannelId一致。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="229-mi_isp_setsubchnparam">2.29. MI_ISP_SetSubChnParam<a class="headerlink" href="#229-mi_isp_setsubchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>设置ISP的子通道参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetSubChnParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, 
+MI_ISP_SUB_CHANNEL SubChnId, MI_ISP_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>SubChnId</td>
+<td>ISP 子通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>ISP 子通道参数指针</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>建议在通道停止的情况下切换子通道参数，避免通道内缓存的buffer和后端参数不匹配，导致异常。</p>
+</li>
+<li>
+<p>设置eRot时，需要保证子通道之间输入输出宽高一致。E_MI_SYS_ROTATE_90/ E_MI_SYS_ROTATE_270，或E_MI_SYS_ROTATE_NONE/ E_MI_SYS_ROTATE_180。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="230-mi_isp_getsubchnparam">2.30. MI_ISP_GetSubChnParam<a class="headerlink" href="#230-mi_isp_getsubchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>获取ISP的子通道参数。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetSubChnParam(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, 
+MI_ISP_SUB_CHANNEL SubChnId, MI_ISP_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>SubChnId</td>
+<td>ISP 子通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>ISP 子通道参数指针</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="231-mi_isp_setchnoverlapattr">2.31. MI_ISP_SetChnOverlapAttr<a class="headerlink" href="#231-mi_isp_setchnoverlapattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>设置ISP重叠属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_SetChnOverlapAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId,
+MI_ISP_Overlap_e eOverlap);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>eOverlap</td>
+<td>重叠大小</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>Overlap的效果，是使左右拼合的两边图像过度平滑。</p>
+</li>
+<li>
+<p>只有调用MI_ISP_CreateDevice，参数DevId = MI_ISP_CREATE_MULTI_DEV(MI_ISP_DEV0),且MI_ISP_CreateChannel中参数pstChAttr-&gt; u32SensorBindId,只设置一个sensor id时，Overlay才会生效。</p>
+</li>
+<li>
+<p>E_MI_ISP_OVERLAP_128是多读128列pixel，E_MI_ISP_OVERLAP_256是多读256列pixel。</p>
+</li>
+<li>
+<p>eOverlap = E_MI_ISP_OVERLAP_256时，效果如下图。</p>
+<p><img alt="" src="mymedia/isp/isp-13.svg" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="232-mi_isp_getchnoverlapattr">2.32. MI_ISP_GetChnOverlapAttr<a class="headerlink" href="#232-mi_isp_getchnoverlapattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>获取ISP重叠属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_ISP_GetChnOverlapAttr(MI_ISP_DEV DevId, MI_ISP_CHANNEL ChnId, 
+MI_ISP_Overlap_e *peOverlap);
+</pre></div>
+
+
+</li>
+<li>
+<p>形参</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>ISP 设备号。</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>ChnId</td>
+<td>ISP 通道号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>peOverlap</td>
+<td>重叠大小</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>MI_SUCCESS（0） 成功。</p>
+</li>
+<li>
+<p>非0  失败，详情参照<a href="#errorcode">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>依赖</p>
+<ul>
+<li>
+<p>头文件：mi_isp_datatype.h、mi_isp.h</p>
+</li>
+<li>
+<p>库文件：libmi_isp.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-isp">3. ISP数据类型<a class="headerlink" href="#3-isp" title="Permanent link">&para;</a></h2>
+<p>视频输入相关数据类型定义如下：</p>
+<p>表 3‑1：ISP数据类型</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#31-mi_isp_dev">MI_ISP_DEV</a></td>
+<td>定义 ISP 设备的类型</td>
+</tr>
+<tr>
+<td><a href="#32-mi_isp_channel">MI_ISP_CHANNEL</a></td>
+<td>定义 ISP 通道的类型</td>
+</tr>
+<tr>
+<td><a href="#33-mi_isp_port">MI_ISP_PORT</a></td>
+<td>定义 ISP 端口的类型</td>
+</tr>
+<tr>
+<td><a href="#34-mi_isp_devmaskid_e">MI_ISP_DevMaskId_e</a></td>
+<td>定义 ISP 设备需要mask使用的设备ID</td>
+</tr>
+<tr>
+<td><a href="#35-mi_isp_devattr_t">MI_ISP_DevAttr_t</a></td>
+<td>定义 ISP 设备属性参数</td>
+</tr>
+<tr>
+<td><a href="#36-mi_isp_hdrtype_e">MI_ISP_HDRType_e</a></td>
+<td>定义 HDR 开关模式</td>
+</tr>
+<tr>
+<td><a href="#37-mi_isp_3dnr_level_e">MI_ISP_3DNR_Level_e</a></td>
+<td>定义 3DNR 设置等级</td>
+</tr>
+<tr>
+<td><a href="#38-mi_isp_bindsnrid_e">MI_ISP_BindSnrId_e</a></td>
+<td>定义 ISP 绑定sensor的ID</td>
+</tr>
+<tr>
+<td><a href="#39-mi_isp_sync3a_e">MI_ISP_SYNC3A_e</a></td>
+<td>定义同步各通道 3A 参数</td>
+</tr>
+<tr>
+<td><a href="#310-mi_isp_iqapiheader_t">MI_ISP_IQApiHeader_t</a></td>
+<td>定义IQ api 数据类型</td>
+</tr>
+<tr>
+<td><a href="#311-mi_isp_versionpara_t">MI_ISP_VersionPara_t</a></td>
+<td>定义ISP特殊参数版本</td>
+</tr>
+<tr>
+<td><a href="#312-mi_isp_custiqparam_t">MI_ISP_CustIQParam_t</a></td>
+<td>定义ISP初始化参数</td>
+</tr>
+<tr>
+<td><a href="#313-mi_isp_channelattr_t">MI_ISP_ChannelAttr_t</a></td>
+<td>定义 ISP 通道静态属性参数</td>
+</tr>
+<tr>
+<td><a href="#314-mi_isp_chnparam_t">MI_ISP_ChnParam_t</a></td>
+<td>定义 ISP 通道动态属性参数</td>
+</tr>
+<tr>
+<td><a href="#315-mi_isp_outportparam_t">MI_ISP_OutPortParam_t</a></td>
+<td>定义 ISP 输出端口的参数</td>
+</tr>
+<tr>
+<td><a href="#316-mi_isp_callbk_func">MI_ISP_CALLBK_FUNC</a></td>
+<td>定义回调函数类型</td>
+</tr>
+<tr>
+<td><a href="#317-mi_isp_callbackmode_e">MI_ISP_CallBackMode_e</a></td>
+<td>定义回调模式</td>
+</tr>
+<tr>
+<td><a href="#318-mi_isp_irqtype_e">MI_ISP_IrqType_e</a></td>
+<td>定义硬件中断类型</td>
+</tr>
+<tr>
+<td><a href="#319-mi_isp_callbackparam_t">MI_ISP_CallBackParam_t</a></td>
+<td>定义回调参数</td>
+</tr>
+<tr>
+<td><a href="#320-mi_isp_zoomentry_t">MI_ISP_ZoomEntry_t</a></td>
+<td>定义 Zoom 单元条目类型</td>
+</tr>
+<tr>
+<td><a href="#321-mi_isp_zoomtable_t">MI_ISP_ZoomTable_t</a></td>
+<td>定义 Zoom Table 类型</td>
+</tr>
+<tr>
+<td><a href="#322-mi_isp_zoomattr_t">MI_ISP_ZoomAttr_t</a></td>
+<td>定义 Zoom 属性</td>
+</tr>
+<tr>
+<td><a href="#323-mi_isp_custsegattr_t">MI_ISP_CustSegAttr_t</a></td>
+<td>定义AI ISP属性</td>
+</tr>
+<tr>
+<td><a href="#324-mi_isp_custseginportparam_t">MI_ISP_CustSegInPortParam_t</a></td>
+<td>Pass1 input port的属性</td>
+</tr>
+<tr>
+<td><a href="#325-mi_isp_custsegoutportparam_t">MI_ISP_CustSegOutPortParam_t</a></td>
+<td>Pass1 output port的属性</td>
+</tr>
+<tr>
+<td><a href="#326-mi_isp_custsegmode_e">MI_ISP_CustSegMode_e</a></td>
+<td>AI ISP的模式</td>
+</tr>
+<tr>
+<td><a href="#327-mi_isp_internalseg_e">MI_ISP_InternalSeg_e</a></td>
+<td>ISP的模块名称</td>
+</tr>
+<tr>
+<td><a href="#328-mi_isp_bufferlayout_e">MI_ISP_BufferLayout_e</a></td>
+<td>buffer布局</td>
+</tr>
+<tr>
+<td><a href="#329-mi_isp_overlap_e">MI_ISP_Overlap_e</a></td>
+<td>重叠属性</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-mi_isp_dev">3.1. MI_ISP_DEV<a class="headerlink" href="#31-mi_isp_dev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 设备的类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_ISP_DEV;
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="32-mi_isp_channel">3.2. MI_ISP_CHANNEL<a class="headerlink" href="#32-mi_isp_channel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 通道的类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_ISP_CHANNEL;
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="33-mi_isp_port">3.3. MI_ISP_PORT<a class="headerlink" href="#33-mi_isp_port" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 端口的类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_ISP_PORT;
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="34-mi_isp_devmaskid_e">3.4. MI_ISP_DevMaskId_e<a class="headerlink" href="#34-mi_isp_devmaskid_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 设备需要mask使用的设备ID。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_ISP_DEVICEMASK_ID0 = 0x0001,
+
+    E_MI_ISP_DEVICEMASK_ID1 = 0x0002,
+
+    E_MI_ISP_DEVICEMASK_ID_MAX = 0xffff
+
+} MI_ISP_DevMaskId_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>注意事项</p>
+<p>Tiramisu / Mochi / Maruko系列芯片只有ISP E_MI_ISP_DEVICEMASK_ID0使用。</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a></p>
+</li>
+</ul>
+<h3 id="35-mi_isp_devattr_t">3.5. MI_ISP_DevAttr_t<a class="headerlink" href="#35-mi_isp_devattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 设备属性参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_DevAttr_s
+
+{
+
+    MI_U32  u32DevStitchMask; //multi ISP dev bitmask by MI_ISP_DevMaskId_e
+
+}MI_ISP_DevAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32DevStitchMask</td>
+<td>ISP DEV ID 掩码。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>u32DevStitchMask由MI_ISP_DevMaskId_e，bitmask组成。如果通道上的数据量一个isp device处理速度无法达到要求，可以通过该参数复用另外一个Device。复用之后不可以再创建另外一个Device。</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#21-mi_isp_createdevice">MI_ISP_CreateDevice</a></p>
+</li>
+</ul>
+<h3 id="36-mi_isp_hdrtype_e">3.6. MI_ISP_HDRType_e<a class="headerlink" href="#36-mi_isp_hdrtype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 HDR 开关模式</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_ISP_HDR_TYPE_OFF,
+
+    E_MI_ISP_HDR_TYPE_VC,
+
+    E_MI_ISP_HDR_TYPE_DOL,
+
+    E_MI_ISP_HDR_TYPE_EMBEDDED,
+
+    E_MI_ISP_HDR_TYPE_LI,
+
+    E_MI_ISP_HDR_TYPE_MAX
+
+} MI_ISP_HDRType_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_OFF</td>
+<td>不开HDR</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_VC</td>
+<td>virtual channel mode HDR,  vc0-&gt;long,vc1-&gt;short</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_DOL</td>
+<td>Digital Overlap High Dynamic Range</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_EMBEDDED</td>
+<td>compressed HDR mode</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_LI</td>
+<td>Line interlace HDR</td>
+</tr>
+<tr>
+<td>E_MI_ISP_HDR_TYPE_MAX</td>
+<td>HDR 边界值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>具体使用的HDR Type 可以通过MI_SNR_GetPadInfo 接口获取。</p>
+</li>
+<li>
+<p>HDR功能需要MI_VIF 和MI_ISP 模块配合完成，需要两边设置相同的HDR类型。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#314-mi_isp_chnparam_t">MI_ISP_ChnParam_t</a></p>
+</li>
+</ul>
+<h3 id="37-mi_isp_3dnr_level_e">3.7. MI_ISP_3DNR_Level_e<a class="headerlink" href="#37-mi_isp_3dnr_level_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 3DNR 设置等级。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_3DNR_LEVEL_OFF,
+    E_MI_ISP_3DNR_LEVEL1,
+    E_MI_ISP_3DNR_LEVEL2,
+    E_MI_ISP_3DNR_LEVEL3,
+    E_MI_ISP_3DNR_LEVEL4,
+    E_MI_ISP_3DNR_LEVEL5,
+    E_MI_ISP_3DNR_LEVEL6,
+    E_MI_ISP_3DNR_LEVEL7,
+    E_MI_ISP_3DNR_LEVEL_NUM
+}MI_ISP_3DNR_Level_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>注意事项</p>
+<p>3DNR level 越高，降噪效果越好，消耗的buffer也越多。</p>
+<table>
+<thead>
+<tr>
+<th>芯片</th>
+<th>3DNR支持的最大等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiramisu</td>
+<td>E_MI_ISP_3DNR_LEVEL2</td>
+</tr>
+<tr>
+<td>Muffin</td>
+<td>E_MI_ISP_3DNR_LEVEL2</td>
+</tr>
+<tr>
+<td>Mochi</td>
+<td>E_MI_ISP_3DNR_LEVEL7</td>
+</tr>
+<tr>
+<td>Maruko</td>
+<td>E_MI_ISP_3DNR_LEVEL7</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#314-mi_isp_chnparam_t">MI_ISP_ChnParam_t</a></p>
+</li>
+</ul>
+<h3 id="38-mi_isp_bindsnrid_e">3.8. MI_ISP_BindSnrId_e<a class="headerlink" href="#38-mi_isp_bindsnrid_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 绑定sensor的ID。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_SENSOR_INVALID = 0,
+    E_MI_ISP_SENSOR0 = 0x1,
+    E_MI_ISP_SENSOR1 = 0x2,
+    E_MI_ISP_SENSOR2 = 0x4,
+    E_MI_ISP_SENSOR3 = 0x8,
+    E_MI_ISP_SENSOR4 = 0x10,
+    E_MI_ISP_SENSOR5 = 0x20,
+    E_MI_ISP_SENSOR6 = 0x40,
+    E_MI_ISP_SENSOR7 = 0x80,
+    E_MI_ISP_SENSOR_MAX = 8
+}MI_ISP_BindSnrId_e;
+</pre></div>
+
+
+</li>
+</ul>
+<h3 id="39-mi_isp_sync3a_e">3.9. MI_ISP_SYNC3A_e<a class="headerlink" href="#39-mi_isp_sync3a_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义同步各通道 3A 参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+E_MI_ISP_SYNC3A_NONE = 0x00,
+E_MI_ISP_SYNC3A_AE   = 0x01,
+E_MI_ISP_SYNC3A_AWB  = 0x02,
+E_MI_ISP_SYNC3A_IQ   = 0x04
+}MI_ISP_SYNC3A_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_SYNC3A_NONE</td>
+<td>不同步3A</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SYNC3A_AE</td>
+<td>同步自动曝光</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SYNC3A_AWB</td>
+<td>同步自动白平衡</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SYNC3A_IQ</td>
+<td>同步图像质量参数设置</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="310-mi_isp_iqapiheader_t">3.10. MI_ISP_IQApiHeader_t<a class="headerlink" href="#310-mi_isp_iqapiheader_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义设定IQ api 数据属性。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_IQApiHeader_s
+{
+    MI_U32 u32HeadSize;    //Size of MIIspApiHeader_t
+    MI_U32 u32DataLen;     //Data length;
+    MI_U32 u32CtrlID;      //Function ID
+    MI_U32 u32Channel;     //Isp channel number
+    MI_U32 u32DevId;    //Isp Device Id
+    MI_S32 s32Ret;         //Isp api retuen value
+} MI_ISP_IQApiHeader_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32HeadSize</td>
+<td>MI_ISP_IQApiHeader_t struct占用空间</td>
+</tr>
+<tr>
+<td>u32DataLen</td>
+<td>数据size</td>
+</tr>
+<tr>
+<td>u32CtrlID</td>
+<td>功能对应control Id</td>
+</tr>
+<tr>
+<td>u32Channel</td>
+<td>Isp 通道Id</td>
+</tr>
+<tr>
+<td>u32DevId</td>
+<td>Isp 设备Id</td>
+</tr>
+<tr>
+<td>s32Ret</td>
+<td>接口返回值</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="311-mi_isp_versionpara_t">3.11. MI_ISP_VersionPara_t<a class="headerlink" href="#311-mi_isp_versionpara_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义ISP特殊参数版本。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_VersionPara_s
+{
+    MI_U32 u32Revision;
+    MI_U32 u32Size;
+    MI_U8 u8Data[VERSIONPARA_DATA_SIZE];
+}MI_ISP_VersionPara_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Revision</td>
+<td>和IQ team 协商定义的对应版本号</td>
+</tr>
+<tr>
+<td>u32Size</td>
+<td>数据对应有效size</td>
+</tr>
+<tr>
+<td>u8Data[VERSIONPARA_DATA_SIZE]</td>
+<td>存储数据，VERSIONPARA_DATA_SIZE的值是64</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#312-mi_isp_custiqparam_t">MI_ISP_CustIQParam_t</a></p>
+</li>
+</ul>
+<h3 id="312-mi_isp_custiqparam_t">3.12. MI_ISP_CustIQParam_t<a class="headerlink" href="#312-mi_isp_custiqparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义ISP IQ初始化参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CustIQParam_s
+{
+    MI_ISP_VersionPara_t  stVersion;
+}MI_ISP_CustIQParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stVersion</td>
+<td>版本参数</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>需要ISP 客制化处理的一些IQ初始化参数，可以通过该参数设置， 如果没有需求，可以都设置0。</p>
+</li>
+</ul>
+<h3 id="313-mi_isp_channelattr_t">3.13. MI_ISP_ChannelAttr_t<a class="headerlink" href="#313-mi_isp_channelattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 通道静态属性参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ChannelAttr_s
+{
+    MI_U32  u32SensorBindId; //bitmask by MI_ISP_BindSnrId_e
+    MI_ISP_CustIQParam_t stIspCustIqParam;
+    MI_U32  u32Sync3AType; //sync 3a bitmask by MI_ISP_SYNC3A_e
+}MI_ISP_ChannelAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32SensorBindId</td>
+<td>通道绑定对应的sensor  Id</td>
+</tr>
+<tr>
+<td>stIspCustIqParam</td>
+<td>Isp IQ初始化参数</td>
+</tr>
+<tr>
+<td>u32Sync3AType</td>
+<td>同步通道内多组图像之间的3A/IQ 参数</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>当多sensor拼接场景一个ISP channel 需要处理多个sensor 图像，需要通过u32SensorBindId 将多个sensor Id bitmask 起来设置，否则只设置对应sensor Id接口，如果不需要ISP做IQ/3A，或者前端数据源不是sensor，可以设置0。</p>
+</li>
+<li>
+<p>当多sensor拼接场景一个ISP channel 需要处理多个sensor 图像，通过u32Sync3AType 设置多个图像之间3A/IQ效果同步， 避免两个图像之间效果差别过大。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#23-mi_isp_createchannel">MI_ISP_CreateChannel</a></p>
+</li>
+</ul>
+<h3 id="314-mi_isp_chnparam_t">3.14. MI_ISP_ChnParam_t<a class="headerlink" href="#314-mi_isp_chnparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 通道动态属性参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ChnParam_s
+{
+    MI_ISP_HDRType_e      eHDRType;
+    MI_ISP_3DNR_Level_e   e3DNRLevel;
+    MI_BOOL               bMirror;
+    MI_BOOL               bFlip;
+    MI_SYS_Rotate_e       eRot;
+    MI_BOOL              bY2bEnable;
+} MI_ISP_ChnParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eHDRType</td>
+<td>HDR 开关参数</td>
+</tr>
+<tr>
+<td>e3DNRLevel</td>
+<td>3dnr 量级参数</td>
+</tr>
+<tr>
+<td>bMirror</td>
+<td>使能通道Mirror</td>
+</tr>
+<tr>
+<td>bFlip</td>
+<td>使能通道Flip</td>
+</tr>
+<tr>
+<td>eRot</td>
+<td>通道rotation参数</td>
+</tr>
+<tr>
+<td>bY2bEnable</td>
+<td>使能yuv to bayer的转换功能</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>非Maruko的chip，eRot&gt;0或者bFlip=True时，e3DNRLevel 必须大于0。</p>
+</li>
+<li>
+<p>bY2bEnable只有Muffin支持，且只有input port是Frame Mode时支持。</p>
+</li>
+<li>
+<p>Mochi 不支持HDR/Mirror/Flip/Rot/Y2bEnable 功能。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#27-mi_isp_setchnparam">MI_ISP_SetChnParam</a></p>
+</li>
+</ul>
+<h3 id="315-mi_isp_outportparam_t">3.15. MI_ISP_OutPortParam_t<a class="headerlink" href="#315-mi_isp_outportparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 ISP 输出端口的参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_OutPortParam_s
+{
+    MI_SYS_WindowRect_t stCropRect;
+    MI_SYS_PixelFormat_e  ePixelFormat;
+    MI_SYS_CompressMode_e eCompressMode;
+    MI_ISP_BufferLayout_e eBufLayout;
+}MI_ISP_OutPortParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stCropRect</td>
+<td>输出裁剪区域</td>
+</tr>
+<tr>
+<td>ePixelFormat</td>
+<td>像素格式</td>
+</tr>
+<tr>
+<td>eCompressMode</td>
+<td>输出像素压缩模式</td>
+</tr>
+<tr>
+<td>eBufLayout</td>
+<td>输出图像内存布局</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>eCompressMode 支持范围：</p>
+<table>
+<thead>
+<tr>
+<th>芯片</th>
+<th>支持的输出像素压缩模式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiramisu</td>
+<td>E_MI_SYS_COMPRESS_MODE_NONE</td>
+</tr>
+<tr>
+<td>Muffin</td>
+<td>E_MI_SYS_COMPRESS_MODE_NONE</td>
+</tr>
+<tr>
+<td>Mochi</td>
+<td>E_MI_SYS_COMPRESS_MODE_NONE  <br>E_MI_SYS_COMPRESS_MODE_TO_6BIT</td>
+</tr>
+<tr>
+<td>Maruko</td>
+<td>E_MI_SYS_COMPRESS_MODE_TO_6BIT</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>E_MI_SYS_COMPRESS_MODE_10TO6限制</p>
+<p><table>
+    <tr>
+        <td colspan=2>Output_Compress_10TO6</td>
+        <td>Mochi</td>
+        <td>Maruko</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Pixel</td>
+        <td>yuv420SP NV12</td>
+        <td>Y</td>
+        <td>Y</td>
+    </tr>
+    <tr>
+        <td>yuv422 YUYV</td>
+        <td>Y</td>
+        <td>Y</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Pixel Alignment (WxH)</td>
+        <td>yuv420SP NV12</td>
+        <td>16x2</td>
+        <td>16x2</td>
+    </tr>
+    <tr>
+        <td>yuv422 YUYV</td>
+        <td>2x2</td>
+        <td>2x2</td>
+    </tr>
+</table></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="316-mi_isp_callbk_func">3.16. MI_ISP_CALLBK_FUNC<a class="headerlink" href="#316-mi_isp_callbk_func" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义回调函数类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef MI_S32 (*MI_ISP_CALLBK_FUNC)(MI_U64 u64Data);
+</pre></div>
+
+
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#319-mi_isp_callbackparam_t">MI_ISP_CallBackParam_t</a></p>
+</li>
+</ul>
+<h3 id="317-mi_isp_callbackmode_e">3.17. MI_ISP_CallBackMode_e<a class="headerlink" href="#317-mi_isp_callbackmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义回调模式。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_CALLBACK_ISR,
+    E_MI_ISP_CALLBACK_MAX,
+} MI_ISP_CallBackMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_CALLBACK_ISR</td>
+<td>硬件中断模式回调</td>
+</tr>
+<tr>
+<td>E_MI_ISP_CALLBACK_MAX</td>
+<td>回调模式最大值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>目前只支持ISR 回调模式。</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#319-mi_isp_callbackparam_t">MI_ISP_CallBackParam_t</a></p>
+</li>
+</ul>
+<h3 id="318-mi_isp_irqtype_e">3.18. MI_ISP_IrqType_e<a class="headerlink" href="#318-mi_isp_irqtype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义硬件中断类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_IRQ_ISPVSYNC,
+    E_MI_ISP_IRQ_ISPFRAMEDONE,
+    E_MI_ISP_IRQ_MAX,
+} MI_ISP_IrqType_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_IRQ_ISPVSYNC</td>
+<td>ISP Vsync 中断类型</td>
+</tr>
+<tr>
+<td>E_MI_ISP_IRQ_ISPFRAMEDONE</td>
+<td>ISP Frame done 中断类型</td>
+</tr>
+<tr>
+<td>E_MI_ISP_IRQ_MAX</td>
+<td>ISP 硬件中断类型最大值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>E_MI_VPE_IRQ_ISPVSYNC: 每一帧第一个pixel的信号</p>
+</li>
+<li>
+<p>E_MI_VPE_IRQ_ISPFRAMEDONE：isp 写出每一张结束的信号。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#319-mi_isp_callbackparam_t">MI_ISP_CallBackParam_t</a></p>
+</li>
+</ul>
+<h3 id="319-mi_isp_callbackparam_t">3.19. MI_ISP_CallBackParam_t<a class="headerlink" href="#319-mi_isp_callbackparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义回调参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CallBackParam_s
+{
+    MI_ISP_CallBackMode_e eCallBackMode;
+    MI_ISP_IrqType_e  eIrqType;
+    MI_ISP_CALLBK_FUNC  pfnCallBackFunc;
+    MI_U64    u64Data;
+} MI_ISP_CallBackParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eCallBackMode</td>
+<td>回调模式</td>
+</tr>
+<tr>
+<td>eIrqType</td>
+<td>硬件中断模式类型</td>
+</tr>
+<tr>
+<td>pfnCallBackFunc</td>
+<td>回调接口指针</td>
+</tr>
+<tr>
+<td>u64Data</td>
+<td>回调接口参数</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#217-mi_isp_callbacktask_register">MI_ISP_CallBackTask_Register</a></p>
+<p><a href="#218-mi_isp_callbacktask_unregister">MI_ISP_CallBackTask_Unregister</a></p>
+</li>
+</ul>
+<h3 id="320-mi_isp_zoomentry_t">3.20. MI_ISP_ZoomEntry_t<a class="headerlink" href="#320-mi_isp_zoomentry_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 Zoom 单元条目类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ZoomEntry_s
+
+{
+
+    MI_SYS_WindowRect_t stCropWin;
+
+    MI_U8 u8ZoomSensorId;
+
+} MI_ISP_ZoomEntry_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stCropWin</td>
+<td>Crop位置参数</td>
+</tr>
+<tr>
+<td>u8ZoomSensorId</td>
+<td>Crop 参数对应的sensor Id</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>u8ZoomSensorId和sensor driver中pCus_sensor_GetCurSwtichSensorId回调函数回传值对应。</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#321-mi_isp_zoomtable_t">MI_ISP_ZoomTable_t</a></p>
+</li>
+</ul>
+<h3 id="321-mi_isp_zoomtable_t">3.21. MI_ISP_ZoomTable_t<a class="headerlink" href="#321-mi_isp_zoomtable_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 Zoom Table 类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ZoomTable_s
+{
+    MI_U32 u32EntryNum;
+    MI_ISP_ZoomEntry_t *pVirTableAddr;
+} MI_ISP_ZoomTable_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32EntryNum</td>
+<td>Zoom  Table 中包含条目数量</td>
+</tr>
+<tr>
+<td>pVirTableAddr</td>
+<td>Zoom  Table Buffer Pointer</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#220-mi_isp_loadportzoomtable">MI_ISP_LoadPortZoomTable</a></p>
+</li>
+</ul>
+<h3 id="322-mi_isp_zoomattr_t">3.22. MI_ISP_ZoomAttr_t<a class="headerlink" href="#322-mi_isp_zoomattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义 Zoom 属性。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_ZoomAttr_s
+
+{
+
+    MI_U32 u32FromEntryIndex;
+
+    MI_U32 u32ToEntryIndex;
+
+    MI_U32 u32CurEntryIndex;
+
+} MI_ISP_ZoomAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32FromEntryIndex</td>
+<td>开始运行Zoom的条目索引</td>
+</tr>
+<tr>
+<td>u32ToEntryIndex</td>
+<td>结束运行Zoom的条目索引</td>
+</tr>
+<tr>
+<td>u32CurEntryIndex</td>
+<td>当前Zoom位置的索引</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#221-mi_isp_startportzoom">MI_ISP_StartPortZoom</a></p>
+<p><a href="#223-mi_isp_getportcurzoomattr">MI_ISP_GetPortCurZoomAttr</a></p>
+</li>
+</ul>
+<h3 id="323-mi_isp_custsegattr_t">3.23. MI_ISP_CustSegAttr_t<a class="headerlink" href="#323-mi_isp_custsegattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义AI ISP属性。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CustSegAttr_s
+{
+    MI_ISP_CustSegMode_e        eMode;
+    MI_ISP_InternalSeg_e         eFrom;
+    MI_ISP_InternalSeg_e         eTo;
+    MI_ISP_CustSegInPortParam_t  stInputParam;
+    MI_ISP_CustSegOutPortParam_t stOutputParam;
+} MI_ISP_CustSegAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eMode</td>
+<td>Pass1的模式</td>
+</tr>
+<tr>
+<td>eFrom</td>
+<td>Pass1的起始模块</td>
+</tr>
+<tr>
+<td>eTo</td>
+<td>Pass1的结束模块</td>
+</tr>
+<tr>
+<td>stInputParam</td>
+<td>Pass1  input port的属性</td>
+</tr>
+<tr>
+<td>stOutputParam</td>
+<td>Pass1  output port的属性</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<p>参数具体作用，请参考<a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a>的说明。</p>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="324-mi_isp_custseginportparam_t">3.24. MI_ISP_CustSegInPortParam_t<a class="headerlink" href="#324-mi_isp_custseginportparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>Pass1 input port的属性。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CustSegInPortParam_s
+{
+    MI_SYS_PixelFormat_e ePixelFormat;
+} MI_ISP_CustSegInPortParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePixelFormat</td>
+<td>数据格式</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>Before 3DNR只支持12bit bayer和16bit bayer的输入输出。</p>
+</li>
+<li>
+<p>Before WDR只支持16bit bayer的输入输出。</p>
+</li>
+<li>
+<p>Before RGB2YUV只支持E_MI_SYS_PIXEL_FRAME_ARGB8888和E_MI_SYS_PIXEL_FRAME_RGB101010的输入输出。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="325-mi_isp_custsegoutportparam_t">3.25. MI_ISP_CustSegOutPortParam_t<a class="headerlink" href="#325-mi_isp_custsegoutportparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>Pass1 output port的属性。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_ISP_CustSegOutPortParam_s
+
+{
+
+​     MI_SYS_PixelFormat_e ePixelFormat;
+
+} MI_ISP_CustSegOutPortParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePixelFormat</td>
+<td>数据格式</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>Before 3DNR只支持12bit bayer和16bit bayer的输入输出。</p>
+</li>
+<li>
+<p>Before WDR只支持16bit bayer的输入输出。</p>
+</li>
+<li>
+<p>Before RGB2YUV只支持E_MI_SYS_PIXEL_FRAME_ARGB8888和E_MI_SYS_PIXEL_FRAME_RGB101010的输入输出。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="326-mi_isp_custsegmode_e">3.26. MI_ISP_CustSegMode_e<a class="headerlink" href="#326-mi_isp_custsegmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>AI ISP的模式。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+​     E_MI_ISP_CUST_SEG_MODE_NONE = 0,
+
+​     E_MI_ISP_CUST_SEG_MODE_INSERT,
+
+​     E_MI_ISP_CUST_SEG_MODE_REPLACE,
+
+​     E_MI_ISP_CUST_SEG_MODE_MAX
+
+} MI_ISP_CustSegMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_CUST_SEG_MODE_NONE</td>
+<td>关闭AI ISP</td>
+</tr>
+<tr>
+<td>E_MI_ISP_CUST_SEG_MODE_INSERT</td>
+<td>插入模式</td>
+</tr>
+<tr>
+<td>E_MI_ISP_CUST_SEG_MODE_REPLACE</td>
+<td>替换模式</td>
+</tr>
+<tr>
+<td>E_MI_ISP_CUST_SEG_MODE_MAX</td>
+<td>模式的最大值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="327-mi_isp_internalseg_e">3.27. MI_ISP_InternalSeg_e<a class="headerlink" href="#327-mi_isp_internalseg_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>ISP的模块名称。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_SEG_INVALID = 0,
+    E_MI_ISP_SEG_HDR,     // HDR
+    E_MI_ISP_SEG_3DNR,    // 3DNR
+    E_MI_ISP_SEG_WDR,     // WDR
+    E_MI_ISP_SEG_RGB2YUV, // RGB2YUV
+    E_MI_ISP_SEG_MAX
+} MI_ISP_InternalSeg_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_SEG_INVALID</td>
+<td>无效模块</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_HDR</td>
+<td>HDR模块</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_3DNR</td>
+<td>DNR,Rotation/mirror/flip模块</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_WDR</td>
+<td>WDR模块</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_RGB2YUV</td>
+<td>RGB2YUV模块</td>
+</tr>
+<tr>
+<td>E_MI_ISP_SEG_MAX</td>
+<td>模块的最大值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#224-mi_isp_setcustsegattr">MI_ISP_SetCustSegAttr</a></p>
+<p><a href="#225-mi_isp_getcustsegattr">MI_ISP_GetCustSegAttr</a></p>
+</li>
+</ul>
+<h3 id="328-mi_isp_bufferlayout_e">3.28. MI_ISP_BufferLayout_e<a class="headerlink" href="#328-mi_isp_bufferlayout_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>buffer布局。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_BUFFER_LAYOUT_ONE_FRAME,
+    E_MI_ISP_BUFFER_LAYOUT_MULTI_PLANE,
+    E_MI_ISP_BUFFER_LAYOUT_MAX,
+} MI_ISP_BufferLayout_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_BUFFER_LAYOUT_ONE_FRAME</td>
+<td>布局在一个buffer</td>
+</tr>
+<tr>
+<td>E_MI_ISP_BUFFER_LAYOUT_MULTI_PLANE</td>
+<td>布局在多个buffer</td>
+</tr>
+<tr>
+<td>E_MI_ISP_BUFFER_LAYOUT_MAX</td>
+<td>布局的最大值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注意事项</p>
+<ul>
+<li>
+<p>只有stitch时，eBufLayout才能设置成E_MI_ISP_BUFFER_LAYOUT_MULTI_PLANE，此时output port输出E_MI_SYS_BUFDATA_MULTIPLANE类型的数据。否则输出E_MI_SYS_BUFDATA_FRAME 类型的数据。</p>
+</li>
+<li>
+<p>只有output port 1支持eBufLayout = E_MI_ISP_BUFFER_LAYOUT_MULTI_PLANE。</p>
+</li>
+<li>
+<p>E_MI_SYS_BUFDATA_MULTIPLANE和E_MI_SYS_BUFDATA_FRAME的含义，请到 <a href="sys_zh.html">MI SYS API</a> 中查看。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#211-mi_isp_setoutputportparam">MI_ISP_SetOutputPortParam</a></p>
+<p><a href="#212-mi_isp_getoutputportparam">MI_ISP_GetOutputPortParam</a></p>
+</li>
+</ul>
+<h3 id="329-mi_isp_overlap_e">3.29. MI_ISP_Overlap_e<a class="headerlink" href="#329-mi_isp_overlap_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>重叠属性。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_ISP_OVERLAP_NONE,
+    E_MI_ISP_OVERLAP_128,
+    E_MI_ISP_OVERLAP_256,
+    E_MI_ISP_OVERLAP_MAX
+} MI_ISP_Overlap_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_ISP_OVERLAP_NONE</td>
+<td>关闭overlap</td>
+</tr>
+<tr>
+<td>E_MI_ISP_OVERLAP_128</td>
+<td>多读128列pixel</td>
+</tr>
+<tr>
+<td>E_MI_ISP_OVERLAP_256</td>
+<td>多读256列pixel</td>
+</tr>
+<tr>
+<td>E_MI_ISP_OVERLAP_MAX</td>
+<td>Overlap最大值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#231-mi_isp_setchnoverlapattr">MI_ISP_SetChnOverlapAttr</a></p>
+<p><a href="#232-mi_isp_getchnoverlapattr">MI_ISP_GetChnOverlapAttr</a></p>
+</li>
+</ul>
+<h2 id="4-isp">4. <span id=errorcode>ISP错误码</span><a class="headerlink" href="#4-isp" title="Permanent link">&para;</a></h2>
+<p>API 错误码如下表所示。</p>
+<p>表 4‑1：API 错误码</p>
+<table>
+<thead>
+<tr>
+<th><strong>错误代码</strong></th>
+<th><strong>宏定义</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xA0078001</td>
+<td>MI_ERR_ISP_INVALID_CHNID</td>
+<td>设备通道号无效</td>
+</tr>
+<tr>
+<td>0xA0078002</td>
+<td>MI_ERR_ISP_INVALID_PORTID</td>
+<td>设备端口号无效</td>
+</tr>
+<tr>
+<td>0xA0078003</td>
+<td>MI_ERR_ISP_ILLEGAL_PARAM</td>
+<td>非法参数</td>
+</tr>
+<tr>
+<td>0xA0078004</td>
+<td>MI_ERR_ISP_EXIST</td>
+<td>设备已经退出</td>
+</tr>
+<tr>
+<td>0xA0078005</td>
+<td>MI_ERR_ISP_UNEXIST</td>
+<td>设备还没有退出</td>
+</tr>
+<tr>
+<td>0xA0078006</td>
+<td>MI_ERR_ISP_NULL_PTR</td>
+<td>空指针参数</td>
+</tr>
+<tr>
+<td>0xA0078008</td>
+<td>MI_ERR_ISP_NOT_SUPPORT</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>0xA0078009</td>
+<td>MI_ERR_ISP_NOT_PERM</td>
+<td>操作不允许</td>
+</tr>
+<tr>
+<td>0xA007800C</td>
+<td>MI_ERR_ISP_NOMEM</td>
+<td>分配内存失败</td>
+</tr>
+<tr>
+<td>0xA007800D</td>
+<td>MI_ERR_ISP_NOBUF</td>
+<td>内存已经使用完</td>
+</tr>
+<tr>
+<td>0xA007800E</td>
+<td>MI_ERR_ISP_BUF_EMPTY</td>
+<td>视频输入缓存为空</td>
+</tr>
+<tr>
+<td>0xA0078010</td>
+<td>MI_ERR_ISP_NOTREADY</td>
+<td>设备未初始化完成</td>
+</tr>
+<tr>
+<td>0xA0078012</td>
+<td>MI_ERR_ISP_BUSY</td>
+<td>设备系统繁忙</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-procfs">5. PROCFS介绍<a class="headerlink" href="#5-procfs" title="Permanent link">&para;</a></h2>
+<h3 id="51-cat">5.1. cat<a class="headerlink" href="#51-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>调试信息</p>
+<div class="codehilite"><pre><span></span># cat /proc/mi_modules/mi_isp/mi_isp0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/isp/isp-10.png" /></p>
+</li>
+<li>
+<p>调试信息分析</p>
+<p>记录当前ISP的使用状况以及相关属性、可以动态地获取到这些信息，方便调试和测试。</p>
+</li>
+<li>
+<p>参数说明</p>
+<p><table>
+    <tr>
+    <th width=189 colspan=2>参数</th>
+    <th width=254 valign=top>描述</th>
+      </tr>
+    <tr>
+        <td width=180 rowspan=15 valign=top>ISP Dev info</td>
+        <td width=108 valign=top>DevId </td>
+        <td width=254 valign=top>Isp Dev Id</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>CreChnNum</td>
+        <td width=254 valign=top>当前 Chn 数量</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>DevMask </td>
+        <td width=254 valign=top>Stitch Dev Mask</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>cmdq</td>
+        <td width=254 valign=top>Cmdq 指针</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>En</td>
+        <td width=254 valign=top>ISR 中断使能标志</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>Mode</td>
+        <td width=254 valign=top>ISR 中断模式</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>num</td>
+        <td width=254 valign=top>ISR ID</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>VsyncCnt</td>
+        <td width=254 valign=top>ISR ID</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>FrameDoneCnt</td>
+        <td width=254 valign=top>ISR Frame Done Cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>DropCnt</td>
+        <td width=254 valign=top>ISR Frame Drop Cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>crcfailcnt</td>
+        <td width=254 valign=top>input crc校验失败次数</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>RdmaVfcFailCnt</td>
+        <td width=254 valign=top>input VFC 解压fail cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>3dnrVfcFailCnt</td>
+        <td width=254 valign=top>3dnr VFC 解压fail cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>fifofullcnt</td>
+        <td width=254 valign=top>发生fifo full cnt</td>
+    </tr>
+    <tr>
+        <td width=108 valign=top>rstcnt</td>
+        <td width=254 valign=top>发生reset hw cnt</td>
+    </tr>
+    <tr>
+        <td width=180 rowspan=24 valign=top>ISP Chn info</td>
+        <td width=147 valign=top>DevId </td>
+        <td width=224 valign=top>Isp Dev Id</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>ChnId </td>
+        <td width=224 valign=top>Isp Chn Id</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>start</td>
+        <td width=224 valign=top>Chn Start Flag</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>SnrId</td>
+        <td width=224 valign=top>Bind sensorId</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Sync3A</td>
+        <td width=224 valign=top>Sync 3A type</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>chnNum</td>
+        <td width=224 valign=top>Muti chn Num</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Crop</td>
+        <td width=224 valign=top>Input Crop Size</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>InSize</td>
+        <td width=224 valign=top>Input Size</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>pixel</td>
+        <td width=224 valign=top>Input pixel format</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>compress</td>
+        <td width=224 valign=top>Input compress type</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Stride</td>
+        <td width=224 valign=top>Input Buffer Stride</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Atom</td>
+        <td width=224 valign=top>底层拿住 buffer 数量</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Atom0</td>
+        <td width=224 valign=top>释放 buffer 后底层没有 buffer 数量</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>Rot</td>
+        <td width=224 valign=top>Rotation 角度</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>bMirror/Flip</td>
+        <td width=224 valign=top>水平/竖直 翻转</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>3DNRLevel</td>
+        <td width=224 valign=top>3DNR Level</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>HdrMode</td>
+        <td width=224 valign=top>HDR mode</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>CustMode</td>
+        <td width=224 valign=top>AI ISP Cust Seg mode</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>CustFrom</td>
+        <td width=224 valign=top>AI ISP From Cust seg</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>CustTo</td>
+        <td width=224 valign=top>AI ISP to Cust</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>PreCnt/EnqCnt/BarCnt/
+    checkin/checkout/DeqCnt</td>
+        <td width=224 valign=top>Callback 接口执行次数</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>MaxIv/MinIv</td>
+        <td width=224 valign=top>callback 执行的间隔时间</td>
+    </tr>
+     <tr>
+        <td width=147 valign=top>DropCnt</td>
+        <td width=224 valign=top>drop task cnt</td>
+    </tr>
+    <tr>
+        <td width=147 valign=top>EnqOTNull</td>
+        <td width=224 valign=top>Enq 时 OutBuffer 为 Null 次数统计</td>
+    </tr>
+    <tr>
+        <td width=180 rowspan=13 valign=top>ISP OutPut Port info</td>
+        <td width=98 valign=top>DevId </td>
+        <td width=258 valign=top>Dev Id</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>ChnId </td>
+        <td width=258 valign=top>Plane id</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>PortID</td>
+        <td width=258 valign=top>Port Id</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Bindtype</td>
+        <td width=258 valign=top>与后级绑定模式</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Enable</td>
+        <td width=258 valign=top>Port enable flag</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Pixel</td>
+        <td width=258 valign=top>Port output pixel format</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>compress</td>
+        <td width=258 valign=top>Port output compress type</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>PortCrop</td>
+        <td width=258 valign=top>output Crop Size</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Stride</td>
+        <td width=258 valign=top>Output Stride</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>GetCnt</td>
+        <td width=258 valign=top>尝试获取 OutPut buffer 数量</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>Failcnt</td>
+        <td width=258 valign=top>获取 OutPut buffer 失败数量</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>FinishCnt</td>
+        <td width=258 valign=top>处理完 OutPut buffer 数量</td>
+    </tr>
+    <tr>
+        <td width=98 valign=top>fps</td>
+        <td width=258 valign=top>Output port frame rate</td>
+    </tr>
+</table></p>
+</li>
+</ul>
+<h3 id="52-echo">5.2. echo<a class="headerlink" href="#52-echo" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="err">#</span> <span class="nx">echo</span> <span class="nx">help</span> <span class="o">&gt;</span> <span class="err">/proc/mi_modules/mi_isp/mi_isp0</span>
+</pre></div>
+
+
+<p><img alt="" src="mymedia/isp/isp-11.png" /></p>
+<p>Echo help 查看可用命令                                            |
+| 功能     | <div style="width:415pt"> Stop 指定 channel                                          |
+| -------- | ------------------------------------------------------------ |
+| 命令     | echo stopchnl [ChnID] [ON/OFF] &gt;  /proc/mi_modules/mi_isp/mi_isp0 |
+| 参数说明 | [ChnId]   通道号   <br>[ON/OFF]   ON: stop chn   OFF: start chn    |
+| 举例     | echo stopchnl 0 ON &gt;  /proc/mi_modules/mi_isp/mi_isp0        |</p>
+<table>
+    <tr>
+        <th>功能</th>
+        <th><div style="width:415pt">Dump选定channel的output数据，并保存在/path路径下</th>
+    </tr>
+    <tr>
+        <td>命令</td>
+        <td>echo dumptaskfile [chnid, Cnt, /path/, bOnlyDumpResChange, bdumpport] > /proc/mi_modules/mi_isp/mi_isp0</td>
+    </tr>
+    <tr>
+        <td rowspan="5">参数说明</td>
+        <td>Chnid: channel id</td>
+    </tr>
+    <tr>
+        <td>Cnt: dump 数量</td>
+    </tr>
+    <tr>
+        <td>Path: 存放dump出来文件的路径</td>
+    </tr>
+    <tr>
+        <td>bOnlyDumpResChange: 有时候有些花图在切分辨率时产生，敲 dump 命令和切分辨率操作不好配合，可以先设置该参数，然后再切分辨率，当程序识别到分辨率变化时就会将分辨率变化后的那张 buffer dump  出来。 (非必选参数) </td>
+    </tr>
+    <tr>
+        <td>Bdumpport: 只dump 某一个portid，默认是dump 所有在输出的port。 (非必选参数)</td>
+    </tr>
+    <tr>
+        <td>举例</td>
+        <td>echo dumptaskfile 0 1 /mnt  > /proc/mi_modules/mi_isp/mi_isp0</td>
+    </tr>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置Dev的atomvalue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo setatom [AtomValue] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>AtomValue: input realtime mode下Driver 最大持有buffer 数量</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo setatom  3 &gt; /proc/mi_modules/mi_isp/mi_isp0 <br> 注意：有时候底层卡住，可以尝试增大该atom，加塞一张buffer 给driver，重新trig，看是否可以恢复，或者掉帧的时候，加大是否可以满帧。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt">  清除指定channel  port的input/output/done buffer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo clearbuf [chnid, portid bClearInput, bclearoutput, bcleardonebuff] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id   <br> Portid: port id  <br> bClearInput: 清除input的buffer  <br> bclearoutput: 清除output的buffer   <br>bcleardonebuff: 清除done的buffer</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo clearbuf 0 0 1 0 0 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置debug level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo debuglv [level] &gt;/proc/mi_modules/mi_isp/mi_isp0 <br>echo debuglv [chnid][level] &gt;/proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id <br>Level: <br>单个level参数时: 1:isp api,2:flow,4:check irq done  <br>两个参数时: 1:check buffer,2:check loop,4:check frame pts,8:check fence done,16:check func time,32:check sidebandmsg,64:check zoominfo</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo debuglv 4 &gt; /proc/mi_modules/mi_isp/mi_isp0   //打开check irq done 相关的MI打印 <br> echo debuglv 0 3 &gt; /proc/mi_modules/mi_isp/mi_isp0   //打开channel0 level3的打印，打印buffer info和loop info</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 主动drop frame 数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo skipframe [chnid, skipnum] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id   <br> skipnum: drop frame count</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo skipframe 0 60 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 将 Bind Q 中缓存的 buffer 消耗掉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo clearbindq [chnid bclear] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id  <br> bclear: 是否clear</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo clearbindq 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0      //clear channel0 bindQ <br>将 Bind Q 中缓存的 buffer 消耗掉。<br>有时候前端拿不到 buffer，发现是ISP BindQ塞满，判断 ISP 是否拿的不够快，将bindQ清空，看BindQ中是否还会累加上来，如果还累加则说明ISP拿的不够快，如果不再增加，说明是之前一次异常塞在里面一直没有消耗掉。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置打印帧率，低于该值打印出来</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo fpsth [chnid portid fpsint fpsfloat] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id   <br> Portid: port id  <br> fpsint: 帧率整数位   <br> fpsfloat: 帧率小数位</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo fpsth 0 0 30 30 &gt; /proc/mi_modules/mi_isp/mi_isp0    // channel0 port0中小于30.30的fps打印出来</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置打印pts，超过区间值打印出来</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo ptsth [chnid portid minptsinterval maxptsinterval] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id   <br> Portid: port id  <br> minptsinterval: pts间隔的最小值   <br> maxptsinterval: pts间隔的最大值</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo ptsth 0 0 30000 40000 &gt; /proc/mi_modules/mi_isp/mi_isp0    // channel0 port0中pts间隔小于30ms大于40ms的值打印出来</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置port是否enable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo enableport [chnid, portid, bEn] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id  <br>  Portid: port id  <br>  bEn: 1/0</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo enableport 0 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置 output port 参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo outputparam pixel [chnid, portid pixelmode] &gt; /proc/mi_modules/mi _isp/mi_isp0 <br>echo outputparam compress [chnid, portid compressmode]  &gt; /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam crop [chnid, portid cropX  cropY cropW cropH] &gt; /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam all [chnid, portid pixelmode compressmode cropX cropY cropW cropH] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id  <br>Portid: port id <br>Pixelmode: 输出的pixel类型，填入MI_SYS_PixelFormat_e  中对应的数值 <br>Compressmode：输出的压缩模式，填入MI_SYS_CompressMode_e中对应的数值 <br>cropX：输出的端口裁剪X坐标  <br>cropY：输出的端口裁剪Y坐标 <br>cropW：输出的端口裁剪宽度  <br>cropH：输出的端口裁剪高度</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo outputparam pixel 0 1 11 &gt;  /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam compress 0 1 5 &gt;  /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam crop 0 1 0 0 1920 1080  &gt; /proc/mi_modules/mi_isp/mi_isp0 <br>echo outputparam all 0 1 11 5 0 0 1920 1080  &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置始终送同一张画面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo sendoneframe [chnid, bEn] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id   <br>  bEn: 1/0</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo sendoneframe 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置3dnr level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo dnrlevel [chnid, level] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id   <br>  level: 3dnr level, 值同MI_ISP_3DNR_Level_e</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo dnrlevel 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> reset 整个isp 硬件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo resethw &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>无</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo resethw &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置output crc 校验</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo crcmode [chnid, bEn] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id   <br>  bEn: 1/0</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo crcmode 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置DataGen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo datagen [chnid, bEn] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>Chnid: channel id  <br>  bEn: 1/0</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo datagen 0 1 &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th><div style="width:415pt"> 设置发生cmdq timeout之后执行的命令抓取信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>命令</td>
+<td>echo cmdqtimeout [bEn, keyword, cmdline, path] &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+<tr>
+<td>参数说明</td>
+<td>bEn: 1/0  <br>  keyword: 执行的命令   <br>  cmdline: 执行的字符串  <br>  path: 信息保存路径</td>
+</tr>
+<tr>
+<td>举例</td>
+<td>echo 1 cat /proc/mi_modules/mi_isp/mi_isp0 /mnt/cmdqerr.txt &gt; /proc/mi_modules/mi_isp/mi_isp0</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="iqserver_zh.html" title="IQSERVER" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IQSERVER
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="ive_zh.html" title="IVE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                IVE
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../search/search_index.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

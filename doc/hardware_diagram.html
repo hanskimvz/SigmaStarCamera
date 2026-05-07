@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>SSC378QE + SC465SL Hardware Block Diagram</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: 'Segoe UI', 'Malgun Gothic', sans-serif; 
+    background: #f0f2f5; 
+    padding: 40px; 
+  }
+  h1 { 
+    text-align: center; 
+    color: #1a1a2e; 
+    margin-bottom: 8px; 
+    font-size: 22px; 
+  }
+  .subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 32px;
+  }
+  .diagram-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .board {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px;
+    position: relative;
+  }
+
+  /* ── 그리드 레이아웃 ── */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  /* ── 공통 블록 스타일 ── */
+  .block {
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    position: relative;
+  }
+  .block .label {
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .block .desc {
+    color: #555;
+    font-size: 11px;
+  }
+
+  /* ── 센서 블록 ── */
+  .sensor-area {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 20px;
+  }
+  .sensor {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+  }
+  .lens {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff;
+  }
+  .ircut {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #fff;
+  }
+
+  /* ── SoC 블록 ── */
+  .soc-area {
+    background: #1a1a2e;
+    border-radius: 14px;
+    padding: 24px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    position: relative;
+  }
+  .soc-area::before {
+    content: 'SigmaStar SSC378QE';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e94560;
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .soc-block {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+  }
+  .soc-block .label {
+    font-weight: 700;
+    font-size: 12px;
+    color: #ffd700;
+    margin-bottom: 3px;
+  }
+  .soc-block .desc {
+    color: rgba(255,255,255,0.7);
+    font-size: 10px;
+  }
+  .soc-block.wide {
+    grid-column: 1 / -1;
+  }
+
+  /* ── 외부 장치 ── */
+  .peripheral-area {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 20px;
+  }
+  .peripheral {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    color: #333;
+  }
+  .peripheral .label { color: #1a1a2e; }
+
+  /* ── 하단 장치 ── */
+  .bottom-area {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .bottom-block {
+    background: #fff3e0;
+    border: 2px solid #ffb74d;
+    border-radius: 10px;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 12px;
+    min-width: 120px;
+  }
+  .bottom-block .label {
+    font-weight: 700;
+    color: #e65100;
+    font-size: 12px;
+  }
+  .bottom-block .desc {
+    color: #777;
+    font-size: 10px;
+  }
+
+  /* ── 연결선 (화살표 라벨) ── */
+  .arrow-label {
+    position: absolute;
+    font-size: 10px;
+    color: #e94560;
+    font-weight: 700;
+    background: #f0f2f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  /* ── 연결 인디케이터 ── */
+  .conn-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+  }
+  .conn-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .conn-line {
+    height: 2px;
+    flex: 1;
+    min-width: 20px;
+  }
+  .conn-text {
+    font-size: 10px;
+    color: #888;
+    white-space: nowrap;
+  }
+  .mipi { background: #e94560; }
+  .i2c { background: #ffd700; }
+  .gpio { background: #4facfe; }
+  .spi { background: #00c9a7; }
+  .eth { background: #667eea; }
+
+  /* ── 범례 ── */
+  .legend {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #666;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+
+<h1>Hardware Block Diagram</h1>
+<p class="subtitle">SC465SL + SSC378QE AI Starlight IP Camera — StarVision AI-4M</p>
+
+<div class="diagram-container">
+  <div class="board">
+    <div class="main-layout">
+
+      <!-- ── 좌측: 센서/렌즈 ── -->
+      <div class="sensor-area">
+        <div class="block lens">
+          <div class="label">F1.0 Lens</div>
+          <div class="desc">M12 / CS-Mount<br>1/1.8" 이미지 서클<br>2.8mm (H:110°)</div>
+        </div>
+        <div class="block sensor">
+          <div class="label">SC465SL</div>
+          <div class="desc">4MP (2576×1456)<br>1/1.88" BSI<br>SL Series<br>QE: 90% (VIS) / 50% (850nm)<br>SFCPixel® · Lightbox IR®</div>
+        </div>
+        <div class="block ircut">
+          <div class="label">IR-CUT Filter</div>
+          <div class="desc">기계식 듀얼 필터<br>Day/Night 자동 전환</div>
+        </div>
+        <!-- 연결 표시 -->
+        <div style="padding: 4px 0;">
+          <div class="conn-row">
+            <div class="conn-dot mipi"></div>
+            <div class="conn-line mipi"></div>
+            <div class="conn-text">MIPI CSI-2 (2/4Lane, RAW12) →</div>
+          </div>
+          <div class="conn-row">
+            <div class="conn-dot i2c"></div>
+            <div class="conn-line i2c"></div>
+            <div class="conn-text">I2C (Control) ←→</div>
+          </div>
+          <div class="conn-row">
+            <div class="conn-dot gpio"></div>
+            <div class="conn-line gpio"></div>
+            <div class="conn-text">GPIO (IR-CUT) ←</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 중앙: SoC ── -->
+      <div class="soc-area">
+        <div class="soc-block">
+          <div class="label">ARM Cortex-A35</div>
+          <div class="desc">CPU Core<br>NEON / FPU</div>
+        </div>
+        <div class="soc-block">
+          <div class="label">256MB DDR3(L)</div>
+          <div class="desc">내장 메모리<br>외장 DDR 불필요</div>
+        </div>
+        <div class="soc-block">
+          <div class="label">8MP Starlight ISP</div>
+          <div class="desc">Color Night Vision · HDR · WDR<br>3D-DNR · De-fog · LDC · EIS</div>
+        </div>
+        <div class="soc-block">
+          <div class="label">NPU (CEVA)</div>
+          <div class="desc">AI 비전 엔진<br>사람/차량 감지</div>
+        </div>
+        <div class="soc-block">
+          <div class="label">H.265+ / H.264</div>
+          <div class="desc">Video Encoder<br>4K@25fps / 4MP@30fps<br>ROI · Smart Encoding</div>
+        </div>
+        <div class="soc-block">
+          <div class="label">EMAC + EPHY</div>
+          <div class="desc">Ethernet MAC+PHY<br>10/100 Mbps 내장</div>
+        </div>
+        <div class="soc-block">
+          <div class="label">Audio Codec</div>
+          <div class="desc">내장 오디오<br>양방향 음성<br>G.711 / AAC</div>
+        </div>
+        <div class="soc-block">
+          <div class="label">Peripherals</div>
+          <div class="desc">USB 2.0 · SPI · I2C<br>UART · GPIO · PWM · ADC</div>
+        </div>
+        <div class="soc-block wide">
+          <div class="label">Security: ARM TrustZone (PSA Certified)</div>
+          <div class="desc">Always-On 저전력 코프로세서 · &lt; 660mW @4Kp24 · QFN128</div>
+        </div>
+      </div>
+
+      <!-- ── 우측: 외부 장치 ── -->
+      <div class="peripheral-area">
+        <div class="block peripheral">
+          <div class="label">RJ45 (PoE)</div>
+          <div class="desc">10/100 Ethernet<br>IEEE 802.3af<br>내장형 트랜스포머</div>
+        </div>
+        <div class="block peripheral">
+          <div class="label">SPI NOR Flash</div>
+          <div class="desc">16~32MB<br>Boot / FW 저장</div>
+        </div>
+        <div class="block peripheral">
+          <div class="label">Micro SD</div>
+          <div class="desc">SDIO 인터페이스<br>최대 256GB<br>로컬 녹화</div>
+        </div>
+        <div class="block peripheral">
+          <div class="label">MEMS MIC</div>
+          <div class="desc">지향성 마이크<br>양방향 음성</div>
+        </div>
+        <div class="block peripheral">
+          <div class="label">USB 2.0</div>
+          <div class="desc">Wi-Fi 동글 (옵션)<br>4G 모뎀 (옵션)</div>
+        </div>
+        <!-- 연결 표시 -->
+        <div style="padding: 4px 0;">
+          <div class="conn-row">
+            <div class="conn-text">← Ethernet</div>
+            <div class="conn-line eth"></div>
+            <div class="conn-dot eth"></div>
+          </div>
+          <div class="conn-row">
+            <div class="conn-text">← SPI</div>
+            <div class="conn-line spi"></div>
+            <div class="conn-dot spi"></div>
+          </div>
+          <div class="conn-row">
+            <div class="conn-text">← SDIO / USB / I2S</div>
+            <div class="conn-line gpio"></div>
+            <div class="conn-dot gpio"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 하단: LED / 전원 ── -->
+    <div class="bottom-area">
+      <div class="bottom-block">
+        <div class="label">IR LED × 4</div>
+        <div class="desc">850nm<br>30m (Turret) / 50m (Bullet)<br>← GPIO PWM 제어</div>
+      </div>
+      <div class="bottom-block">
+        <div class="label">White LED × 2</div>
+        <div class="desc">Warm White<br>20m (Turret) / 30m (Bullet)<br>← GPIO PWM 제어<br>AI Smart Dual-Light 연동</div>
+      </div>
+      <div class="bottom-block">
+        <div class="label">전원부</div>
+        <div class="desc">DC 12V / PoE (802.3af)<br>DC-DC: Core 1.0V, DDR 1.35V<br>LDO: AVDD 2.8V, DVDD 1.2V<br>DOVDD 1.8V, I/O 3.3V</div>
+      </div>
+      <div class="bottom-block">
+        <div class="label">Speaker (옵션)</div>
+        <div class="desc">양방향 음성 출력<br>Line-out / 내장</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 범례 -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot mipi"></div>MIPI CSI-2</div>
+    <div class="legend-item"><div class="legend-dot i2c"></div>I2C</div>
+    <div class="legend-item"><div class="legend-dot gpio"></div>GPIO / SDIO</div>
+    <div class="legend-item"><div class="legend-dot spi"></div>SPI</div>
+    <div class="legend-item"><div class="legend-dot eth"></div>Ethernet</div>
+  </div>
+</div>
+
+</body>
+</html>

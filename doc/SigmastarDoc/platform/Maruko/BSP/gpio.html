@@ -1,0 +1,4645 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>GPIO使用参考 - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                GPIO使用参考
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Development/sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ldc_zh.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MI/vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        GPIO使用参考
+      </label>
+    
+    <a href="gpio.html" title="GPIO使用参考" class="md-nav__link md-nav__link--active">
+      GPIO使用参考
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gpio-numpad" class="md-nav__link">
+    2. GPIO NUM与PAD对应表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gpio" class="md-nav__link">
+    3. 内核使用GPIO
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-gpio" class="md-nav__link">
+    3.1. 申请gpio端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-gpio" class="md-nav__link">
+    3.2. 释放gpio端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3. 设为输入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4. 设为输出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5. 获取输入电平
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    3.6. 设置输出电平
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-gpio-mode" class="md-nav__link">
+    3.7. 设置引脚为GPIO MODE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-tmux" class="md-nav__link">
+    3.8. 设置引脚的TMUX模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-tmux" class="md-nav__link">
+    3.9. 获取引脚的TMUX模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    3.10. 设置引脚的电压模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.11. 获取引脚状态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-gpio" class="md-nav__link">
+    3.12. 设置GPIO的上拉功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-gpio" class="md-nav__link">
+    3.13. 设置GPIO的下拉功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-gpio" class="md-nav__link">
+    3.14. 关闭GPIO的上/下拉功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-gpio" class="md-nav__link">
+    3.15. 获取GPIO的上/下拉状态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-gpio" class="md-nav__link">
+    3.16. 设置GPIO的驱动能力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-gpi" class="md-nav__link">
+    3.17. 获取GPI的驱动能力等级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-gpio" class="md-nav__link">
+    3.18. 获取GPIO的中断号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319-gpio-index" class="md-nav__link">
+    3.19. 获取GPIO Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320-padmodepin" class="md-nav__link">
+    3.20. 获取特定PadMode对应的PIN脚
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gpio" class="md-nav__link">
+    4. 用户空间使用GPIO
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-exportunexport" class="md-nav__link">
+    4.1. export/unexport文件接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-sysclassgpiogpion" class="md-nav__link">
+    4.2. /sys/class/gpio/gpioN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-sysclassmstarmsys" class="md-nav__link">
+    4.3. /sys/class/mstar/msys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4. 示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ubootgpio" class="md-nav__link">
+    5. UBOOT使用GPIO
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cmdgpio-config-gpio-port" class="md-nav__link">
+    5.1. CMD：gpio -Config gpio port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-api" class="md-nav__link">
+    5.2. API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-gpio" class="md-nav__link">
+    6. GPIO复用功能
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-kernel-config" class="md-nav__link">
+    6.1. Kernel Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    6.2. 复用功能使用说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-api" class="md-nav__link">
+    6.3. API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gpio" class="md-nav__link">
+    7. GPIO映射表
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gpio-numpad" class="md-nav__link">
+    2. GPIO NUM与PAD对应表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gpio" class="md-nav__link">
+    3. 内核使用GPIO
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-gpio" class="md-nav__link">
+    3.1. 申请gpio端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-gpio" class="md-nav__link">
+    3.2. 释放gpio端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3. 设为输入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4. 设为输出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5. 获取输入电平
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    3.6. 设置输出电平
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-gpio-mode" class="md-nav__link">
+    3.7. 设置引脚为GPIO MODE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-tmux" class="md-nav__link">
+    3.8. 设置引脚的TMUX模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-tmux" class="md-nav__link">
+    3.9. 获取引脚的TMUX模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    3.10. 设置引脚的电压模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    3.11. 获取引脚状态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-gpio" class="md-nav__link">
+    3.12. 设置GPIO的上拉功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-gpio" class="md-nav__link">
+    3.13. 设置GPIO的下拉功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-gpio" class="md-nav__link">
+    3.14. 关闭GPIO的上/下拉功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-gpio" class="md-nav__link">
+    3.15. 获取GPIO的上/下拉状态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-gpio" class="md-nav__link">
+    3.16. 设置GPIO的驱动能力
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-gpi" class="md-nav__link">
+    3.17. 获取GPI的驱动能力等级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-gpio" class="md-nav__link">
+    3.18. 获取GPIO的中断号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#319-gpio-index" class="md-nav__link">
+    3.19. 获取GPIO Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#320-padmodepin" class="md-nav__link">
+    3.20. 获取特定PadMode对应的PIN脚
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gpio" class="md-nav__link">
+    4. 用户空间使用GPIO
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-exportunexport" class="md-nav__link">
+    4.1. export/unexport文件接口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-sysclassgpiogpion" class="md-nav__link">
+    4.2. /sys/class/gpio/gpioN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-sysclassmstarmsys" class="md-nav__link">
+    4.3. /sys/class/mstar/msys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4. 示例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-ubootgpio" class="md-nav__link">
+    5. UBOOT使用GPIO
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cmdgpio-config-gpio-port" class="md-nav__link">
+    5.1. CMD：gpio -Config gpio port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-api" class="md-nav__link">
+    5.2. API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-gpio" class="md-nav__link">
+    6. GPIO复用功能
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-kernel-config" class="md-nav__link">
+    6.1. Kernel Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    6.2. 复用功能使用说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-api" class="md-nav__link">
+    6.3. API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gpio" class="md-nav__link">
+    7. GPIO映射表
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>GPIO使用参考</h1>
+<hr />
+<h2 id="1">1. 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>General Purpose Input Output （通用输入/输出）简称为GPIO。GPIO 采用标准的LINUX框架，能够使用统一的接口来操作gpio。</p>
+<p><img alt="" src="mymedia/gpio/gpio-1.png" />                             </p>
+<p>Figure 1: GPIO框架</p>
+<p>GPIO的框架如上图，中间层是 gpiolib，用于管理系统中的 GPIO。gpiolib 汇总了 GPIO 的通用操作，根据 GPIO 的特性，gpiolib 对上（其他 Drivers）提供的一套统一通用的操作 GPIO 的软件接口。对下，Gpiolib 提供了针对不同芯片操作的一套 framework，针对不同芯片，只需要实现mdrv_gpio_io.c，然后使用 Gpiolib 提供的注册函数，将其挂接到 Gpiolib 上。</p>
+<h2 id="2-gpio-numpad">2. GPIO NUM与PAD对应表<a class="headerlink" href="#2-gpio-numpad" title="Permanent link">&para;</a></h2>
+<p>请通过原理图上GPIO 的Pad name在表1-1中查找对应的GPIO Index，GPIO Index作为软件操作GPIO相关函数的输入参数使用。</p>
+<p>例如：希望操作的GPIO为 PAD_UART_TX2，根据表1-1中的内容找到对应的GPIO Index为6。</p>
+<p>表1-1：GPIO NUM与PAD对应表</p>
+<table>
+<thead>
+<tr>
+<th>Pad Name</th>
+<th>Index</th>
+<th>Pad Name</th>
+<th>Index</th>
+<th>Pad Name</th>
+<th>Index</th>
+<th>Pad Name</th>
+<th>Index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PAD_SD1_IO1</td>
+<td>0</td>
+<td>PAD_SD1_IO0</td>
+<td>1</td>
+<td>PAD_SD1_IO5</td>
+<td>2</td>
+<td>PAD_SD1_IO4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>PAD_SD1_IO3</td>
+<td>4</td>
+<td>PAD_SD1_IO2</td>
+<td>5</td>
+<td>PAD_SD1_IO6</td>
+<td>6</td>
+<td>PAD_UART1_RX</td>
+<td>7</td>
+</tr>
+<tr>
+<td>PAD_UART1_TX</td>
+<td>8</td>
+<td>PAD_SPI0_CZ</td>
+<td>9</td>
+<td>PAD_SPI0_CK</td>
+<td>10</td>
+<td>PAD_SPI0_DI</td>
+<td>11</td>
+</tr>
+<tr>
+<td>PAD_SPI0_DO</td>
+<td>12</td>
+<td>PAD_PWM0</td>
+<td>13</td>
+<td>PAD_PWM1</td>
+<td>14</td>
+<td>PAD_SD_CLK</td>
+<td>15</td>
+</tr>
+<tr>
+<td>PAD_SD_CMD</td>
+<td>16</td>
+<td>PAD_SD_D0</td>
+<td>17</td>
+<td>PAD_SD_D1</td>
+<td>18</td>
+<td>PAD_SD_D2</td>
+<td>19</td>
+</tr>
+<tr>
+<td>PAD_SD_D3</td>
+<td>20</td>
+<td>PAD_USB_CID</td>
+<td>21</td>
+<td>PAD_PM_SD_CDZ</td>
+<td>22</td>
+<td>PAD_PM_IRIN</td>
+<td>23</td>
+</tr>
+<tr>
+<td>PAD_PM_UART_RX</td>
+<td>24</td>
+<td>PAD_PM_UART_TX</td>
+<td>25</td>
+<td>PAD_PM_GPIO0</td>
+<td>26</td>
+<td>PAD_PM_GPIO1</td>
+<td>27</td>
+</tr>
+<tr>
+<td>PAD_PM_GPIO2</td>
+<td>28</td>
+<td>PAD_PM_GPIO3</td>
+<td>29</td>
+<td>PAD_PM_GPIO4</td>
+<td>30</td>
+<td>PAD_PM_GPIO7</td>
+<td>31</td>
+</tr>
+<tr>
+<td>PAD_PM_GPIO8</td>
+<td>32</td>
+<td>PAD_PM_GPIO9</td>
+<td>33</td>
+<td>PAD_PM_SPI_CZ</td>
+<td>34</td>
+<td>PAD_PM_SPI_DI</td>
+<td>35</td>
+</tr>
+<tr>
+<td>PAD_PM_SPI_WPZ</td>
+<td>36</td>
+<td>PAD_PM_SPI_DO</td>
+<td>37</td>
+<td>PAD_PM_SPI_CK</td>
+<td>38</td>
+<td>PAD_PM_SPI_HLD</td>
+<td>39</td>
+</tr>
+<tr>
+<td>PAD_PM_LED0</td>
+<td>40</td>
+<td>PAD_PM_LED1</td>
+<td>41</td>
+<td>PAD_FUART_RX</td>
+<td>42</td>
+<td>PAD_FUART_TX</td>
+<td>43</td>
+</tr>
+<tr>
+<td>PAD_FUART_CTS</td>
+<td>44</td>
+<td>PAD_FUART_RTS</td>
+<td>45</td>
+<td>PAD_GPIO0</td>
+<td>46</td>
+<td>PAD_GPIO1</td>
+<td>47</td>
+</tr>
+<tr>
+<td>PAD_GPIO2</td>
+<td>48</td>
+<td>PAD_GPIO3</td>
+<td>49</td>
+<td>PAD_GPIO4</td>
+<td>50</td>
+<td>PAD_GPIO5</td>
+<td>51</td>
+</tr>
+<tr>
+<td>PAD_GPIO6</td>
+<td>52</td>
+<td>PAD_GPIO7</td>
+<td>53</td>
+<td>PAD_GPIO14</td>
+<td>54</td>
+<td>PAD_GPIO15</td>
+<td>55</td>
+</tr>
+<tr>
+<td>PAD_I2C0_SCL</td>
+<td>56</td>
+<td>PAD_I2C0_SDA</td>
+<td>57</td>
+<td>PAD_I2C1_SCL</td>
+<td>58</td>
+<td>PAD_I2C1_SDA</td>
+<td>59</td>
+</tr>
+<tr>
+<td>PAD_SR_IO00</td>
+<td>60</td>
+<td>PAD_SR_IO01</td>
+<td>61</td>
+<td>PAD_SR_IO02</td>
+<td>62</td>
+<td>PAD_SR_IO03</td>
+<td>63</td>
+</tr>
+<tr>
+<td>PAD_SR_IO04</td>
+<td>64</td>
+<td>PAD_SR_IO05</td>
+<td>65</td>
+<td>PAD_SR_IO06</td>
+<td>66</td>
+<td>PAD_SR_IO07</td>
+<td>67</td>
+</tr>
+<tr>
+<td>PAD_SR_IO08</td>
+<td>68</td>
+<td>PAD_SR_IO09</td>
+<td>69</td>
+<td>PAD_SR_IO10</td>
+<td>70</td>
+<td>PAD_SR_IO11</td>
+<td>71</td>
+</tr>
+<tr>
+<td>PAD_SR_IO12</td>
+<td>72</td>
+<td>PAD_SR_IO13</td>
+<td>73</td>
+<td>PAD_SR_IO14</td>
+<td>74</td>
+<td>PAD_SR_IO15</td>
+<td>75</td>
+</tr>
+<tr>
+<td>PAD_SR_IO16</td>
+<td>76</td>
+<td>PAD_SR_IO17</td>
+<td>77</td>
+<td>PAD_SAR_GPIO3</td>
+<td>78</td>
+<td>PAD_SAR_GPIO2</td>
+<td>79</td>
+</tr>
+<tr>
+<td>PAD_SAR_GPIO1</td>
+<td>80</td>
+<td>PAD_SAR_GPIO0</td>
+<td>81</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-gpio">3. 内核使用GPIO<a class="headerlink" href="#3-gpio" title="Permanent link">&para;</a></h2>
+<h3 id="31-gpio">3.1. 申请gpio端口<a class="headerlink" href="#31-gpio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>创建端口为GPIO。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int gpio_request(unsigned gpio, const char *label)
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>label</td>
+<td>具体名称</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="32-gpio">3.2. 释放gpio端口<a class="headerlink" href="#32-gpio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>释放GPIO端口。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>void gpio_free(unsigned gpio)
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="33">3.3. 设为输入<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>标记gpio为输入。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int gpio_direction_input(unsigned gpio);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="34">3.4. 设为输出<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>标记gpio为输出。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int gpio_direction_output(unsigned gpio, int value);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>value</td>
+<td>输出值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="35">3.5. 获取输入电平<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>获取输入引脚的电平。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int gpio_get_value(unsigned gpio);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>电平值</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="36">3.6. 设置输出电平<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>设定输出引脚的电平。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>void gpio_set_value(unsigned gpio, int value);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>value</td>
+<td>输出值</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="37-gpio-mode">3.7. 设置引脚为GPIO MODE<a class="headerlink" href="#37-gpio-mode" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>设置引脚为GPIO MODE。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>void MDrv_GPIO_Pad_Set(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>Group Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="38-tmux">3.8. 设置引脚的TMUX模式<a class="headerlink" href="#38-tmux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>设置引脚的TMUX模式。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_PadVal_Set(U8 u8IndexGPIO, U32 u32PadMode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>Group Index</td>
+</tr>
+<tr>
+<td>u32PadMode</td>
+<td>TMUX MODE</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>输出参数错误</td>
+</tr>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="39-tmux">3.9. 获取引脚的TMUX模式<a class="headerlink" href="#39-tmux" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>获取引脚的TMUX模式。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_PadVal_Get(U8 u8IndexGPIO, U32 u32PadMode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>Group Index</td>
+</tr>
+<tr>
+<td>u32PadMode</td>
+<td>获取到的TMUX MODE</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>输出参数错误</td>
+</tr>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="310">3.10. 设置引脚的电压模式<a class="headerlink" href="#310" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>获取输入引脚的电平。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>void MDrv_GPIO_VolVal_Set(U8 u8Group, U32 u32PadMode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8Group</td>
+<td>Group num (11 Groups in total)</td>
+</tr>
+<tr>
+<td>u32PadMode</td>
+<td>Mode = 0：引脚电压为3.3V；  Mode = 1：引脚电压为1.8V</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="311">3.11. 获取引脚状态<a class="headerlink" href="#311" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>判断引脚的状态是输入还是输出。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pad_InOut(U8 u8IndexGPIO, U8 u8PadLevel);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>u8PadLevel</td>
+<td>1表示引脚状态为输出，0表示引脚状态为输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>输入参数错误</td>
+</tr>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="312-gpio">3.12. 设置GPIO的上拉功能<a class="headerlink" href="#312-gpio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>开启指定的GPIO上拉功能。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pull_Up(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>设置成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>该引脚不支持上拉设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="313-gpio">3.13. 设置GPIO的下拉功能<a class="headerlink" href="#313-gpio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>开启指定的GPIO下拉功能。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pull_Down(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>设置成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>该引脚不支持下拉设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="314-gpio">3.14. 关闭GPIO的上/下拉功能<a class="headerlink" href="#314-gpio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>关闭指定的GPIO上/下拉功能，并切换至悬空状态。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pull_Off(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>设置成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>该引脚不支持上拉设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="315-gpio">3.15. 获取GPIO的上/下拉状态<a class="headerlink" href="#315-gpio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>获取指定的GPIO上/下拉状态。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pull_Status(U8 u8IndexGPIO, U8* u8PullStatus);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>U8PullStatus</td>
+<td>获取到的上/下拉状态</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>获取成功</td>
+</tr>
+<tr>
+<td>1</td>
+<td>该引脚不支持上拉设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="316-gpio">3.16. 设置GPIO的驱动能力<a class="headerlink" href="#316-gpio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>设置指定的GPIO的驱动能力。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Drv_Set(U8 u8IndexGPIO, U8 u8Level);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>u8Level</td>
+<td>驱动能力等级</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>设置成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>该引脚不支持驱动能力设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="317-gpi">3.17. 获取GPI的驱动能力等级<a class="headerlink" href="#317-gpi" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>获取指定的GPIO的驱动能力等级。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Drv_Get(U8 u8IndexGPIO, U8* u8Level);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>u8Level</td>
+<td>获取到的GPIO的驱动能力等级</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>获取成功</td>
+</tr>
+<tr>
+<td>1</td>
+<td>该引脚不支持驱动能力设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="318-gpio">3.18. 获取GPIO的中断号<a class="headerlink" href="#318-gpio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>获取指定的GPIO的中断号。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int MDrv_GPIO_To_Irq(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>virq</td>
+<td>Virq为返回的中断号</td>
+</tr>
+<tr>
+<td>负数或0</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="319-gpio-index">3.19. 获取GPIO Index<a class="headerlink" href="#319-gpio-index" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>通过GPIO Name获取GPIO Index。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_NameToNum(U8 pu8Name, U8* GpioIndex);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>GpioIndex</td>
+<td>获取到的GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>输入参数错误</td>
+</tr>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3 id="320-padmodepin">3.20. 获取特定PadMode对应的PIN脚<a class="headerlink" href="#320-padmodepin" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>目的</p>
+<p>查询能够使用某一个特定PadMode的所有GPIO脚。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U32* MDrv_GPIO_PadModeToPadIndex(U32 u32Mode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Mode</td>
+<td>所要查询的PadMode</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数组首地址</td>
+<td>存放GPIO Index的数组</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="4-gpio">4. 用户空间使用GPIO<a class="headerlink" href="#4-gpio" title="Permanent link">&para;</a></h2>
+<h3 id="41-exportunexport">4.1. export/unexport文件接口<a class="headerlink" href="#41-exportunexport" title="Permanent link">&para;</a></h3>
+<p>用户空间可以通过sysfs接口操作GPIO：首先需要打开 CONFIG_GPIO_SYSFS
+配置，该配置位于menuconfig中：Device Drivers -&gt; GPIO support -&gt; 
+/sys/class/gpio/... (sysfs interface)</p>
+<p>/sys/class/gpio对应的源码位于driver/gpio/gpiolib-sysfs.c</p>
+<p>/sys/class/gpio目录下的包含export/unexport、gpioN、gpio_chipN三种文件：</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>读写权限</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>export</td>
+<td>wo</td>
+<td>GPIO Index</td>
+<td>在用户空间申请某个GPIO的控制权</td>
+</tr>
+<tr>
+<td>unexport</td>
+<td>wo</td>
+<td>GPIO Index</td>
+<td>在用户空间移除某个GPIO的控制权</td>
+</tr>
+<tr>
+<td>gpioN</td>
+<td>ro</td>
+<td></td>
+<td>包含具体GPIO的direction、value等信息</td>
+</tr>
+<tr>
+<td>gpio_chipN</td>
+<td>ro</td>
+<td></td>
+<td>指代GPIO控制器</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="mymedia/gpio/gpio-2.png" /></p>
+<ul>
+<li>
+<p><strong>/sys/class/gpio/export</strong> 文件属性为只允许写不允许读，用户程序通过写入GPIO的编号来向内核申请将某个GPIO的控制权导出到用户空间（sysfs），前提是没有内核代码申请这个GPIO端口，如用户申请编号为12的GPIO的命令：</p>
+<div class="codehilite"><pre><span></span># echo 12 &gt; export
+</pre></div>
+
+
+<p>上述操作会为GPIO Index为12的GPIO创建一个节点gpio12，此时/sys/class/gpio目录下边生成一个gpio12的目录，如下图所示：</p>
+<p><img alt="" src="mymedia/gpio/gpio-3.png" /></p>
+</li>
+<li>
+<p><strong>/sys/class/gpio/unexport</strong> 文件属性也为只允许写不允许读，和export的效果相反，用户通过写入GPIO的编号来移除用户空间（sysfs）的接口。如移除gpio12文件夹的操作命令：</p>
+<div class="codehilite"><pre><span></span># echo 12 &gt; unexport
+</pre></div>
+
+
+<p>上述操作将会移除gpio12这个节点，如下图所示：</p>
+<p><img alt="" src="mymedia/gpio/gpio-4.png" /></p>
+</li>
+</ul>
+<h3 id="42-sysclassgpiogpion">4.2. /sys/class/gpio/gpioN<a class="headerlink" href="#42-sysclassgpiogpion" title="Permanent link">&para;</a></h3>
+<p>/sys/class/gpio/gpioN 指代某个具体的gpio端口，里边有如下属性文件：</p>
+<table>
+    <tr>
+        <td>文件名</td>
+        <td>读写权限</td>
+        <td>值</td>
+        <td>描述</td>
+    </tr>
+    <tr>
+        <td rowspan=4>direction</td>
+        <td rowspan=4>rw</td>
+        <td>in</td>
+        <td>输入模式，value不可写</td>
+    </tr>
+    <tr>
+        <td>out</td>
+        <td>输出模式，value可写</td>
+    </tr> 
+    <tr>
+        <td>high</td>
+        <td>输出状态，默认高电平状态，value可写</td>
+    </tr>  
+    <tr>
+        <td>low</td>
+        <td>输出状态，默认低电平状态，value可写</td>
+    </tr>
+    <tr>
+        <td rowspan=2>value</td>
+        <td rowspan=2>rw</td>
+        <td>1</td>
+        <td>高电平状态</td>  
+    </tr> 
+    <tr>
+        <td>0</td>
+        <td>低电平状态</td>  
+    </tr>   
+</table>
+
+<p><strong>direction</strong> 表示gpio端口的方向，读取结果是in或out，读取命令为：</p>
+<div class="codehilite"><pre><span></span># cat direciton
+</pre></div>
+
+
+<p><strong>value</strong> 表示gpio引脚的电平，0表示低电平，1表示高电平；读取命令为：</p>
+<div class="codehilite"><pre><span></span># cat value
+</pre></div>
+
+
+<p>可以对direction进行写操作，命令为：</p>
+<div class="codehilite"><pre><span></span># echo in &gt; direction
+</pre></div>
+
+
+<p><img alt="" src="mymedia/gpio/gpio-5.png" /></p>
+<div class="codehilite"><pre><span></span># echo out &gt; direction
+</pre></div>
+
+
+<p>如果direction被配置为输出（out），电平默认为低，同时value是可写的，操作命令为：</p>
+<div class="codehilite"><pre><span></span># echo 1 &gt; value
+
+# echo 0 &gt; value
+</pre></div>
+
+
+<p><img alt="" src="mymedia/gpio/gpio-6.png" /></p>
+<p>direction写入low或high时不仅可以设置为输出还可以设置指定的输出电平。操作命令为：</p>
+<div class="codehilite"><pre><span></span># echo high &gt; direction
+</pre></div>
+
+
+<p><img alt="" src="mymedia/gpio/gpio-7.png" /></p>
+<div class="codehilite"><pre><span></span># echo low &gt; direction
+</pre></div>
+
+
+<p><img alt="" src="mymedia/gpio/gpio-8.png" /></p>
+<p>当然如果内核不支持或者内核代码不愿意，将不会存在这个属性，比如内核调用了gpio_export(N,0)就表示内核不愿意修改gpio端口方向属性。</p>
+<p>记住任何非零的值都将输出为高电平。如果某个引脚被配置为中断，则可以调用poll(2)函数监听该中断，中断触发后poll(2)函数就会返回。</p>
+<h3 id="43-sysclassmstarmsys">4.3. /sys/class/mstar/msys<a class="headerlink" href="#43-sysclassmstarmsys" title="Permanent link">&para;</a></h3>
+<p>LINUX GPIO框架暂时未支持GPIO上下拉和驱动能力调节相关配置，在LINUX的GPIO标准框架外，我们又增加了另外的文件接口用于操作GPIO的上下拉和调节驱动能力。如需支持此功能，首先需要打开 CONFIG_MSYS_GPIO 配置，该配置位于menuconfig中：Device Drivers -&gt; SStar SoC platform drivers -&gt; msys api -&gt;support GPIO pull and driving modify</p>
+<p>/sys/class/mstar/msys对应的源代码位于driver/sstar/msys/ms_msys.c</p>
+<p>设置上拉/下拉之前需要先将GPIO设置为输入状态，输出状态上拉/下拉是没法测量的：</p>
+<p><img alt="" src="mymedia/gpio/gpio-9.png" /></p>
+<p>引脚设置为输入状态后，进入sys/class/mstar/msys文件夹：</p>
+<ul>
+<li>
+<p><strong>gpio_pull</strong> 可以写入up和down</p>
+<p><table>
+    <tr>
+        <th>文件名</th>
+        <th>读写权限</th>
+        <th>值</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td rowspan=2>gpio_pull</td>
+        <td rowspan=2>rw</td>
+        <td>up</td>
+        <td>上拉模式</td>
+    </tr>
+    <tr>
+        <td>down</td>
+        <td>下拉模式</td>
+</table></p>
+<p>查看GPIO当前的pull 状态是pull up / pull down / pull off：</p>
+<div class="codehilite"><pre><span></span>1.  # echo 50 &gt;  gpio_pull
+2.  # cat &gt; gpio_pull
+</pre></div>
+
+
+<p><img alt="" src="mymedia/gpio/gpio-10.png" /></p>
+<p>如果输入非法的GPIO Index 和GPIO Name，则会报错：</p>
+<p><img alt="" src="mymedia/gpio/gpio-11.png" /></p>
+<p>设置上拉和设置下拉的命令为：</p>
+<div class="codehilite"><pre><span></span>1.  # echo 50 up &gt; gpio_pull
+2.  # echo 50 down &gt; gpio_pull
+</pre></div>
+
+
+<p>设置后查看gpio_pull的状态，如下图，50表示GPIO Index，PAD_OUTN_RX0_CH3表示GPIO Name。</p>
+<div class="codehilite"><pre><span></span>1.  # cat gpio_pull
+</pre></div>
+
+
+<p><img alt="" src="mymedia/gpio/gpio-12.png" /></p>
+<p>如果输入非法的GPIO Index 和GPIO Name，则会报错：</p>
+<p><img alt="" src="mymedia/gpio/gpio-13.png" /></p>
+<p>检查具体BIT是否被正确写入，可以根据GPIO_Mapping_Table，查找对应的PAD（如下图GPIO INDEX：50）。当pull up的时候PE bit位为1，PS bit位为0；pull down的时候PE bit位为1，PS bit位为0。具体操作命令为：</p>
+<div class="codehilite"><pre><span></span>1.  # riu_r 0x103e 0x34
+</pre></div>
+
+
+<p>查看riu_r返回值的BIT6、BIT11</p>
+<p><img alt="" src="mymedia/gpio/gpio-14.png" />
+<img alt="" src="mymedia/gpio/gpio-15.png" /></p>
+</li>
+<li>
+<p><strong>gpio_drive</strong> 可以写入驱动的等级</p>
+<table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>读写权限</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio_drive</td>
+<td>rw</td>
+<td>0~8</td>
+<td>设置GPIO的驱动等级</td>
+</tr>
+</tbody>
+</table>
+<p>当前平台中GPIO的驱动能力等级可根据根据GPIO_Mapping_Table查阅。</p>
+<p>查看GPIO的初始驱动能力等级的命令位：(也可以直接使用GPIO43的名称PAD_OUTP_RX0_CH0)</p>
+<div class="codehilite"><pre><span></span>1.  # echo 43 &gt; gpio_drive
+2.  # cat &gt; gpio_drive
+</pre></div>
+
+
+<p><img alt="" src="mymedia/gpio/gpio-16.png" /></p>
+<p>如果输入非法的GPIO Index 和GPIO Name，则会报错：</p>
+<p><img alt="" src="mymedia/gpio/gpio-17.png" /></p>
+<p>设置驱动能力之前将GPIO设置为高电平输出状态方便测量，设置命令为：</p>
+<div class="codehilite"><pre><span></span>1.  # echo 43 1 &gt; gpio_drive
+</pre></div>
+
+
+<p>43为GPIO Index，1为驱动能力等级，对应4mA</p>
+<p>设置驱动能力之后查看gpio_driver的状态，如下图，设置GPIO Index为43的引脚的驱动能力为4mA成功。</p>
+<div class="codehilite"><pre><span></span>1.  # cat gpio_drive
+</pre></div>
+
+
+<p><img alt="" src="mymedia/gpio/gpio-18.png" /></p>
+<p>检查具体BIT是否被正确写入，可以根据GPIO_Mapping_Table，查找对应的PAD(如下图GPIO INDEX：50)。当设置驱动等级为1时，[103E56]#7 ~ #8为01。具体操作命令为：</p>
+<div class="codehilite"><pre><span></span>1.  # riu_r 0x103e 0x2B
+</pre></div>
+
+
+<p>查看riu_r返回值的BIT7、BIT8</p>
+<p><img alt="" src="mymedia/gpio/gpio-19.png" /></p>
+</li>
+</ul>
+<h3 id="44">4.4. 示例<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<p>用户空间代码操作GPIO请参考sstargpio.c。</p>
+<p><a href="mymedia/gpio/sstargpio.c">sstargpio.c</a></p>
+<div class="codehilite"><pre><span></span>1.  #include &lt;stdlib.h&gt;
+2.  #include &lt;unistd.h&gt;
+3.  #include &lt;stdio.h&gt;
+4.  #include &lt;fcntl.h&gt;
+5.  #include &lt;linux/fb.h&gt;
+6.  #include &lt;linux/kd.h&gt;
+7.  #include &lt;sys/mman.h&gt;
+8.  #include &lt;sys/ioctl.h&gt;
+9.  #include &lt;sys/time.h&gt;
+10. #include &lt;string.h&gt;
+11. #include &lt;errno.h&gt;
+12. 
+13. #include &quot;mi_sys.h&quot;
+14. 
+15. #define GPIO_DEV &quot;/sys/class/gpio&quot;
+16. #define SSTAR_GPIO_IN 0
+17. #define SSTAR_GPIO_OUT 1
+18. 
+19. /* API call reference
+20.     SStar_Gpio_Export(10);
+21.     SStar_Gpio_SetDirection(10, SSTAR_GPIO_OUT);
+22.     SStar_Gpio_SetValue(10, 0/1);
+23. */
+24. 
+25. // export gpio port
+26. MI_S32 SStar_Gpio_Export(MI_S32 s32Gpio)
+27. {
+28.     MI_S32 s32Ret = -1;
+29.     MI_S32 s32Fd = -1;
+30. 
+31.     char as8GpioDev[128];
+32. 
+33.     memset(as8GpioDev, 0, sizeof(as8GpioDev));
+34.     sprintf(as8GpioDev, &quot;%s/export&quot;, GPIO_DEV);
+35. 
+36.     s32Fd = open(as8GpioDev, O_WRONLY);
+37. 
+38.     if (s32Fd &lt; 0)
+39.         printf(&quot;failed to export gpio %d\n&quot;, s32Gpio);
+40.     else
+41.     {
+42.         char as8GpioPort[10];
+43.         memset(as8GpioPort, 0, sizeof(as8GpioPort));
+44.         sprintf(as8GpioPort, &quot;%d&quot;, s32Gpio);
+45.         write(s32Fd, as8GpioPort, strlen(as8GpioPort));
+46.         printf(&quot;export gpio port: %d\n&quot;, s32Gpio);
+47.         close(s32Fd);
+48.         s32Ret = MI_SUCCESS;
+49.     }
+50. 
+51.     return s32Ret;
+52. }
+53. 
+54. // set gpio direction: 0 in, others out
+55. MI_S32 SStar_Gpio_SetDirection(MI_S32 s32Gpio, MI_S32 s32Direction)
+56. {
+57.     MI_S32 s32Ret  = -1;
+58.     const char *ps8Direction = NULL;
+59.     MI_S32 s32Fd = -1;
+60. 
+61.     char as8GpioDev[128];
+62. 
+63.     memset(as8GpioDev, 0, sizeof(as8GpioDev));
+64.     sprintf(as8GpioDev, &quot;%s/gpio%d/direction&quot;, GPIO_DEV, s32Gpio);
+65. 
+66.     s32Fd = open(as8GpioDev, O_RDWR);
+67. 
+68.     if (s32Fd &lt; 0)
+69.         printf(&quot;failed to set gpio%d direction\n&quot;, s32Gpio);
+70.     else
+71.     {
+72.         if (SSTAR_GPIO_IN == s32Direction)
+73.             ps8Direction = &quot;in&quot;;
+74.         else if (SSTAR_GPIO_OUT == s32Direction)
+75.             ps8Direction = &quot;out&quot;;
+76.         else
+77.         {
+78.             printf(&quot;Unkown gpio direction %d\n&quot;, s32Direction);
+79.         }
+80.         write(s32Fd, ps8Direction, strlen(ps8Direction));
+81.         printf(&quot;set gpio%d direction: %s\n&quot;, s32Gpio, ps8Direction);
+82.         close(s32Fd);
+83.         s32Ret = 0;
+84.     }
+85. 
+86.     return s32Ret;
+87. }
+88. 
+89. // get gpio direction
+90. MI_S32 SStar_Gpio_GetDirection(MI_S32 s32Gpio, MI_S8 *ps8Direction, MI_S32 s32Len)
+91. {
+92.     MI_S32 s32Ret  = -1;
+93.     MI_S32 s32Fd = -1;
+94. 
+95.     char as8GpioDev[128];
+96. 
+97.     memset(as8GpioDev, 0, sizeof(as8GpioDev));
+98.     sprintf(as8GpioDev, &quot;%s/gpio%d/direction&quot;, GPIO_DEV, s32Gpio);
+99. 
+100.        s32Fd = open(as8GpioDev, O_RDWR);
+101.    
+102.        if (s32Fd &lt; 0)
+103.            printf(&quot;failed to read gpio%d direction\n&quot;, s32Gpio);
+104.        else
+105.        {
+106.            memset(ps8Direction, 0, s32Len);
+107.            read(s32Fd, ps8Direction, s32Len);
+108.            printf(&quot;get gpio%d direction: %s\n&quot;, s32Gpio, ps8Direction);
+109.            close(s32Fd);
+110.            s32Ret = MI_SUCCESS;
+111.        }
+112.    
+113.        return s32Ret;
+114.    }
+115.    
+116.    // set gpio value: 0 low, 1 high
+117.    MI_S32 SStar_Gpio_SetValue(MI_S32 s32Gpio, MI_S8 s8Value)
+118.    {
+119.        MI_S32 s32Ret  = -1;
+120.        MI_S32 s32Fd = -1;
+121.    
+122.        char as8GpioDev[128];
+123.    
+124.        memset(as8GpioDev, 0, sizeof(as8GpioDev));
+125.        sprintf(as8GpioDev, &quot;%s/gpio%d/value&quot;, GPIO_DEV, s32Gpio);
+126.    
+127.        s32Fd = open(as8GpioDev, O_RDWR);
+128.    
+129.        if (s32Fd &lt; 0)
+130.            printf(&quot;failed to set gpio%d value\n&quot;, s32Gpio);
+131.        else
+132.        {
+133.            if (0 == s8Value)
+134.            {
+135.                write(s32Fd, (const void*)&quot;0&quot;, 1);
+136.            }
+137.            else if (1 == s8Value)
+138.            {
+139.                write(s32Fd, (const void*)&quot;1&quot;, 1);
+140.            }
+141.            else
+142.            {
+143.                printf(&quot;error:set gpio value fail (%d)\n&quot;, s8Value);
+144.            }
+145.            close(s32Fd);
+146.            s32Ret = MI_SUCCESS;
+147.        }
+148.    
+149.        return s32Ret;
+150.    }
+151.    
+152.    // get gpio value
+153.    MI_S32 SStar_Gpio_GetValue(MI_S32 s32Gpio, MI_S8 *s8Level)
+154.    {
+155.        MI_S32 s32Ret  = -1;
+156.        MI_S32 s32Fd = -1;
+157.    
+158.        char as8GpioDev[128];
+159.        char as8[2];
+160.    
+161.        memset(as8, 0, sizeof(as8));
+162.        memset(as8GpioDev, 0, sizeof(as8GpioDev));
+163.        sprintf(as8GpioDev, &quot;%s/gpio%d/value&quot;, GPIO_DEV, s32Gpio);
+164.    
+165.        s32Fd = open(as8GpioDev, O_RDWR);
+166.    
+167.        if (s32Fd &lt; 0)
+168.            printf(&quot;failed to read gpio%d value\n&quot;, s32Gpio);
+169.        else
+170.        {
+171.            read(s32Fd, as8, 1);
+172.            *s8Level = atoi(as8);
+173.            //printf(&quot;read gpio status: %s\n&quot;, s8Value);
+174.            close(s32Fd);
+175.            s32Ret = MI_SUCCESS;
+176.        }
+177.    
+178.        return s32Ret;
+179.    }
+180.    
+181.    // get gpio value
+182.    int new_SStar_Gpio_GetValue(MI_S32 s32Gpio)
+183.    {
+184.        int value = -1;
+185.        MI_S32 s32Fd = -1;
+186.    
+187.        char as8GpioDev[128];
+188.        char as8[2];
+189.    
+190.        memset(as8, 0, sizeof(as8));
+191.        memset(as8GpioDev, 0, sizeof(as8GpioDev));
+192.        sprintf(as8GpioDev, &quot;%s/gpio%d/value&quot;, GPIO_DEV, s32Gpio);
+193.    
+194.        s32Fd = open(as8GpioDev, O_RDWR);
+195.        if (s32Fd &lt; 0)
+196.            printf(&quot;failed to read gpio%d value\n&quot;, s32Gpio);
+197.        else
+198.        {
+199.            read(s32Fd, as8, 1);
+200.            value = atoi(as8);
+201.            close(s32Fd);
+202.        }
+203.    
+204.        return value;
+205.    }
+</pre></div>
+
+
+<h2 id="5-ubootgpio">5. UBOOT使用GPIO<a class="headerlink" href="#5-ubootgpio" title="Permanent link">&para;</a></h2>
+<h3 id="51-cmdgpio-config-gpio-port">5.1. CMD：gpio -Config gpio port<a class="headerlink" href="#51-cmdgpio-config-gpio-port" title="Permanent link">&para;</a></h3>
+<p>gpio (对于第二个参数，请输入至少 3 个字符)</p>
+<table>
+<thead>
+<tr>
+<th>gpio使用说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gpio output [gpio#] [1/0]</td>
+<td><code>gpio output 69 1</code></td>
+</tr>
+<tr>
+<td>gpio input/get [gpio#]</td>
+<td><code>gpio input 10</code>  (gpio 10 set as input)</td>
+</tr>
+<tr>
+<td>gpio toggle [gpio#]</td>
+<td><code>gpio tog 49</code> (toggle)</td>
+</tr>
+<tr>
+<td>gpio state [gpio#]</td>
+<td><code>gpio sta 49</code> (get i/o status(direction) &amp; pin status)</td>
+</tr>
+<tr>
+<td>gpio list [num_of_pins]</td>
+<td><code>gpio list 10</code> (list GPIO1~GPIO10 status)</td>
+</tr>
+</tbody>
+</table>
+<p>注意：<strong>gpio#</strong> 请参考 drivers\mstar\gpio\infinity7\gpio.h</p>
+<h3 id="52-api">5.2. API<a class="headerlink" href="#52-api" title="Permanent link">&para;</a></h3>
+<h4>5.2.1. 设置引脚为GPIO MODE</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>设置引脚为GPIO MODE。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>void MDrv_GPIO_Pad_Set(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>Group Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.2. 设置引脚的TMUX模式</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>设置引脚的TMUX模式。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_PadVal_Set(U8 u8IndexGPIO, U32 u32PadMode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>Group Index</td>
+</tr>
+<tr>
+<td>u32PadMode</td>
+<td>TMUX MODE</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>输出参数错误</td>
+</tr>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.3. 获取引脚的TMUX模式</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>获取引脚的TMUX模式。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_PadVal_Get(U8 u8IndexGPIO, U32 u32PadMode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>Group Index</td>
+</tr>
+<tr>
+<td>u32PadMode</td>
+<td>获取到的TMUX MODE</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>输出参数错误</td>
+</tr>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.4. 设置引脚的电压模式</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>获取输入引脚的电平。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>void MDrv_GPIO_VolVal_Set(U8 u8Group, U32 u32PadMode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8Group</td>
+<td>Group num (11 Groups in total)</td>
+</tr>
+<tr>
+<td>u32PadMode</td>
+<td>Mode = 0：引脚电压为3.3V；<br>Mode = 1：引脚电压为1.8V</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.5. 获取引脚状态</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>判断引脚的状态是输入还是输出。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pad_InOut(U8 u8IndexGPIO, U8 u8PadLevel);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>u8PadLevel</td>
+<td>1表示引脚状态为输出，0表示引脚状态为输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>输入参数错误</td>
+</tr>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.6. 设置GPIO的上拉功能</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>开启指定的GPIO上拉功能。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pull_Up(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>设置成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>该引脚不支持上拉设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.7. 设置GPIO的下拉功能</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>开启指定的GPIO下拉功能。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pull_Down(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>设置成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>该引脚不支持下拉设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.8. 关闭GPIO的上/下拉功能</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>关闭指定的GPIO上/下拉功能，并切换至悬空状态。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pull_Off(U8 u8IndexGPIO);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>设置成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>该引脚不支持上拉设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.9. 获取GPIO的上/下拉状态</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>获取指定的GPIO上/下拉状态。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Pull_Status(U8 u8IndexGPIO, U8* u8PullStatus);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>U8PullStatus</td>
+<td>获取到的上/下拉状态</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>获取成功</td>
+</tr>
+<tr>
+<td>1</td>
+<td>该引脚不支持上拉设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.10. 设置GPIO的驱动能力</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>设置指定的GPIO的驱动能力。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Drv_Set(U8 u8IndexGPIO, U8 u8Level);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>u8Level</td>
+<td>驱动能力等级</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>设置成功</td>
+</tr>
+<tr>
+<td>other</td>
+<td>该引脚不支持驱动能力设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.11. 获取GPIO的驱动能力等级</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>获取指定的GPIO的驱动能力等级。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_Drv_Get(U8 u8IndexGPIO, U8* u8Level);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>u8Level</td>
+<td>获取到的GPIO的驱动能力等级</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>获取成功</td>
+</tr>
+<tr>
+<td>1</td>
+<td>该引脚不支持驱动能力设置或者输入参数错误</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.12. 获取GPIO Index</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>通过GPIO Name获取GPIO Index。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8 MDrv_GPIO_NameToNum(U8 pu8Name, U8* GpioIndex);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>GPIO Index</td>
+</tr>
+<tr>
+<td>GpioIndex</td>
+<td>获取到的GPIO Index</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>输入参数错误</td>
+</tr>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>5.2.13. 获取特定PadMode对应的PIN脚</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>查询能够使用某一个特定PadMode的所有GPIO脚。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U32* MDrv_GPIO_PadModeToPadIndex(U32 u32Mode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Mode</td>
+<td>所要查询的PadMode</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数组首地址</td>
+<td>存放GPIO Index的数组</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="6-gpio">6. GPIO复用功能<a class="headerlink" href="#6-gpio" title="Permanent link">&para;</a></h2>
+<h3 id="61-kernel-config">6.1. Kernel Config<a class="headerlink" href="#61-kernel-config" title="Permanent link">&para;</a></h3>
+<p>编译Kernel时：make menuconfig</p>
+<div class="codehilite"><pre><span></span>Device Drivers--&gt;
+    [*] SStar SoC platform drivers--&gt;
+</pre></div>
+
+
+<h3 id="62">6.2. 复用功能使用说明<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<p>当需要使用GPIO的复用功能时候，首先需要获取所要操作的PIN脚的Name、所要复用的Tmux Mode，将他们配置在xxx-padmux.dtsi中：</p>
+<div class="codehilite"><pre><span></span>1.  &lt;PAD_VSYNC_OUT      PINMUX_FOR_VGA_VSYNC_MODE_1      MDRV_PUSE_VGA_VSYNC&gt;
+2.  &lt;PAD_HSYNC_OUT      PINMUX_FOR_VGA_HSYNC_MODE_1      MDRV_PUSE_VGA_HSYNC&gt;
+</pre></div>
+
+
+<p>如上所示，第一列和第二列分别表示Pad Name和Tmux Mode，MDRV_PUSE_XXX可以理解为当前这一组的配置的Name。</p>
+<p>配置的时候需要注意的事项：</p>
+<ul>
+<li>
+<p>一个Pad只能配置一种Mode，不可以一个Pad同时配置多个Mode。</p>
+</li>
+<li>
+<p>一个Puse只能对应一组配置，否则会造成冲突。</p>
+</li>
+<li>
+<p>配置的Pad和Mode必须是匹配的。</p>
+</li>
+<li>
+<p>不允许在驱动中直接进行复用操作，要求复用的配置都集中到xxx_padmux.dtsi。（需要动态调整复用配置的除外，这是为了方便管理和减少配置冲突，也因此这份dtsi文件中汇聚了几乎所有引脚的复用配置）</p>
+</li>
+</ul>
+<h3 id="63-api">6.3. API<a class="headerlink" href="#63-api" title="Permanent link">&para;</a></h3>
+<h4>6.3.1. 获取复用到的引脚</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>以Puse为检索条件遍历，获取xxx-padmux.dtsi中配置到的Pad。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int mdrv_padmux_getpad (int Puse);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Puse</td>
+<td>Puse的宏定义</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PadId</td>
+<td>成功获取到padmux.dtsi中的Pad的宏定义</td>
+</tr>
+<tr>
+<td>PAD_UNKNOWN</td>
+<td>输入的Puse有误或者padmux.dtsi中没有对应的PadId</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>6.3.2. 获取复用到的Tmux Mode</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>以Puse为检索条件遍历，获取xxx-padmux.dtsi中配置到的Tmux Mode。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int mdrv_padmux_getmode (int Puse);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Puse</td>
+<td>Puse的宏定义</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PadId</td>
+<td>成功获取到padmux.dtsi中的Mode的宏定义</td>
+</tr>
+<tr>
+<td>PAD_UNKNOWN</td>
+<td>输入的Puse有误或者padmux.dtsi中没有对应的PadId</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>6.3.3. 获取PUSE的宏定义</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>因为PUSE的宏定义遵循一套规则：</p>
+<ol>
+<li>
+<p>不同IP之间的偏移为0x10000</p>
+</li>
+<li>
+<p>同一个IP中不同Channel之间的偏移为0x100</p>
+</li>
+<li>
+<p>同一个IP同一个Channel中不同Puse之间的偏移为0x1</p>
+</li>
+</ol>
+<p>因此可以根据这三个参数获取Puse的宏定义。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>int mdrv_padmux_getpuse (int IP_Index, int Channel_Index, int Pad_Index);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP_Index</td>
+<td>Puse所在的IP，可在mdrv_puse.h中查阅</td>
+</tr>
+<tr>
+<td>Channel_Index</td>
+<td>Puse所在的Channel，可在mdrv_puse.h中查阅</td>
+</tr>
+<tr>
+<td>Pad_Index</td>
+<td>Puse在channel中的Index，可在mdrv_puse.h中查阅</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Puse</td>
+<td>成功获取到padmux.dtsi中的PadId</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>6.3.4. 获取特定PadMode对应的PIN脚</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>查询能够使用某一个特定PadMode的所有GPIO脚。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U32* MDrv_GPIO_PadModeToPadIndex(U32 u32Mode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Mode</td>
+<td>所要查询的PadMode</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数组首地址</td>
+<td>存放GPIO Index的数组</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4>6.3.5. 获取特定Pad目前的Tmux Mode</h4>
+<ul>
+<li>
+<p>目的</p>
+<p>该API用于获取某只Pad当前配置的PadMode，前提是这只Pad配置PadMode的时候是通过Padmux接口进行配置，直接操作寄存器进行配置的方式则不会使该API生效。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>U8* MDrv_GPIO_PadValGet (U8 u8IndexGPIO, U32* u32PadMode);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8IndexGPIO</td>
+<td>所要查询的PadMode</td>
+</tr>
+<tr>
+<td>u32PadMode</td>
+<td>获取到的PadMode</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<table>
+<thead>
+<tr>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>0</td>
+<td>失败</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="7-gpio">7. GPIO映射表<a class="headerlink" href="#7-gpio" title="Permanent link">&para;</a></h2>
+<p><a href="mymedia/gpio/377_GPIO_Mapping_Table.xls">377_GPIO_Mapping_Table</a></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="emmc.html" title="eMMC使用参考" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                eMMC使用参考
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="i2c.html" title="I2C使用参考" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                I2C使用参考
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../search/search_index.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

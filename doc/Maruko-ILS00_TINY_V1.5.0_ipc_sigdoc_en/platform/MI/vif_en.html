@@ -1,0 +1,5292 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>VIF - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#revision-history" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                VIF
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../index.html" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="aec_en.html" class="md-tabs__link md-tabs__link--active">
+          Development
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../customer/IPC/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Development
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      SDK Module API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        SDK Module API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_en.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_en.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_en.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_en.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_en.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_en.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_en.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_en.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_en.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_en.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_en.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_en.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ldc_en.html" title="LDC" class="md-nav__link">
+      LDC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_en.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_en.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_en.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_en.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_en.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_en.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_en.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_en.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_en.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_en.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        VIF
+      </label>
+    
+    <a href="vif_en.html" title="VIF" class="md-nav__link md-nav__link--active">
+      VIF
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. OVERVIEW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow chart
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-tiramisu-flow" class="md-nav__link">
+    1.2.1. Tiramisu flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-muffin-flow" class="md-nav__link">
+    1.2.2. Muffin flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-mochi-flow" class="md-nav__link">
+    1.2.3. Mochi flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-maruko" class="md-nav__link">
+    1.2.4. Maruko
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-keyword" class="md-nav__link">
+    1.3. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-reference" class="md-nav__link">
+    2. API REFERENCE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_vif_createdevgroup" class="md-nav__link">
+    2.1. MI_VIF_CreateDevGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_vif_destroydevgroup" class="md-nav__link">
+    2.2. MI_VIF_DestroyDevGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_vif_getdevgroupattr" class="md-nav__link">
+    2.3. MI_VIF_GetDevGroupAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_vif_setdevattr" class="md-nav__link">
+    2.4. MI_VIF_SetDevAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_vif_getdevattr" class="md-nav__link">
+    2.5. MI_VIF_GetDevAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_vif_enabledev" class="md-nav__link">
+    2.6. MI_VIF_EnableDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_vif_disabledev" class="md-nav__link">
+    2.7. MI_VIF_DisableDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_vif_getdevstatus" class="md-nav__link">
+    2.8. MI_VIF_GetDevStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_vif_setoutputportattr" class="md-nav__link">
+    2.9. MI_VIF_SetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_vif_getoutputportattr" class="md-nav__link">
+    2.10. MI_VIF_GetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_vif_enableoutputport" class="md-nav__link">
+    2.11. MI_VIF_EnableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_vif_disableoutputport" class="md-nav__link">
+    2.12. MI_VIF_DisableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_vif_query" class="md-nav__link">
+    2.13. MI_VIF_Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_vif_callbacktask_register" class="md-nav__link">
+    2.14. MI_VIF_CallBackTask_Register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_vif_callbacktask_unregister" class="md-nav__link">
+    2.15. MI_VIF_CallBackTask_UnRegister
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-vif-data-type" class="md-nav__link">
+    3. VIF DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_vif_group" class="md-nav__link">
+    3.1. MI_VIF_GROUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_vif_intfmode_e" class="md-nav__link">
+    3.2. MI_VIF_IntfMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_vif_workmode_e" class="md-nav__link">
+    3.3. MI_VIF_WorkMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_vif_framerate_e" class="md-nav__link">
+    3.4. MI_VIF_FrameRate_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_vif_clkedge_e" class="md-nav__link">
+    3.5. MI_VIF_ClkEdge_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_vif_hdrtype_e" class="md-nav__link">
+    3.6. MI_VIF_HDRType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_vif_mclksource_e" class="md-nav__link">
+    3.7. MI_VIF_MclkSource_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_vif_groupidmask_e" class="md-nav__link">
+    3.8. MI_VIF_GroupIdMask_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_vif_snrpad_e" class="md-nav__link">
+    3.9. MI_VIF_SNRPad_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_vif_groupattr_t" class="md-nav__link">
+    3.10. MI_VIF_GroupAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_vif_devattr_t" class="md-nav__link">
+    3.11. MI_VIF_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_vif_outputportattr_t" class="md-nav__link">
+    3.12. MI_VIF_OutputPortAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_vif_devportstat_t" class="md-nav__link">
+    3.13. MI_VIF_DevPortStat_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_vif_devstatus_t" class="md-nav__link">
+    3.14. MI_VIF_DevStatus_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mi_vif_callbk_func" class="md-nav__link">
+    3.15. MI_VIF_CALLBK_FUNC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-mi_vif_callbackmode_e" class="md-nav__link">
+    3.16. MI_VIF_CallBackMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-mi_vif_irqtype_e" class="md-nav__link">
+    3.17. MI_VIF_IrqType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-mi_vif_callbackparam_t" class="md-nav__link">
+    3.18. MI_VIF_CallBackParam_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vif-error-code" class="md-nav__link">
+    4. VIF ERROR CODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdisp_en.html" title="VDISP" class="md-nav__link">
+      VDISP
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../customer/IPC/FAQ/abbr.html" title="ABBR" class="md-nav__link">
+      ABBR
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    REVISION HISTORY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    1. OVERVIEW
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-module-description" class="md-nav__link">
+    1.1. Module description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-flow-chart" class="md-nav__link">
+    1.2. Flow chart
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-tiramisu-flow" class="md-nav__link">
+    1.2.1. Tiramisu flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-muffin-flow" class="md-nav__link">
+    1.2.2. Muffin flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-mochi-flow" class="md-nav__link">
+    1.2.3. Mochi flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-maruko" class="md-nav__link">
+    1.2.4. Maruko
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-keyword" class="md-nav__link">
+    1.3. Keyword
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-reference" class="md-nav__link">
+    2. API REFERENCE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_vif_createdevgroup" class="md-nav__link">
+    2.1. MI_VIF_CreateDevGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_vif_destroydevgroup" class="md-nav__link">
+    2.2. MI_VIF_DestroyDevGroup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_vif_getdevgroupattr" class="md-nav__link">
+    2.3. MI_VIF_GetDevGroupAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_vif_setdevattr" class="md-nav__link">
+    2.4. MI_VIF_SetDevAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_vif_getdevattr" class="md-nav__link">
+    2.5. MI_VIF_GetDevAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_vif_enabledev" class="md-nav__link">
+    2.6. MI_VIF_EnableDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_vif_disabledev" class="md-nav__link">
+    2.7. MI_VIF_DisableDev
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_vif_getdevstatus" class="md-nav__link">
+    2.8. MI_VIF_GetDevStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_vif_setoutputportattr" class="md-nav__link">
+    2.9. MI_VIF_SetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_vif_getoutputportattr" class="md-nav__link">
+    2.10. MI_VIF_GetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_vif_enableoutputport" class="md-nav__link">
+    2.11. MI_VIF_EnableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_vif_disableoutputport" class="md-nav__link">
+    2.12. MI_VIF_DisableOutputPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-mi_vif_query" class="md-nav__link">
+    2.13. MI_VIF_Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-mi_vif_callbacktask_register" class="md-nav__link">
+    2.14. MI_VIF_CallBackTask_Register
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#215-mi_vif_callbacktask_unregister" class="md-nav__link">
+    2.15. MI_VIF_CallBackTask_UnRegister
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-vif-data-type" class="md-nav__link">
+    3. VIF DATA TYPE
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_vif_group" class="md-nav__link">
+    3.1. MI_VIF_GROUP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_vif_intfmode_e" class="md-nav__link">
+    3.2. MI_VIF_IntfMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_vif_workmode_e" class="md-nav__link">
+    3.3. MI_VIF_WorkMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_vif_framerate_e" class="md-nav__link">
+    3.4. MI_VIF_FrameRate_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_vif_clkedge_e" class="md-nav__link">
+    3.5. MI_VIF_ClkEdge_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_vif_hdrtype_e" class="md-nav__link">
+    3.6. MI_VIF_HDRType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_vif_mclksource_e" class="md-nav__link">
+    3.7. MI_VIF_MclkSource_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_vif_groupidmask_e" class="md-nav__link">
+    3.8. MI_VIF_GroupIdMask_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_vif_snrpad_e" class="md-nav__link">
+    3.9. MI_VIF_SNRPad_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_vif_groupattr_t" class="md-nav__link">
+    3.10. MI_VIF_GroupAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_vif_devattr_t" class="md-nav__link">
+    3.11. MI_VIF_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_vif_outputportattr_t" class="md-nav__link">
+    3.12. MI_VIF_OutputPortAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mi_vif_devportstat_t" class="md-nav__link">
+    3.13. MI_VIF_DevPortStat_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-mi_vif_devstatus_t" class="md-nav__link">
+    3.14. MI_VIF_DevStatus_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mi_vif_callbk_func" class="md-nav__link">
+    3.15. MI_VIF_CALLBK_FUNC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-mi_vif_callbackmode_e" class="md-nav__link">
+    3.16. MI_VIF_CallBackMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#317-mi_vif_irqtype_e" class="md-nav__link">
+    3.17. MI_VIF_IrqType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#318-mi_vif_callbackparam_t" class="md-nav__link">
+    3.18. MI_VIF_CallBackParam_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vif-error-code" class="md-nav__link">
+    4. VIF ERROR CODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs-introduction" class="md-nav__link">
+    5. PROCFS INTRODUCTION
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI VIF API</h1>
+<hr />
+<h2 id="revision-history">REVISION HISTORY<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Revision No.</th>
+<th><div style="width:335pt">Description</div></th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.0</td>
+<td><li> Initial  release</td>
+<td>12/04/2020</td>
+</tr>
+<tr>
+<td>3.1</td>
+<td><li> Added Muffin flow char</td>
+<td>07/16/2021</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td><li> Added procfs introduction</td>
+<td>08/25/2021</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td><li> Update MI_VIF_GroupIdMask_e  E_MI_VIF_GROUPMASK_ID up to 7  <li> Update char flow note info</td>
+<td>12/22/2021</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td><li> Add Mochi information</td>
+<td>02/17/2022</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td><li> Add Maruko information</td>
+<td>03/21/2022</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td><li> In 1. Overview: Section 1.2, update Pipe count of all chip; Section 1.3, add Pipe description <li> 3. VIF data type: Section 3.12, add Field type parameter <li> 5. PROCFS INTRODUCTION: Section 5.1, update cat information description; Section 5.2, update echo command</td>
+<td>07/08/2022</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td><li> In Section 3.6, modify MI_VIF_HDRType_e enum value</td>
+<td>08/01/2024</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-overview">1. OVERVIEW<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="11-module-description">1.1. Module description<a class="headerlink" href="#11-module-description" title="Permanent link">&para;</a></h3>
+<p>Video input (VIF) enables video input device, video input channel,
+binding video input channel and other functions.</p>
+<hr />
+<h3 id="12-flow-chart">1.2. Flow chart<a class="headerlink" href="#12-flow-chart" title="Permanent link">&para;</a></h3>
+<h4 id="121-tiramisu-flow">1.2.1. Tiramisu flow<a class="headerlink" href="#121-tiramisu-flow" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/vif/vif-1.svg" /></p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>
+<p>There are only 8 Devices and 8 Pipes available in 16 Devices.</p>
+</li>
+<li>
+<p>Four sensors of Mipi interface are used respectively:</p>
+<p>linear mode: dev0/dev4/dev8/dev12</p>
+<p>hdr frame mode: dev0/dev1, dev4/dev5, dev8/dev9, dev12/dev13</p>
+<p>hdr reatlime mode: dev0/dev1</p>
+</li>
+<li>
+<p>Two sensors of BT656 interface are used respectively: sensor pad0/2.</p>
+</li>
+<li>
+<p>Each device has only one channel ID0, which can be used when binding to the backend through MI_SYS.</p>
+<table>
+<thead>
+<tr>
+<th>PortId</th>
+<th>Input Pixel</th>
+<th>Output Pixel</th>
+<th>Crop</th>
+<th>Scaling</th>
+<th>Output Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Input according to sensor format</td>
+<td>1.    Input  according to  sensor format;  <br>2.    Convert YUV422 format to 12bit  bayer format for output.</td>
+<td>No support</td>
+<td>No support</td>
+<td>1.    Dram output;  <br>2.    One Device supports sensor format  realtime output to MI_ISP, DeviceId is not limited.  <br>3.    Another  Device supports YUV422  format realtime output to MI_SCL, DeviceId is not limited.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Only support YUV422 format input</td>
+<td>Only support 12bit bayer format output</td>
+<td>Support</td>
+<td>Only support scaling down, when scaling down height,  the maximum width is 960.</td>
+<td>Only support Dram output.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4 id="122-muffin-flow">1.2.2. Muffin flow<a class="headerlink" href="#122-muffin-flow" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/vif/vif-2.svg" /></p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>
+<p>Up to 32 Devices and 32 Pipes available.</p>
+</li>
+<li>
+<p>8 sensors of Mipi interface are used in the following：</p>
+<p>linear mode: dev0/dev4/dev8/dev12, dev16/dev20/dev24/dev28</p>
+<p>hdr frame mode: dev0/dev1, dev4/dev5, dev8/dev9, dev12/dev13, dev16/dev17, dev20/dev21, dev24/dev25, dev28/dev29</p>
+<p>hdr reatlime mode: dev0/dev1, dev16/dev17</p>
+</li>
+<li>
+<p>8 sensors of BT656 interface are used in pad0/pad2/pad1/pad3/pad4/pad6/pad5/pad7</p>
+</li>
+<li>
+<p>4 sensors of BT1120 interface are used in pad0/pad1/pad4/pad5</p>
+</li>
+<li>
+<p>4 sensors of Lvds interface are used in the following：</p>
+<p>Linear mode: dev0/dev8, dev/16/dev24</p>
+<p>Hdr frame mode: dev0/dev1, dev8/dev9, dev16/dev17, dev24/dev25</p>
+<p>Hdr realitme mode: dev0/dev1, dev16/dev17</p>
+</li>
+<li>
+<p>Each device has only one channel ID0, which can be used when binding to the backend through MI_SYS.</p>
+<table>
+<thead>
+<tr>
+<th>PortId</th>
+<th>Input Pixel</th>
+<th>Output Pixel</th>
+<th>Crop</th>
+<th>scaling</th>
+<th>Output Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Input according to sensor format</td>
+<td>1. Output according to sensor format;  <br>2. Convert YUV422 format to 12bit bayer  format for output</td>
+<td>Not support</td>
+<td>Not support</td>
+<td>1. Dram Output.  <br>2. Dev0 Supports Bayer realtime to MI_ISP Dev0,  Dev16 supports Bayer realtime to MI_ISP Dev1  <br>3. Dev8 supports YUV422 realtime to MI_SCL  Dev2, Dev24 supports YUV422 realtime to MI_SCL Dev6</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4 id="123-mochi-flow">1.2.3. Mochi flow<a class="headerlink" href="#123-mochi-flow" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/vif/vif-3.svg" /></p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>
+<p>Up to 16 Devices and 16 Pipes available.</p>
+</li>
+<li>
+<p>4 sensors of Mipi(YUV) interface are used in pad0/pad2/pad1/pad3, do not support HDR, like BT656, 1pad supports 4 dev output the most.</p>
+</li>
+<li>
+<p>4 sensors of BT656 interface are used in pad0/pad2/pad1/pad3.</p>
+</li>
+<li>
+<p>2 sensors of BT1120 interface are used in pad0/pad1.</p>
+</li>
+<li>
+<p>Each device has only one channel ID0, which can be used when binding to the backend through MI_SYS.</p>
+<table>
+<thead>
+<tr>
+<th>PortId</th>
+<th>Input Pixel</th>
+<th>Output Pixel</th>
+<th>Crop</th>
+<th>scaling</th>
+<th>Output Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Only support YUV422 format input</td>
+<td>Only support YUV422 format output</td>
+<td>Not support</td>
+<td>Not support</td>
+<td>1. Dram Output.  <br>2. Dev0 supports yuv realtime to MI_ISP Dev0.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4 id="124-maruko">1.2.4. Maruko<a class="headerlink" href="#124-maruko" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="mymedia/vif/vif-6.svg" /></p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>
+<p>Up to 9 Devices and 4 Pipes available.</p>
+</li>
+<li>
+<p>2 sensors of Mipi(YUV) interface are used in pad0/pad2, 1 pad supports 4 dev output the most. Pad0 supports 4lane or can be disassembled into 2 + 2 Lane (pad0 + Pad2).</p>
+</li>
+<li>
+<p>BT656 only supports sensor Pad1 and only one sensor signal.</p>
+</li>
+<li>
+<p>Not support BT1120.</p>
+</li>
+<li>
+<p>Each device has only one channel ID0, which can be used when binding to the backend through MI_SYS.</p>
+<table>
+<thead>
+<tr>
+<th>PortId</th>
+<th>Input Pixel</th>
+<th>Output Pixel</th>
+<th>Crop</th>
+<th>scaling</th>
+<th>Output Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Input according to sensor format</td>
+<td>output according to sensor format</td>
+<td>Not support</td>
+<td>Not support</td>
+<td>1. Dram Output.  <br>2. Dev0 Support Yuv realtime to MI_ISP Dev0.  <br>3. Another Device support YUV422 format realtime  output to MI_SCL, DeviceId is not limited.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h3 id="13-keyword">1.3. Keyword<a class="headerlink" href="#13-keyword" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Group</p>
+<p>A sensor pad may mix multiple signals, so a sensor pad needs a
+corresponding group to receive.</p>
+</li>
+<li>
+<p>Dev</p>
+<p>A device that processes a single signal in a group.</p>
+</li>
+<li>
+<p>Port</p>
+<p>Output port on Dev.</p>
+</li>
+<li>
+<p>Pipe</p>
+<p>Pipe is VIF internal path for data stream, distributed by all device, determines the maximum number of channels that VIF can output at the same time.</p>
+</li>
+<li>
+<p>DI mode</p>
+<p>De interlacing function to synthesize 2 fields into one field.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-api-reference">2. API REFERENCE<a class="headerlink" href="#2-api-reference" title="Permanent link">&para;</a></h2>
+<hr />
+<p>This function module provides the following API:</p>
+<table>
+<thead>
+<tr>
+<th><strong>API Name</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a></td>
+<td>Create a Group corresponding to Device</td>
+</tr>
+<tr>
+<td><a href="#22-mi_vif_destroydevgroup">MI_VIF_DestroyDevGroup</a></td>
+<td>Destroy Group</td>
+</tr>
+<tr>
+<td><a href="#23-mi_vif_getdevgroupattr">MI_VIF_GetDevGroupAttr</a></td>
+<td>Get Group attributes</td>
+</tr>
+<tr>
+<td><a href="#24-mi_vif_setdevattr">MI_VIF_SetDevAttr</a></td>
+<td>Set device attribute</td>
+</tr>
+<tr>
+<td><a href="#25-mi_vif_getdevattr">MI_VIF_GetDevAttr</a></td>
+<td>Get device attribute</td>
+</tr>
+<tr>
+<td><a href="#26-mi_vif_enabledev">MI_VIF_EnableDev</a></td>
+<td>Enable device</td>
+</tr>
+<tr>
+<td><a href="#27-mi_vif_disabledev">MI_VIF_DisableDev</a></td>
+<td>Disable device</td>
+</tr>
+<tr>
+<td><a href="#28-mi_vif_getdevstatus">MI_VIF_GetDevStatus</a></td>
+<td>Get device status</td>
+</tr>
+<tr>
+<td><a href="#29-mi_vif_setoutputportattr">MI_VIF_SetOutputPortAttr</a></td>
+<td>Set output port attribute</td>
+</tr>
+<tr>
+<td><a href="#210-mi_vif_getoutputportattr">MI_VIF_GetOutputPortAttr</a></td>
+<td>Get output port attribute</td>
+</tr>
+<tr>
+<td><a href="#211-mi_vif_enableoutputport">MI_VIF_EnableOutputPort</a></td>
+<td>Enable output port</td>
+</tr>
+<tr>
+<td><a href="#212-mi_vif_disableoutputport">MI_VIF_DisableOutputPort</a></td>
+<td>Disable output port</td>
+</tr>
+<tr>
+<td><a href="#213-mi_vif_query">MI_VIF_Query</a></td>
+<td>Query VIF channel  port interrupt  counts, average frame rate, etc.</td>
+</tr>
+<tr>
+<td><a href="#214-mi_vif_callbacktask_register">MI_VIF_CallBackTask_Register</a></td>
+<td>Register  callback interface with VIF</td>
+</tr>
+<tr>
+<td><a href="#215-mi_vif_callbacktask_unregister">MI_VIF_CallBackTask_UnRegister</a></td>
+<td>Unregister  callback interface with VIF</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="21-mi_vif_createdevgroup">2.1. MI_VIF_CreateDevGroup<a class="headerlink" href="#21-mi_vif_createdevgroup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Create a Group corresponding to Device</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_CreateDevGroup(MI_VIF_GROUP GroupId, MI_VIF_GroupAttr_t *pstGroupAttr)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GroupId</td>
+<td>Group ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstGroupAttr</td>
+<td>Group attributes, static  attributes.</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>When MI VIF and back-end module have both
+    real-time and FrameMode connections, such as ISP Bayer Realitme, SCL
+    Dev2 YUV Realitme, and other Devs have Frame mode connections,
+    priority should be given to create DevGroup with real-time
+    connection and bind back-end module.</p>
+</li>
+<li>
+<p>Before Creating DevGroup, make sure that the sensor flows out
+    successfully. That is, if you use our Mi sensor, you need to ensure
+    MI_SNR_Enable. If you use your user sensor, you need to ensure that
+    the user's own sensor has been initialized.</p>
+</li>
+<li>
+<table>
+<thead>
+<tr>
+<th>Group Id</th>
+<th>Device Id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Device0~3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Device4~7</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Device8~11</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Device12~15</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Device16~19</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Device20~23</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Device24~27</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Device28~31</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>#define ST_MAX_VIF_DEV_PERGROUP (4)
+#define ST_MAX_VIF_OUTPORT_NUM (2)
+</pre></div>
+
+
+<p>MI_VIF initialization process:</p>
+<div class="codehilite"><pre><span></span>MI_S32 ST_VifModuleInit(MI_VIF_GROUP groupId)
+{
+    MI_VIF_DEV vifDev =0;
+    MI_VIF_PORT vifPort = 0;
+    MI_SNR_PADID SnrPadId = 0;
+    MI_U32 u32PlaneId = 0;
+    MI_U16 vifDevIdPerGroup=0;
+
+    MI_SNR_PADInfo_t  stPad0Info;
+    MI_SNR_PlaneInfo_t stSnrPlane0Info;
+    memset(&amp;stPad0Info, 0x0, sizeof(MI_SNR_PADInfo_t));
+    memset(&amp;stSnrPlane0Info, 0x0, sizeof(MI_SNR_PlaneInfo_t));
+
+    MI_VIF_GroupAttr_t stGroupAttr;
+    memset(&amp;stGroupAttr, 0x0, sizeof(MI_VIF_GroupAttr_t));
+
+    STCHECKRESULT(MI_SNR_GetPadInfo(SnrPadId, &amp;stPad0Info));
+    STCHECKRESULT(MI_SNR_GetPlaneInfo(SnrPadId, u32PlaneId, &amp;stSnrPlane0Info));
+
+    stGroupAttr.eIntfMode = E_MI_VIF_MODE_MIPI;
+    stGroupAttr.eWorkMode = E_MI_VIF_WORK_MODE_1MULTIPLEX;
+    stGroupAttr.eHDRType = E_MI_VIF_HDR_TYPE_OFF;
+    if(stGroupAttr.eIntfMode == E_MI_VIF_MODE_BT656)
+        stGroupAttr.eClkEdge = (MI_VIF_ClkEdge_e)stPad0Info.unIntfAttr.stBt656Attr.eClkEdge;
+    else
+        stGroupAttr.eClkEdge = E_MI_VIF_CLK_EDGE_DOUBLE;
+
+    STCHECKRESULT(MI_VIF_CreateDevGroup(groupId, &amp;stGroupAttr));
+
+    for(vifDevIdPerGroup=0; vifDevIdPerGroup&lt; ST_MAX_VIF_DEV_PERGROUP; vifDevIdPerGroup++)
+    {
+        MI_VIF_DevAttr_t stVifDevAttr;
+        memset(&amp;stVifDevAttr, 0x0, sizeof(MI_VIF_DevAttr_t));
+
+        vifDev = groupId*ST_MAX_VIF_DEV_PERGROUP+vifDevIdPerGroup;
+        stVifDevAttr.stInputRect.u16X = stSnrPlane0Info.stCapRect.u16X;
+        stVifDevAttr.stInputRect.u16Y = stSnrPlane0Info.stCapRect.u16Y;
+        stVifDevAttr.stInputRect.u16Width = stSnrPlane0Info.stCapRect.u16Width;
+        stVifDevAttr.stInputRect.u16Height = stSnrPlane0Info.stCapRect.u16Height;
+        if(stSnrPlane0Info.eBayerId = E_MI_SYS_PIXEL_BAYERID_MAX)
+        {
+            stVifDevAttr.eInputPixel = stSnrPlane0Info.ePixel;
+        }
+        else
+            stVifDevAttr.eInputPixel = (MI_SYS_PixelFormat_e)RGB_BAYER_PIXEL(stSnrPlane0Info.ePixPrecision, stSnrPlane0Info.eBayerId);
+
+        printf(&quot;setchnportattr (%d,%d,%d,%d) \n&quot;, stVifDevAttr.stInputRect.u16X, stVifDevAttr.stInputRect.u16Y, stVifDevAttr.stInputRect.u16Width, stVifDevAttr.stInputRect.u16Height);
+        STCHECKRESULT(MI_VIF_SetDevAttr(vifDev, &amp;stVifDevAttr));
+        STCHECKRESULT(MI_VIF_EnableDev(vifDev));
+
+        for(vifPort=0; vifPort&lt; ST_MAX_VIF_OUTPORT_NUM; vifPort++)
+        {
+            MI_VIF_OutputPortAttr_t stVifPortInfo;
+            memset(&amp;stVifPortInfo, 0, sizeof(MI_VIF_OutputPortAttr_t));
+
+            stVifPortInfo.stCapRect.u16X = stSnrPlane0Info.stCapRect.u16X;
+            stVifPortInfo.stCapRect.u16Y = stSnrPlane0Info.stCapRect.u16Y;
+            stVifPortInfo.stCapRect.u16Width =  stSnrPlane0Info.stCapRect.u16Width;
+            stVifPortInfo.stCapRect.u16Height = stSnrPlane0Info.stCapRect.u16Height;
+            stVifPortInfo.stDestSize.u16Width = stSnrPlane0Info.stCapRect.u16Width;
+            stVifPortInfo.stDestSize.u16Height = stSnrPlane0Info.stCapRect.u16Height;
+            printf(&quot;sensor bayerid %d, bit mode %d \n&quot;, stSnrPlane0Info.eBayerId, stSnrPlane0Info.ePixPrecision);
+            if(stSnrPlane0Info.eBayerId = E_MI_SYS_PIXEL_BAYERID_MAX)
+            {
+                stVifPortInfo.ePixFormat = stSnrPlane0Info.ePixel;
+            }
+            else
+                stVifPortInfo.ePixFormat = (MI_SYS_PixelFormat_e)RGB_BAYER_PIXEL(stSnrPlane0Info.ePixPrecision, stSnrPlane0Info.eBayerId);
+            stVifPortInfo.eFrameRate = E_MI_VIF_FRAMERATE_FULL;
+
+            STCHECKRESULT(MI_VIF_SetOutputPortAttr(vifDev, vifPort, &amp;stVifPortInfo));
+            STCHECKRESULT(MI_VIF_EnableOutputPort(vifDev, vifPort));
+        }
+    }
+    return MI_SUCCESS;
+}
+</pre></div>
+
+
+<p>MI_VIF deinitialization process:</p>
+<div class="codehilite"><pre><span></span>MI_S32 ST_VifModuleUnInit(MI_VIF_GROUP groupId)
+{
+    MI_VIF_DEV vifDev = 0;
+    MI_VIF_PORT vifPort=0;
+    MI_U16 vifDevIdPerGroup=0;
+    for(vifDevIdPerGroup=0; vifDevIdPerGroup&lt; ST_MAX_VIF_DEV_PERGROUP; vifDevIdPerGroup++)
+    {
+        vifDev = groupId*ST_MAX_VIF_DEV_PERGROUP+vifDevIdPerGroup;
+
+        for(vifPort=0; vifPort&lt; ST_MAX_VIF_OUTPORT_NUM; vifPort++)
+        {
+            STCHECKRESULT(MI_VIF_DisableOutputPort(vifDev, vifPort));
+        }
+        STCHECKRESULT(MI_VIF_DisableDev(vifDev));
+    }
+
+    STCHECKRESULT(MI_VIF_DestroyDevGroup(groupId));
+
+    return MI_SUCCESS;
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#22-mi_vif_destroydevgroup">MI_VIF_DestroyDevGroup</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="22-mi_vif_destroydevgroup">2.2. MI_VIF_DestroyDevGroup<a class="headerlink" href="#22-mi_vif_destroydevgroup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Destroy the group corresponding to the device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_DestroyDevGroup(MI_VIF_GROUP GroupId)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GroupId</td>
+<td>Group ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<p>At first, use <a href="#212-mi_vif_disableoutputport">MI_VIF_DisableOutputPort</a> to
+disable all the output ports on device, the use
+<a href="#27-mi_vif_disabledev">MI_VIF_DisableDev</a> to disable all the devices on
+group.</p>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="23-mi_vif_getdevgroupattr">2.3. MI_VIF_GetDevGroupAttr<a class="headerlink" href="#23-mi_vif_getdevgroupattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get Group attributes.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_GetDevGroupAttr(MI_VIF_GROUP GroupId, MI_VIF_GroupAttr_t *pstGroupAttr)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GroupId</td>
+<td>Group ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstGroupAttr</td>
+<td>Group attributes</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="24-mi_vif_setdevattr">2.4. MI_VIF_SetDevAttr<a class="headerlink" href="#24-mi_vif_setdevattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set VIF device attributes.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_SetDevAttr(MI_VIF_DEV DevId, MI_VIF_DevAttr_t *pstDevAttr)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstDevAttr</td>
+<td>VIF device attribute  pointer, static attribute.</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Make sure that the VIF device is disabled before calling. If the VIF
+    device is enabled, you can use
+    <a href="#27-mi_vif_disabledev">MI_VIF_DisableDev</a> to disable it.</p>
+</li>
+<li>
+<p>pstDevAttr is mainly used to configure the video input format of the
+    specified VIF device.</p>
+</li>
+<li>
+<p>eInputPixel only supports YUV422_YUYV/YVYU/UYVY/VYUY and bayer formats, please refer to <a href="#12-flow-chart">chapter 1.2</a> for details, and set according to chip specifications.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#25-mi_vif_getdevattr">MI_VIF_GetDevAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="25-mi_vif_getdevattr">2.5. MI_VIF_GetDevAttr<a class="headerlink" href="#25-mi_vif_getdevattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get VIF device attribute.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_GetDevAttr(MI_VIF_DEV DevId, MI_VIF_DevAttr_t *pstDevAttr)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstDevAttr</td>
+<td>VIF device attribute pointer.</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#24-mi_vif_setdevattr">MI_VIF_SetDevAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="26-mi_vif_enabledev">2.6. MI_VIF_EnableDev<a class="headerlink" href="#26-mi_vif_enabledev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Enable VIF device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_EnableDev(MI_VIF_DEV DevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Enable must be after device attribute have be configured, or fail
+    will be returned</p>
+</li>
+<li>
+<p>Calling again is available, fail will not be returned.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>Please refer to <a href="#24-mi_vif_setdevattr">MI_VIF_SetDevAttr</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#27-mi_vif_disabledev">MI_VIF_DisableDev</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="27-mi_vif_disabledev">2.7. MI_VIF_DisableDev<a class="headerlink" href="#27-mi_vif_disabledev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Disable VIF device.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_DisableDev(MI_VIF_DEV DevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Disable all the output ports on device before disable the VIF
+    device.</p>
+</li>
+<li>
+<p>Calling again is available, fail will not be returned.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a></p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#26-mi_vif_enabledev">MI_VIF_EnableDev</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="28-mi_vif_getdevstatus">2.8. MI_VIF_GetDevStatus<a class="headerlink" href="#28-mi_vif_getdevstatus" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get device status.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_GetDevStatus(MI_VIF_DEV DevId, MI_VIF_DevStatus_t *pstVifDevStatus)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstVifDevStatus</td>
+<td>Device status</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="29-mi_vif_setoutputportattr">2.9. MI_VIF_SetOutputPortAttr<a class="headerlink" href="#29-mi_vif_setoutputportattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set VIF channel Output port attributes.·</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_SetOutputPortAttr(MI_VIF_DEV DevId, MI_VIF_PORT PortId, MI_VIF_OutputPortAttr_t *pstAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>Port ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstAttr</td>
+<td>VIF device port  attribute pointer</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p><a href="#29-mi_vif_setoutputportattr">MI_VIF_SetOutputPortAttr</a> is used for
+    setting port attribute in default, such as CapSize, DestSize,
+    FrameRate, ect.</p>
+</li>
+<li>
+<p>Port 0 does not support crop and scaling, so cap and dest size must
+    be equal to input size in MI_VIF_SetDevAttr.</p>
+</li>
+<li>
+<p>The input of port1 only supports YUV format, so only YUVsensor can
+    use port1, which supports crop and scaling down, and the output only
+    supports 12bit bayer format.</p>
+</li>
+<li>
+<p>When Port1 height is scaling down, the maximum output width is 960.</p>
+</li>
+<li>
+<p>Tiramisu/Muffin/Mochi series chips: eFrameRate setting is not supported.</p>
+</li>
+<li>
+<p>Tiramisu/Muffin series chips: port0 supports output 12-bit Bayer format, which can be sent to MI_ISP for 3DNR.</p>
+</li>
+<li>
+<p>Mochi series chip: supports output YUV422 format, which can be sent to MI_ISP for 3DNR.</p>
+<table>
+<thead>
+<tr>
+<th>Chip</th>
+<th>Compress support pixel</th>
+<th>Support compress mode</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiramisu</td>
+<td>Bayer 10/12bit</td>
+<td>E_MI_SYS_COMPRESS_MODE_TO_8BIT</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Muffin</td>
+<td>Bayer 10/12bit</td>
+<td>E_MI_SYS_COMPRESS_MODE_TO_8BIT</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Mochi</td>
+<td>YUV422 UYVY</td>
+<td>E_MI_SYS_COMPRESS_MODE_TO_6BIT  <br>E_MI_SYS_COMPRESS_MODE_SFBC0</td>
+<td>DI mode does not support SFBC0  compress mode.</td>
+</tr>
+<tr>
+<td>Maruko</td>
+<td>Bayer 10/12bit</td>
+<td>E_MI_SYS_COMPRESS_MODE_TO_8BIT</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#210-mi_vif_getoutputportattr">MI_VIF_GetOutputPortAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="210-mi_vif_getoutputportattr">2.10. MI_VIF_GetOutputPortAttr<a class="headerlink" href="#210-mi_vif_getoutputportattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Get VIF channel Output port attributes.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_GetOutputPortAttr(MI_VIF_DEV DevId, MI_VIF_PORT PortId, MI_VIF_OutputPortAttr_t *pstAttr)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>Port ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstAttr</td>
+<td>VIF device port  attribute pointer</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#29-mi_vif_setoutputportattr">MI_VIF_SetOutputPortAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="211-mi_vif_enableoutputport">2.11. MI_VIF_EnableOutputPort<a class="headerlink" href="#211-mi_vif_enableoutputport" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Enable VIF Output port.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_EnableOutputPort(MI_VIF_DEV DevId, MI_VIF_PORT PortId)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>Port ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>The channel attributes must be set first, and the VIF device bound
+    channel must be enabled.</p>
+</li>
+<li>
+<p>The VIF channel can be enabled repeatedly without returning failure.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#24-mi_vif_setdevattr">MI_VIF_SetDevAttr</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#212-mi_vif_disableoutputport">MI_VIF_DisableOutputPort</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="212-mi_vif_disableoutputport">2.12. MI_VIF_DisableOutputPort<a class="headerlink" href="#212-mi_vif_disableoutputport" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Disable VIF Output port.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_DisableOutputPort(MI_VIF_DEV DevId, MI_VIF_PORT PortId)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>Port ID</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>The VIF channel port stops collecting video input data after being
+    disabled. And if the backend has been bound, the backend will no
+    longer receive video images.</p>
+</li>
+<li>
+<p>The VIF channel can be disabled repeatedly without returning
+    failure.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<p>See the example of <a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a>.</p>
+</li>
+<li>
+<p>Related APIs</p>
+<p><a href="#211-mi_vif_enableoutputport">MI_VIF_EnableOutputPort</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="213-mi_vif_query">2.13. MI_VIF_Query<a class="headerlink" href="#213-mi_vif_query" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Query VIF channel port interrupt counts, average frame rate, etc.</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_Query(MI_VIF_DEV DevId, MI_VIF_PORT PortId, MI_VIF_DevPortStat_t *pstStat)
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>PortId</td>
+<td>Port ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstStat</td>
+<td>Channel information structure pointer.</td>
+<td>Output</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>This API can be used to query interrupt counts, channel
+    enable/disable status, interrupt loss counts, VB fail counts,
+    height/width of image</p>
+</li>
+<li>
+<p>Frame rate got via this API is average frame rate over 1 second, VIF
+    could calculate average frame rate every second, the precision of
+    this value is not exact</p>
+</li>
+<li>
+<p>User could query interrupt loss counts via this API. If this loss
+    counts increase at all time, it meant VIF is abnormal.</p>
+</li>
+<li>
+<p>This interface is only supported by chips after Tiramisu.</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="214-mi_vif_callbacktask_register">2.14. MI_VIF_CallBackTask_Register<a class="headerlink" href="#214-mi_vif_callbacktask_register" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Register callback interface with VIF</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_CallBackTask_Register(MI_VIF_DEV DevId, MI_VIF_CallBackParam_t *pstCallBackParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter  Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF  device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstCallBackParam</td>
+<td>Arguments</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Currently, this interface only supports kernel mode calls</p>
+</li>
+<li>
+<p>This interface must be called in pair with
+    <a href="#215-mi_vif_callbacktask_unregister">MI_VIF_CallBackTask_UnRegister</a></p>
+</li>
+<li>
+<p>This feature is not supported in the current version</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Example</p>
+<div class="codehilite"><pre><span></span>MI_S32 _mi_vif_framestart1(MI_U64 u64Data)
+{
+    DBG_ERR(&quot;DATA %llu \n&quot;, u64Data);
+    return 0;
+}
+MI_S32 _mi_vif_framestart2(MI_U64 u64Data)
+{
+    DBG_ERR(&quot;DATA %llu \n&quot;, u64Data);
+    return 0;
+}
+
+static MS_S32 _mi_vif_testRegVifCallback(void)
+{
+    MI_VIF_CallBackParam_t stCallBackParam1;
+    MI_VIF_CallBackParam_t stCallBackParam2;
+    MI_VIF_DEV u32DevId = 0;
+    memset(&amp;stCallBackParam1, 0x0, sizeof(MI_VIF_CallBackParam_t));
+    memset(&amp;stCallBackParam2, 0x0, sizeof(MI_VIF_CallBackParam_t));
+    stCallBackParam1.eCallBackMode = E_MI_VIF_CALLBACK_ISR;
+    stCallBackParam1.eIrqType = E_MI_VIF_IRQ_FRAMESTART;
+    stCallBackParam1.pfnCallBackFunc = _mi_vif_framestart1;
+    stCallBackParam1.u64Data = 11;
+    MI_VIF_CallBackTask_Register(u32DevId,&amp;stCallBackParam1);
+    stCallBackParam2.eCallBackMode = E_MI_VIF_CALLBACK_ISR;
+    stCallBackParam2.eIrqType = E_MI_VIF_IRQ_FRAMESTART;
+    stCallBackParam2.pfnCallBackFunc = _mi_vif_framestart2;
+    stCallBackParam2.u64Data = 22;
+    MI_VIF_CallBackTask_Register(u32DevId,&amp;stCallBackParam2);
+    return 0;
+}
+static MS_S32 _mi_vif_testUnRegVifCallback(void)
+{
+    MI_VIF_CallBackParam_t stCallBackParam1;
+    MI_VIF_CallBackParam_t stCallBackParam2;
+
+    MI_VIF_DEV u32DevId = 0;
+    memset(&amp;stCallBackParam1, 0x0, sizeof(MI_VIF_CallBackParam_t));
+    memset(&amp;stCallBackParam1, 0x0, sizeof(MI_VIF_CallBackParam_t));
+    stCallBackParam1.eCallBackMode = E_MI_VIF_CALLBACK_ISR;
+    stCallBackParam1.eIrqType = E_MI_VIF_IRQ_FRAMESTART;
+    stCallBackParam1.pfnCallBackFunc = _mi_vif_framestart1;
+    stCallBackParam1.u64Data = 33;
+    MI_VIF_CallBackTask_UnRegister(u32DevId,&amp;stCallBackParam1);
+    stCallBackParam2.eCallBackMode = E_MI_VIF_CALLBACK_ISR;
+    stCallBackParam2.eIrqType = E_MI_VIF_IRQ_FRAMESTART;
+    stCallBackParam2.pfnCallBackFunc = _mi_vif_framestart2;
+    stCallBackParam2.u64Data = 44;
+    MI_VIF_CallBackTask_UnRegister(u32DevId,&amp;stCallBackParam2);
+    return 0;
+}
+</pre></div>
+
+
+</li>
+<li>
+<p>Related topic</p>
+<p><a href="#215-mi_vif_callbacktask_unregister">MI_VIF_CallBackTask_UnRegister</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="215-mi_vif_callbacktask_unregister">2.15. MI_VIF_CallBackTask_UnRegister<a class="headerlink" href="#215-mi_vif_callbacktask_unregister" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Unregister callback interface with VIF</p>
+</li>
+<li>
+<p>Syntax</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_VIF_CallBackTask_UnRegister(MI_VIF_DEV DevId, MI_VIF_CallBackParam_t *pstCallBackParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter   Name</th>
+<th>Description</th>
+<th>Input/Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevId</td>
+<td>VIF device ID</td>
+<td>Input</td>
+</tr>
+<tr>
+<td>pstCallBackParam</td>
+<td>Arguments</td>
+<td>Input</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Return Value</p>
+<ul>
+<li>
+<p>MI_SUCCESS(0): Successful</p>
+</li>
+<li>
+<p>Non-zero: Failed, see <a href="#4-vif-error-code">error code</a> for details</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dependence</p>
+<ul>
+<li>
+<p>Header: mi_vif_datatype.h, mi_vif.h</p>
+</li>
+<li>
+<p>Library: libmi_vif.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Note</p>
+</li>
+<li>
+<p>Currently, this interface only supports kernel mode calls</p>
+</li>
+<li>
+<p>This interface must be called in pair with
+    <a href="#214-mi_vif_callbacktask_register">MI_VIF_CallBackTask_Register</a></p>
+</li>
+<li>
+<p>This feature is not supported in the current version</p>
+</li>
+<li>
+<p>Example</p>
+<p>Refer to <a href="#214-mi_vif_callbacktask_register">MI_VIF_CallBackTask_Register</a>
+example.</p>
+</li>
+<li>
+<p>Related topic</p>
+<p><a href="#214-mi_vif_callbacktask_register">MI_VIF_CallBackTask_Register</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="3-vif-data-type">3. VIF DATA TYPE<a class="headerlink" href="#3-vif-data-type" title="Permanent link">&para;</a></h2>
+<hr />
+<p>VIF module relative data type definition:</p>
+<table>
+<thead>
+<tr>
+<th>Data  type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#31-mi_vif_group">MI_VIF_GROUP</a></td>
+<td>Define device group ID</td>
+</tr>
+<tr>
+<td><a href="#32-mi_vif_intfmode_e">MI_VIF_IntfMode_e</a></td>
+<td>Define interface mode of video  Input device</td>
+</tr>
+<tr>
+<td><a href="#33-mi_vif_workmode_e">MI_VIF_WorkMode_e</a></td>
+<td>Define working mode of video  Input device</td>
+</tr>
+<tr>
+<td><a href="#34-mi_vif_framerate_e">MI_VIF_FrameRate_e</a></td>
+<td>Define relation between Output fps and  Input fps</td>
+</tr>
+<tr>
+<td><a href="#35-mi_vif_clkedge_e">MI_VIF_ClkEdge_e</a></td>
+<td>Define clock edge received from video Input device</td>
+</tr>
+<tr>
+<td><a href="#36-mi_vif_hdrtype_e">MI_VIF_HDRType_e</a></td>
+<td>Define HDR type of video Input device</td>
+</tr>
+<tr>
+<td><a href="#37-mi_vif_mclksource_e">MI_VIF_MclkSource_e</a></td>
+<td>Set  Senor clock drive</td>
+</tr>
+<tr>
+<td><a href="#38-mi_vif_groupidmask_e">MI_VIF_GroupIdMask_e</a></td>
+<td>Device  group mask</td>
+</tr>
+<tr>
+<td><a href="#39-mi_vif_snrpad_e">MI_VIF_SNRPad_e</a></td>
+<td>Define  SensorPad Id</td>
+</tr>
+<tr>
+<td><a href="#310-mi_vif_groupattr_t">MI_VIF_GroupAttr_t</a></td>
+<td>Define  Group attributes</td>
+</tr>
+<tr>
+<td><a href="#311-mi_vif_devattr_t">MI_VIF_DevAttr_t</a></td>
+<td>Define attribute of video Input device.</td>
+</tr>
+<tr>
+<td><a href="#312-mi_vif_outputportattr_t">MI_VIF_OutputPortAttr_t</a></td>
+<td>Define VIF output port attributes</td>
+</tr>
+<tr>
+<td><a href="#313-mi_vif_devportstat_t">MI_VIF_DevPortStat_t</a></td>
+<td>Define VIF output port information structure</td>
+</tr>
+<tr>
+<td><a href="#314-mi_vif_devstatus_t">MI_VIF_DevStatus_t</a></td>
+<td>Define VIF device current status</td>
+</tr>
+<tr>
+<td><a href="#315-mi_vif_callbk_func">MI_VIF_CALLBK_FUNC</a></td>
+<td>Define callback function type</td>
+</tr>
+<tr>
+<td><a href="#316-mi_vif_callbackmode_e">MI_VIF_CallBackMode_e</a></td>
+<td>Define callback mode</td>
+</tr>
+<tr>
+<td><a href="#317-mi_vif_irqtype_e">MI_VIF_IrqType_e</a></td>
+<td>Define hardware interrupt type</td>
+</tr>
+<tr>
+<td><a href="#318-mi_vif_callbackparam_t">MI_VIF_CallBackParam_t</a></td>
+<td>Define callback parameters</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="31-mi_vif_group">3.1. MI_VIF_GROUP<a class="headerlink" href="#31-mi_vif_group" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define device group ID.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_VIF_GROUP;
+</pre></div>
+
+
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="32-mi_vif_intfmode_e">3.2. MI_VIF_IntfMode_e<a class="headerlink" href="#32-mi_vif_intfmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define interface mode of video Input device</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_VIF_MODE_BT656 = 0,
+
+    E_MI_VIF_MODE_DIGITAL_CAMERA,
+
+    E_MI_VIF_MODE_BT1120_STANDARD,
+
+    E_MI_VIF_MODE_BT1120_INTERLEAVED,
+
+    E_MI_VIF_MODE_MIPI,
+
+    E_MI_VIF_MODE_LVDS,
+
+    E_MI_VIF_MODE_NUM
+
+} MI_VIF_IntfMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_MODE_BT656</td>
+<td>Input data  protocol is standard BT.656, port data Input mode is compound  mode of brightness and color, quantity mode is single</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MODE_DIGITAL_CAMERA</td>
+<td>Input data  protocol is Digital camera 6, port data Input mode is  compound mode of brightness and color, quantity mode is single</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MODE_BT1120_STANDARD</td>
+<td>Input data  protocol is standard BT.1120(BT.656+ double quantity),  port data Input mode is division mode  of brightness and color, quantity mode is double</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MODE_BT1120_INTERLEAVED</td>
+<td>Input data  protocol is BT.1120 interleave mode, port data  Input mode is division mode of  brightness and color, quantity mode is double</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MODE_MIPI</td>
+<td>Input data  protocol is MIPI</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MODE_LVDS</td>
+<td>Input data protocol is LVDS</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>The current interface mode can be obtained from eintfmode in
+MI_SNR_GetPadInfo.</p>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#310-mi_vif_groupattr_t">MI_VIF_GroupAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="33-mi_vif_workmode_e">3.3. MI_VIF_WorkMode_e<a class="headerlink" href="#33-mi_vif_workmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define working mode of video Input device</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    /* BT656 multiple ch mode */
+
+    E_MI_VIF_WORK_MODE_1MULTIPLEX,
+
+    E_MI_VIF_WORK_MODE_2MULTIPLEX,
+
+    E_MI_VIF_WORK_MODE_4MULTIPLEX,
+
+    E_MI_VIF_WORK_MODE_MAX
+
+} MI_VIF_WorkMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_WORK_MODE_1MULTIPLEX</td>
+<td>1  way compound working mode.</td>
+</tr>
+<tr>
+<td>E_MI_VIF_WORK_MODE_2MULTIPLEX</td>
+<td>2 way compound  working mode.</td>
+</tr>
+<tr>
+<td>E_MI_VIF_WORK_MODE_4MULTIPLEX</td>
+<td>4 way compound  working mode.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>For example, E_MI_VIF_WORK_MODE_4MULTIPLEX means that there are 4
+mixed video signals in the Sensor Pad corresponding to the Group, if
+the number of mixed signals in the SensorPad does not match the
+compound working mode of the Group, it will cause abnormal signals
+collected by the Group.</p>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#310-mi_vif_groupattr_t">MI_VIF_GroupAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="34-mi_vif_framerate_e">3.4. MI_VIF_FrameRate_e<a class="headerlink" href="#34-mi_vif_framerate_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define relation between Output fps and Input fps.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_VIF_FRAMERATE_FULL = 0,
+
+    E_MI_VIF_FRAMERATE_HALF,
+
+    E_MI_VIF_FRAMERATE_QUARTR,
+
+    E_MI_VIF_FRAMERATE_OCTANT,
+
+    E_MI_VIF_FRAMERATE_THREE_QUARTERS,
+
+    E_MI_VIF_FRAMERATE_NUM,
+
+} MI_VIF_FrameRate_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_FRAMERATE_FULL</td>
+<td>Source over target is 1:1  Output.</td>
+</tr>
+<tr>
+<td>E_MI_VIF_FRAMERATE_HALF</td>
+<td>Source over target is 2:1  Output.</td>
+</tr>
+<tr>
+<td>E_MI_VIF_FRAMERATE_QUARTER</td>
+<td>Source over target is 4:1  Output.</td>
+</tr>
+<tr>
+<td>E_MI_VIF_FRAMERATE_OCTANT</td>
+<td>Source over target is 8:1  Output.</td>
+</tr>
+<tr>
+<td>E_MI_VIF_FRAMERATE_THREE_QUARTERS</td>
+<td>Source over target is 4:3  Output.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>This function is reserved. Control frame rate output can be set by
+MI_SYS_BindChnPort2.</p>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#312-mi_vif_outputportattr_t">MI_VIF_OutputPortAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="35-mi_vif_clkedge_e">3.5. MI_VIF_ClkEdge_e<a class="headerlink" href="#35-mi_vif_clkedge_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define clock edge received from video Input device</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_VIF_CLK_EDGE_SINGLE_UP = 0,
+
+    E_MI_VIF_CLK_EDGE_SINGLE_DOWN,
+
+    E_MI_VIF_CLK_EDGE_DOUBLE,
+
+    E_MI_VIF_CLK_EDGE_NUM
+
+} MI_VIF_ClkEdge_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_CLK_EDGE_SINGLE_UP</td>
+<td>Clock single  edge mode, sampling in up edge</td>
+</tr>
+<tr>
+<td>E_MI_VIF_CLK_EDGE_SINGLE_DOWN</td>
+<td>lock single edge  mode, sampling in down edge</td>
+</tr>
+<tr>
+<td>E_MI_VIF_CLK_EDGE_DOUBLE</td>
+<td>VIF do sampling  in double edge for double edge data</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#310-mi_vif_groupattr_t">MI_VIF_GroupAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="36-mi_vif_hdrtype_e">3.6. MI_VIF_HDRType_e<a class="headerlink" href="#36-mi_vif_hdrtype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define HDR type of video Input device</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_VIF_HDR_TYPE_OFF,
+
+    E_MI_VIF_HDR_TYPE_VC = 0x1, //virtual channel mode HDR,vc0-long, vc1-short
+
+    E_MI_VIF_HDR_TYPE_DOL = 0x2,
+
+    E_MI_VIF_HDR_TYPE_EMBEDDED = 0x4, //compressed HDR mode
+
+    E_MI_VIF_HDR_TYPE_LI = 0x8, //Line interlace HDR
+
+    E_MI_VIF_HDR_TYPE_MAX
+
+} MI_VIF_HDRType_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_HDR_TYPE_OFF</td>
+<td>HDR off</td>
+</tr>
+<tr>
+<td>E_MI_VIF_HDR_TYPE_VC</td>
+<td>virtual  channel mode HDR,vc0-long, vc1-short</td>
+</tr>
+<tr>
+<td>E_MI_VIF_HDR_TYPE_DOL</td>
+<td>Digital  Overlap High Dynamic Range</td>
+</tr>
+<tr>
+<td>E_MI_VIF_HDR_TYPE_EMBEDDED</td>
+<td>compressed  HDR mode</td>
+</tr>
+<tr>
+<td>E_MI_VIF_HDR_TYPE_LI</td>
+<td>Line  interlace HDR</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>HDR type is related to the sensor. You can obtain the HDR type
+    supported by the current sensor through ehdrmode of
+    MI_SNR_GetPadInfo.</p>
+</li>
+<li>
+<p>The realization of HDR function requires MI_VIF and MI_VPE modules
+    to set the same HDR type.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#310-mi_vif_groupattr_t">MI_VIF_GroupAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="37-mi_vif_mclksource_e">3.7. MI_VIF_MclkSource_e<a class="headerlink" href="#37-mi_vif_mclksource_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Set Senor clock drive.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_VIF_MCLK_12MHZ,
+
+    E_MI_VIF_MCLK_18MHZ,
+
+    E_MI_VIF_MCLK_27MHZ,
+
+    E_MI_VIF_MCLK_36MHZ,
+
+    E_MI_VIF_MCLK_54MHZ,
+
+    E_MI_VIF_MCLK_108MHZ,
+
+    E_MI_VIF_MCLK_MAX
+
+}MI_VIF_MclkSource_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_MCLK_12MHZ</td>
+<td>12M clk type</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MCLK_18MHZ</td>
+<td>18M  clk type</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MCLK_27MHZ</td>
+<td>27M  clk type</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MCLK_36MHZ</td>
+<td>36M  clk type</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MCLK_54MHZ</td>
+<td>54M  clk type</td>
+</tr>
+<tr>
+<td>E_MI_VIF_MCLK_108MHZ</td>
+<td>108M  clk type</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Set mclk from the sensor driver first.</p>
+</li>
+<li>
+<p>If there is no sensor driver and the main control chip is needed to
+    output mclk, then this parameter can be used.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#310-mi_vif_groupattr_t">MI_VIF_GroupAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="38-mi_vif_groupidmask_e">3.8. MI_VIF_GroupIdMask_e<a class="headerlink" href="#38-mi_vif_groupidmask_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Device group mask.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_VIF_GROUPMASK_ID0  = 0x0001,
+    E_MI_VIF_GROUPMASK_ID1  = 0x0002,
+    E_MI_VIF_GROUPMASK_ID2  = 0x0004,
+    E_MI_VIF_GROUPMASK_ID3  = 0x0008,
+    E_MI_VIF_GROUPMASK_ID4  = 0x0010,
+    E_MI_VIF_GROUPMASK_ID5  = 0x0020,
+    E_MI_VIF_GROUPMASK_ID6  = 0x0040,
+    E_MI_VIF_GROUPMASK_ID7  = 0x0080,
+    E_MI_VIF_GROUPMASK_ID_MAX = 0xffff
+} MI_VIF_GroupIdMask_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Note</p>
+<p>In a multi-sensor splicing scene, two sensor images need to be output
+simultaneously, so you need to create a group, and put the two group id
+masks together to achieve this.</p>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#310-mi_vif_groupattr_t">MI_VIF_GroupAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="39-mi_vif_snrpad_e">3.9. MI_VIF_SNRPad_e<a class="headerlink" href="#39-mi_vif_snrpad_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define SensorPad Id.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    E_MI_VIF_SNRPAD_ID_0 = 0,
+    E_MI_VIF_SNRPAD_ID_1 = 1,
+    E_MI_VIF_SNRPAD_ID_2 = 2,
+    E_MI_VIF_SNRPAD_ID_3 = 3,
+    E_MI_VIF_SNRPAD_ID_4 = 4,
+    E_MI_VIF_SNRPAD_ID_5 = 5,
+    E_MI_VIF_SNRPAD_ID_6 = 6,
+    E_MI_VIF_SNRPAD_ID_7 = 7,
+    E_MI_VIF_SNRPAD_ID_MAX,
+    E_MI_VIF_SNRPAD_ID_NA = 0xFF,
+}MI_VIF_SNRPad_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_0</td>
+<td>Corresponding hardware  device Sensor0</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_1</td>
+<td>Corresponding hardware  device Sensor1</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_2</td>
+<td>Corresponding hardware  device Sensor2</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_3</td>
+<td>Corresponding hardware  device Sensor3</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_4</td>
+<td>Corresponding hardware  device Sensor4</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_5</td>
+<td>Corresponding hardware  device Sensor5</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_6</td>
+<td>Corresponding hardware  device Sensor6</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_7</td>
+<td>Corresponding hardware  device Sensor7</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_MAX</td>
+<td>Exceed the maximum  Sensor Num</td>
+</tr>
+<tr>
+<td>E_MI_VIF_SNRPAD_ID_NA</td>
+<td>Invalid sensor id</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>In default, VIF Group0 corresponding to Sensor0, Group2 corresponding to
+Sensor1, Group6 corresponding to Sensor5.</p>
+</li>
+<li>
+<p>Tiramisu/ Mochi has 4 pad(0-3), Muffin has 8 pad(0-7). See <a href="#12-flow-chart">section 1.2</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#311-mi_vif_groupextattr_t">MI_VIF_GroupExtAttr_t</a></p>
+<p><a href="#314-mi_vif_devstatus_t">MI_VIF_DevStatus_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="310-mi_vif_groupattr_t">3.10. MI_VIF_GroupAttr_t<a class="headerlink" href="#310-mi_vif_groupattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define Group attributes.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VIF_GroupAttr_s
+
+{
+
+    MI_VIF_IntfMode_e       eIntfMode;
+
+    MI_VIF_WorkMode_e       eWorkMode;
+
+    MI_VIF_HDRType_e        eHDRType;
+
+    MI_VIF_ClkEdge_e        eClkEdge; //BT656
+
+    MI_VIF_MclkSource_e     eMclk;
+
+    MI_SYS_FrameScanMode_e  eScanMode;
+
+    MI_U32     u32GroupStitchMask;  //multi vif dev bitmask by MI_VIF_GroupIdMask_e
+
+} MI_VIF_GroupAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MI_VIF_IntfMode_e</td>
+<td>Interface mode</td>
+</tr>
+<tr>
+<td>MI_VIF_WorkMode_e</td>
+<td>Working mode</td>
+</tr>
+<tr>
+<td>MI_VIF_HDRType_e</td>
+<td>HDR type</td>
+</tr>
+<tr>
+<td>MI_VIF_ClkEdge_e</td>
+<td>Clock edge mode  (rising edge sampling, falling edge sampling, double edge sampling).</td>
+</tr>
+<tr>
+<td>MI_VIF_MclkSource_e</td>
+<td>Type of clock output  to sensor</td>
+</tr>
+<tr>
+<td>MI_SYS_FrameScanMode_e</td>
+<td>Frame scan mode (sequential,  interlace Scanning)</td>
+</tr>
+<tr>
+<td>u32GroupStitchMask</td>
+<td>Multiple GroupId stitched  output, composed of MI_VIF_GroupIdMask_e bitmask.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<p>Tiramisu、Muffin: eScanMode only support E_MI_SYS_FRAME_SCAN_MODE_PROGRESSIVE.</p>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#21-mi_vif_createdevgroup">MI_VIF_CreateDevGroup</a></p>
+<p><a href="#22-mi_vif_createdevgroupext">MI_VIF_CreateDevGroupExt</a></p>
+<p><a href="#23-mi_vif_getdevgroupattr">MI_VIF_GetDevGroupAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="311-mi_vif_devattr_t">3.11. MI_VIF_DevAttr_t<a class="headerlink" href="#311-mi_vif_devattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define attribute of video Input device.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VIF_DevAttr_s
+
+{
+
+    MI_SYS_PixelFormat_e eInputPixel;
+
+    MI_SYS_WindowRect_t stInputRect;
+
+    MI_SYS_FieldType_e eField;
+
+    MI_BOOL bEnH2T1PMode;
+
+    } MI_VIF_DevAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eInputPixel</td>
+<td>Input pixel format</td>
+</tr>
+<tr>
+<td>stInputRect</td>
+<td>Collect the input  range</td>
+</tr>
+<tr>
+<td>eField</td>
+<td>Frame field selection  is only used in interlaced mode. It is recommended to select the bottom field  when capturing a single field. In sequential mode, it must be set to  E_MI_SYS_FIELDTYPE_NONE. <br>Value: 0 No Field / 1 Top Field / 2 Bottom Field / 3 Both Fields</td>
+</tr>
+<tr>
+<td>bEnH2T1PMode</td>
+<td>Enable the function of  reducing the collection by half in the horizontal direction.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>In bayer format, the pixel format setting is as following:</p>
+<p>stVifDevAttr.eInputPixel =
+(MI_SYS_PixelFormat_e)RGB_BAYER_PIXEL(stSnrPlane0Info.ePixPrecision,
+stSnrPlane0Info.eBayerId);</p>
+</li>
+<li>
+<p>When the input format is YUV, the bEnH2T1Pmode can be used,
+    otherwise return an error.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#24-mi_vif_setdevattr">MI_VIF_SetDevAttr</a></p>
+<p><a href="#25-mi_vif_getdevattr">MI_VIF_GetDevAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="312-mi_vif_outputportattr_t">3.12. MI_VIF_OutputPortAttr_t<a class="headerlink" href="#312-mi_vif_outputportattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define VIF output port attributes.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VIF_OutputPortAttr_s
+{
+    MI_SYS_WindowRect_t     stCapRect;
+    MI_SYS_WindowSize_t     stDestSize; 
+    MI_SYS_PixelFormat_e    ePixFormat;  
+    MI_VIF_FrameRate_e      eFrameRate;
+    MI_SYS_CompressMode_e   eCompressMode;
+} MI_VIF_OutputPortAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>member</p>
+<p>sub ports only support stDestSize, enDstFrameRate, other attributes will
+be ignored.</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stCapRect</td>
+<td>coordinates and width and height of capturing region(based on original device  image).</td>
+</tr>
+<tr>
+<td>stDestSize</td>
+<td>Destination image size. Must  to be configured, the size cannot over outside ADC  Input image, or VIF hardware may be abnormal.</td>
+</tr>
+<tr>
+<td>ePixFormat</td>
+<td>Pixel storage format support, can support YUV422  packet/bayer.</td>
+</tr>
+<tr>
+<td>eFrameRate</td>
+<td>The ratio between the target frame rate and the  input frame rate. If frame rate control is not performed, this value is set  to 0. It can output in proportions of 1:1, 2:1, 4:1, 8:1, 4:3, etc.  This function is reserved. Control frame rate  output can be set by MI_SYS_BindChnPort2.</td>
+</tr>
+<tr>
+<td>eCompressMode</td>
+<td>Picture compression mode, only use when vif bind isp by framemode, for saving buffer. Default 0, no compression. <br>Muffin can use E_MI_SYS_COMPRESS_MODE_TO_8BIT, for FBC. <br>Mochi can use E_MI_SYS_COMPRESS_MODE_TO_6BIT (for YUV FBC) or E_MI_SYS_COMPRESS_MODE_SFBC0 (SFBC).</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#29-mi_vif_setoutputportattr">MI_VIF_SetOutputPortAttr</a></p>
+<p><a href="#210-mi_vif_getoutputportattr">MI_VIF_GetOutputPortAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="313-mi_vif_devportstat_t">3.13. MI_VIF_DevPortStat_t<a class="headerlink" href="#313-mi_vif_devportstat_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define VIF channel information structure.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VIF_DevPortStat_s
+
+{
+
+    MI_BOOL bEnable;
+
+    MI_U32 u32IntCnt;
+
+    MI_U32 u32FrameRate;
+
+    MI_U32 u32LostInt;
+
+    MI_U32 u32VbFail;
+
+    MI_U32 u32PicWidth;
+
+    MI_U32 u32PicHeight;
+
+} MI_VIF_DevPortStat_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>member</p>
+<table>
+<thead>
+<tr>
+<th>Member name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bEnable</td>
+<td>Channel enable.</td>
+</tr>
+<tr>
+<td>u32IntCnt</td>
+<td>Interrupt count.</td>
+</tr>
+<tr>
+<td>u32FrameRate</td>
+<td>Average fps every 1s, the precision is not perfect.</td>
+</tr>
+<tr>
+<td>u32LostInt</td>
+<td>Interrupt loss count.</td>
+</tr>
+<tr>
+<td>u32VbFail</td>
+<td>VB fail count.</td>
+</tr>
+<tr>
+<td>u32PicWidth</td>
+<td>Picture width.</td>
+</tr>
+<tr>
+<td>u32PicHeight</td>
+<td>Picture height.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>Interrupt count can be used to detect no interrupt</p>
+</li>
+<li>
+<p>Fps is average fps every 1s, VIF calculate average fps every 1s,
+    the precision is not perfect.</p>
+</li>
+<li>
+<p>If interrupt loss count increased all the time, it meant VIF is
+    abnormal</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related Type</p>
+<p><a href="#213-mi_vif_query">MI_VIF_Query</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="314-mi_vif_devstatus_t">3.14. MI_VIF_DevStatus_t<a class="headerlink" href="#314-mi_vif_devstatus_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define VIF device current status. </p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VIF_VIFDevStatus_s
+
+{
+
+    MI_VIF_GROUP GroupId;
+
+    MI_BOOL bGroupCreated;
+
+    MI_U32 bDevEn;
+
+    MI_VIF_SNRPad_e eSensorPadID;
+
+    MI_U32 u32PlaneID;
+
+} MI_VIF_DevStatus_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GroupId</td>
+<td>Device Group number</td>
+</tr>
+<tr>
+<td>bGroupCreated</td>
+<td>Group current Create status</td>
+</tr>
+<tr>
+<td>bDevEn</td>
+<td>VIF  Dev current enable status</td>
+</tr>
+<tr>
+<td>eSensorPadID</td>
+<td>VIF Dev bound SensorPad</td>
+</tr>
+<tr>
+<td>u32PlaneID</td>
+<td>VIF Dev bound PlaneId</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data types and interfaces</p>
+<p><a href="#28-mi_vif_getdevstatus">MI_VIF_GetDevStatus</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="315-mi_vif_callbk_func">3.15. MI_VIF_CALLBK_FUNC<a class="headerlink" href="#315-mi_vif_callbk_func" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define callback function type</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef MI_S32 (*MI_VIF_CALLBK_FUNC)(MI_U64 u64Data);
+</pre></div>
+
+
+</li>
+<li>
+<p>Related data types and interfaces</p>
+<p><a href="#318-mi_vif_callbackparam_t">MI_VIF_CallBackParam_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="316-mi_vif_callbackmode_e">3.16. MI_VIF_CallBackMode_e<a class="headerlink" href="#316-mi_vif_callbackmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define callback mode.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_VIF_CALLBACK_ISR,
+
+    E_MI_VIF_CALLBACK_MAX,
+
+} MI_VIF_CallBackMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_CALLBACK_ISR</td>
+<td>Hardware  interrupt mode callback</td>
+</tr>
+<tr>
+<td>E_MI_VIF_CALLBACK_MAX</td>
+<td>Callback mode Max</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data types and interfaces</p>
+<p><a href="#318-mi_vif_callbackparam_t">MI_VIF_CallBackParam_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="317-mi_vif_irqtype_e">3.17. MI_VIF_IrqType_e<a class="headerlink" href="#317-mi_vif_irqtype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define hardware interrupt type</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef enum
+
+{
+
+    E_MI_VIF_IRQ_FRAMESTART, //frame start irq
+
+    E_MI_VIF_IRQ_FRAMEEND, //frame end irq
+
+    E_MI_VIF_IRQ_LINEHIT, //frame line hit irq
+
+    E_MI_VIF_IRQ_MAX,
+
+} MI_VIF_IrqType_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E_MI_VIF_IRQ_FRAMESTART</td>
+<td>VIF frame start interrupt type</td>
+</tr>
+<tr>
+<td>E_MI_VIF_IRQ_FRAMEEND</td>
+<td>VIF frame done interrupt type</td>
+</tr>
+<tr>
+<td>E_MI_VIF_IRQ_LINEHIT</td>
+<td>VIF frame line count hit type</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Note</p>
+<ul>
+<li>
+<p>E_MI_VIF_IRQ_FRAMESTART: Signal of the first pixel in each frame</p>
+</li>
+<li>
+<p>E_MI_VPE_IRQ_ISPFRAMEDONE: Signal of the last pixel in each frame</p>
+</li>
+<li>
+<p>E_MI_VIF_IRQ_LINEHIT:Signal of the set line coming in each frame</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related data types and interfaces</p>
+<p><a href="#318-mi_vif_callbackparam_t">MI_VIF_CallBackParam_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="318-mi_vif_callbackparam_t">3.18. MI_VIF_CallBackParam_t<a class="headerlink" href="#318-mi_vif_callbackparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Description</p>
+<p>Define callback parameters.</p>
+</li>
+<li>
+<p>Definition</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_VIF_CallBackParam_s
+
+{
+
+    MI_VIF_CallBackMode_e eCallBackMode;
+
+    MI_VIF_IrqType_e eIrqType;
+
+    MI_VIF_CALLBK_FUNC pfnCallBackFunc;
+
+    MI_U64 u64Data;
+
+} MI_VIF_CallBackParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>Member</p>
+<table>
+<thead>
+<tr>
+<th>Member Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eCallBackMode</td>
+<td>Call back mode</td>
+</tr>
+<tr>
+<td>eIrqType</td>
+<td>Hardware interrupt type</td>
+</tr>
+<tr>
+<td>pfnCallBackFunc</td>
+<td>Callback function</td>
+</tr>
+<tr>
+<td>u64Data</td>
+<td>Callback function parameters</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Related data types and interfaces</p>
+<p><a href="#214-mi_vif_callbacktask_register">MI_VIF_CallBackTask_Register</a></p>
+<p><a href="#215-mi_vif_callbacktask_unregister">MI_VIF_CallBackTask_UnRegister</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="4-vif-error-code">4. VIF ERROR CODE<a class="headerlink" href="#4-vif-error-code" title="Permanent link">&para;</a></h2>
+<hr />
+<p>VIF API error code is defined in following table:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Error code</strong></th>
+<th><strong>Macro definition</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xA0062001</td>
+<td>MI_ERR_VIF_INVALID_DEVID</td>
+<td>Video Input device ID invalid</td>
+</tr>
+<tr>
+<td>0xA0062002</td>
+<td>MI_ERR_VIF_INVALID_CHNID</td>
+<td>Video Input channel ID invalid</td>
+</tr>
+<tr>
+<td>0xA0062003</td>
+<td>MI_ERR_VIF_INVALID_PARA</td>
+<td>Video Input parameter invalid</td>
+</tr>
+<tr>
+<td>0xA0062006</td>
+<td>MI_ERR_VIF_INVALID_NULL_PTR</td>
+<td>Null pointer invalid</td>
+</tr>
+<tr>
+<td>0xA0062007</td>
+<td>MI_ERR_VIF_FAILED_NOTCONFIG</td>
+<td>Video device or channel attribute is not  configured</td>
+</tr>
+<tr>
+<td>0xA0062008</td>
+<td>MI_ERR_VIF_NOT_SUPPORT</td>
+<td>Operation is not supported</td>
+</tr>
+<tr>
+<td>0xA0062009</td>
+<td>MI_ERR_VIF_NOT_PERM</td>
+<td>Operation is not permitted</td>
+</tr>
+<tr>
+<td>0xA006200C</td>
+<td>MI_ERR_VIF_NOMEM</td>
+<td>Memory allocation fail</td>
+</tr>
+<tr>
+<td>0xA006200E</td>
+<td>MI_ERR_VIF_BUF_EMPTY</td>
+<td>Buffer  empty</td>
+</tr>
+<tr>
+<td>0xA006200F</td>
+<td>MI_ERR_VIF_BUF_FULL</td>
+<td>Buffer full</td>
+</tr>
+<tr>
+<td>0xA0062010</td>
+<td>MI_ERR_VIF_SYS_NOTREADY</td>
+<td>Video Input system is not  ready</td>
+</tr>
+<tr>
+<td>0xA0062012</td>
+<td>MI_ERR_VIF_BUSY</td>
+<td>Video Input system is busy</td>
+</tr>
+<tr>
+<td>0xA0062080</td>
+<td>MI_ERR_VIF_INVALID_PORTID</td>
+<td>Video Input port ID invalid</td>
+</tr>
+<tr>
+<td>0xA0062081</td>
+<td>MI_ERR_VIF_FAILED_DEVNOTENABLE</td>
+<td>Video Input device is not enable</td>
+</tr>
+<tr>
+<td>0xA0062082</td>
+<td>MI_ERR_VIF_FAILED_DEVNOTDISABLE</td>
+<td>Video Input device is not disable</td>
+</tr>
+<tr>
+<td>0xA0062083</td>
+<td>MI_ERR_VIF_FAILED_PORTNOTENABLE</td>
+<td>Video Input channel is not enable</td>
+</tr>
+<tr>
+<td>0xA0062084</td>
+<td>MI_ERR_VIF_FAILED_PORTNOTDISABLE</td>
+<td>Video Input channel is not disable</td>
+</tr>
+<tr>
+<td>0xA0062085</td>
+<td>MI_ERR_VIF_CFG_TIMEOUT</td>
+<td>Video configure timeout</td>
+</tr>
+<tr>
+<td>0xA0062086</td>
+<td>MI_ERR_VIF_NORM_UNMATCH</td>
+<td>Video norm of ADC and VIU unmatched</td>
+</tr>
+<tr>
+<td>0xA0062087</td>
+<td>MI_ERR_VIF_INVALID_WAYID</td>
+<td>Video way ID invalid</td>
+</tr>
+<tr>
+<td>0xA0062088</td>
+<td>MI_ERR_VIF_INVALID_PHYCHNID</td>
+<td>Video physical channel ID  invalid</td>
+</tr>
+<tr>
+<td>0xA0062089</td>
+<td>MI_ERR_VIF_FAILED_NOTBIND</td>
+<td>Video channel is not bound</td>
+</tr>
+<tr>
+<td>0xA006208A</td>
+<td>MI_ERR_VIF_FAILED_BINDED</td>
+<td>Video channel is bound</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-procfs-introduction">5. PROCFS INTRODUCTION<a class="headerlink" href="#5-procfs-introduction" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="51-cat">5.1. cat<a class="headerlink" href="#51-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Debug Information</p>
+<div class="codehilite"><pre><span></span>#cat /proc/mi_modules/mi_vif/mi_vif0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/vif/vif-4.png" /></p>
+</li>
+<li>
+<p>Debug Information Analysis</p>
+<p>Record the current VIF usage status and Group/ Dev/ pipe/ outport
+attributes, you can get this information dynamically, which is
+convenient for debugging and testing.</p>
+</li>
+<li>
+<p>Parameter Description</p>
+<p><table>
+    <tr>
+        <th colspan="2">Parameter</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td rowspan="5">Group Attr</td>
+        <td>GroupId</td>
+        <td>Group ID</td>
+    </tr>
+    <tr>
+        <td>Intf</td>
+        <td>Protocol for entering data, please refer to <a href="#32-mi_vif_intfmode_e">MI_VIF_IntfMode_e</a></td>
+    </tr>
+    <tr>
+        <td>Work</td>
+        <td>Work mode, please refer to <a href="#33-mi_vif_workmode_e">MI_VIF_WorkMode_e</a></td>
+    </tr>
+    <tr>
+        <td>Clkedge</td>
+        <td>Clock edge trigger mode, please refer to <a href="#35-mi_vif_clkedge_e">MI_VIF_ClkEdge_e</a></td>
+    </tr>
+    <tr>
+        <td>Hdr</td>
+        <td>Hdr type, please refer to <a href="#36-mi_vif_hdrtype_e">MI_VIF_HDRType_e</a></td>
+    </tr>
+    <tr>
+    <tr>
+        <td rowspan="9">Dev Attr</td>
+        <td>Dev</td>
+        <td>Device id</td>
+    </tr>
+    <tr>
+        <td>FsCnt</td>
+        <td>Interrupt count of Frame start</td>
+    </tr>
+    <tr>
+        <td>FdCnt</td>
+        <td>Interrupt count of Frame done</td>
+    </tr><br />
+    <tr>
+        <td>incrop</td>
+        <td>Input Corp Size, please refer to <a href="#311-mi_vif_devattr_t">MI_VIF_DevAttr_t</a> stInputRect</td>
+    </tr>
+    <tr>
+        <td>infmt</td>
+        <td>Input pixel format, please refer to <a href="#311-mi_vif_devattr_t">MI_VIF_DevAttr_t</a> eInputPixel</td>
+    </tr>
+    <tr>
+        <td>capsel</td>
+        <td>Field type, please refer to <a href="#311-mi_vif_devattr_t">MI_VIF_DevAttr_t</a> Field</td>
+    </tr>
+    <tr>
+        <td>rstcnt</td>
+        <td>Reset count, corresponding to (Fifo, Wdma, Fifo_Wdma)</td>
+    </tr>
+    <tr>
+        <td>AsyncCnt/EnqCnt/ BarCnt/CheckCnt/ DequCnt</td>
+        <td>MI internal Callback interface execution times</td>
+    </tr>
+    <tr>
+        <td>DropCnt</td>
+        <td>Drop frame count</td>
+    </tr>
+    <tr>
+        <td rowspan="9">Pipe Attr</td>
+        <td>PipeId</td>
+        <td>Pipe id</td>
+    </tr>
+    <tr>
+        <td>PortId</td>
+        <td>Port id</td>
+    </tr>
+    <tr>
+        <td>DevId</td>
+        <td>Device id</td>
+    </tr>
+    <tr>
+        <td>Hdn</td>
+        <td>H2T1PMode enable, please refer to <a href="#311-mi_vif_devattr_t">MI_VIF_DevAttr_t</a> bEnH2T1PMode</td>
+    </tr>
+    <tr>
+        <td>crop</td>
+        <td>Mhal output crop size (Height will divide 2 in DI Mode)</td>
+    </tr>
+    <tr>
+        <td>Dest</td>
+        <td>Mhal output size (Height will divide 2 in DI Mode)</td>
+    </tr>
+    <tr>
+        <td>Pixel</td>
+        <td>Mhal output Pixel, transferred by MI pixel</td>
+    </tr>
+    <tr>
+        <td>wkmode</td>
+        <td>Pipe work mode, 0: Realtime，1: FrameMode</td>
+    </tr>
+    <tr>
+        <td>Compress</td>
+        <td>Please refer to  <a href="#312-mi_vif_outputportattr_t">MI_VIF_OutputPortAttr_t</a> eCompressMode</td>
+    </tr>
+    <tr>
+        <td rowspan="24">OutPort Attr</td>
+        <td>Dev</td>
+        <td>Device id</td>
+    </tr>
+    <tr>
+        <td>Port</td>
+        <td>Port id</td>
+    </tr>
+    <tr>
+        <td>wFsNum</td>
+        <td>Interrupt count of Wdma Frame start</td>
+    </tr>
+    <tr>
+        <td>wLCNum</td>
+        <td>Interrupt count of Wdma Line Count hit</td>
+    </tr>
+    <tr>
+        <td>wDoneNum</td>
+        <td>Interrupt count of Wdma Done</td>
+    </tr>
+    <tr>
+        <td>DvCnt</td>
+        <td>Double vsync count</td>
+    </tr>
+    <tr>
+        <td>OsCnt</td>
+        <td>Oversize count</td>
+    </tr>
+    <tr>
+        <td>Cap_size</td>
+        <td>Port Crop Size, please refer to <a href="#312-mi_vif_outputportattr_t">MI_VIF_OutputPortAttr_t</a> stCapRect</td>
+    </tr>
+    <tr>
+        <td>Dest_size</td>
+        <td>Output size, please refer to <a href="#312-mi_vif_outputportattr_t">MI_VIF_OutputPortAttr_t</a> stDestSize</td>
+    </tr>
+    <tr>
+        <td>Fmt</td>
+        <td>Output pixel format, please refer to <a href="#312-mi_vif_outputportattr_t">MI_VIF_OutputPortAttr_t</a> ePixFormat</td>
+    </tr>
+    <tr>
+        <td>Rate</td>
+        <td>Frame rate type, please refer to <a href="#312-mi_vif_outputportattr_t">MI_VIF_OutputPortAttr_t</a> eFrameRate</td>
+    </tr>
+    <tr>
+        <td>CRC</td>
+        <td>CRC on/off status</td>
+    </tr> <br />
+    <tr>
+        <td>Atom</td>
+        <td>The number of buffers held by driver</td>
+    </tr>
+    <tr>
+        <td>MetaInfo</td>
+        <td>Frame id</td>
+    </tr>
+    <tr>
+        <td>OutCount</td>
+        <td>Output frame count, only done frame, not include drop frame</td>
+    </tr>
+    <tr>
+        <td>Addr0Cnt</td>
+        <td>Frame address 0 count, means skip frame count</td>
+    </tr>
+    <tr>
+        <td>FailCount</td>
+        <td>Failed to get outputbuffer count</td>
+    </tr>
+    <tr>
+        <td>EnqFailCount</td>
+        <td>Count which failed to queue buffer to wdma</td>
+    </tr>
+    <tr>
+        <td>Fps</td>
+        <td>Frame per second</td>
+    </tr>
+    <tr>
+        <td>Recv_size</td>
+        <td>Vif hardware received size</td>
+    </tr>
+    <tr>
+        <td>Out_size</td>
+        <td>Port0 wdma size setting</td>
+    </tr>
+    <tr>
+        <td>SubOut_size</td>
+        <td>Port1 wdma size setting</td>
+    </tr>
+    <tr>
+        <td>FifoDepth</td>
+        <td>Buffer count in wdma fifo</td>
+    </tr>
+    <tr>
+        <td>WdmaInactive</td>
+        <td>Wdma is active or not, 0: active, 1: inactive</td>
+    </tr>
+</table></p>
+</li>
+</ul>
+<hr />
+<h3 id="52-echo">5.2. echo<a class="headerlink" href="#52-echo" title="Permanent link">&para;</a></h3>
+<p>Echo help can view available commands:</p>
+<div class="codehilite"><pre><span></span># echo help &gt;/proc/mi_modules/mi_vif/mi_vif0
+</pre></div>
+
+
+<p><img alt="" src="mymedia/vif/vif-5.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Dump frame to the specified path.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo dump [devid portid path cnt dumpdrop] &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id <br>  portid: port id   <br> path: Dumped path <br>cnt: optional, frame count need to be dumped, default 1 <br>dumpdrop: optional, only dump frame need to be dropped, default FALSE</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo dump 0 0 /tmp &gt;  /proc/mi_modules/mi_vif/mi_vif0  <br>echo dump 0 0 /tmp 2 1 &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set the number of vif atoms.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo initatom [devid portid InitAtom] &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id  <br> portid: port id <br> InitAtom: The maximum number of buffers held by the Driver</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo initatom 0 0 2 &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set timer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo usetimer [devid bUseTimer] &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id  <br> bUseTimer: Enable timer</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo usetimer 0 1 &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Erase vif buffer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo erasebuffer [devid portid bEraseBuffer] &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id   <br> portid: port id  <br> EraseBuffer: Enable to erase buffer</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo erasebuffer 0 0 1 &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set Dev Mask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo devmask [devid bMask] &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id   <br> bmask: Enable mask</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo devmask 0 1 &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Enable output port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo enport [devid portid bEn] &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id   <br>portid: port id    <br>bEn: enable</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo enport 0 0 1 &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set output port attribute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo cfgport [devid portid crop(x,y,width,height)  dest(width,height) pixel compress] &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id    <br>portid: port id   <br>crop(x,y,width,height): output port crop position   <br>dest(width,height): output size  <br>Pixel: output port pixel format   <br>compress: compress mode</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo cfgport 0 0 0 0 1280 720 1280 720 14 5 &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Reset vif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo resethw [devid eResetType] &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id    <br>eResetType: reset position. 0:FIFO; 1:wdma; 2:AFIFO_WDMA_GROUP; 3:FIFO_WDMA_DEV</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo resethw 0 3 &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set fps threshold. When fps less than threshold, warning will be reported.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo fpsth [devid portid FpsTh FpsFloatTh] &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id   <br>portid: port id   <br>FpsTh: fps integer threshold   <br>FpsFloatTh: fps decimal threshold</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo enport 0 0 29 98 &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set pts interval threshold. When pts is not in the range of threshold, warning will be reported.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo ptsth [devid portid ptsmin ptsmax] &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id   <br>portid: port id   <br>ptsmin:  pts interval min threshold(us)   <br>ptsmax:  pts interval max threshold(us)</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo ptsth 0 0 25000 40000 &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Trigger fifo full reset flow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo fifofull [devid bNeedReset] &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id    <br>bNeedReset: set 1 to trigger fifo full reset flow</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo fifofull 0 1 &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Enable CRC check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo crc [devid enable] &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id    <br>enable: set 1 to enable CRC</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo crc 0 1 &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Set MI VIF debug level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo debuglv [devid debuglevel] &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id <br>debuglevel: MI VIF debug level, default 0, off <br>0x0001 Mhal_Buff_Dbg  <br>0x0002 CHECK_LOOP  <br>0x0004 CHECK_ISR  <br>0x0008 CHECK_FLOW  <br>0x0080 CHECK_LATENCY</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo debuglv 0 3 &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Enable VIF pattern gen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo patgen [group width height fps pixel multi  bFieldEn Enable] &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>Group: group ID <br>Width: pattern width <br>Height: pattern height <br>Fps: output frame per second <br>Pixel: pattern pixel format <br>Multi: can be set to 1chn/2chn/4chn, the same as BT656 multichn concept <br>bFieldEn: enable DI mode <br>Enable: enable pattern</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo patgen 0 1280  720 25 14 4 0 1 &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Enable VIF data gen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo datagen [group Enable] &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>group: group ID <br>Enable: enable data gen</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo datagen 0 1 &gt; /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Force deque vif buffer, used for debugging when the buffer is stuck in vif.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo forcedeque [devid  portid CurrentWriteAddr ValidCnt WdmaInactive] &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id <br>Portid: port id <br>CurrentWriteAddr: address which WMDA is writing  <br>ValidCnt: buffer count which stay in WDMA FIFO <br> WdmaInactive: wdma status, 0: active, 1: inactive</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo forcedeque 0 0 0 0 1 &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><div style="width:415pt">Change VIF output buffer randomly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>echo changebuf [devid portid cnt bdump mode] &gt;  /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+<tr>
+<td>Parameter<br>Description</td>
+<td>devid: device id   <br>portid: port id   <br>Cnt: buffer count which need to be changed  <br>bdump: optional, dump change buffer or not, default FALSE not dump  <br>Mode: optional, different mode to change buffer, default mode 0  <br>0: Only change buffer by the count which user set  <br>1: For SFBC0 compress, only change count which user set, but change position within SFBC0 PPS header  <br>2: Change every output buffer, and not refer to parameter “cnt”  <br>3: Change every output buffer, change position include 50% SFBC0 PPS and 50% Non-PPS, and not refer to parameter “cnt”</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>echo changebuf 0 0 3 &gt;   /proc/mi_modules/mi_vif/mi_vif0  <br>echo changebuf 0 0 3 1 2 &gt;   /proc/mi_modules/mi_vif/mi_vif0</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="vdf_en.html" title="VDF" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                VDF
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="vdisp_en.html" title="VDISP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                VDISP
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../search/search_index.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>

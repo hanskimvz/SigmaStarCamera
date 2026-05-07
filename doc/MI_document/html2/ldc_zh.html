@@ -1,0 +1,4196 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="SigmaStar Project Documentation System">
+      
+      
+      
+        <meta name="author" content="george.chou">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>LDC - sigdoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/codeblock.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/print.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/table.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../index.html" title="sigdoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              sigdoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                LDC
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../index.html" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" class="md-tabs__link">
+          环境搭建
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/Development/sdk.html" class="md-tabs__link md-tabs__link--active">
+          开发
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../index.html" title="sigdoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    sigdoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../index.html" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      环境搭建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        环境搭建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Environmentsetup/Environmentsetup.html" title="环境搭建" class="md-nav__link">
+      环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      开发
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/sdk.html" title="SDK阅读指南" class="md-nav__link">
+      SDK阅读指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      SDK模块API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        SDK模块API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aec_zh.html" title="AEC" class="md-nav__link">
+      AEC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aed_zh.html" title="AED" class="md-nav__link">
+      AED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ai_zh.html" title="AI" class="md-nav__link">
+      AI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ao_zh.html" title="AO" class="md-nav__link">
+      AO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="apc_zh.html" title="APC" class="md-nav__link">
+      APC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="bf_zh.html" title="BF" class="md-nav__link">
+      BF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="disp_zh.html" title="DISP" class="md-nav__link">
+      DISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="fb_zh.html" title="FB" class="md-nav__link">
+      FB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ipu_zh.html" title="IPU" class="md-nav__link">
+      IPU
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iqserver_zh.html" title="IQSERVER" class="md-nav__link">
+      IQSERVER
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="isp_zh.html" title="ISP" class="md-nav__link">
+      ISP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ive_zh.html" title="IVE" class="md-nav__link">
+      IVE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        LDC
+      </label>
+    
+    <a href="ldc_zh.html" title="LDC" class="md-nav__link md-nav__link--active">
+      LDC
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 模块说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 流程框图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 平台特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4. 关键字说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    2. API 参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_ldc_createdevice" class="md-nav__link">
+    2.1. MI_LDC_CreateDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_ldc_destroydevice" class="md-nav__link">
+    2.2. MI_LDC_DestroyDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_ldc_createchannel" class="md-nav__link">
+    2.3. MI_LDC_CreateChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_ldc_destroychannel" class="md-nav__link">
+    2.4. MI_LDC_DestroyChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_ldc_startchannel" class="md-nav__link">
+    2.5. MI_LDC_StartChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_ldc_stopchannel" class="md-nav__link">
+    2.6. MI_LDC_StopChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_ldc_getoutputportattr" class="md-nav__link">
+    2.7. MI_LDC_GetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_ldc_setchnparam" class="md-nav__link">
+    2.8. MI_LDC_SetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_ldc_dolutdirecttask" class="md-nav__link">
+    2.9. MI_LDC_DoLutDirectTask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_ldc_setoutputportattr" class="md-nav__link">
+    2.10. MI_LDC_SetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_ldc_attachtochn" class="md-nav__link">
+    2.11. MI_LDC_AttachToChn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_ldc_detachfromchn" class="md-nav__link">
+    2.12. MI_LDC_DetachFromChn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_ldc_dev" class="md-nav__link">
+    3.1. MI_LDC_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_ldc_chn" class="md-nav__link">
+    3.2. MI_LDC_CHN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_ldc_devattr_t" class="md-nav__link">
+    3.3. MI_LDC_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_ldc_workmode_e" class="md-nav__link">
+    3.4. MI_LDC_WorkMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_ldc_mapinfotype_e" class="md-nav__link">
+    3.5. MI_LDC_MapInfoType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_ldc_displacementmapinfo_t" class="md-nav__link">
+    3.6. MI_LDC_DisplacementMapInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_ldc_sensorcalibinfo_t" class="md-nav__link">
+    3.7. MI_LDC_SensorCalibInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_ldc_chnattr_t" class="md-nav__link">
+    3.8. MI_LDC_ChnAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_ldc_chnparam_t" class="md-nav__link">
+    3.9. MI_LDC_ChnParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_ldc_outputportattr_t" class="md-nav__link">
+    3.10. MI_LDC_OutputPortAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_ldc_directbuf_t" class="md-nav__link">
+    3.11. MI_LDC_DirectBuf_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_ldc_luttaskattr_t" class="md-nav__link">
+    3.12. MI_LDC_LutTaskAttr_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 错误码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs" class="md-nav__link">
+    5. PROCFS介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="panel_zh.html" title="PANEL" class="md-nav__link">
+      PANEL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rgn_zh.html" title="RGN" class="md-nav__link">
+      RGN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scl_zh.html" title="SCL" class="md-nav__link">
+      SCL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sed_zh.html" title="SED" class="md-nav__link">
+      SED
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sensor_zh.html" title="SENSOR" class="md-nav__link">
+      SENSOR
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="src_zh.html" title="SRC" class="md-nav__link">
+      SRC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ssl_zh.html" title="SSL" class="md-nav__link">
+      SSL
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sys_zh.html" title="SYS" class="md-nav__link">
+      SYS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="venc_zh.html" title="VENC" class="md-nav__link">
+      VENC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vdf_zh.html" title="VDF" class="md-nav__link">
+      VDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="vif_zh.html" title="VIF" class="md-nav__link">
+      VIF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      BSP开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        BSP开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/emmc.html" title="eMMC使用参考" class="md-nav__link">
+      eMMC使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/gpio.html" title="GPIO使用参考" class="md-nav__link">
+      GPIO使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/i2c.html" title="I2C使用参考" class="md-nav__link">
+      I2C使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/pwm.html" title="PWM使用参考" class="md-nav__link">
+      PWM使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/register.html" title="寄存器使用参考" class="md-nav__link">
+      寄存器使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/sar.html" title="SAR使用参考" class="md-nav__link">
+      SAR使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/spi.html" title="SPI使用参考" class="md-nav__link">
+      SPI使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/uart.html" title="UART使用参考" class="md-nav__link">
+      UART使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/watchdog.html" title="WATCHDOG使用参考" class="md-nav__link">
+      WATCHDOG使用参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../BSP/power.html" title="功耗调整指引" class="md-nav__link">
+      功耗调整指引
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      图像开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        图像开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/api.html" title="ISP软件开发参考" class="md-nav__link">
+      ISP软件开发参考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/iqtuning.html" title="ISP API Tuning SOP" class="md-nav__link">
+      ISP API Tuning SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/3a.html" title="AE/AWB/AF Interface" class="md-nav__link">
+      AE/AWB/AF Interface
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ISP/hdr.html" title="ISP HDR Tuning Guide" class="md-nav__link">
+      ISP HDR Tuning Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      应用开发参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        应用开发参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-1" type="checkbox" id="nav-3-5-1">
+    
+    <label class="md-nav__link" for="nav-3-5-1">
+      工具相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-1">
+        工具相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/masterslice.html" title="母片制作" class="md-nav__link">
+      母片制作
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-2" type="checkbox" id="nav-3-5-2">
+    
+    <label class="md-nav__link" for="nav-3-5-2">
+      系统相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-2">
+        系统相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/OTP-Key.html" title="Security Boot Flow SOP" class="md-nav__link">
+      Security Boot Flow SOP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ubi.html" title="UBI文件系统使用指南" class="md-nav__link">
+      UBI文件系统使用指南
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-3" type="checkbox" id="nav-3-5-3">
+    
+    <label class="md-nav__link" for="nav-3-5-3">
+      应用相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-3">
+        应用相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/audiotuning.html" title="音频调试手册" class="md-nav__link">
+      音频调试手册
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/Sensor Porting.html" title="Sensor Porting Guide" class="md-nav__link">
+      Sensor Porting Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5-4" type="checkbox" id="nav-3-5-4">
+    
+    <label class="md-nav__link" for="nav-3-5-4">
+      硬件相关
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-5-4">
+        硬件相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/ssc37x.html" title="QFN88 SSC37X Demo板说明" class="md-nav__link">
+      QFN88 SSC37X Demo板说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/hardpara.html" title="涉硬参数调整指南" class="md-nav__link">
+      涉硬参数调整指南
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/Development/mic.html" title="智能语音拾音模块设计规范" class="md-nav__link">
+      智能语音拾音模块设计规范
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      FAQ
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/abbr.html" title="缩略语" class="md-nav__link">
+      缩略语
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../customer/IPC/Maruko/FAQ/iq.html" title="IQ Q&A" class="md-nav__link">
+      IQ Q&A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1. 模块说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2. 流程框图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3. 平台特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4. 关键字说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api" class="md-nav__link">
+    2. API 参考
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-mi_ldc_createdevice" class="md-nav__link">
+    2.1. MI_LDC_CreateDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-mi_ldc_destroydevice" class="md-nav__link">
+    2.2. MI_LDC_DestroyDevice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-mi_ldc_createchannel" class="md-nav__link">
+    2.3. MI_LDC_CreateChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mi_ldc_destroychannel" class="md-nav__link">
+    2.4. MI_LDC_DestroyChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-mi_ldc_startchannel" class="md-nav__link">
+    2.5. MI_LDC_StartChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-mi_ldc_stopchannel" class="md-nav__link">
+    2.6. MI_LDC_StopChannel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-mi_ldc_getoutputportattr" class="md-nav__link">
+    2.7. MI_LDC_GetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-mi_ldc_setchnparam" class="md-nav__link">
+    2.8. MI_LDC_SetChnParam
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-mi_ldc_dolutdirecttask" class="md-nav__link">
+    2.9. MI_LDC_DoLutDirectTask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#210-mi_ldc_setoutputportattr" class="md-nav__link">
+    2.10. MI_LDC_SetOutputPortAttr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#211-mi_ldc_attachtochn" class="md-nav__link">
+    2.11. MI_LDC_AttachToChn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-mi_ldc_detachfromchn" class="md-nav__link">
+    2.12. MI_LDC_DetachFromChn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 数据类型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mi_ldc_dev" class="md-nav__link">
+    3.1. MI_LDC_DEV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mi_ldc_chn" class="md-nav__link">
+    3.2. MI_LDC_CHN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mi_ldc_devattr_t" class="md-nav__link">
+    3.3. MI_LDC_DevAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mi_ldc_workmode_e" class="md-nav__link">
+    3.4. MI_LDC_WorkMode_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-mi_ldc_mapinfotype_e" class="md-nav__link">
+    3.5. MI_LDC_MapInfoType_e
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-mi_ldc_displacementmapinfo_t" class="md-nav__link">
+    3.6. MI_LDC_DisplacementMapInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mi_ldc_sensorcalibinfo_t" class="md-nav__link">
+    3.7. MI_LDC_SensorCalibInfo_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-mi_ldc_chnattr_t" class="md-nav__link">
+    3.8. MI_LDC_ChnAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39-mi_ldc_chnparam_t" class="md-nav__link">
+    3.9. MI_LDC_ChnParam_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310-mi_ldc_outputportattr_t" class="md-nav__link">
+    3.10. MI_LDC_OutputPortAttr_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-mi_ldc_directbuf_t" class="md-nav__link">
+    3.11. MI_LDC_DirectBuf_t
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-mi_ldc_luttaskattr_t" class="md-nav__link">
+    3.12. MI_LDC_LutTaskAttr_t
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 错误码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-procfs" class="md-nav__link">
+    5. PROCFS介绍
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-cat" class="md-nav__link">
+    5.1. cat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-echo" class="md-nav__link">
+    5.2. echo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1>MI LDC API</h1>
+<!-- REVISION HISTORY
+
+| Revision No. | Description                       | Date       |
+| ------------ | ------------------------------------------------------------ | ---------- |
+| 3.0          | - Initial release                 | 12/04/2020 |
+| 3.1          | - 添加MI_LDC_SetOutputPortAttr接口 | 07/04/2021 |
+|              | - 新增PROCFS介绍                    | 08/25/2021 |
+| 3.2          | - 添加Maruko 平台信息 <br>- 添加新接口: MI_LDC_AttachToChn, MI_LDC_DetachFromChn  | 04/01/2022 | 
+
+-->
+
+<hr />
+<h2 id="1">1. 概述<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="11">1.1. 模块说明<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>镜头畸变矫正(Lens distortion correction)，目前模块支持功能包括镜头畸变矫正、图像拼接与融合、电子防抖，查找表功能。</p>
+<hr />
+<h3 id="12">1.2. 流程框图<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<h4>1.2.1. Tiramisu框图</h4>
+<p><img alt="" src="mymedia/ldc/ldc-1.svg" /></p>
+<p>注：</p>
+<ul>
+<li>
+<p>32X2，16X2分别为输入图像，输出图像宽高对齐限制。</p>
+</li>
+<li>
+<p>Tiramisu、Muffin、Mochi为相同流程框图。</p>
+</li>
+</ul>
+<h4>1.2.2. Maruko框图</h4>
+<p><img alt="" src="mymedia/ldc/ldc_inside_isp-flowChart.svg" /></p>
+<p>注：</p>
+<ul>
+<li>
+<p>Maruko平台LDC属于ISP子模块，实际由ISP输入输出。</p>
+</li>
+<li>
+<p>Maruko只有一个LDC Device0，每个Device最多支持的channel数与ISP相同。</p>
+</li>
+<li>
+<p>输入图像宽高对齐限制为8x2, 不支持缩放，输出宽高与输入宽高相同。</p>
+</li>
+</ul>
+<hr />
+<h3 id="13">1.3. 平台特性<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>各平台支持的功能：</p>
+<p>Device 0:</p>
+<table>
+<thead>
+<tr>
+<th>功能 <br>  平台</th>
+<th>镜头畸变矫正</th>
+<th>图像拼接与融合</th>
+<th>电子防抖</th>
+<th>查找表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiramisu</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Muffin</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Mochi</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Maruko</td>
+<td>Y (Horizontal)</td>
+<td>N</td>
+<td>N</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<p>Device 1:</p>
+<table>
+<thead>
+<tr>
+<th>功能 <br>  平台</th>
+<th>镜头畸变矫正</th>
+<th>图像拼接与融合</th>
+<th>电子防抖</th>
+<th>查找表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Muffin</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<p>功能介绍：</p>
+<ul>
+<li>
+<p>镜头畸变矫正</p>
+<p>根据镜头标定参数，对输入图像进行畸变矫正处理，然后按照用户配置的投影模式以及感兴趣区域进行输出。</p>
+</li>
+<li>
+<p>图像拼接与融合</p>
+<p>针对多sensor 输入的图像进行畸变矫正处理，然后将多个图像拼接在一起，最后将图像重叠区域进行融合处理。</p>
+</li>
+<li>
+<p>数字图像防抖</p>
+<p>目前支持陀螺仪算法防抖，即根据陀螺仪产生的数据计算当前帧的图像的运动偏移情况，然后根据运动偏移情况对当前图像进行平移、旋转等变换，从而起到防抖的效果。</p>
+</li>
+<li>
+<p>查找表</p>
+<p>提供二维查找表功能，x,y方向上索引和表的数据位宽都是8bit，可以用于图像融合算法权重表的快速查找。</p>
+</li>
+</ul>
+<hr />
+<h3 id="14">1.4. 关键字说明<a class="headerlink" href="#14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>device</p>
+<p>Ldc 对应的硬件设备。</p>
+</li>
+<li>
+<p>channel</p>
+<p>Ldc 模块处理通道，各通道分时复用LDC硬件。</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-api">2. API 参考<a class="headerlink" href="#2-api" title="Permanent link">&para;</a></h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>API名</strong></th>
+<th><strong>功能</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a></td>
+<td>创建LDC device 设备</td>
+</tr>
+<tr>
+<td><a href="#22-mi_ldc_destroydevice">MI_LDC_DestroyDevice</a></td>
+<td>销毁LDC device 设备</td>
+</tr>
+<tr>
+<td><a href="#23-mi_ldc_createchannel">MI_LDC_CreateChannel</a></td>
+<td>创建LDC channel 通道</td>
+</tr>
+<tr>
+<td><a href="#24-mi_ldc_destroychannel">MI_LDC_DestroyChannel</a></td>
+<td>销毁LDC channel 通道</td>
+</tr>
+<tr>
+<td><a href="#25-mi_ldc_startchannel">MI_LDC_StartChannel</a></td>
+<td>启用LDC channel 通道</td>
+</tr>
+<tr>
+<td><a href="#26-mi_ldc_stopchannel">MI_LDC_StopChannel</a></td>
+<td>禁用LDC channel 通道</td>
+</tr>
+<tr>
+<td><a href="#27-mi_ldc_getoutputportattr">MI_LDC_GetOutputPortAttr</a></td>
+<td>获取LDC output 属性</td>
+</tr>
+<tr>
+<td><a href="#28-mi_ldc_setchnparam">MI_LDC_SetChnParam</a></td>
+<td>设置LDC 通道属性</td>
+</tr>
+<tr>
+<td><a href="#29-mi_ldc_dolutdirecttask">MI_LDC_DoLutDirectTask</a></td>
+<td>执行直接的查表任务，将buf直接送给ldc硬件处理</td>
+</tr>
+<tr>
+<td><a href="#210-mi_ldc_setoutputportattr">MI_LDC_SetOutputPortAttr</a></td>
+<td>配置LDC output 属性</td>
+</tr>
+<tr>
+<td><a href="#211-mi_ldc_attachtochn">MI_LDC_AttachToChn</a></td>
+<td>将LDC 通道绑定到对应模块通道</td>
+</tr>
+<tr>
+<td><a href="#212-mi_ldc_detachfromchn">MI_LDC_DetachFromChn</a></td>
+<td>将LDC 通道解绑定</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="21-mi_ldc_createdevice">2.1. MI_LDC_CreateDevice<a class="headerlink" href="#21-mi_ldc_createdevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>创建一个LDC device设备。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_CreateDevice(MI_LDC_DEV devId, MI_LDC_DevAttr_t *pstDevAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstDevAttr</td>
+<td>Device 属性</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>LDC 初始化设置，以及退出范例：</p>
+<p>Tiramisu、Muffin、Mochi 平台：</p>
+<div class="codehilite"><pre><span></span>MI_S32 s32Ret = MI_SUCCESS;
+MI_LDC_DEV LdcDevId = 0;
+MI_LDC_CHN LdcChnId = 0;
+MI_LDC_DevAttr_t stDevAttr = {0};
+MI_LDC_ChnAttr_t stChnAttr = {};
+MI_LDC_SensorCalibInfo_t * pstCalibInfo = &amp;stChnAttr.stCalibInfo;
+
+stChnAttr. eMode = MI_LDC_WORKMODE_LDC ;
+s32Ret = ReadBufFromFile(&quot;ldc.json&quot;, stChnAttr. pConfigAddr, stChnAttr.u32ConfigSize);
+if (s32Ret) 
+{
+    return s32Ret;
+}
+
+stChnAttr.eInfoType = MI_LDC_MAPINFOTYPE_SENSORCALIB;
+s32Ret = ReadBufFromFile(&quot;CalibPoly.bin&quot;, pstCalibInfo.pCalibPolyBinAddr, pstCalibInfo.u32CalibPolyBinSize);
+if (s32Ret)
+{
+    return s32Ret;
+}
+
+MI_LDC_CreateDevice(LdcDevId, &amp;stDevAttr);
+MI_LDC_CreateChannel(LdcDevId, LdcChnId, &amp;stChnAttr);
+MI_LDC_StartChannel(LdcDevId, LdcChnId);
+
+ReleaseBuf(stChnAttr. pConfigAddr);
+ReleaseBuf(pstCalibInfo.pCalibPolyBinAddr);
+
+/*销毁通道*/
+MI_LDC_StopChannel(LdcDevId, LdcChnId);
+MI_LDC_DestroyChannel(LdcDevId, LdcChnId);
+MI_LDC_DestroyDevice(LdcDevId);
+</pre></div>
+
+
+<p>Maruko 平台：</p>
+<div class="codehilite"><pre><span></span>MI_S32 s32Ret = MI_SUCCESS;
+MI_LDC_DEV LdcDevId = 0;
+MI_LDC_CHN LdcChnId = 0;
+MI_LDC_DevAttr_t stDevAttr = {0};
+MI_LDC_ChnAttr_t stChnAttr = {};
+MI_SYS_ChnPort_t stDstChnPort = {};
+
+stChnAttr. eMode = MI_LDC_WORKMODE_LDC ;
+s32Ret = ReadBufFromFile(&quot;ldc.json&quot;, stChnAttr. pConfigAddr, stChnAttr.u32ConfigSize);
+if (s32Ret) 
+{
+    return s32Ret;
+}
+
+stDstChnPort. eModId = E_MI_MODULE_ID_ISP;
+stDstChnPort. u32DevId = 0;
+stDstChnPort. u32ChnId = 0;
+stDstChnPort. u32PortId = 0;
+
+MI_LDC_CreateDevice(LdcDevId, &amp;stDevAttr);
+MI_LDC_CreateChannel(LdcDevId, LdcChnId, &amp;stChnAttr);
+MI_LDC_AttachToChn(LdcDevId, LdcChnId, &amp;stDstChnPort);
+/*退出释放资源*/
+ReleaseBuf(stChnAttr. pConfigAddr);
+MI_LDC_DetachFromChn(LdcDevId, LdcChnId, &amp;stDstChnPort);
+MI_LDC_DestroyChannel(LdcDevId, LdcChnId);
+MI_LDC_DestroyDevice(LdcDevId);
+</pre></div>
+
+
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#22-mi_ldc_destroydevice">MI_LDC_DestroyDevice</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="22-mi_ldc_destroydevice">2.2. MI_LDC_DestroyDevice<a class="headerlink" href="#22-mi_ldc_destroydevice" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>销毁LDC device 设备。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_DestroyDevice(MI_LDC_DEV devId);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>参见<a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> 举例.</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="23-mi_ldc_createchannel">2.3. MI_LDC_CreateChannel<a class="headerlink" href="#23-mi_ldc_createchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>创建LDC channel 通道</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_CreateChannel(MI_LDC_DEV devId, MI_LDC_CHN chnId, MI_LDC_ChnAttr_t *pstChnAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc Channel 号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChnAttr</td>
+<td>Channel 属性</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>需在<a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a>之后调用。</p>
+</li>
+<li>
+<p>举例</p>
+<p>参见<a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> 举例.</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#24-mi_ldc_destroychannel">MI_LDC_DestroyChannel</a> </p>
+</li>
+</ul>
+<hr />
+<h3 id="24-mi_ldc_destroychannel">2.4. MI_LDC_DestroyChannel<a class="headerlink" href="#24-mi_ldc_destroychannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>销毁LDC channel 通道</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_DestroyChannel(MI_LDC_DEV devId, MI_LDC_CHN chnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc Channel 号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>参见<a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> 举例.</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="25-mi_ldc_startchannel">2.5. MI_LDC_StartChannel<a class="headerlink" href="#25-mi_ldc_startchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>启用LDC channel 通道。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_StartChannel(MI_LDC_DEV devId, MI_LDC_CHN chnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc Channel 号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>Device和Channel 创建之后调用。</p>
+</li>
+<li>
+<p>Maruko平台不支持该接口，使用<a href="#211-mi_ldc_attachtochn">MI_LDC_AttachToChn</a>代替。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>参见<a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a>举例.</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#26-mi_ldc_stopchannel">MI_LDC_StopChannel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="26-mi_ldc_stopchannel">2.6. MI_LDC_StopChannel<a class="headerlink" href="#26-mi_ldc_stopchannel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>禁用LDC channel 通道。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_StopChannel(MI_LDC_DEV devId, MI_LDC_CHN chnId);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc Channel 号</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>Maruko平台不支持该接口，使用<a href="#211-mi_ldc_attachtochn">MI_LDC_AttachToChn</a>代替。</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>参见<a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a>举例.</p>
+</li>
+<li>
+<p>相关主题</p>
+<p><a href="#25-mi_ldc_startchannel">MI_LDC_StartChannel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="27-mi_ldc_getoutputportattr">2.7. MI_LDC_GetOutputPortAttr<a class="headerlink" href="#27-mi_ldc_getoutputportattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>获取LDC output 属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_GetOutputPortAttr(MI_LDC_DEV devId, MI_LDC_CHN chnId,   MI_LDC_OutputPortAttr_t *pstOutputAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc Channel 号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstOutputAttr</td>
+<td>Output 属性</td>
+<td>输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>创建通道之后可以通过该接口获取输出信息。</p>
+</li>
+<li>
+<p>举例</p>
+<p>参见<a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> 举例.</p>
+</li>
+</ul>
+<hr />
+<h3 id="28-mi_ldc_setchnparam">2.8. MI_LDC_SetChnParam<a class="headerlink" href="#28-mi_ldc_setchnparam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>设置LDC 通道属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_SetChnParam (MI_LDC_DEV devId, MI_LDC_CHN chnId, MI_LDC_ChnParam_t *pstChnParam);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Channel 号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChnParam</td>
+<td>Channel 配置参数</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<p>需要在<a href="#23-mi_ldc_createchannel">MI_LDC_CreateChannel</a>之后使用。</p>
+</li>
+<li>
+<p>举例</p>
+<p>更新channel 配置时使用，可以用于切换算法模式以及调节镜头参数。</p>
+<div class="codehilite"><pre><span></span>MI_LDC_DEV devId = 0;
+MI_LDC_CHN chnId = 0;
+MI_LDC_ChnParam_t  stChnParam = {};
+MI_LDC_SensorCalibInfo_t *pCalibInfo = &amp;stChnParam.stCalibInfo;
+
+s32Ret = ReadBufFromFile(“ldc.json”, &amp;stChnParam. pConfigAddr, &amp;stChnParam.u32ConfigSize);
+if (s32Ret) 
+{
+    return s32Ret;
+}
+s32Ret = ReadBufFromFile(“CalibPoly.bin”, &amp;pstCalibInfo.pCalibPolyBinAddr, &amp;pstCalibInfo.u32CalibPolyBinSize);
+if (s32Ret)
+{
+    return s32Ret;
+}
+
+MI_LDC_SetChnParam(devId, chnId, &amp; stChnParam)；
+
+ReleaseBuf(stChnParam. pConfigAddr);
+ReleaseBuf(pstCalibInfo.pCalibPolyBinAddr);
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="29-mi_ldc_dolutdirecttask">2.9. MI_LDC_DoLutDirectTask<a class="headerlink" href="#29-mi_ldc_dolutdirecttask" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>执行直接的查表任务，将buf直接送给ldc硬件处理</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_DoLutDirectTask(MI_LDC_DEV devID, MI_LDC_CHN chnId, MI_LDC_LutTaskAttr_t *pstAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+<th>输入/输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devID</td>
+<td>设备初始化参数</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstAttr</td>
+<td>查表任务配置属性</td>
+<td>输入/输出</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<div class="codehilite"><pre><span></span>MI_S32 s32Ret = MI_SUCCESS;
+MI_LDC_DEV devId = 0;
+MI_LDC_CHN chnId = 0;
+MI_LDC_LutTaskAttr_t  stLutTask = {};
+MI_LDC_DirectBuf_t stTableX = {}, stTableY = {}, stTableWeight = {};
+void *pVirTableX = NULL, *pVirTableY=NULL, *pVirTableWeight = NULL;
+
+#define LUT_TABLE_Init(path, table, ppVir, w, h, __exit_func__)
+do { \
+table.ePixelFormat = E_MI_SYS_PIXEL_FRAME_I8; \
+table.u32Width = w; \
+table.u32Height = h; \
+table.u32Stride[0] = w; \
+
+    s32Ret = MI_SYS_MMa_Alloc(0, NULL, w*h, &amp;table.phyAddr[0]); \
+    if (s32Ret)
+    {
+        printf(“failed to malloc buf\n”);
+        goto __exit_func__;
+}
+s32Ret = MI_SYS_Mmap(table.phyAddr[0], w*h, ppVir, false); \
+if (s32Ret)
+{
+    printf(“failed to Mmap buf\n”);
+    goto __exit_func__;
+}
+s32Ret = ReadBufFromFile(path, ppVir, w*h);
+if (s32Ret)
+{
+    goto __exit_func__;
+}
+} while(0)
+
+#define LUT_TABLE_Deinit(table, pVir)
+do { \
+    if (pVir)
+    {
+    MI_SYS_Munmap(pVir, table.u32Width * table.u32Height);
+}
+if (table.phyAddr[0])
+{
+    MI_SYS_MMA_Free(0, table.phyAddr[0]);
+}
+} while(0)
+
+LUT_TABLE_Init(“1080p_tableX”, stTableX, &amp; pVirTableX, 1920, 1080, __exit);
+LUT_TABLE_Init(“1080p_tableY”, stTableY, &amp; pVirTableY, 1920, 1080, __exit);
+LUT_TABLE_Init(“1080p_tableWeight”, stTableWeight, &amp;pVirTableWeight, 1920, 1080, __exit);
+
+MI_LDC_DoLutDirectTask (devId, chnId, &amp; stLutTask)；
+
+__exit:
+LUT_TABLE_Deinit(stTableX, pVirTableX);
+LUT_TABLE_Deinit(stTableY, pVirTableY);
+LUT_TABLE_Deinit(stTableWeight, pVirTableWeight);
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="210-mi_ldc_setoutputportattr">2.10. MI_LDC_SetOutputPortAttr<a class="headerlink" href="#210-mi_ldc_setoutputportattr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>配置LDC output 属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_SetOutputPortAttr(MI_LDC_DEV devId, MI_LDC_CHN chnId, MI_LDC_OutputPortAttr_t *pstOutputAttr);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc Channel id</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstOutputAttr</td>
+<td>Output 属性</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>该接口需要在创建通道之后使用（MI_LDC_CreateChannel）。</p>
+</li>
+<li>
+<p>该接口目前仅支持配置LDC输出的格式，支持的格式有: NV12, ARGB8888, BGRA8888。</p>
+</li>
+<li>
+<p>Tiramisu、Maruko 平台不支持修改格式。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<div class="codehilite"><pre><span></span>MI_LDC_DEV devId = 0;
+MI_LDC_CHN chnId = 0;
+MI_LDC_OutputPortAttr_t  stLdcPortAttr = {};
+
+MI_LDC_GetOutputPortAttr(devId, chnId, &amp;stLdcPortAttr);
+stLdcPortAttr.ePixelFmt = E_MI_SYS_PIXEL_FRAME_ARGB8888;
+MI_LDC_SetOutputPortAttr(devId, chnId, &amp;stLdcPortAttr);
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="211-mi_ldc_attachtochn">2.11. MI_LDC_AttachToChn<a class="headerlink" href="#211-mi_ldc_attachtochn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>将LDC 通道绑定到对应的模块通道。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_AttachToChn(MI_LDC_DEV devId, MI_LDC_CHN chnId, MI_SYS_ChnPort_t *pstChnPort);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc Channel 号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChnPort</td>
+<td>目标模块通道信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>需要在创建通道之后使用（MI_LDC_CreateChannel）。</p>
+</li>
+<li>
+<p>仅支持绑定ISP 模块。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>见 <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> 举例</p>
+</li>
+</ul>
+<hr />
+<h3 id="212-mi_ldc_detachfromchn">2.12. MI_LDC_DetachFromChn<a class="headerlink" href="#212-mi_ldc_detachfromchn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>描述</p>
+<p>将LDC 通道解绑定。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>MI_S32 MI_LDC_DetachFromChn(MI_LDC_DEV devId, MI_LDC_CHN chnId, MI_SYS_ChnPort_t *pstChnPort);
+</pre></div>
+
+
+</li>
+<li>
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>输入/输出</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>devId</td>
+<td>Device id号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>chnId</td>
+<td>Ldc Channel 号</td>
+<td>输入</td>
+</tr>
+<tr>
+<td>pstChnPort</td>
+<td>目标模块通道信息</td>
+<td>输入</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>返回值</p>
+<ul>
+<li>
+<p>0 成功。</p>
+</li>
+<li>
+<p>非0 失败，参照<a href="#jump">错误码</a>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>需求</p>
+<ul>
+<li>
+<p>头文件：mi_ldc.h</p>
+</li>
+<li>
+<p>库文件：libmi_ldc.a</p>
+</li>
+</ul>
+</li>
+<li>
+<p>举例</p>
+<p>见 <a href="#21-mi_ldc_createdevice">MI_LDC_CreateDevice</a> 举例</p>
+</li>
+</ul>
+<hr />
+<h2 id="3">3. 数据类型<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<hr />
+<p>模块相关数据类型定义如下：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#31-mi_ldc_dev">MI_LDC_DEV</a></td>
+<td>定义LDC device的类型</td>
+</tr>
+<tr>
+<td><a href="#32-mi_ldc_chn">MI_LDC_CHN</a></td>
+<td>定义LDC channel的类型</td>
+</tr>
+<tr>
+<td><a href="#33-mi_ldc_devattr_t">MI_LDC_DevAttr_t</a></td>
+<td>定义LDC device 属性</td>
+</tr>
+<tr>
+<td><a href="#34-mi_ldc_workmode_e">MI_LDC_WorkMode_e</a></td>
+<td>定义LDC的工作模式</td>
+</tr>
+<tr>
+<td><a href="#35-mi_ldc_mapinfotype_e">MI_LDC_MapInfoType_e</a></td>
+<td>定义LDC映射信息类型</td>
+</tr>
+<tr>
+<td><a href="#36-mi_ldc_displacementmapinfo_t">MI_LDC_DisplacementMapInfo_t</a></td>
+<td>定义LDC 置换图</td>
+</tr>
+<tr>
+<td><a href="#37-mi_ldc_sensorcalibinfo_t">MI_LDC_SensorCalibInfo_t</a></td>
+<td>定义LDC sensor校准参数</td>
+</tr>
+<tr>
+<td><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></td>
+<td>定义LDC channel 属性</td>
+</tr>
+<tr>
+<td><a href="#39-mi_ldc_chnparam_t">MI_LDC_ChnParam_t</a></td>
+<td>定义LDC channel 动态参数</td>
+</tr>
+<tr>
+<td><a href="#310-mi_ldc_outputportattr_t">MI_LDC_OutputPortAttr_t</a></td>
+<td>定义LDC output 端口属性</td>
+</tr>
+<tr>
+<td><a href="#311-mi_ldc_directbuf_t">MI_LDC_DirectBuf_t</a></td>
+<td>定义LDC输入buf 类型</td>
+</tr>
+<tr>
+<td><a href="#312-mi_ldc_luttaskattr_t">MI_LDC_LutTaskAttr_t</a></td>
+<td>定义LDC图像查找表任务类型</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="31-mi_ldc_dev">3.1. MI_LDC_DEV<a class="headerlink" href="#31-mi_ldc_dev" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义LDC device的类型</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_LDC_DEV;
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="32-mi_ldc_chn">3.2. MI_LDC_CHN<a class="headerlink" href="#32-mi_ldc_chn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义LDC channel的类型</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>typedef MI_U32 MI_LDC_CHN;
+</pre></div>
+
+
+</li>
+</ul>
+<hr />
+<h3 id="33-mi_ldc_devattr_t">3.3. MI_LDC_DevAttr_t<a class="headerlink" href="#33-mi_ldc_devattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC设备初始化参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_DevAttr_s
+{
+    MI_U32 u32Reserved;
+} MI_LDC_DevAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Reserved</td>
+<td>保留数据</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p>MI_LDC_CreateDevice</p>
+</li>
+</ul>
+<hr />
+<h3 id="34-mi_ldc_workmode_e">3.4. MI_LDC_WorkMode_e<a class="headerlink" href="#34-mi_ldc_workmode_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC工作模式。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    MI_LDC_WORKMODE_LDC = 0x01,
+    MI_LDC_WORKMODE_LUT = 0x02,
+    MI_LDC_WORKMODE_DIS_GYRO = 0x04,
+} MI_LDC_WorkMode_e;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MI_LDC_WORKMODE_LDC</td>
+<td>LDC 模式</td>
+</tr>
+<tr>
+<td>MI_LDC_WORKMODE_LUT</td>
+<td>LUT直接查表模式</td>
+</tr>
+<tr>
+<td>MI_LDC_WORKMODE_DIS_GYRO</td>
+<td>基于陀螺仪的DIS 防抖模式</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a> </p>
+</li>
+</ul>
+<hr />
+<h3 id="35-mi_ldc_mapinfotype_e">3.5. MI_LDC_MapInfoType_e<a class="headerlink" href="#35-mi_ldc_mapinfotype_e" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC映射信息类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef enum
+{
+    MI_LDC_MAPINFOTYPE_DISPMAP,
+    MI_LDC_MAPINFOTYPE_SENSORCALIB, 
+} MI_LDC_MapInfoType_e ;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MI_LDC_MAPINFOTYPE_DISPMAP</td>
+<td>置换图</td>
+</tr>
+<tr>
+<td>MI_LDC_MAPINFOTYPE_SENSORCALIB</td>
+<td>sensor 校准信息</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="36-mi_ldc_displacementmapinfo_t">3.6. MI_LDC_DisplacementMapInfo_t<a class="headerlink" href="#36-mi_ldc_displacementmapinfo_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC置换图信息。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_DisplacementMapInfo_s
+{
+    void *pXmapAddr;
+    void *pYmapAddr;
+    MI_U32 u32XmapSize;
+    MI_U32 u32YmapSize;
+} MI_LDC_DisplacementMapInfo_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pXmapAddr</td>
+<td>x坐标映射表的起始地址</td>
+</tr>
+<tr>
+<td>pYmapAddr</td>
+<td>y坐标映射表的起始地址</td>
+</tr>
+<tr>
+<td>u32XmapSize</td>
+<td>x坐标的映射表大小</td>
+</tr>
+<tr>
+<td>u32YmapSize</td>
+<td>y坐标的映射表大小</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></p>
+<p><a href="#39-mi_ldc_chnparam_t">MI_LDC_ChnParam_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="37-mi_ldc_sensorcalibinfo_t">3.7. MI_LDC_SensorCalibInfo_t<a class="headerlink" href="#37-mi_ldc_sensorcalibinfo_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC Sensor 校准信息。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_SensorCalibInfo_s
+{
+    void *pCalibPolyBinAddr;
+    MI_U32 u32CalibPolyBinSize;
+} MI_LDC_SensorCalibInfo_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pCalibPolyBinAddr</td>
+<td>校准信息指针</td>
+</tr>
+<tr>
+<td>u32CalibPolyBinSize</td>
+<td>校准信息大小</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#38-mi_ldc_chnattr_t">MI_LDC_ChnAttr_t</a></p>
+<p><a href="#39-mi_ldc_chnparam_t">MI_LDC_ChnParam_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="38-mi_ldc_chnattr_t">3.8. MI_LDC_ChnAttr_t<a class="headerlink" href="#38-mi_ldc_chnattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC设备Channel 属性。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_ChnAttr_s
+{
+    MI_LDC_WorkMode_e eMode;
+
+    MI_BOOL bUseProjection3x3Matrix;
+    MI_S32 as32Projection3x3Matrix[LDC_MAXTRIX_NUM];
+    MI_U16 u16UserSliceNum;
+    MI_U16 u16FocalLength;
+
+    void *pConfigAddr;
+    MI_U32 u32ConfigSize;
+
+    MI_LDC_MapInfoType_e eInfoType;
+    union
+    {
+        MI_LDC_DisplacementMapInfo_t stDispMapInfo;
+        MI_LDC_SensorCalibInfo_t stCalibInfo;
+    };
+} MI_LDC_ChnAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eMode</td>
+<td>Channel 的工作模式</td>
+</tr>
+<tr>
+<td>bUseProjection3x3Matrix</td>
+<td>表明是否使用as32Projection3x3Matrix</td>
+</tr>
+<tr>
+<td>as32Projection3x3Matrix</td>
+<td>表明陀螺仪摆放的方向（用于DIS模式）</td>
+</tr>
+<tr>
+<td>u16UserSliceNum</td>
+<td>DIS 垂直方向上切分数量，主要用于Rolling Shutter相机的运动场景，每个Slice会有单独的3x3 Matrix</td>
+</tr>
+<tr>
+<td>u16FocalLength</td>
+<td>焦距，单位mm（用于DIS模式）</td>
+</tr>
+<tr>
+<td>pConfigAddr</td>
+<td>LDC 配置信息地址</td>
+</tr>
+<tr>
+<td>u32ConfigSize</td>
+<td>LDC 配置信息大小</td>
+</tr>
+<tr>
+<td>eInfoType</td>
+<td>LDC 映射信息类型</td>
+</tr>
+<tr>
+<td>stDispMapInfo/stCalibInfo</td>
+<td>LDC 置换表/sensor校准信息，包含畸变参数</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#23-mi_ldc_createchannel">MI_LDC_CreateChannel</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="39-mi_ldc_chnparam_t">3.9. MI_LDC_ChnParam_t<a class="headerlink" href="#39-mi_ldc_chnparam_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC设备初始化参数。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_ChnParam_s
+{
+    MI_BOOL bUseProjection3x3Matrix;
+    MI_S32 as32Projection3x3Matrix[LDC_MAXTRIX_NUM];
+    MI_U16 u16FocalLength;
+    void *pConfigAddr;
+    MI_U32 u32ConfigSize;
+    union
+    {
+        MI_LDC_DisplacementMapInfo_t stDispMapInfo;
+        MI_LDC_SensorCalibInfo_t stCalibInfo;
+    };
+} MI_LDC_ChnParam_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bUseProjection3x3Matrix</td>
+<td>表明是否使用as32Projection3x3Matrix</td>
+</tr>
+<tr>
+<td>as32Projection3x3Matrix</td>
+<td>表明陀螺仪摆放的方向（用于DIS模式）</td>
+</tr>
+<tr>
+<td>u16FocalLength</td>
+<td>焦距，单位mm（用于DIS模式）</td>
+</tr>
+<tr>
+<td>pConfigAddr</td>
+<td>配置信息地址</td>
+</tr>
+<tr>
+<td>u32ConfigSize</td>
+<td>配置信息大小</td>
+</tr>
+<tr>
+<td>stDispMapInfo/ stCalibInfo</td>
+<td>LDC 置换表/sensor校准信息，包含畸变参数</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#28-mi_ldc_setchnparam">MI_LDC_SetChnParam</a> </p>
+</li>
+</ul>
+<hr />
+<h3 id="310-mi_ldc_outputportattr_t">3.10. MI_LDC_OutputPortAttr_t<a class="headerlink" href="#310-mi_ldc_outputportattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>定义LDC output 端口属性。</p>
+</li>
+<li>
+<p>语法</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_OutputPortAttr_s
+
+{
+
+    MI_U16 u16Width;
+
+    MI_U16 u16Height;
+
+    MI_SYS_PixelFormat_e ePixelFmt;
+
+} MI_LDC_OutputPortAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u16Width</td>
+<td>图像的宽度</td>
+</tr>
+<tr>
+<td>u16Height</td>
+<td>图像的高度</td>
+</tr>
+<tr>
+<td>ePixelFmt</td>
+<td>图像的像素格式</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#27-mi_ldc_getoutputportattr">MI_LDC_GetOutputPortAttr</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="311-mi_ldc_directbuf_t">3.11. MI_LDC_DirectBuf_t<a class="headerlink" href="#311-mi_ldc_directbuf_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC 输入buf类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_DirectBuf_s
+{
+    MI_SYS_PixelFormat_e ePixelFormat;
+    MI_U32 u32Width;
+    MI_U32 u32Height;
+    MI_U32 u32Stride[2];
+    MI_PHY phyAddr[2];
+} MI_LDC_DirectBuf_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ePixelFormat</td>
+<td>图像格式</td>
+</tr>
+<tr>
+<td>u32Width</td>
+<td>图像宽度</td>
+</tr>
+<tr>
+<td>u32Height</td>
+<td>图像高度</td>
+</tr>
+<tr>
+<td>u32Stride</td>
+<td>图片每行所占字节数</td>
+</tr>
+<tr>
+<td>phyAddr</td>
+<td>图像存储物理地址</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#312-mi_ldc_luttaskattr_t">MI_LDC_LutTaskAttr_t</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="312-mi_ldc_luttaskattr_t">3.12. MI_LDC_LutTaskAttr_t<a class="headerlink" href="#312-mi_ldc_luttaskattr_t" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>说明</p>
+<p>LDC 图像查找表任务类型。</p>
+</li>
+<li>
+<p>定义</p>
+<div class="codehilite"><pre><span></span>typedef struct MI_LDC_LutTaskAttr_s
+{
+    struct MI_LDC_LutSrcBuf_s
+    {
+        MI_LDC_DirectBuf_t stTableX;
+        MI_LDC_DirectBuf_t stTableY;
+        MI_LDC_DirectBuf_t stTableWeight;
+    } stSrcBuf;
+
+MI_LDC_DirectBuf_t stDstBuf;
+} MI_LDC_LutTaskAttr_t;
+</pre></div>
+
+
+</li>
+<li>
+<p>成员</p>
+<table>
+<thead>
+<tr>
+<th>成员名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stSrcBuf</td>
+<td>查找表的数据源以及权重表</td>
+</tr>
+<tr>
+<td>stDstBuf</td>
+<td>存放查表之后的输出数据</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>相关数据类型及接口</p>
+<p><a href="#29-mi_ldc_dolutdirecttask">MI_LDC_DoLutDirectTask</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="4">4. <span id="jump">错误码</span><a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>错误代码</strong></th>
+<th><strong>宏定义</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xA0172001</td>
+<td>MI_ERR_LDC_INVALID_DEVID</td>
+<td>无效device id</td>
+</tr>
+<tr>
+<td>0xA0172002</td>
+<td>MI_ERR_LDC_INVALID_CHNID</td>
+<td>无效channel id</td>
+</tr>
+<tr>
+<td>0xA0172003</td>
+<td>MI_ERR_LDC_ILLEGAL_PARAM</td>
+<td>输入参数非法</td>
+</tr>
+<tr>
+<td>0xA0172006</td>
+<td>MI_ERR_LDC_NULL_PTR</td>
+<td>输入参数空指针错误</td>
+</tr>
+<tr>
+<td>0xA0172008</td>
+<td>MI_ERR_LDC_NOT_SUPPORT</td>
+<td>操作不支持</td>
+</tr>
+<tr>
+<td>0xA017200C</td>
+<td>MI_ERR_LDC_NOT_NOMEM</td>
+<td>内存不足</td>
+</tr>
+<tr>
+<td>0xA0172012</td>
+<td>MI_ERR_LDC_BUSY</td>
+<td>Channel 系统忙</td>
+</tr>
+<tr>
+<td>0xA0172015</td>
+<td>MI_ERR_LDC_MOD_NOT_INIT</td>
+<td>Module  没有初始化</td>
+</tr>
+<tr>
+<td>0xA0172016</td>
+<td>MI_ERR_LDC_MOD_INITED</td>
+<td>Module  已经初始化</td>
+</tr>
+<tr>
+<td>0xA0172018</td>
+<td>MI_ERR_LDC_PORT_NOT_DISABLE</td>
+<td>Port  没有失能</td>
+</tr>
+<tr>
+<td>0xA017201F</td>
+<td>MI_ERR_LDC_FAIL</td>
+<td>操作执行失败</td>
+</tr>
+<tr>
+<td>0xA0172300</td>
+<td>MI_ERR_LDC_DEV_CREATED</td>
+<td>Device  已经创建</td>
+</tr>
+<tr>
+<td>0xA0172301</td>
+<td>MI_ERR_LDC_DEV_NOT_CREATE</td>
+<td>Device  还没有创建</td>
+</tr>
+<tr>
+<td>0xA0172302</td>
+<td>MI_ERR_LDC_DEV_NOT_DESTROY</td>
+<td>Device  没有被销毁</td>
+</tr>
+<tr>
+<td>0xA0172303</td>
+<td>MI_ERR_LDC_CHN_CREATED</td>
+<td>Channel  已经创建</td>
+</tr>
+<tr>
+<td>0xA0172304</td>
+<td>MI_ERR_LDC_CHN_NOT_CREATE</td>
+<td>Channel  还没有创建</td>
+</tr>
+<tr>
+<td>0xA0172305</td>
+<td>MI_ERR_LDC_CHN_NOT_STOP</td>
+<td>Channel  没有被禁用</td>
+</tr>
+<tr>
+<td>0xA0172306</td>
+<td>MI_ERR_LDC_CHN_NOT_DESTROY</td>
+<td>Channel  没有被销毁</td>
+</tr>
+<tr>
+<td>0xA0172307</td>
+<td>MI_ERR_LDC_PORT_NOT_UNBIND</td>
+<td>Port  没有解绑</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-procfs">5. PROCFS介绍<a class="headerlink" href="#5-procfs" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="51-cat">5.1. cat<a class="headerlink" href="#51-cat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>调试信息</p>
+<div class="codehilite"><pre><span></span># cat /proc/mi_modules/mi_ldc/mi_ldc0
+</pre></div>
+
+
+</li>
+<li>
+<p>调试信息分析</p>
+<p>记录当前 LDC 的使用状况以及相关属性、可以动态地获取到这些信息，方便调试和测试。</p>
+</li>
+<li>
+<p>参数说明</p>
+<p><img alt="" src="mymedia/ldc/ldc-2.png" /></p>
+<p><table>
+  <tr>
+    <th width=265 colspan=2>参数</th>
+    <th width=396>描述</th>
+  </tr>
+  <tr>
+    <td width=118 rowspan=12>Device Info </td>
+    <td width=128 valign=top>DevID</td>
+    <td width=396 valign=top>设备 ID</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>IRQ_Enable </td>
+    <td width=396 valign=top>IRQ使能状况</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>IsrCnt</td>
+    <td width=396 valign=top>中断发生的次数，在cmdq mode下没有参考意义</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>IsrNum</td>
+    <td width=396 valign=top>中断号</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>TotBlkNum</td>
+    <td width=396 valign=top>总共需要处理的ldc块的数量</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>FramDonCnt</td>
+    <td width=396 valign=top>处理完帧的数量</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>cmdqif</td>
+    <td width=396 valign=top>cmdq 接口地址</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalInFrmCnt</td>
+    <td width=396 valign=top>输入到Hal 的帧总数</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalDoneFrmCnt</td>
+    <td width=396 valign=top><p style='text-align:justify;text-justify:inter-ideograph'>Hal 处理完的帧总数</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalDoneBlkCnt</td>
+    <td width=396 valign=top>Hal 当前帧处理完的块总数</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalIsrDoneCnt</td>
+    <td width=396 valign=top>Hal done中断发生的次数</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>HalIsrErrCnt</td>
+    <td width=396 valign=top>Hal Err 中断发生的次数</td>
+  </tr>
+</table></p>
+<p><img alt="" src="mymedia/ldc/ldc-3.png" /></p>
+<p><table>
+  <tr>
+    <th width=265 colspan=2>参数</th>
+    <th width=396>描述</th>
+  </tr>
+  <tr>
+    <td width=114 rowspan=16>Channel Info</td>
+    <td width=151 valign=top>ChnId </td>
+    <td width=396 valign=top>Channel ID</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>workmode </td>
+    <td width=396 valign=top>当前channel的工作模式</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>status</td>
+    <td width=396 valign=top>当前channel的状态：0:init 1:start 2:stop 3:destroyed</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>InputWH</td>
+    <td width=396 valign=top>输入帧的分辨率</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>Pixel</td>
+    <td width=396 valign=top>输入帧的格式</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>Stride</td>
+    <td width=396 valign=top>输入帧的stride[0]</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>InBufCnt</td>
+    <td width=396 valign=top>前级输入的帧总数量</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>IntodoCnt</td>
+    <td width=396 valign=top>待处理帧的标号（递增）</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>Atom</td>
+    <td width=396 valign=top>底层拿住 buffer 数量</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>EptzInit</td>
+    <td width=396 valign=top>初始化算法所用时间</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>OneBinSz</td>
+    <td width=396 valign=top>计算最新view 的buffer size 所用时间</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>OneBin</td>
+    <td width=396 valign=top>计算最新view所用时间</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>TotalBin</td>
+    <td width=396 valign=top>LDC 算法计算所有view的时间</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>LdcDone</td>
+    <td width=396 valign=top>LDC 硬件处理时间</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>EnqTDeq</td>
+    <td width=396 valign=top>拿到前级buf到处理完的总时间</td>
+  </tr>
+  <tr>
+    <td width=151 valign=top>BlendT</td>
+    <td width=396 valign=top>alpha blending 所用时间</td>
+  </tr>
+</table>  </p>
+<p><img alt="" src="mymedia/ldc/ldc-4.png" /> </p>
+<p><table>
+  <tr>
+    <th width=265 colspan=2>参数</th>
+    <th width=396>描述</th>
+  </tr>
+  <tr>
+    <td width=118 rowspan=7 valign=top></td>
+    <td width=128 valign=top>ChnId </td>
+    <td width=396 valign=top>Channel ID</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>ViewId </td>
+    <td width=396 valign=top>ldc 对应窗口的Id</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>mode</td>
+    <td width=396 valign=top>ldc使用的场景模式</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>NumRuns</td>
+    <td width=396 valign=top>ldc 当前场景需要处理的总区块数</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>ImgFmt</td>
+    <td width=396 valign=top>ldc 处理的图像格式</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>OpMode</td>
+    <td width=396 valign=top>当前bbox的模式：<br>0:2048x16 1:1024x32 2:512x64 3:256x128 4: 128x256</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>flip</td>
+    <td width=396 valign=top>ldc的镜像模式</td>
+  </tr>
+  <tr>
+    <td width=118 rowspan=9 valign=top></td>
+    <td width=128 valign=top>InSize</td>
+    <td width=396 valign=top>当前view的输入区域</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>ViewSize </td>
+    <td width=396 valign=top>当前view的输出区域</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>OutSize </td>
+    <td width=396 valign=top>当前场景的输出区域</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>ViewTime</td>
+    <td width=396 valign=top>当前view的处理时间</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>Inblk</td>
+    <td width=396 valign=top>当前blk的输入区域</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>OutBlk</td>
+    <td width=396 valign=top>当前blk的算法输出区域</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>SclBlk</td>
+    <td width=396 valign=top>当前blk的输出区域</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>DeltaXY</td>
+    <td width=396 valign=top>当前blk对应delta 表的坐标</td>
+  </tr>
+  <tr>
+    <td width=128 valign=top>BlkTime</td>
+    <td width=396 valign=top>对应blk的处理时间</td>
+  </tr>
+</table>    </p>
+</li>
+</ul>
+<hr />
+<h3 id="52-echo">5.2. echo<a class="headerlink" href="#52-echo" title="Permanent link">&para;</a></h3>
+<p>Echo help  查看可用命令</p>
+<div class="codehilite"><pre><span></span># echo help &gt; /proc/mi_modules/mi_ldc/mi_ldc0
+</pre></div>
+
+
+<table>
+    <tr>
+    <th width=94 valign=top>功能</th>
+    <th width=650 valign=top>dump LDC 输出文件</th>
+    </tr>
+    <tr>
+    <td width=94 valign=top>命令</td>
+    <td width=650 valign=top>echo writeoutfile [chnid cnt path] &gt;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+    <tr>
+    <td width=94 rowspan=3 valign=top>参数说明</td>
+    <td width=650 valign=top>chnid: channel Id</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>cnt：dump的数量</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>path：dump的路径</td>
+    </tr>
+    <tr>
+    <td width=94 valign=top>举例</td>
+    <td width=650 valign=top>echo writeoutfile 0 2 /mnt/ &gt;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+    <th width=94 valign=top>功能</th>
+    <th width=650 valign=top>dump LDC map文件</th>
+    </tr>
+    <tr>
+    <td width=94 valign=top>命令</td>
+    <td width=650 valign=top>echo dumptablebin [chnid view/all path] &gt;&nbsp;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+    <tr>
+    <td width=94 rowspan=3 valign=top>参数说明</td>
+    <td width=650 valign=top>chnid: channel id</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>view/all:&nbsp; 下载的方式， view：具体的viewid， all：当前场景所有的view</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>path：dump的路径</td>
+    </tr>
+    <tr>
+    <td width=94 valign=top>举例</td>
+    <td width=650 valign=top>echo dumptablebin 0 all /mnt/ &gt;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+    <th width=94 valign=top>功能</th>
+    <th width=650 valign=top>配置输出属性</th>
+    </tr>
+    <tr>
+    <td width=94 valign=top>命令</td>
+    <td width=650 valign=top>echo setout[chnid width height pixel]
+    &gt;&nbsp; /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+    <tr>
+    <td width=94 rowspan=3 valign=top>参数说明</td>
+    <td width=650 valign=top>chnid: channel id</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>width: 输出图像的width</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>height：输出图像的height </td>
+    </tr>
+    <tr>
+    <td width=94 valign=top>举例</td>
+    <td width=650 valign=top>echo setout 0 1920 1080 11 &gt;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+    <th width=94 valign=top>功能</th>
+    <th width=650 valign=top>循环播放前帧</th>
+    </tr>
+    <tr>
+    <td width=94 valign=top>命令</td>
+    <td width=650 valign=top>echo loopbuf [chnid cnt] &gt;&nbsp;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+    <tr>
+    <td width=94 rowspan=2 valign=top>参数说明</td>
+    <td width=650 valign=top>chnid: channel id</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>cnt：循环播放前帧的次数</td>
+    </tr>
+    <tr>
+    <td width=94 valign=top>举例</td>
+    <td width=650 valign=top>echo loopbuf 0 11 &gt;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+    <th width=94 valign=top>功能</th>
+    <th width=650 valign=top>配置ldc 内部debug trace</th>
+    </tr>
+    <tr>
+    <td width=94 valign=top>命令</td>
+    <td width=650 valign=top>echo debug [chnid str] &gt;&nbsp;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+    <tr>
+    <td width=94 rowspan=2 valign=top>参数说明</td>
+    <td width=650 valign=top>chnid: channel id</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>str：debug的方式，off: 关闭，ViewRes,
+    ViewLock,ChnRdLock,ChnWrLock,DisGyro, Eptz</td>
+    </tr>
+    <tr>
+    <td width=94 valign=top>举例</td>
+    <td width=650 valign=top>echo debug 0 ChnRdLock &gt;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+    <th width=94 valign=top>功能</th>
+    <th width=650 valign=top>配置单个ldc map</th>
+    </tr>
+    <tr>
+    <td width=94 valign=top>命令</td>
+    <td width=650 valign=top>echo setbin [chnid path] &gt;&nbsp;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+    <tr>
+    <td width=94 rowspan=2 valign=top>参数说明</td>
+    <td width=650 valign=top>chnid: channel id</td>
+    </tr>
+    <tr>
+    <td width=650 valign=top>path：map的路径</td>
+    </tr>
+    <tr>
+    <td width=94 valign=top>举例</td>
+    <td width=650 valign=top>echo setbin /mnt/ldc.bin &gt;
+    /proc/mi_modules/mi_ldc/mi_ldc0</td>
+    </tr>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="ive_zh.html" title="IVE" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IVE
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="panel_zh.html" title="PANEL" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                PANEL
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright&copy; 2022 SigmaStar Technology. All rights reserved. Security Level: Confidential A.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../search/search_index.js"></script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script>
+      
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+      
+    
+  </body>
+</html>
