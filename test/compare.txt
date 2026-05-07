@@ -1,0 +1,62 @@
+hanskim@HPC:~/SigmaStarCamera$ find . -name mi_ai.ko -ls
+   726143    544 -rw-r--r--   1 hanskim  hanskim    555360 Dec 23  2023 ./Maruko-ILS00_TINY_V1.3.0/project/release/chip/i6c/usbcam/common/glibc/11.1.0/modules/5.10/mi_ai.ko
+   726144    936 -rw-r--r--   1 hanskim  hanskim    954492 Dec 23  2023 ./Maruko-ILS00_TINY_V1.3.0/project/release/chip/i6c/usbcam/common/uclibc/9.1.0/modules/5.10/mi_ai.ko
+    57510    652 -rw-r--r--   1 hanskim  hanskim    666812 Dec 30  2024 ./Maruko-ILS00_TINY_V1.5.0/project/release/chip/i6c/ipc/common/glibc/11.1.0/modules/5.10/mi_ai.ko
+    57084    936 -rw-r--r--   1 hanskim  hanskim    954492 Dec 30  2024 ./Maruko-ILS00_TINY_V1.5.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/modules/5.10/mi_ai.ko
+   842047     68 -rw-r--r--   1 hanskim  hanskim     68292 May  5 11:09 ./Maruko-ILS00_V2.0.0/project/image/output/miservice/config/modules/5.10/mi_ai.ko
+   633265    544 -rw-r--r--   1 hanskim  hanskim    553184 Sep  7  2022 ./Maruko-ILS00_V2.0.0/project/release/chip/i6c/ipc/common/glibc/11.1.0/modules/5.10/mi_ai.ko
+   633674    664 -rw-r--r--   1 hanskim  hanskim    678756 Sep  7  2022 ./Maruko-ILS00_V2.0.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/modules/5.10/mi_ai.ko
+hanskim@HPC:~/SigmaStarCamera$ 
+
+hanskim@HPC:~/SigmaStarCamera$ find . -name mi_all.ko -ls
+   726147  28988 -rw-r--r--   1 hanskim  hanskim  29683112 Dec 23  2023 ./Maruko-ILS00_TINY_V1.3.0/project/release/chip/i6c/ipc/common/glibc/11.1.0/modules/5.10/mi_all.ko
+   726148   2672 -rw-r--r--   1 hanskim  hanskim   2735440 Dec 23  2023 ./Maruko-ILS00_TINY_V1.3.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/modules/5.10/mi_all.ko
+   848699   2672 -rw-r--r--   1 hanskim  hanskim   2735440 May  5 11:30 ./Maruko-ILS00_TINY_V1.5.0/project/image/output/miservice/config/modules/5.10/mi_all.ko
+    57383   2672 -rwxr-xr-x   1 hanskim  hanskim   2735440 Apr 27 18:55 ./Maruko-ILS00_TINY_V1.5.0/project/release/chip/i6c/ipc/common/glibc/11.1.0/modules/5.10/mi_all.ko
+    56960   2672 -rw-r--r--   1 hanskim  hanskim   2735440 Apr 11  2025 ./Maruko-ILS00_TINY_V1.5.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/modules/5.10/mi_all.ko
+    93502   2672 -rw-r--r--   1 hanskim  hanskim   2735440 Apr 28 03:04 ./etc/dev_board/config/modules/5.10/mi_all.ko
+    93959   2672 -rw-r--r--   1 hanskim  hanskim   2735440 Apr 11  2025 ./etc/ref_board/config/modules/5.10/mi_all.ko
+   420800  28800 -rw-r--r--   1 hanskim  hanskim  29488812 Nov 10  2023 ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/usbcam/common/glibc/11.1.0/modules/5.10/mi_all.ko
+   421074  49032 -rw-r--r--   1 hanskim  hanskim  50206860 Nov 10  2023 ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/usbcam/common/uclibc/9.1.0/modules/5.10/mi_all.ko
+   420102  28696 -rw-r--r--   1 hanskim  hanskim  29383236 Nov 10  2023 ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/ipc/common/glibc/11.1.0/modules/5.10/mi_all.ko
+   420398  49020 -rw-r--r--   1 hanskim  hanskim  50196120 Nov 10  2023 ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/modules/5.10/mi_all.ko
+hanskim@HPC:~/SigmaStarCamera$ 
+
+
+hanskim@HPC:~/SigmaStarCamera$ find . -name *venc*.so -ls
+   722142    180 -rw-r--r--   1 hanskim  hanskim    183912 Dec 23  2023 ./Maruko-ILS00_TINY_V1.3.0/project/release/chip/i6c/usbcam/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   722144    180 -rw-r--r--   1 hanskim  hanskim    183912 Dec 23  2023 ./Maruko-ILS00_TINY_V1.3.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   848749     36 -rw-r--r--   1 hanskim  hanskim     34240 May  6 02:38 ./Maruko-ILS00_TINY_V1.5.0/project/image/output/miservice/config/lib/libmi_venc.so
+    56906    180 -rw-r--r--   1 hanskim  hanskim    183912 Dec 30  2024 ./Maruko-ILS00_TINY_V1.5.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+    93445     36 -rw-r--r--   1 hanskim  hanskim     34240 Apr 28 03:04 ./etc/dev_board/config/lib/libmi_venc.so
+    93912     36 -rw-r--r--   1 hanskim  hanskim     34240 Apr 11  2025 ./etc/ref_board/config/lib/libmi_venc.so
+   420932    176 -rw-r--r--   1 hanskim  hanskim    180216 Nov 10  2023 ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/usbcam/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   420255    176 -rw-r--r--   1 hanskim  hanskim    180216 Nov 10  2023 ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   842153     36 -rw-r--r--   1 hanskim  hanskim     34240 May  5 19:54 ./Maruko-ILS00_V2.0.0/project/image/output/miservice/config/lib/libmi_venc.so
+   633831    176 -rw-r--r--   1 hanskim  hanskim    179916 Sep  7  2022 ./Maruko-ILS00_V2.0.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+hanskim@HPC:~/SigmaStarCamera$ 
+
+
+
+
+
+   md5sum ./Maruko-ILS00_TINY_V1.3.0/project/release/chip/i6c/usbcam/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   md5sum ./Maruko-ILS00_TINY_V1.3.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   md5sum ./Maruko-ILS00_TINY_V1.5.0/project/image/output/miservice/config/lib/libmi_venc.so
+   md5sum ./Maruko-ILS00_TINY_V1.5.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   md5sum ./etc/dev_board/config/lib/libmi_venc.so
+   md5sum ./etc/ref_board/config/lib/libmi_venc.so
+   md5sum ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/usbcam/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   md5sum ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+   md5sum ./Maruko-ILS00_V2.0.0/project/image/output/miservice/config/lib/libmi_venc.so
+   md5sum ./Maruko-ILS00_V2.0.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+
+
+
+cb3a136cc02b5469522c0c9a1d6f013b  ./Maruko-ILS00_TINY_V1.5.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+2461c47acf228a8a62fc6ceb21bdde50  ./etc/dev_board/config/lib/libmi_venc.so
+35f0b52eb3888aaa5c46442111578084  ./etc/ref_board/config/lib/libmi_venc.so
+61fc9690ab20bff6faa78d2df6a0e7dd  ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/usbcam/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+fe34ce093d2f41ee05a84b6cc3507bcd  ./Maruko-ILS00_TINY_V1.2.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so
+18a4474a79ec811242f9e38c6201b270  ./Maruko-ILS00_V2.0.0/project/image/output/miservice/config/lib/libmi_venc.so
+59d8b226a5dfbb82c5d36b39db34941b  ./Maruko-ILS00_V2.0.0/project/release/chip/i6c/ipc/common/uclibc/9.1.0/mi_libs/dynamic/libmi_venc.so

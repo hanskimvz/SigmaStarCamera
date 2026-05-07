@@ -1,0 +1,357 @@
+/opt/mi_demo # ./prog_rtsp_det_t sc465sl_param_snr0.ini 
+[DBG]:ST_LoadIni[2307]: inipath sc465sl_param_snr0.ini 
+sensor info: 
+ eHDRType: 0
+ bMirror: 0
+ bFlip: 1
+ eRot: 0
+ bOpenIqserver: 1
+
+
+sensor info: 
+ ePADId: 0
+ u8ResIdx: 0
+ u32Fps: 30
+
+
+vif info: 
+ GroupId: 0
+ DevId: 0
+ PortId: 0
+ stCapRect.u16X: 0
+ stCapRect.u16Y: 0
+ stCapRect.u16Width: 0
+ stDestSize.u16Width: 0
+ stDestSize.u16Height: 0
+
+
+isp dev info: 
+ ePADId: 0
+ u32MaxChnNum: 1
+ stSrcChnPort.eModId: 6
+ stSrcChnPort.u32DevId: 0
+ stSrcChnPort.u32ChnId: 0
+ stSrcChnPort.u32PortId: 0
+ eBindType: 4
+
+ isp:chn0_ChnId:0
+ isp:chn0_stInputCrop.u16X:0
+ isp:chn0_stInputCrop.u16Y:0
+ isp:chn0_stInputCrop.u16Width:0
+ isp:chn0_stInputCrop.u16Height:0
+ isp:chn0_stChnParam.e3DNRLevel:2
+
+ isp:chn0_port0_PortId: 0
+ isp:chn0_port0_bEnable: 1
+ isp:chn0_port0_stOutPortParam.stCropRect.u16X: 0
+ isp:chn0_port0_stOutPortParam.stCropRect.u16Y: 0
+ isp:chn0_port0_stOutPortParam.stCropRect.u16Width: 0
+ isp:chn0_port0_stOutPortParam.stCropRect.u16Height: 0
+ isp:chn0_port0_stOutPortParam.ePixelFormat: 0
+
+ isp:chn0_port1_PortId: 1
+ isp:chn0_port1_bEnable: 0
+ isp:chn0_port1_stOutPortParam.stCropRect.u16X: 0
+ isp:chn0_port1_stOutPortParam.stCropRect.u16Y: 0
+ isp:chn0_port1_stOutPortParam.stCropRect.u16Width: 0
+ isp:chn0_port1_stOutPortParam.stCropRect.u16Height: 0
+ isp:chn0_port1_stOutPortParam.ePixelFormat: 0
+
+ isp:chn0_port2_PortId: 2
+ isp:chn0_port2_bEnable: 0
+ isp:chn0_port2_stOutPortParam.stCropRect.u16X: 0
+ isp:chn0_port2_stOutPortParam.stCropRect.u16Y: 0
+ isp:chn0_port2_stOutPortParam.stCropRect.u16Width: 0
+ isp:chn0_port2_stOutPortParam.stCropRect.u16Height: 0
+ isp:chn0_port2_stOutPortParam.ePixelFormat: 0
+
+
+scl module info: 
+ ePADId: 0
+ u32MaxChnNum: 1
+ stSrcChnPort.eModId: 33
+ stSrcChnPort.u32DevId: 0
+ stSrcChnPort.u32ChnId: 0
+ stSrcChnPort.u32PortId: 0
+ eBindType: 4
+
+ scl:chn0_ChnId: 0
+ scl:chn0_stInputCrop.u16X: 0
+ scl:chn0_stInputCrop.u16Y: 0
+ scl:chn0_stInputCrop.u16Width: 0
+ scl:chn0_stInputCrop.u16Height: 0
+
+ scl:chn0_port0_PortId: 0
+ scl:chn0_port0_bEnable: 1
+ scl:chn0_port0_stOutPortParam.stSCLOutCropRect.u16X: 0
+ scl:chn0_port0_stOutPortParam.stSCLOutCropRect.u16Y: 0
+ scl:chn0_port0_stOutPortParam.stSCLOutCropRect.u16Width: 0
+ scl:chn0_port0_stOutPortParam.stSCLOutCropRect.u16Height: 0
+ scl:chn0_port0_stOutPortParam.stSCLOutputSize.u16Width: 2560
+ scl:chn0_port0_stOutPortParam.stSCLOutputSize.u16Height: 1440
+ scl:chn0_port0_stOutPortParam.ePixelFormat: 11
+
+ scl:chn0_port1_PortId: 1
+ scl:chn0_port1_bEnable: 1
+ scl:chn0_port1_stOutPortParam.stSCLOutCropRect.u16X: 0
+ scl:chn0_port1_stOutPortParam.stSCLOutCropRect.u16Y: 0
+ scl:chn0_port1_stOutPortParam.stSCLOutCropRect.u16Width: 0
+ scl:chn0_port1_stOutPortParam.stSCLOutCropRect.u16Height: 0
+ scl:chn0_port1_stOutPortParam.stSCLOutputSize.u16Width: 800
+ scl:chn0_port1_stOutPortParam.stSCLOutputSize.u16Height: 480
+ scl:chn0_port1_stOutPortParam.ePixelFormat: 11
+
+ scl:chn0_port2_PortId: 2
+ scl:chn0_port2_bEnable: 1
+ scl:chn0_port2_stOutPortParam.stSCLOutCropRect.u16X: 0
+ scl:chn0_port2_stOutPortParam.stSCLOutCropRect.u16Y: 0
+ scl:chn0_port2_stOutPortParam.stSCLOutCropRect.u16Width: 0
+ scl:chn0_port2_stOutPortParam.stSCLOutCropRect.u16Height: 0
+ scl:chn0_port2_stOutPortParam.stSCLOutputSize.u16Width: 800
+ scl:chn0_port2_stOutPortParam.stSCLOutputSize.u16Height: 480
+ scl:chn0_port2_stOutPortParam.ePixelFormat: 11
+
+ scl:chn0_port3_PortId: 3
+ scl:chn0_port3_bEnable: 0
+ scl:chn0_port3_stOutPortParam.stSCLOutCropRect.u16X: 0
+ scl:chn0_port3_stOutPortParam.stSCLOutCropRect.u16Y: 0
+ scl:chn0_port3_stOutPortParam.stSCLOutCropRect.u16Width: 0
+ scl:chn0_port3_stOutPortParam.stSCLOutCropRect.u16Height: 0
+ scl:chn0_port3_stOutPortParam.stSCLOutputSize.u16Width: 0
+ scl:chn0_port3_stOutPortParam.stSCLOutputSize.u16Height: 0
+ scl:chn0_port3_stOutPortParam.ePixelFormat: 0
+
+
+stream info: 
+ u32MaxNum: 2
+
+ stream:stream0_stVencAttr.stSrcChnPort.eModId: 34
+ stream:stream0_stVencAttr.stSrcChnPort.u32DevId: 0
+ stream:stream0_stVencAttr.stSrcChnPort.u32ChnId: 0
+ stream:stream0_stVencAttr.stSrcChnPort.u32PortId: 0
+ stream:stream0_stVencAttr.eBindType: 16
+ stream:stream0_stVencAttr.VeChn: 0
+vif chipidx 9, version 1 
+bUseCurrentWrite=1
+bUseCurrentWrite=1
+chipidx 9, revision 1 
+setbw level1 
+[HalIspInitReg] Notice! Init IQ here......
+[0]===== [DrvIspResume] =====
+chn0, sub channel num 0 
+isp chn0, multi channel num 1 
+chipidx 9, revision 1 
+[CMDQ]Reinit buffer cmdq(0x40000000-0xcc51a000-0x64000)
+CmdqProcInit 1281
+CMDQ - IRQ Request 0 
+[MI WRN] [178]: output port0,set size(0,0,0,0), no support crop, adjust rect(0,0,2560,1440)
+
+[RT:1,1]
+
+===== [MhalCameraOpen][0] begin ===== VifMask : fff, AckTie : 0
+DevId = 0, Ch= 0, SNR ID: 0x0, VifCh = 0x0, WdmaID = 0x0, PreOpen = 0
+3DNR = 2, Rotation = 5
+(W, H): (2560, 1440)
+PixelFmt: 2, BayerID: 2, YuvOrder: 0, RdmaY2b: 0
+Mode: 0, HdrType: 0
+[ValidStatsFrame] snr=0, w=0, f=4
+[0]===== [DrvIspPowerOn] =====
+CMDQ - IRQ Request 1 
+[Dev 0]CmdQ Free ID = 1, IspLocalCmdQHnd = 0xba7ef0cd
+Fifo=0  Connect DevID=0 
+Fifo=1  Connect DevID=4 
+Fifo=2  Connect DevID=8 
+Fifo=3  Connect DevID=12 
+nVifDev=0, AFifo_ID=0 
+[ValidStatsFrame] snr=0, w=0, f=4
+ stream:stream0_stVencAttr.u32Width: 2560
+ stream:stream0_stVencAttr.u32Height: 1440
+ stream:stream0_stVencAttr.eType: H264
+ stream:stream0_stVencAttr.eRcMode: 1
+ stream:stream0_stVencAttr.u32Fps: 30
+ stream:stream0_stVencAttr.u32Gop: 50
+ stream:stream0_stVencAttr.u32MaxBitRate: 4096 kbps
+ stream:stream0_szURLTag: video0
+
+ stream:stream1_stVencAttr.stSrcChnPort.eModId: 34
+ stream:stream1_stVencAttr.stSrcChnPort.u32DevId: 0
+ stream:stream1_stVencAttr.stSrcChnPort.u32ChnId: 0
+ stream:stream1_stVencAttr.stSrcChnPort.u32PortId: 1
+ stream:stream1_stVencAttr.eBindType: 1
+ stream:stream1_stVencAttr.VeChn: 1
+ stream:stream1_stVencAttr.u32Width: 800
+ stream:stream1_stVencAttr.u32Height: 480
+ stream:stream1_stVencAttr.eType: H264
+ stream:stream1_stVencAttr.eRcMode: 1
+ stream:stream1_stVencAttr.u32Fps: 25
+ stream:stream1_stVencAttr.u32Gop: 50
+ stream:stream1_stVencAttr.u32MaxBitRate: 2048 kbps
+ stream:stream1_szURLTag: video1
+(ST_BaseModuleInit 2140)exec function pass
+_OSD_BitmapFile_Init 376, ./ascii_8x16 pBitMapAddr:0xb6f1d000, end:0xb6f1e000
+_OSD_BitmapFile_Init 376, ./ascii_16x32 pBitMapAddr:0xb6f19000, end:0xb6f1d000
+_OSD_BitmapFile_Init 352, open ./ascii_24x48 fail
+_OSD_BitmapFile_Init 352, open ./ascii_32x64 fail
+_OSD_BitmapFile_Init 376, ./hanzi_16x16 pBitMapAddr:0xb6d14000, end:0xb6d59080
+_OSD_BitmapFile_Init 352, open ./hanzi_32x32 fail
+_OSD_BitmapFile_Init 352, open ./hanzi_48x48 fail
+_OSD_BitmapFile_Init 352, open ./hanzi_64x64 fail
+[ST_OSD_Init 882]exec function pass
+(ST_BaseModuleInit 2143)exec function pass
+(ST_SnrModuleInit 751)exec function pass
+[DBG]:ST_SnrModuleInit[789]: error
+(ST_SnrModuleInit 792)exec function pass
+(ST_SnrModuleInit 793)exec function pass
+(ST_SnrModuleInit 796)exec function pass
+(ST_BaseModuleInit 2146)exec function pass
+(ST_VifModuleInit 826)exec function pass
+(ST_VifModuleInit 827)exec function pass
+(ST_VifModuleInit 839)exec function pass
+setchnportattr (0,0,2560,1440) 
+(ST_VifModuleInit 856)exec function pass
+(ST_VifModuleInit 857)exec function pass
+sensor bayerid 2, bit mode 2 
+(ST_VifModuleInit 894)exec function pass
+(ST_VifModuleInit 895)exec function pass
+(ST_BaseModuleInit 2150)exec function pass
+[ST_IspModuleinit 963]exec function pass
+[MI_ISP_CUS3A_Enable] AE = 1, AWB = 1, AF = 1
+[MI_ISP_CUS3A_Enable] AE = 1, AWB = 1, AF = 1
+[MI_ISP_CUS3A_Enable] AE = 1, AWB = 1, AF = 1
+[ST_IspModuleinit 977]exec function pass
+[ST_IspModuleinit 985]exec function pass
+[ST_IspModuleinit 986]exec function pass
+[ST_IspModuleinit 1011]exec function pass
+[ST_IspModuleinit 1012]exec function pass
+[ST_Sys_Bind 57]exec function pass
+
+src(6-0-0-0)  dst(33-0-0-0)  4...
+
+(ST_IspModuleinit 1044)exec function pass
+(ST_BaseModuleInit 2155)exec function pass
+(ST_SclModuleInit 1251)exec function pass
+(ST_SclModuleInit 1275)exec function pass
+(ST_SclCreateChn 1102)exec function pass
+(ST_SclCreateChn 1112)exec function pass
+(ST_SclCreateChn 1118)exec function pass
+(ST_SclCreateChn 1120)exec function pass
+[DBG]:ST_SclCreateChn[1130]: SclPortId : 0
+[DBG]:ST_SclCreateChn[1165]: devId:0, chnId:0, portId:0
+(ST_SclCreateChn 1166)exec function pass
+(ST_SclCreateChn 1167)exec function pass
+[ST_OSD_Create 913]exec function pass
+[ST_SclCreateChn 1188]exec function pass
+stSCLOutputSize.u16Width = 2560
+stSCLOutputSize.u32Height = 1440
+[ST_SclCreateChn 1199]exec function pass
+[DBG]:ST_SclCreateChn[1130]: SclPortId : 1
+[DBG]:ST_SclCreateChn[1165]: devId:0, chnId:0, portId:1
+(ST_SclCreateChn 1166)exec function pass
+(ST_SclCreateChn 1167)exec function pass
+[DBG]:ST_SclCreateChn[1130]: SclPortId : 2
+[DBG]:ST_SclCreateChn[1165]: devId:0, chnId:0, portId:2
+(ST_SclCreateChn 1166)exec function pass
+(ST_SclCreateChn 1167)exec function pass
+(ST_SclModuleInit 1278)exec function pass
+[ST_Sys_Bind 57]exec function pass
+
+src(33-0-0-0)  dst(34-0-0-0)  4...
+
+(ST_SclModuleInit 1298)exec function pass
+(ST_BaseModuleInit 2160)exec function pass
+[DBG]:ST_BaseModuleInit[2163]: pass venc
+[    AeInit] FPS (Init, Input, Output, Cur, Deband) = (   30,   30,   30,   30,   30)
+[    AeInit] HW Sensor Gain = (1024,1745920,1024,1745920)
+[    AeInit] HW     Shutter = (  20, 333333,  20, 333333)
+[    AeInit] Use AE Short Histogram = Valid
+[    AeInit]      Sensor delay frame cnt =  4
+[AeInit  ] --> Calculation mode = FLOAT
+[    AeInit] --> Change  :      1,    CurYx10 :      0, CurY1x10 :      0   , Targetx10 :    470, BVx16384 :  54769, FNx10 :  18, IspGain :   1024, SensorGain :   1024, Shutter  :   9979 us, Step      :  20834 ns
+
+[      DoAe] FPS (Input, Output, Cur, Deband) = (   30,   30,30000,   30)
+[AF_InitParameters-1932] Error!! Initial motor parameters got from motor driver are unreasonable. 
+[AF_InitParameters-1933] InitPos = 0, MinMotorPos = 0, MaxMotorPos = 0, MinMotorStep = 1, MaxMotorStep = 0 
+Create mi dev0 dev_type0
+Create mi dev0 dev_type1
+Create mhal dev0 dev_type0
+dev0 dev_type0 config memory base address:0x40000000
+[ven-m][vcodec] vcodec miu protect channel:venc:4 vdec:0
+heap_name mma_heap_codec  bEnable=1 
+au16SetProId[0]:0xc
+au16SetProId[1]:0x70
+miu_number:0,start:0x60930000,end:0x60a2c000,block_id:16,flag:1
+CMDQ - IRQ Request 2 
+dev0 dev_type0 bAllowPreemptionSram:0 bNeedSram:1 bUsePreDevBuf:0 u32SramSize:18400
+Create mhal dev0 dev_type1
+dev0 dev_type1 bAllowPreemptionSram:0 bNeedSram:1 bUsePreDevBuf:0 u32SramSize:18400
+(ST_VencModuleInit 1452)exec function pass
+(ST_VencModuleInit 1489)exec function pass
+(ST_VencModuleInit 1523)exec function pass
+(ST_VencModuleInit 1526)exec function pass
+[DBG]:ST_VencModuleInit[1556]: src(34-0-0-0)  dst(2-0-0-0)  16...
+[ST_Sys_Bind 57]exec function pass
+
+src(34-0-0-0)  dst(2-0-0-0)  16...
+
+(ST_VencModuleInit 1561)exec function pass
+(ST_VencModuleInit 1489)exec function pass
+(ST_VencModuleInit 1526)exec function pass
+[DBG]:ST_VencModuleInit[1556]: src(34-0-0-1)  dst(2-0-1-0)  1...
+[ST_Sys_Bind 57]exec function pass
+
+src(34-0-0-1)  dst(2-0-1-0)  1...
+
+(ST_VencModuleInit 1561)exec function pass
+(ST_BaseModuleInit 2165)exec function pass
+[DBG]:ST_BaseModuleInit[2167]: pass rtsp
+=================URL===================
+rtsp://192.168.102.220/video0
+rtsp://192.168.102.220/video1
+=================URL===================
+[iqsvr info]:MI_IQSERVER_Open[762]: create network listen thread ret is 0
+(ST_BaseModuleInit 2180)exec function pass
+loading api bin...path:/opt/mi_demo/isp/iqfile_day.bin
+[MAJOR]: ispversion(1) in sdk, ispversion(1) in binfile.
+[MINOR]: ispversion(4) in sdk, ispversion(2) in binfile.
+warning warning!!!SDK & iqbinfile minor version is not match.
+[pAF_SetMotor-0230] Error paramters!! u16MinMotorPos = 320, u16MaxMotorPos = 700, u16HWMinMotorPos = 0, u16HWMaxMotorPos = 0 
+******************** Load api bin Success - /opt/mi_demo/isp/iqfile_day.bin ********************
+(ST_DoSetIqBin 941)exec function pass
+[iqserver_net_fun.c][mst_Sock_Listen] ListenSock=17
+(ST_DoSetIqBin 946)exec function pass
+MI_ISP_AE_SetFlicker!
+(ST_PanelStart 638)exec function pass
+(ST_PanelStart 639)exec function pass
+(ST_PanelStart 654)exec function pass
+(ST_PanelStart 655)exec function pass
+(ST_PanelStart 656)exec function pass
+(ST_PanelStart 675)exec function pass
+(ST_PanelStart 676)exec function pass
+(ST_PanelStart 677)exec function pass
+[ST_Sys_Bind 57]exec function pass
+
+src(34-0-0-2)  dst(15-0-0-0)  1...
+
+(ST_PanelStart 695)exec function pass
+user export gpio:12
+gpio:12 direction set ok
+user export gpio:14
+gpio:14 direction set ok
+client [772] connected, module:panel
+(ST_PanelStart 704)exec function pass
+(main 3324)exec function pass
+(main 3328)exec function pass
+libsstar_algo_detection.a release version: V1.0_20220704
+(main 3348)exec function pass
+client [772] connected, module:ipu
+(main 3350)exec function pass
+detect thread start
+[DBG]:DetectThread[3008]: MI_SYS_SetChnOutputPortDepth success
+[DBG]:DetectThread[3013]: MI_SYS_GetFd success
+CMDQ - IRQ Request 4 
+[DBG]:ST_dumps_image[1882]: pstBufInfo->eBufType:1
+[DBG]:ST_OpenStream[1643]: open stream "video0" success, chn:0
+[DBG]:ST_CloseStream[1728]: close "video0" success
+[DBG]:ST_OpenStream[1643]: open stream "video0" success, chn:0
+[DBG]:ST_dumps_image[1890]: size is 576000
+[ven-m][wrap] In-RingOF 800000 id:0 sts:0 enc:18ms
